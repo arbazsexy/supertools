@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Unit Converter - SuperTools</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f5f7fb;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav h2{
+margin:0;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+.container{
+max-width:500px;
+margin:90px auto;
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+h1{
+margin-bottom:20px;
+}
+
+input{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
+margin-bottom:20px;
+}
+
+select{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
+margin-bottom:20px;
+}
+
+button{
+background:#4facfe;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0077ff;
+}
+
+#result{
+margin-top:20px;
+font-size:20px;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#111;
+color:white;
+margin-top:80px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>SuperTools</h2>
+
+<a href="index.html">Home</a>
+
+</nav>
+
+<div class="container">
+
+<h1>Length Unit Converter</h1>
+
+<input type="number" id="value" placeholder="Enter value">
+
+<select id="fromUnit">
+<option value="meter">Meters</option>
+<option value="kilometer">Kilometers</option>
+<option value="mile">Miles</option>
+<option value="foot">Feet</option>
+</select>
+
+<select id="toUnit">
+<option value="meter">Meters</option>
+<option value="kilometer">Kilometers</option>
+<option value="mile">Miles</option>
+<option value="foot">Feet</option>
+</select>
+
+<button onclick="convert()">Convert</button>
+
+<div id="result"></div>
+
+</div>
+
+<footer>
+
+<p>© 2026 SuperTools</p>
+
+</footer>
+
+<script>
+
+function convert(){
+
+var value=parseFloat(document.getElementById("value").value);
+var from=document.getElementById("fromUnit").value;
+var to=document.getElementById("toUnit").value;
+
+if(isNaN(value)){
+document.getElementById("result").innerHTML="Enter a value";
+return;
+}
+
+var meters;
+
+if(from==="meter") meters=value;
+if(from==="kilometer") meters=value*1000;
+if(from==="mile") meters=value*1609.34;
+if(from==="foot") meters=value*0.3048;
+
+var result;
+
+if(to==="meter") result=meters;
+if(to==="kilometer") result=meters/1000;
+if(to==="mile") result=meters/1609.34;
+if(to==="foot") result=meters/0.3048;
+
+document.getElementById("result").innerHTML="Result: "+result.toFixed(4);
+
+}
+
+</script>
+
+</body>
+
+</html>

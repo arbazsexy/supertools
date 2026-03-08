@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>BMI Calculator - SuperTools</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f5f7fb;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav h2{
+margin:0;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+.container{
+max-width:500px;
+margin:90px auto;
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+h1{
+margin-bottom:25px;
+}
+
+input{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
+margin-bottom:15px;
+}
+
+button{
+background:#4facfe;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0077ff;
+}
+
+#result{
+margin-top:25px;
+font-size:22px;
+font-weight:bold;
+color:#333;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#111;
+color:white;
+margin-top:80px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>SuperTools</h2>
+
+<a href="index.html">Home</a>
+
+</nav>
+
+<div class="container">
+
+<h1>BMI Calculator</h1>
+
+<input type="number" id="weight" placeholder="Enter weight (kg)">
+
+<input type="number" id="height" placeholder="Enter height (cm)">
+
+<button onclick="calculateBMI()">Calculate BMI</button>
+
+<div id="result"></div>
+
+</div>
+
+<footer>
+
+<p>© 2026 SuperTools</p>
+
+</footer>
+
+<script>
+
+function calculateBMI(){
+
+var weight=parseFloat(document.getElementById("weight").value);
+var height=parseFloat(document.getElementById("height").value);
+
+if(isNaN(weight) || isNaN(height)){
+document.getElementById("result").innerHTML="Please enter valid values";
+return;
+}
+
+height=height/100;
+
+var bmi=weight/(height*height);
+
+var category="";
+
+if(bmi<18.5){
+category="Underweight";
+}
+else if(bmi<24.9){
+category="Normal weight";
+}
+else if(bmi<29.9){
+category="Overweight";
+}
+else{
+category="Obese";
+}
+
+document.getElementById("result").innerHTML=
+"Your BMI: "+bmi.toFixed(2)+" ("+category+")";
+
+}
+
+</script>
+
+</body>
+
+</html>
