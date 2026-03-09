@@ -1,179 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Compressor - SuperTools</title>
+  <meta name="description" content="Compress your images online quickly and easily with SuperTools Image Compressor. Reduce file size without losing quality.">
 
-<title>Image Compressor - SuperTools</title>
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Image Compressor - SuperTools">
+  <meta property="og:description" content="Compress your images online quickly and easily with SuperTools Image Compressor. Reduce file size without losing quality.">
+  <meta property="og:image" content="https://example.com/logo.png">
+  <meta property="og:url" content="https://example.com/imagecompressor.html">
+  <meta property="og:type" content="website">
 
-<style>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Image Compressor - SuperTools">
+  <meta name="twitter:description" content="Compress your images online quickly and easily with SuperTools Image Compressor. Reduce file size without losing quality.">
+  <meta name="twitter:image" content="https://example.com/logo.png">
 
-body{
-margin:0;
-font-family:Arial;
-background:#f5f7fb;
-}
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Image Compressor",
+    "url": "https://example.com/imagecompressor.html",
+    "applicationCategory": "Utility",
+    "description": "Compress your images online quickly and easily with SuperTools Image Compressor.",
+    "operatingSystem": "Web",
+    "creator": {
+      "@type": "Organization",
+      "name": "SuperTools",
+      "logo": "https://example.com/logo.png"
+    }
+  }
+  </script>
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-nav h2{
-margin:0;
-}
-
-nav a{
-text-decoration:none;
-color:#333;
-font-weight:bold;
-}
-
-.container{
-max-width:600px;
-margin:80px auto;
-background:white;
-padding:40px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-text-align:center;
-}
-
-h1{
-margin-bottom:20px;
-}
-
-input{
-margin-bottom:20px;
-}
-
-button{
-background:#4facfe;
-color:white;
-border:none;
-padding:12px 20px;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-margin-top:10px;
-}
-
-button:hover{
-background:#0077ff;
-}
-
-img{
-max-width:100%;
-margin-top:20px;
-border-radius:8px;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#111;
-color:white;
-margin-top:80px;
-}
-
-</style>
-
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-
-<h2>SuperTools</h2>
-
-<a href="index.html">Home</a>
-
+  <h2>SuperTools</h2>
+  <a href="index.html">Home</a>
 </nav>
 
-<div class="container">
+<main class="container">
+  <h1>Image Compressor</h1>
 
-<h1>Image Compressor</h1>
+  <input type="file" id="upload" accept="image/*">
+  <button onclick="compressImage()">Compress Image</button>
 
-<input type="file" id="upload" accept="image/*">
+  <canvas id="canvas" style="display:none;"></canvas>
+  <img id="preview" alt="Compressed preview" />
 
-<br>
-
-<button onclick="compressImage()">Compress Image</button>
-
-<br>
-
-<canvas id="canvas" style="display:none;"></canvas>
-
-<img id="preview">
-
-<br>
-
-<a id="download" style="display:none">
-<button>Download Compressed Image</button>
-</a>
-
-</div>
+  <a id="download" style="display:none">
+    <button>Download Compressed Image</button>
+  </a>
+</main>
 
 <footer>
-
-<p>© 2026 SuperTools</p>
-
+  <p>© 2026 SuperTools</p>
 </footer>
 
 <script>
+function compressImage() {
+  const file = document.getElementById("upload").files[0];
+  if (!file) {
+    alert("Please upload an image");
+    return;
+  }
 
-function compressImage(){
+  const reader = new FileReader();
+  reader.onload = function(event) {
+    const img = new Image();
+    img.onload = function() {
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
+      const compressed = canvas.toDataURL("image/jpeg", 0.5);
+      document.getElementById("preview").src = compressed;
 
-var file=document.getElementById("upload").files[0];
-
-if(!file){
-alert("Please upload an image");
-return;
+      const download = document.getElementById("download");
+      download.href = compressed;
+      download.download = "compressed-image.jpg";
+      download.style.display = "inline-block";
+    };
+    img.src = event.target.result;
+  };
+  reader.readAsDataURL(file);
 }
-
-var reader=new FileReader();
-
-reader.onload=function(event){
-
-var img=new Image();
-
-img.onload=function(){
-
-var canvas=document.getElementById("canvas");
-var ctx=canvas.getContext("2d");
-
-canvas.width=img.width;
-canvas.height=img.height;
-
-ctx.drawImage(img,0,0);
-
-var compressed=canvas.toDataURL("image/jpeg",0.5);
-
-document.getElementById("preview").src=compressed;
-
-var download=document.getElementById("download");
-
-download.href=compressed;
-download.download="compressed-image.jpg";
-download.style.display="inline-block";
-
-};
-
-img.src=event.target.result;
-
-};
-
-reader.readAsDataURL(file);
-
-}
-
 </script>
 
 </body>
-
 </html>

@@ -1,151 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Age Calculator - SuperTools</title>
+  <title>Age Calculator - SuperTools</title>
+  <meta name="description" content="Calculate your exact age easily with SuperTools Age Calculator. Enter your birth date and find out your age instantly.">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="logo.png" type="image/png">
 
-<style>
+  <meta property="og:title" content="Age Calculator - SuperTools">
+  <meta property="og:description" content="Calculate your exact age easily with SuperTools Age Calculator. Enter your birth date and find out your age instantly.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/agecalculator.html">
 
-body{
-margin:0;
-font-family:Arial;
-background:#f5f7fb;
-}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Age Calculator - SuperTools">
+  <meta name="twitter:description" content="Calculate your exact age easily with SuperTools Age Calculator. Enter your birth date and find out your age instantly.">
+  <meta name="twitter:image" content="logo.png">
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Age Calculator",
+      "url": "https://yourwebsite.com/agecalculator.html",
+      "applicationCategory": "Utility",
+      "description": "Calculate your exact age easily with SuperTools Age Calculator.",
+      "operatingSystem": "Web",
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "logo": "https://yourwebsite.com/logo.png"
+      }
+    }
+  </script>
 
-nav h2{
-margin:0;
-}
-
-nav a{
-text-decoration:none;
-color:#333;
-font-weight:bold;
-}
-
-.container{
-max-width:500px;
-margin:100px auto;
-background:white;
-padding:40px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-text-align:center;
-}
-
-h1{
-margin-bottom:20px;
-}
-
-input{
-width:100%;
-padding:12px;
-border-radius:8px;
-border:1px solid #ccc;
-font-size:16px;
-margin-bottom:20px;
-}
-
-button{
-background:#4facfe;
-color:white;
-border:none;
-padding:12px 20px;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-}
-
-button:hover{
-background:#0077ff;
-}
-
-#result{
-margin-top:20px;
-font-size:20px;
-font-weight:bold;
-color:#333;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#111;
-color:white;
-margin-top:80px;
-}
-
-</style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <nav>
+    <h2>⚡ SuperTools</h2>
+    <div><a href="index.html">Home</a></div>
+  </nav>
 
-<nav>
+  <div class="container">
+    <h1>Age Calculator</h1>
+    <label for="birthdate">Select your birth date:</label>
+    <input type="date" id="birthdate" aria-label="Enter your birth date">
+    <button onclick="calculateAge()">Calculate Age</button>
+    <div id="result"></div>
+  </div>
 
-<h2>SuperTools</h2>
+  <footer>
+    <p>© 2026 SuperTools</p>
+  </footer>
 
-<a href="index.html">Home</a>
-
-</nav>
-
-<div class="container">
-
-<h1>Age Calculator</h1>
-
-<input type="date" id="birthdate">
-
-<button onclick="calculateAge()">Calculate Age</button>
-
-<div id="result"></div>
-
-</div>
-
-<footer>
-
-<p>© 2026 SuperTools</p>
-
-</footer>
-
-<script>
-
-function calculateAge(){
-
-var birthdate=document.getElementById("birthdate").value;
-
-if(!birthdate){
-document.getElementById("result").innerHTML="Please select your birth date";
-return;
-}
-
-var birth=new Date(birthdate);
-var today=new Date();
-
-var age=today.getFullYear()-birth.getFullYear();
-
-var m=today.getMonth()-birth.getMonth();
-
-if(m<0 || (m===0 && today.getDate()<birth.getDate())){
-age--;
-}
-
-document.getElementById("result").innerHTML="You are "+age+" years old.";
-
-}
-
-</script>
-
+  <script>
+    function calculateAge() {
+      var birthdate = document.getElementById("birthdate").value;
+      if (!birthdate) {
+        document.getElementById("result").innerHTML = "Please select your birth date";
+        return;
+      }
+      var birth = new Date(birthdate);
+      var today = new Date();
+      var age = today.getFullYear() - birth.getFullYear();
+      var m = today.getMonth() - birth.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) age--;
+      document.getElementById("result").innerHTML = "You are " + age + " years old.";
+    }
+  </script>
 </body>
-
 </html>

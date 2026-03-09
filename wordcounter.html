@@ -1,143 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Counter - SuperTools</title>
+  <meta name="description" content="Count words and characters instantly with SuperTools Word Counter. Fast, free, and easy to use.">
 
-<title>Word Counter - SuperTools</title>
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Word Counter - SuperTools">
+  <meta property="og:description" content="Count words and characters instantly with SuperTools Word Counter.">
+  <meta property="og:image" content="https://example.com/logo.png">
+  <meta property="og:url" content="https://example.com/wordcounter.html">
+  <meta property="og:type" content="website">
 
-<style>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Word Counter - SuperTools">
+  <meta name="twitter:description" content="Count words and characters instantly with SuperTools Word Counter.">
+  <meta name="twitter:image" content="https://example.com/logo.png">
 
-body{
-margin:0;
-font-family:Arial;
-background:#f5f7fb;
-}
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Word Counter",
+    "url": "https://example.com/wordcounter.html",
+    "applicationCategory": "Utility",
+    "description": "Count words and characters instantly with SuperTools Word Counter.",
+    "operatingSystem": "Web",
+    "creator": {
+      "@type": "Organization",
+      "name": "SuperTools",
+      "logo": "https://example.com/logo.png"
+    }
+  }
+  </script>
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-nav h2{
-margin:0;
-}
-
-nav a{
-text-decoration:none;
-color:#333;
-font-weight:bold;
-}
-
-.container{
-max-width:700px;
-margin:80px auto;
-background:white;
-padding:40px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-text-align:center;
-}
-
-h1{
-margin-bottom:20px;
-}
-
-textarea{
-width:100%;
-height:200px;
-padding:15px;
-border-radius:8px;
-border:1px solid #ccc;
-font-size:16px;
-resize:none;
-}
-
-.stats{
-display:flex;
-justify-content:space-around;
-margin-top:20px;
-font-size:18px;
-font-weight:bold;
-}
-
-.stat-box{
-background:#f0f4ff;
-padding:15px 25px;
-border-radius:10px;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#111;
-color:white;
-margin-top:80px;
-}
-
-</style>
-
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-
-<h2>SuperTools</h2>
-
-<a href="index.html">Home</a>
-
+  <h2>SuperTools</h2>
+  <a href="index.html">Home</a>
 </nav>
 
-<div class="container">
+<main class="container">
+  <h1>Word Counter</h1>
+  <textarea id="text" placeholder="Type or paste your text here..." oninput="countText()"></textarea>
 
-<h1>Word Counter</h1>
-
-<textarea id="text" placeholder="Type or paste your text here..." oninput="countText()"></textarea>
-
-<div class="stats">
-
-<div class="stat-box">
-Words: <span id="words">0</span>
-</div>
-
-<div class="stat-box">
-Characters: <span id="characters">0</span>
-</div>
-
-</div>
-
-</div>
+  <div class="stats">
+    <div class="stat-box">
+      Words: <span id="words">0</span>
+    </div>
+    <div class="stat-box">
+      Characters: <span id="characters">0</span>
+    </div>
+  </div>
+</main>
 
 <footer>
-
-<p>© 2026 SuperTools</p>
-
+  <p>© 2026 SuperTools</p>
 </footer>
 
 <script>
-
-function countText(){
-
-var text=document.getElementById("text").value;
-
-var words=text.trim().split(/\s+/).filter(function(word){
-return word.length>0;
-});
-
-document.getElementById("words").innerHTML=text.trim()===""?0:words.length;
-
-document.getElementById("characters").innerHTML=text.length;
-
+function countText() {
+  const text = document.getElementById("text").value;
+  const wordsArray = text.trim().split(/\s+/).filter(word => word.length > 0);
+  document.getElementById("words").innerText = text.trim() === "" ? 0 : wordsArray.length;
+  document.getElementById("characters").innerText = text.length;
 }
-
 </script>
 
 </body>
-
 </html>

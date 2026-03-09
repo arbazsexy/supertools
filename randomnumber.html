@@ -1,151 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Number Generator - SuperTools</title>
+  <meta name="description" content="Generate random numbers instantly with SuperTools Random Number Generator. Set minimum and maximum values and get a random number easily.">
 
-<title>Random Number Generator - SuperTools</title>
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Random Number Generator - SuperTools">
+  <meta property="og:description" content="Generate random numbers instantly with SuperTools Random Number Generator.">
+  <meta property="og:image" content="https://example.com/logo.png">
+  <meta property="og:url" content="https://example.com/randomnumber.html">
+  <meta property="og:type" content="website">
 
-<style>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Random Number Generator - SuperTools">
+  <meta name="twitter:description" content="Generate random numbers instantly with SuperTools Random Number Generator.">
+  <meta name="twitter:image" content="https://example.com/logo.png">
 
-body{
-margin:0;
-font-family:Arial;
-background:#f5f7fb;
-}
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Random Number Generator",
+    "url": "https://example.com/randomnumber.html",
+    "applicationCategory": "Utility",
+    "description": "Generate random numbers instantly with SuperTools Random Number Generator.",
+    "operatingSystem": "Web",
+    "creator": {
+      "@type": "Organization",
+      "name": "SuperTools",
+      "logo": "https://example.com/logo.png"
+    }
+  }
+  </script>
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-nav h2{
-margin:0;
-}
-
-nav a{
-text-decoration:none;
-color:#333;
-font-weight:bold;
-}
-
-.container{
-max-width:500px;
-margin:90px auto;
-background:white;
-padding:40px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-text-align:center;
-}
-
-h1{
-margin-bottom:25px;
-}
-
-input{
-width:100%;
-padding:12px;
-border-radius:8px;
-border:1px solid #ccc;
-font-size:16px;
-margin-bottom:15px;
-}
-
-button{
-background:#4facfe;
-color:white;
-border:none;
-padding:12px 20px;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-margin-top:10px;
-}
-
-button:hover{
-background:#0077ff;
-}
-
-#result{
-margin-top:25px;
-font-size:40px;
-font-weight:bold;
-color:#333;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#111;
-color:white;
-margin-top:80px;
-}
-
-</style>
-
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-
-<h2>SuperTools</h2>
-
-<a href="index.html">Home</a>
-
+  <h2>SuperTools</h2>
+  <a href="index.html">Home</a>
 </nav>
 
-<div class="container">
+<main class="container">
+  <h1>Random Number Generator</h1>
 
-<h1>Random Number Generator</h1>
+  <input type="number" id="min" placeholder="Minimum number">
+  <input type="number" id="max" placeholder="Maximum number">
+  <button onclick="generateNumber()">Generate</button>
 
-<input type="number" id="min" placeholder="Minimum number">
-
-<input type="number" id="max" placeholder="Maximum number">
-
-<button onclick="generateNumber()">Generate</button>
-
-<div id="result">0</div>
-
-</div>
+  <div id="result">0</div>
+</main>
 
 <footer>
-
-<p>© 2026 SuperTools</p>
-
+  <p>© 2026 SuperTools</p>
 </footer>
 
 <script>
+function generateNumber() {
+  const min = parseInt(document.getElementById("min").value);
+  const max = parseInt(document.getElementById("max").value);
 
-function generateNumber(){
+  if (isNaN(min) || isNaN(max)) {
+    document.getElementById("result").innerHTML = "Enter numbers";
+    return;
+  }
 
-var min=parseInt(document.getElementById("min").value);
-var max=parseInt(document.getElementById("max").value);
+  if (min > max) {
+    document.getElementById("result").innerHTML = "Min > Max";
+    return;
+  }
 
-if(isNaN(min)||isNaN(max)){
-document.getElementById("result").innerHTML="Enter numbers";
-return;
+  const random = Math.floor(Math.random() * (max - min + 1)) + min;
+  document.getElementById("result").innerHTML = random;
 }
-
-if(min>max){
-document.getElementById("result").innerHTML="Min > Max";
-return;
-}
-
-var random=Math.floor(Math.random()*(max-min+1))+min;
-
-document.getElementById("result").innerHTML=random;
-
-}
-
 </script>
 
 </body>
-
 </html>
