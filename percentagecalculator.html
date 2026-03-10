@@ -2,90 +2,172 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Percentage Calculator - SuperTools</title>
-  <meta name="description" content="Calculate percentages quickly and easily with SuperTools Percentage Calculator. Enter your number and percentage to get instant results.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" href="https://arbazsexy.github.io/supertools/logo.png" type="image/png">
-  <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
- <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<title>Free Percentage Calculator Online | SuperTools</title>
 
-  gtag('config', 'G-FD5FXM51M8');
- </script>
+<meta name="description" content="Calculate percentages instantly with the SuperTools Percentage Calculator. Find percentages, percentage increase, and percentage decrease easily.">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Percentage Calculator - SuperTools">
-  <meta property="og:description" content="Calculate percentages quickly and easily with SuperTools Percentage Calculator. Enter your number and percentage to get instant results.">
-  <meta property="og:image" content="https://arbazsexy.github.io/supertools/logo.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://arbazsexy.github.io/supertools/percentagecalculator.html">
+<meta name="robots" content="index, follow">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Percentage Calculator - SuperTools">
-  <meta name="twitter:description" content="Calculate percentages quickly and easily with SuperTools Percentage Calculator. Enter your number and percentage to get instant results.">
-  <meta name="twitter:image" content="https://arbazsexy.github.io/supertools/logo.png">
+<link rel="canonical" href="https://supertools1.site/percentagecalculator.html">
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Percentage Calculator",
-    "url": "https://arbazsexy.github.io/supertools/percentagecalculator.html",
-    "applicationCategory": "Utility",
-    "description": "Calculate percentages quickly and easily with SuperTools Percentage Calculator.",
-    "operatingSystem": "Web",
-    "creator": {
-      "@type": "Organization",
-      "name": "SuperTools",
-      "logo": "https://arbazsexy.github.io/supertools/logo.png"
-    }
-  }
-  </script>
+<link rel="icon" href="/logo.png" type="image/png">
 
-  <link rel="stylesheet" href="style.css">
-</head>
+<!-- Google Analytics -->
 
-<nav>
-  <h2>SuperTools</h2>
-  <a href="index.html">Home</a>
-</nav>
-
-<main class="container">
-  <h1>Percentage Calculator</h1>
-
-  <input type="number" id="percent" placeholder="Enter percentage (%)">
-  <input type="number" id="number" placeholder="Enter number">
-  <button onclick="calculate()">Calculate</button>
-
-  <div id="result">Result will appear here</div>
-</main>
-
-<footer>
-  <p>© 2026 SuperTools</p>
-</footer>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
 
 <script>
-function calculate() {
-  const percent = parseFloat(document.getElementById("percent").value);
-  const number = parseFloat(document.getElementById("number").value);
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
 
-  if (isNaN(percent) || isNaN(number)) {
-    document.getElementById("result").innerHTML = "Please enter valid numbers";
-    return;
-  }
+<!-- Open Graph -->
 
-  const result = (percent / 100) * number;
-  document.getElementById("result").innerHTML = `${percent}% of ${number} = ${result}`;
+<meta property="og:title" content="Free Percentage Calculator Online - SuperTools">
+<meta property="og:description" content="Calculate percentages instantly using SuperTools Percentage Calculator.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/percentagecalculator.html">
+
+<!-- Twitter -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Percentage Calculator Online - SuperTools">
+<meta name="twitter:description" content="Calculate percentages instantly using SuperTools Percentage Calculator.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Structured Data -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Percentage Calculator",
+ "url": "https://supertools1.site/percentagecalculator.html",
+ "applicationCategory": "Utility",
+ "operatingSystem": "Web",
+ "description": "Calculate percentages easily with this free online percentage calculator.",
+ "creator": {
+   "@type": "Organization",
+   "name": "SuperTools",
+   "url": "https://supertools1.site"
+ }
 }
 </script>
 
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="/">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Percentage Calculator</h1>
+
+<h3>1. What is X% of Y?</h3>
+
+<input type="number" id="percent" placeholder="Enter percentage (%)">
+<input type="number" id="number" placeholder="Enter number">
+
+<button onclick="calculatePercent()">Calculate</button>
+
+<div id="result"></div>
+
+<br>
+
+<h3>2. Percentage Increase</h3>
+
+<input type="number" id="oldValue" placeholder="Old value">
+<input type="number" id="newValue" placeholder="New value">
+
+<button onclick="calculateIncrease()">Calculate Increase</button>
+
+<div id="increaseResult"></div>
+
+<br>
+
+<h3>3. Percentage Decrease</h3>
+
+<input type="number" id="startValue" placeholder="Starting value">
+<input type="number" id="endValue" placeholder="Ending value">
+
+<button onclick="calculateDecrease()">Calculate Decrease</button>
+
+<div id="decreaseResult"></div>
+
+</div>
+
+<footer>
+<p>© 2026 SuperTools</p>
+</footer>
+
+<script>
+
+function calculatePercent(){
+
+let percent=parseFloat(document.getElementById("percent").value);
+let number=parseFloat(document.getElementById("number").value);
+
+if(!percent || !number){
+document.getElementById("result").innerHTML="Please enter valid numbers.";
+return;
+}
+
+let result=(percent/100)*number;
+
+document.getElementById("result").innerHTML=
+percent+"% of "+number+" = <b>"+result+"</b>";
+
+}
+
+function calculateIncrease(){
+
+let oldValue=parseFloat(document.getElementById("oldValue").value);
+let newValue=parseFloat(document.getElementById("newValue").value);
+
+if(!oldValue || !newValue){
+document.getElementById("increaseResult").innerHTML="Enter valid numbers.";
+return;
+}
+
+let increase=((newValue-oldValue)/oldValue)*100;
+
+document.getElementById("increaseResult").innerHTML=
+"Increase: <b>"+increase.toFixed(2)+"%</b>";
+
+}
+
+function calculateDecrease(){
+
+let start=parseFloat(document.getElementById("startValue").value);
+let end=parseFloat(document.getElementById("endValue").value);
+
+if(!start || !end){
+document.getElementById("decreaseResult").innerHTML="Enter valid numbers.";
+return;
+}
+
+let decrease=((start-end)/start)*100;
+
+document.getElementById("decreaseResult").innerHTML=
+"Decrease: <b>"+decrease.toFixed(2)+"%</b>";
+
+}
+
+</script>
+
 </body>
+
 </html>

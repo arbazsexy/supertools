@@ -2,92 +2,134 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Page Title & Description -->
-  <title>Age Calculator - SuperTools</title>
-  <meta name="description" content="Calculate your exact age easily with SuperTools Age Calculator. Enter your birth date and find out your age instantly.">
-  <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
- <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  gtag('config', 'G-FD5FXM51M8');
- </script>
+<title>Free Age Calculator Online | SuperTools</title>
 
-  <!-- Favicon / Logo -->
-  <link rel="icon" href="https://arbazsexy.github.io/supertools/logo.png" type="image/png">
+<meta name="description" content="Calculate your exact age instantly with the SuperTools Age Calculator. Get years, months and days from your birth date.">
 
-  <!-- Open Graph for Social Media -->
-  <meta property="og:title" content="Age Calculator - SuperTools">
-  <meta property="og:description" content="Calculate your exact age easily with SuperTools Age Calculator. Enter your birth date and find out your age instantly.">
-  <meta property="og:image" content="https://arbazsexy.github.io/supertools/logo.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://arbazsexy.github.io/supertools/agecalculator.html">
+<meta name="robots" content="index, follow">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Age Calculator - SuperTools">
-  <meta name="twitter:description" content="Calculate your exact age easily with SuperTools Age Calculator. Enter your birth date and find out your age instantly.">
-  <meta name="twitter:image" content="https://arbazsexy.github.io/supertools/logo.png">
+<link rel="canonical" href="https://supertools1.site/agecalculator.html">
 
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Age Calculator",
-    "url": "https://arbazsexy.github.io/supertools/agecalculator.html",
-    "applicationCategory": "Utility",
-    "description": "Calculate your exact age easily with SuperTools Age Calculator.",
-    "operatingSystem": "Web",
-    "creator": {
-      "@type": "Organization",
-      "name": "SuperTools",
-      "logo": "https://arbazsexy.github.io/supertools/logo.png"
-    }
-  }
-  </script>
+<link rel="icon" href="/logo.png" type="image/png">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+<!-- Open Graph -->
+
+<meta property="og:title" content="Free Age Calculator Online - SuperTools">
+<meta property="og:description" content="Calculate your exact age instantly with SuperTools Age Calculator.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/agecalculator.html">
+
+<!-- Twitter -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Age Calculator Online - SuperTools">
+<meta name="twitter:description" content="Calculate your exact age instantly with SuperTools Age Calculator.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Structured Data -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Age Calculator",
+ "url": "https://supertools1.site/agecalculator.html",
+ "applicationCategory": "Utility",
+ "operatingSystem": "Web",
+ "description": "Free online age calculator to calculate your exact age instantly.",
+ "creator": {
+   "@type": "Organization",
+   "name": "SuperTools",
+   "url": "https://supertools1.site"
+ }
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-  <nav>
-    <h2>⚡ SuperTools</h2>
-    <div><a href="index.html">Home</a></div>
-  </nav>
 
-  <div class="container">
-    <h1>Age Calculator</h1>
-    <label for="birthdate">Select your birth date:</label>
-    <input type="date" id="birthdate" aria-label="Enter your birth date">
-    <button onclick="calculateAge()">Calculate Age</button>
-    <div id="result"></div>
-  </div>
+<nav>
 
-  <footer>
-    <p>© 2026 SuperTools</p>
-  </footer>
+<h2>⚡ SuperTools</h2>
 
-  <script>
-    function calculateAge() {
-      var birthdate = document.getElementById("birthdate").value;
-      if (!birthdate) {
-        document.getElementById("result").innerHTML = "Please select your birth date";
-        return;
-      }
-      var birth = new Date(birthdate);
-      var today = new Date();
-      var age = today.getFullYear() - birth.getFullYear();
-      var m = today.getMonth() - birth.getMonth();
-      if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) age--;
-      document.getElementById("result").innerHTML = "You are " + age + " years old.";
-    }
-  </script>
+<a href="/">Home</a>
+
+</nav>
+
+<div class="container">
+
+<h1>Age Calculator</h1>
+
+<label for="birthdate">Select your birth date</label>
+
+<input type="date" id="birthdate">
+
+<button onclick="calculateAge()">Calculate Age</button>
+
+<div id="result"></div>
+
+</div>
+
+<footer>
+
+<p>© 2026 SuperTools</p>
+
+</footer>
+
+<script>
+
+function calculateAge(){
+
+let birthdate=document.getElementById("birthdate").value;
+
+if(!birthdate){
+document.getElementById("result").innerHTML="Please select your birth date.";
+return;
+}
+
+let birth=new Date(birthdate);
+let today=new Date();
+
+let years=today.getFullYear()-birth.getFullYear();
+let months=today.getMonth()-birth.getMonth();
+let days=today.getDate()-birth.getDate();
+
+if(days<0){
+months--;
+days+=new Date(today.getFullYear(),today.getMonth(),0).getDate();
+}
+
+if(months<0){
+years--;
+months+=12;
+}
+
+document.getElementById("result").innerHTML =
+"You are <b>"+years+"</b> years, <b>"+months+"</b> months and <b>"+days+"</b> days old.";
+
+}
+
+</script>
+
 </body>
+
 </html>

@@ -2,111 +2,157 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Image Compressor - SuperTools</title>
-  <meta name="description" content="Compress images online easily with SuperTools Image Compressor. Reduce file size without losing quality, perfect for web and social media.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" href="https://arbazsexy.github.io/supertools/logo.png" type="image/png">
-  <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
- <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<title>Free Image Compressor Online | SuperTools</title>
 
-  gtag('config', 'G-FD5FXM51M8');
- </script>
+<meta name="description" content="Compress images online for free using SuperTools Image Compressor. Reduce image file size without losing quality.">
 
+<meta name="robots" content="index, follow">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Image Compressor - SuperTools">
-  <meta property="og:description" content="Compress images online easily with SuperTools Image Compressor. Reduce file size without losing quality, perfect for web and social media.">
-  <meta property="og:image" content="https://arbazsexy.github.io/supertools/logo.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://arbazsexy.github.io/supertools/imagecompressor.html">
+<link rel="canonical" href="https://supertools1.site/imagecompressor.html">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Image Compressor - SuperTools">
-  <meta name="twitter:description" content="Compress images online easily with SuperTools Image Compressor. Reduce file size without losing quality, perfect for web and social media.">
-  <meta name="twitter:image" content="https://arbazsexy.github.io/supertools/logo.png">
+<link rel="icon" href="/logo.png" type="image/png">
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Image Compressor",
-    "url": "https://arbazsexy.github.io/supertools/imagecompressor.html",
-    "applicationCategory": "Utility",
-    "description": "Compress images online easily with SuperTools Image Compressor. Reduce file size without losing quality, perfect for web and social media.",
-    "operatingSystem": "Web",
-    "creator": {
-      "@type": "Organization",
-      "name": "SuperTools",
-      "logo": "https://arbazsexy.github.io/supertools/logo.png"
-    }
-  }
-  </script>
+<!-- Google Analytics -->
 
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<nav>
-  <h2>SuperTools</h2>
-  <a href="index.html">Home</a>
-</nav>
-
-<main class="container">
-  <h1>Image Compressor</h1>
-
-  <input type="file" id="upload" accept="image/*">
-  <button onclick="compressImage()">Compress Image</button>
-
-  <canvas id="canvas" style="display:none;"></canvas>
-  <img id="preview" alt="Compressed preview" />
-
-  <a id="download" style="display:none">
-    <button>Download Compressed Image</button>
-  </a>
-</main>
-
-<footer>
-  <p>© 2026 SuperTools</p>
-</footer>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
 
 <script>
-function compressImage() {
-  const file = document.getElementById("upload").files[0];
-  if (!file) {
-    alert("Please upload an image");
-    return;
-  }
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
 
-  const reader = new FileReader();
-  reader.onload = function(event) {
-    const img = new Image();
-    img.onload = function() {
-      const canvas = document.getElementById("canvas");
-      const ctx = canvas.getContext("2d");
-      canvas.width = img.width;
-      canvas.height = img.height;
-      ctx.drawImage(img, 0, 0);
-      const compressed = canvas.toDataURL("image/jpeg", 0.5);
-      document.getElementById("preview").src = compressed;
+<!-- Open Graph -->
 
-      const download = document.getElementById("download");
-      download.href = compressed;
-      download.download = "compressed-image.jpg";
-      download.style.display = "inline-block";
-    };
-    img.src = event.target.result;
-  };
-  reader.readAsDataURL(file);
+<meta property="og:title" content="Free Image Compressor Online - SuperTools">
+<meta property="og:description" content="Compress images online easily with SuperTools Image Compressor.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/imagecompressor.html">
+
+<!-- Twitter -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Image Compressor Online - SuperTools">
+<meta name="twitter:description" content="Compress images online easily with SuperTools Image Compressor.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Structured Data -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Image Compressor",
+ "url": "https://supertools1.site/imagecompressor.html",
+ "applicationCategory": "Utility",
+ "operatingSystem": "Web",
+ "description": "Free online image compressor to reduce image size instantly.",
+ "creator": {
+   "@type": "Organization",
+   "name": "SuperTools",
+   "url": "https://supertools1.site"
+ }
 }
 </script>
 
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="/">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Image Compressor</h1>
+
+<input type="file" id="upload" accept="image/*">
+
+<button onclick="compressImage()">Compress Image</button>
+
+<p id="info"></p>
+
+<canvas id="canvas" style="display:none;"></canvas>
+
+<img id="preview" alt="Compressed preview">
+
+<a id="download" style="display:none">
+<button>Download Compressed Image</button>
+</a>
+
+</div>
+
+<footer>
+<p>© 2026 SuperTools</p>
+</footer>
+
+<script>
+
+function compressImage(){
+
+let file=document.getElementById("upload").files[0];
+
+if(!file){
+alert("Please upload an image.");
+return;
+}
+
+let reader=new FileReader();
+
+reader.onload=function(e){
+
+let img=new Image();
+
+img.onload=function(){
+
+let canvas=document.getElementById("canvas");
+let ctx=canvas.getContext("2d");
+
+canvas.width=img.width;
+canvas.height=img.height;
+
+ctx.drawImage(img,0,0);
+
+let compressed=canvas.toDataURL("image/jpeg",0.6);
+
+document.getElementById("preview").src=compressed;
+
+let download=document.getElementById("download");
+
+download.href=compressed;
+download.download="compressed-image.jpg";
+download.style.display="inline-block";
+
+let originalSize=(file.size/1024).toFixed(1);
+
+let compressedSize=(compressed.length*0.75/1024).toFixed(1);
+
+document.getElementById("info").innerHTML=
+"Original Size: <b>"+originalSize+" KB</b><br>"+
+"Compressed Size: <b>"+compressedSize+" KB</b>";
+
+};
+
+img.src=e.target.result;
+
+};
+
+reader.readAsDataURL(file);
+
+}
+
+</script>
+
 </body>
+
 </html>

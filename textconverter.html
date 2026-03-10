@@ -1,105 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Text Case Converter - SuperTools</title>
-  <meta name="description" content="Convert your text to uppercase, lowercase, or capitalize words instantly with SuperTools Text Case Converter. Easy and free to use.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" href="https://arbazsexy.github.io/supertools/logo.png" type="image/png">
-  <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
- <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<title>Text Case Converter | SuperTools</title>
 
-  gtag('config', 'G-FD5FXM51M8');
- </script>
+<meta name="description" content="Convert text to uppercase, lowercase, capitalized, sentence case or alternating case instantly with SuperTools Text Case Converter.">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Text Case Converter - SuperTools">
-  <meta property="og:description" content="Convert your text to uppercase, lowercase, or capitalize words instantly with SuperTools Text Case Converter. Easy and free to use.">
-  <meta property="og:image" content="https://arbazsexy.github.io/supertools/logo.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://arbazsexy.github.io/supertools/textconverter.html">
+<meta name="robots" content="index, follow">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Text Case Converter - SuperTools">
-  <meta name="twitter:description" content="Convert your text to uppercase, lowercase, or capitalize words instantly with SuperTools Text Case Converter. Easy and free to use.">
-  <meta name="twitter:image" content="https://arbazsexy.github.io/supertools/logo.png">
+<link rel="canonical" href="https://supertools1.site/textconverter.html">
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Text Case Converter",
-    "url": "https://arbazsexy.github.io/supertools/textconverter.html",
-    "applicationCategory": "Utility",
-    "description": "Convert your text to uppercase, lowercase, or capitalize words instantly with SuperTools Text Case Converter.",
-    "operatingSystem": "Web",
-    "creator": {
-      "@type": "Organization",
-      "name": "SuperTools",
-      "logo": "https://arbazsexy.github.io/supertools/logo.png"
-    }
-  }
-  </script>
+<link rel="icon" href="/logo.png" type="image/png">
 
-  <link rel="stylesheet" href="style.css">
-</head>
+<!-- Google Analytics -->
 
-<nav>
-  <h2>SuperTools</h2>
-  <a href="index.html">Home</a>
-</nav>
-
-<main class="container">
-  <h1>Text Case Converter</h1>
-  <textarea id="text" placeholder="Type or paste your text here..."></textarea>
-
-  <div class="buttons">
-    <button onclick="toUpper()">UPPERCASE</button>
-    <button onclick="toLower()">lowercase</button>
-    <button onclick="toCapital()">Capitalize</button>
-    <button onclick="copyText()">Copy</button>
-    <button onclick="clearText()">Clear</button>
-  </div>
-</main>
-
-<footer>
-  <p>© 2026 SuperTools</p>
-</footer>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
 
 <script>
-function toUpper() {
-  document.getElementById("text").value = document.getElementById("text").value.toUpperCase();
-}
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
 
-function toLower() {
-  document.getElementById("text").value = document.getElementById("text").value.toLowerCase();
-}
+<!-- Open Graph -->
 
-function toCapital() {
-  document.getElementById("text").value = document.getElementById("text").value.replace(/\b\w/g, function(letter) {
-    return letter.toUpperCase();
-  });
-}
+<meta property="og:title" content="Text Case Converter - SuperTools">
+<meta property="og:description" content="Convert text case instantly with SuperTools Text Case Converter.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/textconverter.html">
 
-function copyText() {
-  const text = document.getElementById("text");
-  text.select();
-  document.execCommand("copy");
-  alert("Text copied!");
-}
+<!-- Twitter -->
 
-function clearText() {
-  document.getElementById("text").value = "";
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Text Case Converter - SuperTools">
+<meta name="twitter:description" content="Convert text case instantly using SuperTools.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Structured Data -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Text Case Converter",
+ "url": "https://supertools1.site/textconverter.html",
+ "applicationCategory": "Utility",
+ "operatingSystem": "Web",
+ "description": "Convert text to uppercase, lowercase, capitalized and more.",
+ "creator": {
+   "@type": "Organization",
+   "name": "SuperTools",
+   "url": "https://supertools1.site"
+ }
 }
 </script>
 
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="/">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Text Case Converter</h1>
+
+<textarea id="text" placeholder="Type or paste your text here..."></textarea>
+
+<div class="buttons">
+
+<button onclick="toUpper()">UPPERCASE</button>
+
+<button onclick="toLower()">lowercase</button>
+
+<button onclick="toCapital()">Capitalize Words</button>
+
+<button onclick="sentenceCase()">Sentence case</button>
+
+<button onclick="alternatingCase()">aLtErNaTiNg</button>
+
+<button onclick="copyText()">Copy</button>
+
+<button onclick="clearText()">Clear</button>
+
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 SuperTools</p>
+</footer>
+
+<script>
+
+function toUpper(){
+let text=document.getElementById("text");
+text.value=text.value.toUpperCase();
+}
+
+function toLower(){
+let text=document.getElementById("text");
+text.value=text.value.toLowerCase();
+}
+
+function toCapital(){
+let text=document.getElementById("text");
+text.value=text.value.replace(/\b\w/g,l=>l.toUpperCase());
+}
+
+function sentenceCase(){
+let text=document.getElementById("text");
+text.value=text.value.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g,c=>c.toUpperCase());
+}
+
+function alternatingCase(){
+let text=document.getElementById("text");
+let result="";
+for(let i=0;i<text.value.length;i++){
+result+=i%2?text.value[i].toLowerCase():text.value[i].toUpperCase();
+}
+text.value=result;
+}
+
+function copyText(){
+let text=document.getElementById("text").value;
+
+if(text===""){
+alert("Nothing to copy");
+return;
+}
+
+navigator.clipboard.writeText(text);
+
+alert("Text copied!");
+}
+
+function clearText(){
+document.getElementById("text").value="";
+}
+
+</script>
+
 </body>
+
 </html>

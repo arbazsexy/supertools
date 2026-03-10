@@ -2,100 +2,133 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>BMI Calculator - SuperTools</title>
-  <meta name="description" content="Check your Body Mass Index (BMI) instantly with SuperTools BMI Calculator. Enter your weight and height to know your BMI and category.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" href="https://arbazsexy.github.io/supertools/logo.png" type="image/png">
-  <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
- <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<title>Free BMI Calculator Online | SuperTools</title>
 
-  gtag('config', 'G-FD5FXM51M8');
- </script>
+<meta name="description" content="Calculate your Body Mass Index (BMI) instantly using the SuperTools BMI Calculator. Enter your height and weight to know your BMI category.">
 
+<meta name="robots" content="index, follow">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="BMI Calculator - SuperTools">
-  <meta property="og:description" content="Check your Body Mass Index (BMI) instantly with SuperTools BMI Calculator. Enter your weight and height to know your BMI and category.">
-  <meta property="og:image" content="https://arbazsexy.github.io/supertools/logo.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://arbazsexy.github.io/supertools/bmicalculator.html">
+<link rel="canonical" href="https://supertools1.site/bmicalculator.html">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="BMI Calculator - SuperTools">
-  <meta name="twitter:description" content="Check your Body Mass Index (BMI) instantly with SuperTools BMI Calculator. Enter your weight and height to know your BMI and category.">
-  <meta name="twitter:image" content="https://arbazsexy.github.io/supertools/logo.png">
+<link rel="icon" href="/logo.png" type="image/png">
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "BMI Calculator",
-    "url": "https://arbazsexy.github.io/supertools/bmicalculator.html",
-    "applicationCategory": "Utility",
-    "description": "Check your Body Mass Index (BMI) instantly with SuperTools BMI Calculator. Enter your weight and height to know your BMI and category.",
-    "operatingSystem": "Web",
-    "creator": {
-      "@type": "Organization",
-      "name": "SuperTools",
-      "logo": "https://arbazsexy.github.io/supertools/logo.png"
-    }
-  }
-  </script>
+<!-- Google Analytics -->
 
-  <link rel="stylesheet" href="style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Open Graph -->
+
+<meta property="og:title" content="Free BMI Calculator Online - SuperTools">
+<meta property="og:description" content="Check your Body Mass Index instantly using the SuperTools BMI Calculator.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/bmicalculator.html">
+
+<!-- Twitter -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free BMI Calculator Online - SuperTools">
+<meta name="twitter:description" content="Check your Body Mass Index instantly using the SuperTools BMI Calculator.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Structured Data -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "BMI Calculator",
+ "url": "https://supertools1.site/bmicalculator.html",
+ "applicationCategory": "Utility",
+ "operatingSystem": "Web",
+ "description": "Free BMI calculator to check your body mass index instantly.",
+ "creator": {
+   "@type": "Organization",
+   "name": "SuperTools",
+   "url": "https://supertools1.site"
+ }
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-  <nav>
-    <h2>⚡ SuperTools</h2>
-    <div><a href="index.html">Home</a></div>
-  </nav>
 
-  <div class="container">
-    <h1>BMI Calculator</h1>
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="/">Home</a>
+</nav>
 
-    <input type="number" id="weight" placeholder="Enter weight (kg)">
-    <input type="number" id="height" placeholder="Enter height (cm)">
-    <button onclick="calculateBMI()">Calculate BMI</button>
+<div class="container">
 
-    <div id="result"></div>
-  </div>
+<h1>BMI Calculator</h1>
 
-  <footer>
-    <p>© 2026 SuperTools</p>
-  </footer>
+<label>Weight (kg)</label>
+<input type="number" id="weight" placeholder="Enter weight in kg">
 
-  <script>
-    function calculateBMI() {
-      var weight = parseFloat(document.getElementById("weight").value);
-      var height = parseFloat(document.getElementById("height").value);
+<label>Height (cm)</label>
+<input type="number" id="height" placeholder="Enter height in cm">
 
-      if (isNaN(weight) || isNaN(height)) {
-        document.getElementById("result").innerHTML = "Please enter valid values";
-        return;
-      }
+<button onclick="calculateBMI()">Calculate BMI</button>
 
-      height = height / 100;
-      var bmi = weight / (height * height);
-      var category = "";
+<div id="result"></div>
 
-      if (bmi < 18.5) category = "Underweight";
-      else if (bmi < 24.9) category = "Normal weight";
-      else if (bmi < 29.9) category = "Overweight";
-      else category = "Obese";
+</div>
 
-      document.getElementById("result").innerHTML =
-        "Your BMI: " + bmi.toFixed(2) + " (" + category + ")";
-    }
-  </script>
+<footer>
+<p>© 2026 SuperTools</p>
+</footer>
+
+<script>
+
+function calculateBMI(){
+
+let weight=parseFloat(document.getElementById("weight").value);
+let height=parseFloat(document.getElementById("height").value);
+
+if(!weight || !height){
+document.getElementById("result").innerHTML="Please enter valid values.";
+return;
+}
+
+height=height/100;
+
+let bmi=weight/(height*height);
+
+let category="";
+
+if(bmi<18.5){
+category="Underweight";
+}
+else if(bmi<24.9){
+category="Normal weight";
+}
+else if(bmi<29.9){
+category="Overweight";
+}
+else{
+category="Obese";
+}
+
+document.getElementById("result").innerHTML=
+"Your BMI is <b>"+bmi.toFixed(2)+"</b><br>Category: <b>"+category+"</b>";
+
+}
+
+</script>
+
 </body>
 </html>
