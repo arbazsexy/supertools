@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Free QR Code Generator - Create Custom QR Codes (No Expiry) | SuperTools</title>
-    
     <meta name="description" content="Create high-resolution QR codes instantly. 100% free, no sign-up required, and your QR codes will never expire. Perfect for URLs, text, and WiFi sharing.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://supertools1.site/qr.html">
@@ -34,7 +33,11 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "description": "Generate static QR codes instantly. No registration or hidden fees.",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
     }
     </script>
 
@@ -42,21 +45,24 @@
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Do these QR codes ever expire?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No! Our tool generates static QR codes, which means they will work forever and never expire."
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do these QR codes ever expire?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No! Our tool generates static QR codes, which means they will work forever and never expire."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it completely free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our QR code generator is 100% free with no sign-ups or hidden fees."
+          }
         }
-      }, {
-        "@type": "Question",
-        "name": "Is it completely free?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, our QR code generator is 100% free with no sign-ups or hidden fees."
-        }
-      }]
+      ]
     }
     </script>
 
@@ -95,8 +101,6 @@
 <section style="max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.8; color: #444; border-top: 1px solid #ddd;">
     <h2>Why Use the SuperTools QR Generator?</h2>
     <p>Many online tools trick you into creating a dynamic QR code that stops working after a 14-day "free trial." <strong>SuperTools generates Static QR Codes.</strong> This means the data is encoded directly into the image itself. Once you download it, it belongs to you forever—no tracking, no expiration, no subscriptions.</p>
-
-    
 
     <h3>How to Create a QR Code:</h3>
     <ol>
@@ -142,8 +146,6 @@ function generateQR() {
 }
 
 function downloadQR() {
-    // qrcode.js generates a canvas first, then converts to an img tag. 
-    // We target the image for the highest quality download.
     let img = document.querySelector("#qrcode img");
     
     if (!img || !img.src) {
@@ -154,7 +156,7 @@ function downloadQR() {
     let link = document.createElement("a");
     link.href = img.src;
     link.download = "SuperTools-QRCode.png";
-    document.body.appendChild(link); // Required for Firefox
+    document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
 }
