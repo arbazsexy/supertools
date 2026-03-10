@@ -1,126 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Random Number Generator - Custom Range & Multi-Number | SuperTools</title>
+    <meta name="description" content="Generate true random numbers instantly. Set custom ranges, generate multiple numbers at once, and choose unique results. Perfect for raffles, games, and statistics.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/randomnumber.html">
 
-<title>Random Number Generator | SuperTools</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
 
-<meta name="description" content="Generate random numbers instantly using SuperTools Random Number Generator. Choose minimum and maximum values and generate single or multiple random numbers.">
+    <meta property="og:title" content="Random Number Generator - SuperTools">
+    <meta property="og:description" content="Generate random numbers with a custom range. Fast, free, and 100% private.">
+    <meta property="og:image" content="https://supertools1.site/logo.svg">
+    <meta property="og:url" content="https://supertools1.site/randomnumber.html">
 
-<meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
 
-<link rel="canonical" href="https://supertools1.site/randomnumber.html">
-
-<link rel="icon" href="/logo.png" type="image/png">
-
-<!-- Google Analytics -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-FD5FXM51M8');
-</script>
-
-<!-- Open Graph -->
-
-<meta property="og:title" content="Random Number Generator - SuperTools">
-<meta property="og:description" content="Generate random numbers instantly with SuperTools Random Number Generator.">
-<meta property="og:image" content="https://supertools1.site/logo.png">
-<meta property="og:url" content="https://supertools1.site/randomnumber.html">
-<meta property="og:type" content="website">
-
-<!-- Twitter -->
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Random Number Generator - SuperTools">
-<meta name="twitter:description" content="Generate random numbers instantly with SuperTools Random Number Generator.">
-<meta name="twitter:image" content="https://supertools1.site/logo.png">
-
-<!-- Structured Data -->
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "Random Number Generator",
- "url": "https://supertools1.site/randomnumber.html",
- "applicationCategory": "Utility",
- "operatingSystem": "Web",
- "description": "Generate random numbers instantly using this free online random number generator.",
- "creator": {
-   "@type": "Organization",
-   "name": "SuperTools",
-   "url": "https://supertools1.site"
- }
-}
-</script>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-<h2>⚡ SuperTools</h2>
-<a href="/">Home</a>
+    <h2>⚡ SuperTools</h2>
+    <a href="index.html">Home</a>
 </nav>
 
-<div class="container">
+<div class="container" style="max-width: 550px; padding: 30px; text-align: center;">
+    <h1>Random Number Generator</h1>
+    <p style="color: #666; margin-bottom: 25px;">The ultimate tool for picking winners, dice rolls, and research.</p>
 
-<h1>Random Number Generator</h1>
+    <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: left;">
+        <div style="margin-bottom: 15px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px;">Range</label>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <input type="number" id="min" value="1" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                <span>to</span>
+                <input type="number" id="max" value="100" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+        </div>
 
-<input type="number" id="min" placeholder="Minimum number">
-<input type="number" id="max" placeholder="Maximum number">
-<input type="number" id="count" placeholder="How many numbers?" value="1">
+        <div style="margin-bottom: 15px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px;">Amount to Generate</label>
+            <input type="number" id="count" value="1" min="1" max="5000" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
 
-<br><br>
+        <div style="margin-bottom: 20px;">
+            <label style="cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                <input type="checkbox" id="unique"> <span>Unique numbers (no repeats)</span>
+            </label>
+        </div>
 
-<button onclick="generateNumber()">Generate</button>
+        <button onclick="generateNumber()" style="width: 100%; padding: 15px; background: #4facfe; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 18px; font-weight: bold; margin-bottom: 10px;">Generate Numbers</button>
+        
+        <div id="actions" style="display: none; gap: 10px; margin-top: 10px;">
+            <button onclick="copyResults()" id="copyBtn" style="flex: 1; padding: 10px; background: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">Copy</button>
+            <button onclick="downloadCSV()" style="flex: 1; padding: 10px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">CSV</button>
+        </div>
+    </div>
 
-<div id="result">0</div>
-
+    <div id="result" style="margin-top: 30px; font-size: 22px; font-weight: bold; color: #333; word-break: break-all; min-height: 50px;">-</div>
 </div>
 
+<section style="max-width: 800px; margin: 40px auto; padding: 20px; color: #444; line-height: 1.8; border-top: 1px solid #ddd;">
+    <h2>Randomness and Probability Distribution</h2>
+    <p>Our generator produces numbers with a <strong>Uniform Distribution</strong>. This means that every number within your specified range has an exactly equal chance of being selected. This is vital for fair drawings and statistical accuracy.</p>
+    
+    
+
+    <h3>How to use for Giveaways:</h3>
+    <ol>
+        <li>Assign a number to each participant (e.g., 1 to 150).</li>
+        <li>Enter 1 in the Min and 150 in the Max box.</li>
+        <li>Set "Amount" to the number of winners you want.</li>
+        <li>Check <strong>"Unique numbers"</strong> to ensure one person doesn't win twice!</li>
+    </ol>
+</section>
+
 <footer>
-<p>© 2026 SuperTools</p>
+    <p>© 2026 SuperTools | <a href="privacy.html">Privacy Policy</a> | <a href="about.html">About Us</a></p>
 </footer>
 
 <script>
+let currentNumbers = [];
 
 function generateNumber(){
+    let min = parseInt(document.getElementById("min").value);
+    let max = parseInt(document.getElementById("max").value);
+    let count = parseInt(document.getElementById("count").value);
+    let unique = document.getElementById("unique").checked;
 
-let min=parseInt(document.getElementById("min").value);
-let max=parseInt(document.getElementById("max").value);
-let count=parseInt(document.getElementById("count").value);
+    if(isNaN(min) || isNaN(max) || isNaN(count) || count < 1){
+        showError("Please enter valid numbers");
+        return;
+    }
 
-if(isNaN(min)||isNaN(max)){
-document.getElementById("result").innerHTML="Enter valid numbers";
-return;
+    if(min > max){
+        showError("Min cannot be larger than Max");
+        return;
+    }
+
+    if(unique && count > (max - min + 1)){
+        showError("Range is too small for unique numbers");
+        return;
+    }
+
+    currentNumbers = [];
+    
+    if(unique) {
+        let pool = Array.from({length: max - min + 1}, (_, i) => min + i);
+        for(let i = 0; i < count; i++) {
+            let randomIndex = Math.floor(Math.random() * pool.length);
+            currentNumbers.push(pool.splice(randomIndex, 1)[0]);
+        }
+    } else {
+        for(let i = 0; i < count; i++){
+            currentNumbers.push(Math.floor(Math.random() * (max - min + 1)) + min);
+        }
+    }
+
+    document.getElementById("result").innerHTML = 
+        "<div style='padding:20px; background:#e3f2fd; border-radius:10px; border-left: 5px solid #4facfe;'>" + currentNumbers.join(", ") + "</div>";
+    
+    document.getElementById("actions").style.display = "flex";
 }
 
-if(min>max){
-document.getElementById("result").innerHTML="Minimum cannot be greater than Maximum";
-return;
+function showError(msg) {
+    document.getElementById("result").innerHTML = "<span style='color:red; font-size:16px;'>" + msg + "</span>";
+    document.getElementById("actions").style.display = "none";
 }
 
-let numbers=[];
-
-for(let i=0;i<count;i++){
-let random=Math.floor(Math.random()*(max-min+1))+min;
-numbers.push(random);
+function copyResults() {
+    if(currentNumbers.length === 0) return;
+    navigator.clipboard.writeText(currentNumbers.join(", ")).then(() => {
+        let btn = document.getElementById("copyBtn");
+        btn.innerText = "Copied!";
+        btn.style.background = "#28a745";
+        setTimeout(() => { 
+            btn.innerText = "Copy"; 
+            btn.style.background = "#333";
+        }, 2000);
+    });
 }
 
-document.getElementById("result").innerHTML=numbers.join(", ");
-
+function downloadCSV() {
+    if(currentNumbers.length === 0) return;
+    let csvContent = "data:text/csv;charset=utf-8," + currentNumbers.join("\n");
+    let encodedUri = encodeURI(csvContent);
+    let link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "supertools_random_numbers.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }
-
 </script>
 
 </body>

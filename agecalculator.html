@@ -1,135 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exact Age Calculator Online - Calculate Age in Years, Months, & Days</title>
+    <meta name="description" content="Calculate your exact age instantly with SuperTools. Find out exactly how many years, months, and days you've been alive. Fast, free, and private.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/agecalculator.html">
 
-<title>Free Age Calculator Online | SuperTools</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
 
-<meta name="description" content="Calculate your exact age instantly with the SuperTools Age Calculator. Get years, months and days from your birth date.">
+    <meta property="og:title" content="Exact Age Calculator Online - SuperTools">
+    <meta property="og:description" content="Get your exact age in years, months, and days instantly.">
+    <meta property="og:image" content="https://supertools1.site/logo.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/agecalculator.html">
 
-<meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
 
-<link rel="canonical" href="https://supertools1.site/agecalculator.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Age Calculator",
+      "url": "https://supertools1.site/agecalculator.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web",
+      "description": "Calculate your exact age in years, months, and days from your date of birth.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Organization", "name": "SuperTools", "url": "https://supertools1.site" }
+    }
+    </script>
 
-<link rel="icon" href="/logo.png" type="image/png">
-
-<!-- Open Graph -->
-
-<meta property="og:title" content="Free Age Calculator Online - SuperTools">
-<meta property="og:description" content="Calculate your exact age instantly with SuperTools Age Calculator.">
-<meta property="og:image" content="https://supertools1.site/logo.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://supertools1.site/agecalculator.html">
-
-<!-- Twitter -->
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Free Age Calculator Online - SuperTools">
-<meta name="twitter:description" content="Calculate your exact age instantly with SuperTools Age Calculator.">
-<meta name="twitter:image" content="https://supertools1.site/logo.png">
-
-<!-- Google Analytics -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-FD5FXM51M8');
-</script>
-
-<!-- Structured Data -->
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "Age Calculator",
- "url": "https://supertools1.site/agecalculator.html",
- "applicationCategory": "Utility",
- "operatingSystem": "Web",
- "description": "Free online age calculator to calculate your exact age instantly.",
- "creator": {
-   "@type": "Organization",
-   "name": "SuperTools",
-   "url": "https://supertools1.site"
- }
-}
-</script>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-
-<h2>⚡ SuperTools</h2>
-
-<a href="/">Home</a>
-
+    <h2>⚡ SuperTools</h2>
+    <a href="index.html">Home</a>
 </nav>
 
 <div class="container">
+    <h1>Age Calculator</h1>
+    <p>Find out exactly how old you are in years, months, and days.</p>
+    
+    <label for="birthdate">Select your birth date</label>
+    <input type="date" id="birthdate">
+    <button onclick="calculateAge()">Calculate Age</button>
 
-<h1>Age Calculator</h1>
-
-<label for="birthdate">Select your birth date</label>
-
-<input type="date" id="birthdate">
-
-<button onclick="calculateAge()">Calculate Age</button>
-
-<div id="result"></div>
-
+    <div id="result"></div>
 </div>
 
+<section style="max-width: 800px; margin: 40px auto; padding: 20px; color: #444; line-height: 1.8; border-top: 1px solid #ddd;">
+    <h2>How to Use the Online Age Calculator</h2>
+    <p>Knowing your exact age is useful for filling out legal documents, checking eligibility for services, or just for fun! Our <strong>Age Calculator</strong> uses a precise algorithm to determine the time elapsed since your birth.</p>
+    
+    <h3>Why use our tool?</h3>
+    <ul>
+        <li><strong>Detailed Breakdown:</strong> We don't just give you years; we give you months and days for maximum accuracy.</li>
+        <li><strong>100% Private:</strong> Your birth date is processed in your browser. We never save your personal data on our servers.</li>
+        <li><strong>Fast & Light:</strong> No heavy scripts, just clean code that works instantly on mobile and desktop.</li>
+    </ul>
+
+    <h3>Common Questions</h3>
+    <p><strong>Is this age calculator accurate?</strong><br>
+    Yes! It accounts for leap years and the varying lengths of months to ensure you get the correct result every time.</p>
+    
+    <p><strong>Can I use this for official purposes?</strong><br>
+    While our tool is highly accurate, always double-check with official government documentation for legal or medical requirements.</p>
+</section>
+
 <footer>
-
-<p>© 2026 SuperTools</p>
-
+    <p>© 2026 SuperTools | <a href="privacy.html">Privacy Policy</a> | <a href="about.html">About Us</a></p>
 </footer>
 
 <script>
-
 function calculateAge(){
+    let birthdate = document.getElementById("birthdate").value;
+    if(!birthdate){
+        document.getElementById("result").innerHTML = "Please select your birth date.";
+        return;
+    }
 
-let birthdate=document.getElementById("birthdate").value;
+    let birth = new Date(birthdate);
+    let today = new Date();
 
-if(!birthdate){
-document.getElementById("result").innerHTML="Please select your birth date.";
-return;
+    let years = today.getFullYear() - birth.getFullYear();
+    let months = today.getMonth() - birth.getMonth();
+    let days = today.getDate() - birth.getDate();
+
+    if(days < 0){
+        months--;
+        days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+    }
+
+    if(months < 0){
+        years--;
+        months += 12;
+    }
+
+    document.getElementById("result").innerHTML = 
+    "<div style='margin-top:20px; padding:15px; background:#e3f2fd; border-radius:8px;'>You are <b>"+years+"</b> years, <b>"+months+"</b> months and <b>"+days+"</b> days old.</div>";
 }
-
-let birth=new Date(birthdate);
-let today=new Date();
-
-let years=today.getFullYear()-birth.getFullYear();
-let months=today.getMonth()-birth.getMonth();
-let days=today.getDate()-birth.getDate();
-
-if(days<0){
-months--;
-days+=new Date(today.getFullYear(),today.getMonth(),0).getDate();
-}
-
-if(months<0){
-years--;
-months+=12;
-}
-
-document.getElementById("result").innerHTML =
-"You are <b>"+years+"</b> years, <b>"+months+"</b> months and <b>"+days+"</b> days old.";
-
-}
-
 </script>
 
 </body>
-
 </html>

@@ -1,133 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free BMI Calculator Online - Body Mass Index for Adults | SuperTools</title>
+    <meta name="description" content="Calculate your Body Mass Index (BMI) instantly. Our free BMI calculator provides accurate results and categories for underweight, normal, overweight, and obesity.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/bmicalculator.html">
 
-<title>Free BMI Calculator Online | SuperTools</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
 
-<meta name="description" content="Calculate your Body Mass Index (BMI) instantly using the SuperTools BMI Calculator. Enter your height and weight to know your BMI category.">
+    <meta property="og:title" content="Accurate BMI Calculator Online - SuperTools">
+    <meta property="og:description" content="Check your BMI category instantly using our fast, private, and free tool.">
+    <meta property="og:image" content="https://supertools1.site/logo.svg">
+    <meta property="og:url" content="https://supertools1.site/bmicalculator.html">
 
-<meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
 
-<link rel="canonical" href="https://supertools1.site/bmicalculator.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "BMI Calculator",
+      "url": "https://supertools1.site/bmicalculator.html",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "description": "A free web tool to calculate Body Mass Index based on height and weight.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Organization", "name": "SuperTools" }
+    }
+    </script>
 
-<link rel="icon" href="/logo.png" type="image/png">
-
-<!-- Google Analytics -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-FD5FXM51M8');
-</script>
-
-<!-- Open Graph -->
-
-<meta property="og:title" content="Free BMI Calculator Online - SuperTools">
-<meta property="og:description" content="Check your Body Mass Index instantly using the SuperTools BMI Calculator.">
-<meta property="og:image" content="https://supertools1.site/logo.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://supertools1.site/bmicalculator.html">
-
-<!-- Twitter -->
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Free BMI Calculator Online - SuperTools">
-<meta name="twitter:description" content="Check your Body Mass Index instantly using the SuperTools BMI Calculator.">
-<meta name="twitter:image" content="https://supertools1.site/logo.png">
-
-<!-- Structured Data -->
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "BMI Calculator",
- "url": "https://supertools1.site/bmicalculator.html",
- "applicationCategory": "Utility",
- "operatingSystem": "Web",
- "description": "Free BMI calculator to check your body mass index instantly.",
- "creator": {
-   "@type": "Organization",
-   "name": "SuperTools",
-   "url": "https://supertools1.site"
- }
-}
-</script>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-<h2>⚡ SuperTools</h2>
-<a href="/">Home</a>
+    <h2>⚡ SuperTools</h2>
+    <a href="index.html">Home</a>
 </nav>
 
 <div class="container">
+    <h1>BMI Calculator</h1>
+    <p>Calculate your Body Mass Index (BMI) instantly to check your health status.</p>
 
-<h1>BMI Calculator</h1>
+    <div style="margin-bottom: 20px;">
+        <label>Weight (kg)</label>
+        <input type="number" id="weight" placeholder="e.g. 70" style="width:100%; padding:10px; margin-top:5px;">
+    </div>
 
-<label>Weight (kg)</label>
-<input type="number" id="weight" placeholder="Enter weight in kg">
+    <div style="margin-bottom: 20px;">
+        <label>Height (cm)</label>
+        <input type="number" id="height" placeholder="e.g. 175" style="width:100%; padding:10px; margin-top:5px;">
+    </div>
 
-<label>Height (cm)</label>
-<input type="number" id="height" placeholder="Enter height in cm">
+    <button onclick="calculateBMI()" style="width:100%; padding:12px; background:#4facfe; color:white; border:none; border-radius:5px; cursor:pointer; font-weight:bold;">Calculate BMI</button>
 
-<button onclick="calculateBMI()">Calculate BMI</button>
-
-<div id="result"></div>
-
+    <div id="result" style="margin-top:20px; font-size:18px;"></div>
 </div>
 
+<section style="max-width: 800px; margin: 40px auto; padding: 20px; color: #444; line-height: 1.8; border-top: 1px solid #ddd;">
+    <h2>What is Body Mass Index (BMI)?</h2>
+    <p>Body Mass Index (BMI) is a simple calculation using a person's height and weight. The formula is <strong>BMI = kg/m²</strong>, where kg is a person's weight in kilograms and m² is their height in metres squared.</p>
+    
+    <p>A high BMI can indicate high body fatness. BMI screens for weight categories that may lead to health problems, but it does not diagnose the body fatness or health of an individual.</p>
+
+    <h3>BMI Categories for Adults</h3>
+    <table style="width:100%; border-collapse: collapse; margin-top: 10px;">
+        <tr style="background:#4facfe; color:white;">
+            <th style="padding:10px; border:1px solid #ddd;">BMI Range</th>
+            <th style="padding:10px; border:1px solid #ddd;">Category</th>
+        </tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">Less than 18.5</td><td style="padding:10px; border:1px solid #ddd;">Underweight</td></tr>
+        <tr style="background:#f9f9f9;"><td style="padding:10px; border:1px solid #ddd;">18.5 – 24.9</td><td style="padding:10px; border:1px solid #ddd;">Normal weight</td></tr>
+        <tr><td style="padding:10px; border:1px solid #ddd;">25.0 – 29.9</td><td style="padding:10px; border:1px solid #ddd;">Overweight</td></tr>
+        <tr style="background:#f9f9f9;"><td style="padding:10px; border:1px solid #ddd;">30.0 or Higher</td><td style="padding:10px; border:1px solid #ddd;">Obese</td></tr>
+    </table>
+
+    <div style="background: #fff3cd; padding: 20px; border-left: 5px solid #ffecb5; margin-top: 30px;">
+        <strong>Medical Disclaimer:</strong> This BMI calculator is for informational purposes only. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician.
+    </div>
+</section>
+
 <footer>
-<p>© 2026 SuperTools</p>
+    <p>© 2026 SuperTools | <a href="privacy.html">Privacy Policy</a> | <a href="about.html">About Us</a></p>
 </footer>
 
 <script>
-
 function calculateBMI(){
+    let weight = parseFloat(document.getElementById("weight").value);
+    let height = parseFloat(document.getElementById("height").value);
 
-let weight=parseFloat(document.getElementById("weight").value);
-let height=parseFloat(document.getElementById("height").value);
+    if(!weight || !height){
+        document.getElementById("result").innerHTML = "<span style='color:red;'>Please enter valid values.</span>";
+        return;
+    }
 
-if(!weight || !height){
-document.getElementById("result").innerHTML="Please enter valid values.";
-return;
+    let hMeters = height / 100;
+    let bmi = weight / (hMeters * hMeters);
+    let category = "";
+    let color = "";
+
+    if(bmi < 18.5){ category = "Underweight"; color = "#ffc107"; }
+    else if(bmi < 24.9){ category = "Normal weight"; color = "#28a745"; }
+    else if(bmi < 29.9){ category = "Overweight"; color = "#fd7e14"; }
+    else { category = "Obese"; color = "#dc3545"; }
+
+    document.getElementById("result").innerHTML = 
+    "<div style='padding:15px; background:#f8f9fa; border-left:5px solid "+color+";'>Your BMI is <b>"+bmi.toFixed(2)+"</b><br>Category: <span style='color:"+color+"; font-weight:bold;'>"+category+"</span></div>";
 }
-
-height=height/100;
-
-let bmi=weight/(height*height);
-
-let category="";
-
-if(bmi<18.5){
-category="Underweight";
-}
-else if(bmi<24.9){
-category="Normal weight";
-}
-else if(bmi<29.9){
-category="Overweight";
-}
-else{
-category="Obese";
-}
-
-document.getElementById("result").innerHTML=
-"Your BMI is <b>"+bmi.toFixed(2)+"</b><br>Category: <b>"+category+"</b>";
-
-}
-
 </script>
 
 </body>

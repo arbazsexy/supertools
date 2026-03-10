@@ -1,92 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Word Counter - SuperTools</title>
-  <meta name="description" content="Count words and characters quickly with SuperTools Word Counter. Perfect for writers, students, and editors.">
-  
-  <meta name="robots" content="index, follow">
+    <title>Online Word Counter - Accurate Word, Character & Sentence Count | SuperTools</title>
+    <meta name="description" content="Free online word counter for students, bloggers, and SEO experts. Get instant word count, character count with spaces, and estimated reading time. 100% private.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/wordcounter.html">
 
-  <link rel="canonical" href="https://supertools1.site/wordcounter.html">
-  
-  <link rel="icon" href="/logo.png" type="image/png">
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
 
-  gtag('config', 'G-FD5FXM51M8');
-  </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Word Counter - SuperTools">
-  <meta property="og:description" content="Count words and characters quickly with SuperTools Word Counter. Perfect for writers, students, and editors.">
-  <meta property="og:image" content="https://supertools1.site/logo.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://supertools1.site/wordcounter.html">
+    <meta property="og:title" content="Instant Online Word Counter - SuperTools">
+    <meta property="og:description" content="The fastest way to count words, characters, and sentences online. Perfect for essays and social media.">
+    <meta property="og:image" content="https://supertools1.site/logo.svg">
+    <meta property="og:url" content="https://supertools1.site/wordcounter.html">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Word Counter - SuperTools">
-  <meta name="twitter:description" content="Count words and characters quickly with SuperTools Word Counter. Perfect for writers, students, and editors.">
-  <meta name="twitter:image" content="https://supertools1.site/logo.png">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Word Counter",
-    "url": "https://supertools1.site/wordcounter.html",
-    "applicationCategory": "Utility",
-    "description": "Count words and characters quickly with SuperTools Word Counter. Perfect for writers, students, and editors.",
-    "operatingSystem": "Web",
-    "creator": {
-      "@type": "Organization",
-      "name": "SuperTools",
-      "url": "https://supertools1.site"
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Word Counter",
+      "url": "https://supertools1.site/wordcounter.html",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Analyze text length, count words/sentences, and estimate reading speed in real-time.",
+      "author": { "@type": "Organization", "name": "SuperTools" }
     }
-  }
-  </script>
+    </script>
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Modern UI Tweaks */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .stat-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #4facfe; }
+        .stat-card b { display: block; font-size: 28px; color: #333; }
+        .stat-card label { font-size: 12px; color: #888; text-transform: uppercase; font-weight: bold; }
+        textarea { width: 100%; min-height: 300px; padding: 20px; border-radius: 12px; border: 2px solid #eee; font-size: 16px; line-height: 1.6; resize: vertical; box-sizing: border-box; }
+        textarea:focus { border-color: #4facfe; outline: none; box-shadow: 0 0 15px rgba(79, 172, 254, 0.1); }
+        .copy-btn { margin-top: 15px; padding: 10px 25px; background: #333; color: white; border: none; border-radius: 6px; cursor: pointer; transition: 0.3s; }
+        .copy-btn:hover { background: #4facfe; }
+    </style>
 </head>
 
 <body>
+
 <nav>
-  <h2>⚡ SuperTools</h2>
-  <a href="/">Home</a>
+    <h2>⚡ SuperTools</h2>
+    <a href="index.html">Home</a>
 </nav>
 
-<main class="container">
-  <h1>Word Counter</h1>
-  <textarea id="text" placeholder="Type or paste your text here..." oninput="countText()"></textarea>
+<main class="container" style="max-width: 900px; padding: 40px 20px;">
+    <h1 style="text-align: center;">Word Counter</h1>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Track your writing progress and stay within limits for social media and essays.</p>
 
-  <div class="stats">
-    <div class="stat-box">
-      Words: <span id="words">0</span>
+    <div class="stats-grid">
+        <div class="stat-card"><b id="words">0</b><label>Words</label></div>
+        <div class="stat-card"><b id="characters">0</b><label>Characters</label></div>
+        <div class="stat-card"><b id="sentences">0</b><label>Sentences</label></div>
+        <div class="stat-card"><b id="readingTime">0m</b><label>Read Time</label></div>
     </div>
-    <div class="stat-box">
-      Characters: <span id="characters">0</span>
+
+    <textarea id="text" placeholder="Type or paste your text here..." oninput="countText()"></textarea>
+
+    <div style="text-align: right;">
+        <button class="copy-btn" onclick="clearText()">Clear All</button>
     </div>
-  </div>
 </main>
 
+<section style="max-width: 900px; margin: 50px auto; padding: 20px; line-height: 1.8; color: #444; border-top: 1px solid #ddd;">
+    <h2>Improve Your Writing with Text Analysis</h2>
+    <p>Writing is more than just putting words on a page; it’s about meeting specific goals. Whether you are aiming for a <strong>2,000-word essay</strong> or a <strong>160-character Meta description</strong>, our tool provides the real-time data you need to edit with precision.</p>
+
+    
+
+    <h3>Key Writing Metrics</h3>
+    <ul>
+        <li><strong>Character Count:</strong> Vital for digital marketing and SEO where pixel-width and character limits determine visibility.</li>
+        <li><strong>Sentence Analysis:</strong> Helps writers understand their "pacing." A high sentence count with a low word count indicates a punchy, fast-paced style.</li>
+        <li><strong>Reading Time Estimator:</strong> We use an average reading speed of 225 words per minute. This helps bloggers set expectations for their audience.</li>
+    </ul>
+
+    <h3>SEO Best Practices for Content Length</h3>
+    <p>While there is no "perfect" word count for Google, data suggests that long-form content (1,500+ words) often ranks higher for competitive keywords because it covers topics in more depth. Conversely, product pages should be concise and direct.</p>
+    
+    
+</section>
+
 <footer>
-  <p>© 2026 SuperTools</p>
+    <p>© 2026 SuperTools | <a href="privacy.html">Privacy</a> | <a href="about.html">About</a></p>
 </footer>
 
 <script>
 function countText() {
-  const text = document.getElementById("text").value;
-  const wordsArray = text.trim().split(/\s+/).filter(word => word.length > 0);
-  document.getElementById("words").innerText = text.trim() === "" ? 0 : wordsArray.length;
-  document.getElementById("characters").innerText = text.length;
+    const text = document.getElementById("text").value;
+    
+    // Character Count
+    document.getElementById("characters").innerText = text.length;
+
+    // Word Count
+    const wordsArray = text.trim().split(/\s+/).filter(word => word.length > 0);
+    const wordCount = wordsArray.length;
+    document.getElementById("words").innerText = wordCount;
+
+    // Sentence Count (Regex to find punctuation endings)
+    const sentenceCount = text.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
+    document.getElementById("sentences").innerText = sentenceCount;
+
+    // Estimated Reading Time (Avg 225 WPM)
+    const readTime = Math.ceil(wordCount / 225);
+    document.getElementById("readingTime").innerText = readTime + "m";
+}
+
+function clearText() {
+    document.getElementById("text").value = "";
+    countText();
 }
 </script>
 

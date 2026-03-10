@@ -1,173 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free Percentage Calculator Online - Increase & Decrease | SuperTools</title>
+    <meta name="description" content="Calculate percentages instantly. Find out what X% of Y is, or calculate the exact percentage increase and decrease between two numbers. Free and fast.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/percentagecalculator.html">
 
-<title>Free Percentage Calculator Online | SuperTools</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
 
-<meta name="description" content="Calculate percentages instantly with the SuperTools Percentage Calculator. Find percentages, percentage increase, and percentage decrease easily.">
+    <meta property="og:title" content="Free Percentage Calculator Online - SuperTools">
+    <meta property="og:description" content="Calculate percentages, increases, and decreases instantly.">
+    <meta property="og:image" content="https://supertools1.site/logo.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/percentagecalculator.html">
 
-<meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
 
-<link rel="canonical" href="https://supertools1.site/percentagecalculator.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Percentage Calculator",
+      "url": "https://supertools1.site/percentagecalculator.html",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web",
+      "description": "A browser-based educational and financial utility to calculate percentages, differences, and profit margins.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Organization", "name": "SuperTools", "url": "https://supertools1.site" }
+    }
+    </script>
 
-<link rel="icon" href="/logo.png" type="image/png">
-
-<!-- Google Analytics -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-FD5FXM51M8');
-</script>
-
-<!-- Open Graph -->
-
-<meta property="og:title" content="Free Percentage Calculator Online - SuperTools">
-<meta property="og:description" content="Calculate percentages instantly using SuperTools Percentage Calculator.">
-<meta property="og:image" content="https://supertools1.site/logo.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://supertools1.site/percentagecalculator.html">
-
-<!-- Twitter -->
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Free Percentage Calculator Online - SuperTools">
-<meta name="twitter:description" content="Calculate percentages instantly using SuperTools Percentage Calculator.">
-<meta name="twitter:image" content="https://supertools1.site/logo.png">
-
-<!-- Structured Data -->
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "Percentage Calculator",
- "url": "https://supertools1.site/percentagecalculator.html",
- "applicationCategory": "Utility",
- "operatingSystem": "Web",
- "description": "Calculate percentages easily with this free online percentage calculator.",
- "creator": {
-   "@type": "Organization",
-   "name": "SuperTools",
-   "url": "https://supertools1.site"
- }
-}
-</script>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
 
 <nav>
-<h2>⚡ SuperTools</h2>
-<a href="/">Home</a>
+    <h2>⚡ SuperTools</h2>
+    <a href="index.html">Home</a>
 </nav>
 
-<div class="container">
+<div class="container" style="max-width: 600px; padding: 20px;">
+    <h1 style="text-align: center;">Percentage Calculator</h1>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Instantly calculate percentages for finance, math, and everyday use.</p>
 
-<h1>Percentage Calculator</h1>
+    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 20px;">
+        <h3 style="margin-top: 0; color: #4facfe;">1. What is X% of Y?</h3>
+        <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 10px;">
+            <input type="number" id="percent" placeholder="%" style="flex: 1; padding: 10px;">
+            <span>% of</span>
+            <input type="number" id="number" placeholder="Number" style="flex: 2; padding: 10px;">
+        </div>
+        <button onclick="calculatePercent()" style="width: 100%; padding: 10px; background: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">Calculate</button>
+        <div id="result" style="margin-top: 15px; font-size: 18px;"></div>
+    </div>
 
-<h3>1. What is X% of Y?</h3>
+    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 20px;">
+        <h3 style="margin-top: 0; color: #4facfe;">2. Percentage Increase</h3>
+        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+            <input type="number" id="oldValue" placeholder="Old value" style="flex: 1; padding: 10px;">
+            <input type="number" id="newValue" placeholder="New value" style="flex: 1; padding: 10px;">
+        </div>
+        <button onclick="calculateIncrease()" style="width: 100%; padding: 10px; background: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">Calculate Increase</button>
+        <div id="increaseResult" style="margin-top: 15px; font-size: 18px;"></div>
+    </div>
 
-<input type="number" id="percent" placeholder="Enter percentage (%)">
-<input type="number" id="number" placeholder="Enter number">
-
-<button onclick="calculatePercent()">Calculate</button>
-
-<div id="result"></div>
-
-<br>
-
-<h3>2. Percentage Increase</h3>
-
-<input type="number" id="oldValue" placeholder="Old value">
-<input type="number" id="newValue" placeholder="New value">
-
-<button onclick="calculateIncrease()">Calculate Increase</button>
-
-<div id="increaseResult"></div>
-
-<br>
-
-<h3>3. Percentage Decrease</h3>
-
-<input type="number" id="startValue" placeholder="Starting value">
-<input type="number" id="endValue" placeholder="Ending value">
-
-<button onclick="calculateDecrease()">Calculate Decrease</button>
-
-<div id="decreaseResult"></div>
-
+    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <h3 style="margin-top: 0; color: #4facfe;">3. Percentage Decrease</h3>
+        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+            <input type="number" id="startValue" placeholder="Starting value" style="flex: 1; padding: 10px;">
+            <input type="number" id="endValue" placeholder="Ending value" style="flex: 1; padding: 10px;">
+        </div>
+        <button onclick="calculateDecrease()" style="width: 100%; padding: 10px; background: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">Calculate Decrease</button>
+        <div id="decreaseResult" style="margin-top: 15px; font-size: 18px;"></div>
+    </div>
 </div>
 
+<section style="max-width: 800px; margin: 40px auto; padding: 20px; color: #444; line-height: 1.8; border-top: 1px solid #ddd;">
+    <h2>How to Calculate Percentages</h2>
+    <p>Whether you are calculating sales tax, figuring out a tip at a restaurant, or measuring the growth of your business, knowing how percentages work is essential. Our tool automates the process, but here is the math behind it.</p>
+
+    <h3>Finding X% of Y</h3>
+    <p>To find the percentage of a specific number, you multiply the percentage (divided by 100) by the number.</p>
+    $$ \text{Result} = \left( \frac{\text{Percentage}}{100} \right) \times \text{Total Value} $$
+
+    <h3>Calculating Percentage Increase</h3>
+    <p>If a price or value goes up, you can find the percentage increase by subtracting the old value from the new value, dividing the result by the old value, and multiplying by 100.</p>
+    $$ \text{Increase} = \frac{\text{New Value} - \text{Old Value}}{\text{Old Value}} \times 100 $$
+
+    <h3>Calculating Percentage Decrease</h3>
+    <p>Similarly, if a value drops (like a store discount), you subtract the new value from the starting value, divide by the starting value, and multiply by 100.</p>
+    $$ \text{Decrease} = \frac{\text{Starting Value} - \text{Ending Value}}{\text{Starting Value}} \times 100 $$
+
+    <div style="background: #e3f2fd; padding: 15px; border-left: 5px solid #4facfe; margin-top: 20px;">
+        <strong>Example:</strong> If a shirt originally costs $50 and is now on sale for $40, the decrease is $10. Dividing $10 by the original $50 gives 0.20. Multiply by 100, and you get a <strong>20% decrease</strong>.
+    </div>
+</section>
+
 <footer>
-<p>© 2026 SuperTools</p>
+    <p>© 2026 SuperTools | <a href="privacy.html">Privacy Policy</a> | <a href="about.html">About Us</a></p>
 </footer>
 
 <script>
+// Fixed Bug: Using isNaN instead of !value to allow "0" as a valid input
 
-function calculatePercent(){
+function calculatePercent() {
+    let percent = parseFloat(document.getElementById("percent").value);
+    let number = parseFloat(document.getElementById("number").value);
 
-let percent=parseFloat(document.getElementById("percent").value);
-let number=parseFloat(document.getElementById("number").value);
+    if (isNaN(percent) || isNaN(number)) {
+        document.getElementById("result").innerHTML = "<span style='color:red;'>Please enter valid numbers.</span>";
+        return;
+    }
 
-if(!percent || !number){
-document.getElementById("result").innerHTML="Please enter valid numbers.";
-return;
+    let result = (percent / 100) * number;
+    // Format to avoid long decimals like 10.000000000000002
+    result = parseFloat(result.toFixed(4)); 
+
+    document.getElementById("result").innerHTML = 
+        "<div style='padding:10px; background:#d4edda; border-radius:5px; color:#155724;'>" + 
+        percent + "% of " + number + " = <b>" + result + "</b></div>";
 }
 
-let result=(percent/100)*number;
+function calculateIncrease() {
+    let oldValue = parseFloat(document.getElementById("oldValue").value);
+    let newValue = parseFloat(document.getElementById("newValue").value);
 
-document.getElementById("result").innerHTML=
-percent+"% of "+number+" = <b>"+result+"</b>";
+    if (isNaN(oldValue) || isNaN(newValue)) {
+        document.getElementById("increaseResult").innerHTML = "<span style='color:red;'>Enter valid numbers.</span>";
+        return;
+    }
+    
+    if (oldValue === 0) {
+        document.getElementById("increaseResult").innerHTML = "<span style='color:red;'>Old value cannot be zero.</span>";
+        return;
+    }
 
+    let increase = ((newValue - oldValue) / oldValue) * 100;
+    document.getElementById("increaseResult").innerHTML = 
+        "<div style='padding:10px; background:#e3f2fd; border-radius:5px; color:#0c5460;'>" +
+        "Increase: <b>" + increase.toFixed(2) + "%</b></div>";
 }
 
-function calculateIncrease(){
+function calculateDecrease() {
+    let start = parseFloat(document.getElementById("startValue").value);
+    let end = parseFloat(document.getElementById("endValue").value);
 
-let oldValue=parseFloat(document.getElementById("oldValue").value);
-let newValue=parseFloat(document.getElementById("newValue").value);
+    if (isNaN(start) || isNaN(end)) {
+        document.getElementById("decreaseResult").innerHTML = "<span style='color:red;'>Enter valid numbers.</span>";
+        return;
+    }
 
-if(!oldValue || !newValue){
-document.getElementById("increaseResult").innerHTML="Enter valid numbers.";
-return;
+    if (start === 0) {
+        document.getElementById("decreaseResult").innerHTML = "<span style='color:red;'>Starting value cannot be zero.</span>";
+        return;
+    }
+
+    let decrease = ((start - end) / start) * 100;
+    document.getElementById("decreaseResult").innerHTML = 
+        "<div style='padding:10px; background:#fff3cd; border-radius:5px; color:#856404;'>" +
+        "Decrease: <b>" + decrease.toFixed(2) + "%</b></div>";
 }
-
-let increase=((newValue-oldValue)/oldValue)*100;
-
-document.getElementById("increaseResult").innerHTML=
-"Increase: <b>"+increase.toFixed(2)+"%</b>";
-
-}
-
-function calculateDecrease(){
-
-let start=parseFloat(document.getElementById("startValue").value);
-let end=parseFloat(document.getElementById("endValue").value);
-
-if(!start || !end){
-document.getElementById("decreaseResult").innerHTML="Enter valid numbers.";
-return;
-}
-
-let decrease=((start-end)/start)*100;
-
-document.getElementById("decreaseResult").innerHTML=
-"Decrease: <b>"+decrease.toFixed(2)+"%</b>";
-
-}
-
 </script>
 
 </body>
-
-</html>
+</html> 

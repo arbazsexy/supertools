@@ -1,158 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free Image Compressor Online - Reduce Image Size Without Quality Loss | SuperTools</title>
+    <meta name="description" content="Use SuperTools Image Compressor to reduce image file size instantly. Optimize JPEG and PNG files for faster websites and smaller storage. 100% private browser-side compression.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/imagecompressor.html">
 
-<title>Free Image Compressor Online | SuperTools</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
 
-<meta name="description" content="Compress images online for free using SuperTools Image Compressor. Reduce image file size without losing quality.">
+    <meta property="og:title" content="Fast Online Image Compressor - SuperTools">
+    <meta property="og:description" content="Shrink your images in seconds. No upload required, compression happens right in your browser.">
+    <meta property="og:image" content="https://supertools1.site/logo.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/imagecompressor.html">
 
-<meta name="robots" content="index, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
 
-<link rel="canonical" href="https://supertools1.site/imagecompressor.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Image Compressor",
+      "url": "https://supertools1.site/imagecompressor.html",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any",
+      "description": "A browser-based tool to compress images and reduce file size for faster web performance.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Organization", "name": "SuperTools" }
+    }
+    </script>
 
-<link rel="icon" href="/logo.png" type="image/png">
-
-<!-- Google Analytics -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-FD5FXM51M8');
-</script>
-
-<!-- Open Graph -->
-
-<meta property="og:title" content="Free Image Compressor Online - SuperTools">
-<meta property="og:description" content="Compress images online easily with SuperTools Image Compressor.">
-<meta property="og:image" content="https://supertools1.site/logo.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://supertools1.site/imagecompressor.html">
-
-<!-- Twitter -->
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Free Image Compressor Online - SuperTools">
-<meta name="twitter:description" content="Compress images online easily with SuperTools Image Compressor.">
-<meta name="twitter:image" content="https://supertools1.site/logo.png">
-
-<!-- Structured Data -->
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "Image Compressor",
- "url": "https://supertools1.site/imagecompressor.html",
- "applicationCategory": "Utility",
- "operatingSystem": "Web",
- "description": "Free online image compressor to reduce image size instantly.",
- "creator": {
-   "@type": "Organization",
-   "name": "SuperTools",
-   "url": "https://supertools1.site"
- }
-}
-</script>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-<h2>⚡ SuperTools</h2>
-<a href="/">Home</a>
+    <h2>⚡ SuperTools</h2>
+    <a href="index.html">Home</a>
 </nav>
 
-<div class="container">
+<div class="container" style="text-align:center; padding: 40px 20px;">
+    <h1>Image Compressor</h1>
+    <p>Optimize your photos for the web. Fast, free, and secure.</p>
 
-<h1>Image Compressor</h1>
+    <div style="margin: 30px auto; padding: 20px; border: 2px dashed #4facfe; border-radius: 10px; background: #f0f8ff;">
+        <input type="file" id="upload" accept="image/*" style="margin-bottom: 20px;">
+        <br>
+        <button onclick="compressImage()" style="padding: 12px 25px; background: #4facfe; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 16px;">Compress Image Now</button>
+    </div>
 
-<input type="file" id="upload" accept="image/*">
+    <div id="info" style="margin-top: 20px; line-height: 1.6;"></div>
 
-<button onclick="compressImage()">Compress Image</button>
+    <canvas id="canvas" style="display:none;"></canvas>
 
-<p id="info"></p>
-
-<canvas id="canvas" style="display:none;"></canvas>
-
-<img id="preview" alt="Compressed preview">
-
-<a id="download" style="display:none">
-<button>Download Compressed Image</button>
-</a>
-
+    <div id="preview-container" style="margin-top: 30px;">
+        <img id="preview" alt="Compressed preview" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <br><br>
+        <a id="download" style="display:none; text-decoration: none;">
+            <button style="padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Download Optimized Image</button>
+        </a>
+    </div>
 </div>
 
+<section style="max-width: 900px; margin: 40px auto; padding: 20px; color: #444; line-height: 1.8; border-top: 1px solid #ddd;">
+    <h2>Why Should You Compress Images?</h2>
+    <p>In 2026, website speed is a major ranking factor for Google. High-resolution images can slow down your site, leading to a poor user experience. Using an <strong>online image compressor</strong> helps you reduce the file size of your JPEGs and PNGs, allowing your pages to load instantly on mobile devices.</p>
+    
+    <h3>100% Client-Side Privacy</h3>
+    <p>Your privacy is our priority. Unlike other image optimizers, SuperTools processes your images <strong>locally in your browser</strong>. Your photos are never uploaded to our servers, meaning your personal data never leaves your computer. This makes our tool one of the safest ways to shrink image sizes online.</p>
+
+    <h3>Benefits of Using SuperTools Image Compressor:</h3>
+    <ul>
+        <li><strong>Improve SEO:</strong> Faster loading times lead to better Google rankings.</li>
+        <li><strong>Save Storage:</strong> Reduce the space your photo library takes up on your phone or PC.</li>
+        <li><strong>Better Social Sharing:</strong> Compressed images upload faster to platforms like Discord, WhatsApp, and Slack.</li>
+    </ul>
+
+    <h3>How to Compress an Image:</h3>
+    <p>Simply select your file using the button above and click "Compress." Our tool will automatically optimize the image using a balanced compression algorithm that maintains visual quality while stripping away unnecessary data.</p>
+</section>
+
 <footer>
-<p>© 2026 SuperTools</p>
+    <p>© 2026 SuperTools | <a href="privacy.html">Privacy Policy</a> | <a href="about.html">About Us</a></p>
 </footer>
 
 <script>
-
 function compressImage(){
+    let file = document.getElementById("upload").files[0];
+    if(!file){
+        alert("Please upload an image.");
+        return;
+    }
 
-let file=document.getElementById("upload").files[0];
+    let reader = new FileReader();
+    reader.onload = function(e){
+        let img = new Image();
+        img.onload = function(){
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext("2d");
 
-if(!file){
-alert("Please upload an image.");
-return;
+            // Maintain aspect ratio
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0);
+
+            // 0.6 is the "Sweet Spot" for SEO compression (Quality vs Size)
+            let compressed = canvas.toDataURL("image/jpeg", 0.6);
+            
+            document.getElementById("preview").src = compressed;
+            let download = document.getElementById("download");
+            download.href = compressed;
+            download.download = "optimized-supertools-" + file.name;
+            download.style.display = "inline-block";
+
+            let originalSize = (file.size / 1024).toFixed(1);
+            let compressedSize = (compressed.length * 0.75 / 1024).toFixed(1);
+            let savings = (100 - (compressedSize / originalSize * 100)).toFixed(0);
+
+            document.getElementById("info").innerHTML = 
+            "<div style='background:#d4edda; padding:15px; border-radius:8px; color:#155724;'>" +
+            "Original: <b>"+originalSize+" KB</b> | " +
+            "Optimized: <b>"+compressedSize+" KB</b><br>" +
+            "You saved <strong>" + savings + "%</strong> in file size!</div>";
+        };
+        img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
 }
-
-let reader=new FileReader();
-
-reader.onload=function(e){
-
-let img=new Image();
-
-img.onload=function(){
-
-let canvas=document.getElementById("canvas");
-let ctx=canvas.getContext("2d");
-
-canvas.width=img.width;
-canvas.height=img.height;
-
-ctx.drawImage(img,0,0);
-
-let compressed=canvas.toDataURL("image/jpeg",0.6);
-
-document.getElementById("preview").src=compressed;
-
-let download=document.getElementById("download");
-
-download.href=compressed;
-download.download="compressed-image.jpg";
-download.style.display="inline-block";
-
-let originalSize=(file.size/1024).toFixed(1);
-
-let compressedSize=(compressed.length*0.75/1024).toFixed(1);
-
-document.getElementById("info").innerHTML=
-"Original Size: <b>"+originalSize+" KB</b><br>"+
-"Compressed Size: <b>"+compressedSize+" KB</b>";
-
-};
-
-img.src=e.target.result;
-
-};
-
-reader.readAsDataURL(file);
-
-}
-
 </script>
 
 </body>
-
 </html>

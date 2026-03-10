@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="coolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d2ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a7bd5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <path d="M50 5 L85 25 V75 L50 95 L15 75 V25 Z" fill="url(#coolGrad)" />
+  <path d="M40 30 H65 L55 45 H65 L35 75 L45 55 H35 Z" fill="white" />
+  <circle cx="70" cy="30" r="4" fill="white" opacity="0.6" />
+</svg>

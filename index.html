@@ -16,7 +16,7 @@
 <link rel="canonical" href="https://supertools1.site/">
 
 <!-- Favicon -->
-<link rel="icon" href="logo.png" type="image/png">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
 
 <!-- Open Graph -->
 <meta property="og:title" content="SuperTools - Free Online Tools Hub">
@@ -43,19 +43,26 @@ gtag('config', 'G-FD5FXM51M8');
 <!-- Structured Data -->
 <script type="application/ld+json">
 {
-"@context":"https://schema.org",
-"@type":"WebSite",
-"name":"SuperTools",
-"url":"https://supertools1.site",
-"description":"SuperTools offers free online tools including QR generator, password generator, age calculator and more.",
-"publisher":{
-"@type":"Organization",
-"name":"SuperTools",
-"logo":{
-"@type":"ImageObject",
-"url":"https://supertools1.site/logo.png"
-}
-}
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "SuperTools",
+  "url": "https://supertools1.site",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "description": "A comprehensive suite of free online tools including QR generators, secure password creators, and health calculators.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "QR Code Generator" },
+      { "@type": "ListItem", "position": 2, "name": "Password Generator" },
+      { "@type": "ListItem", "position": 3, "name": "Age Calculator" }
+    ]
+  }
 }
 </script>
 
@@ -337,9 +344,22 @@ font-size:14px;
 </div>
 
 </div>
+<section style="max-width: 1100px; margin: 40px auto; padding: 20px; color: #444; line-height: 1.6;">
+    <h2>Why Use SuperTools?</h2>
+    <p>In today's fast-paced digital world, efficiency is everything. <strong>SuperTools</strong> is designed to provide a centralized hub for the most essential web utilities. Whether you are a developer needing a <em>secure password generator</em>, a student looking for an <em>age calculator</em>, or a marketer creating <em>QR codes</em>, our tools are built for speed and privacy.</p>
+    
+    <h3>100% Private and Secure</h3>
+    <p>Unlike other platforms, SuperTools processes your data locally whenever possible. Our <strong>image compressor</strong> and <strong>word counter</strong> are optimized for browser-side performance, meaning your sensitive data doesn't just sit on a server—it stays with you. We believe free online tools should be both powerful and safe.</p>
 
+    <h3>Key Features of Our Toolset:</h3>
+    <ul>
+        <li><strong>Accuracy:</strong> Our calculators (BMI, Age, Percentage) use the latest standard formulas.</li>
+        <li><strong>Simplicity:</strong> No registration or login required. Just open and use.</li>
+        <li><strong>Mobile Friendly:</strong> Fully optimized for smartphones and tablets.</li>
+    </ul>
+</section>
 <footer>
-<p>© 2026 SuperTools | Free Online Tools</p>
+    <p>© 2026 SuperTools | <a href="privacy.html" style="color:white;">Privacy Policy</a> | <a href="about.html" style="color:white;">About Us</a></p>
 </footer>
 
 <script>
