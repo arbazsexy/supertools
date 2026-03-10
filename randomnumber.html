@@ -5,16 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Random Number Generator - Custom Range & Multi-Number | SuperTools</title>
-    <meta name="description" content="Generate true random numbers instantly. Set custom ranges, generate multiple numbers at once, and choose unique results. Perfect for raffles, games, and statistics.">
+    <meta name="description" content="Generate true random numbers instantly. Set custom ranges, generate multiple numbers at once, and choose unique results. Perfect for raffles and games.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://supertools1.site/randomnumber.html">
-
     <link rel="icon" href="logo.svg" type="image/svg+xml">
-
-    <meta property="og:title" content="Random Number Generator - SuperTools">
-    <meta property="og:description" content="Generate random numbers with a custom range. Fast, free, and 100% private.">
-    <meta property="og:image" content="https://supertools1.site/logo.svg">
-    <meta property="og:url" content="https://supertools1.site/randomnumber.html">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
     <script>
@@ -22,6 +16,23 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "SuperTools Random Number Generator",
+      "url": "https://supertools1.site/randomnumber.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web",
+      "description": "A powerful random number generator with custom range, unique number support, and CSV export.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
     </script>
 
     <link rel="stylesheet" href="style.css">
@@ -34,41 +45,44 @@
     <a href="index.html">Home</a>
 </nav>
 
-<div class="container" style="max-width: 550px; padding: 30px; text-align: center;">
+<main class="container" style="max-width: 550px; padding: 30px; text-align: center;">
     <h1>Random Number Generator</h1>
-    <p style="color: #666; margin-bottom: 25px;">The ultimate tool for picking winners, dice rolls, and research.</p>
+    <p class="tool-desc" style="color: #666; margin-bottom: 25px;">The ultimate tool for picking winners, dice rolls, and research.</p>
 
-    <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: left;">
-        <div style="margin-bottom: 15px;">
-            <label style="font-weight: bold; display: block; margin-bottom: 5px;">Range</label>
-            <div style="display: flex; gap: 10px; align-items: center;">
-                <input type="number" id="min" value="1" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-                <span>to</span>
-                <input type="number" id="max" value="100" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: left; border: 1px solid #f0f0f0;">
+        <div style="margin-bottom: 20px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 8px; color: #333;">Define Range</label>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <input type="number" id="min" value="1" placeholder="Min" style="width: 100%; padding: 12px; border: 2px solid #edf2f7; border-radius: 8px; margin-bottom: 0;">
+                <span style="font-weight: bold; color: #cbd5e0;">to</span>
+                <input type="number" id="max" value="100" placeholder="Max" style="width: 100%; padding: 12px; border: 2px solid #edf2f7; border-radius: 8px; margin-bottom: 0;">
             </div>
         </div>
 
-        <div style="margin-bottom: 15px;">
-            <label style="font-weight: bold; display: block; margin-bottom: 5px;">Amount to Generate</label>
-            <input type="number" id="count" value="1" min="1" max="5000" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        <div style="margin-bottom: 20px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 8px; color: #333;">Amount to Generate</label>
+            <input type="number" id="count" value="1" min="1" max="5000" style="width: 100%; padding: 12px; border: 2px solid #edf2f7; border-radius: 8px; margin-bottom: 0;">
         </div>
 
-        <div style="margin-bottom: 20px;">
-            <label style="cursor: pointer; display: flex; align-items: center; gap: 8px;">
-                <input type="checkbox" id="unique"> <span>Unique numbers (no repeats)</span>
+        <div style="margin-bottom: 25px;">
+            <label style="cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 15px;">
+                <input type="checkbox" id="unique" style="width: 18px; height: 18px; cursor: pointer;"> 
+                <span>Unique numbers (no repeats)</span>
             </label>
         </div>
 
-        <button onclick="generateNumber()" style="width: 100%; padding: 15px; background: #4facfe; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 18px; font-weight: bold; margin-bottom: 10px;">Generate Numbers</button>
+        <button onclick="generateNumber()" style="width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 18px; font-weight: bold; transition: 0.3s;">Generate Numbers</button>
         
-        <div id="actions" style="display: none; gap: 10px; margin-top: 10px;">
-            <button onclick="copyResults()" id="copyBtn" style="flex: 1; padding: 10px; background: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">Copy</button>
-            <button onclick="downloadCSV()" style="flex: 1; padding: 10px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">CSV</button>
+        <div id="actions" style="display: none; gap: 10px; margin-top: 15px;">
+            <button onclick="copyResults()" id="copyBtn" style="flex: 1; padding: 12px; background: #333; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">Copy</button>
+            <button onclick="downloadCSV()" style="flex: 1; padding: 12px; background: #28a745; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">Download CSV</button>
         </div>
     </div>
 
-    <div id="result" style="margin-top: 30px; font-size: 22px; font-weight: bold; color: #333; word-break: break-all; min-height: 50px;">-</div>
-</div>
+    <div id="result" style="margin-top: 30px; font-size: 20px; font-weight: bold; color: #2d3436; word-break: break-all; min-height: 50px;">
+        <span style="color: #a0aec0; font-weight: normal;">Numbers will appear here</span>
+    </div>
+</main>
 
 <section style="max-width: 800px; margin: 40px auto; padding: 20px; color: #444; line-height: 1.8; border-top: 1px solid #ddd;">
     <h2>Randomness and Probability Distribution</h2>
@@ -79,7 +93,7 @@
     <h3>How to use for Giveaways:</h3>
     <ol>
         <li>Assign a number to each participant (e.g., 1 to 150).</li>
-        <li>Enter 1 in the Min and 150 in the Max box.</li>
+        <li>Enter <strong>1</strong> in the Min and <strong>150</strong> in the Max box.</li>
         <li>Set "Amount" to the number of winners you want.</li>
         <li>Check <strong>"Unique numbers"</strong> to ensure one person doesn't win twice!</li>
     </ol>
@@ -115,6 +129,7 @@ function generateNumber(){
 
     currentNumbers = [];
     
+    // Efficient random generation
     if(unique) {
         let pool = Array.from({length: max - min + 1}, (_, i) => min + i);
         for(let i = 0; i < count; i++) {
@@ -128,13 +143,13 @@ function generateNumber(){
     }
 
     document.getElementById("result").innerHTML = 
-        "<div style='padding:20px; background:#e3f2fd; border-radius:10px; border-left: 5px solid #4facfe;'>" + currentNumbers.join(", ") + "</div>";
+        "<div style='padding:20px; background:#f0f9ff; border-radius:10px; border-left: 5px solid #4facfe; color:#2c5282;'>" + currentNumbers.join(", ") + "</div>";
     
     document.getElementById("actions").style.display = "flex";
 }
 
 function showError(msg) {
-    document.getElementById("result").innerHTML = "<span style='color:red; font-size:16px;'>" + msg + "</span>";
+    document.getElementById("result").innerHTML = "<span style='color:#e53e3e; font-size:16px;'>" + msg + "</span>";
     document.getElementById("actions").style.display = "none";
 }
 
@@ -142,7 +157,7 @@ function copyResults() {
     if(currentNumbers.length === 0) return;
     navigator.clipboard.writeText(currentNumbers.join(", ")).then(() => {
         let btn = document.getElementById("copyBtn");
-        btn.innerText = "Copied!";
+        btn.innerText = "Copied! ✓";
         btn.style.background = "#28a745";
         setTimeout(() => { 
             btn.innerText = "Copy"; 
@@ -153,11 +168,11 @@ function copyResults() {
 
 function downloadCSV() {
     if(currentNumbers.length === 0) return;
-    let csvContent = "data:text/csv;charset=utf-8," + currentNumbers.join("\n");
+    let csvContent = "data:text/csv;charset=utf-8,Random Numbers\n" + currentNumbers.join("\n");
     let encodedUri = encodeURI(csvContent);
     let link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "supertools_random_numbers.csv");
+    link.href = encodedUri;
+    link.download = "supertools_numbers.csv";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
