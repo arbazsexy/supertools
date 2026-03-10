@@ -1,146 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free QR Code Generator - Create Custom QR Codes (No Expiry) | SuperTools</title>
+    
+    <meta name="description" content="Create high-resolution QR codes instantly. 100% free, no sign-up required, and your QR codes will never expire. Perfect for URLs, text, and WiFi sharing.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/qr.html">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
 
-<title>Free QR Code Generator | SuperTools</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
 
-<meta name="description" content="Generate QR codes instantly using SuperTools QR Code Generator. Create and download QR codes for URLs, text, WiFi and more.">
+    <meta property="og:title" content="Unlimited Free QR Code Generator - SuperTools">
+    <meta property="og:description" content="Generate permanent QR codes for your links, menus, or Wi-Fi. Download in high quality instantly.">
+    <meta property="og:image" content="https://supertools1.site/logo.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/qr.html">
 
-<meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "SuperTools QR Code Generator",
+      "url": "https://supertools1.site/qr.html",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Generate static QR codes instantly. No registration or hidden fees.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
 
-<link rel="canonical" href="https://supertools1.site/qr.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Do these QR codes ever expire?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No! Our tool generates static QR codes, which means they will work forever and never expire."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is it completely free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our QR code generator is 100% free with no sign-ups or hidden fees."
+        }
+      }]
+    }
+    </script>
 
-<link rel="icon" href="/logo.png" type="image/png">
-
-<!-- Google Analytics -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-FD5FXM51M8');
-</script>
-
-<!-- Open Graph -->
-
-<meta property="og:title" content="Free QR Code Generator - SuperTools">
-<meta property="og:description" content="Generate QR codes instantly and download them for free using SuperTools.">
-<meta property="og:image" content="https://supertools1.site/logo.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://supertools1.site/qr.html">
-
-<!-- Twitter -->
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Free QR Code Generator - SuperTools">
-<meta name="twitter:description" content="Generate QR codes instantly using SuperTools.">
-<meta name="twitter:image" content="https://supertools1.site/logo.png">
-
-<!-- Structured Data -->
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "QR Code Generator",
- "url": "https://supertools1.site/qr.html",
- "applicationCategory": "Utility",
- "operatingSystem": "Web",
- "description": "Generate QR codes instantly and download them for free.",
- "creator": {
-   "@type": "Organization",
-   "name": "SuperTools",
-   "url": "https://supertools1.site"
- }
-}
-</script>
-
-<link rel="stylesheet" href="style.css">
-
-<!-- QR Library -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 
 <body>
 
 <nav>
-<h2>⚡ SuperTools</h2>
-<a href="/">Home</a>
+    <h2>⚡ SuperTools</h2>
+    <a href="index.html">Home</a>
 </nav>
 
-<div class="container">
+<main class="container" style="max-width: 650px; padding: 40px 20px;">
+    <h1>Free QR Code Generator</h1>
+    <p class="tool-desc" style="color: #666; margin-bottom: 25px;">Create permanent, high-quality QR codes for links, text, or emails.</p>
 
-<h1>QR Code Generator</h1>
+    <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #edf2f7;">
+        <input type="text" id="text" placeholder="Paste your URL or enter text here..." 
+               style="width: 100%; padding: 15px; border-radius: 8px; border: 2px solid #eee; font-size: 16px; margin-bottom: 20px;">
+        
+        <button onclick="generateQR()" style="width: 100%; padding: 15px; background: #4facfe; color: white; border: none; border-radius: 8px; font-weight: bold; font-size: 16px; cursor: pointer;">Generate QR Code</button>
 
-<input type="text" id="text" placeholder="Enter text or URL">
+        <div id="qr-container" style="display: none; margin-top: 30px; text-align: center;">
+            <div id="qrcode" style="display: flex; justify-content: center; margin-bottom: 20px; padding: 15px; background: white; border-radius: 8px; border: 1px dashed #ccc;"></div>
+            
+            <button id="downloadBtn" onclick="downloadQR()" style="background: #28a745; width: 100%; padding: 15px; color: white; border: none; border-radius: 8px; font-weight: bold; font-size: 16px; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 10px;">
+                Download High-Res PNG
+            </button>
+        </div>
+    </div>
+</main>
 
-<br><br>
+<section style="max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.8; color: #444; border-top: 1px solid #ddd;">
+    <h2>Why Use the SuperTools QR Generator?</h2>
+    <p>Many online tools trick you into creating a dynamic QR code that stops working after a 14-day "free trial." <strong>SuperTools generates Static QR Codes.</strong> This means the data is encoded directly into the image itself. Once you download it, it belongs to you forever—no tracking, no expiration, no subscriptions.</p>
 
-<button onclick="generateQR()">Generate QR Code</button>
+    
 
-<div id="qrcode"></div>
+    <h3>How to Create a QR Code:</h3>
+    <ol>
+        <li><strong>Enter your content:</strong> Paste a website URL (e.g., your Instagram profile, YouTube video, or business website) or type in plain text.</li>
+        <li><strong>Click Generate:</strong> Our browser-side script will instantly encode your data into a matrix barcode.</li>
+        <li><strong>Test and Download:</strong> Always scan the code with your smartphone camera to ensure it works, then click "Download High-Res PNG" to save it.</li>
+    </ol>
 
-<br>
-
-<button id="downloadBtn" style="display:none;" onclick="downloadQR()">Download QR</button>
-
-</div>
+    <div style="background: #eef9ff; padding: 20px; border-left: 5px solid #4facfe; margin: 25px 0; border-radius: 4px;">
+        <strong>Common Use Cases:</strong> Add QR codes to business cards, restaurant menus, event flyers, real estate signs, or product packaging to connect offline customers to your online brand.
+    </div>
+</section>
 
 <footer>
-<p>© 2026 SuperTools</p>
+    <p>© 2026 SuperTools | <a href="privacy.html">Privacy Policy</a> | <a href="about.html">About Us</a></p>
 </footer>
 
 <script>
+function generateQR() {
+    let text = document.getElementById("text").value.trim();
+    let qrContainer = document.getElementById("qr-container");
 
-function generateQR(){
+    if (text === "") {
+        alert("Please enter a valid URL or text.");
+        return;
+    }
 
-let text=document.getElementById("text").value;
+    // Clear previous QR code
+    document.getElementById("qrcode").innerHTML = "";
 
-if(text===""){
-alert("Please enter text or URL");
-return;
+    // Generate new QR Code
+    new QRCode(document.getElementById("qrcode"), {
+        text: text,
+        width: 250,
+        height: 250,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H // High error correction
+    });
+
+    // Show the container and download button smoothly
+    qrContainer.style.display = "block";
 }
 
-document.getElementById("qrcode").innerHTML="";
+function downloadQR() {
+    // qrcode.js generates a canvas first, then converts to an img tag. 
+    // We target the image for the highest quality download.
+    let img = document.querySelector("#qrcode img");
+    
+    if (!img || !img.src) {
+        alert("Please wait a moment for the QR code to finish generating.");
+        return;
+    }
 
-new QRCode(document.getElementById("qrcode"),{
-text:text,
-width:220,
-height:220
-});
-
-setTimeout(()=>{
-document.getElementById("downloadBtn").style.display="inline-block";
-},300);
-
+    let link = document.createElement("a");
+    link.href = img.src;
+    link.download = "SuperTools-QRCode.png";
+    document.body.appendChild(link); // Required for Firefox
+    link.click();
+    document.body.removeChild(link);
 }
-
-function downloadQR(){
-
-let img=document.querySelector("#qrcode img");
-
-if(!img){
-alert("Generate QR first");
-return;
-}
-
-let link=document.createElement("a");
-
-link.href=img.src;
-link.download="supertools-qr.png";
-
-link.click();
-
-}
-
 </script>
 
 </body>
