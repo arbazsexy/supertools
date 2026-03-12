@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>SHA256 Hash Generator - Create SHA256 Hash Online</title>
+
+<meta name="description" content="Free online SHA256 Hash Generator. Convert any text into a secure SHA256 hash instantly. Fast, accurate, and easy to use.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/sha256-generator.html">
+
+<link rel="icon" href="logo.png" type="image/png">
+
+<meta property="og:title" content="SHA256 Hash Generator - SuperTools">
+<meta property="og:description" content="Generate SHA256 hash instantly using our free online tool.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/sha256-generator.html">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"SHA256 Generator",
+"url":"https://supertools1.site/sha256-generator.html",
+"applicationCategory":"DeveloperApplication",
+"operatingSystem":"Web",
+"description":"Generate SHA256 hash from text instantly using this free online tool.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+"author":{"@type":"Organization","name":"SuperTools","url":"https://supertools1.site"}
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>SHA256 Hash Generator</h1>
+<p>Generate a secure SHA256 hash from any text instantly.</p>
+
+<label>Enter text</label>
+<textarea id="text" rows="4" placeholder="Type or paste text here..."></textarea>
+
+<br><br>
+
+<button onclick="generateHash()">Generate SHA256</button>
+<button onclick="copyHash()">Copy</button>
+<button onclick="clearText()">Clear</button>
+
+<div id="result"></div>
+
+</div>
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online SHA256 Hash Generator</h2>
+
+<p>
+The <strong>SHA256 Hash Generator</strong> allows you to convert text into a secure SHA256 hash instantly. 
+SHA256 is part of the Secure Hash Algorithm family and is widely used in modern security systems 
+to ensure data integrity and authentication.
+</p>
+
+<p>
+Unlike simple text encoding, SHA256 generates a fixed-length 64-character hexadecimal string 
+that represents the original input data.
+</p>
+
+<h2>How to Use the SHA256 Generator</h2>
+
+<ul>
+<li>Enter the text you want to convert.</li>
+<li>Click the <strong>Generate SHA256</strong> button.</li>
+<li>Your SHA256 hash will appear instantly.</li>
+<li>Use the <strong>Copy</strong> button to copy the hash.</li>
+</ul>
+
+<h2>Features of Our SHA256 Tool</h2>
+
+<ul>
+<li>Instant SHA256 hash generation</li>
+<li>Runs directly in your browser</li>
+<li>No data stored on servers</li>
+<li>Works on mobile and desktop devices</li>
+<li>Free and unlimited usage</li>
+</ul>
+
+<h2>What Is SHA256?</h2>
+
+<p>
+SHA256 stands for Secure Hash Algorithm 256-bit. It is a cryptographic hash function designed 
+to produce a unique digital fingerprint for data. Even the smallest change in the input will 
+result in a completely different hash.
+</p>
+
+<p>
+SHA256 is commonly used in cybersecurity, password storage, blockchain systems, and data 
+verification processes.
+</p>
+
+<h2>Common Uses of SHA256</h2>
+
+<ul>
+<li>Password hashing</li>
+<li>Blockchain technology</li>
+<li>Data verification</li>
+<li>Digital signatures</li>
+<li>Secure authentication systems</li>
+</ul>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+
+async function generateHash(){
+
+let text=document.getElementById("text").value;
+
+if(text===""){
+document.getElementById("result").innerHTML="Please enter text.";
+return;
+}
+
+const msgBuffer = new TextEncoder().encode(text);
+const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
+const hashArray = Array.from(new Uint8Array(hashBuffer));
+const hashHex = hashArray.map(b => b.toString(16).padStart(2,"0")).join("");
+
+document.getElementById("result").innerHTML =
+"<textarea id='outputHash' style='width:100%;height:120px;margin-top:20px;padding:10px;border-radius:8px;'>"+hashHex+"</textarea>";
+
+}
+
+function copyHash(){
+
+let copy=document.getElementById("outputHash");
+
+if(!copy){
+alert("Nothing to copy yet!");
+return;
+}
+
+copy.select();
+copy.setSelectionRange(0,99999);
+
+navigator.clipboard.writeText(copy.value);
+
+alert("Copied!");
+
+}
+
+function clearText(){
+
+document.getElementById("text").value="";
+document.getElementById("result").innerHTML="";
+
+}
+
+</script>
+
+</body>
+</html>

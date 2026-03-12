@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Image to Base64 Converter - Encode Images to Base64 Online</title>
+
+<meta name="description" content="Free online Image to Base64 converter. Encode JPG, PNG, or GIF images into Base64 instantly. Fast, secure, and works directly in your browser.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/imagetobase64.html">
+
+<link rel="icon" href="logo.png" type="image/png">
+
+<meta property="og:title" content="Image to Base64 Converter - SuperTools">
+<meta property="og:description" content="Convert images to Base64 instantly with our free online tool.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/imagetobase64.html">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Image to Base64 Converter",
+"url": "https://supertools1.site/imagetobase64.html",
+"applicationCategory": "UtilityApplication",
+"operatingSystem": "Web",
+"description": "Convert images into Base64 encoding instantly using this free online tool.",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+},
+"author": {
+"@type": "Organization",
+"name": "SuperTools",
+"url": "https://supertools1.site"
+}
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.preview{
+margin-top:20px;
+text-align:center;
+}
+
+.preview img{
+max-width:100%;
+border-radius:8px;
+margin-top:10px;
+}
+
+textarea{
+width:100%;
+margin-top:20px;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+border:none;
+background:#2196f3;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1976d2;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Image to Base64 Converter</h1>
+
+<p>Convert any image into Base64 encoding instantly.</p>
+
+<input type="file" id="imageInput" accept="image/*">
+
+<br>
+
+<button onclick="convertBase64()">Convert to Base64</button>
+
+<div class="preview" id="preview"></div>
+
+<textarea id="base64Output" rows="8" placeholder="Base64 output will appear here..."></textarea>
+
+<button onclick="copyBase64()">Copy Base64</button>
+
+</div>
+
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online Image to Base64 Converter</h2>
+
+<p>
+Our <strong>Image to Base64 Converter</strong> allows you to quickly convert images into Base64 encoded strings directly in your browser. Base64 encoding transforms image files such as PNG, JPG, GIF, or other formats into a long text string that can be embedded directly into HTML, CSS, JavaScript, or JSON code.
+</p>
+
+<p>
+This technique is commonly used by web developers who want to include images directly inside code without loading separate image files. By converting an image to Base64, the image data becomes part of the webpage itself, which can sometimes reduce HTTP requests and simplify deployment.
+</p>
+
+<h2>How to Use the Image to Base64 Converter</h2>
+
+<p>Using this tool is simple and takes only a few seconds:</p>
+
+<ul>
+<li>Select an image file from your device.</li>
+<li>Click the <strong>Convert to Base64</strong> button.</li>
+<li>The Base64 encoded string will appear instantly.</li>
+<li>Copy the generated code and use it in your project.</li>
+</ul>
+
+<h2>Features of Our Image to Base64 Tool</h2>
+
+<ul>
+<li>Supports PNG, JPG, GIF, and most image formats</li>
+<li>Instant Base64 encoding</li>
+<li>No file uploads required</li>
+<li>100% private processing inside your browser</li>
+<li>Mobile-friendly and responsive design</li>
+<li>Completely free to use</li>
+</ul>
+
+<h2>Why Convert Images to Base64?</h2>
+
+<p>
+Base64 encoding allows images to be embedded directly inside HTML or CSS using data URLs. This method is often used for small images like icons, logos, or graphics where loading a separate file is unnecessary.
+</p>
+
+<p>
+Developers also use Base64 encoding when working with APIs, email templates, and web applications where binary files need to be transmitted as text data.
+</p>
+
+<h2>Who Uses Image to Base64 Converters?</h2>
+
+<p>
+Image to Base64 converters are commonly used by developers, designers, students, and software engineers. Whether you are building websites, embedding images inside CSS, or testing encoded data, this tool makes the process fast and easy.
+</p>
+
+<h2>Why Use the SuperTools Image to Base64 Encoder?</h2>
+
+<p>
+SuperTools provides a fast, lightweight, and secure way to convert images to Base64. You do not need to install software or create an account. Just upload your image, convert it instantly, and copy the encoded result within seconds.
+</p>
+
+<p>
+Because the conversion happens directly inside your browser, your images remain completely private and secure at all times.
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+
+function convertBase64(){
+
+let file = document.getElementById("imageInput").files[0];
+
+if(!file){
+alert("Please select an image.");
+return;
+}
+
+let reader = new FileReader();
+
+reader.onload = function(e){
+
+let base64 = e.target.result;
+
+document.getElementById("preview").innerHTML =
+"<img src='"+base64+"'>";
+
+document.getElementById("base64Output").value = base64;
+
+}
+
+reader.readAsDataURL(file);
+
+}
+
+function copyBase64(){
+
+let text = document.getElementById("base64Output");
+
+text.select();
+document.execCommand("copy");
+
+alert("Base64 copied!");
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Image Resizer Online - Resize Images Instantly</title>
+
+<meta name="description" content="Free online Image Resizer tool. Resize images instantly by changing width and height. Works on JPG, PNG, and other formats.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/image-resizer.html">
+
+<link rel="icon" href="logo.png" type="image/png">
+
+<meta property="og:title" content="Image Resizer - SuperTools">
+<meta property="og:description" content="Resize images instantly with our free online image resizer tool.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/image-resizer.html">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"Image Resizer",
+"url":"https://supertools1.site/image-resizer.html",
+"applicationCategory":"MultimediaApplication",
+"operatingSystem":"Web",
+"description":"Resize images instantly online by adjusting width and height.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+"author":{"@type":"Organization","name":"SuperTools","url":"https://supertools1.site"}
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Image Resizer</h1>
+<p>Resize images instantly by adjusting the width and height.</p>
+
+<label>Select Image</label>
+<input type="file" id="upload" accept="image/*">
+
+<br><br>
+
+<label>Width (px)</label>
+<input type="number" id="width" placeholder="Enter width">
+
+<label>Height (px)</label>
+<input type="number" id="height" placeholder="Enter height">
+
+<br><br>
+
+<button onclick="resizeImage()">Resize Image</button>
+
+<br><br>
+
+<canvas id="canvas" style="max-width:100%;border:1px solid #ddd;border-radius:8px;"></canvas>
+
+<br><br>
+
+<button onclick="downloadImage()">Download Resized Image</button>
+
+</div>
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online Image Resizer Tool</h2>
+
+<p>
+The <strong>Image Resizer</strong> is a free online tool that allows you to quickly resize images by adjusting their width and height. Whether you need to resize a photo for social media, websites, documents, or email attachments, this tool makes the process fast and easy.
+</p>
+
+<p>
+Our tool works directly in your browser, which means your images never leave your device. This ensures your photos remain private and secure while being resized instantly.
+</p>
+
+<h2>How to Use the Image Resizer</h2>
+
+<ul>
+<li>Select the image you want to resize from your device.</li>
+<li>Enter the desired width and height in pixels.</li>
+<li>Click the <strong>Resize Image</strong> button.</li>
+<li>Download the resized image instantly.</li>
+</ul>
+
+<h2>Features of Our Image Resizer</h2>
+
+<ul>
+<li>Resize images instantly in your browser</li>
+<li>Supports JPG, PNG, and most common image formats</li>
+<li>No uploads or server processing required</li>
+<li>Completely free and easy to use</li>
+<li>Fast and mobile-friendly interface</li>
+</ul>
+
+<h2>Why Resize Images?</h2>
+
+<p>
+Resizing images is useful when uploading photos to websites, blogs, social media platforms, or online forms. Large images can slow down websites and increase loading times, while properly resized images improve performance and user experience.
+</p>
+
+<p>
+Website owners and developers often resize images to make them fit perfectly within page layouts, reduce bandwidth usage, and optimize website speed.
+</p>
+
+<h2>Who Uses Image Resizer Tools?</h2>
+
+<p>
+Image resizing tools are widely used by bloggers, students, photographers, designers, developers, and social media managers. Whether you need to prepare images for presentations, websites, or online posts, an image resizer helps you adjust image dimensions quickly without installing any software.
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+
+let uploadedImage = new Image();
+
+document.getElementById("upload").addEventListener("change", function(event){
+
+let reader = new FileReader();
+
+reader.onload = function(e){
+uploadedImage.src = e.target.result;
+}
+
+reader.readAsDataURL(event.target.files[0]);
+
+});
+
+function resizeImage(){
+
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+
+let width = document.getElementById("width").value;
+let height = document.getElementById("height").value;
+
+canvas.width = width;
+canvas.height = height;
+
+ctx.drawImage(uploadedImage, 0, 0, width, height);
+
+}
+
+function downloadImage(){
+
+let canvas = document.getElementById("canvas");
+
+let link = document.createElement("a");
+link.download = "resized-image.png";
+link.href = canvas.toDataURL();
+
+link.click();
+
+}
+
+</script>
+
+</body>
+</html>

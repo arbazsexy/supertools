@@ -186,6 +186,10 @@ footer a {
     font-weight: bold;
 }
 
+footer a:hover{
+color:white;
+}
+
 /* ===============================
    MOBILE OPTIMIZATION
 ================================ */
@@ -193,4 +197,39 @@ footer a {
     .tools-grid { grid-template-columns: 1fr; }
     header h1 { font-size: 2rem; }
     .container { margin: 30px 15px; padding: 25px; }
+}
+
+
+button{
+background: linear-gradient(135deg,#4facfe,#00f2fe);
+border: none;
+color: white;
+padding: 12px 20px;
+margin: 8px 5px;
+font-size: 16px;
+font-weight: 600;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+button:hover{
+transform: translateY(-2px);
+box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+button:active{
+transform: scale(0.95);
+}
+.btn-repeat{
+background:#4CAF50;
+}
+
+.btn-copy{
+background:#2196F3;
+}
+
+.btn-clear{
+background:#f44336;
 }

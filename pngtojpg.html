@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>PNG to JPG Converter Online - Convert PNG Images to JPG Instantly</title>
+
+<meta name="description" content="Free online PNG to JPG converter. Convert PNG images to JPG format instantly. Fast, secure, and works directly in your browser without uploading files.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/pngtojpg.html">
+
+<link rel="icon" href="logo.png" type="image/png">
+
+<meta property="og:title" content="PNG to JPG Converter - SuperTools">
+<meta property="og:description" content="Convert PNG images to JPG instantly with our free online converter.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/pngtojpg.html">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "PNG to JPG Converter",
+"url": "https://supertools1.site/pngtojpg.html",
+"applicationCategory": "UtilityApplication",
+"operatingSystem": "Web",
+"description": "Convert PNG images to JPG format instantly with this free online PNG to JPG converter.",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+},
+"author": {
+"@type": "Organization",
+"name": "SuperTools",
+"url": "https://supertools1.site"
+}
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.preview{
+margin-top:20px;
+text-align:center;
+}
+
+.preview img{
+max-width:100%;
+border-radius:8px;
+margin-top:10px;
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+border:none;
+background:#2196f3;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1976d2;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>PNG to JPG Converter</h1>
+
+<p>Convert PNG images to JPG instantly using our free online converter.</p>
+
+<input type="file" id="imageInput" accept="image/png">
+
+<br>
+
+<button onclick="convertImage()">Convert to JPG</button>
+
+<div class="preview" id="preview"></div>
+
+</div>
+
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online PNG to JPG Converter</h2>
+
+<p>
+Our <strong>PNG to JPG Converter</strong> allows you to convert PNG images into JPG format instantly. 
+This tool works directly inside your browser, meaning your images never leave your device.
+</p>
+
+<p>
+PNG images often have larger file sizes because they store high-quality image data and transparency. 
+By converting PNG to JPG, you can significantly reduce the file size while keeping the image visually clear.
+</p>
+
+<h2>How to Use the PNG to JPG Converter</h2>
+
+<ul>
+<li>Select a PNG image from your device.</li>
+<li>Click the <strong>Convert to JPG</strong> button.</li>
+<li>The converted image will appear instantly.</li>
+<li>Click the <strong>Download JPG</strong> button to save it.</li>
+</ul>
+
+<h2>Features</h2>
+
+<ul>
+<li>Instant PNG to JPG conversion</li>
+<li>No image uploads required</li>
+<li>100% private and secure</li>
+<li>Works on mobile and desktop</li>
+<li>High-quality JPG output</li>
+<li>Unlimited free usage</li>
+</ul>
+
+<h2>Why Convert PNG to JPG?</h2>
+
+<p>
+JPG images are smaller in file size and load faster on websites. 
+Many websites prefer JPG format because it helps improve page loading speed and overall performance.
+</p>
+
+<p>
+If you are uploading images to websites, blogs, or social media, converting PNG images to JPG can help reduce storage space and improve loading times.
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+
+<script>
+
+function convertImage(){
+
+let file = document.getElementById("imageInput").files[0];
+
+if(!file){
+alert("Please select a PNG image.");
+return;
+}
+
+let reader = new FileReader();
+
+reader.onload = function(event){
+
+let img = new Image();
+
+img.onload = function(){
+
+let canvas = document.createElement("canvas");
+canvas.width = img.width;
+canvas.height = img.height;
+
+let ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "#ffffff";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+ctx.drawImage(img,0,0);
+
+let jpg = canvas.toDataURL("image/jpeg",0.9);
+
+document.getElementById("preview").innerHTML =
+"<img src='"+jpg+"'><br><br><a href='"+jpg+"' download='converted.jpg'><button>Download JPG</button></a>";
+
+}
+
+img.src = event.target.result;
+
+}
+
+reader.readAsDataURL(file);
+
+}
+
+</script>
+
+</body>
+</html>

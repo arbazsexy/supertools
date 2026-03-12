@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Loan EMI Calculator - Calculate Monthly Loan Payments</title>
+
+<meta name="description" content="Free online Loan EMI Calculator. Calculate your monthly loan EMI, total interest, and total payment instantly. Perfect for home, car, and personal loans.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/loan-emi-calculator.html">
+
+<link rel="icon" href="logo.png" type="image/png">
+
+<meta property="og:title" content="Loan EMI Calculator - SuperTools">
+<meta property="og:description" content="Calculate loan EMI, interest, and total payment instantly with our free calculator.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/loan-emi-calculator.html">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"Loan EMI Calculator",
+"url":"https://supertools1.site/loan-emi-calculator.html",
+"applicationCategory":"FinanceApplication",
+"operatingSystem":"Web",
+"description":"Calculate monthly loan EMI, interest, and total payment using this free online calculator.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+"author":{"@type":"Organization","name":"SuperTools","url":"https://supertools1.site"}
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Loan EMI Calculator</h1>
+<p>Calculate your monthly loan EMI, interest payable, and total repayment amount instantly.</p>
+
+<label>Loan Amount</label>
+<input type="number" id="loanAmount" placeholder="Enter loan amount">
+
+<label>Annual Interest Rate (%)</label>
+<input type="number" id="interestRate" placeholder="Enter interest rate">
+
+<label>Loan Tenure (Years)</label>
+<input type="number" id="loanTenure" placeholder="Enter loan tenure">
+
+<br><br>
+
+<button onclick="calculateEMI()">Calculate EMI</button>
+<button onclick="clearFields()">Clear</button>
+
+<div id="result"></div>
+
+</div>
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online Loan EMI Calculator</h2>
+
+<p>
+The <strong>Loan EMI Calculator</strong> helps you quickly calculate the monthly installment 
+(EMI) you need to pay for a loan. EMI stands for Equated Monthly Installment and represents 
+the fixed amount paid every month until the loan is fully repaid.
+</p>
+
+<p>
+This tool is useful when planning loans such as home loans, car loans, personal loans, 
+or education loans. By entering the loan amount, interest rate, and tenure, you can instantly 
+see your monthly EMI and total repayment amount.
+</p>
+
+<h2>How to Use the Loan EMI Calculator</h2>
+
+<ul>
+<li>Enter the total loan amount.</li>
+<li>Enter the annual interest rate.</li>
+<li>Enter the loan tenure in years.</li>
+<li>Click the <strong>Calculate EMI</strong> button.</li>
+<li>The calculator will show your monthly EMI, total interest, and total payment.</li>
+</ul>
+
+<h2>Features of Our EMI Calculator</h2>
+
+<ul>
+<li>Instant EMI calculation</li>
+<li>Shows total interest payable</li>
+<li>Displays total repayment amount</li>
+<li>Mobile-friendly and easy to use</li>
+<li>Free online financial tool</li>
+</ul>
+
+<h2>What Is EMI?</h2>
+
+<p>
+EMI (Equated Monthly Installment) is the fixed monthly payment made by a borrower 
+to a lender. Each EMI payment includes both principal repayment and interest charges.
+</p>
+
+<p>
+Using an EMI calculator helps borrowers plan their finances better and understand 
+their monthly financial commitments before taking a loan.
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+
+function calculateEMI(){
+
+let P = parseFloat(document.getElementById("loanAmount").value);
+let annualRate = parseFloat(document.getElementById("interestRate").value);
+let years = parseFloat(document.getElementById("loanTenure").value);
+
+if(isNaN(P) || isNaN(annualRate) || isNaN(years)){
+document.getElementById("result").innerHTML="Please enter valid values.";
+return;
+}
+
+let r = (annualRate / 12) / 100;
+let n = years * 12;
+
+let emi = (P * r * Math.pow(1+r,n)) / (Math.pow(1+r,n) - 1);
+
+let totalPayment = emi * n;
+let totalInterest = totalPayment - P;
+
+document.getElementById("result").innerHTML =
+"<div style='margin-top:20px;padding:15px;background:#e3f2fd;border-radius:8px;'>"+
+"<p><strong>Monthly EMI:</strong> "+emi.toFixed(2)+"</p>"+
+"<p><strong>Total Interest:</strong> "+totalInterest.toFixed(2)+"</p>"+
+"<p><strong>Total Payment:</strong> "+totalPayment.toFixed(2)+"</p>"+
+"</div>";
+
+}
+
+function clearFields(){
+document.getElementById("loanAmount").value="";
+document.getElementById("interestRate").value="";
+document.getElementById("loanTenure").value="";
+document.getElementById("result").innerHTML="";
+}
+
+</script>
+
+</body>
+</html>

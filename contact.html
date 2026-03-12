@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us - SuperTools</title>
+
+<meta name="description" content="Contact SuperTools for questions, feedback, suggestions, or bug reports. We are happy to hear from you.">
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f4f6fb;
+color:#333;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:white;
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+header{
+background:#333;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+.container{
+max-width:750px;
+margin:40px auto;
+background:white;
+padding:40px;
+border-radius:14px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-top:20px;
+}
+
+input, textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+}
+
+textarea{
+min-height:120px;
+resize:vertical;
+}
+
+button{
+padding:12px;
+background:#333;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#555;
+}
+
+.email-box{
+margin-top:30px;
+background:#f4f6fb;
+padding:15px;
+border-radius:8px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#111;
+color:white;
+margin-top:40px;
+}
+
+/* Success popup */
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:none;
+align-items:center;
+justify-content:center;
+}
+
+.popup-box{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+max-width:400px;
+}
+
+.popup button{
+margin-top:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<header>
+<h1>Contact Us</h1>
+<p>If you have questions, suggestions, or bug reports feel free to contact us.</p>
+</header>
+
+<div class="container">
+
+<h2>Send Us a Message</h2>
+
+<form id="contactForm" action="https://formsubmit.co/supertools167@gmail.com" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Write your message here..." required></textarea>
+
+<!-- FormSubmit settings -->
+
+<input type="hidden" name="_subject" value="New message from SuperTools">
+<input type="hidden" name="_captcha" value="false">
+
+<!-- Honeypot spam protection -->
+<input type="text" name="_honey" style="display:none">
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<div class="email-box">
+<h3>Email</h3>
+<p>You can also contact us directly at:</p>
+<p><strong>supertools167@gmail.com</strong></p>
+</div>
+
+</div>
+
+<!-- Success Popup -->
+
+<div class="popup" id="successPopup">
+<div class="popup-box">
+<h2>Message Sent!</h2>
+<p>Thank you for contacting SuperTools. We will reply soon.</p>
+<button onclick="closePopup()">OK</button>
+</div>
+</div>
+
+<footer>
+<p>© 2026 SuperTools</p>
+</footer>
+
+<script>
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(){
+setTimeout(()=>{
+document.getElementById("successPopup").style.display="flex";
+},500);
+});
+
+function closePopup(){
+document.getElementById("successPopup").style.display="none";
+}
+
+</script>
+
+</body>
+</html>

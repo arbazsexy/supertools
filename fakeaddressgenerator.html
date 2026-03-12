@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Fake Address Generator - Generate Random Addresses Online</title>
+
+<meta name="description" content="Free online fake address generator. Generate random addresses instantly including street, city, state, and ZIP code. Perfect for testing forms and generating sample data.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/fakeaddressgenerator.html">
+
+<link rel="icon" href="logo.png">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+#result{
+margin-top:20px;
+padding:15px;
+background:#e3f2fd;
+border-radius:8px;
+line-height:1.7;
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+border:none;
+background:#2196f3;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1976d2;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Fake Address Generator</h1>
+
+<p>Generate realistic random addresses instantly for testing, development, and sample data.</p>
+
+<button onclick="generateAddress()">Generate Address</button>
+
+<button onclick="copyAddress()">Copy Address</button>
+
+<div id="result">Click "Generate Address" to create a random address.</div>
+
+</div>
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online Fake Address Generator</h2>
+
+<p>
+The <strong>Fake Address Generator</strong> allows you to create realistic random addresses instantly. 
+These addresses are not real and are designed for testing, demonstration, and development purposes.
+</p>
+
+<p>
+Developers often need address data when testing registration forms, shipping systems, or databases. 
+Instead of using real personal information, this tool generates random addresses that look realistic 
+but do not belong to real people.
+</p>
+
+<h2>How to Use the Fake Address Generator</h2>
+
+<ul>
+<li>Click the <strong>Generate Address</strong> button.</li>
+<li>A random address will appear instantly.</li>
+<li>Copy the generated address for your project.</li>
+<li>Generate new addresses anytime.</li>
+</ul>
+
+<h2>Features</h2>
+
+<ul>
+<li>Generate realistic random addresses</li>
+<li>Includes street, city, state, and ZIP code</li>
+<li>Useful for testing websites and apps</li>
+<li>Instant results</li>
+<li>Mobile and desktop friendly</li>
+<li>100% free to use</li>
+</ul>
+
+<h2>Why Use a Fake Address Generator?</h2>
+
+<p>
+Fake address generators help developers and testers create realistic sample data without exposing 
+real personal information. This is useful when testing forms, building databases, or creating 
+demonstration projects.
+</p>
+
+<p>
+Using randomly generated address data helps maintain privacy and keeps development environments safe.
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+
+let streets=[
+"Maple Street","Oak Avenue","Pine Road","Cedar Lane","Elm Street",
+"Sunset Boulevard","Park Avenue","River Road","Hillcrest Drive","Lakeview Street"
+];
+
+let cities=[
+"New York","Los Angeles","Chicago","Houston","Phoenix",
+"Philadelphia","San Antonio","San Diego","Dallas","San Jose"
+];
+
+let states=[
+"NY","CA","IL","TX","AZ","PA","TX","CA","TX","CA"
+];
+
+function generateAddress(){
+
+let streetNumber=Math.floor(Math.random()*9999)+1;
+
+let street=streets[Math.floor(Math.random()*streets.length)];
+
+let city=cities[Math.floor(Math.random()*cities.length)];
+
+let state=states[Math.floor(Math.random()*states.length)];
+
+let zip=Math.floor(10000+Math.random()*90000);
+
+let address=streetNumber+" "+street+"<br>"+city+", "+state+" "+zip;
+
+document.getElementById("result").innerHTML=address;
+
+}
+
+function copyAddress(){
+
+let text=document.getElementById("result").innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("Address copied!");
+
+}
+
+</script>
+
+</body>
+</html>

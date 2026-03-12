@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Color Palette Generator - Generate Beautiful Color Palettes</title>
+
+<meta name="description" content="Free online color palette generator. Generate beautiful random color palettes instantly for web design, graphic design, branding, and UI projects.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/colorpalettegenerator.html">
+
+<link rel="icon" href="logo.png">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.palette{
+display:flex;
+margin-top:25px;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.colorBox{
+flex:1;
+min-width:120px;
+height:150px;
+border-radius:8px;
+display:flex;
+align-items:flex-end;
+justify-content:center;
+font-weight:bold;
+color:white;
+padding-bottom:10px;
+}
+
+button{
+margin-top:20px;
+padding:12px 20px;
+border:none;
+background:#2196f3;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1976d2;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Color Palette Generator</h1>
+
+<p>Generate beautiful random color palettes instantly for design and creative projects.</p>
+
+<button onclick="generatePalette()">Generate Palette</button>
+
+<div class="palette" id="palette"></div>
+
+</div>
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online Color Palette Generator</h2>
+
+<p>
+Our <strong>Color Palette Generator</strong> helps designers, developers, and creatives generate beautiful color combinations instantly. 
+Whether you are building a website, designing graphics, creating branding materials, or developing a mobile app, finding the right color palette is essential.
+</p>
+
+<p>
+Instead of manually searching for colors that work well together, this tool automatically generates random color palettes that can inspire your next design project.
+</p>
+
+<h2>How to Use the Color Palette Generator</h2>
+
+<ul>
+<li>Click the <strong>Generate Palette</strong> button.</li>
+<li>The tool will instantly create a new color palette.</li>
+<li>Each color includes its HEX color code.</li>
+<li>Use the colors in your design, website, or project.</li>
+</ul>
+
+<h2>Features</h2>
+
+<ul>
+<li>Generate random color palettes instantly</li>
+<li>Includes HEX color codes</li>
+<li>Perfect for UI, branding, and web design</li>
+<li>Unlimited palette generation</li>
+<li>Fast and lightweight tool</li>
+<li>Works on mobile and desktop devices</li>
+</ul>
+
+<h2>Why Use a Color Palette Generator?</h2>
+
+<p>
+Choosing colors that look good together can be difficult, especially for beginners. A color palette generator helps by producing balanced color combinations that work well together visually.
+</p>
+
+<p>
+Designers use palette generators when creating website themes, brand identities, user interfaces, digital artwork, and marketing graphics.
+</p>
+
+<h2>Who Uses Color Palette Generators?</h2>
+
+<p>
+Color palette generators are widely used by web designers, graphic designers, developers, artists, and students who want inspiration for color combinations in their projects.
+</p>
+
+<p>
+With the SuperTools Color Palette Generator, you can instantly generate unlimited color palettes and find the perfect colors for your creative work.
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+
+function randomColor(){
+
+let letters="0123456789ABCDEF";
+let color="#";
+
+for(let i=0;i<6;i++){
+color+=letters[Math.floor(Math.random()*16)];
+}
+
+return color;
+
+}
+
+function generatePalette(){
+
+let palette=document.getElementById("palette");
+
+palette.innerHTML="";
+
+for(let i=0;i<5;i++){
+
+let color=randomColor();
+
+let div=document.createElement("div");
+
+div.className="colorBox";
+div.style.background=color;
+div.innerHTML=color;
+
+palette.appendChild(div);
+
+}
+
+}
+
+generatePalette();
+
+</script>
+
+</body>
+</html>

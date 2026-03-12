@@ -1,0 +1,193 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>HTML Minifier - Compress HTML Code Online</title>
+
+<meta name="description" content="Free online HTML Minifier. Compress and minify HTML code instantly by removing spaces, comments, and unnecessary characters to reduce file size.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/html-minifier.html">
+
+<link rel="icon" href="logo.png" type="image/png">
+
+<meta property="og:title" content="HTML Minifier - SuperTools">
+<meta property="og:description" content="Minify and compress HTML code instantly with our free HTML minifier tool.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/html-minifier.html">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"HTML Minifier",
+"url":"https://supertools1.site/html-minifier.html",
+"applicationCategory":"DeveloperApplication",
+"operatingSystem":"Web",
+"description":"Minify HTML code instantly using this free online HTML minifier tool.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+"author":{"@type":"Organization","name":"SuperTools","url":"https://supertools1.site"}
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>HTML Minifier</h1>
+<p>Minify and compress HTML code instantly to reduce file size and improve website performance.</p>
+
+<label>Enter HTML Code</label>
+<textarea id="htmlInput" rows="10" placeholder="Paste your HTML code here..."></textarea>
+
+<br><br>
+
+<button onclick="minifyHTML()">Minify HTML</button>
+<button onclick="copyHTML()">Copy Minified Code</button>
+<button onclick="clearHTML()">Clear</button>
+
+<div id="result"></div>
+
+</div>
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online HTML Minifier</h2>
+
+<p>
+The <strong>HTML Minifier</strong> helps you compress HTML code by removing unnecessary spaces, comments, and line breaks. 
+Minifying HTML reduces the overall file size and improves page loading speed.
+</p>
+
+<p>
+This tool works directly in your browser, so your code stays private and is never uploaded to any server.
+</p>
+
+<h2>How to Use the HTML Minifier</h2>
+
+<ul>
+<li>Paste your HTML code into the input box.</li>
+<li>Click the <strong>Minify HTML</strong> button.</li>
+<li>The compressed HTML code will appear instantly.</li>
+<li>You can copy the minified code using the <strong>Copy</strong> button.</li>
+</ul>
+
+<h2>Features of Our HTML Minifier</h2>
+
+<ul>
+<li>Instant HTML compression</li>
+<li>Shows original and minified file sizes</li>
+<li>Displays percentage reduction</li>
+<li>Works directly in your browser</li>
+<li>Free and easy to use</li>
+</ul>
+
+<h2>Why Minify HTML?</h2>
+
+<p>
+Minifying HTML removes unnecessary characters that are not required for the code to function. 
+This reduces file size, improves loading speed, and enhances website performance.
+</p>
+
+<p>
+Developers often minify HTML, CSS, and JavaScript before deploying websites to production.
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+
+function minifyHTML(){
+
+let input=document.getElementById("htmlInput").value;
+
+if(input===""){
+document.getElementById("result").innerHTML="Please enter HTML code.";
+return;
+}
+
+let originalSize=new Blob([input]).size;
+
+let minified = input;
+
+
+
+let minifiedSize=new Blob([minified]).size;
+
+let reduction=(((originalSize-minifiedSize)/originalSize)*100).toFixed(2);
+
+document.getElementById("result").innerHTML=
+"<div style='margin-top:20px;padding:15px;background:#e3f2fd;border-radius:8px;'>"+
+"<p><strong>Original Size:</strong> "+originalSize+" bytes</p>"+
+"<p><strong>Minified Size:</strong> "+minifiedSize+" bytes</p>"+
+"<p><strong>Reduction:</strong> "+reduction+"%</p>"+
+"</div>"+
+"<textarea id='outputHTML' style='width:100%;height:200px;margin-top:15px;padding:10px;border-radius:8px;'>"+minified+"</textarea>";
+
+}
+
+function copyHTML(){
+
+let output=document.getElementById("outputHTML");
+
+if(!output){
+alert("Nothing to copy!");
+return;
+}
+
+output.select();
+output.setSelectionRange(0,99999);
+
+navigator.clipboard.writeText(output.value);
+
+alert("Copied!");
+
+}
+
+function clearHTML(){
+
+document.getElementById("htmlInput").value="";
+document.getElementById("result").innerHTML="";
+
+}
+
+</script>
+
+</body>
+</html>

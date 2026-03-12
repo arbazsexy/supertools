@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>UUID Generator Online - Generate Unique UUIDs Instantly</title>
+
+<meta name="description" content="Free online UUID generator. Create random UUID v4 identifiers instantly for development, databases, APIs, and applications. Fast and secure UUID generator tool.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/uuidgenerator.html">
+
+<link rel="icon" href="logo.png" type="image/png">
+
+<meta property="og:title" content="UUID Generator - SuperTools">
+<meta property="og:description" content="Generate random UUIDs instantly with our free UUID generator tool.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/uuidgenerator.html">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "UUID Generator",
+"url": "https://supertools1.site/uuidgenerator.html",
+"applicationCategory": "DeveloperApplication",
+"operatingSystem": "Web",
+"description": "Generate random UUID version 4 identifiers instantly using this free online UUID generator.",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+},
+"author": {
+"@type": "Organization",
+"name": "SuperTools",
+"url": "https://supertools1.site"
+}
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+textarea{
+width:100%;
+margin-top:20px;
+padding:12px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+border:none;
+background:#2196f3;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1976d2;
+}
+
+input{
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>UUID Generator</h1>
+
+<p>Generate random UUID (Universally Unique Identifier) strings instantly.</p>
+
+<label>Number of UUIDs</label>
+<input type="number" id="count" value="1" min="1" max="100">
+
+<br>
+
+<button onclick="generateUUID()">Generate UUID</button>
+
+<textarea id="result" rows="8" placeholder="Generated UUIDs will appear here..."></textarea>
+
+<button onclick="copyUUID()">Copy UUIDs</button>
+
+</div>
+
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online UUID Generator</h2>
+
+<p>
+Our <strong>UUID Generator</strong> allows you to generate random UUID (Universally Unique Identifier) strings instantly. UUIDs are widely used in software development to uniquely identify information in databases, APIs, distributed systems, and applications.
+</p>
+
+<p>
+A UUID is a 128-bit value that is designed to be unique across systems and time. Developers commonly use UUID version 4, which generates random identifiers that are extremely unlikely to duplicate.
+</p>
+
+<h2>How to Use the UUID Generator</h2>
+
+<ul>
+<li>Select how many UUIDs you want to generate.</li>
+<li>Click the <strong>Generate UUID</strong> button.</li>
+<li>The generated UUIDs will appear instantly.</li>
+<li>Click <strong>Copy UUIDs</strong> to copy them to your clipboard.</li>
+</ul>
+
+<h2>Features of Our UUID Generator</h2>
+
+<ul>
+<li>Generate UUID version 4 identifiers</li>
+<li>Create multiple UUIDs instantly</li>
+<li>Fast and lightweight tool</li>
+<li>No data stored or transmitted</li>
+<li>Mobile-friendly interface</li>
+<li>Completely free to use</li>
+</ul>
+
+<h2>What is a UUID?</h2>
+
+<p>
+A UUID (Universally Unique Identifier) is a standardized identifier used in software development to uniquely identify objects or records. Because UUIDs are generated using random numbers or timestamps, the chance of duplication is extremely small.
+</p>
+
+<h2>Common Uses of UUIDs</h2>
+
+<p>
+UUIDs are commonly used in databases, distributed systems, web applications, APIs, authentication systems, and cloud platforms. They allow developers to create unique identifiers without needing a central authority or database counter.
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+
+<script>
+
+function uuidv4() {
+return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+return v.toString(16);
+});
+}
+
+function generateUUID(){
+
+let count = document.getElementById("count").value;
+let output = "";
+
+for(let i=0;i<count;i++){
+output += uuidv4() + "\n";
+}
+
+document.getElementById("result").value = output;
+
+}
+
+function copyUUID(){
+
+let text = document.getElementById("result");
+
+text.select();
+document.execCommand("copy");
+
+alert("UUIDs copied!");
+
+}
+
+</script>
+
+</body>
+</html>

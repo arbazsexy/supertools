@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Discount Calculator - Calculate Sale Price Instantly</title>
+
+<meta name="description" content="Free online Discount Calculator. Quickly calculate the final price after discount and how much money you save. Perfect for shopping and sales calculations.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/discount-calculator.html">
+
+<link rel="icon" href="logo.png" type="image/png">
+
+<meta property="og:title" content="Discount Calculator - SuperTools">
+<meta property="og:description" content="Calculate discounts and final prices instantly with our free online tool.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/discount-calculator.html">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"Discount Calculator",
+"url":"https://supertools1.site/discount-calculator.html",
+"applicationCategory":"UtilityApplication",
+"operatingSystem":"Web",
+"description":"Calculate discount percentage, final price, and savings instantly using this free online discount calculator.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+"author":{"@type":"Organization","name":"SuperTools","url":"https://supertools1.site"}
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Discount Calculator</h1>
+<p>Calculate the final price after a discount and see how much money you save.</p>
+
+<label>Original Price</label>
+<input type="number" id="price" placeholder="Enter original price">
+
+<label>Discount Percentage (%)</label>
+<input type="number" id="discount" placeholder="Enter discount %">
+
+<br><br>
+
+<button onclick="calculateDiscount()">Calculate</button>
+<button onclick="clearFields()">Clear</button>
+
+<div id="result"></div>
+
+</div>
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online Discount Calculator</h2>
+
+<p>
+The <strong>Discount Calculator</strong> helps you quickly calculate the final price of a product after a discount. 
+Whether you are shopping online, checking sale prices, or planning purchases, this tool helps you 
+understand exactly how much you will pay and how much you save.
+</p>
+
+<p>
+Simply enter the original price and the discount percentage, and the calculator will instantly 
+show the discounted price and the amount saved.
+</p>
+
+<h2>How to Use the Discount Calculator</h2>
+
+<ul>
+<li>Enter the original price of the product.</li>
+<li>Enter the discount percentage.</li>
+<li>Click the <strong>Calculate</strong> button.</li>
+<li>The tool will display the discount amount and the final price.</li>
+</ul>
+
+<h2>Features of Our Discount Tool</h2>
+
+<ul>
+<li>Instant discount calculations</li>
+<li>Shows both savings and final price</li>
+<li>Works on mobile and desktop devices</li>
+<li>No registration required</li>
+<li>Completely free to use</li>
+</ul>
+
+<h2>Why Use a Discount Calculator?</h2>
+
+<p>
+When stores advertise discounts such as 20%, 30%, or 50% off, it can sometimes be difficult to 
+quickly calculate the final price in your head. A discount calculator removes the guesswork 
+and helps you make smarter shopping decisions.
+</p>
+
+<p>
+This tool is useful for shoppers, students, business owners, and anyone who wants to calculate 
+sale prices quickly and accurately.
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+
+function calculateDiscount(){
+
+let price = parseFloat(document.getElementById("price").value);
+let discount = parseFloat(document.getElementById("discount").value);
+
+if(isNaN(price) || isNaN(discount)){
+document.getElementById("result").innerHTML="Please enter valid numbers.";
+return;
+}
+
+let discountAmount = (price * discount) / 100;
+let finalPrice = price - discountAmount;
+
+document.getElementById("result").innerHTML =
+"<div style='margin-top:20px;padding:15px;background:#e3f2fd;border-radius:8px;'>"+
+"<p><strong>You Save:</strong> "+discountAmount.toFixed(2)+"</p>"+
+"<p><strong>Final Price:</strong> "+finalPrice.toFixed(2)+"</p>"+
+"</div>";
+
+}
+
+function clearFields(){
+document.getElementById("price").value="";
+document.getElementById("discount").value="";
+document.getElementById("result").innerHTML="";
+}
+
+</script>
+
+</body>
+</html>

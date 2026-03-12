@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Text Reverser Online - Reverse Text Instantly</title>
+
+<meta name="description" content="Free online Text Reverser tool. Reverse any text instantly. Great for fun messages, coding tests, and quick text manipulation.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/textreverser.html">
+
+<link rel="icon" href="logo.png" type="image/png">
+
+<meta property="og:title" content="Text Reverser Tool - SuperTools">
+<meta property="og:description" content="Reverse text instantly with our free Text Reverser.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/textreverser.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"Text Reverser",
+"url":"https://supertools1.site/textreverser.html",
+"applicationCategory":"UtilityApplication",
+"operatingSystem":"Web",
+"description":"Reverse any text instantly using this free online Text Reverser tool.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+"author":{"@type":"Organization","name":"SuperTools","url":"https://supertools1.site"}
+}
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Text Reverser</h1>
+<p>Reverse any text instantly with our free online tool.</p>
+
+<label>Enter your text</label>
+<textarea id="text" rows="4" placeholder="Type your text here..."></textarea>
+
+<br><br>
+
+<button onclick="reverseText()">Reverse Text</button>
+<button onclick="copyText()">Copy</button>
+<button onclick="clearText()">Clear</button>
+
+<div id="result"></div>
+
+</div>
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online Text Reverser Tool</h2>
+
+<p>
+Our <strong>Text Reverser</strong> is a simple and fast online tool that allows you to reverse any text instantly. 
+When you reverse text, the order of characters is flipped so the last character becomes the first and the first becomes the last. 
+This tool is useful for many situations such as creating fun messages, testing text formatting, solving puzzles, or experimenting with coding and text manipulation.
+</p>
+
+<p>
+Unlike many other online tools, our Text Reverser works directly in your browser. 
+That means your text is never uploaded to a server, making the tool completely private and secure. 
+The tool works instantly on both desktop and mobile devices and requires no installation or registration.
+</p>
+
+<h2>How to Use the Text Reverser</h2>
+
+<p>Using this tool is very simple and takes only a few seconds:</p>
+
+<ul>
+<li>Type or paste the text you want to reverse into the input box.</li>
+<li>Click the <strong>"Reverse Text"</strong> button.</li>
+<li>The reversed version of your text will appear instantly below.</li>
+<li>If you want to reuse the text, click the <strong>Copy</strong> button to copy it to your clipboard.</li>
+<li>You can click <strong>Clear</strong> to start again with new text.</li>
+</ul>
+
+<h2>Features of Our Text Reverser</h2>
+
+<ul>
+<li><strong>Instant Processing:</strong> Reverse text in milliseconds.</li>
+<li><strong>Copy Button:</strong> Copy reversed text with one click.</li>
+<li><strong>Private & Secure:</strong> All processing happens in your browser.</li>
+<li><strong>Mobile Friendly:</strong> Works perfectly on phones, tablets, and computers.</li>
+<li><strong>Unlimited Usage:</strong> Reverse text as many times as you want.</li>
+</ul>
+
+<h2>Common Uses for a Text Reverser</h2>
+
+<p>
+Text reversing may sound simple, but it has many interesting uses. 
+Students sometimes use it for puzzles and word games, while developers use it to test text-processing functions in their applications. 
+Some people also use reversed text to create hidden messages or unique social media posts.
+</p>
+
+<p>
+Another common use is experimenting with palindromes and word patterns. 
+Because the tool works instantly, it makes it easy to test different combinations of words and sentences.
+</p>
+
+<h2>Why Use SuperTools?</h2>
+
+<p>
+At <strong>SuperTools</strong>, we focus on building fast, lightweight, and useful online tools that anyone can use. 
+Our tools are designed to be simple, reliable, and completely free. 
+You don't need to create an account, download software, or share personal information.
+</p>
+
+<p>
+If you need a quick and reliable way to reverse text online, this tool is the perfect solution.
+</p>
+
+</section>
+
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+
+function reverseText(){
+
+let text = document.getElementById("text").value;
+
+if(text===""){
+document.getElementById("result").innerHTML="Please enter text.";
+return;
+}
+
+let reversed = text.split("").reverse().join("");
+
+document.getElementById("result").innerHTML =
+"<textarea id='outputText' style='width:100%;height:200px;margin-top:20px;padding:10px;border-radius:8px;'>"+reversed+"</textarea>";
+
+}
+
+function copyText(){
+
+let copy=document.getElementById("outputText");
+
+if(!copy){
+alert("Nothing to copy yet!");
+return;
+}
+
+copy.select();
+copy.setSelectionRange(0,99999);
+
+navigator.clipboard.writeText(copy.value);
+
+alert("Copied!");
+
+}
+
+function clearText(){
+
+document.getElementById("text").value="";
+document.getElementById("result").innerHTML="";
+
+}
+
+</script>
+
+</body>
+</html>

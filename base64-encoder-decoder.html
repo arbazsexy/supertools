@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Base64 Encoder & Decoder - Encode and Decode Text Online</title>
+
+<meta name="description" content="Free online Base64 Encoder and Decoder. Easily encode text into Base64 or decode Base64 back into readable text instantly.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/base64-encoder-decoder.html">
+
+<link rel="icon" href="logo.png" type="image/png">
+
+<meta property="og:title" content="Base64 Encoder & Decoder - SuperTools">
+<meta property="og:description" content="Encode or decode Base64 text instantly using our free online tool.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/base64-encoder-decoder.html">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"Base64 Encoder Decoder",
+"url":"https://supertools1.site/base64-encoder-decoder.html",
+"applicationCategory":"DeveloperApplication",
+"operatingSystem":"Web",
+"description":"Encode text into Base64 or decode Base64 into readable text instantly using this free online tool.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+"author":{"@type":"Organization","name":"SuperTools","url":"https://supertools1.site"}
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Base64 Encoder / Decoder</h1>
+<p>Encode text into Base64 or decode Base64 back into readable text instantly.</p>
+
+<label>Enter Text or Base64</label>
+<textarea id="text" rows="5" placeholder="Type or paste text here..."></textarea>
+
+<br><br>
+
+<button onclick="encodeBase64()">Encode</button>
+<button onclick="decodeBase64()">Decode</button>
+<button onclick="copyResult()">Copy</button>
+<button onclick="clearText()">Clear</button>
+
+<div id="result"></div>
+
+</div>
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online Base64 Encoder and Decoder</h2>
+
+<p>
+The <strong>Base64 Encoder / Decoder</strong> allows you to convert text into Base64 format 
+or decode Base64 data back into readable text instantly. Base64 encoding is commonly used 
+in web development, data transmission, and security systems.
+</p>
+
+<p>
+This tool works directly in your browser, meaning your data stays private and is never 
+sent to any server.
+</p>
+
+<h2>How to Use the Base64 Tool</h2>
+
+<ul>
+<li>Enter or paste the text you want to encode or decode.</li>
+<li>Click the <strong>Encode</strong> button to convert text to Base64.</li>
+<li>Click the <strong>Decode</strong> button to convert Base64 back to text.</li>
+<li>Use the <strong>Copy</strong> button to copy the result.</li>
+</ul>
+
+<h2>Features of Our Base64 Tool</h2>
+
+<ul>
+<li>Instant encoding and decoding</li>
+<li>Works completely in the browser</li>
+<li>Fast and lightweight</li>
+<li>Mobile and desktop friendly</li>
+<li>Free to use without registration</li>
+</ul>
+
+<h2>What Is Base64 Encoding?</h2>
+
+<p>
+Base64 is a method used to encode binary or text data into a string of ASCII characters. 
+It is commonly used when transferring data over systems that only support text-based formats.
+</p>
+
+<p>
+Base64 encoding is widely used in email systems, APIs, data URLs, and web development 
+to safely transmit information.
+</p>
+
+<h2>Common Uses of Base64</h2>
+
+<ul>
+<li>Embedding images in HTML or CSS</li>
+<li>Data transmission in APIs</li>
+<li>Email attachments encoding</li>
+<li>Storing binary data in text format</li>
+</ul>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+
+function encodeBase64(){
+
+let text = document.getElementById("text").value;
+
+if(text===""){
+document.getElementById("result").innerHTML="Please enter text.";
+return;
+}
+
+let encoded = btoa(text);
+
+document.getElementById("result").innerHTML =
+"<textarea id='output' style='width:100%;height:120px;margin-top:20px;padding:10px;border-radius:8px;'>"+encoded+"</textarea>";
+
+}
+
+function decodeBase64(){
+
+let text = document.getElementById("text").value;
+
+if(text===""){
+document.getElementById("result").innerHTML="Please enter Base64 text.";
+return;
+}
+
+try{
+
+let decoded = atob(text);
+
+document.getElementById("result").innerHTML =
+"<textarea id='output' style='width:100%;height:120px;margin-top:20px;padding:10px;border-radius:8px;'>"+decoded+"</textarea>";
+
+}catch{
+
+document.getElementById("result").innerHTML="Invalid Base64 input.";
+
+}
+
+}
+
+function copyResult(){
+
+let output = document.getElementById("output");
+
+if(!output){
+alert("Nothing to copy yet!");
+return;
+}
+
+output.select();
+output.setSelectionRange(0,99999);
+
+navigator.clipboard.writeText(output.value);
+
+alert("Copied!");
+
+}
+
+function clearText(){
+
+document.getElementById("text").value="";
+document.getElementById("result").innerHTML="";
+
+}
+
+</script>
+
+</body>
+</html>

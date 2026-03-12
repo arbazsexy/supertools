@@ -1,50 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://supertools1.site/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <priority>1.0</priority>
-  </url>
 
-  <url>
-    <loc>https://supertools1.site/about.html</loc>
-    <lastmod>2026-03-10</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://supertools1.site/privacy.html</loc>
-    <lastmod>2026-03-10</lastmod>
-    <priority>0.8</priority>
-  </url>
+<url>
+<loc>https://supertools1.site/</loc>
+<lastmod>2026-03-12</lastmod>
+<priority>1.0</priority>
+</url>
 
-  <url>
-    <loc>https://supertools1.site/agecalculator.html</loc>
-  </url>
-  <url>
-    <loc>https://supertools1.site/bmicalculator.html</loc>
-  </url>
-  <url>
-    <loc>https://supertools1.site/qr.html</loc>
-  </url>
-  <url>
-    <loc>https://supertools1.site/password.html</loc>
-  </url>
-  <url>
-    <loc>https://supertools1.site/percentagecalculator.html</loc>
-  </url>
-  <url>
-    <loc>https://supertools1.site/textconverter.html</loc>
-  </url>
-  <url>
-    <loc>https://supertools1.site/unitconverter.html</loc>
-  </url>
-  <url>
-    <loc>https://supertools1.site/wordcounter.html</loc>
-  </url>
-  <url>
-    <loc>https://supertools1.site/randomnumber.html</loc>
-  </url>
-  <url>
-    <loc>https://supertools1.site/imagecompressor.html</loc>
-  </url>
+<url>
+<loc>https://supertools1.site/about.html</loc>
+<lastmod>2026-03-12</lastmod>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://supertools1.site/privacy.html</loc>
+<lastmod>2026-03-12</lastmod>
+<priority>0.8</priority>
+</url>
+
+<url><loc>https://supertools1.site/qr.html</loc><priority>0.9</priority></url>
+<url><loc>https://supertools1.site/password.html</loc><priority>0.9</priority></url>
+<url><loc>https://supertools1.site/passwordstrength.html</loc></url>
+
+<url><loc>https://supertools1.site/agecalculator.html</loc></url>
+<url><loc>https://supertools1.site/bmicalculator.html</loc></url>
+<url><loc>https://supertools1.site/percentagecalculator.html</loc></url>
+<url><loc>https://supertools1.site/loan-emi-calculator.html</loc></url>
+<url><loc>https://supertools1.site/discount-calculator.html</loc></url>
+
+<url><loc>https://supertools1.site/unitconverter.html</loc></url>
+
+<url><loc>https://supertools1.site/wordcounter.html</loc></url>
+<url><loc>https://supertools1.site/textconverter.html</loc></url>
+<url><loc>https://supertools1.site/textrepeater.html</loc></url>
+<url><loc>https://supertools1.site/textreverser.html</loc></url>
+
+<url><loc>https://supertools1.site/randomnumber.html</loc></url>
+<url><loc>https://supertools1.site/randomnamegenerator.html</loc></url>
+<url><loc>https://supertools1.site/fakeaddressgenerator.html</loc></url>
+<url><loc>https://supertools1.site/uuidgenerator.html</loc></url>
+
+<url><loc>https://supertools1.site/imagecompressor.html</loc></url>
+<url><loc>https://supertools1.site/image-resizer.html</loc></url>
+<url><loc>https://supertools1.site/jpg-to-png.html</loc></url>
+<url><loc>https://supertools1.site/pngtojpg.html</loc></url>
+<url><loc>https://supertools1.site/imagetobase64.html</loc></url>
+
+<url><loc>https://supertools1.site/md5-generator.html</loc></url>
+<url><loc>https://supertools1.site/sha256-generator.html</loc></url>
+
+<url><loc>https://supertools1.site/base64-encoder-decoder.html</loc></url>
+<url><loc>https://supertools1.site/json-formatter.html</loc></url>
+<url><loc>https://supertools1.site/html-minifier.html</loc></url>
+<url><loc>https://supertools1.site/css-minifier.html</loc></url>
+<url><loc>https://supertools1.site/javascript-minifier.html</loc></url>
+
+<url><loc>https://supertools1.site/colorpalettegenerator.html</loc></url>
+
 </urlset>

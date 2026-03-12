@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>JSON Formatter - Format and Beautify JSON Online</title>
+
+<meta name="description" content="Free online JSON Formatter. Beautify, format, and validate JSON instantly. Perfect for developers working with APIs and JSON data.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/json-formatter.html">
+
+<link rel="icon" href="logo.png" type="image/png">
+
+<meta property="og:title" content="JSON Formatter - SuperTools">
+<meta property="og:description" content="Format and beautify JSON instantly using our free online JSON formatter.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/json-formatter.html">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"JSON Formatter",
+"url":"https://supertools1.site/json-formatter.html",
+"applicationCategory":"DeveloperApplication",
+"operatingSystem":"Web",
+"description":"Beautify and format JSON data instantly using this free online JSON formatter tool.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+"author":{"@type":"Organization","name":"SuperTools","url":"https://supertools1.site"}
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>JSON Formatter</h1>
+<p>Format, beautify, and validate JSON data instantly.</p>
+
+<label>Enter JSON</label>
+<textarea id="jsonInput" rows="10" placeholder='Paste JSON here...'></textarea>
+
+<br><br>
+
+<button onclick="formatJSON()">Format JSON</button>
+<button onclick="minifyJSON()">Minify JSON</button>
+<button onclick="copyJSON()">Copy</button>
+<button onclick="clearJSON()">Clear</button>
+
+<div id="result"></div>
+
+</div>
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online JSON Formatter</h2>
+
+<p>
+The <strong>JSON Formatter</strong> allows you to format, beautify, and validate JSON data instantly. 
+JSON (JavaScript Object Notation) is one of the most widely used data formats for APIs, 
+web applications, and data exchange.
+</p>
+
+<p>
+When JSON data is compressed or minified, it becomes difficult to read. This tool converts 
+messy JSON into a clean and well-structured format that is easy to understand.
+</p>
+
+<h2>How to Use the JSON Formatter</h2>
+
+<ul>
+<li>Paste your JSON data into the input box.</li>
+<li>Click the <strong>Format JSON</strong> button to beautify it.</li>
+<li>Use the <strong>Minify JSON</strong> button to compress the JSON.</li>
+<li>Click <strong>Copy</strong> to copy the formatted result.</li>
+</ul>
+
+<h2>Features of Our JSON Tool</h2>
+
+<ul>
+<li>Instant JSON formatting</li>
+<li>JSON validation and error detection</li>
+<li>Minify JSON for compact size</li>
+<li>Works directly in your browser</li>
+<li>Free and easy to use</li>
+</ul>
+
+<h2>What Is JSON?</h2>
+
+<p>
+JSON (JavaScript Object Notation) is a lightweight data format used to store and exchange data 
+between systems. It is widely used in web development, APIs, mobile apps, and databases.
+</p>
+
+<p>
+Because JSON data can become large and difficult to read, formatting tools like this help 
+developers quickly understand and debug their data.
+</p>
+
+<h2>Common Uses of JSON Formatting</h2>
+
+<ul>
+<li>Debugging API responses</li>
+<li>Cleaning up messy JSON data</li>
+<li>Preparing JSON for documentation</li>
+<li>Improving readability for developers</li>
+</ul>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+
+function formatJSON(){
+
+let input=document.getElementById("jsonInput").value;
+
+try{
+
+let parsed=JSON.parse(input);
+let formatted=JSON.stringify(parsed,null,4);
+
+document.getElementById("result").innerHTML=
+"<textarea id='outputJSON' style='width:100%;height:200px;margin-top:20px;padding:10px;border-radius:8px;'>"+formatted+"</textarea>";
+
+}catch{
+
+document.getElementById("result").innerHTML="Invalid JSON format.";
+
+}
+
+}
+
+function minifyJSON(){
+
+let input=document.getElementById("jsonInput").value;
+
+try{
+
+let parsed=JSON.parse(input);
+let minified=JSON.stringify(parsed);
+
+document.getElementById("result").innerHTML=
+"<textarea id='outputJSON' style='width:100%;height:200px;margin-top:20px;padding:10px;border-radius:8px;'>"+minified+"</textarea>";
+
+}catch{
+
+document.getElementById("result").innerHTML="Invalid JSON format.";
+
+}
+
+}
+
+function copyJSON(){
+
+let output=document.getElementById("outputJSON");
+
+if(!output){
+alert("Nothing to copy!");
+return;
+}
+
+output.select();
+output.setSelectionRange(0,99999);
+
+navigator.clipboard.writeText(output.value);
+
+alert("Copied!");
+
+}
+
+function clearJSON(){
+
+document.getElementById("jsonInput").value="";
+document.getElementById("result").innerHTML="";
+
+}
+
+</script>
+
+</body>
+</html>

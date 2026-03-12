@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>MD5 Hash Generator - Create MD5 Hash Online</title>
+
+<meta name="description" content="Free online MD5 Hash Generator. Convert any text into an MD5 hash instantly. Fast, secure, and easy to use.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/md5-generator.html">
+
+<link rel="icon" href="logo.png" type="image/png">
+
+<meta property="og:title" content="MD5 Hash Generator - SuperTools">
+<meta property="og:description" content="Generate MD5 hash instantly using our free online tool.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/md5-generator.html">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"MD5 Hash Generator",
+"url":"https://supertools1.site/md5-generator.html",
+"applicationCategory":"DeveloperApplication",
+"operatingSystem":"Web",
+"description":"Generate MD5 hash from text instantly using this free online MD5 generator.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+"author":{"@type":"Organization","name":"SuperTools","url":"https://supertools1.site"}
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>MD5 Hash Generator</h1>
+<p>Convert any text into an MD5 hash instantly.</p>
+
+<label>Enter text</label>
+<textarea id="text" rows="4" placeholder="Type or paste text here..."></textarea>
+
+<br><br>
+
+<button onclick="generateMD5()">Generate MD5</button>
+<button onclick="copyHash()">Copy</button>
+<button onclick="clearText()">Clear</button>
+
+<div id="result"></div>
+
+</div>
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online MD5 Hash Generator</h2>
+
+<p>
+The <strong>MD5 Hash Generator</strong> allows you to convert any text into an MD5 hash instantly. 
+MD5 stands for Message Digest Algorithm 5 and it is a widely used cryptographic hash function that 
+produces a fixed 32-character hexadecimal string from any input.
+</p>
+
+<p>
+This tool is commonly used by developers, cybersecurity professionals, and system administrators 
+for verifying data integrity and generating unique identifiers for text or files.
+</p>
+
+<h2>How to Use the MD5 Generator</h2>
+
+<ul>
+<li>Enter or paste the text you want to convert into a hash.</li>
+<li>Click the <strong>Generate MD5</strong> button.</li>
+<li>The MD5 hash will appear instantly below.</li>
+<li>You can copy the hash using the <strong>Copy</strong> button.</li>
+</ul>
+
+<h2>Features of Our MD5 Tool</h2>
+
+<ul>
+<li>Instant MD5 hash generation</li>
+<li>Fast and lightweight processing</li>
+<li>Runs directly in your browser</li>
+<li>Works on mobile and desktop devices</li>
+<li>Free to use with no registration required</li>
+</ul>
+
+<h2>What Is an MD5 Hash?</h2>
+
+<p>
+An MD5 hash is a cryptographic fingerprint of data. When text is converted into an MD5 hash, 
+the output is always a fixed-length 32-character hexadecimal string. Even a small change in 
+the original text will create a completely different hash value.
+</p>
+
+<p>
+Because of this property, MD5 is often used to verify whether data has been altered or corrupted.
+</p>
+
+<h2>Common Uses of MD5 Hashes</h2>
+
+<ul>
+<li>Checking file integrity after downloads</li>
+<li>Generating unique identifiers</li>
+<li>Storing hashed passwords</li>
+<li>Data verification in software systems</li>
+</ul>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+<!-- MD5 Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
+
+<script>
+
+function generateMD5(){
+
+let text=document.getElementById("text").value;
+
+if(text===""){
+document.getElementById("result").innerHTML="Please enter text.";
+return;
+}
+
+let hash=md5(text);
+
+document.getElementById("result").innerHTML=
+"<textarea id='outputHash' style='width:100%;height:120px;margin-top:20px;padding:10px;border-radius:8px;'>"+hash+"</textarea>";
+
+}
+
+function copyHash(){
+
+let copy=document.getElementById("outputHash");
+
+if(!copy){
+alert("Nothing to copy yet!");
+return;
+}
+
+copy.select();
+copy.setSelectionRange(0,99999);
+
+navigator.clipboard.writeText(copy.value);
+
+alert("Copied!");
+
+}
+
+function clearText(){
+
+document.getElementById("text").value="";
+document.getElementById("result").innerHTML="";
+
+}
+
+</script>
+
+</body>
+</html>

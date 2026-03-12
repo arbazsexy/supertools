@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Random Name Generator - Generate Random Names Instantly</title>
+
+<meta name="description" content="Free online random name generator. Generate male, female, or random names instantly. Perfect for characters, games, projects, and testing.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/randomnamegenerator.html">
+
+<link rel="icon" href="logo.png">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+textarea{
+width:100%;
+margin-top:20px;
+padding:12px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+border:none;
+background:#2196f3;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1976d2;
+}
+
+select,input{
+padding:10px;
+margin-top:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Random Name Generator</h1>
+
+<p>Generate random male, female, or mixed names instantly.</p>
+
+<label>Number of Names</label>
+<input type="number" id="count" value="5" min="1" max="50">
+
+<br>
+
+<label>Name Type</label>
+
+<select id="type">
+<option value="any">Any</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+
+<br>
+
+<button onclick="generateNames()">Generate Names</button>
+
+<textarea id="result" rows="8" placeholder="Generated names will appear here..."></textarea>
+
+<button onclick="copyNames()">Copy Names</button>
+
+</div>
+
+
+<section style="max-width:800px;margin:40px auto;padding:20px;color:#444;line-height:1.8;border-top:1px solid #ddd;">
+
+<h2>Free Online Random Name Generator</h2>
+
+<p>
+Our <strong>Random Name Generator</strong> is a simple and powerful tool that helps you create random names instantly. 
+Whether you are writing a story, building a game, creating user profiles, or generating sample data for testing, this tool allows you to generate unique names in seconds.
+</p>
+
+<p>
+Instead of spending time thinking of names manually, this generator automatically creates realistic combinations of first names and last names. 
+You can generate male names, female names, or a mix of both depending on your needs.
+</p>
+
+<h2>How to Use the Random Name Generator</h2>
+
+<p>Using the tool is extremely simple:</p>
+
+<ul>
+<li>Choose how many names you want to generate.</li>
+<li>Select the type of names (male, female, or mixed).</li>
+<li>Click the <strong>Generate Names</strong> button.</li>
+<li>The random names will appear instantly.</li>
+<li>You can copy the generated names and use them wherever you need.</li>
+</ul>
+
+<h2>Features of Our Random Name Generator</h2>
+
+<ul>
+<li>Generate random names instantly</li>
+<li>Male and female name options</li>
+<li>Create multiple names at once</li>
+<li>Fast and lightweight generator</li>
+<li>Works on mobile phones, tablets, and desktop computers</li>
+<li>Completely free with unlimited usage</li>
+</ul>
+
+<h2>Why Use a Random Name Generator?</h2>
+
+<p>
+A random name generator is extremely useful for writers, developers, gamers, and creators. 
+Writers often use it to generate character names for novels, scripts, and stories. 
+Game developers use random names for non-player characters, player profiles, and simulations.
+</p>
+
+<p>
+Developers also use name generators to create test data for applications, databases, and software development projects.
+</p>
+
+<h2>Who Uses Random Name Generators?</h2>
+
+<p>
+Random name generators are used by many different types of users including writers, students, teachers, developers, game designers, and content creators. 
+They are helpful whenever you need a quick list of realistic names without spending time brainstorming ideas.
+</p>
+
+<h2>Why Use the SuperTools Random Name Generator?</h2>
+
+<p>
+The SuperTools Random Name Generator is designed to be fast, simple, and accessible from any device. 
+You don’t need to download software or create an account. Just open the page, generate names instantly, and copy them in seconds.
+</p>
+
+<p>
+Because the tool runs directly in your browser, it is lightweight and secure. Your generated names are not stored or tracked, allowing you to use the generator freely whenever you need it.
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+
+<script>
+
+let maleNames=[
+"James","Liam","Noah","Oliver","Elijah","William","Benjamin","Lucas","Henry","Alexander"
+];
+
+let femaleNames=[
+"Emma","Olivia","Ava","Sophia","Isabella","Mia","Charlotte","Amelia","Harper","Evelyn"
+];
+
+let lastNames=[
+"Smith","Johnson","Brown","Taylor","Anderson","Thomas","Jackson","White","Harris","Martin",
+"Thompson","Garcia","Martinez","Robinson","Clark","Lewis","Lee","Walker","Hall","Allen"
+];
+
+function generateNames(){
+
+let count=document.getElementById("count").value;
+let type=document.getElementById("type").value;
+
+let output="";
+
+for(let i=0;i<count;i++){
+
+let first;
+
+if(type==="male"){
+first=maleNames[Math.floor(Math.random()*maleNames.length)];
+}
+
+else if(type==="female"){
+first=femaleNames[Math.floor(Math.random()*femaleNames.length)];
+}
+
+else{
+
+let all=[...maleNames,...femaleNames];
+first=all[Math.floor(Math.random()*all.length)];
+
+}
+
+let last=lastNames[Math.floor(Math.random()*lastNames.length)];
+
+output+=first+" "+last+"\n";
+
+}
+
+document.getElementById("result").value=output;
+
+}
+
+function copyNames(){
+
+let text=document.getElementById("result");
+
+text.select();
+document.execCommand("copy");
+
+alert("Names copied!");
+
+}
+
+</script>
+
+</body>
+</html>
