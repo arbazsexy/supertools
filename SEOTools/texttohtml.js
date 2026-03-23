@@ -146,17 +146,17 @@ function copyResult() {
 }
 
 const tools = [
-    { name: "Meta Tag Generator", url: "metataggenerator.html", icon: "ðŸ·ï¸", category: "seo" },
-    { name: "Open Graph Generator", url: "opengraphgenerator.html", icon: "ðŸ”—", category: "seo" },
-    { name: "Robots.txt Generator", url: "robotstxtgenerator.html", icon: "ðŸ¤–", category: "seo" },
-    { name: "Sitemap Generator", url: "sitemapgenerator.html", icon: "ðŸ—ºï¸", category: "seo" },
-    { name: "URL Slug Generator", url: "urlsluggenerator.html", icon: "âœï¸", category: "seo" },
-    { name: "Schema Generator", url: "schemagenerator.html", icon: "ðŸ“„", category: "seo" },
-    { name: "Keyword Density Checker", url: "keyworddensitychecker.html", icon: "ðŸ“Š", category: "seo" },
-    { name: "Hreflang Generator", url: "hreflanggenerator.html", icon: "ðŸŒ", category: "seo" },
-    { name: "HTML TO Text", url: "htmltotext.html", icon: "ðŸ§¾", category: "seo" },
-    { name: "TEXT TO HTML", url: "texttohtml.html", icon: "ðŸ’»", category: "seo" },
-    { name: "Word Frequency", url: "wordfrequency.html", icon: "ðŸ”¤", category: "seo" }
+    { name: "Meta Tag Generator", url: "metataggenerator.html", icon: "&#127991;&#65039;", category: "seo" },
+    { name: "Open Graph Generator", url: "opengraphgenerator.html", icon: "&#128279;", category: "seo" },
+    { name: "Robots.txt Generator", url: "robotstxtgenerator.html", icon: "&#129302;", category: "seo" },
+    { name: "Sitemap Generator", url: "sitemapgenerator.html", icon: "&#128506;&#65039;", category: "seo" },
+    { name: "URL Slug Generator", url: "urlsluggenerator.html", icon: "&#9997;&#65039;", category: "seo" },
+    { name: "Schema Generator", url: "schemagenerator.html", icon: "&#128196;", category: "seo" },
+    { name: "Keyword Density Checker", url: "keyworddensitychecker.html", icon: "&#128202;", category: "seo" },
+    { name: "Hreflang Generator", url: "hreflanggenerator.html", icon: "&#127757;", category: "seo" },
+    { name: "HTML TO Text", url: "htmltotext.html", icon: "&#129534;", category: "seo" },
+    { name: "TEXT TO HTML", url: "texttohtml.html", icon: "&#128187;", category: "seo" },
+    { name: "Word Frequency", url: "wordfrequency.html", icon: "&#128292;", category: "seo" }
 ];
 
 const currentPage = window.location.pathname.split("/").pop();
@@ -176,3 +176,4 @@ if (relatedToolsContainer) {
         </a>
     `).join("");
 }
+
