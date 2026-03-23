@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Text to Slug Converter Online - SEO Friendly URL Generator | SuperTools</title>
+    <meta name="description" content="Convert text into SEO-friendly slugs instantly. Generate clean URL slugs with hyphens or underscores using this free Text to Slug Converter by SuperTools.">
+    <meta name="keywords" content="text to slug, slug generator, url slug converter, seo slug generator, clean url generator, text to url">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/texttoslug.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Text to Slug Converter - SuperTools">
+    <meta property="og:description" content="Generate clean SEO-friendly URL slugs instantly.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/texttoslug.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Text to Slug Converter - SuperTools">
+    <meta name="twitter:description" content="Generate clean SEO-friendly URL slugs instantly.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Text to Slug Converter",
+      "alternateName": "SEO Slug Generator",
+      "url": "https://supertools1.site/texttoslug.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "description": "Convert text into SEO-friendly slugs instantly. Create clean URL slugs with hyphens or underscores and useful formatting options.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Convert text to SEO-friendly slug",
+        "Use hyphen or underscore separators",
+        "Lowercase slug option",
+        "Remove numbers option",
+        "Trim duplicate separators",
+        "Copy slug instantly",
+        "Download slug as text",
+        "Free and browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a slug?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A slug is the readable part of a URL that identifies a page. It is usually lowercase, short, and separated by hyphens or underscores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool remove special characters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the tool removes special characters and keeps only letters, numbers, and separators based on your options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I choose underscores instead of hyphens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can generate slugs using either hyphens or underscores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I copy or download the slug?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can copy the slug instantly or download it as a TXT file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this tool free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this Text to Slug Converter is completely free to use online."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+     crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Text to Slug Converter</h1>
+    <p>Convert your text into a clean SEO-friendly URL slug instantly.</p>
+    
+    <label for="inputText">Enter your text</label>
+    <input type="text" id="inputText" aria-label="Enter text to convert to slug" placeholder="Type your title here...">
+
+    <label for="separatorType">Choose separator</label>
+    <select id="separatorType" aria-label="Choose separator type">
+        <option value="-">Hyphen (-)</option>
+        <option value="_">Underscore (_)</option>
+    </select>
+
+    <label>
+        <input type="checkbox" id="forceLowercase" checked>
+        Convert to lowercase
+    </label>
+
+    <label>
+        <input type="checkbox" id="removeNumbers">
+        Remove numbers
+    </label>
+
+    <label>
+        <input type="checkbox" id="trimDuplicateSeparators" checked>
+        Remove duplicate separators
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="generateSlug()">
+            <i class="fas fa-link"></i> Generate Slug
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="downloadResult()">
+            <i class="fas fa-download"></i> Download
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Text to Slug Converter</h2>
+    <p>
+        The <strong>Text to Slug Converter</strong> helps you turn normal text into a clean, readable, and SEO-friendly URL slug.
+        It removes unwanted characters, replaces spaces with separators, and makes text ready for URLs.
+    </p>
+    
+    <p>
+        To use the tool, enter your text into the input box and choose whether you want the slug to use
+        <strong>hyphens</strong> or <strong>underscores</strong>. You can also choose to force lowercase output,
+        remove numbers, and trim duplicate separators.
+    </p>
+
+    <p>
+        Once you click <strong>Generate Slug</strong>, the tool instantly creates a clean result that you can copy or download.
+        This is useful for blog URLs, SEO pages, article links, category pages, and many other web use cases.
+    </p>
+
+    <h3>What is a Slug?</h3>
+    <p>
+        A slug is the readable part of a URL that identifies a specific page. A good slug is usually short, simple,
+        lowercase, and separated by hyphens or underscores.
+    </p>
+
+    <p class="formula-box">
+        Hello World Tool → hello-world-tool
+    </p>
+
+    <h3>Why Use This Tool?</h3>
+    <ul>
+        <li><strong>SEO Friendly:</strong> Helps create cleaner and more readable URLs.</li>
+        <li><strong>Fast and Simple:</strong> Just enter text and get instant output.</li>
+        <li><strong>Flexible Formatting:</strong> Use hyphens or underscores as separators.</li>
+        <li><strong>Cleaner Results:</strong> Remove special characters and duplicate separators.</li>
+        <li><strong>Copy and Download:</strong> Save the slug quickly for your project.</li>
+        <li><strong>Private and Free:</strong> Everything works inside your browser.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>bloggers</strong>, <strong>SEO users</strong>, <strong>developers</strong>,
+        <strong>marketers</strong>, <strong>content creators</strong>, and anyone who needs clean URL slugs for web pages.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is a slug?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            A slug is the readable part of a URL that identifies a page. It is usually lowercase, short, and separated by hyphens or underscores.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Does it remove special characters?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. The tool removes special characters and keeps only letters, numbers, and separators based on your selected options.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I use underscores instead of hyphens?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. You can choose either hyphens or underscores for the final slug format.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I copy or download the slug?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. You can copy the generated slug instantly or download it as a TXT file.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This Text to Slug Converter is completely free to use online.
+        </div>
+    </div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="../privacy.html">Privacy Policy</a> | 
+<a href="../about.html">About Us</a> | 
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+const inputText = document.getElementById("inputText");
+const separatorType = document.getElementById("separatorType");
+const forceLowercase = document.getElementById("forceLowercase");
+const removeNumbers = document.getElementById("removeNumbers");
+const trimDuplicateSeparators = document.getElementById("trimDuplicateSeparators");
+const resultBox = document.getElementById("result");
+
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function createSlug(text) {
+    let slug = text.trim();
+
+    if (forceLowercase.checked) {
+        slug = slug.toLowerCase();
+    }
+
+    if (removeNumbers.checked) {
+        slug = slug.replace(/[0-9]/g, "");
+    }
+
+    slug = slug.replace(/[^a-zA-Z0-9\s_-]/g, "");
+    slug = slug.replace(/[\s_-]+/g, separatorType.value);
+
+    if (trimDuplicateSeparators.checked) {
+        const escapedSeparator = separatorType.value === "-" ? "\\-" : "_";
+        const duplicateRegex = new RegExp(`${escapedSeparator}+`, "g");
+        slug = slug.replace(duplicateRegex, separatorType.value);
+    }
+
+    slug = slug.replace(new RegExp(`^\\${separatorType.value}+|\\${separatorType.value}+$`, "g"), "");
+
+    if (forceLowercase.checked) {
+        slug = slug.toLowerCase();
+    }
+
+    return slug;
+}
+
+function generateSlug() {
+    const text = inputText.value;
+
+    if (!text.trim()) {
+        resultBox.innerHTML = `
+            <div class="average-result result-pop">
+                <strong>Please enter some text.</strong>
+            </div>
+        `;
+        return;
+    }
+
+    const slug = createSlug(text);
+
+    resultBox.innerHTML = `
+        <div class="modern-card result-pop">
+            <h3>Generated Slug</h3>
+            <textarea id="outputText" class="code-output result-textarea" rows="4" readonly>${escapeHtml(slug)}</textarea>
+
+            <div class="stats">
+                <div class="stat-box">Input Chars<br>${text.length}</div>
+                <div class="stat-box">Slug Chars<br>${slug.length}</div>
+                <div class="stat-box">Separator<br>${separatorType.value === "-" ? "Hyphen" : "Underscore"}</div>
+                <div class="stat-box">Lowercase<br>${forceLowercase.checked ? "Yes" : "No"}</div>
+            </div>
+
+            <div class="serp-preview">
+                <div class="serp-url">example.com/${escapeHtml(slug)}</div>
+                <div class="serp-title">${escapeHtml(text.trim() || "Example Title")}</div>
+                <div class="serp-description">Preview of how your clean slug may look in a URL structure.</div>
+            </div>
+        </div>
+    `;
+
+    resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+async function copyResult() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No slug to copy.");
+        return;
+    }
+
+    try {
+        await navigator.clipboard.writeText(output.value);
+        alert("Slug copied to clipboard!");
+    } catch (error) {
+        output.select();
+        document.execCommand("copy");
+        alert("Slug copied to clipboard!");
+    }
+}
+
+function clearFields() {
+    inputText.value = "";
+    separatorType.value = "-";
+    forceLowercase.checked = true;
+    removeNumbers.checked = false;
+    trimDuplicateSeparators.checked = true;
+    resultBox.innerHTML = "";
+    inputText.focus();
+}
+
+function loadSample() {
+    inputText.value = "Hello World Tool 2026!";
+    separatorType.value = "-";
+    forceLowercase.checked = true;
+    removeNumbers.checked = false;
+    trimDuplicateSeparators.checked = true;
+    generateSlug();
+}
+
+function downloadResult() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No slug to download.");
+        return;
+    }
+
+    const blob = new Blob([output.value], { type: "text/plain;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "slug.txt";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+}
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
+<script>
+const tools = [
+    { name: "Remove Duplicate Lines", url: "removeduplicatelines.html", icon: "🧹", category: "text" },
+    { name: "Text Sorter", url: "textsorter.html", icon: "🔤", category: "text" },
+    { name: "Remove Line Breaks", url: "removelinebreaks.html", icon: "↩️", category: "text" },
+    { name: "Character Remover", url: "characterremover.html", icon: "✂️", category: "text" },
+    { name: "Add Line Numbers", url: "addlinenumbers.html", icon: "🔢", category: "text" },
+    { name: "Text to ASCII", url: "texttoascii.html", icon: "💻", category: "text" },
+    { name: "Case Alternator", url: "casealternator.html", icon: "🔠", category: "text" },
+    { name: "Text to Slug", url: "texttoslug.html", icon: "🔗", category: "text" },
+    { name: "Loremipsum Generator", url: "loremipsumgenerator.html", icon: "📝", category: "text" },
+    { name: "Random Text Generator", url: "randomtextgenerator.html", icon: "🎲", category: "text" },
+    { name: "Text Converter", url: "textconverter.html", icon: "🔄", category: "text" },
+    { name: "Text Reverser", url: "textreverser.html", icon: "↔️", category: "text" },
+    { name: "Text Repeater", url: "textrepeater.html", icon: "🔁", category: "text" },
+    { name: "Word Counter", url: "wordcounter.html", icon: "📏", category: "text" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

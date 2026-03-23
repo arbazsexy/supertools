@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CSS Minifier Online Free - Minify and Compress CSS Instantly</title>
+    <meta name="description" content="Free online CSS Minifier tool to minify and compress CSS code instantly. Remove comments, spaces, and unnecessary characters to reduce file size and improve website performance.">
+    <meta name="keywords" content="css minifier, minify css online, compress css, css compressor, css optimizer, css code minifier">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/css-minifier.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <meta property="og:title" content="CSS Minifier Online Free - SuperTools">
+    <meta property="og:description" content="Minify and compress CSS code instantly with this free online CSS minifier tool.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/css-minifier.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CSS Minifier Online Free - SuperTools">
+    <meta name="twitter:description" content="Compress CSS code online instantly with this free browser-based CSS minifier.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebApplication",
+      "name":"CSS Minifier",
+      "alternateName":"CSS Compressor",
+      "url":"https://supertools1.site/css-minifier.html",
+      "applicationCategory":"DeveloperApplication",
+      "operatingSystem":"Web",
+      "description":"Free online CSS minifier tool to compress CSS code by removing comments, spaces, and unnecessary characters instantly.",
+      "browserRequirements":"Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers":{
+        "@type":"Offer",
+        "price":"0",
+        "priceCurrency":"USD"
+      },
+      "author":{
+        "@type":"Organization",
+        "name":"SuperTools",
+        "url":"https://supertools1.site"
+      },
+      "publisher":{
+        "@type":"Organization",
+        "name":"SuperTools",
+        "url":"https://supertools1.site",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://supertools1.site/logo.png"
+        }
+      },
+      "featureList":[
+        "Minify CSS instantly",
+        "Remove CSS comments",
+        "Compress spaces and line breaks",
+        "Show original and minified size",
+        "Show percentage reduction",
+        "Copy minified CSS",
+        "Download minified CSS",
+        "Browser-based and free"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"What does a CSS minifier do?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"A CSS minifier removes unnecessary spaces, comments, and formatting from CSS code to reduce file size while keeping the code functional."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Will minifying CSS change how my styles work?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"A proper CSS minifier only removes unnecessary characters and formatting. It should keep your CSS working the same while making the file smaller."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Does this tool store my CSS code?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"No. This CSS minifier works directly in your browser, so your code is not uploaded or stored on a server."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Can I copy and download the minified CSS?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Yes. This tool lets you copy the minified CSS instantly and also download it as a .css file."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Is this CSS minifier free?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Yes, this online CSS minifier is completely free to use."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>CSS Minifier</h1>
+    <p>Compress and minify CSS code instantly to reduce file size and improve website performance.</p>
+
+    <label for="cssInput">Enter CSS Code</label>
+    <textarea id="cssInput" rows="10" aria-label="Enter CSS code" placeholder="Paste your CSS code here..."></textarea>
+
+    <div class="button-group">
+        <button type="button" onclick="minifyCSS()">
+            <i class="fas fa-compress-alt"></i> Minify CSS
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSampleCSS()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyCSS()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+
+        <button type="button" class="action-btn" onclick="downloadCSS()">
+            <i class="fas fa-download"></i> Download
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearCSS()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>Free Online CSS Minifier</h2>
+
+    <p>
+        The <strong>CSS Minifier</strong> is a free online tool that helps you compress CSS code by removing unnecessary spaces,
+        comments, tabs, and line breaks. This reduces the file size of your stylesheets and can help improve website loading speed.
+    </p>
+
+    <p>
+        Minified CSS is commonly used in production websites because smaller files can load faster and use less bandwidth.
+        This tool works directly in your browser, so your CSS is processed locally without being uploaded to a server.
+    </p>
+
+    <h3>How to Use the CSS Minifier</h3>
+    <ul>
+        <li>Paste your CSS code into the input box.</li>
+        <li>Click <strong>Minify CSS</strong> to compress the code instantly.</li>
+        <li>Review the original size, minified size, and reduction percentage.</li>
+        <li>Use <strong>Copy</strong> to copy the minified code or <strong>Download</strong> to save it as a file.</li>
+    </ul>
+
+    <h3>Features of This Tool</h3>
+    <ul>
+        <li>Instant CSS minification</li>
+        <li>Removes comments and unnecessary whitespace</li>
+        <li>Shows original and minified file sizes</li>
+        <li>Shows percentage reduction</li>
+        <li>Copy and download options</li>
+        <li>Fast, private, and browser-based</li>
+        <li>Free to use on desktop and mobile</li>
+    </ul>
+
+    <h3>Why Minify CSS?</h3>
+    <p>
+        Minifying CSS helps reduce stylesheet size by removing characters that are not needed for the browser to read the code.
+        This can improve page speed, reduce bandwidth usage, and help optimize websites for production.
+    </p>
+
+    <p>
+        Developers often keep a readable version for editing and use a minified version for deployment. This tool makes that process quick and easy.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What does a CSS minifier do?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            A <strong>CSS minifier</strong> removes unnecessary spaces, comments, tabs, and formatting from CSS code while keeping it functional.
+            This makes the file smaller and more efficient for production use.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Will minifying CSS break my code?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            A proper minifier should not change how your CSS behaves. It only removes extra characters that are not required for the browser to interpret the code.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Does this CSS minifier store my code?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. This tool works directly in your browser, so your CSS code is processed locally and is not uploaded or stored on any server.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I download the minified CSS?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. After minifying your CSS, you can download the result as a <strong>.css</strong> file using the download button.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this CSS minifier free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. The tool is completely free to use with no registration required.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = btn.classList.contains("active");
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            const otherContent = otherBtn.nextElementSibling;
+            if (otherContent) {
+                otherContent.style.maxHeight = null;
+                otherContent.classList.remove("open");
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.classList.add("open");
+            requestAnimationFrame(() => {
+                content.style.maxHeight = content.scrollHeight + 30 + "px";
+            });
+        }
+    });
+});
+
+const cssInput = document.getElementById("cssInput");
+const result = document.getElementById("result");
+
+function formatBytes(bytes) {
+    return `${bytes.toLocaleString()} bytes`;
+}
+
+function safeReduction(original, minified) {
+    if (original <= 0) return "0.00";
+    return (((original - minified) / original) * 100).toFixed(2);
+}
+
+function minifyCssString(input) {
+    return input
+        .replace(/\/\*[\s\S]*?\*\//g, "")
+        .replace(/\s+/g, " ")
+        .replace(/\s*([{}:;,>+~])\s*/g, "$1")
+        .replace(/;}/g, "}")
+        .replace(/\s*!important/g, "!important")
+        .trim();
+}
+
+function renderResult(original, minified, originalSize, minifiedSize, reduction) {
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="status-message">CSS minified successfully.</div>
+
+            <div class="stats">
+                <div class="stat-box">Original Size<br><span>${formatBytes(originalSize)}</span></div>
+                <div class="stat-box">Minified Size<br><span>${formatBytes(minifiedSize)}</span></div>
+                <div class="stat-box">Reduction<br><span>${reduction}%</span></div>
+                <div class="stat-box">Characters Saved<br><span>${(originalSize - minifiedSize).toLocaleString()}</span></div>
+            </div>
+
+            <label for="outputCSS"><strong>Minified CSS</strong></label>
+            <textarea id="outputCSS" class="result-textarea" rows="10" readonly>${minified}</textarea>
+
+            <div class="comparison-note">
+                Your CSS was compressed by removing comments, extra spaces, and unnecessary formatting characters.
+            </div>
+        </div>
+    `;
+}
+
+function showError(message) {
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="status-message" style="color:#d63031;">${message}</div>
+        </div>
+    `;
+}
+
+function minifyCSS() {
+    const input = cssInput.value;
+
+    if (!input.trim()) {
+        showError("Please enter CSS code.");
+        return;
+    }
+
+    const originalSize = new Blob([input]).size;
+    const minified = minifyCssString(input);
+    const minifiedSize = new Blob([minified]).size;
+    const reduction = safeReduction(originalSize, minifiedSize);
+
+    renderResult(input, minified, originalSize, minifiedSize, reduction);
+}
+
+function copyCSS() {
+    const output = document.getElementById("outputCSS");
+
+    if (!output || !output.value.trim()) {
+        alert("Nothing to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(output.value)
+        .then(() => alert("Minified CSS copied!"))
+        .catch(() => alert("Failed to copy."));
+}
+
+function downloadCSS() {
+    const output = document.getElementById("outputCSS");
+
+    if (!output || !output.value.trim()) {
+        alert("No minified CSS to download.");
+        return;
+    }
+
+    const blob = new Blob([output.value], { type: "text/css;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "minified.css";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+function clearCSS() {
+    cssInput.value = "";
+    result.innerHTML = "";
+    cssInput.focus();
+}
+
+function loadSampleCSS() {
+    cssInput.value = `/* Sample CSS */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f8fafd;
+    color: #2d3436;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.btn-primary {
+    background: #4facfe;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+}`;
+    minifyCSS();
+}
+
+const tools = [
+    { name: "JSON Formatter", url: "json-formatter.html", icon: "🧩", category: "developer" },
+    { name: "Colourcode Converter", url: "colourcodeconverter.html", icon: "🎨", category: "developer" },
+    { name: "CSS Minifier", url: "css-minifier.html", icon: "🧵", category: "developer" },
+    { name: "CSV to Json", url: "csv-to-json.html", icon: "📊", category: "developer" },
+    { name: "Htaccess Generator", url: "htaccessgenerator.html", icon: "⚙️", category: "developer" },
+    { name: "Javascript Minifier", url: "javascript-minifier.html", icon: "⚡", category: "developer" },
+    { name: "Json to CSV", url: "json-to-csv.html", icon: "🔁", category: "developer" },
+    { name: "Regex Tester", url: "regextester.html", icon: "🔍", category: "developer" },
+    { name: "Timestamp Converter", url: "timestampconverter.html", icon: "⏱️", category: "developer" },
+    { name: "Base64 Encoder Decoder", url: "base64-encoder-decoder.html", icon: "🔐", category: "developer" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const relatedContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedContainer) {
+    relatedContainer.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

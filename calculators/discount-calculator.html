@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Discount Calculator Online - Calculate Sale Price & Savings | SuperTools</title>
+<meta name="description" content="Free online discount calculator to calculate sale price, discount amount, and total savings instantly. Perfect for shopping, sales offers, and price comparisons.">
+<meta name="keywords" content="discount calculator, sale price calculator, percentage discount calculator, price after discount, savings calculator">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/discount-calculator.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="Discount Calculator - SuperTools">
+<meta property="og:description" content="Calculate discounts, final prices, and total savings instantly with our free online discount calculator.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/discount-calculator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Discount Calculator - SuperTools">
+<meta name="twitter:description" content="Calculate discounts, final prices, and total savings instantly with our free online discount calculator.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Discount Calculator",
+  "alternateName": "Sale Price Calculator",
+  "url": "https://supertools1.site/discount-calculator.html",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "description": "Free online discount calculator to calculate discount amount, final sale price, and money saved instantly.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Discount amount calculation",
+    "Final price calculation",
+    "Savings breakdown",
+    "Works for shopping and sale price checks",
+    "Free browser-based tool"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does this discount calculator do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This discount calculator helps you calculate the discount amount, the final sale price after discount, and how much money you save based on the original price and discount percentage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate a discount percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To calculate a discount, multiply the original price by the discount percentage and divide by 100. Then subtract that amount from the original price to get the final price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this calculator for shopping sales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this tool is perfect for shopping sales, online deals, store offers, and comparing discounts before buying a product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator show both savings and final price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it shows both the amount you save and the final discounted price so you can understand the full effect of the discount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this discount calculator free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this discount calculator is completely free and works instantly in your browser without registration."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Discount Calculator</h1>
+    <p>Calculate the final price after a discount and find out exactly how much money you save.</p>
+
+    <label for="price">Original Price</label>
+    <input type="number" id="price" placeholder="e.g. 1500" min="0" step="0.01">
+
+    <label for="discount">Discount Percentage (%)</label>
+    <input type="number" id="discount" placeholder="e.g. 25" min="0" max="100" step="0.01">
+
+    <div class="button-group">
+        <button type="button" onclick="calculateDiscount()">
+            <i class="fas fa-tags"></i> Calculate
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSampleDiscount()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>Free Online Discount Calculator</h2>
+
+    <p>
+        The <strong>Discount Calculator</strong> helps you quickly calculate the final price of a product after a discount. Whether you are shopping online, checking sale offers in stores, or comparing multiple deals, this tool helps you understand exactly how much you will pay and how much money you save.
+    </p>
+
+    <p>
+        Many discounts are shown as percentages such as 10%, 25%, 40%, or even 70% off. While these offers may sound attractive, it is not always easy to calculate the real final price instantly in your head. This calculator removes the guesswork and gives you a fast and accurate answer in seconds.
+    </p>
+
+    <p>
+        Simply enter the original price and the discount percentage, then click the calculate button. The tool will instantly show the <strong>discount amount</strong> and the <strong>final sale price</strong>. This makes it useful for shopping, budgeting, sale comparisons, and everyday spending decisions.
+    </p>
+
+    <h3>How to Use the Discount Calculator</h3>
+    <ul>
+        <li>Enter the original price of the product or service.</li>
+        <li>Enter the discount percentage you want to apply.</li>
+        <li>Click the <strong>Calculate</strong> button.</li>
+        <li>View the amount saved and the final discounted price instantly.</li>
+    </ul>
+
+    <h3>Features of Our Discount Tool</h3>
+    <ul>
+        <li><strong>Instant Calculation:</strong> Get results immediately without manual math.</li>
+        <li><strong>Shows Savings:</strong> See exactly how much money you save.</li>
+        <li><strong>Shows Final Price:</strong> Know the final amount you will pay after discount.</li>
+        <li><strong>Simple and Clear:</strong> Easy to use on both desktop and mobile devices.</li>
+        <li><strong>Free to Use:</strong> No sign-up or registration required.</li>
+        <li><strong>Helpful for Shopping:</strong> Great for sale events, offers, and price comparisons.</li>
+    </ul>
+
+    <h3>Why Use a Discount Calculator?</h3>
+
+    <p>
+        When stores advertise deals like “30% off” or “Buy now at 50% discount,” it can be hard to know whether the deal is actually worth it. A discount calculator helps you make smarter buying decisions by showing the real discounted value instead of forcing you to estimate mentally.
+    </p>
+
+    <p>
+        This tool is useful for shoppers, students, business owners, and anyone who wants to calculate sale prices quickly and accurately. It saves time, reduces confusion, and helps you compare offers more effectively.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            What does this discount calculator do?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This discount calculator helps you find the discount amount, the final price after discount, and the total money saved. It is useful for shopping, sale offers, and comparing product prices quickly.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            How do I calculate a discount percentage?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            To calculate a discount, multiply the original price by the discount percentage and divide by 100. That gives the discount amount. Then subtract that amount from the original price to get the final sale price.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Can I use this for shopping sales?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tool is perfect for shopping sales, online store offers, supermarket discounts, festival deals, and any situation where you want to know the final amount after a percentage discount.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Does it show both savings and final price?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, the calculator shows both values clearly. You can see how much money you save and what final amount you need to pay after the discount is applied.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Is this discount calculator free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this discount calculator is completely free to use and works instantly in your browser without any registration.
+        </div>
+    </div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="../privacy.html">Privacy Policy</a> | 
+<a href="../about.html">About Us</a> | 
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function showResult(html) {
+    const resultBox = document.getElementById("result");
+    resultBox.innerHTML = html;
+
+    setTimeout(() => {
+        const yOffset = -100;
+        const y = resultBox.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+    }, 50);
+}
+
+function calculateDiscount() {
+    const price = parseFloat(document.getElementById("price").value);
+    const discount = parseFloat(document.getElementById("discount").value);
+
+    if (isNaN(price) || isNaN(discount) || price < 0 || discount < 0 || discount > 100) {
+        showResult("<div class='average-result result-pop'>Please enter a valid original price and a discount percentage between 0 and 100.</div>");
+        return;
+    }
+
+    const discountAmount = (price * discount) / 100;
+    const finalPrice = price - discountAmount;
+
+    showResult(`
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Original Price<br>${price.toFixed(2)}</div>
+                <div class="stat-box">Discount<br>${discount}%</div>
+                <div class="stat-box">You Save<br>${discountAmount.toFixed(2)}</div>
+                <div class="stat-box">Final Price<br>${finalPrice.toFixed(2)}</div>
+            </div>
+        </div>
+    `);
+}
+
+function clearFields() {
+    document.getElementById("price").value = "";
+    document.getElementById("discount").value = "";
+    document.getElementById("result").innerHTML = "";
+}
+
+function loadSampleDiscount() {
+    document.getElementById("price").value = "1500";
+    document.getElementById("discount").value = "25";
+    calculateDiscount();
+}
+
+function copyResult() {
+    const resultText = document.getElementById("result").innerText.trim();
+
+    if (!resultText) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(resultText)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

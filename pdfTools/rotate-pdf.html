@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rotate PDF Online Free - Rotate PDF Pages Instantly | SuperTools</title>
+    <meta name="description" content="Free online Rotate PDF tool to rotate PDF pages by 90, 180, or 270 degrees instantly. Rotate all pages, odd pages, even pages, or custom page ranges directly in your browser with SuperTools.">
+    <meta name="keywords" content="rotate pdf, rotate pdf online, pdf rotator, rotate pdf pages, rotate specific pages pdf, free pdf rotate tool">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/rotate-pdf.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rotate PDF Online Free - SuperTools">
+    <meta property="og:description" content="Rotate PDF pages by 90, 180, or 270 degrees instantly with this free online PDF rotator.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/rotate-pdf.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rotate PDF Online Free - SuperTools">
+    <meta name="twitter:description" content="Rotate PDF pages by 90, 180, or 270 degrees instantly with this free online PDF rotator.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Rotate PDF",
+      "alternateName": "PDF Rotator",
+      "url": "https://supertools1.site/rotate-pdf.html",
+      "description": "Free online Rotate PDF tool to rotate PDF pages by 90, 180, or 270 degrees. Rotate all pages or selected page ranges directly in your browser.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Rotate PDF pages online",
+        "Rotate PDF by 90 degrees",
+        "Rotate PDF by 180 degrees",
+        "Rotate PDF by 270 degrees",
+        "Rotate all pages",
+        "Rotate odd or even pages",
+        "Rotate custom page ranges",
+        "Supports multiple PDF files",
+        "Runs locally in browser",
+        "Free and secure"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I rotate a PDF online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Upload one or more PDF files, choose the rotation angle, select which pages you want to rotate, and click the Rotate PDF button. Then download the rotated PDF files instantly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I rotate only specific pages in a PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can rotate all pages, odd pages, even pages, or enter a custom page range like 1,3,5-8."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this Rotate PDF tool free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this Rotate PDF tool is completely free to use online."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my PDF files uploaded to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, the PDF rotation process runs directly in your browser, which helps keep your files private."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I rotate multiple PDFs at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool supports multiple PDF files, so you can rotate several PDF documents in one go."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Rotate PDF</h1>
+    <p>Upload one or multiple PDF files and rotate all pages or selected pages instantly.</p>
+
+    <label for="pdfUpload">Select PDF files</label>
+    <input type="file" id="pdfUpload" multiple accept="application/pdf">
+
+    <label for="rotation">Select rotation angle</label>
+    <select id="rotation" aria-label="Select rotation angle">
+        <option value="90">Rotate 90°</option>
+        <option value="180">Rotate 180°</option>
+        <option value="270">Rotate 270°</option>
+    </select>
+
+    <label for="applyPages">Rotate which pages</label>
+    <select id="applyPages" aria-label="Choose which pages to rotate" onchange="toggleCustomPages()">
+        <option value="all">All Pages</option>
+        <option value="odd">Odd Pages</option>
+        <option value="even">Even Pages</option>
+        <option value="custom">Custom Pages</option>
+    </select>
+
+    <label for="customPages">Custom page range</label>
+    <input type="text" id="customPages" placeholder="e.g. 1,3,5-8" aria-label="Enter custom page range">
+
+    <div class="button-group">
+        <button type="button" onclick="rotatePDF()">
+            <i class="fas fa-sync-alt"></i> Rotate PDF
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+    </div>
+
+    <div id="loading" style="display:none; margin-top:15px;">Rotating PDF files...</div>
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Rotate PDF Tool</h2>
+
+    <p>
+        The <strong>Rotate PDF</strong> tool helps you quickly change the orientation of PDF pages online.
+        It is useful when scanned pages appear sideways, upside down, or when you need to fix document alignment before sharing or printing.
+    </p>
+
+    <p>
+        To use this tool, upload one or more PDF files using the file input above. Then select the rotation angle you want to apply:
+        <strong>90°</strong>, <strong>180°</strong>, or <strong>270°</strong>. After that, choose whether you want to rotate
+        <strong>all pages</strong>, only <strong>odd pages</strong>, only <strong>even pages</strong>, or a
+        <strong>custom page range</strong>.
+    </p>
+
+    <p>
+        If you choose custom pages, you can enter values like <strong>1,3,5-8</strong> to rotate only those pages.
+        Once everything is ready, click the <strong>Rotate PDF</strong> button. The tool will process your file directly in your browser
+        and generate downloadable rotated PDF files instantly.
+    </p>
+
+    <h3>Why Use This Rotate PDF Tool?</h3>
+    <ul>
+        <li><strong>Rotate PDF Instantly:</strong> Rotate pages in seconds without extra software.</li>
+        <li><strong>Flexible Control:</strong> Rotate all pages, odd pages, even pages, or custom ranges.</li>
+        <li><strong>Multiple File Support:</strong> Upload and rotate more than one PDF at once.</li>
+        <li><strong>Privacy Friendly:</strong> Files stay on your device while processing.</li>
+        <li><strong>Beginner Friendly:</strong> Simple options and easy controls.</li>
+        <li><strong>Free to Use:</strong> No sign-up and no subscription needed.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>students</strong>, <strong>teachers</strong>, <strong>office workers</strong>,
+        <strong>freelancers</strong>, <strong>business users</strong>, and anyone who needs to fix or adjust PDF page orientation quickly.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: How do I rotate a PDF online?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Upload one or more PDF files, choose the rotation angle, select which pages you want to rotate, and click
+            <strong>Rotate PDF</strong>. Then download the rotated PDF files instantly.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I rotate only specific pages?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can rotate all pages, only odd pages, only even pages, or use a custom page range like 1,3,5-8.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Is this Rotate PDF tool free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this Rotate PDF tool is completely free to use online.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Are my PDF files uploaded anywhere?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. The PDF rotation process runs directly in your browser, so your files remain on your device during processing.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Can I rotate multiple PDFs at once?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tool supports multiple PDF files, so you can rotate several documents in one go.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function toggleCustomPages() {
+    const applyPages = document.getElementById("applyPages").value;
+    const customPages = document.getElementById("customPages");
+
+    if (!customPages) return;
+
+    customPages.disabled = applyPages !== "custom";
+
+    if (applyPages !== "custom") {
+        customPages.value = "";
+    }
+}
+
+function loadSample() {
+    document.getElementById("rotation").value = "90";
+    document.getElementById("applyPages").value = "custom";
+    document.getElementById("customPages").value = "1,3,5-8";
+    toggleCustomPages();
+}
+
+function clearFields() {
+    document.getElementById("pdfUpload").value = "";
+    document.getElementById("rotation").value = "90";
+    document.getElementById("applyPages").value = "all";
+    document.getElementById("customPages").value = "";
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("result").innerHTML = "";
+    toggleCustomPages();
+}
+
+function safeFileName(name) {
+    return name.replace(/\.pdf$/i, "").replace(/[^a-zA-Z0-9._-]/g, "-");
+}
+
+function formatBytes(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB";
+    return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+}
+
+function parseCustomPages(input, totalPages) {
+    const selectedPages = new Set();
+    const cleaned = input.replace(/\s+/g, "");
+
+    if (!cleaned) {
+        return [];
+    }
+
+    const parts = cleaned.split(",");
+
+    for (let i = 0; i < parts.length; i++) {
+        const part = parts[i];
+
+        if (!part) continue;
+
+        if (part.includes("-")) {
+            const rangeParts = part.split("-");
+            const start = parseInt(rangeParts[0], 10);
+            const end = parseInt(rangeParts[1], 10);
+
+            if (isNaN(start) || isNaN(end) || start < 1 || end < 1 || start > totalPages || end > totalPages || start > end) {
+                return null;
+            }
+
+            for (let page = start; page <= end; page++) {
+                selectedPages.add(page);
+            }
+        } else {
+            const pageNum = parseInt(part, 10);
+
+            if (isNaN(pageNum) || pageNum < 1 || pageNum > totalPages) {
+                return null;
+            }
+
+            selectedPages.add(pageNum);
+        }
+    }
+
+    return Array.from(selectedPages).sort((a, b) => a - b);
+}
+
+function shouldRotatePage(pageNumber, applyMode, customList) {
+    if (applyMode === "all") return true;
+    if (applyMode === "odd") return pageNumber % 2 === 1;
+    if (applyMode === "even") return pageNumber % 2 === 0;
+    if (applyMode === "custom") return customList.includes(pageNumber);
+    return true;
+}
+
+async function rotatePDF() {
+    const files = document.getElementById("pdfUpload").files;
+    const angle = parseInt(document.getElementById("rotation").value, 10);
+    const applyPages = document.getElementById("applyPages").value;
+    const customPagesText = document.getElementById("customPages").value.trim();
+
+    const loading = document.getElementById("loading");
+    const result = document.getElementById("result");
+
+    result.innerHTML = "";
+
+    if (!files.length) {
+        result.innerHTML = "<div class='result-box'>Please upload PDF files first.</div>";
+        return;
+    }
+
+    loading.style.display = "block";
+
+    try {
+        let outputHtml = "";
+
+        for (const file of files) {
+            const arrayBuffer = await file.arrayBuffer();
+            const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
+            const pages = pdfDoc.getPages();
+            const totalPages = pages.length;
+
+            let customPageList = [];
+
+            if (applyPages === "custom") {
+                customPageList = parseCustomPages(customPagesText, totalPages);
+
+                if (!customPageList || customPageList.length === 0) {
+                    loading.style.display = "none";
+                    result.innerHTML = "<div class='result-box'>Please enter a valid custom page range like 1,3,5-8.</div>";
+                    return;
+                }
+            }
+
+            let rotatedCount = 0;
+
+            pages.forEach((page, index) => {
+                const pageNumber = index + 1;
+
+                if (!shouldRotatePage(pageNumber, applyPages, customPageList)) {
+                    return;
+                }
+
+                const currentRotation = page.getRotation().angle || 0;
+                page.setRotation(PDFLib.degrees((currentRotation + angle) % 360));
+                rotatedCount++;
+            });
+
+            const pdfBytes = await pdfDoc.save();
+            const blob = new Blob([pdfBytes], { type: "application/pdf" });
+            const url = URL.createObjectURL(blob);
+
+            outputHtml += `
+                <div class="result-box" style="margin-top:15px; text-align:left;">
+                    <p><strong>${file.name}</strong></p>
+                    <p>Total Pages: ${totalPages}</p>
+                    <p>Rotated Pages: ${rotatedCount}</p>
+                    <p>Final File Size: ${formatBytes(blob.size)}</p>
+                    <a href="${url}" download="${safeFileName(file.name)}-rotated.pdf">
+                        <button type="button"><i class="fas fa-download"></i> Download Rotated PDF</button>
+                    </a>
+                </div>
+            `;
+        }
+
+        result.innerHTML = outputHtml;
+    } catch (error) {
+        console.error(error);
+        result.innerHTML = "<div class='result-box'>Could not process one or more PDF files. Please try valid PDF documents.</div>";
+    }
+
+    loading.style.display = "none";
+}
+
+toggleCustomPages();
+</script>
+
+<script>
+const tools = [
+    { name: "Add Watermark to PDF", url: "add-watermark-pdf.html", icon: "🖋️", category: "pdf" },
+    { name: "Merge PDF", url: "merge-pdf.html", icon: "📎", category: "pdf" },
+    { name: "Split PDF", url: "split-pdf.html", icon: "✂️", category: "pdf" },
+    { name: "Rotate PDF", url: "rotate-pdf.html", icon: "🔄", category: "pdf" },
+    { name: "Compress PDF", url: "compress-pdf.html", icon: "🗜️", category: "pdf" },
+    { name: "Unlock PDF", url: "unlock-pdf.html", icon: "🔓", category: "pdf" },
+];
+// detect current page
+const currentPage = window.location.pathname.split("/").pop();
+
+// filter related tools
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

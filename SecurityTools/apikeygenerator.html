@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>API Key Generator Online - Generate Secure Random API Keys | SuperTools</title>
+    <meta name="description" content="Free online API key generator to create secure random API keys instantly. Generate hex, alphanumeric, Base64, Base64URL, UUID, and custom keys with prefix, suffix, grouping, and bulk export.">
+    <meta name="keywords" content="api key generator, secure api key generator, random api key generator, base64 api key, uuid generator, hex key generator, authentication key generator">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/apikeygenerator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="API Key Generator Online - SuperTools">
+    <meta property="og:description" content="Generate secure random API keys instantly in hex, Base64, Base64URL, UUID, and alphanumeric formats.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/apikeygenerator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="API Key Generator Online - SuperTools">
+    <meta name="twitter:description" content="Generate secure random API keys instantly in multiple formats with prefix, suffix, grouping, and export options.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "API Key Generator",
+      "url": "https://supertools1.site/apikeygenerator.html",
+      "description": "Free online API key generator to create secure random API keys in hex, Base64, Base64URL, UUID, and alphanumeric formats instantly.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Generate secure API keys online",
+        "Supports hex, alphanumeric, Base64, Base64URL, UUID, and custom charset",
+        "Bulk key generation",
+        "Optional prefix and suffix",
+        "Group characters with separator",
+        "Exclude ambiguous characters",
+        "Copy individual keys",
+        "Copy all keys",
+        "Download TXT and CSV files",
+        "Browser-based generation using crypto.getRandomValues"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this API key generator secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. This tool uses the browser's built-in cryptographic random generator to create strong random values locally in your browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What formats are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This API key generator supports hex, alphanumeric, Base64, Base64URL, UUID, and custom character sets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add a prefix or suffix to my API keys?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can add a custom prefix such as sk_ or api_ and a suffix if needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I generate multiple API keys at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can generate many API keys in one click by selecting the number of keys you want."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my generated keys uploaded anywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All key generation happens in your browser, which helps keep your generated keys private."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>API Key Generator</h1>
+    <p>Generate secure random API keys instantly for authentication, integrations, apps, and developer workflows.</p>
+
+    <label for="length">Key Length</label>
+    <input type="number" id="length" value="32" min="4" max="256" aria-label="Key length">
+
+    <label for="count">Number of Keys</label>
+    <input type="number" id="count" value="5" min="1" max="200" aria-label="Number of keys">
+
+    <label for="type">Key Format</label>
+    <select id="type" aria-label="Key format">
+        <option value="hex">Hex</option>
+        <option value="alphanumeric" selected>Alphanumeric</option>
+        <option value="base64">Base64</option>
+        <option value="base64url">Base64URL</option>
+        <option value="uuid">UUID</option>
+        <option value="custom">Custom Charset</option>
+    </select>
+
+    <label for="prefix">Key Prefix (optional)</label>
+    <input type="text" id="prefix" placeholder="e.g. sk_ or api_" aria-label="Key prefix">
+
+    <label for="suffix">Key Suffix (optional)</label>
+    <input type="text" id="suffix" placeholder="e.g. _prod" aria-label="Key suffix">
+
+    <label for="groupSize">Group Every N Characters (optional)</label>
+    <input type="number" id="groupSize" value="0" min="0" max="32" aria-label="Group characters">
+
+    <label for="separator">Separator</label>
+    <input type="text" id="separator" value="-" maxlength="3" aria-label="Separator">
+
+    <label for="customCharset">Custom Charset (used only for Custom Charset format)</label>
+    <textarea id="customCharset" rows="4" aria-label="Custom charset" placeholder="Example: ABCDEFGHJKLMNPQRSTUVWXYZ23456789"></textarea>
+
+    <label>
+        <input type="checkbox" id="excludeAmbiguous">
+        Exclude ambiguous characters (0 O o 1 l I)
+    </label>
+
+    <label>
+        <input type="checkbox" id="includeLowercase" checked>
+        Include lowercase letters
+    </label>
+
+    <label>
+        <input type="checkbox" id="includeUppercase" checked>
+        Include uppercase letters
+    </label>
+
+    <label>
+        <input type="checkbox" id="includeNumbers" checked>
+        Include numbers
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="generateKeys()">
+            <i class="fas fa-key"></i> Generate API Keys
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyAll()">
+            <i class="fas fa-copy"></i> Copy All
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="downloadKeys('txt')">
+            <i class="fas fa-download"></i> Download TXT
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="downloadKeys('csv')">
+            <i class="fas fa-file-csv"></i> Download CSV
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the API Key Generator</h2>
+
+    <p>
+        The <strong>API Key Generator</strong> helps you create strong random keys directly in your browser. It is useful for
+        developers, app owners, testers, and anyone who needs secure keys for <strong>authentication</strong>,
+        <strong>API access</strong>, <strong>services</strong>, and <strong>internal tools</strong>.
+    </p>
+
+    <p>
+        To use the tool, choose the <strong>key length</strong>, set how many keys you want to create, and select a
+        <strong>format</strong> such as hex, alphanumeric, Base64, Base64URL, UUID, or a custom character set.
+        You can also add a <strong>prefix</strong> like <strong>sk_</strong> or <strong>api_</strong>, include a suffix,
+        and split the key into groups for better readability.
+    </p>
+
+    <p>
+        This tool uses the browser’s <strong>cryptographically secure random generator</strong>, which means the keys are
+        produced locally on your device instead of being generated with weak random logic. That makes it a practical option
+        for generating tokens, secret-like identifiers, testing keys, and temporary credentials.
+    </p>
+
+    <h3>What Can This Tool Generate?</h3>
+    <ul>
+        <li><strong>Hex keys</strong> for tokens and secret strings</li>
+        <li><strong>Alphanumeric keys</strong> for apps and services</li>
+        <li><strong>Base64 and Base64URL keys</strong> for web-safe use cases</li>
+        <li><strong>UUID keys</strong> for unique identifiers</li>
+        <li><strong>Custom charset keys</strong> for specific formatting needs</li>
+        <li><strong>Bulk key generation</strong> for teams and testing</li>
+    </ul>
+
+    <h3>Why Use This API Key Generator?</h3>
+    <ul>
+        <li><strong>Secure Generation:</strong> Uses browser crypto for strong randomness.</li>
+        <li><strong>Multiple Formats:</strong> Supports the most useful key styles.</li>
+        <li><strong>Customizable:</strong> Add prefix, suffix, separators, and grouping.</li>
+        <li><strong>Bulk Output:</strong> Generate many keys in one click.</li>
+        <li><strong>Export Ready:</strong> Copy all keys or download TXT and CSV files.</li>
+        <li><strong>Privacy Friendly:</strong> Everything runs in your browser.</li>
+        <li><strong>Free to Use:</strong> No signup or installation needed.</li>
+    </ul>
+
+    <h3>Important Note</h3>
+    <p>
+        While this tool generates strong random keys, production secrets should always be stored securely using trusted
+        secret management practices. Never expose live private keys in frontend code, public repositories, or screenshots.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: Is this API key generator secure?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This tool uses the browser’s <strong>cryptographically secure random generator</strong> to create keys.
+            That is much better than simple random functions for generating secure identifiers and tokens.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: What formats can I generate?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            You can generate <strong>hex</strong>, <strong>alphanumeric</strong>, <strong>Base64</strong>,
+            <strong>Base64URL</strong>, <strong>UUID</strong>, and <strong>custom charset</strong> API keys.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I generate multiple API keys at once?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. Just set the <strong>Number of Keys</strong> field and the tool will generate all of them instantly.
+            This is useful for testing, staging environments, or creating multiple credentials quickly.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: What is Base64URL and how is it different from Base64?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            <strong>Base64URL</strong> is a URL-safe version of Base64. It replaces characters like <strong>+</strong>
+            and <strong>/</strong> with safer alternatives, making it more convenient for URLs, JWT-related values,
+            and web-based systems.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Are the generated API keys stored anywhere?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. The keys are generated directly in your browser, and this tool does not need to upload them anywhere
+            for generation. That helps keep your keys private on your device.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+let keyList = [];
+
+function escapeHtml(str) {
+    return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+}
+
+function getRandomInt(max) {
+    const array = new Uint32Array(1);
+    crypto.getRandomValues(array);
+    return array[0] % max;
+}
+
+function buildAlphaCharset() {
+    const includeLowercase = document.getElementById("includeLowercase").checked;
+    const includeUppercase = document.getElementById("includeUppercase").checked;
+    const includeNumbers = document.getElementById("includeNumbers").checked;
+    const excludeAmbiguous = document.getElementById("excludeAmbiguous").checked;
+
+    let charset = "";
+
+    if (includeLowercase) charset += "abcdefghijklmnopqrstuvwxyz";
+    if (includeUppercase) charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    if (includeNumbers) charset += "0123456789";
+
+    if (excludeAmbiguous) {
+        charset = charset.replace(/[0Oo1lI]/g, "");
+    }
+
+    return charset;
+}
+
+function generateFromCharset(length, charset) {
+    if (!charset || charset.length === 0) return "";
+    let output = "";
+    for (let i = 0; i < length; i++) {
+        output += charset[getRandomInt(charset.length)];
+    }
+    return output;
+}
+
+function randomHex(length) {
+    const byteLength = Math.ceil(length / 2);
+    const bytes = new Uint8Array(byteLength);
+    crypto.getRandomValues(bytes);
+    return Array.from(bytes, b => b.toString(16).padStart(2, "0")).join("").slice(0, length);
+}
+
+function randomBase64(length, urlSafe = false) {
+    const bytes = new Uint8Array(Math.ceil((length * 3) / 4) + 8);
+    crypto.getRandomValues(bytes);
+
+    let binary = "";
+    bytes.forEach(byte => {
+        binary += String.fromCharCode(byte);
+    });
+
+    let encoded = btoa(binary);
+
+    if (urlSafe) {
+        encoded = encoded.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
+    }
+
+    return encoded.slice(0, length);
+}
+
+function groupKey(key, groupSize, separator) {
+    if (!groupSize || groupSize <= 0) return key;
+    const parts = [];
+    for (let i = 0; i < key.length; i += groupSize) {
+        parts.push(key.slice(i, i + groupSize));
+    }
+    return parts.join(separator || "-");
+}
+
+function estimateEntropy(format, length, charsetLength) {
+    if (format === "uuid") return 122;
+
+    const base = charsetLength > 1 ? Math.log2(charsetLength) : 0;
+    return Math.round(length * base);
+}
+
+function getStrengthLabel(entropy) {
+    if (entropy >= 128) return "Very Strong";
+    if (entropy >= 96) return "Strong";
+    if (entropy >= 64) return "Good";
+    if (entropy >= 40) return "Moderate";
+    return "Weak";
+}
+
+function generateSingleKey(type, length) {
+    const prefix = document.getElementById("prefix").value || "";
+    const suffix = document.getElementById("suffix").value || "";
+    const groupSize = parseInt(document.getElementById("groupSize").value, 10) || 0;
+    const separator = document.getElementById("separator").value || "-";
+    const customCharsetInput = document.getElementById("customCharset").value.trim();
+
+    let rawKey = "";
+    let charsetLength = 0;
+
+    if (type === "hex") {
+        rawKey = randomHex(length);
+        charsetLength = 16;
+    } else if (type === "base64") {
+        rawKey = randomBase64(length, false);
+        charsetLength = 64;
+    } else if (type === "base64url") {
+        rawKey = randomBase64(length, true);
+        charsetLength = 64;
+    } else if (type === "uuid") {
+        rawKey = crypto.randomUUID();
+        charsetLength = 16;
+    } else if (type === "custom") {
+        let charset = customCharsetInput;
+        if (document.getElementById("excludeAmbiguous").checked) {
+            charset = charset.replace(/[0Oo1lI]/g, "");
+        }
+        rawKey = generateFromCharset(length, charset);
+        charsetLength = charset.length;
+    } else {
+        const charset = buildAlphaCharset();
+        rawKey = generateFromCharset(length, charset);
+        charsetLength = charset.length;
+    }
+
+    if (type !== "uuid") {
+        rawKey = groupKey(rawKey, groupSize, separator);
+    }
+
+    const finalKey = prefix + rawKey + suffix;
+    const entropy = estimateEntropy(type, type === "uuid" ? 1 : length, charsetLength);
+
+    return {
+        key: finalKey,
+        entropy,
+        strength: getStrengthLabel(entropy)
+    };
+}
+
+function generateKeys() {
+    const length = parseInt(document.getElementById("length").value, 10);
+    const count = parseInt(document.getElementById("count").value, 10);
+    const type = document.getElementById("type").value;
+    const result = document.getElementById("result");
+
+    if (!length || length < 4 || length > 256) {
+        result.innerHTML = "<div class='average-result'>Please enter a valid key length between 4 and 256.</div>";
+        return;
+    }
+
+    if (!count || count < 1 || count > 200) {
+        result.innerHTML = "<div class='average-result'>Please enter a valid number of keys between 1 and 200.</div>";
+        return;
+    }
+
+    if (type === "custom") {
+        const customCharset = document.getElementById("customCharset").value.trim();
+        if (!customCharset || customCharset.length < 2) {
+            result.innerHTML = "<div class='average-result'>Please enter a custom charset with at least 2 unique characters.</div>";
+            return;
+        }
+    }
+
+    if (type === "alphanumeric") {
+        const charset = buildAlphaCharset();
+        if (!charset || charset.length < 2) {
+            result.innerHTML = "<div class='average-result'>Please keep at least one character group enabled for alphanumeric keys.</div>";
+            return;
+        }
+    }
+
+    keyList = [];
+
+    for (let i = 0; i < count; i++) {
+        keyList.push(generateSingleKey(type, length));
+    }
+
+    const firstEntropy = keyList[0]?.entropy || 0;
+    const firstStrength = keyList[0]?.strength || "Unknown";
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Keys Generated<br><span>${count}</span></div>
+                <div class="stat-box">Format<br><span>${escapeHtml(type.toUpperCase())}</span></div>
+                <div class="stat-box">Length<br><span>${length}</span></div>
+                <div class="stat-box">Strength<br><span>${escapeHtml(firstStrength)}</span></div>
+                <div class="stat-box">Entropy<br><span>${firstEntropy} bits</span></div>
+                <div class="stat-box">Prefix Used<br><span>${document.getElementById("prefix").value ? "Yes" : "No"}</span></div>
+            </div>
+
+            <hr>
+
+            <div><strong>Generated Keys:</strong></div>
+            <div class="subject-list">
+                ${keyList.map((item, index) => `
+                    <div class="modern-card">
+                        <p class="binary-output"><strong>Key ${index + 1}:</strong><br>${escapeHtml(item.key)}</p>
+                        <p class="generator-meta">Strength: ${escapeHtml(item.strength)} • Estimated Entropy: ${item.entropy} bits</p>
+                        <button type="button" class="action-btn copy-btn" data-key="${escapeHtml(item.key)}">
+                            <i class="fas fa-copy"></i> Copy This Key
+                        </button>
+                    </div>
+                `).join("")}
+            </div>
+
+            <div class="comparison-note">
+                These keys are generated locally in your browser using secure random values. For production use, store secrets safely and avoid exposing them in frontend code.
+            </div>
+        </div>
+    `;
+
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+document.addEventListener("click", function (e) {
+    const button = e.target.closest("[data-key]");
+    if (!button) return;
+
+    const key = button.getAttribute("data-key");
+    navigator.clipboard.writeText(key)
+        .then(() => alert("API key copied to clipboard!"))
+        .catch(() => alert("Failed to copy API key."));
+});
+
+function copyAll() {
+    const result = document.getElementById("result");
+
+    if (!keyList.length) {
+        result.innerHTML = "<div class='average-result'>No API keys to copy. Generate keys first.</div>";
+        return;
+    }
+
+    const text = keyList.map(item => item.key).join("\n");
+    navigator.clipboard.writeText(text)
+        .then(() => alert("All API keys copied to clipboard!"))
+        .catch(() => alert("Failed to copy API keys."));
+}
+
+function downloadKeys(format) {
+    const result = document.getElementById("result");
+
+    if (!keyList.length) {
+        result.innerHTML = "<div class='average-result'>No API keys to download. Generate keys first.</div>";
+        return;
+    }
+
+    let content = "";
+    let filename = "";
+    let mimeType = "";
+
+    if (format === "csv") {
+        content = "No,Key,Strength,Entropy Bits\n" + keyList.map((item, index) =>
+            `${index + 1},"${item.key.replace(/"/g, '""')}",${item.strength},${item.entropy}`
+        ).join("\n");
+        filename = "api-keys.csv";
+        mimeType = "text/csv";
+    } else {
+        content = keyList.map(item => item.key).join("\n");
+        filename = "api-keys.txt";
+        mimeType = "text/plain";
+    }
+
+    const blob = new Blob([content], { type: mimeType });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(a.href);
+}
+
+function clearFields() {
+    document.getElementById("length").value = "32";
+    document.getElementById("count").value = "5";
+    document.getElementById("type").value = "alphanumeric";
+    document.getElementById("prefix").value = "";
+    document.getElementById("suffix").value = "";
+    document.getElementById("groupSize").value = "0";
+    document.getElementById("separator").value = "-";
+    document.getElementById("customCharset").value = "";
+    document.getElementById("excludeAmbiguous").checked = false;
+    document.getElementById("includeLowercase").checked = true;
+    document.getElementById("includeUppercase").checked = true;
+    document.getElementById("includeNumbers").checked = true;
+    document.getElementById("result").innerHTML = "";
+    keyList = [];
+}
+
+function loadSample() {
+    document.getElementById("length").value = "40";
+    document.getElementById("count").value = "6";
+    document.getElementById("type").value = "base64url";
+    document.getElementById("prefix").value = "sk_";
+    document.getElementById("suffix").value = "";
+    document.getElementById("groupSize").value = "5";
+    document.getElementById("separator").value = "-";
+    document.getElementById("customCharset").value = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    document.getElementById("excludeAmbiguous").checked = true;
+    document.getElementById("includeLowercase").checked = true;
+    document.getElementById("includeUppercase").checked = true;
+    document.getElementById("includeNumbers").checked = true;
+    generateKeys();
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Password Strength Checker", url: "passwordstrengthchecker.html", icon: "🛡️", category: "security" },
+    { name: "Hash Identifier", url: "hashidentifier.html", icon: "🔢", category: "security" },
+    { name: "JWT Tool", url: "jwttool.html", icon: "🪪", category: "security" },
+    { name: "API Key Generator", url: "apikeygenerator.html", icon: "🔑", category: "security" },
+    { name: "Bcrypt Generator", url: "bcryptgenerator.html", icon: "🔐", category: "security" },
+    { name: "Encryption Tool", url: "encryptiontool.html", icon: "🧩", category: "security" },
+    { name: "Password List Generator", url: "passwordlistgenerator.html", icon: "📜", category: "security" },
+    { name: "Random Token Generator", url: "randomtokengenerator.html", icon: "🎲", category: "security" },
+    { name: "SHA1 Generator", url: "sha1generator.html", icon: "#️⃣", category: "security" },
+    { name: "SHA256 Generator", url: "sha256-generator.html", icon: "🔒", category: "security" }
+];
+
+// detect current page
+const currentPage = window.location.pathname.split("/").pop();
+
+// filter related tools
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

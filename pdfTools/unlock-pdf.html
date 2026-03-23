@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Unlock PDF Online Free - Remove PDF Password Instantly | SuperTools</title>
+    <meta name="description" content="Free online Unlock PDF tool to remove password protection from PDF files instantly. Enter the correct password, unlock your PDF securely in your browser, and download the unlocked file with SuperTools.">
+    <meta name="keywords" content="unlock pdf, remove pdf password, pdf unlocker, unlock protected pdf, remove pdf restrictions, free pdf unlock tool">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/unlock-pdf.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Unlock PDF Online Free - SuperTools">
+    <meta property="og:description" content="Remove password protection and unlock PDF files instantly online with SuperTools.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/unlock-pdf.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Unlock PDF Online Free - SuperTools">
+    <meta name="twitter:description" content="Remove password protection and unlock PDF files instantly online with SuperTools.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Unlock PDF",
+      "alternateName": "PDF Unlocker",
+      "url": "https://supertools1.site/unlock-pdf.html",
+      "description": "Free online tool to unlock password-protected PDF files. Enter the correct password and download the unlocked PDF instantly.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Unlock password-protected PDF",
+        "Enter PDF password",
+        "Remove PDF protection",
+        "Download unlocked PDF",
+        "Show or hide password",
+        "Runs locally in browser",
+        "Free and secure"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I unlock a PDF online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Upload your protected PDF file, enter the correct password, and click the Unlock PDF button. After processing, download the unlocked PDF instantly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need the correct password to unlock a PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you need the correct password for password-protected PDF files."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this Unlock PDF tool free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this Unlock PDF tool is completely free to use online."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my PDF files uploaded to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, the PDF unlocking process runs directly in your browser, which helps keep your files private."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this tool unlock all PDF restrictions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool works for PDFs that can be opened with the correct password and then saved again without protection in the browser workflow."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Unlock PDF</h1>
+    <p>Upload a protected PDF file, enter the password, and remove PDF protection instantly.</p>
+
+    <label for="pdfUpload">Select PDF file</label>
+    <input type="file" id="pdfUpload" accept="application/pdf" onchange="showPdfInfo()">
+
+    <label for="pdfPassword">PDF password</label>
+    <input type="password" id="pdfPassword" placeholder="Enter password if PDF is locked" aria-label="Enter PDF password">
+
+    <label>
+        <input type="checkbox" id="showPassword" onchange="togglePassword()">
+        Show password
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="unlockPDF()">
+            <i class="fas fa-unlock"></i> Unlock PDF
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+    </div>
+
+    <div id="loading" style="display:none; margin-top:15px;">Unlocking PDF...</div>
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Unlock PDF Tool</h2>
+
+    <p>
+        The <strong>Unlock PDF</strong> tool helps you remove password protection from PDF files when you know the correct password.
+        It is useful when you want easier access to a PDF for printing, sharing, editing, or saving an unlocked copy for your own use.
+    </p>
+
+    <p>
+        To use this tool, upload the protected PDF file using the file input above. Then enter the correct PDF password in the password field.
+        After that, click the <strong>Unlock PDF</strong> button. The tool will try to open the protected PDF and generate a new downloadable unlocked PDF file.
+    </p>
+
+    <p>
+        This process runs directly in your browser, which helps keep your file private. If the password is correct and the PDF can be processed,
+        you will be able to download the unlocked version instantly.
+    </p>
+
+    <h3>Why Use This Unlock PDF Tool?</h3>
+    <ul>
+        <li><strong>Quick Unlocking:</strong> Remove PDF password protection in a few clicks.</li>
+        <li><strong>Simple Workflow:</strong> Upload, enter password, and download.</li>
+        <li><strong>Privacy Friendly:</strong> Processing runs locally in your browser.</li>
+        <li><strong>Show Password Option:</strong> Check the password before unlocking.</li>
+        <li><strong>Beginner Friendly:</strong> Clean and easy layout.</li>
+        <li><strong>Free to Use:</strong> No login and no subscription required.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>students</strong>, <strong>teachers</strong>, <strong>office workers</strong>,
+        <strong>freelancers</strong>, <strong>business users</strong>, and anyone who needs to open and save a PDF without password prompts after entering the correct password.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: How do I unlock a PDF online?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Upload your protected PDF file, enter the correct password, and click <strong>Unlock PDF</strong>.
+            After processing, download the unlocked PDF file instantly.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Do I need the correct password?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you need the correct password for password-protected PDF files.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Is this Unlock PDF tool free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this Unlock PDF tool is completely free to use online.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Are my files uploaded anywhere?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. The PDF unlocking process runs directly in your browser, so your file remains on your device during processing.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: What happens if the password is wrong?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            The tool will show an error message and will not create an unlocked PDF until the correct password is entered.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function safeFileName(name) {
+    return name.replace(/\.pdf$/i, "").replace(/[^a-zA-Z0-9._-]/g, "-");
+}
+
+function formatBytes(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB";
+    return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+}
+
+function togglePassword() {
+    const passwordInput = document.getElementById("pdfPassword");
+    const showPassword = document.getElementById("showPassword").checked;
+    passwordInput.type = showPassword ? "text" : "password";
+}
+
+function loadSample() {
+    document.getElementById("pdfPassword").value = "example-password";
+    document.getElementById("showPassword").checked = false;
+    togglePassword();
+}
+
+function clearFields() {
+    document.getElementById("pdfUpload").value = "";
+    document.getElementById("pdfPassword").value = "";
+    document.getElementById("showPassword").checked = false;
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("result").innerHTML = "";
+    togglePassword();
+}
+
+async function showPdfInfo() {
+    const fileInput = document.getElementById("pdfUpload");
+    const result = document.getElementById("result");
+
+    if (!fileInput.files.length) return;
+
+    const file = fileInput.files[0];
+
+    result.innerHTML = `
+        <div class="average-result">
+            <div class="stats">
+                <div class="stat-box">File Name<br>${file.name}</div>
+                <div class="stat-box">File Size<br>${formatBytes(file.size)}</div>
+            </div>
+        </div>
+    `;
+}
+
+async function unlockPDF() {
+    const file = document.getElementById("pdfUpload").files[0];
+    const password = document.getElementById("pdfPassword").value;
+    const loading = document.getElementById("loading");
+    const result = document.getElementById("result");
+
+    result.innerHTML = "";
+
+    if (!file) {
+        result.innerHTML = "<div class='result-box'>Please upload a PDF file first.</div>";
+        return;
+    }
+
+    if (file.type !== "application/pdf") {
+        result.innerHTML = "<div class='result-box'>Please upload a valid PDF file.</div>";
+        return;
+    }
+
+    loading.style.display = "block";
+
+    try {
+        const arrayBuffer = await file.arrayBuffer();
+
+        const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer, {
+            password: password || undefined
+        });
+
+        const pdfBytes = await pdfDoc.save();
+        const blob = new Blob([pdfBytes], { type: "application/pdf" });
+        const url = URL.createObjectURL(blob);
+
+        result.innerHTML = `
+            <div class="result-box">
+                <p><strong>PDF unlocked successfully.</strong></p>
+                <p>Original File: ${file.name}</p>
+                <p>Unlocked File Size: ${formatBytes(blob.size)}</p>
+                <a href="${url}" download="${safeFileName(file.name)}-unlocked.pdf">
+                    <button type="button"><i class="fas fa-download"></i> Download Unlocked PDF</button>
+                </a>
+            </div>
+        `;
+    } catch (error) {
+        console.error(error);
+        result.innerHTML = "<div class='result-box'>Could not unlock this PDF. Please check the password and make sure the file is a valid protected PDF.</div>";
+    }
+
+    loading.style.display = "none";
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Add Watermark to PDF", url: "add-watermark-pdf.html", icon: "🖋️", category: "pdf" },
+    { name: "Merge PDF", url: "merge-pdf.html", icon: "📎", category: "pdf" },
+    { name: "Split PDF", url: "split-pdf.html", icon: "✂️", category: "pdf" },
+    { name: "Rotate PDF", url: "rotate-pdf.html", icon: "🔄", category: "pdf" },
+    { name: "Compress PDF", url: "compress-pdf.html", icon: "🗜️", category: "pdf" },
+    { name: "Unlock PDF", url: "unlock-pdf.html", icon: "🔓", category: "pdf" },
+];
+
+// detect current page
+const currentPage = window.location.pathname.split("/").pop();
+
+// filter related tools
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

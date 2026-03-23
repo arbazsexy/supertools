@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Online Text Case Converter - Uppercase, Lowercase & Sentence Case | SuperTools</title>
+    <meta name="description" content="Quickly convert text to uppercase, lowercase, sentence case, title case, alternating case, inverse case, camelCase, snake_case, and kebab-case. Free online text formatter by SuperTools.">
+    <meta name="keywords" content="text case converter, uppercase converter, lowercase converter, sentence case converter, title case converter, camelCase converter, snake_case converter, kebab-case converter">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/textconverter.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Instant Text Case Converter - SuperTools">
+    <meta property="og:description" content="Easily change text case to uppercase, lowercase, sentence case, title case, camelCase, snake_case, kebab-case, and more with this free online tool.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/textconverter.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Instant Text Case Converter - SuperTools">
+    <meta name="twitter:description" content="Easily change text case to uppercase, lowercase, sentence case, title case, camelCase, snake_case, kebab-case, and more with this free online tool.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+     crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Text Case Converter",
+      "alternateName": "Text Converter",
+      "url": "https://supertools1.site/textconverter.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "description": "A browser-based utility to change text capitalization styles instantly, including uppercase, lowercase, sentence case, title case, alternating case, inverse case, camelCase, snake_case, and kebab-case.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Convert text to uppercase",
+        "Convert text to lowercase",
+        "Convert text to title case",
+        "Convert text to sentence case",
+        "Convert text to alternating case",
+        "Convert text to inverse case",
+        "Convert text to camelCase",
+        "Convert text to snake_case",
+        "Convert text to kebab-case",
+        "Live word and character count",
+        "Copy converted text",
+        "Download converted text",
+        "Free and browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What case formats does this tool support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool supports uppercase, lowercase, title case, sentence case, alternating case, inverse case, camelCase, snake_case, and kebab-case."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool show word and character counts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the tool shows live word count, character count, line count, and sentence count."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I copy or download the converted text?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can copy the converted text instantly or download it as a TXT file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the text uploaded anywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, the conversion happens directly in your browser, so your text is not uploaded for processing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this Text Case Converter free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this Text Case Converter is completely free to use online."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Text Case Converter</h1>
+    <p>Convert your text into multiple case formats instantly with live stats and quick actions.</p>
+
+    <label for="text">Enter your text</label>
+    <textarea id="text" rows="10" placeholder="Type or paste your text here..." oninput="updateStats()"></textarea>
+
+    <div class="stats">
+        <div class="stat-box">Words<br><span id="wordCount">0</span></div>
+        <div class="stat-box">Characters<br><span id="charCount">0</span></div>
+        <div class="stat-box">Lines<br><span id="lineCount">0</span></div>
+        <div class="stat-box">Sentences<br><span id="sentenceCount">0</span></div>
+    </div>
+
+    <div class="button-group">
+        <button type="button" onclick="toUpper()">
+            <i class="fas fa-arrow-up-a-z"></i> UPPERCASE
+        </button>
+
+        <button type="button" class="action-btn" onclick="toLower()">
+            <i class="fas fa-arrow-down-a-z"></i> lowercase
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="toCapital()">
+            <i class="fas fa-heading"></i> Capitalize Words
+        </button>
+
+        <button type="button" class="action-btn" onclick="sentenceCase()">
+            <i class="fas fa-font"></i> Sentence case
+        </button>
+
+        <button type="button" class="action-btn" onclick="alternatingCase()">
+            <i class="fas fa-wave-square"></i> aLtErNaTiNg
+        </button>
+
+        <button type="button" class="action-btn" onclick="inverseCase()">
+            <i class="fas fa-right-left"></i> Inverse Case
+        </button>
+
+        <button type="button" class="action-btn" onclick="toCamelCase()">
+            <i class="fas fa-code"></i> camelCase
+        </button>
+
+        <button type="button" class="action-btn" onclick="toSnakeCase()">
+            <i class="fas fa-underline"></i> snake_case
+        </button>
+
+        <button type="button" class="action-btn" onclick="toKebabCase()">
+            <i class="fas fa-minus"></i> kebab-case
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyText()">
+            <i class="fas fa-copy"></i> Copy Result
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearText()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="downloadText()">
+            <i class="fas fa-download"></i> Download
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Case Converter</h2>
+    <p>
+        The <strong>Text Case Converter</strong> helps you quickly change text into different capitalization and formatting styles.
+        It is useful for editing titles, social posts, metadata, article headings, code-friendly text, labels, notes, and formatted content.
+    </p>
+
+    <p>
+        Paste or type your text into the input box and click the format you want. You can convert text into
+        <strong>UPPERCASE</strong>, <strong>lowercase</strong>, <strong>Capitalize Words</strong>, <strong>Sentence case</strong>,
+        <strong>aLtErNaTiNg case</strong>, <strong>Inverse Case</strong>, <strong>camelCase</strong>, <strong>snake_case</strong>,
+        or <strong>kebab-case</strong>.
+    </p>
+
+    <p>
+        The tool also gives you live stats including words, characters, lines, and sentences. After conversion,
+        you can copy the result instantly or download it as a text file.
+    </p>
+
+    <h3>Formatting Options Explained</h3>
+    <ul>
+        <li><strong>UPPERCASE:</strong> Converts all letters to capital letters.</li>
+        <li><strong>lowercase:</strong> Converts all letters to small letters.</li>
+        <li><strong>Capitalize Words:</strong> Capitalizes the first letter of each word.</li>
+        <li><strong>Sentence case:</strong> Capitalizes the first letter of each sentence.</li>
+        <li><strong>Alternating Case:</strong> Creates a mixed-case pattern used for playful text.</li>
+        <li><strong>Inverse Case:</strong> Switches uppercase to lowercase and lowercase to uppercase.</li>
+        <li><strong>camelCase:</strong> Removes spaces and capitalizes each word after the first.</li>
+        <li><strong>snake_case:</strong> Converts text into lowercase words joined with underscores.</li>
+        <li><strong>kebab-case:</strong> Converts text into lowercase words joined with hyphens.</li>
+    </ul>
+
+    <h3>Why Word and Character Counts Matter</h3>
+    <p>
+        Character and word limits matter for social media, SEO snippets, titles, descriptions, and forms.
+        This tool helps you format text while also tracking how long it is.
+    </p>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is helpful for <strong>students</strong>, <strong>writers</strong>, <strong>marketers</strong>,
+        <strong>SEO users</strong>, <strong>developers</strong>, and <strong>social media users</strong>.
+        It is ideal whenever you need quick text formatting without manual editing.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What case formats does this tool support?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This tool supports uppercase, lowercase, title case, sentence case, alternating case, inverse case,
+            camelCase, snake_case, and kebab-case.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Does this tool show word and character counts?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. The tool shows live word count, character count, line count, and sentence count while you type or edit text.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I copy or download the converted text?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. You can copy the converted text instantly or download it as a TXT file.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Is the text uploaded anywhere?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. Everything runs directly in your browser, so your text is processed locally.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This Text Case Converter is completely free to use online.
+        </div>
+    </div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="../privacy.html">Privacy Policy</a> | 
+<a href="../about.html">About Us</a> | 
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+const textArea = document.getElementById("text");
+const resultBox = document.getElementById("result");
+
+function updateStats() {
+    const text = textArea.value;
+    document.getElementById("charCount").innerText = text.length;
+
+    const words = text.trim() ? text.trim().split(/\s+/).filter(Boolean) : [];
+    document.getElementById("wordCount").innerText = words.length;
+
+    const lines = text === "" ? 0 : text.split("\n").length;
+    document.getElementById("lineCount").innerText = lines;
+
+    const sentenceMatches = text.match(/[^.!?]+[.!?]+/g);
+    document.getElementById("sentenceCount").innerText = sentenceMatches ? sentenceMatches.length : (text.trim() ? 1 : 0);
+}
+
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function showResult(mode) {
+    resultBox.innerHTML = `
+        <div class="modern-card result-pop">
+            <h3>Converted Text</h3>
+            <textarea id="outputText" class="code-output result-textarea" rows="10" readonly>${escapeHtml(textArea.value)}</textarea>
+            <div class="generator-meta">Current mode: ${mode}</div>
+        </div>
+    `;
+}
+
+function getWordsForCase(text) {
+    return text
+        .trim()
+        .replace(/[_\-]+/g, " ")
+        .replace(/[^\w\s]+/g, " ")
+        .split(/\s+/)
+        .filter(Boolean);
+}
+
+function toUpper() {
+    textArea.value = textArea.value.toUpperCase();
+    updateStats();
+    showResult("UPPERCASE");
+}
+
+function toLower() {
+    textArea.value = textArea.value.toLowerCase();
+    updateStats();
+    showResult("lowercase");
+}
+
+function toCapital() {
+    textArea.value = textArea.value.toLowerCase().replace(/\b\w/g, l => l.toUpperCase());
+    updateStats();
+    showResult("Capitalize Words");
+}
+
+function sentenceCase() {
+    textArea.value = textArea.value
+        .toLowerCase()
+        .replace(/(^\s*\w|[.!?]\s*\w)/g, c => c.toUpperCase());
+    updateStats();
+    showResult("Sentence case");
+}
+
+function alternatingCase() {
+    const val = textArea.value;
+    let res = "";
+    let toggle = true;
+
+    for (let i = 0; i < val.length; i++) {
+        if (/[a-z]/i.test(val[i])) {
+            res += toggle ? val[i].toUpperCase() : val[i].toLowerCase();
+            toggle = !toggle;
+        } else {
+            res += val[i];
+        }
+    }
+
+    textArea.value = res;
+    updateStats();
+    showResult("Alternating Case");
+}
+
+function inverseCase() {
+    const val = textArea.value;
+    let res = "";
+
+    for (let i = 0; i < val.length; i++) {
+        const ch = val[i];
+        if (ch >= "a" && ch <= "z") {
+            res += ch.toUpperCase();
+        } else if (ch >= "A" && ch <= "Z") {
+            res += ch.toLowerCase();
+        } else {
+            res += ch;
+        }
+    }
+
+    textArea.value = res;
+    updateStats();
+    showResult("Inverse Case");
+}
+
+function toCamelCase() {
+    const words = getWordsForCase(textArea.value.toLowerCase());
+    if (!words.length) return;
+
+    textArea.value = words[0] + words.slice(1).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join("");
+    updateStats();
+    showResult("camelCase");
+}
+
+function toSnakeCase() {
+    const words = getWordsForCase(textArea.value.toLowerCase());
+    textArea.value = words.join("_");
+    updateStats();
+    showResult("snake_case");
+}
+
+function toKebabCase() {
+    const words = getWordsForCase(textArea.value.toLowerCase());
+    textArea.value = words.join("-");
+    updateStats();
+    showResult("kebab-case");
+}
+
+async function copyText() {
+    const text = textArea.value;
+    if (!text) {
+        alert("No text to copy.");
+        return;
+    }
+
+    try {
+        await navigator.clipboard.writeText(text);
+        alert("Result copied to clipboard!");
+    } catch (error) {
+        textArea.select();
+        document.execCommand("copy");
+        alert("Result copied to clipboard!");
+    }
+}
+
+function clearText() {
+    textArea.value = "";
+    resultBox.innerHTML = "";
+    updateStats();
+    textArea.focus();
+}
+
+function loadSample() {
+    textArea.value = "hello world. this is a sample text for the text case converter.";
+    updateStats();
+    showResult("Sample Loaded");
+}
+
+function downloadText() {
+    const text = textArea.value;
+    if (!text) {
+        alert("No text to download.");
+        return;
+    }
+
+    const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "converted-text.txt";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+}
+
+updateStats();
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
+<script>
+const tools = [
+    { name: "Remove Duplicate Lines", url: "removeduplicatelines.html", icon: "🧹", category: "text" },
+    { name: "Text Sorter", url: "textsorter.html", icon: "🔤", category: "text" },
+    { name: "Remove Line Breaks", url: "removelinebreaks.html", icon: "↩️", category: "text" },
+    { name: "Character Remover", url: "characterremover.html", icon: "✂️", category: "text" },
+    { name: "Add Line Numbers", url: "addlinenumbers.html", icon: "🔢", category: "text" },
+    { name: "Text to ASCII", url: "texttoascii.html", icon: "💻", category: "text" },
+    { name: "Case Alternator", url: "casealternator.html", icon: "🔠", category: "text" },
+    { name: "Text to Slug", url: "texttoslug.html", icon: "🔗", category: "text" },
+    { name: "Loremipsum Generator", url: "loremipsumgenerator.html", icon: "📝", category: "text" },
+    { name: "Random Text Generator", url: "randomtextgenerator.html", icon: "🎲", category: "text" },
+    { name: "Text Converter", url: "textconverter.html", icon: "🔄", category: "text" },
+    { name: "Text Reverser", url: "textreverser.html", icon: "↔️", category: "text" },
+    { name: "Text Repeater", url: "textrepeater.html", icon: "🔁", category: "text" },
+    { name: "Word Counter", url: "wordcounter.html", icon: "📏", category: "text" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

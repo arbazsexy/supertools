@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Text Repeater Online - Repeat Text Multiple Times Instantly | SuperTools</title>
+<meta name="description" content="Free online Text Repeater tool. Repeat any text multiple times instantly with lines, spaces, commas, or custom separators. Copy and download repeated text easily with SuperTools.">
+<meta name="keywords" content="text repeater, repeat text online, repeated text generator, text repeat tool, repeat words multiple times">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/textrepeater.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="Text Repeater Tool - SuperTools">
+<meta property="og:description" content="Repeat text instantly with our free online Text Repeater.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/textrepeater.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Text Repeater Tool - SuperTools">
+<meta name="twitter:description" content="Repeat text instantly with our free online Text Repeater.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Text Repeater",
+  "url": "https://supertools1.site/textrepeater.html",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "description": "Repeat any text multiple times instantly using this free online Text Repeater tool.",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Repeat text multiple times",
+    "Repeat text on new lines",
+    "Repeat text with spaces or commas",
+    "Use custom separators",
+    "Add numbering",
+    "Copy repeated text",
+    "Download repeated text",
+    "Free and browser-based tool"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does the Text Repeater do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Text Repeater tool repeats any text as many times as you want using line breaks, spaces, commas, or custom separators."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I repeat text on separate lines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can repeat text on new lines or join it with spaces, commas, or a custom separator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add numbering to each repeated line?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can enable numbering so each repeated entry gets a number like 1. text, 2. text, and so on."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I copy or download the output?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can copy the full repeated output or download it as a TXT file."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this Text Repeater free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this Text Repeater is completely free to use online."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Text Repeater</h1>
+<p>Repeat any text instantly with our free online Text Repeater tool.</p>
+
+<label for="text">Enter your text</label>
+<textarea id="text" placeholder="Type your text here..." rows="5"></textarea>
+
+<label for="count">Number of times</label>
+<input type="number" id="count" placeholder="Enter number (e.g. 10)" min="1" max="10000" value="10">
+
+<label for="format">Repeat format</label>
+<select id="format">
+    <option value="line">Repeat on new line</option>
+    <option value="space">Repeat with space</option>
+    <option value="comma">Repeat with comma</option>
+    <option value="custom">Custom separator</option>
+</select>
+
+<label for="customSeparator">Custom separator</label>
+<input type="text" id="customSeparator" placeholder="Enter custom separator" disabled>
+
+<label>
+    <input type="checkbox" id="addNumbering">
+    Add numbering
+</label>
+
+<div class="button-group">
+    <button type="button" onclick="repeatText()">
+        <i class="fas fa-repeat"></i> Repeat Text
+    </button>
+
+    <button type="button" class="action-btn clear-btn" onclick="clearText()">
+        <i class="fas fa-trash"></i> Clear
+    </button>
+
+    <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+        <i class="fas fa-flask"></i> Sample
+    </button>
+
+    <button type="button" class="action-btn copy-btn" onclick="copyText()">
+        <i class="fas fa-copy"></i> Copy All
+    </button>
+
+    <button type="button" class="action-btn secondary-btn" onclick="downloadText()">
+        <i class="fas fa-download"></i> Download
+    </button>
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+<h2>Free Online Text Repeater Tool</h2>
+
+<p>
+The <strong>Text Repeater</strong> tool lets you repeat any text multiple times instantly.
+Whether you want to create repeated messages, generate patterns, prepare testing text,
+or format content for social media, this tool makes it quick and easy.
+</p>
+
+<h3>How to Use the Text Repeater</h3>
+<ul>
+<li>Enter the text you want to repeat.</li>
+<li>Enter how many times you want the text repeated.</li>
+<li>Select whether to repeat on a new line, with spaces, commas, or a custom separator.</li>
+<li>Enable numbering if you want numbered output.</li>
+<li>Click the <strong>Repeat Text</strong> button.</li>
+<li>Copy or download the output instantly.</li>
+</ul>
+
+<h3>Features of Our Tool</h3>
+<ul>
+<li><strong>Instant Results:</strong> Repeat text in seconds.</li>
+<li><strong>Flexible Formatting:</strong> Choose lines, spaces, commas, or a custom separator.</li>
+<li><strong>Optional Numbering:</strong> Add numbers before each repeated item.</li>
+<li><strong>Copy Button:</strong> Copy all repeated text with one click.</li>
+<li><strong>Download Option:</strong> Save output as a text file.</li>
+<li><strong>Privacy Friendly:</strong> Your text is never uploaded.</li>
+<li><strong>Mobile Friendly:</strong> Works on phones and desktops.</li>
+</ul>
+
+<h3>Common Uses</h3>
+<p>
+People often use a text repeater for fun messages, chat text, content testing,
+formatting lists, repeated patterns, or generating large blocks of repeated text quickly.
+</p>
+</section>
+
+<section class="info-section">
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q1: What does the Text Repeater do?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        The Text Repeater tool repeats any text as many times as you want using line breaks, spaces, commas, or custom separators.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q2: Can I repeat text on separate lines?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes. You can repeat text on new lines or join it with spaces, commas, or a custom separator.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q3: Can I add numbering to each repeated line?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes. Enable numbering to create output like 1. text, 2. text, 3. text, and so on.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q4: Can I copy or download the output?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes. You can copy the full repeated output or download it as a TXT file.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q5: Is this Text Repeater free to use?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes. This Text Repeater is completely free to use online.
+    </div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="../privacy.html">Privacy Policy</a> | 
+<a href="../about.html">About Us</a> | 
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+const textInput = document.getElementById("text");
+const countInput = document.getElementById("count");
+const formatInput = document.getElementById("format");
+const customSeparatorInput = document.getElementById("customSeparator");
+const addNumberingInput = document.getElementById("addNumbering");
+const resultBox = document.getElementById("result");
+
+formatInput.addEventListener("change", function () {
+    customSeparatorInput.disabled = this.value !== "custom";
+});
+
+function getSeparator() {
+    switch (formatInput.value) {
+        case "space":
+            return " ";
+        case "comma":
+            return ", ";
+        case "custom":
+            return customSeparatorInput.value;
+        case "line":
+        default:
+            return "\n";
+    }
+}
+
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function countWords(text) {
+    return text.trim() ? text.trim().split(/\s+/).filter(Boolean).length : 0;
+}
+
+function repeatText() {
+    const text = textInput.value;
+    const count = Math.max(1, Math.min(10000, parseInt(countInput.value, 10) || 0));
+    const separator = getSeparator();
+    const addNumbering = addNumberingInput.checked;
+
+    if (!text.trim() || !count) {
+        resultBox.innerHTML = `
+            <div class="average-result result-pop">
+                <strong>Please enter text and repetition number.</strong>
+            </div>
+        `;
+        return;
+    }
+
+    countInput.value = count;
+
+    const repeatedParts = [];
+    for (let i = 0; i < count; i++) {
+        repeatedParts.push(addNumbering ? `${i + 1}. ${text}` : text);
+    }
+
+    const output = repeatedParts.join(separator);
+    const lineCount = output === "" ? 0 : output.split("\n").length;
+
+    resultBox.innerHTML = `
+        <div class="modern-card result-pop">
+            <h3>Repeated Text</h3>
+            <textarea id="outputText" class="code-output result-textarea" rows="12" readonly>${escapeHtml(output)}</textarea>
+
+            <div class="stats">
+                <div class="stat-box">Repeats<br>${count}</div>
+                <div class="stat-box">Words<br>${countWords(output)}</div>
+                <div class="stat-box">Characters<br>${output.length}</div>
+                <div class="stat-box">Lines<br>${lineCount}</div>
+            </div>
+
+            <div class="generator-meta">
+                Format: ${formatInput.options[formatInput.selectedIndex].text} |
+                Numbering: ${addNumbering ? "Yes" : "No"}
+            </div>
+        </div>
+    `;
+
+    resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+async function copyText() {
+    const copy = document.getElementById("outputText");
+
+    if (!copy) {
+        alert("Nothing to copy yet!");
+        return;
+    }
+
+    try {
+        await navigator.clipboard.writeText(copy.value);
+        alert("Copied!");
+    } catch (error) {
+        copy.select();
+        document.execCommand("copy");
+        alert("Copied!");
+    }
+}
+
+function clearText() {
+    textInput.value = "";
+    countInput.value = "10";
+    formatInput.value = "line";
+    customSeparatorInput.value = "";
+    customSeparatorInput.disabled = true;
+    addNumberingInput.checked = false;
+    resultBox.innerHTML = "";
+    textInput.focus();
+}
+
+function loadSample() {
+    textInput.value = "Hello SuperTools";
+    countInput.value = "5";
+    formatInput.value = "line";
+    customSeparatorInput.value = "";
+    customSeparatorInput.disabled = true;
+    addNumberingInput.checked = true;
+    repeatText();
+}
+
+function downloadText() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("Nothing to download yet!");
+        return;
+    }
+
+    const blob = new Blob([output.value], { type: "text/plain;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "repeated-text.txt";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+}
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
+<script>
+const tools = [
+    { name: "Remove Duplicate Lines", url: "removeduplicatelines.html", icon: "🧹", category: "text" },
+    { name: "Text Sorter", url: "textsorter.html", icon: "🔤", category: "text" },
+    { name: "Remove Line Breaks", url: "removelinebreaks.html", icon: "↩️", category: "text" },
+    { name: "Character Remover", url: "characterremover.html", icon: "✂️", category: "text" },
+    { name: "Add Line Numbers", url: "addlinenumbers.html", icon: "🔢", category: "text" },
+    { name: "Text to ASCII", url: "texttoascii.html", icon: "💻", category: "text" },
+    { name: "Case Alternator", url: "casealternator.html", icon: "🔠", category: "text" },
+    { name: "Text to Slug", url: "texttoslug.html", icon: "🔗", category: "text" },
+    { name: "Loremipsum Generator", url: "loremipsumgenerator.html", icon: "📝", category: "text" },
+    { name: "Random Text Generator", url: "randomtextgenerator.html", icon: "🎲", category: "text" },
+    { name: "Text Converter", url: "textconverter.html", icon: "🔄", category: "text" },
+    { name: "Text Reverser", url: "textreverser.html", icon: "↔️", category: "text" },
+    { name: "Text Repeater", url: "textrepeater.html", icon: "🔁", category: "text" },
+    { name: "Word Counter", url: "wordcounter.html", icon: "📏", category: "text" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

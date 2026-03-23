@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Regex Tester Online Free - Test and Debug Regular Expressions Instantly</title>
+    <meta name="description"
+        content="Free online Regex Tester tool to test and debug regular expressions instantly. Check matches, highlight results, use regex flags, and improve patterns directly in your browser.">
+    <meta name="keywords"
+        content="regex tester, regular expression tester, regex debugger, test regex online, regex match tool, regex pattern checker">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/regextester.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <meta property="og:title" content="Regex Tester Online Free - SuperTools">
+    <meta property="og:description"
+        content="Test and debug regular expressions instantly with highlighted matches and regex flags.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/regextester.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Regex Tester Online Free - SuperTools">
+    <meta name="twitter:description"
+        content="Free browser-based regex tester with instant match highlighting and regex flag support.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Regex Tester",
+  "alternateName":"Regular Expression Tester",
+  "url":"https://supertools1.site/regextester.html",
+  "applicationCategory":"DeveloperApplication",
+  "operatingSystem":"Web",
+  "description":"Free online regex tester tool to test and debug regular expressions instantly with highlighted matches and regex flag support.",
+  "browserRequirements":"Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers":{
+    "@type":"Offer",
+    "price":"0",
+    "priceCurrency":"USD"
+  },
+  "author":{
+    "@type":"Organization",
+    "name":"SuperTools",
+    "url":"https://supertools1.site"
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"SuperTools",
+    "url":"https://supertools1.site",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://supertools1.site/logo.png"
+    }
+  },
+  "featureList":[
+    "Test regex instantly",
+    "Support for regex flags",
+    "Highlight matches in text",
+    "Show total match count",
+    "Show matched values",
+    "Copy results",
+    "Load sample regex",
+    "Browser-based and free"
+  ]
+}
+</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"What is a regex tester used for?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A regex tester is used to check whether a regular expression pattern matches the expected parts of a text. It helps developers test, debug, and improve regex patterns quickly."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What do regex flags do?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Regex flags change how a regular expression behaves. For example, g finds all matches, i ignores case, and m enables multiline matching."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Does this regex tester store my text?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No. This tool works directly in your browser, so your text and regex patterns are processed locally and are not uploaded or stored on a server."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I test global and case-insensitive regex patterns?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. You can enter flags such as g, i, m, s, u, or y to test different regex behaviors directly in the browser."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Is this regex tester free?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. This regex tester is completely free to use."
+      }
+    }
+  ]
+}
+</script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>⚡ SuperTools</h2>
+        <a href="../index.html">Home</a>
+    </nav>
+
+    <div class="container">
+        <h1>Regex Tester</h1>
+        <p>Test and debug regular expressions instantly with match highlighting, flags, and detailed results.</p>
+
+        <label for="regexPattern">Enter Regex Pattern</label>
+        <input type="text" id="regexPattern" aria-label="Enter regex pattern" placeholder="Example: \d+">
+
+        <label for="regexFlags">Enter Flags (Optional)</label>
+        <input type="text" id="regexFlags" aria-label="Enter regex flags" placeholder="Example: g, i, gi">
+
+        <label for="testString">Enter Test Text</label>
+        <textarea id="testString" rows="10" aria-label="Enter test text"
+            placeholder="Enter text to test your regular expression..."></textarea>
+
+        <div class="button-group">
+            <button type="button" onclick="testRegexPattern()">
+                <i class="fas fa-search"></i> Test Regex
+            </button>
+
+            <button type="button" class="action-btn sample-btn" onclick="loadSampleRegex()">
+                <i class="fas fa-flask"></i> Sample
+            </button>
+
+            <button type="button" class="action-btn copy-btn" onclick="copyRegexResults()">
+                <i class="fas fa-copy"></i> Copy
+            </button>
+
+            <button type="button" class="action-btn clear-btn" onclick="clearRegexTester()">
+                <i class="fas fa-trash"></i> Clear
+            </button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <section class="related-tools">
+        <h2>🔗 Related Tools</h2>
+        <div id="relatedToolsContainer" class="tools-grid"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>Free Online Regex Tester</h2>
+
+        <p>
+            The <strong>Regex Tester</strong> is a free online tool that helps you test and debug regular expressions
+            directly in your browser. It is useful for developers, students, testers, and anyone working with text
+            validation, search patterns, input matching, log parsing, or text extraction.
+        </p>
+
+        <p>
+            Regular expressions are powerful pattern-matching tools used in programming, search and replace operations,
+            form validation, filters, parsers, and automation workflows. A regex tester makes it much easier to check
+            whether your pattern behaves exactly the way you expect.
+        </p>
+
+        <p>
+            This tool works directly in your browser, so your patterns and test text stay private and are not uploaded
+            to a server. Enter a regex pattern, add optional flags, paste your sample text, and instantly see matches,
+            counts, and highlighted output.
+        </p>
+
+        <h3>How to Use the Regex Tester</h3>
+        <ul>
+            <li>Enter your regular expression pattern in the pattern field.</li>
+            <li>Add optional flags such as <strong>g</strong>, <strong>i</strong>, or <strong>m</strong>.</li>
+            <li>Paste or type the text you want to test.</li>
+            <li>Click <strong>Test Regex</strong> to view matches, highlighted text, and match count.</li>
+        </ul>
+
+        <h3>Features of This Tool</h3>
+        <ul>
+            <li>Instant regex testing</li>
+            <li>Supports regex flags</li>
+            <li>Highlights matched text</li>
+            <li>Shows total match count</li>
+            <li>Lists matched values</li>
+            <li>Includes sample pattern and text</li>
+            <li>Runs fully in the browser</li>
+            <li>Free to use on desktop and mobile</li>
+        </ul>
+
+        <h3>Why Use a Regex Tester?</h3>
+        <p>
+            Regex can be powerful but also difficult to debug when a pattern is too broad, too narrow, or behaves
+            differently because of flags. A regex tester helps you quickly see which parts of a string are matched so
+            you can adjust your pattern faster.
+        </p>
+
+        <p>
+            It is especially useful for validating emails, numbers, dates, usernames, URLs, logs, IDs, codes, and
+            other structured text patterns used in development and data processing.
+        </p>
+    </section>
+
+    <section class="info-section">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                What is a regex tester used for?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                A <strong>regex tester</strong> helps you test whether a regular expression pattern correctly matches
+                the text you want. It is commonly used for debugging validation rules, search patterns, and text
+                extraction logic.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                What do regex flags do?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                Regex flags change how a pattern behaves. For example, <strong>g</strong> finds all matches,
+                <strong>i</strong> ignores case differences, and <strong>m</strong> enables multiline matching.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                Does this tool store my text or regex pattern?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                No. This tool works directly in your browser, so your test text and regex patterns are processed locally
+                and are not uploaded or stored on a server.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                Can I use multiple regex flags?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                Yes. You can combine flags such as <strong>gi</strong> or <strong>gm</strong> depending on how you want
+                the regex to behave.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                Why do I get an invalid regex error?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                You may get an error if your pattern contains invalid syntax or unsupported flag combinations. Check
+                for missing brackets, invalid escapes, or duplicate flags.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                Is this regex tester free?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                Yes. The tool is completely free to use with no registration required.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 SuperTools |
+            <a href="../privacy.html">Privacy Policy</a> |
+            <a href="../about.html">About Us</a> |
+            <a href="../contact.html">Contact</a>
+        </p>
+    </footer>
+
+    <script>
+        const accButtons = document.querySelectorAll(".accordion-btn");
+
+        accButtons.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                const content = btn.nextElementSibling;
+                const isOpen = btn.classList.contains("active");
+
+                accButtons.forEach(function (otherBtn) {
+                    otherBtn.classList.remove("active");
+                    const otherContent = otherBtn.nextElementSibling;
+                    if (otherContent) {
+                        otherContent.style.maxHeight = null;
+                        otherContent.classList.remove("open");
+                    }
+                });
+
+                if (!isOpen) {
+                    btn.classList.add("active");
+                    content.classList.add("open");
+                    requestAnimationFrame(function () {
+                        content.style.maxHeight = (content.scrollHeight + 30) + "px";
+                    });
+                }
+            });
+        });
+
+        const regexPattern = document.getElementById("regexPattern");
+        const regexFlags = document.getElementById("regexFlags");
+        const testString = document.getElementById("testString");
+        const result = document.getElementById("result");
+
+        function escapeHTML(text) {
+            return text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        function normalizeFlags(flags) {
+            return flags.replace(/\s+/g, "");
+        }
+
+        function scrollToResult() {
+            requestAnimationFrame(function () {
+                result.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            });
+        }
+
+        function showError(message) {
+            result.innerHTML =
+                '<div class="average-result result-pop">' +
+                '<div>' + message + '</div>' +
+                '</div>';
+
+            scrollToResult();
+        }
+
+        function highlightMatches(text, regex) {
+            const sourceText = text;
+            let html = "";
+            let lastIndex = 0;
+            let match;
+            let count = 0;
+            const matches = [];
+
+            const workingRegex = regex.global
+                ? regex
+                : new RegExp(regex.source, regex.flags + "g");
+
+            while ((match = workingRegex.exec(sourceText)) !== null) {
+                const matchedText = match[0];
+                const start = match.index;
+                const end = start + matchedText.length;
+
+                html += escapeHTML(sourceText.slice(lastIndex, start));
+                html += '<mark>' + escapeHTML(matchedText) + '</mark>';
+                lastIndex = end;
+
+                matches.push(matchedText);
+                count++;
+
+                if (matchedText === "") {
+                    workingRegex.lastIndex++;
+                }
+            }
+
+            html += escapeHTML(sourceText.slice(lastIndex));
+
+            return {
+                html: html || escapeHTML(sourceText),
+                count: count,
+                matches: matches
+            };
+        }
+
+        function testRegexPattern() {
+            const pattern = regexPattern.value;
+            const flags = normalizeFlags(regexFlags.value);
+            const text = testString.value;
+
+            if (!pattern.trim()) {
+                showError("Please enter a regex pattern.");
+                return;
+            }
+
+            try {
+                const regex = new RegExp(pattern, flags);
+                const analysis = highlightMatches(text, regex);
+
+                const matchesList = analysis.matches.length
+                    ? analysis.matches.map(function (item, index) {
+                        return '<div class="stat-box">Match ' + (index + 1) + '<br><span>' + escapeHTML(item) + '</span></div>';
+                    }).join("")
+                    : '<div>No matches found.</div>';
+
+                result.innerHTML =
+                    '<div class="average-result result-pop">' +
+                    '<div class="stats">' +
+                    '<div class="stat-box">Pattern<br><span>/' + escapeHTML(pattern) + '/' + escapeHTML(flags) + '</span></div>' +
+                    '<div class="stat-box">Matches<br><span>' + analysis.count.toLocaleString() + '</span></div>' +
+                    '<div class="stat-box">Text Length<br><span>' + text.length.toLocaleString() + '</span></div>' +
+                    '</div>' +
+                    '<hr>' +
+                    '<label><strong>Highlighted Result</strong></label>' +
+                    '<div id="regexHighlightedOutput" class="result-box">' + analysis.html.replace(/\n/g, "<br>") + '</div>' +
+                    '<hr>' +
+                    '<label><strong>Matched Values</strong></label>' +
+                    '<div class="stats">' + matchesList + '</div>' +
+                    '<textarea id="regexPlainOutput" rows="8" readonly style="display:none;">' + analysis.matches.join("\n") + '</textarea>' +
+                    '</div>';
+
+                scrollToResult();
+            } catch (error) {
+                showError("Invalid regex pattern or flags. Please check your input and try again.");
+            }
+        }
+
+        function copyRegexResults() {
+            const output = document.getElementById("regexPlainOutput");
+
+            if (!output) {
+                alert("Nothing to copy.");
+                return;
+            }
+
+            const valueToCopy = output.value.trim() || document.getElementById("regexHighlightedOutput")?.innerText.trim();
+
+            if (!valueToCopy) {
+                alert("Nothing to copy.");
+                return;
+            }
+
+            navigator.clipboard.writeText(valueToCopy)
+                .then(function () {
+                    alert("Regex result copied!");
+                })
+                .catch(function () {
+                    alert("Failed to copy.");
+                });
+        }
+
+        function clearRegexTester() {
+            regexPattern.value = "";
+            regexFlags.value = "";
+            testString.value = "";
+            result.innerHTML = "";
+            regexPattern.focus();
+        }
+
+        function loadSampleRegex() {
+            regexPattern.value = "\\d+";
+            regexFlags.value = "g";
+            testString.value =
+                "Order ID: 12345\n" +
+                "Invoice No: 9876\n" +
+                "User code: 42\n" +
+                "Reference: ABC-555";
+            result.innerHTML = "";
+        }
+
+const tools = [
+    { name: "JSON Formatter", url: "json-formatter.html", icon: "🧩", category: "developer" },
+    { name: "Colourcode Converter", url: "colourcodeconverter.html", icon: "🎨", category: "developer" },
+    { name: "CSS Minifier", url: "css-minifier.html", icon: "🧵", category: "developer" },
+    { name: "CSV to Json", url: "csv-to-json.html", icon: "📊", category: "developer" },
+    { name: "Htaccess Generator", url: "htaccessgenerator.html", icon: "⚙️", category: "developer" },
+    { name: "Javascript Minifier", url: "javascript-minifier.html", icon: "⚡", category: "developer" },
+    { name: "Json to CSV", url: "json-to-csv.html", icon: "🔁", category: "developer" },
+    { name: "Regex Tester", url: "regextester.html", icon: "🔍", category: "developer" },
+    { name: "Timestamp Converter", url: "timestampconverter.html", icon: "⏱️", category: "developer" },
+    { name: "Base64 Encoder Decoder", url: "base64-encoder-decoder.html", icon: "🔐", category: "developer" }
+];
+
+        const currentPage = window.location.pathname.split("/").pop();
+
+        const related = tools
+            .filter(function (tool) {
+                return tool.url !== currentPage;
+            })
+            .sort(function () {
+                return 0.5 - Math.random();
+            })
+            .slice(0, 4);
+
+        const relatedContainer = document.getElementById("relatedToolsContainer");
+
+        if (relatedContainer) {
+            relatedContainer.innerHTML = related.map(function (tool) {
+                return '<a href="' + tool.url + '" class="tool-card">' +
+                    '<div class="tool-icon">' + tool.icon + '</div>' +
+                    '<h3>' + tool.name + '</h3>' +
+                    '</a>';
+            }).join("");
+        }
+    </script>
+
+</body>
+
+</html>

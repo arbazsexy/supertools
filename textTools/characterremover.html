@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Character Remover Online - Remove Specific Characters from Text | SuperTools</title>
+    <meta name="description" content="Remove specific characters from text instantly. Delete letters, numbers, punctuation, spaces, or custom characters with this free Character Remover tool by SuperTools.">
+    <meta name="keywords" content="character remover, remove characters from text, text cleaner, remove letters from text, remove symbols from text, text formatting tool">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/characterremover.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Character Remover - SuperTools">
+    <meta property="og:description" content="Remove unwanted characters from text instantly with flexible text cleaning options.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/characterremover.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Character Remover - SuperTools">
+    <meta name="twitter:description" content="Remove unwanted characters from text instantly with flexible text cleaning options.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Character Remover",
+      "alternateName": "Text Character Cleaner",
+      "url": "https://supertools1.site/characterremover.html",
+      "description": "Free online Character Remover tool to delete specific characters, digits, punctuation, spaces, or custom symbols from text instantly.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Remove custom characters from text",
+        "Case-sensitive and case-insensitive removal",
+        "Remove spaces",
+        "Remove digits",
+        "Remove punctuation",
+        "Copy cleaned text",
+        "Swap output into input",
+        "Free and browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I remove multiple characters at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can enter multiple characters in the remove field and all matching characters will be removed from the text."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool remove spaces?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can remove spaces either by entering a space in the character field or by enabling the remove spaces option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I remove digits or punctuation too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool can remove digits and punctuation using the built-in options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the removal case-sensitive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can choose either case-sensitive or case-insensitive removal using the checkbox option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this Character Remover tool free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this Character Remover tool is completely free to use online."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Character Remover</h1>
+    <p>Remove specific characters, spaces, digits, or punctuation from your text instantly.</p>
+
+    <label for="inputText">Enter your text</label>
+    <textarea id="inputText" rows="8" aria-label="Enter text to clean" placeholder="Paste your text here..."></textarea>
+
+    <label for="removeChars">Characters to remove</label>
+    <input type="text" id="removeChars" placeholder="e.g. abc123!?">
+
+    <label>
+        <input type="checkbox" id="caseInsensitive">
+        Case-insensitive removal
+    </label>
+
+    <label>
+        <input type="checkbox" id="removeSpaces">
+        Remove spaces
+    </label>
+
+    <label>
+        <input type="checkbox" id="removeDigits">
+        Remove digits
+    </label>
+
+    <label>
+        <input type="checkbox" id="removePunctuation">
+        Remove punctuation
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="removeCharacters()">
+            <i class="fas fa-eraser"></i> Remove Characters
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="swapTexts()">
+            <i class="fas fa-right-left"></i> Swap
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Character Remover</h2>
+
+    <p>
+        The <strong>Character Remover</strong> tool helps you delete selected characters from any text instantly.
+        It is useful for text cleaning, formatting, data cleanup, code editing, and removing unwanted letters,
+        symbols, numbers, or spaces from copied content.
+    </p>
+
+    <p>
+        To use this tool, paste your text into the input box and enter the characters you want to remove.
+        You can also enable built-in options to remove spaces, digits, or punctuation automatically.
+        Then click the <strong>Remove Characters</strong> button to generate the cleaned output.
+    </p>
+
+    <p>
+        This tool supports both <strong>case-sensitive</strong> and <strong>case-insensitive</strong> removal,
+        giving you more control over how text is cleaned. After generating the result, you can copy it instantly
+        or swap it back into the input for additional cleaning.
+    </p>
+
+    <h3>What Does a Character Remover Do?</h3>
+    <p>
+        A character remover deletes chosen characters from text while leaving the rest unchanged. For example,
+        if your text is <strong>hello123</strong> and you remove <strong>123</strong>, the output becomes <strong>hello</strong>.
+    </p>
+
+    <p class="formula-box">
+        hello123 → remove 123 → hello
+    </p>
+
+    <h3>Why Use This Character Remover Tool?</h3>
+    <ul>
+        <li><strong>Custom Text Cleaning:</strong> Remove exactly the characters you choose.</li>
+        <li><strong>Extra Cleanup Options:</strong> Remove spaces, digits, and punctuation quickly.</li>
+        <li><strong>Flexible Matching:</strong> Choose case-sensitive or case-insensitive removal.</li>
+        <li><strong>Fast Results:</strong> Clean text instantly in your browser.</li>
+        <li><strong>Easy Copy and Reuse:</strong> Copy the result or swap it into the input box.</li>
+        <li><strong>Private and Free:</strong> No upload, no sign-up, no cost.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>students</strong>, <strong>writers</strong>, <strong>developers</strong>,
+        <strong>data entry users</strong>, <strong>SEO workers</strong>, and anyone who needs to quickly clean text.
+        It works well for notes, copied lists, code snippets, raw data, and messy text input.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: Can I remove multiple characters at once?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. You can enter multiple characters into the remove field, and all matching characters will be removed from the text.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Does it remove spaces?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. You can remove spaces by enabling the <strong>Remove spaces</strong> option, or by manually including spaces in the character field.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I remove digits or punctuation too?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This tool includes built-in options to remove digits and punctuation in one click.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Is the removal case-sensitive?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            You can choose. Enable <strong>Case-insensitive removal</strong> if you want uppercase and lowercase versions treated the same.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This Character Remover tool is completely free to use online.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+const inputText = document.getElementById("inputText");
+const removeCharsInput = document.getElementById("removeChars");
+const caseInsensitiveCheckbox = document.getElementById("caseInsensitive");
+const removeSpacesCheckbox = document.getElementById("removeSpaces");
+const removeDigitsCheckbox = document.getElementById("removeDigits");
+const removePunctuationCheckbox = document.getElementById("removePunctuation");
+const resultBox = document.getElementById("result");
+
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function escapeRegex(text) {
+    return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function uniqueCharacters(text) {
+    return [...new Set(text.split(""))].join("");
+}
+
+function getStats(text) {
+    const chars = text.length;
+    const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+    const lines = text === "" ? 0 : text.split("\n").length;
+    return { chars, words, lines };
+}
+
+function removeCharacters() {
+    const text = inputText.value;
+    const rawRemoveChars = removeCharsInput.value;
+    const caseInsensitive = caseInsensitiveCheckbox.checked;
+    const removeSpaces = removeSpacesCheckbox.checked;
+    const removeDigits = removeDigitsCheckbox.checked;
+    const removePunctuation = removePunctuationCheckbox.checked;
+
+    if (!text.trim()) {
+        resultBox.innerHTML = `
+            <div class="average-result result-pop">
+                <strong>Please enter some text.</strong>
+            </div>
+        `;
+        resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+    }
+
+    if (!rawRemoveChars && !removeSpaces && !removeDigits && !removePunctuation) {
+        resultBox.innerHTML = `
+            <div class="average-result result-pop">
+                <strong>Please enter characters to remove or enable one of the extra removal options.</strong>
+            </div>
+        `;
+        resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+    }
+
+    const dedupedRemoveChars = uniqueCharacters(rawRemoveChars);
+    let cleaned = text;
+    let removedCount = 0;
+
+    if (dedupedRemoveChars) {
+        const flags = caseInsensitive ? "gi" : "g";
+        const customRegex = new RegExp("[" + escapeRegex(dedupedRemoveChars) + "]", flags);
+        const matches = cleaned.match(customRegex);
+        removedCount += matches ? matches.length : 0;
+        cleaned = cleaned.replace(customRegex, "");
+    }
+
+    if (removeSpaces) {
+        const matches = cleaned.match(/ /g);
+        removedCount += matches ? matches.length : 0;
+        cleaned = cleaned.replace(/ /g, "");
+    }
+
+    if (removeDigits) {
+        const matches = cleaned.match(/\d/g);
+        removedCount += matches ? matches.length : 0;
+        cleaned = cleaned.replace(/\d/g, "");
+    }
+
+    if (removePunctuation) {
+        const punctuationRegex = /[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/g;
+        const matches = cleaned.match(punctuationRegex);
+        removedCount += matches ? matches.length : 0;
+        cleaned = cleaned.replace(punctuationRegex, "");
+    }
+
+    const stats = getStats(cleaned);
+
+    resultBox.innerHTML = `
+        <div class="modern-card result-pop">
+            <h3>Cleaned Text</h3>
+            <textarea id="outputText" class="code-output result-textarea" rows="10" readonly>${escapeHtml(cleaned)}</textarea>
+
+            <div class="stats">
+                <div class="stat-box">Characters<br>${stats.chars}</div>
+                <div class="stat-box">Words<br>${stats.words}</div>
+                <div class="stat-box">Lines<br>${stats.lines}</div>
+                <div class="stat-box">Removed<br>${removedCount}</div>
+            </div>
+
+            <div class="generator-meta">
+                Custom characters removed: ${dedupedRemoveChars ? escapeHtml(dedupedRemoveChars) : "None"} |
+                Case-insensitive: ${caseInsensitive ? "Yes" : "No"} |
+                Remove spaces: ${removeSpaces ? "Yes" : "No"} |
+                Remove digits: ${removeDigits ? "Yes" : "No"} |
+                Remove punctuation: ${removePunctuation ? "Yes" : "No"}
+            </div>
+        </div>
+    `;
+
+    resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function clearFields() {
+    inputText.value = "";
+    removeCharsInput.value = "";
+    caseInsensitiveCheckbox.checked = false;
+    removeSpacesCheckbox.checked = false;
+    removeDigitsCheckbox.checked = false;
+    removePunctuationCheckbox.checked = false;
+    resultBox.innerHTML = "";
+    inputText.focus();
+}
+
+function loadSample() {
+    inputText.value = "Hello, World! 123 @SuperTools";
+    removeCharsInput.value = "lo";
+    caseInsensitiveCheckbox.checked = false;
+    removeSpacesCheckbox.checked = false;
+    removeDigitsCheckbox.checked = false;
+    removePunctuationCheckbox.checked = false;
+    removeCharacters();
+}
+
+async function copyResult() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No result to copy.");
+        return;
+    }
+
+    try {
+        await navigator.clipboard.writeText(output.value);
+        alert("Result copied to clipboard!");
+    } catch (error) {
+        output.select();
+        document.execCommand("copy");
+        alert("Result copied to clipboard!");
+    }
+}
+
+function swapTexts() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No result to swap.");
+        return;
+    }
+
+    inputText.value = output.value;
+    removeCharacters();
+}
+
+inputText.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && e.key === "Enter") {
+        removeCharacters();
+    }
+});
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
+<script>
+const tools = [
+    { name: "Remove Duplicate Lines", url: "removeduplicatelines.html", icon: "🧹", category: "text" },
+    { name: "Text Sorter", url: "textsorter.html", icon: "🔤", category: "text" },
+    { name: "Remove Line Breaks", url: "removelinebreaks.html", icon: "↩️", category: "text" },
+    { name: "Character Remover", url: "characterremover.html", icon: "✂️", category: "text" },
+    { name: "Add Line Numbers", url: "addlinenumbers.html", icon: "🔢", category: "text" },
+    { name: "Text to ASCII", url: "texttoascii.html", icon: "💻", category: "text" },
+    { name: "Case Alternator", url: "casealternator.html", icon: "🔠", category: "text" },
+    { name: "Text to Slug", url: "texttoslug.html", icon: "🔗", category: "text" },
+    { name: "Loremipsum Generator", url: "loremipsumgenerator.html", icon: "📝", category: "text" },
+    { name: "Random Text Generator", url: "randomtextgenerator.html", icon: "🎲", category: "text" },
+    { name: "Text Converter", url: "textconverter.html", icon: "🔄", category: "text" },
+    { name: "Text Reverser", url: "textreverser.html", icon: "↔️", category: "text" },
+    { name: "Text Repeater", url: "textrepeater.html", icon: "🔁", category: "text" },
+    { name: "Word Counter", url: "wordcounter.html", icon: "📏", category: "text" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Average Calculator (Mean) Online - Calculate Average, Median & More</title>
+    <meta name="description" content="Free online average calculator to find mean, median, mode, range, and standard deviation instantly. Enter numbers and get accurate results fast with SuperTools.">
+    <meta name="keywords" content="average calculator, mean calculator, median calculator, mode calculator, statistics calculator online">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/averagecalculator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Average Calculator (Mean) Online - SuperTools">
+    <meta property="og:description" content="Calculate mean, median, mode, range, and more instantly with this free online average calculator.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/averagecalculator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Average Calculator (Mean) Online - SuperTools">
+    <meta name="twitter:description" content="Calculate mean, median, mode, range, and more instantly with this free online average calculator.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Average Calculator",
+      "alternateName": "Mean Calculator",
+      "url": "https://supertools1.site/averagecalculator.html",
+      "description": "Free online average calculator to find mean, median, mode, range, sum, minimum, maximum, and standard deviation instantly.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Calculate average online",
+        "Find mean instantly",
+        "Calculate median",
+        "Find mode",
+        "Calculate range",
+        "Show count and sum",
+        "Show minimum and maximum",
+        "Calculate standard deviation",
+        "Supports comma, space, and line-separated input",
+        "Free and browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an average (mean)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The average, also called the mean, is a statistical value used to represent a group of numbers with one single value. It is calculated by adding all the numbers together and dividing the total by the number of values. For example, if the numbers are 10, 20, and 30, the sum is 60 and the average is 60 divided by 3, which equals 20."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I enter decimal or negative numbers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this calculator supports decimal numbers such as 10.5 and 20.75, as well as negative numbers like -5 and -10. You can mix whole numbers, decimals, and negative values in the same calculation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should I enter the numbers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can enter numbers separated by commas, spaces, or new lines. For example, you can type 10, 20, 30 or 10 20 30, or place each value on a separate line. The calculator automatically reads all valid numbers from the input."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What other results does this calculator provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In addition to the average, this calculator can show the sum, total count, minimum value, maximum value, median, mode, range, and standard deviation. This makes it useful for quick statistical analysis as well as basic mean calculation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this average calculator free and safe to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this average calculator is completely free to use and works directly in your browser. No sign-up is required, and your data is not uploaded for calculation, which helps keep your input private."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Average Calculator</h1>
+    <p>Enter numbers separated by commas, spaces, or new lines to calculate the average and other statistics.</p>
+
+    <label for="numbers">Enter numbers</label>
+    <textarea id="numbers" rows="6" aria-label="Enter numbers for average calculation" placeholder="e.g. 10, 20, 30&#10;40 50 60"></textarea>
+
+    <div class="button-group">
+        <button type="button" onclick="calculateAverage()">
+            <i class="fas fa-calculator"></i> Calculate
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Average Calculator</h2>
+
+    <p>
+        The <strong>Average Calculator</strong> (also known as a <strong>mean calculator</strong>) is a powerful online tool that helps you quickly
+        calculate the average value of a set of numbers. Whether you're working with school marks, financial data, or statistical datasets,
+        this tool allows you to get instant and accurate results without doing manual calculations.
+    </p>
+
+    <p>
+        To use the calculator, simply enter your numbers into the input box. You can separate values using commas (e.g., 10, 20, 30),
+        spaces (10 20 30), or even place each number on a new line. Once entered, click the <strong>Calculate</strong> button, and the tool
+        will instantly display the results in a clear and structured format.
+    </p>
+
+    <p>
+        In addition to calculating the average (mean), this tool provides a complete statistical breakdown of your data. You will get
+        the <strong>sum of all numbers</strong>, <strong>total count</strong>, <strong>minimum and maximum values</strong>,
+        <strong>median</strong>, <strong>mode</strong>, <strong>range</strong>, and even the <strong>standard deviation</strong>.
+        This makes it an all-in-one solution for quick data analysis.
+    </p>
+
+    <h3>What is an Average (Mean)?</h3>
+    <p>
+        The average, or mean, is one of the most commonly used statistical measures. It is calculated by adding all the values in a dataset
+        and dividing the total by the number of values. The formula is:
+    </p>
+
+    <p class="formula-box">
+    Average = (Sum of all values) ÷ (Number of values)
+    </p>
+
+    <p>
+        For example, if your numbers are 10, 20, and 30, the sum is 60 and there are 3 values. So the average is 60 ÷ 3 = 20.
+    </p>
+
+    <h3>Why Use This Average Calculator?</h3>
+    <ul>
+        <li><strong>All-in-One Tool:</strong> Calculate mean, median, mode, range, and standard deviation in one place.</li>
+        <li><strong>Flexible Input:</strong> Supports commas, spaces, and multi-line number entry.</li>
+        <li><strong>Instant Results:</strong> No delay, results are calculated instantly.</li>
+        <li><strong>High Accuracy:</strong> Handles decimals and large datasets efficiently.</li>
+        <li><strong>Student Friendly:</strong> Perfect for school, college, and exam preparation.</li>
+        <li><strong>Data Analysis Ready:</strong> Useful for quick statistical analysis and reports.</li>
+        <li><strong>Privacy First:</strong> All calculations run in your browser, so no data is stored.</li>
+        <li><strong>100% Free:</strong> No login, no subscription, completely free to use.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This calculator is ideal for <strong>students</strong>, <strong>teachers</strong>, <strong>data analysts</strong>,
+        <strong>business professionals</strong>, and anyone who needs to quickly analyze numerical data. Whether you're calculating
+        exam scores, tracking expenses, or analyzing datasets, this tool simplifies the process and saves time.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is an average (mean)?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            The <strong>average</strong>, also known as the <strong>mean</strong>, is a basic statistical value used to represent a set of numbers with a single value.
+            It is calculated by adding all the numbers together and dividing the total by how many numbers there are.
+            <br><br>
+            For example, if you have the numbers 10, 20, and 30, the sum is 60 and there are 3 values. So, the average is 60 ÷ 3 = 20.
+            <br><br>
+            The average is widely used in academics, finance, data analysis, and everyday calculations to understand overall performance or trends.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I enter decimal or negative numbers?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this calculator fully supports <strong>decimal numbers</strong> like 10.5 and 20.75, as well as <strong>negative values</strong> like -5 and -10.
+            <br><br>
+            The tool automatically processes valid numerical inputs and calculates accurate results. You can mix integers, decimals, and negative numbers
+            in the same input without any issues.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: How should I enter the numbers?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            You can enter numbers in multiple formats for convenience:
+            <ul>
+                <li>Separated by commas, for example 10, 20, 30</li>
+                <li>Separated by spaces, for example 10 20 30</li>
+                <li>Each number on a new line</li>
+            </ul>
+            The calculator automatically detects and processes the input format, making it easy to paste data from spreadsheets or other sources.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: What other results does this calculator provide?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            In addition to the average (mean), this tool provides a complete statistical breakdown of your data, including:
+            <ul>
+                <li>Sum of all values</li>
+                <li>Total count of numbers</li>
+                <li>Minimum and maximum values</li>
+                <li>Median, which is the middle value</li>
+                <li>Mode, which is the most frequent value</li>
+                <li>Range, which is the difference between the highest and lowest values</li>
+                <li>Standard deviation</li>
+            </ul>
+            This makes it a powerful all-in-one tool for quick data analysis.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this average calculator free and safe to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this calculator is <strong>completely free</strong> and safe to use. You don't need to sign up or download anything.
+            <br><br>
+            All calculations are performed directly in your browser, which means your data is never sent to any server. This helps ensure
+            <strong>privacy and security</strong> while using the tool.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function formatNumber(num) {
+    return Number.isInteger(num) ? num : num.toFixed(2);
+}
+
+function parseNumbers() {
+    const input = document.getElementById("numbers").value.trim();
+
+    if (!input) {
+        return { numbers: [], invalid: [] };
+    }
+
+    const rawValues = input.split(/[\s,]+/);
+    const numbers = [];
+    const invalid = [];
+
+    rawValues.forEach(value => {
+        const cleaned = value.trim();
+        if (/^-?\d*\.?\d+$/.test(cleaned)) {
+            numbers.push(Number(cleaned));
+        } else if (cleaned !== "") {
+            invalid.push(cleaned);
+        }
+    });
+
+    return { numbers, invalid };
+}
+
+function calculateMedian(numbers) {
+    const sorted = [...numbers].sort((a, b) => a - b);
+    const mid = Math.floor(sorted.length / 2);
+
+    return sorted.length % 2 === 0
+        ? (sorted[mid - 1] + sorted[mid]) / 2
+        : sorted[mid];
+}
+
+function calculateMode(numbers) {
+    const freq = {};
+    let maxFreq = 0;
+
+    numbers.forEach(num => {
+        freq[num] = (freq[num] || 0) + 1;
+        maxFreq = Math.max(maxFreq, freq[num]);
+    });
+
+    if (maxFreq === 1) return "No mode";
+
+    return Object.keys(freq)
+        .filter(num => freq[num] === maxFreq)
+        .join(", ");
+}
+
+function calculateStandardDeviation(numbers, mean) {
+    const variance = numbers.reduce((sum, num) => sum + Math.pow(num - mean, 2), 0) / numbers.length;
+    return Math.sqrt(variance);
+}
+
+function calculateAverage() {
+    const result = document.getElementById("result");
+    const { numbers, invalid } = parseNumbers();
+
+    if (numbers.length === 0) {
+        result.innerHTML = "<div style='color:red;'>Please enter valid numbers.</div>";
+        return;
+    }
+
+    const sum = numbers.reduce((a, b) => a + b, 0);
+    const avg = sum / numbers.length;
+    const min = Math.min(...numbers);
+    const max = Math.max(...numbers);
+    const median = calculateMedian(numbers);
+    const mode = calculateMode(numbers);
+    const range = max - min;
+    const stdDev = calculateStandardDeviation(numbers, avg);
+
+    result.innerHTML = `
+        <div class="average-result">
+            ${invalid.length ? `<div style="color:#d63031; margin-bottom:10px;"><strong>Ignored invalid values:</strong> ${invalid.join(", ")}</div>` : ""}
+
+            <div class="stats">
+                <div class="stat-box">Count<br>${numbers.length}</div>
+                <div class="stat-box">Sum<br>${formatNumber(sum)}</div>
+                <div class="stat-box">Average<br>${formatNumber(avg)}</div>
+                <div class="stat-box">Minimum<br>${formatNumber(min)}</div>
+                <div class="stat-box">Maximum<br>${formatNumber(max)}</div>
+                <div class="stat-box">Median<br>${formatNumber(median)}</div>
+                <div class="stat-box">Mode<br>${mode}</div>
+                <div class="stat-box">Range<br>${formatNumber(range)}</div>
+                <div class="stat-box">Std Dev<br>${formatNumber(stdDev)}</div>
+            </div>
+
+            <hr>
+
+            <div><strong>Formula:</strong> Average = Sum ÷ Count = ${formatNumber(sum)} ÷ ${numbers.length} = ${formatNumber(avg)}</div>
+        </div>
+    `;
+}
+
+function clearFields() {
+    document.getElementById("numbers").value = "";
+    document.getElementById("result").innerHTML = "";
+}
+
+function loadSample() {
+    document.getElementById("numbers").value = "10, 20, 30, 40, 50, 20";
+    calculateAverage();
+}
+
+function copyResult() {
+    const resultText = document.getElementById("result").innerText.trim();
+
+    if (!resultText) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(resultText)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+</script>
+<script>
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+// detect current page
+const currentPage = window.location.pathname.split("/").pop();
+
+// filter related tools
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random()) // random order
+    .slice(0, 4); // show 4 tools
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

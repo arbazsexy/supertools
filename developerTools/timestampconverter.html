@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Timestamp Converter Online Free - Convert Unix Timestamp Instantly</title>
+    <meta name="description"
+        content="Free online Timestamp Converter tool to convert Unix timestamps into readable dates and convert dates into Unix timestamps instantly. Generate current epoch time, copy values, and use it directly in your browser.">
+    <meta name="keywords"
+        content="timestamp converter, unix timestamp converter, epoch converter, unix time converter, epoch time generator, timestamp to date, date to timestamp">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/timestampconverter.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <meta property="og:title" content="Timestamp Converter Online Free - SuperTools">
+    <meta property="og:description"
+        content="Convert Unix timestamps and human-readable dates instantly with this free browser-based timestamp converter.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/timestampconverter.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Timestamp Converter Online Free - SuperTools">
+    <meta name="twitter:description"
+        content="Free timestamp converter to convert Unix time to date and date to Unix timestamp instantly.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Timestamp Converter",
+  "alternateName":"Unix Timestamp Converter",
+  "url":"https://supertools1.site/timestampconverter.html",
+  "applicationCategory":"DeveloperApplication",
+  "operatingSystem":"Web",
+  "description":"Free online timestamp converter to convert Unix timestamps into readable dates and convert dates into Unix timestamps instantly.",
+  "browserRequirements":"Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers":{
+    "@type":"Offer",
+    "price":"0",
+    "priceCurrency":"USD"
+  },
+  "author":{
+    "@type":"Organization",
+    "name":"SuperTools",
+    "url":"https://supertools1.site"
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"SuperTools",
+    "url":"https://supertools1.site",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://supertools1.site/logo.png"
+    }
+  },
+  "featureList":[
+    "Generate current Unix timestamp",
+    "Copy current timestamp",
+    "Convert Unix timestamp to readable date",
+    "Convert date to Unix timestamp",
+    "Show UTC time",
+    "Show local time",
+    "Browser-based conversion",
+    "Free and easy to use"
+  ]
+}
+</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"What is a Unix timestamp?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A Unix timestamp is the number of seconds that have passed since January 1, 1970 UTC. It is commonly used in APIs, databases, logs, and programming systems."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I convert a date into a Unix timestamp?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. You can choose a date and time, and the tool will convert it into a Unix timestamp instantly."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I convert a Unix timestamp into a readable date?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. You can enter a Unix timestamp and instantly see both UTC time and local time."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Does this timestamp converter store my data?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No. This tool works entirely in your browser, so your inputs are processed locally and are not uploaded or stored on a server."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Is this timestamp converter free?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. This timestamp converter is completely free to use."
+      }
+    }
+  ]
+}
+</script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>⚡ SuperTools</h2>
+        <a href="../index.html">Home</a>
+    </nav>
+
+    <div class="container">
+        <h1>Timestamp Converter</h1>
+        <p>Convert Unix timestamps into readable dates and convert dates into Unix timestamps instantly.</p>
+
+        <label for="liveTimestamp">Current Unix Timestamp</label>
+        <input type="text" id="liveTimestamp" readonly aria-label="Current Unix timestamp">
+
+        <div class="button-group">
+            <button type="button" onclick="copyLiveTimestamp()">
+                <i class="fas fa-copy"></i> Copy Timestamp
+            </button>
+
+            <button type="button" class="action-btn sample-btn" onclick="loadSampleTimestamp()">
+                <i class="fas fa-flask"></i> Sample
+            </button>
+
+            <button type="button" class="action-btn clear-btn" onclick="clearTimestampTool()">
+                <i class="fas fa-trash"></i> Clear
+            </button>
+        </div>
+
+        <label for="timestampInput">Convert Unix Timestamp to Date</label>
+        <input type="number" id="timestampInput" aria-label="Enter Unix timestamp" placeholder="Example: 1700000000">
+
+        <button type="button" onclick="convertTimestampToDate()">
+            <i class="fas fa-clock"></i> Convert Timestamp
+        </button>
+
+        <div id="result"></div>
+
+        <label for="dateInput">Convert Date and Time to Unix Timestamp</label>
+        <input type="datetime-local" id="dateInput" aria-label="Select date and time">
+
+        <button type="button" onclick="convertDateToTimestamp()">
+            <i class="fas fa-calendar-alt"></i> Convert to Timestamp
+        </button>
+
+        <div id="result2"></div>
+    </div>
+
+    <section class="related-tools">
+        <h2>🔗 Related Tools</h2>
+        <div id="relatedToolsContainer" class="tools-grid"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>Free Online Timestamp Converter</h2>
+
+        <p>
+            The <strong>Timestamp Converter</strong> is a free online tool that helps you convert Unix timestamps into
+            readable dates and convert normal date-time values back into Unix timestamps. It is useful for developers,
+            students, API users, testers, and anyone working with logs, databases, or time-based systems.
+        </p>
+
+        <p>
+            A Unix timestamp represents the number of seconds that have passed since
+            <strong>January 1, 1970 UTC</strong>. It is widely used in programming, APIs, event logging, authentication
+            systems, and data storage because it provides a standard numeric format for representing time.
+        </p>
+
+        <p>
+            This tool works directly in your browser, so your inputs stay private and are not uploaded to a server.
+            You can generate the current epoch time, convert timestamps into UTC and local time, and instantly turn
+            selected dates into Unix timestamps.
+        </p>
+
+        <h3>How to Use the Timestamp Converter</h3>
+        <ul>
+            <li>View the live current Unix timestamp at the top of the tool.</li>
+            <li>Enter a Unix timestamp to convert it into a readable date.</li>
+            <li>Select a date and time to convert it into a Unix timestamp.</li>
+            <li>Copy the timestamp or review the UTC and local time output instantly.</li>
+        </ul>
+
+        <h3>Features of This Tool</h3>
+        <ul>
+            <li>Live current Unix timestamp generator</li>
+            <li>One-click copy timestamp button</li>
+            <li>Convert Unix timestamp to readable date</li>
+            <li>Convert date and time to Unix timestamp</li>
+            <li>Shows both UTC and local time</li>
+            <li>Browser-based and private</li>
+            <li>Fast and easy to use</li>
+            <li>Free on desktop and mobile</li>
+        </ul>
+
+        <h3>Why Use a Timestamp Converter?</h3>
+        <p>
+            Timestamps are everywhere in modern software. They appear in server logs, JSON responses, database records,
+            tokens, scheduling systems, and event tracking tools. A timestamp converter makes it easy to understand what
+            a raw Unix value actually means in human-readable form.
+        </p>
+
+        <p>
+            It is also useful when you need to generate timestamps for testing APIs, comparing dates, building apps,
+            or debugging time-related logic in software projects.
+        </p>
+    </section>
+
+    <section class="info-section">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                What is a Unix timestamp?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                A <strong>Unix timestamp</strong> is the number of seconds that have passed since January 1, 1970 UTC.
+                It is commonly used in APIs, databases, logs, and software systems to represent time in numeric form.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                Can I convert a Unix timestamp into a readable date?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                Yes. Enter a Unix timestamp and the tool will instantly show both the UTC version and your local time
+                version of that date.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                Can I convert a date into a Unix timestamp?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                Yes. Select a date and time, then the tool will convert it into a Unix timestamp instantly.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                Does this tool use UTC or local time?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                The tool shows both. When converting a Unix timestamp, it displays the UTC time and your local time so
+                you can compare both formats easily.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                Does this timestamp converter store my data?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                No. This tool works directly in your browser, so your timestamps and dates are processed locally and are
+                not uploaded or stored on a server.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                Is this timestamp converter free?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                Yes. The tool is completely free to use with no registration required.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 SuperTools |
+            <a href="../privacy.html">Privacy Policy</a> |
+            <a href="../about.html">About Us</a> |
+            <a href="../contact.html">Contact</a>
+        </p>
+    </footer>
+
+    <script>
+        const accButtons = document.querySelectorAll(".accordion-btn");
+
+        accButtons.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                const content = btn.nextElementSibling;
+                const isOpen = btn.classList.contains("active");
+
+                accButtons.forEach(function (otherBtn) {
+                    otherBtn.classList.remove("active");
+                    const otherContent = otherBtn.nextElementSibling;
+                    if (otherContent) {
+                        otherContent.style.maxHeight = null;
+                        otherContent.classList.remove("open");
+                    }
+                });
+
+                if (!isOpen) {
+                    btn.classList.add("active");
+                    content.classList.add("open");
+                    requestAnimationFrame(function () {
+                        content.style.maxHeight = (content.scrollHeight + 30) + "px";
+                    });
+                }
+            });
+        });
+
+        const liveTimestamp = document.getElementById("liveTimestamp");
+        const timestampInput = document.getElementById("timestampInput");
+        const dateInput = document.getElementById("dateInput");
+        const result = document.getElementById("result");
+        const result2 = document.getElementById("result2");
+
+        function updateLiveTimestamp() {
+            liveTimestamp.value = Math.floor(Date.now() / 1000);
+        }
+
+        setInterval(updateLiveTimestamp, 1000);
+        updateLiveTimestamp();
+
+        function copyLiveTimestamp() {
+            if (!liveTimestamp.value) {
+                alert("No timestamp to copy.");
+                return;
+            }
+
+            navigator.clipboard.writeText(liveTimestamp.value)
+                .then(function () {
+                    alert("Timestamp copied!");
+                })
+                .catch(function () {
+                    alert("Failed to copy.");
+                });
+        }
+
+        function scrollToElement(element) {
+            requestAnimationFrame(function () {
+                element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            });
+        }
+
+        function showError(target, message) {
+            target.innerHTML =
+                '<div class="average-result result-pop">' +
+                '<div>' + message + '</div>' +
+                '</div>';
+
+            scrollToElement(target);
+        }
+
+        function convertTimestampToDate() {
+            const rawValue = timestampInput.value.trim();
+
+            if (!rawValue) {
+                showError(result, "Please enter a Unix timestamp.");
+                return;
+            }
+
+            let timestampNumber = Number(rawValue);
+
+            if (!isFinite(timestampNumber)) {
+                showError(result, "Please enter a valid numeric timestamp.");
+                return;
+            }
+
+            if (rawValue.length === 13) {
+                timestampNumber = timestampNumber / 1000;
+            }
+
+            const date = new Date(timestampNumber * 1000);
+
+            if (isNaN(date.getTime())) {
+                showError(result, "Unable to convert this timestamp.");
+                return;
+            }
+
+            result.innerHTML =
+                '<div class="average-result result-pop">' +
+                '<div class="stats">' +
+                '<div class="stat-box">Unix Timestamp<br><span>' + Math.floor(timestampNumber).toLocaleString() + '</span></div>' +
+                '<div class="stat-box">UTC Year<br><span>' + date.getUTCFullYear() + '</span></div>' +
+                '<div class="stat-box">Month<br><span>' + (date.getUTCMonth() + 1) + '</span></div>' +
+                '</div>' +
+                '<hr>' +
+                '<div><strong>Timestamp converted successfully.</strong> Here is the readable date and time version of your Unix timestamp.</div>' +
+                '<label><strong>UTC Time</strong></label>' +
+                '<textarea rows="2" readonly>' + date.toUTCString() + '</textarea>' +
+                '<label><strong>Local Time</strong></label>' +
+                '<textarea rows="3" readonly>' + date.toString() + '</textarea>' +
+                '<label><strong>ISO Format</strong></label>' +
+                '<textarea rows="2" readonly>' + date.toISOString() + '</textarea>' +
+                '</div>';
+
+            scrollToElement(result);
+        }
+
+        function convertDateToTimestamp() {
+            const dateValue = dateInput.value;
+
+            if (!dateValue) {
+                showError(result2, "Please select a date and time.");
+                return;
+            }
+
+            const date = new Date(dateValue);
+
+            if (isNaN(date.getTime())) {
+                showError(result2, "Please enter a valid date.");
+                return;
+            }
+
+            const unixSeconds = Math.floor(date.getTime() / 1000);
+            const unixMilliseconds = date.getTime();
+
+            result2.innerHTML =
+                '<div class="average-result result-pop">' +
+                '<div class="stats">' +
+                '<div class="stat-box">Unix Seconds<br><span>' + unixSeconds.toLocaleString() + '</span></div>' +
+                '<div class="stat-box">Milliseconds<br><span>' + unixMilliseconds.toLocaleString() + '</span></div>' +
+                '<div class="stat-box">UTC Year<br><span>' + date.getUTCFullYear() + '</span></div>' +
+                '</div>' +
+                '<hr>' +
+                '<div><strong>Date converted successfully.</strong> Here is the Unix timestamp generated from your selected date and time.</div>' +
+                '<label><strong>Unix Timestamp (Seconds)</strong></label>' +
+                '<textarea id="timestampSecondsOutput" rows="2" readonly>' + unixSeconds + '</textarea>' +
+                '<label><strong>Unix Timestamp (Milliseconds)</strong></label>' +
+                '<textarea id="timestampMillisecondsOutput" rows="2" readonly>' + unixMilliseconds + '</textarea>' +
+                '<label><strong>Readable Local Time</strong></label>' +
+                '<textarea rows="3" readonly>' + date.toString() + '</textarea>' +
+                '</div>';
+
+            scrollToElement(result2);
+        }
+
+        function loadSampleTimestamp() {
+            timestampInput.value = "1700000000";
+            dateInput.value = "";
+            result.innerHTML = "";
+            result2.innerHTML = "";
+        }
+
+        function clearTimestampTool() {
+            timestampInput.value = "";
+            dateInput.value = "";
+            result.innerHTML = "";
+            result2.innerHTML = "";
+            updateLiveTimestamp();
+            timestampInput.focus();
+        }
+
+const tools = [
+    { name: "JSON Formatter", url: "json-formatter.html", icon: "🧩", category: "developer" },
+    { name: "Colourcode Converter", url: "colourcodeconverter.html", icon: "🎨", category: "developer" },
+    { name: "CSS Minifier", url: "css-minifier.html", icon: "🧵", category: "developer" },
+    { name: "CSV to Json", url: "csv-to-json.html", icon: "📊", category: "developer" },
+    { name: "Htaccess Generator", url: "htaccessgenerator.html", icon: "⚙️", category: "developer" },
+    { name: "Javascript Minifier", url: "javascript-minifier.html", icon: "⚡", category: "developer" },
+    { name: "Json to CSV", url: "json-to-csv.html", icon: "🔁", category: "developer" },
+    { name: "Regex Tester", url: "regextester.html", icon: "🔍", category: "developer" },
+    { name: "Timestamp Converter", url: "timestampconverter.html", icon: "⏱️", category: "developer" },
+    { name: "Base64 Encoder Decoder", url: "base64-encoder-decoder.html", icon: "🔐", category: "developer" }
+];
+
+        const currentPage = window.location.pathname.split("/").pop();
+
+        const related = tools
+            .filter(function (tool) {
+                return tool.url !== currentPage;
+            })
+            .sort(function () {
+                return 0.5 - Math.random();
+            })
+            .slice(0, 4);
+
+        const relatedContainer = document.getElementById("relatedToolsContainer");
+
+        if (relatedContainer) {
+            relatedContainer.innerHTML = related.map(function (tool) {
+                return '<a href="' + tool.url + '" class="tool-card">' +
+                    '<div class="tool-icon">' + tool.icon + '</div>' +
+                    '<h3>' + tool.name + '</h3>' +
+                    '</a>';
+            }).join("");
+        }
+    </script>
+
+</body>
+
+</html>

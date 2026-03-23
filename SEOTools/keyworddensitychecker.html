@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Keyword Density Checker Online - Analyze Keyword Frequency & SEO Density</title>
+    <meta name="description" content="Free online keyword density checker to analyze keyword frequency, density percentage, repeated words, and key phrases for SEO optimization. Fast, accurate, and easy to use with SuperTools.">
+    <meta name="keywords" content="keyword density checker, seo keyword analyzer, keyword frequency checker, keyword percentage tool, content seo analyzer">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/keyworddensitychecker.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <meta property="og:title" content="Keyword Density Checker Online - SuperTools">
+    <meta property="og:description" content="Analyze keyword frequency, density percentage, and repeated phrases instantly for SEO optimization.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/keyworddensitychecker.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Keyword Density Checker Online - SuperTools">
+    <meta name="twitter:description" content="Analyze keyword frequency, density percentage, and repeated phrases instantly for SEO optimization.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+     crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Keyword Density Checker",
+      "alternateName": "SEO Keyword Density Analyzer",
+      "url": "https://supertools1.site/keyworddensitychecker.html",
+      "description": "Free online keyword density checker to analyze keyword frequency, density percentage, repeated words, and common phrases for SEO optimization.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Check keyword density percentage",
+        "Show keyword frequency",
+        "Analyze one-word keywords",
+        "Analyze two-word phrases",
+        "Analyze three-word phrases",
+        "Ignore common stop words",
+        "Set minimum word length",
+        "Copy results instantly",
+        "Free browser-based SEO tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is keyword density?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keyword density is the percentage showing how often a keyword appears in a piece of content compared to the total number of words. It is commonly used to analyze SEO content balance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good keyword density for SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no single perfect keyword density, but many writers aim for natural usage rather than forcing a percentage. Overusing a keyword can make content look spammy, while balanced usage usually works better."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool show keyword phrases too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool can analyze single words, two-word phrases, and three-word phrases so you can better understand your content and SEO targeting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I ignore common words?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can exclude common stop words such as the, and, is, in, and similar words to get a more meaningful keyword analysis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this keyword density checker free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this keyword density checker is completely free to use and works directly in your browser."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Keyword Density Checker</h1>
+    <p>Analyze keyword frequency, density percentage, repeated words, and common phrases for better SEO and content optimization.</p>
+
+    <label for="textInput">Enter Your Text</label>
+    <textarea id="textInput" rows="10" placeholder="Paste your content here..."></textarea>
+
+    <label>
+        <input type="checkbox" id="ignoreStopWords" checked>
+        Ignore common stop words
+    </label>
+
+    <label>
+        <input type="checkbox" id="includeBigrams" checked>
+        Include 2-word phrases
+    </label>
+
+    <label>
+        <input type="checkbox" id="includeTrigrams">
+        Include 3-word phrases
+    </label>
+
+    <label for="minWordLength">Minimum Word Length</label>
+    <select id="minWordLength">
+        <option value="1">1 character</option>
+        <option value="2">2 characters</option>
+        <option value="3" selected>3 characters</option>
+        <option value="4">4 characters</option>
+        <option value="5">5 characters</option>
+    </select>
+
+    <label for="topLimit">Show Top Results</label>
+    <select id="topLimit">
+        <option value="10">Top 10</option>
+        <option value="20" selected>Top 20</option>
+        <option value="30">Top 30</option>
+        <option value="50">Top 50</option>
+    </select>
+
+    <div class="button-group">
+        <button type="button" onclick="analyzeText()">
+            Check Density
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Keyword Density Checker</h2>
+
+    <p>
+        The <strong>Keyword Density Checker</strong> helps you analyze how often words and phrases appear in your content.
+        It calculates keyword frequency and keyword density percentage so you can understand whether your content is naturally optimized
+        or overly repetitive. This is useful for SEO writing, blog posts, landing pages, product descriptions, and general content review.
+    </p>
+
+    <p>
+        To use the tool, paste your content into the text box. Then choose whether you want to ignore common stop words,
+        include two-word phrases, include three-word phrases, and set the minimum word length. After that, click
+        <strong>Check Density</strong> to generate the analysis.
+    </p>
+
+    <p>
+        The tool shows useful content statistics such as total words, unique words, total characters, and estimated reading time.
+        It also lists the most repeated words and phrases along with how many times they appear and what percentage of the total content they represent.
+        This makes it easier to identify your main topics and spot unnatural keyword repetition.
+    </p>
+
+    <h3>What is Keyword Density?</h3>
+    <p>
+        Keyword density is the percentage of times a keyword appears in a text compared to the total number of words.
+        For example, if a word appears 5 times in a 250-word article, its keyword density is 2%.
+        This metric helps writers understand keyword usage, but content should still sound natural and useful to readers.
+    </p>
+
+    <p class="formula-box">
+        Keyword Density = (Keyword Count ÷ Total Word Count) × 100
+    </p>
+
+    <h3>Why Use This Tool?</h3>
+    <ul>
+        <li><strong>SEO Analysis:</strong> Find the most repeated words and phrases in your content.</li>
+        <li><strong>Phrase Detection:</strong> Analyze single words, 2-word phrases, and 3-word phrases.</li>
+        <li><strong>Cleaner Results:</strong> Ignore common stop words for more useful insights.</li>
+        <li><strong>Better Optimization:</strong> Spot overused terms and improve natural keyword usage.</li>
+        <li><strong>Fast and Free:</strong> Get results instantly in your browser with no signup.</li>
+        <li><strong>Easy to Understand:</strong> Clear tables, percentages, and summary stats.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is ideal for <strong>bloggers</strong>, <strong>SEO professionals</strong>, <strong>students</strong>,
+        <strong>copywriters</strong>, <strong>marketers</strong>, and <strong>website owners</strong>.
+        Whether you are improving search optimization or simply checking content repetition, this tool gives a quick and practical overview.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is keyword density?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Keyword density is the percentage showing how often a keyword appears compared to the total number of words in your content.
+            It is often used as a basic SEO content analysis metric.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: What is a good keyword density?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            There is no exact perfect percentage. In most cases, natural writing matters more than chasing a number.
+            Avoid stuffing the same term repeatedly and focus on helpful, readable content.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can this tool analyze keyword phrases?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This tool can show 2-word phrases and 3-word phrases, not just single words.
+            That makes it more useful for SEO content analysis.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: What are stop words?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Stop words are very common words such as the, is, in, and, of, and to.
+            Excluding them can help you focus on more meaningful keywords.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this keyword density checker free and safe?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tool is completely free and works directly in your browser.
+            You do not need to sign up or install anything.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+const stopWords = new Set([
+    "a","about","above","after","again","against","all","am","an","and","any","are","as","at",
+    "be","because","been","before","being","below","between","both","but","by",
+    "can","could",
+    "did","do","does","doing","down","during",
+    "each",
+    "few","for","from","further",
+    "had","has","have","having","he","her","here","hers","herself","him","himself","his","how",
+    "i","if","in","into","is","it","its","itself",
+    "just",
+    "me","more","most","my","myself",
+    "no","nor","not","now",
+    "of","off","on","once","only","or","other","our","ours","ourselves","out","over","own",
+    "same","she","should","so","some","such",
+    "than","that","the","their","theirs","them","themselves","then","there","these","they","this","those","through","to","too",
+    "under","until","up",
+    "very",
+    "was","we","were","what","when","where","which","while","who","whom","why","with","would",
+    "you","your","yours","yourself","yourselves"
+]);
+
+function cleanText(text) {
+    return text
+        .toLowerCase()
+        .replace(/[\u2018\u2019]/g, "'")
+        .replace(/[\u201c\u201d]/g, '"')
+        .replace(/[^a-z0-9\s'-]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function tokenize(text, minLength, ignoreCommonWords) {
+    const cleaned = cleanText(text);
+    if (!cleaned) return [];
+
+    return cleaned
+        .split(" ")
+        .map(word => word.replace(/^[-']+|[-']+$/g, ""))
+        .filter(word => word && word.length >= minLength)
+        .filter(word => !ignoreCommonWords || !stopWords.has(word));
+}
+
+function buildPhraseMap(words, size) {
+    const map = {};
+
+    for (let i = 0; i <= words.length - size; i++) {
+        const phrase = words.slice(i, i + size).join(" ");
+        map[phrase] = (map[phrase] || 0) + 1;
+    }
+
+    return map;
+}
+
+function sortFrequencyMap(map) {
+    return Object.entries(map).sort((a, b) => {
+        if (b[1] !== a[1]) return b[1] - a[1];
+        return a[0].localeCompare(b[0]);
+    });
+}
+
+function formatTableRows(items, totalBase, emptyMessage) {
+    if (!items.length) {
+        return `
+            <tr>
+                <td colspan="3">${emptyMessage}</td>
+            </tr>
+        `;
+    }
+
+    return items.map(([term, count]) => {
+        const percent = totalBase > 0 ? ((count / totalBase) * 100).toFixed(2) : "0.00";
+        return `
+            <tr>
+                <td>${term}</td>
+                <td>${count}</td>
+                <td>${percent}%</td>
+            </tr>
+        `;
+    }).join("");
+}
+
+function analyzeText() {
+    const input = document.getElementById("textInput").value;
+    const ignoreStopWords = document.getElementById("ignoreStopWords").checked;
+    const includeBigrams = document.getElementById("includeBigrams").checked;
+    const includeTrigrams = document.getElementById("includeTrigrams").checked;
+    const minWordLength = Number(document.getElementById("minWordLength").value);
+    const topLimit = Number(document.getElementById("topLimit").value);
+    const result = document.getElementById("result");
+
+    if (!input.trim()) {
+        result.innerHTML = `<div class="average-result result-pop"><strong>Please enter or paste some text first.</strong></div>`;
+        return;
+    }
+
+    const totalCharacters = input.length;
+    const totalCharactersNoSpaces = input.replace(/\s/g, "").length;
+    const originalWordMatches = cleanText(input).match(/[a-z0-9'-]+/g) || [];
+    const totalWordsOriginal = originalWordMatches.length;
+
+    const words = tokenize(input, minWordLength, ignoreStopWords);
+    const uniqueWords = new Set(words).size;
+    const readingTimeMinutes = Math.max(1, Math.ceil(totalWordsOriginal / 200));
+
+    const oneWordMap = {};
+    words.forEach(word => {
+        oneWordMap[word] = (oneWordMap[word] || 0) + 1;
+    });
+
+    const oneWordResults = sortFrequencyMap(oneWordMap).slice(0, topLimit);
+    const bigramResults = includeBigrams ? sortFrequencyMap(buildPhraseMap(words, 2)).filter(item => item[1] > 1).slice(0, topLimit) : [];
+    const trigramResults = includeTrigrams ? sortFrequencyMap(buildPhraseMap(words, 3)).filter(item => item[1] > 1).slice(0, topLimit) : [];
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Total Words<br><span>${totalWordsOriginal.toLocaleString()}</span></div>
+                <div class="stat-box">Filtered Words<br><span>${words.length.toLocaleString()}</span></div>
+                <div class="stat-box">Unique Words<br><span>${uniqueWords.toLocaleString()}</span></div>
+                <div class="stat-box">Characters<br><span>${totalCharacters.toLocaleString()}</span></div>
+                <div class="stat-box">No Spaces<br><span>${totalCharactersNoSpaces.toLocaleString()}</span></div>
+                <div class="stat-box">Read Time<br><span>${readingTimeMinutes} min</span></div>
+            </div>
+
+            <hr>
+
+            <div class="modern-card">
+                <h3>Top Single Words</h3>
+                <div class="data-table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Keyword</th>
+                                <th>Count</th>
+                                <th>Density</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${formatTableRows(oneWordResults, words.length, "No keywords found with the current filters.")}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            ${includeBigrams ? `
+            <div class="modern-card">
+                <h3>Top 2-Word Phrases</h3>
+                <div class="data-table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Phrase</th>
+                                <th>Count</th>
+                                <th>Density</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${formatTableRows(bigramResults, Math.max(words.length - 1, 0), "No repeated 2-word phrases found.")}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            ` : ""}
+
+            ${includeTrigrams ? `
+            <div class="modern-card">
+                <h3>Top 3-Word Phrases</h3>
+                <div class="data-table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Phrase</th>
+                                <th>Count</th>
+                                <th>Density</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${formatTableRows(trigramResults, Math.max(words.length - 2, 0), "No repeated 3-word phrases found.")}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            ` : ""}
+        </div>
+    `;
+
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function clearFields() {
+    document.getElementById("textInput").value = "";
+    document.getElementById("ignoreStopWords").checked = true;
+    document.getElementById("includeBigrams").checked = true;
+    document.getElementById("includeTrigrams").checked = false;
+    document.getElementById("minWordLength").value = "3";
+    document.getElementById("topLimit").value = "20";
+    document.getElementById("result").innerHTML = "";
+}
+
+function loadSample() {
+    document.getElementById("textInput").value = `SEO content writing is important for modern websites. Good SEO content helps search engines understand your page. A keyword density checker can help you review SEO content, find repeated phrases, and improve content optimization. When writing SEO content, use your main keyword naturally and focus on helpful content for readers.`;
+    analyzeText();
+}
+
+function copyResult() {
+    const resultElement = document.getElementById("result");
+    const text = resultElement.innerText.trim();
+
+    if (!text) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(text)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Meta Tag Generator", url: "metataggenerator.html", icon: "🏷️", category: "seo" },
+    { name: "Open Graph Generator", url: "opengraphgenerator.html", icon: "🔗", category: "seo" },
+    { name: "Robots.txt Generator", url: "robotstxtgenerator.html", icon: "🤖", category: "seo" },
+    { name: "Sitemap Generator", url: "sitemapgenerator.html", icon: "🗺️", category: "seo" },
+    { name: "URL Slug Generator", url: "urlsluggenerator.html", icon: "✍️", category: "seo" },
+    { name: "Schema Generator", url: "schemagenerator.html", icon: "📄", category: "seo" },
+    { name: "Keyword Density Checker", url: "keyworddensitychecker.html", icon: "📊", category: "seo" },
+    { name: "Hreflang Generator", url: "hreflanggenerator.html", icon: "🌍", category: "seo" },
+    { name: "HTML TO Text", url: "htmltotext.html", icon: "🧾", category: "seo" },
+    { name: "TEXT TO HTML", url: "texttohtml.html", icon: "💻", category: "seo" },
+    { name: "Word Frequency", url: "wordfrequency.html", icon: "🔤", category: "seo" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const relatedToolsContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedToolsContainer) {
+    relatedToolsContainer.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

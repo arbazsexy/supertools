@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bcrypt Generator Online - Generate Secure Bcrypt Password Hashes | SuperTools</title>
+    <meta name="description" content="Free online bcrypt generator to create secure password hashes instantly. Generate and verify bcrypt hashes with adjustable salt rounds using SuperTools.">
+    <meta name="keywords" content="bcrypt generator, bcrypt hash generator, bcrypt password hash, password hashing tool, bcrypt verifier, online bcrypt tool">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/bcryptgenerator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bcrypt Generator Online - SuperTools">
+    <meta property="og:description" content="Generate and verify secure bcrypt password hashes instantly online.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/bcryptgenerator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bcrypt Generator Online - SuperTools">
+    <meta name="twitter:description" content="Generate and verify secure bcrypt password hashes instantly online.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Bcrypt Generator",
+      "alternateName": "Bcrypt Hash Generator",
+      "url": "https://supertools1.site/bcryptgenerator.html",
+      "description": "Free online bcrypt generator to create and verify secure password hashes with adjustable cost factor.",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Generate bcrypt password hashes online",
+        "Adjust salt rounds or cost factor",
+        "Verify password against bcrypt hash",
+        "Copy generated hash instantly",
+        "Sample data support",
+        "Browser-based hashing"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is bcrypt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bcrypt is a password hashing algorithm designed to securely store passwords. It includes salting and a configurable cost factor to slow down brute-force attacks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are salt rounds in bcrypt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Salt rounds, also called the cost factor, control how computationally expensive the bcrypt hashing process is. Higher rounds increase security but also increase processing time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I verify a password with this tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. This bcrypt tool lets you test whether a password matches a given bcrypt hash."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is bcrypt better than SHA1 for passwords?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Bcrypt is much better for password storage because it is intentionally slow and includes salting, while SHA1 is not recommended for password hashing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this bcrypt generator safe to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The hashing runs in your browser using JavaScript, which helps keep input local. For real production secrets, always follow proper backend security and secret management practices."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+    <h1>Bcrypt Generator</h1>
+    <p>Create secure bcrypt password hashes instantly and verify passwords against existing bcrypt hashes.</p>
+
+    <label for="passwordInput">Password</label>
+    <textarea id="passwordInput" rows="5" placeholder="Enter password..." aria-label="Password input"></textarea>
+
+    <label for="saltRounds">Salt Rounds (Cost Factor)</label>
+    <input type="number" id="saltRounds" value="10" min="4" max="15" aria-label="Salt rounds">
+
+    <label for="verifyHash">Verify Against Existing Bcrypt Hash (optional)</label>
+    <textarea id="verifyHash" rows="4" placeholder="Paste a bcrypt hash here to test the password..." aria-label="Verify bcrypt hash"></textarea>
+
+    <div class="button-group">
+        <button type="button" onclick="generateBcrypt()">
+            Generate Hash
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyGeneratedHash()">
+            Copy Hash
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="verifyPassword()">
+            Verify Password
+        </button>
+    </div>
+
+    <div id="result"></div>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+
+    <h2>How to Use the Bcrypt Generator</h2>
+
+    <p>
+        The <strong>Bcrypt Generator</strong> helps you create secure password hashes for applications, login systems,
+        and developer testing. Bcrypt is widely used for password storage because it is intentionally slow and includes
+        a built-in salt, which makes brute-force attacks harder than with basic hashing algorithms.
+    </p>
+
+    <p>
+        To use this tool, enter a password, choose the <strong>salt rounds</strong> or cost factor, and click
+        <strong>Generate Hash</strong>. The tool will instantly create a bcrypt hash in your browser. You can then copy
+        the hash and use it in development or testing workflows.
+    </p>
+
+    <p>
+        You can also paste an existing bcrypt hash into the verification area and test whether a password matches it.
+        This makes the tool useful not only for generating hashes, but also for checking password-hash matches during development.
+    </p>
+
+    <h3>Why bcrypt?</h3>
+
+    <ul>
+        <li><strong>Made for passwords:</strong> Bcrypt is designed specifically for password hashing.</li>
+        <li><strong>Built-in salting:</strong> It automatically includes a salt in every hash.</li>
+        <li><strong>Configurable cost:</strong> Higher rounds slow hashing to resist attacks.</li>
+        <li><strong>Widely used:</strong> Bcrypt is supported across many web frameworks and backend systems.</li>
+        <li><strong>Better than fast hashes:</strong> It is much safer for passwords than plain SHA1 or MD5.</li>
+    </ul>
+
+    <h3>What are Salt Rounds?</h3>
+
+    <p>
+        Salt rounds, also called the <strong>cost factor</strong>, control how much work bcrypt does before generating
+        the final hash. A higher value increases security, but it also takes longer to compute. For many applications,
+        values around <strong>10 to 12</strong> are common starting points depending on server performance and security needs.
+    </p>
+
+    <h3>Important Security Note</h3>
+
+    <p>
+        This tool is useful for learning, development, and quick testing. For production systems, password hashing should
+        usually happen on the backend, and passwords should never be exposed in frontend code, logs, or screenshots.
+    </p>
+
+</section>
+
+<section class="info-section">
+
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            What is bcrypt?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            <strong>Bcrypt</strong> is a password hashing algorithm created for secure password storage. It is designed to
+            be slower than regular hashing algorithms, which helps reduce the effectiveness of brute-force attacks.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            What are salt rounds?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Salt rounds are the <strong>cost factor</strong> used by bcrypt. Higher values increase the work needed to
+            generate the hash, which improves security but also takes more time.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Is bcrypt better than SHA1 for passwords?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. <strong>Bcrypt</strong> is much better for password hashing because it is intentionally slow and includes
+            salting. SHA1 is not recommended for storing passwords securely.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Can I verify a password against a bcrypt hash?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. Paste the bcrypt hash into the verification field, enter the password, and use the
+            <strong>Verify Password</strong> button to test whether they match.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Is this tool free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This bcrypt generator is completely free to use and works directly in your browser without sign-up.
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.4.3/bcrypt.min.js"></script>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+let generatedHash = "";
+
+function escapeHtml(text) {
+    return String(text)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+}
+
+function getPasswordStrength(password) {
+    let score = 0;
+
+    if (password.length >= 8) score++;
+    if (password.length >= 12) score++;
+    if (/[a-z]/.test(password)) score++;
+    if (/[A-Z]/.test(password)) score++;
+    if (/[0-9]/.test(password)) score++;
+    if (/[^A-Za-z0-9]/.test(password)) score++;
+
+    if (score <= 2) return "Weak";
+    if (score <= 4) return "Moderate";
+    return "Strong";
+}
+
+function generateBcrypt() {
+    const password = document.getElementById("passwordInput").value;
+    const rounds = parseInt(document.getElementById("saltRounds").value, 10);
+    const result = document.getElementById("result");
+
+    if (!password) {
+        result.innerHTML = `<div class="average-result">Please enter a password first.</div>`;
+        return;
+    }
+
+    if (!rounds || rounds < 4 || rounds > 15) {
+        result.innerHTML = `<div class="average-result">Please enter a valid salt rounds value between 4 and 15.</div>`;
+        return;
+    }
+
+    try {
+        const salt = bcrypt.genSaltSync(rounds);
+        const hash = bcrypt.hashSync(password, salt);
+        const strength = getPasswordStrength(password);
+        generatedHash = hash;
+
+        result.innerHTML = `
+            <div class="average-result result-pop">
+                <div class="stats">
+                    <div class="stat-box">Rounds<br><span>${rounds}</span></div>
+                    <div class="stat-box">Password Length<br><span>${password.length}</span></div>
+                    <div class="stat-box">Strength Hint<br><span>${strength}</span></div>
+                    <div class="stat-box">Hash Prefix<br><span>${escapeHtml(hash.slice(0, 4))}</span></div>
+                </div>
+
+                <hr>
+
+                <div><strong>Generated Bcrypt Hash:</strong></div>
+                <div class="modern-card">
+                    <p class="binary-output">${escapeHtml(hash)}</p>
+                    <button type="button" class="action-btn copy-btn" onclick="copyGeneratedHash()">Copy Hash</button>
+                </div>
+
+                <div class="generator-meta">
+                    Bcrypt automatically includes a salt inside the hash output, so the same password can produce different hashes each time.
+                </div>
+            </div>
+        `;
+
+        result.scrollIntoView({ behavior: "smooth", block: "start" });
+    } catch (error) {
+        result.innerHTML = `<div class="average-result">Unable to generate bcrypt hash. Please try again.</div>`;
+    }
+}
+
+function verifyPassword() {
+    const password = document.getElementById("passwordInput").value;
+    const hash = document.getElementById("verifyHash").value.trim();
+    const result = document.getElementById("result");
+
+    if (!password) {
+        result.innerHTML = `<div class="average-result">Please enter a password to verify.</div>`;
+        return;
+    }
+
+    if (!hash) {
+        result.innerHTML = `<div class="average-result">Please paste a bcrypt hash to verify against.</div>`;
+        return;
+    }
+
+    try {
+        const matched = bcrypt.compareSync(password, hash);
+
+        result.innerHTML = `
+            <div class="average-result result-pop">
+                <div class="stats">
+                    <div class="stat-box">Verification<br><span>${matched ? "Matched" : "Not Matched"}</span></div>
+                    <div class="stat-box">Password Length<br><span>${password.length}</span></div>
+                    <div class="stat-box">Hash Entered<br><span>${hash.length} chars</span></div>
+                </div>
+
+                <hr>
+
+                <div class="status-message">
+                    <strong>${matched ? "Success:" : "Result:"}</strong>
+                    ${matched
+                        ? "The password matches the bcrypt hash."
+                        : "The password does not match the bcrypt hash."}
+                </div>
+
+                <div class="modern-card">
+                    <p class="binary-output">${escapeHtml(hash)}</p>
+                </div>
+            </div>
+        `;
+
+        result.scrollIntoView({ behavior: "smooth", block: "start" });
+    } catch (error) {
+        result.innerHTML = `<div class="average-result">That does not look like a valid bcrypt hash.</div>`;
+    }
+}
+
+function copyGeneratedHash() {
+    const result = document.getElementById("result");
+
+    if (!generatedHash) {
+        result.innerHTML = `<div class="average-result">No hash available to copy. Generate a hash first.</div>`;
+        return;
+    }
+
+    navigator.clipboard.writeText(generatedHash)
+        .then(() => alert("Bcrypt hash copied to clipboard!"))
+        .catch(() => alert("Failed to copy hash."));
+}
+
+function clearFields() {
+    document.getElementById("passwordInput").value = "";
+    document.getElementById("saltRounds").value = "10";
+    document.getElementById("verifyHash").value = "";
+    document.getElementById("result").innerHTML = "";
+    generatedHash = "";
+}
+
+function loadSample() {
+    document.getElementById("passwordInput").value = "MySecurePass123!";
+    document.getElementById("saltRounds").value = "10";
+    document.getElementById("verifyHash").value = "";
+    generateBcrypt();
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Password Strength Checker", url: "passwordstrengthchecker.html", icon: "🛡️", category: "security" },
+    { name: "Hash Identifier", url: "hashidentifier.html", icon: "🔢", category: "security" },
+    { name: "JWT Tool", url: "jwttool.html", icon: "🪪", category: "security" },
+    { name: "API Key Generator", url: "apikeygenerator.html", icon: "🔑", category: "security" },
+    { name: "Bcrypt Generator", url: "bcryptgenerator.html", icon: "🔐", category: "security" },
+    { name: "Encryption Tool", url: "encryptiontool.html", icon: "🧩", category: "security" },
+    { name: "Password List Generator", url: "passwordlistgenerator.html", icon: "📜", category: "security" },
+    { name: "Random Token Generator", url: "randomtokengenerator.html", icon: "🎲", category: "security" },
+    { name: "SHA1 Generator", url: "sha1generator.html", icon: "#️⃣", category: "security" },
+    { name: "SHA256 Generator", url: "sha256-generator.html", icon: "🔒", category: "security" }
+];
+
+// detect current page
+const currentPage = window.location.pathname.split("/").pop();
+
+// filter related tools
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

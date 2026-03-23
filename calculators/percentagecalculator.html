@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Free Percentage Calculator Online - Increase, Decrease & More | SuperTools</title>
+    <meta name="description" content="Free online percentage calculator to find what X% of Y is, percentage increase, decrease, added percentage, subtracted percentage, and what percent one number is of another.">
+    <meta name="keywords" content="percentage calculator, percentage increase calculator, percentage decrease calculator, what percent of calculator, percent difference calculator">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/percentagecalculator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Percentage Calculator Online - SuperTools">
+    <meta property="og:description" content="Calculate percentages, increases, decreases, and more instantly with this free online percentage calculator.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/percentagecalculator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Percentage Calculator Online - SuperTools">
+    <meta name="twitter:description" content="Calculate percentages, increases, decreases, and more instantly.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Percentage Calculator",
+      "alternateName": "Percent Calculator",
+      "url": "https://supertools1.site/percentagecalculator.html",
+      "description": "Free online percentage calculator to find percentages, percentage increase, percentage decrease, and what percentage one number is of another.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Calculate what X% of Y is",
+        "Find what percent one number is of another",
+        "Calculate percentage increase",
+        "Calculate percentage decrease",
+        "Add percentage to a number",
+        "Subtract percentage from a number",
+        "Instant browser-based calculation",
+        "Free online tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I calculate what X% of Y is?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To calculate what X% of Y is, divide X by 100 and multiply the result by Y. For example, 20% of 50 is 10."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate percentage increase?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Subtract the old value from the new value, divide by the old value, and multiply by 100. This gives the percentage increase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate percentage decrease?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Subtract the ending value from the starting value, divide by the starting value, and multiply by 100. This gives the percentage decrease."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this calculator for discounts and tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this percentage calculator can be used for discounts, tax calculations, price changes, markups, savings, and many everyday percentage problems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this percentage calculator free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this percentage calculator is completely free and works directly in your browser without any sign-up."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Percentage Calculator</h1>
+    <p>Calculate percentages, increases, decreases, added values, and more instantly with this free online percentage calculator.</p>
+
+    <div class="button-group">
+        <button type="button" onclick="calculateAllResults()">
+            <i class="fas fa-calculator"></i> Calculate All
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div class="calc-grid">
+        <div class="calc-card">
+            <h3>1. What is X% of Y?</h3>
+            <div class="input-row">
+                <input type="number" id="percent1" placeholder="Enter percentage">
+                <input type="number" id="number1" placeholder="Enter number">
+            </div>
+            <div id="result1" class="result-box">Enter values and click Calculate All.</div>
+        </div>
+
+        <div class="calc-card">
+            <h3>2. Y is what percent of X?</h3>
+            <div class="input-row">
+                <input type="number" id="number2a" placeholder="Enter first number (X)">
+                <input type="number" id="number2b" placeholder="Enter second number (Y)">
+            </div>
+            <div id="result2" class="result-box">Enter values and click Calculate All.</div>
+        </div>
+
+        <div class="calc-card">
+            <h3>3. Percentage Increase</h3>
+            <div class="input-row">
+                <input type="number" id="oldValue" placeholder="Old value">
+                <input type="number" id="newValue" placeholder="New value">
+            </div>
+            <div id="result3" class="result-box">Enter values and click Calculate All.</div>
+        </div>
+
+        <div class="calc-card">
+            <h3>4. Percentage Decrease</h3>
+            <div class="input-row">
+                <input type="number" id="startValue" placeholder="Starting value">
+                <input type="number" id="endValue" placeholder="Ending value">
+            </div>
+            <div id="result4" class="result-box">Enter values and click Calculate All.</div>
+        </div>
+
+        <div class="calc-card">
+            <h3>5. Add Percentage to a Number</h3>
+            <div class="input-row">
+                <input type="number" id="baseAdd" placeholder="Original number">
+                <input type="number" id="percentAdd" placeholder="Percentage to add">
+            </div>
+            <div id="result5" class="result-box">Enter values and click Calculate All.</div>
+        </div>
+
+        <div class="calc-card">
+            <h3>6. Subtract Percentage from a Number</h3>
+            <div class="input-row">
+                <input type="number" id="baseSubtract" placeholder="Original number">
+                <input type="number" id="percentSubtract" placeholder="Percentage to subtract">
+            </div>
+            <div id="result6" class="result-box">Enter values and click Calculate All.</div>
+        </div>
+    </div>
+
+    <div id="summaryResult"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Percentage Calculator</h2>
+
+    <p>
+        The <strong>Percentage Calculator</strong> is a fast and easy online tool that helps you solve common percentage problems in seconds.
+        You can use it to find <strong>what percentage of a number</strong>, calculate <strong>percentage increase or decrease</strong>,
+        and quickly add or subtract percentages from values.
+    </p>
+
+    <p>
+        To use the tool, simply enter your values into the correct section and click the <strong>Calculate All</strong> button.
+        The calculator will instantly show the result for each completed section. You can also use the
+        <strong>Sample</strong> button to load example values and test the calculator.
+    </p>
+
+    <p>
+        This tool is useful for <strong>discount calculations</strong>, <strong>tax calculations</strong>,
+        <strong>profit analysis</strong>, <strong>exam score comparisons</strong>, <strong>salary growth</strong>,
+        and many everyday math situations.
+    </p>
+
+    <h3>Common Percentage Formulas</h3>
+
+    <p class="formula-box">
+        Percentage of a Number = (Percentage ÷ 100) × Number
+    </p>
+
+    <p class="formula-box">
+        Percentage Increase = ((New Value - Old Value) ÷ Old Value) × 100
+    </p>
+
+    <p class="formula-box">
+        Percentage Decrease = ((Starting Value - Ending Value) ÷ Starting Value) × 100
+    </p>
+
+    <p class="formula-box">
+        What Percent = (Part ÷ Whole) × 100
+    </p>
+
+    <h3>Why Use This Percentage Calculator?</h3>
+    <ul>
+        <li><strong>Multiple Calculations:</strong> Solve several percentage problems in one place.</li>
+        <li><strong>Fast Results:</strong> Get instant answers without manual math.</li>
+        <li><strong>Student Friendly:</strong> Useful for homework, exams, and practice.</li>
+        <li><strong>Business Friendly:</strong> Great for discounts, markups, sales, and profit calculations.</li>
+        <li><strong>Simple Interface:</strong> Easy to use on desktop and mobile.</li>
+        <li><strong>Free to Use:</strong> No login or signup required.</li>
+        <li><strong>Browser-Based:</strong> All calculations happen instantly in your browser.</li>
+    </ul>
+
+    <h3>Where Can You Use It?</h3>
+    <p>
+        You can use this calculator for shopping discounts, GST and tax estimates, school marks,
+        salary increments, business reports, savings goals, financial planning, and many other situations
+        where percentages matter.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: How do I calculate what X% of Y is?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            To find <strong>X% of Y</strong>, divide the percentage by 100 and multiply it by the number.
+            <br><br>
+            For example, 20% of 50 is:
+            <br>
+            <strong>(20 ÷ 100) × 50 = 10</strong>
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: How do I calculate percentage increase?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            To calculate percentage increase, subtract the old value from the new value, divide by the old value,
+            and multiply by 100.
+            <br><br>
+            Example:
+            <br>
+            Old value = 100, New value = 125
+            <br>
+            Increase = ((125 - 100) ÷ 100) × 100 = <strong>25%</strong>
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: How do I calculate percentage decrease?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            To calculate percentage decrease, subtract the ending value from the starting value, divide by the starting value,
+            and multiply by 100.
+            <br><br>
+            Example:
+            <br>
+            Starting value = 80, Ending value = 60
+            <br>
+            Decrease = ((80 - 60) ÷ 80) × 100 = <strong>25%</strong>
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I use this calculator for discounts and tax?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tool is useful for <strong>discounts</strong>, <strong>price reductions</strong>,
+            <strong>tax calculations</strong>, <strong>markups</strong>, and many financial calculations involving percentages.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this percentage calculator free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this percentage calculator is <strong>100% free</strong> and works directly in your browser.
+            No signup, download, or payment is required.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function formatNumber(num) {
+    if (!isFinite(num)) return "Invalid";
+    return Number.isInteger(num) ? num.toString() : parseFloat(num.toFixed(4)).toString();
+}
+
+function setResult(id, message) {
+    document.getElementById(id).innerHTML = message;
+}
+
+function calculateAllResults() {
+    const p1 = parseFloat(document.getElementById("percent1").value);
+    const n1 = parseFloat(document.getElementById("number1").value);
+
+    const n2a = parseFloat(document.getElementById("number2a").value);
+    const n2b = parseFloat(document.getElementById("number2b").value);
+
+    const oldValue = parseFloat(document.getElementById("oldValue").value);
+    const newValue = parseFloat(document.getElementById("newValue").value);
+
+    const startValue = parseFloat(document.getElementById("startValue").value);
+    const endValue = parseFloat(document.getElementById("endValue").value);
+
+    const baseAdd = parseFloat(document.getElementById("baseAdd").value);
+    const percentAdd = parseFloat(document.getElementById("percentAdd").value);
+
+    const baseSubtract = parseFloat(document.getElementById("baseSubtract").value);
+    const percentSubtract = parseFloat(document.getElementById("percentSubtract").value);
+
+    let summary = [];
+
+    if (!isNaN(p1) && !isNaN(n1)) {
+        const result = (p1 / 100) * n1;
+        setResult("result1", `<strong>${formatNumber(p1)}%</strong> of <strong>${formatNumber(n1)}</strong> = <strong>${formatNumber(result)}</strong>`);
+        summary.push(`• ${formatNumber(p1)}% of ${formatNumber(n1)} = ${formatNumber(result)}`);
+    } else {
+        setResult("result1", "Enter both values to calculate this section.");
+    }
+
+    if (!isNaN(n2a) && !isNaN(n2b)) {
+        if (n2a === 0) {
+            setResult("result2", "<span style='color:red;'>First number cannot be zero.</span>");
+        } else {
+            const result = (n2b / n2a) * 100;
+            setResult("result2", `<strong>${formatNumber(n2b)}</strong> is <strong>${formatNumber(result)}%</strong> of <strong>${formatNumber(n2a)}</strong>`);
+            summary.push(`• ${formatNumber(n2b)} is ${formatNumber(result)}% of ${formatNumber(n2a)}`);
+        }
+    } else {
+        setResult("result2", "Enter both values to calculate this section.");
+    }
+
+    if (!isNaN(oldValue) && !isNaN(newValue)) {
+        if (oldValue === 0) {
+            setResult("result3", "<span style='color:red;'>Old value cannot be zero.</span>");
+        } else {
+            const increase = ((newValue - oldValue) / oldValue) * 100;
+            setResult("result3", `Increase from <strong>${formatNumber(oldValue)}</strong> to <strong>${formatNumber(newValue)}</strong> = <strong>${formatNumber(increase)}%</strong>`);
+            summary.push(`• Increase: ${formatNumber(increase)}%`);
+        }
+    } else {
+        setResult("result3", "Enter both values to calculate this section.");
+    }
+
+    if (!isNaN(startValue) && !isNaN(endValue)) {
+        if (startValue === 0) {
+            setResult("result4", "<span style='color:red;'>Starting value cannot be zero.</span>");
+        } else {
+            const decrease = ((startValue - endValue) / startValue) * 100;
+            setResult("result4", `Decrease from <strong>${formatNumber(startValue)}</strong> to <strong>${formatNumber(endValue)}</strong> = <strong>${formatNumber(decrease)}%</strong>`);
+            summary.push(`• Decrease: ${formatNumber(decrease)}%`);
+        }
+    } else {
+        setResult("result4", "Enter both values to calculate this section.");
+    }
+
+    if (!isNaN(baseAdd) && !isNaN(percentAdd)) {
+        const amountAdded = (percentAdd / 100) * baseAdd;
+        const finalValue = baseAdd + amountAdded;
+        setResult("result5", `<strong>${formatNumber(percentAdd)}%</strong> added to <strong>${formatNumber(baseAdd)}</strong> = <strong>${formatNumber(finalValue)}</strong>`);
+        summary.push(`• ${formatNumber(baseAdd)} + ${formatNumber(percentAdd)}% = ${formatNumber(finalValue)}`);
+    } else {
+        setResult("result5", "Enter both values to calculate this section.");
+    }
+
+    if (!isNaN(baseSubtract) && !isNaN(percentSubtract)) {
+        const amountSubtracted = (percentSubtract / 100) * baseSubtract;
+        const finalValue = baseSubtract - amountSubtracted;
+        setResult("result6", `<strong>${formatNumber(percentSubtract)}%</strong> subtracted from <strong>${formatNumber(baseSubtract)}</strong> = <strong>${formatNumber(finalValue)}</strong>`);
+        summary.push(`• ${formatNumber(baseSubtract)} - ${formatNumber(percentSubtract)}% = ${formatNumber(finalValue)}`);
+    } else {
+        setResult("result6", "Enter both values to calculate this section.");
+    }
+
+    const summaryBox = document.getElementById("summaryResult");
+    if (summary.length) {
+        summaryBox.innerHTML = `
+            <div class="average-result" style="margin-top:20px;">
+                <div class="stats">
+                    <div class="stat-box">Completed<br>${summary.length}</div>
+                    <div class="stat-box">Tool<br>Percentage Calculator</div>
+                </div>
+                <div class="result-box" style="margin-top:15px;">
+                    <strong>Results Summary:</strong><br><br>
+                    ${summary.join("<br>")}
+                </div>
+            </div>
+        `;
+    } else {
+        summaryBox.innerHTML = "";
+    }
+}
+
+function clearFields() {
+    const ids = [
+        "percent1", "number1",
+        "number2a", "number2b",
+        "oldValue", "newValue",
+        "startValue", "endValue",
+        "baseAdd", "percentAdd",
+        "baseSubtract", "percentSubtract"
+    ];
+
+    ids.forEach(id => document.getElementById(id).value = "");
+
+    setResult("result1", "Enter values and click Calculate All.");
+    setResult("result2", "Enter values and click Calculate All.");
+    setResult("result3", "Enter values and click Calculate All.");
+    setResult("result4", "Enter values and click Calculate All.");
+    setResult("result5", "Enter values and click Calculate All.");
+    setResult("result6", "Enter values and click Calculate All.");
+
+    document.getElementById("summaryResult").innerHTML = "";
+}
+
+function loadSample() {
+    document.getElementById("percent1").value = "25";
+    document.getElementById("number1").value = "400";
+
+    document.getElementById("number2a").value = "500";
+    document.getElementById("number2b").value = "125";
+
+    document.getElementById("oldValue").value = "80";
+    document.getElementById("newValue").value = "100";
+
+    document.getElementById("startValue").value = "200";
+    document.getElementById("endValue").value = "150";
+
+    document.getElementById("baseAdd").value = "1000";
+    document.getElementById("percentAdd").value = "18";
+
+    document.getElementById("baseSubtract").value = "500";
+    document.getElementById("percentSubtract").value = "10";
+
+    calculateAllResults();
+}
+
+function copyResult() {
+    const text = document.getElementById("summaryResult").innerText.trim();
+
+    if (!text) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(text)
+        .then(() => alert("Results copied to clipboard!"))
+        .catch(() => alert("Failed to copy results."));
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

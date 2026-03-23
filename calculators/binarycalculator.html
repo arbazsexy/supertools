@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Binary Calculator Online - Convert & Calculate Binary Instantly</title>
+<meta name="description" content="Free online binary calculator to perform binary addition, subtraction, multiplication, division, bitwise operations, and binary to decimal, hex, and octal conversion instantly.">
+<meta name="keywords" content="binary calculator, binary to decimal, binary converter, bitwise calculator, binary addition, binary subtraction, binary to hex">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/binarycalculator.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Binary Calculator Online - SuperTools">
+<meta property="og:description" content="Perform binary calculations and conversions instantly with this free online binary calculator.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/binarycalculator.html">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Binary Calculator Online - SuperTools">
+<meta name="twitter:description" content="Perform binary calculations and conversions instantly with this free online binary calculator.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Binary Calculator",
+  "alternateName": "Binary Converter and Bitwise Calculator",
+  "url": "https://supertools1.site/binarycalculator.html",
+  "description": "Free online binary calculator to perform binary arithmetic, bitwise operations, and binary to decimal, hexadecimal, and octal conversions instantly.",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Binary addition",
+    "Binary subtraction",
+    "Binary multiplication",
+    "Binary division",
+    "Bitwise AND",
+    "Bitwise OR",
+    "Bitwise XOR",
+    "Binary to decimal conversion",
+    "Binary to hexadecimal conversion",
+    "Binary to octal conversion"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a binary calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A binary calculator is a tool that allows you to perform calculations using binary numbers, which consist only of 0s and 1s. It supports operations like addition, subtraction, multiplication, division, and bitwise logic such as AND, OR, and XOR."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What numbers are valid in binary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Valid binary numbers only contain the digits 0 and 1. Any other digit or symbol is not considered a valid binary number and will result in an error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I convert binary to decimal, hexadecimal, and octal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this binary calculator allows you to convert binary numbers into decimal, hexadecimal, and octal formats instantly. This is useful for programming, digital electronics, and data representation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between arithmetic and bitwise operations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Arithmetic operations include addition, subtraction, multiplication, and division. Bitwise operations like AND, OR, and XOR work at the bit level, comparing each binary digit directly and are commonly used in programming and digital systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this binary calculator free and safe to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this binary calculator is completely free to use and runs directly in your browser. No data is stored or sent to a server, ensuring full privacy and security."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Binary Calculator</h1>
+    <p>Perform binary arithmetic, bitwise operations, and base conversions instantly.</p>
+
+    <label for="bin1">Binary Number 1</label>
+    <input type="text" id="bin1" placeholder="e.g. 1010">
+
+    <label for="bin2">Binary Number 2</label>
+    <input type="text" id="bin2" placeholder="e.g. 1101">
+
+    <label for="operation">Select Operation</label>
+    <select id="operation">
+        <option value="add">Addition (+)</option>
+        <option value="sub">Subtraction (-)</option>
+        <option value="mul">Multiplication (x)</option>
+        <option value="div">Division (÷)</option>
+        <option value="and">Bitwise AND</option>
+        <option value="or">Bitwise OR</option>
+        <option value="xor">Bitwise XOR</option>
+    </select>
+
+    <div class="button-group">
+        <button type="button" onclick="calculateBinary()">
+            <i class="fas fa-calculator"></i> Calculate
+        </button>
+        <button type="button" class="action-btn clear-btn" onclick="clearCalculator()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+        <button type="button" class="action-btn sample-btn" onclick="loadSampleBinary()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+    </div>
+
+    <h3 style="margin-top: 25px;">Conversions</h3>
+    <input type="text" id="convertInput" placeholder="Enter binary number e.g. 101101">
+
+    <div class="button-group">
+        <button type="button" onclick="convertAll()">
+            <i class="fas fa-right-left"></i> Convert
+        </button>
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Binary Calculator</h2>
+
+    <p>
+        The <strong>Binary Calculator</strong> helps you perform common binary math operations and base conversions quickly and accurately. You can use it to add, subtract, multiply, and divide binary numbers, as well as apply bitwise logic operations like AND, OR, and XOR.
+    </p>
+
+    <p>
+        To calculate, enter two valid binary numbers using only 0 and 1, select the required operation, and click the <strong>Calculate</strong> button. The tool will instantly show the result in binary and decimal form.
+    </p>
+
+    <p>
+        You can also use the conversion section to convert a binary number into <strong>decimal</strong>, <strong>hexadecimal</strong>, and <strong>octal</strong>. This makes the tool useful for students, programmers, and anyone working with digital systems or computer science concepts.
+    </p>
+
+    <h3>What is a Binary Number?</h3>
+    <p>
+        A binary number is a number written using only two digits: <strong>0</strong> and <strong>1</strong>. Binary is the foundation of digital electronics and computing because computers store and process information in binary form.
+    </p>
+
+    <p class="formula-box">
+        Example: Binary 1010 = Decimal 10
+    </p>
+
+    <h3>Why Use This Binary Calculator?</h3>
+    <ul>
+        <li><strong>Fast Binary Calculations:</strong> Perform arithmetic and bitwise operations instantly.</li>
+        <li><strong>Multiple Conversions:</strong> Convert binary to decimal, hex, and octal in one place.</li>
+        <li><strong>Student Friendly:</strong> Great for computer science, digital logic, and exam preparation.</li>
+        <li><strong>Accurate Results:</strong> Reduces manual calculation mistakes.</li>
+        <li><strong>Free and Private:</strong> Works in your browser with no sign-up required.</li>
+    </ul>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is a binary calculator?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            A binary calculator is a tool that lets you perform calculations using binary numbers, which use only 0 and 1. It can handle arithmetic operations like addition and subtraction, as well as logic-based operations such as AND, OR, and XOR.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: What numbers are valid in binary?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Valid binary numbers contain only the digits <strong>0</strong> and <strong>1</strong>. Any other digit, letter, or symbol makes the input invalid for binary calculations.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can this tool convert binary to decimal, hex, and octal?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, the conversion section allows you to instantly convert a binary number into decimal, hexadecimal, and octal formats, making it useful for programming and number system studies.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: What is the difference between arithmetic and bitwise operations?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Arithmetic operations work like normal math, such as addition, subtraction, multiplication, and division. Bitwise operations compare the bits directly and include AND, OR, and XOR, which are commonly used in computing and digital logic.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this binary calculator free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this binary calculator is completely free to use. It runs directly in your browser, so you can use it instantly without creating an account or downloading anything.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function isBinary(str) {
+    return /^[01]+$/.test(str.trim());
+}
+
+function formatBinaryResult(num) {
+    if (num < 0) {
+        return "-" + Math.abs(num).toString(2);
+    }
+    return num.toString(2);
+}
+
+function showResult(html) {
+    const resultBox = document.getElementById("result");
+    resultBox.innerHTML = html;
+
+    const yOffset = -100; // adjust based on navbar height
+    const y = resultBox.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
+}
+
+function calculateBinary() {
+    const b1 = document.getElementById("bin1").value.trim();
+    const b2 = document.getElementById("bin2").value.trim();
+    const op = document.getElementById("operation").value;
+
+    if (!isBinary(b1) || !isBinary(b2)) {
+        showResult("<div class='average-result result-pop'>Please enter valid binary numbers using only 0 and 1.</div>");
+        return;
+    }
+
+    const n1 = parseInt(b1, 2);
+    const n2 = parseInt(b2, 2);
+    let result;
+
+    if (op === "div" && n2 === 0) {
+        showResult("<div class='average-result result-pop'>Division by zero is not allowed.</div>");
+        return;
+    }
+
+    switch (op) {
+        case "add":
+            result = n1 + n2;
+            break;
+        case "sub":
+            result = n1 - n2;
+            break;
+        case "mul":
+            result = n1 * n2;
+            break;
+        case "div":
+            result = Math.floor(n1 / n2);
+            break;
+        case "and":
+            result = n1 & n2;
+            break;
+        case "or":
+            result = n1 | n2;
+            break;
+        case "xor":
+            result = n1 ^ n2;
+            break;
+        default:
+            showResult("<div class='average-result result-pop'>Invalid operation selected.</div>");
+            return;
+    }
+
+    showResult(`
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Binary Result<br><span class="binary-output">${formatBinaryResult(result)}</span></div>
+                <div class="stat-box">Decimal<br>${result}</div>
+                <div class="stat-box">Hex<br>${result.toString(16).toUpperCase()}</div>
+                <div class="stat-box">Octal<br>${result.toString(8)}</div>
+            </div>
+        </div>
+    `);
+}
+
+function convertAll() {
+    const input = document.getElementById("convertInput").value.trim();
+
+    if (!isBinary(input)) {
+        showResult("<div class='average-result result-pop'>Please enter a valid binary number for conversion.</div>");
+        return;
+    }
+
+    const dec = parseInt(input, 2);
+
+    showResult(`
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Binary<br><span class="binary-output">${input}</span></div>
+                <div class="stat-box">Decimal<br>${dec}</div>
+                <div class="stat-box">Hex<br>${dec.toString(16).toUpperCase()}</div>
+                <div class="stat-box">Octal<br>${dec.toString(8)}</div>
+            </div>
+        </div>
+    `);
+}
+
+function clearCalculator() {
+    document.getElementById("bin1").value = "";
+    document.getElementById("bin2").value = "";
+    document.getElementById("convertInput").value = "";
+    document.getElementById("operation").selectedIndex = 0;
+    document.getElementById("result").innerHTML = "";
+}
+
+function loadSampleBinary() {
+    document.getElementById("bin1").value = "1010";
+    document.getElementById("bin2").value = "1101";
+    document.getElementById("convertInput").value = "101101";
+    calculateBinary();
+}
+
+function copyResult() {
+    const resultText = document.getElementById("result").innerText.trim();
+
+    if (!resultText) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(resultText)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

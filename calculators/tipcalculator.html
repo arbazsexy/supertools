@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tip Calculator Online - Calculate Tips & Split Bills Easily | SuperTools</title>
+    <meta name="description" content="Free online tip calculator to calculate tip amount, total bill, bill split, tip per person, and total per person instantly. Fast, accurate, and easy to use on mobile and desktop.">
+    <meta name="keywords" content="tip calculator, tip percentage calculator, bill split calculator, split bill calculator, restaurant tip calculator, gratuity calculator">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/tipcalculator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <meta property="og:title" content="Tip Calculator Online - SuperTools">
+    <meta property="og:description" content="Calculate tips, total bill, and split expenses instantly with this free tip calculator.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/tipcalculator.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tip Calculator Online - SuperTools">
+    <meta name="twitter:description" content="Calculate tips and split bills instantly with this free online tip calculator.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Tip Calculator",
+      "url": "https://supertools1.site/tipcalculator.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web",
+      "description": "Free online tip calculator to calculate tip amount, total bill, and split bills easily.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Organization", "name": "SuperTools", "url": "https://supertools1.site" }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this tip calculator accurate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tip calculator uses accurate percentage-based calculations to show tip amount, total bill, and split amounts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I split the bill between multiple people?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, enter the number of people and the calculator will show bill per person, tip per person, and total per person."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I enter a custom tip percentage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can use the slider or type a custom tip percentage value directly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool work on mobile devices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tip calculator works on mobile, tablet, and desktop devices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool store my bill information?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, all calculations happen directly in your browser and your data is not stored."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+     crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Tip Calculator</h1>
+    <p>Calculate tip amount, total bill, and split the bill easily with this free online tip calculator.</p>
+
+    <label for="bill">Enter bill amount</label>
+    <input type="number" id="bill" placeholder="e.g. 1250" min="0" step="0.01">
+
+    <label for="tip">Select tip percentage</label>
+    <input type="range" id="tip" min="0" max="50" value="10">
+    <p class="tip-label">Tip: <span id="tipValue">10</span>%</p>
+
+    <label for="customTip">Or enter custom tip percentage</label>
+    <input type="number" id="customTip" placeholder="e.g. 12.5" min="0" max="100" step="0.1">
+
+    <label for="people">Number of people</label>
+    <input type="number" id="people" value="1" min="1" step="1">
+
+    <div class="button-group">
+        <button type="button" onclick="calculateTip()">
+            <i class="fas fa-calculator"></i> Calculate
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Tip Calculator</h2>
+    <p>
+        The <strong>Tip Calculator</strong> helps you quickly calculate how much tip to give on a restaurant bill,
+        service bill, or any shared expense. It can also split the bill between multiple people, making it useful
+        for dinners, group outings, cafes, travel, and shared payments.
+    </p>
+
+    <p>
+        To use the calculator, enter the <strong>bill amount</strong>, select a <strong>tip percentage</strong>,
+        and enter the <strong>number of people</strong>. You can use the slider for quick tip selection or type
+        a custom tip percentage manually. The calculator will instantly show the tip amount, total bill,
+        bill per person, tip per person, and total per person.
+    </p>
+
+    <p>
+        This tool is useful when you want to avoid manual math and get a quick, accurate breakdown before paying.
+        It works directly in your browser and is easy to use on both desktop and mobile devices.
+    </p>
+
+    <h3>What This Tip Calculator Shows</h3>
+    <ul>
+        <li><strong>Tip Amount:</strong> The amount added as a tip.</li>
+        <li><strong>Total Bill:</strong> Bill amount plus tip.</li>
+        <li><strong>Bill Per Person:</strong> Original bill divided by the number of people.</li>
+        <li><strong>Tip Per Person:</strong> Tip amount divided by the number of people.</li>
+        <li><strong>Total Per Person:</strong> Final amount each person should pay.</li>
+    </ul>
+
+    <h3>Why Use This Tool?</h3>
+    <ul>
+        <li><strong>Fast and Accurate:</strong> Instant tip and split bill calculations.</li>
+        <li><strong>Split Bills Easily:</strong> Perfect for group meals and outings.</li>
+        <li><strong>Custom Tip Support:</strong> Use preset or custom tip percentages.</li>
+        <li><strong>Mobile Friendly:</strong> Works on phones, tablets, and desktops.</li>
+        <li><strong>Private:</strong> Runs directly in your browser.</li>
+        <li><strong>Free to Use:</strong> No signup or download needed.</li>
+    </ul>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: Is this tip calculator accurate?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tip calculator uses accurate percentage calculations to show the
+            <strong>tip amount</strong>, <strong>total bill</strong>, and <strong>split bill amount</strong>.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I split the bill between multiple people?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, just enter the number of people and the calculator will show
+            <strong>bill per person</strong>, <strong>tip per person</strong>, and <strong>total per person</strong>.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I enter a custom tip percentage?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can use the slider or type your own tip percentage value in the custom tip input box.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Does this tool work on mobile devices?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tip calculator works smoothly on mobile phones, tablets, laptops, and desktop computers.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Does this tool store my bill information?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No, all calculations run directly in your browser, so your bill information is not stored.
+        </div>
+    </div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="../privacy.html">Privacy Policy</a> | 
+<a href="../about.html">About Us</a> | 
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+const bill = document.getElementById("bill");
+const tip = document.getElementById("tip");
+const customTip = document.getElementById("customTip");
+const people = document.getElementById("people");
+const tipValue = document.getElementById("tipValue");
+const result = document.getElementById("result");
+
+function formatCurrency(num) {
+    return Number(num).toFixed(2);
+}
+
+function getTipPercent() {
+    const custom = parseFloat(customTip.value);
+    if (!isNaN(custom) && custom >= 0) {
+        return custom;
+    }
+    return parseFloat(tip.value);
+}
+
+function syncTipDisplays(fromCustom = false) {
+    if (fromCustom) {
+        const custom = parseFloat(customTip.value);
+        if (!isNaN(custom) && custom >= 0 && custom <= 50) {
+            tip.value = custom;
+            tipValue.innerText = custom;
+        } else if (customTip.value.trim() === "") {
+            tipValue.innerText = tip.value;
+        } else {
+            tipValue.innerText = custom;
+        }
+    } else {
+        tipValue.innerText = tip.value;
+        customTip.value = tip.value;
+    }
+}
+
+function calculateTip() {
+    const billAmount = parseFloat(bill.value);
+    const tipPercent = getTipPercent();
+    const peopleCount = parseInt(people.value, 10);
+
+    if (isNaN(billAmount) || billAmount <= 0) {
+        result.innerHTML = `<div class="average-result">Please enter a valid bill amount.</div>`;
+        return;
+    }
+
+    if (isNaN(tipPercent) || tipPercent < 0) {
+        result.innerHTML = `<div class="average-result">Please enter a valid tip percentage.</div>`;
+        return;
+    }
+
+    if (isNaN(peopleCount) || peopleCount <= 0) {
+        result.innerHTML = `<div class="average-result">Please enter a valid number of people.</div>`;
+        return;
+    }
+
+    const tipAmount = (billAmount * tipPercent) / 100;
+    const total = billAmount + tipAmount;
+    const billPerPerson = billAmount / peopleCount;
+    const tipPerPerson = tipAmount / peopleCount;
+    const perPerson = total / peopleCount;
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Bill Amount<br>₹${formatCurrency(billAmount)}</div>
+                <div class="stat-box">Tip %<br>${formatCurrency(tipPercent)}%</div>
+                <div class="stat-box">Tip Amount<br>₹${formatCurrency(tipAmount)}</div>
+                <div class="stat-box">Total Bill<br>₹${formatCurrency(total)}</div>
+                <div class="stat-box">People<br>${peopleCount}</div>
+                <div class="stat-box">Bill Per Person<br>₹${formatCurrency(billPerPerson)}</div>
+                <div class="stat-box">Tip Per Person<br>₹${formatCurrency(tipPerPerson)}</div>
+                <div class="stat-box">Total Per Person<br>₹${formatCurrency(perPerson)}</div>
+            </div>
+            <hr>
+            <div><strong>Formula:</strong> Tip = Bill x Tip % ÷ 100</div>
+        </div>
+    `;
+}
+
+function clearFields() {
+    bill.value = "";
+    tip.value = 10;
+    customTip.value = "";
+    people.value = 1;
+    tipValue.innerText = 10;
+    result.innerHTML = "";
+}
+
+function loadSample() {
+    bill.value = "1250";
+    tip.value = 10;
+    customTip.value = "10";
+    people.value = "4";
+    tipValue.innerText = 10;
+    calculateTip();
+}
+
+function copyResult() {
+    const resultText = result.innerText.trim();
+
+    if (!resultText) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(resultText)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+
+bill.addEventListener("input", calculateTip);
+tip.addEventListener("input", () => {
+    syncTipDisplays(false);
+    calculateTip();
+});
+customTip.addEventListener("input", () => {
+    syncTipDisplays(true);
+    calculateTip();
+});
+people.addEventListener("input", calculateTip);
+</script>
+
+<script>
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const relatedContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedContainer) {
+    relatedContainer.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

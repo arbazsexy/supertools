@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Lorem Ipsum Generator Online - Free Dummy Text Tool | SuperTools</title>
+<meta name="description" content="Generate Lorem Ipsum placeholder text instantly. Create paragraphs, sentences, or words with this free Lorem Ipsum Generator by SuperTools.">
+<meta name="keywords" content="lorem ipsum generator, dummy text generator, placeholder text generator, lorem ipsum text, sample text generator">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/loremipsumgenerator.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Lorem Ipsum Generator - SuperTools">
+<meta property="og:description" content="Generate Lorem Ipsum placeholder text instantly for designs, layouts, and content mockups.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/loremipsumgenerator.html">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lorem Ipsum Generator - SuperTools">
+<meta name="twitter:description" content="Generate Lorem Ipsum placeholder text instantly for designs, layouts, and content mockups.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Lorem Ipsum Generator",
+  "alternateName": "Dummy Text Generator",
+  "url": "https://supertools1.site/loremipsumgenerator.html",
+  "description": "Free online Lorem Ipsum Generator to create dummy placeholder text in words, sentences, or paragraphs instantly.",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Generate lorem ipsum words",
+    "Generate lorem ipsum sentences",
+    "Generate lorem ipsum paragraphs",
+    "Start with Lorem ipsum",
+    "Copy generated text",
+    "Download generated text",
+    "Show output statistics",
+    "Free and browser-based tool"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Lorem Ipsum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lorem Ipsum is placeholder text commonly used in design, publishing, and website mockups to fill content areas before final text is ready."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I generate words, sentences, and paragraphs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this tool can generate Lorem Ipsum as words, sentences, or paragraphs depending on the option you choose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I start the text with Lorem ipsum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can enable the option to start the generated content with the classic Lorem ipsum opening."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I copy or download the result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can copy the generated text instantly or download it as a TXT file."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this Lorem Ipsum Generator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this Lorem Ipsum Generator is completely free to use online."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+<h1>Lorem Ipsum Generator</h1>
+<p>Generate placeholder text instantly for designs, layouts, content mockups, and publishing work.</p>
+
+<label for="type">Choose type</label>
+<select id="type" aria-label="Choose lorem ipsum type">
+    <option value="paragraphs">Paragraphs</option>
+    <option value="sentences">Sentences</option>
+    <option value="words">Words</option>
+</select>
+
+<label for="count">Count</label>
+<input type="number" id="count" value="3" min="1" max="100" aria-label="Enter count">
+
+<label>
+    <input type="checkbox" id="startLorem" checked>
+    Start with "Lorem ipsum"
+</label>
+
+<div class="button-group">
+    <button type="button" onclick="generateLorem()">
+        <i class="fas fa-file-alt"></i> Generate
+    </button>
+
+    <button type="button" class="action-btn clear-btn" onclick="clearText()">
+        <i class="fas fa-trash"></i> Clear
+    </button>
+
+    <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+        <i class="fas fa-flask"></i> Sample
+    </button>
+
+    <button type="button" class="action-btn copy-btn" onclick="copyText()">
+        <i class="fas fa-copy"></i> Copy
+    </button>
+
+    <button type="button" class="action-btn secondary-btn" onclick="downloadText()">
+        <i class="fas fa-download"></i> Download
+    </button>
+</div>
+
+<div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+<h2>How to Use the Lorem Ipsum Generator</h2>
+
+<p>
+The <strong>Lorem Ipsum Generator</strong> helps you create placeholder text instantly for websites, apps, layouts,
+wireframes, blog templates, printed designs, and other content mockups. It is a quick way to fill empty content areas
+without needing real text.
+</p>
+
+<p>
+To use the tool, choose whether you want to generate <strong>words</strong>, <strong>sentences</strong>, or
+<strong>paragraphs</strong>. Then select how many you need and decide whether the text should begin with the classic
+<strong>Lorem ipsum</strong> opening. After clicking <strong>Generate</strong>, the result appears instantly in a clean output box.
+</p>
+
+<p>
+You can then copy the generated text, clear it, or download it as a TXT file. This makes it useful for designers,
+developers, students, writers, and anyone building templates or sample layouts.
+</p>
+
+<h3>What is Lorem Ipsum?</h3>
+<p>
+Lorem Ipsum is dummy placeholder text used in printing, publishing, and digital design. It allows people to focus on the
+visual structure of a page instead of the final wording. It is commonly used in website mockups, brochures, templates,
+landing pages, and content demos.
+</p>
+
+<p class="formula-box">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+
+<h3>Why Use This Lorem Ipsum Generator?</h3>
+<ul>
+    <li><strong>Flexible Output:</strong> Generate words, sentences, or paragraphs.</li>
+    <li><strong>Fast Content Filler:</strong> Create placeholder text instantly.</li>
+    <li><strong>Classic Opening Option:</strong> Start with the traditional Lorem ipsum phrase.</li>
+    <li><strong>Easy Copy and Download:</strong> Reuse generated text quickly in projects.</li>
+    <li><strong>Helpful for Mockups:</strong> Great for design, UI, templates, and publishing layouts.</li>
+    <li><strong>Free and Private:</strong> Works directly in your browser with no sign-up needed.</li>
+</ul>
+
+<h3>Who Can Use This Tool?</h3>
+<p>
+This tool is ideal for <strong>web designers</strong>, <strong>developers</strong>, <strong>students</strong>,
+<strong>content creators</strong>, <strong>publishers</strong>, and <strong>marketers</strong>. It is especially useful when
+you need sample text quickly while building layouts, testing formatting, or preparing visual content drafts.
+</p>
+</section>
+
+<section class="info-section">
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q1: What is Lorem Ipsum?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Lorem Ipsum is placeholder text commonly used in design, publishing, and website mockups to fill content areas
+        before the final text is ready.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q2: Can I generate words, sentences, and paragraphs?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes. This tool can generate Lorem Ipsum as words, sentences, or paragraphs depending on the option you choose.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q3: Can I start the text with "Lorem ipsum"?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes. Enable the <strong>Start with "Lorem ipsum"</strong> option to begin the generated content with the classic opening.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q4: Can I copy or download the result?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes. You can copy the generated text instantly or download it as a TXT file for later use.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q5: Is this tool free to use?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes. This Lorem Ipsum Generator is completely free to use online.
+    </div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools |
+<a href="../privacy.html">Privacy Policy</a> |
+<a href="../about.html">About Us</a> |
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+const loremWords = (
+    "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum"
+).split(" ");
+
+const typeInput = document.getElementById("type");
+const countInput = document.getElementById("count");
+const startLoremInput = document.getElementById("startLorem");
+const resultBox = document.getElementById("result");
+
+function randomWord() {
+    return loremWords[Math.floor(Math.random() * loremWords.length)];
+}
+
+function capitalize(text) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+function generateSentence() {
+    const length = Math.floor(Math.random() * 8) + 6;
+    const sentence = [];
+
+    for (let i = 0; i < length; i++) {
+        sentence.push(randomWord());
+    }
+
+    return capitalize(sentence.join(" ")) + ".";
+}
+
+function generateParagraph() {
+    const sentenceCount = Math.floor(Math.random() * 4) + 3;
+    const sentences = [];
+
+    for (let i = 0; i < sentenceCount; i++) {
+        sentences.push(generateSentence());
+    }
+
+    return sentences.join(" ");
+}
+
+function countWords(text) {
+    return text.trim() ? text.trim().split(/\s+/).length : 0;
+}
+
+function countCharacters(text) {
+    return text.length;
+}
+
+function countParagraphs(text) {
+    return text.trim() ? text.split(/\n\s*\n/).length : 0;
+}
+
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function generateLorem() {
+    const type = typeInput.value;
+    const count = Math.max(1, Math.min(100, parseInt(countInput.value, 10) || 1));
+    const startLorem = startLoremInput.checked;
+
+    countInput.value = count;
+
+    let result = "";
+
+    if (type === "words") {
+        const words = [];
+        for (let i = 0; i < count; i++) {
+            words.push(randomWord());
+        }
+        result = words.join(" ");
+        if (startLorem) {
+            result = "Lorem ipsum " + result;
+        }
+    } else if (type === "sentences") {
+        const sentences = [];
+        for (let i = 0; i < count; i++) {
+            sentences.push(generateSentence());
+        }
+        result = sentences.join(" ");
+        if (startLorem) {
+            result = "Lorem ipsum dolor sit amet. " + result;
+        }
+    } else {
+        const paragraphs = [];
+        for (let i = 0; i < count; i++) {
+            paragraphs.push(generateParagraph());
+        }
+        result = paragraphs.join("\n\n");
+        if (startLorem) {
+            const firstParagraph = paragraphs[0] ? "Lorem ipsum dolor sit amet, " + paragraphs[0].charAt(0).toLowerCase() + paragraphs[0].slice(1) : "";
+            paragraphs[0] = firstParagraph;
+            result = paragraphs.join("\n\n");
+        }
+    }
+
+    const wordCount = countWords(result);
+    const charCount = countCharacters(result);
+    const paragraphCount = countParagraphs(result);
+
+    resultBox.innerHTML = `
+        <div class="modern-card result-pop">
+            <h3>Generated Text</h3>
+            <textarea id="output" class="code-output result-textarea" rows="12" readonly>${escapeHtml(result)}</textarea>
+
+            <div class="stats">
+                <div class="stat-box">Words<br>${wordCount}</div>
+                <div class="stat-box">Characters<br>${charCount}</div>
+                <div class="stat-box">Paragraphs<br>${paragraphCount}</div>
+                <div class="stat-box">Type<br>${capitalize(type)}</div>
+            </div>
+
+            <div class="generator-meta">
+                Generated ${count} ${type}. Start with Lorem ipsum: ${startLorem ? "Yes" : "No"}
+            </div>
+        </div>
+    `;
+
+    resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+async function copyText() {
+    const output = document.getElementById("output");
+
+    if (!output) {
+        alert("No generated text to copy.");
+        return;
+    }
+
+    try {
+        await navigator.clipboard.writeText(output.value);
+        alert("Generated text copied to clipboard!");
+    } catch (error) {
+        output.select();
+        document.execCommand("copy");
+        alert("Generated text copied to clipboard!");
+    }
+}
+
+function clearText() {
+    resultBox.innerHTML = "";
+    countInput.value = 3;
+    typeInput.value = "paragraphs";
+    startLoremInput.checked = true;
+}
+
+function loadSample() {
+    typeInput.value = "sentences";
+    countInput.value = 5;
+    startLoremInput.checked = true;
+    generateLorem();
+}
+
+function downloadText() {
+    const output = document.getElementById("output");
+
+    if (!output) {
+        alert("No generated text to download.");
+        return;
+    }
+
+    const blob = new Blob([output.value], { type: "text/plain;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "lorem-ipsum.txt";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+}
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
+<script>
+const tools = [
+    { name: "Remove Duplicate Lines", url: "removeduplicatelines.html", icon: "🧹", category: "text" },
+    { name: "Text Sorter", url: "textsorter.html", icon: "🔤", category: "text" },
+    { name: "Remove Line Breaks", url: "removelinebreaks.html", icon: "↩️", category: "text" },
+    { name: "Character Remover", url: "characterremover.html", icon: "✂️", category: "text" },
+    { name: "Add Line Numbers", url: "addlinenumbers.html", icon: "🔢", category: "text" },
+    { name: "Text to ASCII", url: "texttoascii.html", icon: "💻", category: "text" },
+    { name: "Case Alternator", url: "casealternator.html", icon: "🔠", category: "text" },
+    { name: "Text to Slug", url: "texttoslug.html", icon: "🔗", category: "text" },
+    { name: "Loremipsum Generator", url: "loremipsumgenerator.html", icon: "📝", category: "text" },
+    { name: "Random Text Generator", url: "randomtextgenerator.html", icon: "🎲", category: "text" },
+    { name: "Text Converter", url: "textconverter.html", icon: "🔄", category: "text" },
+    { name: "Text Reverser", url: "textreverser.html", icon: "↔️", category: "text" },
+    { name: "Text Repeater", url: "textrepeater.html", icon: "🔁", category: "text" },
+    { name: "Word Counter", url: "wordcounter.html", icon: "📏", category: "text" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

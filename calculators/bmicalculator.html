@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Free BMI Calculator Online - Body Mass Index for Adults | SuperTools</title>
+    <meta name="description" content="Free online BMI calculator to check your Body Mass Index instantly. Get accurate BMI results, adult BMI categories, and a simple weight status guide with SuperTools.">
+    <meta name="keywords" content="bmi calculator, body mass index calculator, bmi chart, bmi for adults, weight calculator">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/bmicalculator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <meta property="og:title" content="Accurate BMI Calculator Online - SuperTools">
+    <meta property="og:description" content="Check your BMI category instantly using our fast, private, and free tool.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/bmicalculator.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Accurate BMI Calculator Online - SuperTools">
+    <meta name="twitter:description" content="Check your BMI category instantly using our fast, private, and free tool.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "BMI Calculator",
+      "alternateName": "Body Mass Index Calculator",
+      "url": "https://supertools1.site/bmicalculator.html",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "description": "A free web tool to calculate Body Mass Index based on height and weight.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "BMI calculation for adults",
+        "Weight status categories",
+        "BMI result with interpretation",
+        "Free browser-based calculator"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is BMI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BMI stands for Body Mass Index. It is a simple calculation that uses your height and weight to estimate whether your body weight falls within a general category such as underweight, normal weight, overweight, or obese."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is BMI calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BMI is calculated by dividing weight in kilograms by height in meters squared. The formula is BMI = kg/m²."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is BMI accurate for everyone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BMI is a useful screening tool for many adults, but it does not directly measure body fat or health. It may not be equally accurate for athletes, older adults, children, or people with unusual body composition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the adult BMI categories?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For adults, a BMI below 18.5 is considered underweight, 18.5 to 24.9 is normal weight, 25.0 to 29.9 is overweight, and 30.0 or higher is obese."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this BMI calculator free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this BMI calculator is completely free and works directly in your browser without sign-up."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+     crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>BMI Calculator</h1>
+    <p>Calculate your Body Mass Index instantly to check your general weight category.</p>
+
+    <label for="weight">Weight (kg)</label>
+    <input type="number" id="weight" placeholder="e.g. 70" min="1" step="0.1">
+
+    <label for="height">Height (cm)</label>
+    <input type="number" id="height" placeholder="e.g. 175" min="1" step="0.1">
+
+    <div class="button-group">
+        <button type="button" onclick="calculateBMI()">
+            <i class="fas fa-calculator"></i> Calculate BMI
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearBMI()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSampleBMI()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>What is Body Mass Index (BMI)?</h2>
+    <p>
+        Body Mass Index, or <strong>BMI</strong>, is a simple measurement that uses a person's height and weight to estimate whether their body weight falls within a general health category. It is commonly used as a quick screening tool for adults.
+    </p>
+
+    <p>
+        The formula for BMI is based on weight in kilograms divided by height in meters squared. This gives a number that is compared with standard adult BMI ranges.
+    </p>
+
+    <p class="formula-box">
+        BMI = weight (kg) ÷ height (m²)
+    </p>
+
+    <p>
+        A higher or lower BMI may suggest that a person is underweight, at a normal weight, overweight, or obese. However, BMI does not directly measure body fat and should be used as a general guide rather than a medical diagnosis.
+    </p>
+
+    <h3>BMI Categories for Adults</h3>
+    <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse: collapse; margin-top: 10px;">
+            <tr style="background:#4facfe; color:white;">
+                <th style="padding:10px; border:1px solid #ddd;">BMI Range</th>
+                <th style="padding:10px; border:1px solid #ddd;">Category</th>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #ddd;">Less than 18.5</td>
+                <td style="padding:10px; border:1px solid #ddd;">Underweight</td>
+            </tr>
+            <tr style="background:#f9f9f9;">
+                <td style="padding:10px; border:1px solid #ddd;">18.5 – 24.9</td>
+                <td style="padding:10px; border:1px solid #ddd;">Normal weight</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #ddd;">25.0 – 29.9</td>
+                <td style="padding:10px; border:1px solid #ddd;">Overweight</td>
+            </tr>
+            <tr style="background:#f9f9f9;">
+                <td style="padding:10px; border:1px solid #ddd;">30.0 or higher</td>
+                <td style="padding:10px; border:1px solid #ddd;">Obese</td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="background: #fff3cd; padding: 20px; border-left: 5px solid #ffecb5; margin-top: 30px; border-radius: 8px;">
+        <strong>Medical Disclaimer:</strong> This BMI calculator is for informational purposes only. It should not be used as a substitute for professional medical advice, diagnosis, or treatment.
+    </div>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            What is BMI?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            BMI stands for Body Mass Index. It is a quick way to estimate whether a person's body weight is generally low, normal, high, or very high compared with their height.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            How is BMI calculated?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            BMI is calculated by dividing your weight in kilograms by your height in meters squared. For example, if a person weighs 70 kg and is 1.75 m tall, the BMI is 70 ÷ (1.75 × 1.75).
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Is BMI accurate for everyone?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            BMI is useful for many adults, but it is not perfect for everyone. It does not directly measure body fat and may not reflect the health status of athletes, children, older adults, or people with higher muscle mass.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            What are the adult BMI categories?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Adult BMI categories are usually divided into underweight, normal weight, overweight, and obese based on standard numeric ranges. These categories help give a general interpretation of your BMI result.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Is this BMI calculator free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this BMI calculator is completely free to use and works instantly in your browser.
+        </div>
+    </div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools |
+<a href="../privacy.html">Privacy Policy</a> |
+<a href="../about.html">About Us</a> |
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function showResult(html) {
+    const resultBox = document.getElementById("result");
+    resultBox.innerHTML = html;
+
+    setTimeout(() => {
+        const yOffset = -100;
+        const y = resultBox.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+    }, 50);
+}
+
+function calculateBMI() {
+    const weight = parseFloat(document.getElementById("weight").value);
+    const height = parseFloat(document.getElementById("height").value);
+
+    if (!weight || !height || weight <= 0 || height <= 0) {
+        showResult("<div class='average-result result-pop'>Please enter valid weight and height values.</div>");
+        return;
+    }
+
+    const hMeters = height / 100;
+    const bmi = weight / (hMeters * hMeters);
+
+    let category = "";
+    let color = "";
+
+    if (bmi < 18.5) {
+        category = "Underweight";
+        color = "#ffc107";
+    } else if (bmi < 25) {
+        category = "Normal weight";
+        color = "#28a745";
+    } else if (bmi < 30) {
+        category = "Overweight";
+        color = "#fd7e14";
+    } else {
+        category = "Obese";
+        color = "#dc3545";
+    }
+
+    showResult(`
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">BMI<br>${bmi.toFixed(2)}</div>
+                <div class="stat-box">Category<br><span style="color:${color}; font-weight:700;">${category}</span></div>
+                <div class="stat-box">Weight<br>${weight} kg</div>
+                <div class="stat-box">Height<br>${height} cm</div>
+            </div>
+        </div>
+    `);
+}
+
+function clearBMI() {
+    document.getElementById("weight").value = "";
+    document.getElementById("height").value = "";
+    document.getElementById("result").innerHTML = "";
+}
+
+function loadSampleBMI() {
+    document.getElementById("weight").value = "70";
+    document.getElementById("height").value = "175";
+    calculateBMI();
+}
+
+function copyResult() {
+    const resultText = document.getElementById("result").innerText.trim();
+
+    if (!resultText) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(resultText)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Online Unit Converter - Length, Weight, Temperature, Area & Volume | SuperTools</title>
+  <meta name="description" content="Free online unit converter to convert length, weight, temperature, area, and volume instantly. Fast, accurate, and easy to use on desktop and mobile.">
+  <meta name="keywords" content="unit converter, length converter, weight converter, temperature converter, area converter, volume converter, online unit converter">
+  <meta name="author" content="SuperTools">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://supertools1.site/unitconverter.html">
+  
+  <link rel="icon" href="../logo.png" type="image/png">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FD5FXM51M8');
+  </script>
+
+  <meta property="og:title" content="Online Unit Converter - SuperTools">
+  <meta property="og:description" content="Convert length, weight, temperature, area, and volume units instantly.">
+  <meta property="og:image" content="https://supertools1.site/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://supertools1.site/unitconverter.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Online Unit Converter - SuperTools">
+  <meta name="twitter:description" content="Convert units instantly with this free online unit converter.">
+  <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+  <!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Unit Converter",
+  "alternateName": "Online Unit Converter",
+  "url": "https://supertools1.site/unitconverter.html",
+  "description": "Free online unit converter to convert length, weight, temperature, area, and volume units instantly. Fast, accurate, and easy to use on desktop and mobile.",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Convert length units",
+    "Convert weight units",
+    "Convert temperature units",
+    "Convert area units",
+    "Convert volume units",
+    "Swap units instantly",
+    "Live browser-based conversion",
+    "Free online tool"
+  ]
+}
+</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What units can I convert with this tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This unit converter supports length, weight, temperature, area, and volume conversions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this unit converter accurate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, this tool uses standard conversion formulas and factors for accurate results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this converter on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, this unit converter works on mobile phones, tablets, and desktop devices."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I swap units quickly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, this converter includes a swap button to instantly switch the from and to units."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this tool free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, this unit converter is completely free and works directly in your browser."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+     crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <h2>⚡ SuperTools</h2>
+  <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+  <h1>Unit Converter</h1>
+  <p>Convert length, weight, temperature, area, and volume units instantly with this free online unit converter.</p>
+
+  <label for="category">Select category</label>
+  <select id="category">
+    <option value="length">Length</option>
+    <option value="weight">Weight</option>
+    <option value="temperature">Temperature</option>
+    <option value="area">Area</option>
+    <option value="volume">Volume</option>
+  </select>
+
+  <label for="value">Enter value</label>
+  <input type="number" id="value" placeholder="e.g. 100" step="any">
+
+  <div class="converter-row">
+    <div>
+      <label for="fromUnit">From</label>
+      <select id="fromUnit"></select>
+    </div>
+
+    <div class="swap-wrap">
+      <button type="button" class="action-btn secondary-btn swap-btn" onclick="swapUnits()">
+        <i class="fas fa-right-left"></i> Swap
+      </button>
+    </div>
+
+    <div>
+      <label for="toUnit">To</label>
+      <select id="toUnit"></select>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <button type="button" onclick="convert()">
+      <i class="fas fa-calculator"></i> Convert
+    </button>
+
+    <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+      <i class="fas fa-trash"></i> Clear
+    </button>
+
+    <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+      <i class="fas fa-flask"></i> Sample
+    </button>
+
+    <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+      <i class="fas fa-copy"></i> Copy
+    </button>
+  </div>
+
+  <div id="result"></div>
+</div>
+
+<section class="related-tools">
+  <h2>🔗 Related Tools</h2>
+  <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+  <h2>How to Use the Unit Converter</h2>
+  <p>
+    The <strong>Unit Converter</strong> is a free online tool that helps you quickly convert between common measurement units.
+    It supports <strong>length</strong>, <strong>weight</strong>, <strong>temperature</strong>, <strong>area</strong>,
+    and <strong>volume</strong> conversions.
+  </p>
+
+  <p>
+    To use the converter, first choose a <strong>category</strong>. Then enter your value, select the
+    <strong>from unit</strong> and <strong>to unit</strong>, and click <strong>Convert</strong>.
+    You can also use the <strong>Swap</strong> button to instantly reverse the selected units.
+  </p>
+
+  <p>
+    This tool is useful for students, engineers, travelers, shoppers, home improvement work,
+    recipes, and everyday measurement conversions.
+  </p>
+
+  <h3>What Can You Convert?</h3>
+  <ul>
+    <li><strong>Length:</strong> Meter, Kilometer, Mile, Foot, Inch, Centimeter.</li>
+    <li><strong>Weight:</strong> Gram, Kilogram, Pound, Ounce.</li>
+    <li><strong>Temperature:</strong> Celsius, Fahrenheit, Kelvin.</li>
+    <li><strong>Area:</strong> Square meter, Square kilometer, Square foot, Acre.</li>
+    <li><strong>Volume:</strong> Liter, Milliliter, Cubic meter, Gallon.</li>
+  </ul>
+
+  <h3>Why Use This Tool?</h3>
+  <ul>
+    <li><strong>Fast and Accurate:</strong> Instant conversion with standard formulas.</li>
+    <li><strong>Multiple Categories:</strong> More than just distance and length.</li>
+    <li><strong>Easy to Use:</strong> Clean interface on desktop and mobile.</li>
+    <li><strong>Swap Units Quickly:</strong> One-click reverse conversion.</li>
+    <li><strong>Private:</strong> All calculations happen in your browser.</li>
+    <li><strong>Free to Use:</strong> No signup or download required.</li>
+  </ul>
+</section>
+
+<section class="info-section">
+  <h2>Frequently Asked Questions (FAQ)</h2>
+
+  <div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+      Q1: What units can I convert with this tool?
+      <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+      This tool supports <strong>length</strong>, <strong>weight</strong>, <strong>temperature</strong>,
+      <strong>area</strong>, and <strong>volume</strong> conversions.
+    </div>
+  </div>
+
+  <div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+      Q2: Is this unit converter accurate?
+      <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+      Yes, it uses standard conversion formulas and factors for accurate and reliable results.
+    </div>
+  </div>
+
+  <div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+      Q3: Can I use this converter on mobile?
+      <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+      Yes, this converter works smoothly on mobile phones, tablets, laptops, and desktop devices.
+    </div>
+  </div>
+
+  <div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+      Q4: Can I swap units quickly?
+      <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+      Yes, use the <strong>Swap</strong> button to instantly switch the from and to units.
+    </div>
+  </div>
+
+  <div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+      Q5: Is this unit converter free?
+      <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+      Yes, this tool is <strong>100% free</strong> and works directly in your browser.
+    </div>
+  </div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="../privacy.html">Privacy Policy</a> | 
+<a href="../about.html">About Us</a> | 
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const content = btn.nextElementSibling;
+    const isOpen = content.style.maxHeight;
+
+    accButtons.forEach(otherBtn => {
+      otherBtn.classList.remove("active");
+      if (otherBtn.nextElementSibling) {
+        otherBtn.nextElementSibling.style.maxHeight = null;
+      }
+    });
+
+    if (!isOpen) {
+      btn.classList.add("active");
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
+
+const category = document.getElementById("category");
+const valueInput = document.getElementById("value");
+const fromUnit = document.getElementById("fromUnit");
+const toUnit = document.getElementById("toUnit");
+const result = document.getElementById("result");
+
+const unitData = {
+  length: {
+    meter: { label: "Meters (m)", factor: 1 },
+    kilometer: { label: "Kilometers (km)", factor: 1000 },
+    centimeter: { label: "Centimeters (cm)", factor: 0.01 },
+    mile: { label: "Miles (mi)", factor: 1609.34 },
+    foot: { label: "Feet (ft)", factor: 0.3048 },
+    inch: { label: "Inches (in)", factor: 0.0254 }
+  },
+  weight: {
+    gram: { label: "Grams (g)", factor: 1 },
+    kilogram: { label: "Kilograms (kg)", factor: 1000 },
+    pound: { label: "Pounds (lb)", factor: 453.59237 },
+    ounce: { label: "Ounces (oz)", factor: 28.349523125 }
+  },
+  area: {
+    sqm: { label: "Square Meters (m²)", factor: 1 },
+    sqkm: { label: "Square Kilometers (km²)", factor: 1000000 },
+    sqft: { label: "Square Feet (ft²)", factor: 0.092903 },
+    acre: { label: "Acres", factor: 4046.8564224 }
+  },
+  volume: {
+    liter: { label: "Liters (L)", factor: 1 },
+    milliliter: { label: "Milliliters (mL)", factor: 0.001 },
+    cubicmeter: { label: "Cubic Meters (m³)", factor: 1000 },
+    gallon: { label: "Gallons (US)", factor: 3.78541 }
+  },
+  temperature: {
+    celsius: { label: "Celsius (°C)" },
+    fahrenheit: { label: "Fahrenheit (°F)" },
+    kelvin: { label: "Kelvin (K)" }
+  }
+};
+
+function populateUnits() {
+  const selectedCategory = category.value;
+  const units = unitData[selectedCategory];
+
+  fromUnit.innerHTML = "";
+  toUnit.innerHTML = "";
+
+  Object.keys(units).forEach((key, index) => {
+    const option1 = document.createElement("option");
+    option1.value = key;
+    option1.textContent = units[key].label;
+    fromUnit.appendChild(option1);
+
+    const option2 = document.createElement("option");
+    option2.value = key;
+    option2.textContent = units[key].label;
+    toUnit.appendChild(option2);
+
+    if (index === 1) {
+      toUnit.value = key;
+    }
+  });
+
+  convert();
+}
+
+function formatNumber(num) {
+  if (!isFinite(num)) return "Invalid";
+  const rounded = Math.round(num * 1000000) / 1000000;
+  return Number.isInteger(rounded) ? rounded.toString() : rounded.toString();
+}
+
+function convertTemperature(value, from, to) {
+  let celsius;
+
+  if (from === "celsius") celsius = value;
+  else if (from === "fahrenheit") celsius = (value - 32) * 5 / 9;
+  else if (from === "kelvin") celsius = value - 273.15;
+
+  if (to === "celsius") return celsius;
+  if (to === "fahrenheit") return (celsius * 9 / 5) + 32;
+  if (to === "kelvin") return celsius + 273.15;
+}
+
+function convert() {
+  const selectedCategory = category.value;
+  const value = parseFloat(valueInput.value);
+
+  if (isNaN(value)) {
+    result.innerHTML = `<div class="average-result">Please enter a valid number.</div>`;
+    return;
+  }
+
+  const from = fromUnit.value;
+  const to = toUnit.value;
+
+  let finalResult;
+
+  if (selectedCategory === "temperature") {
+    finalResult = convertTemperature(value, from, to);
+  } else {
+    const units = unitData[selectedCategory];
+    const baseValue = value * units[from].factor;
+    finalResult = baseValue / units[to].factor;
+  }
+
+  result.innerHTML = `
+    <div class="average-result result-pop">
+      <div class="stats">
+        <div class="stat-box">Category<br>${category.options[category.selectedIndex].text}</div>
+        <div class="stat-box">From<br>${unitData[selectedCategory][from].label}</div>
+        <div class="stat-box">To<br>${unitData[selectedCategory][to].label}</div>
+        <div class="stat-box">Result<br>${formatNumber(finalResult)}</div>
+      </div>
+      <hr>
+      <div><strong>${formatNumber(value)}</strong> ${unitData[selectedCategory][from].label} = <strong>${formatNumber(finalResult)}</strong> ${unitData[selectedCategory][to].label}</div>
+    </div>
+  `;
+}
+
+function swapUnits() {
+  const oldFrom = fromUnit.value;
+  fromUnit.value = toUnit.value;
+  toUnit.value = oldFrom;
+  convert();
+}
+
+function clearFields() {
+  category.value = "length";
+  populateUnits();
+  valueInput.value = "";
+  result.innerHTML = "";
+}
+
+function loadSample() {
+  category.value = "length";
+  populateUnits();
+  valueInput.value = "100";
+  fromUnit.value = "meter";
+  toUnit.value = "foot";
+  convert();
+}
+
+function copyResult() {
+  const resultText = result.innerText.trim();
+
+  if (!resultText) {
+    alert("No result to copy.");
+    return;
+  }
+
+  navigator.clipboard.writeText(resultText)
+    .then(() => alert("Result copied to clipboard!"))
+    .catch(() => alert("Failed to copy result."));
+}
+
+category.addEventListener("change", populateUnits);
+valueInput.addEventListener("input", convert);
+fromUnit.addEventListener("change", convert);
+toUnit.addEventListener("change", convert);
+
+populateUnits();
+</script>
+
+<script>
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const relatedContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedContainer) {
+    relatedContainer.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

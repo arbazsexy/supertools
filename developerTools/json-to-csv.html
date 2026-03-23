@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>JSON to CSV Converter Online Free - Convert JSON Data to CSV Instantly</title>
+    <meta name="description"
+        content="Free online JSON to CSV Converter tool to convert JSON data into CSV format instantly. Paste JSON or upload a file, convert it in your browser, then copy or download the CSV output.">
+    <meta name="keywords"
+        content="json to csv converter, convert json to csv online, json csv tool, json file to csv, csv converter, developer tools">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/json-to-csv.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <meta property="og:title" content="JSON to CSV Converter Online Free - SuperTools">
+    <meta property="og:description"
+        content="Convert JSON data into CSV format instantly by pasting JSON or uploading a file.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/json-to-csv.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JSON to CSV Converter Online Free - SuperTools">
+    <meta name="twitter:description"
+        content="Free browser-based JSON to CSV converter. Paste or upload JSON and download CSV instantly.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"JSON to CSV Converter",
+  "alternateName":"JSON to CSV Tool",
+  "url":"https://supertools1.site/json-to-csv.html",
+  "applicationCategory":"DeveloperApplication",
+  "operatingSystem":"Web",
+  "description":"Free online JSON to CSV converter that lets you paste JSON or upload a JSON file and instantly convert it into CSV format directly in your browser.",
+  "browserRequirements":"Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers":{
+    "@type":"Offer",
+    "price":"0",
+    "priceCurrency":"USD"
+  },
+  "author":{
+    "@type":"Organization",
+    "name":"SuperTools",
+    "url":"https://supertools1.site"
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"SuperTools",
+    "url":"https://supertools1.site",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://supertools1.site/logo.png"
+    }
+  },
+  "featureList":[
+    "Convert JSON to CSV instantly",
+    "Paste JSON directly",
+    "Upload JSON file",
+    "Copy CSV output",
+    "Download CSV file",
+    "Shows row and column count",
+    "Browser-based conversion",
+    "Free and easy to use"
+  ]
+}
+</script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"What does a JSON to CSV converter do?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A JSON to CSV converter transforms JSON data into comma-separated values format so it can be opened in spreadsheets, databases, and reporting tools."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I upload a JSON file instead of pasting data?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. You can upload a JSON file and the tool will load it into the input box for conversion."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Does this tool upload my JSON data?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No. This tool works entirely in your browser, so your JSON data is processed locally and is not uploaded to a server."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I copy or download the CSV output?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. After conversion, you can copy the CSV output or download it as a CSV file."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Is this JSON to CSV converter free?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. This JSON to CSV converter is completely free to use."
+      }
+    }
+  ]
+}
+</script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>⚡ SuperTools</h2>
+        <a href="../index.html">Home</a>
+    </nav>
+
+    <div class="container">
+        <h1>JSON to CSV Converter</h1>
+        <p>Paste JSON data or upload a JSON file to instantly convert it into CSV format in your browser.</p>
+
+        <label for="jsonInput">Enter JSON Data</label>
+        <textarea id="jsonInput" rows="10" aria-label="Enter JSON data"
+            placeholder='Example: [{"name":"John","age":25},{"name":"Anna","age":22}]'></textarea>
+
+        <label for="jsonFile">Upload JSON File</label>
+        <input type="file" id="jsonFile" accept=".json,application/json">
+
+        <div class="button-group">
+            <button type="button" onclick="convertJSONToCSV()">
+                <i class="fas fa-file-csv"></i> Convert to CSV
+            </button>
+
+            <button type="button" class="action-btn sample-btn" onclick="loadSampleJSON()">
+                <i class="fas fa-flask"></i> Sample
+            </button>
+
+            <button type="button" class="action-btn copy-btn" onclick="copyCSV()">
+                <i class="fas fa-copy"></i> Copy
+            </button>
+
+            <button type="button" class="action-btn" onclick="downloadCSV()">
+                <i class="fas fa-download"></i> Download
+            </button>
+
+            <button type="button" class="action-btn clear-btn" onclick="clearAllJSONCSV()">
+                <i class="fas fa-trash"></i> Clear
+            </button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <section class="related-tools">
+        <h2>🔗 Related Tools</h2>
+        <div id="relatedToolsContainer" class="tools-grid"></div>
+    </section>
+
+    <section class="info-section">
+        <h2>Free Online JSON to CSV Converter</h2>
+
+        <p>
+            The <strong>JSON to CSV Converter</strong> is a free online tool that helps you transform JSON data into
+            CSV format instantly. It is useful for developers, analysts, students, and anyone who needs to move data
+            from structured JSON into spreadsheets, reports, or database import workflows.
+        </p>
+
+        <p>
+            CSV files are widely supported by spreadsheet tools like Excel, Google Sheets, and many data processing
+            platforms. Converting JSON to CSV makes it easier to sort, filter, view, and export records in a simpler
+            tabular format.
+        </p>
+
+        <p>
+            This tool works directly in your browser, so your JSON stays private and is not uploaded to a server. Paste
+            your JSON, upload a file, convert it instantly, then copy or download the CSV result for immediate use.
+        </p>
+
+        <h3>How to Use the JSON to CSV Converter</h3>
+        <ul>
+            <li>Paste JSON data into the input box or upload a JSON file.</li>
+            <li>Click <strong>Convert to CSV</strong> to generate the output.</li>
+            <li>Review the row count, column count, and CSV preview.</li>
+            <li>Copy the CSV output or download it as a file.</li>
+        </ul>
+
+        <h3>Features of This Tool</h3>
+        <ul>
+            <li>Instant JSON to CSV conversion</li>
+            <li>Supports pasted JSON data</li>
+            <li>Supports uploaded JSON files</li>
+            <li>Shows row count and column count</li>
+            <li>Copy CSV output in one click</li>
+            <li>Download CSV file instantly</li>
+            <li>Runs fully in the browser</li>
+            <li>Free to use on desktop and mobile</li>
+        </ul>
+
+        <h3>Why Convert JSON to CSV?</h3>
+        <p>
+            JSON is great for APIs and structured data exchange, but CSV is usually easier to open and manage in
+            spreadsheets. By converting JSON to CSV, you can turn nested or object-based records into a cleaner tabular
+            format that works better for reporting, importing, exporting, and quick analysis.
+        </p>
+
+        <p>
+            This is especially helpful when working with API responses, exported app data, user lists, logs, product
+            records, and spreadsheet-ready datasets.
+        </p>
+    </section>
+
+    <section class="info-section">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                What does a JSON to CSV converter do?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                A <strong>JSON to CSV converter</strong> changes structured JSON data into comma-separated values so it
+                can be opened more easily in spreadsheets, reporting tools, and database import workflows.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                Can I upload a JSON file instead of pasting data?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                Yes. You can upload a JSON file and the tool will read it in your browser, place the content into the
+                input area, and let you convert it into CSV instantly.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                Does this tool upload my JSON data?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                No. This tool works directly in your browser, so your JSON data is processed locally and is not uploaded
+                or stored on a server.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                Can I copy or download the CSV output?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                Yes. After conversion, you can copy the CSV output instantly or download it as a
+                <strong>.csv</strong> file.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                What kind of JSON works best?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                Flat JSON arrays of objects work best. If your JSON contains deeply nested objects or arrays, they will
+                be converted into text values in the CSV output.
+            </div>
+        </div>
+
+        <div class="accordion-item faq-card">
+            <button class="accordion-btn" type="button">
+                Is this JSON to CSV converter free?
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                Yes. The tool is completely free to use with no registration required.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 SuperTools |
+            <a href="../privacy.html">Privacy Policy</a> |
+            <a href="../about.html">About Us</a> |
+            <a href="../contact.html">Contact</a>
+        </p>
+    </footer>
+
+    <script>
+        const accButtons = document.querySelectorAll(".accordion-btn");
+
+        accButtons.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                const content = btn.nextElementSibling;
+                const isOpen = btn.classList.contains("active");
+
+                accButtons.forEach(function (otherBtn) {
+                    otherBtn.classList.remove("active");
+                    const otherContent = otherBtn.nextElementSibling;
+                    if (otherContent) {
+                        otherContent.style.maxHeight = null;
+                        otherContent.classList.remove("open");
+                    }
+                });
+
+                if (!isOpen) {
+                    btn.classList.add("active");
+                    content.classList.add("open");
+                    requestAnimationFrame(function () {
+                        content.style.maxHeight = (content.scrollHeight + 30) + "px";
+                    });
+                }
+            });
+        });
+
+        const jsonInput = document.getElementById("jsonInput");
+        const jsonFile = document.getElementById("jsonFile");
+        const result = document.getElementById("result");
+
+        function scrollToResult() {
+            requestAnimationFrame(function () {
+                result.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            });
+        }
+
+        function showError(message) {
+            result.innerHTML =
+                '<div class="average-result result-pop">' +
+                '<div>' + message + '</div>' +
+                '</div>';
+
+            scrollToResult();
+        }
+
+        function escapeCSVValue(value) {
+            if (value === null || value === undefined) return '""';
+
+            let stringValue;
+
+            if (typeof value === "object") {
+                stringValue = JSON.stringify(value);
+            } else {
+                stringValue = String(value);
+            }
+
+            stringValue = stringValue.replace(/"/g, '""');
+            return '"' + stringValue + '"';
+        }
+
+        function convertJSONToCSV() {
+            const input = jsonInput.value.trim();
+
+            if (!input) {
+                showError("Please enter JSON data or upload a JSON file.");
+                return;
+            }
+
+            try {
+                const parsed = JSON.parse(input);
+                const rows = Array.isArray(parsed) ? parsed : [parsed];
+
+                if (!rows.length) {
+                    showError("The JSON array is empty.");
+                    return;
+                }
+
+                const headers = [];
+                rows.forEach(function (row) {
+                    if (row && typeof row === "object" && !Array.isArray(row)) {
+                        Object.keys(row).forEach(function (key) {
+                            if (!headers.includes(key)) {
+                                headers.push(key);
+                            }
+                        });
+                    }
+                });
+
+                if (!headers.length) {
+                    showError("JSON must be an object or an array of objects.");
+                    return;
+                }
+
+                let csv = headers.map(escapeCSVValue).join(",") + "\n";
+
+                rows.forEach(function (row) {
+                    const values = headers.map(function (header) {
+                        if (row && typeof row === "object" && !Array.isArray(row)) {
+                            return escapeCSVValue(row[header]);
+                        }
+                        return '""';
+                    });
+
+                    csv += values.join(",") + "\n";
+                });
+
+                renderResult(csv, rows.length, headers.length);
+            } catch (error) {
+                showError("Invalid JSON format. Please check your input and try again.");
+            }
+        }
+
+        function renderResult(csv, rowCount, columnCount) {
+            result.innerHTML =
+                '<div class="average-result result-pop">' +
+                '<div class="stats">' +
+                '<div class="stat-box">Rows<br><span>' + rowCount.toLocaleString() + '</span></div>' +
+                '<div class="stat-box">Columns<br><span>' + columnCount.toLocaleString() + '</span></div>' +
+                '<div class="stat-box">Output Size<br><span>' + csv.length.toLocaleString() + ' chars</span></div>' +
+                '</div>' +
+                '<hr>' +
+                '<div><strong>CSV generated successfully.</strong> Your JSON data was converted into a spreadsheet-friendly CSV format.</div>' +
+                '<label for="csvOutput"><strong>CSV Output</strong></label>' +
+                '<textarea id="csvOutput" rows="10" readonly></textarea>' +
+                '</div>';
+
+            const csvOutput = document.getElementById("csvOutput");
+            if (csvOutput) {
+                csvOutput.value = csv;
+            }
+
+            scrollToResult();
+        }
+
+        function copyCSV() {
+            const output = document.getElementById("csvOutput");
+
+            if (!output || !output.value.trim()) {
+                alert("Nothing to copy.");
+                return;
+            }
+
+            navigator.clipboard.writeText(output.value)
+                .then(function () {
+                    alert("CSV copied!");
+                })
+                .catch(function () {
+                    alert("Failed to copy.");
+                });
+        }
+
+        function downloadCSV() {
+            const output = document.getElementById("csvOutput");
+
+            if (!output || !output.value.trim()) {
+                alert("No CSV output to download.");
+                return;
+            }
+
+            const blob = new Blob([output.value], { type: "text/csv;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+
+            a.href = url;
+            a.download = "converted.csv";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function clearAllJSONCSV() {
+            jsonInput.value = "";
+            jsonFile.value = "";
+            result.innerHTML = "";
+            jsonInput.focus();
+        }
+
+        function loadSampleJSON() {
+            jsonInput.value = '[\n' +
+                '  {\n' +
+                '    "name": "John",\n' +
+                '    "age": 25,\n' +
+                '    "city": "New York"\n' +
+                '  },\n' +
+                '  {\n' +
+                '    "name": "Anna",\n' +
+                '    "age": 22,\n' +
+                '    "city": "London"\n' +
+                '  },\n' +
+                '  {\n' +
+                '    "name": "Rahul",\n' +
+                '    "age": 27,\n' +
+                '    "city": "Bengaluru"\n' +
+                '  }\n' +
+                ']';
+
+            result.innerHTML = "";
+        }
+
+        jsonFile.addEventListener("change", function () {
+            const file = this.files[0];
+
+            if (!file) return;
+
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                jsonInput.value = event.target.result;
+                result.innerHTML = "";
+            };
+
+            reader.onerror = function () {
+                alert("Unable to read the selected file.");
+            };
+
+            reader.readAsText(file);
+        });
+
+const tools = [
+            { name: "JSON Formatter", url: "json-formatter.html", icon: "🧩", category: "developer" },
+            { name: "CSV to JSON", url: "csv-to-json.html", icon: "📊", category: "developer" },
+            { name: "HTML Minifier", url: "html-minifier.html", icon: "📄", category: "developer" },
+            { name: "CSS Minifier", url: "css-minifier.html", icon: "🧵", category: "developer" },
+            { name: "Javascript Minifier", url: "javascript-minifier.html", icon: "⚡", category: "developer" },
+            { name: "Base64 Encoder Decoder", url: "base64-encoder-decoder.html", icon: "🔐", category: "developer" },
+            { name: "Regex Tester", url: "regextester.html", icon: "🔍", category: "developer" },
+            { name: "Timestamp Converter", url: "timestampconverter.html", icon: "⏱️", category: "developer" },
+            { name: "HTAccess Generator", url: "htaccessgenerator.html", icon: "⚙️", category: "developer" },
+            { name: "Colourcode Converter", url: "colourcodeconverter.html", icon: "🎨", category: "developer" },
+            { name: "JSON to CSV", url: "json-to-csv.html", icon: "🔁", category: "developer" }
+        ];
+
+        const currentPage = window.location.pathname.split("/").pop();
+
+        const related = tools
+            .filter(function (tool) {
+                return tool.url !== currentPage;
+            })
+            .sort(function () {
+                return 0.5 - Math.random();
+            })
+            .slice(0, 4);
+
+        const relatedContainer = document.getElementById("relatedToolsContainer");
+
+        if (relatedContainer) {
+            relatedContainer.innerHTML = related.map(function (tool) {
+                return '<a href="' + tool.url + '" class="tool-card">' +
+                    '<div class="tool-icon">' + tool.icon + '</div>' +
+                    '<h3>' + tool.name + '</h3>' +
+                    '</a>';
+            }).join("");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Robots.txt Generator Online - Create Robots.txt File Instantly</title>
+    <meta name="description" content="Free online robots.txt generator to create robots.txt rules for search engines. Add allow, disallow, crawl-delay, sitemap, and bot-specific rules instantly with SuperTools.">
+    <meta name="keywords" content="robots.txt generator, create robots.txt, seo robots file, robots txt builder, sitemap robots txt, search engine crawler rules">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/robotstxtgenerator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Robots.txt Generator - SuperTools">
+    <meta property="og:description" content="Generate robots.txt rules, sitemap lines, and crawler instructions instantly.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/robotstxtgenerator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Robots.txt Generator - SuperTools">
+    <meta name="twitter:description" content="Generate robots.txt rules, sitemap lines, and crawler instructions instantly.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Robots.txt Generator",
+      "alternateName": "Robots File Generator",
+      "url": "https://supertools1.site/robotstxtgenerator.html",
+      "description": "Free online robots.txt generator to create robots.txt rules for search engines, including allow, disallow, crawl-delay, sitemap, and bot-specific rules.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Generate robots.txt instantly",
+        "Add Allow and Disallow rules",
+        "Add crawl-delay",
+        "Add sitemap URL",
+        "Create bot-specific rules",
+        "Copy generated robots.txt",
+        "Beginner-friendly robots.txt builder",
+        "Free browser-based SEO tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do I place robots.txt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Upload your robots.txt file to the root of your website, such as https://example.com/robots.txt, so search engines can find it easily."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I block pages with robots.txt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can block crawlers from accessing certain paths using Disallow rules. However, robots.txt is not a guaranteed way to keep pages out of search results in every case."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a sitemap line in robots.txt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A sitemap line tells search engines where your XML sitemap is located so they can discover pages on your site more easily."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does crawl-delay do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Crawl-delay asks some bots to wait between requests. Not all search engines use it, but it can still be useful for some crawlers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this robots.txt generator free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this robots.txt generator is completely free to use."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Robots.txt Generator</h1>
+    <p>Create a robots.txt file for your website with crawler rules, disallowed paths, sitemap lines, crawl delay, and bot-specific settings.</p>
+
+    <label for="mainBot">User-agent</label>
+    <select id="mainBot">
+        <option value="*">All Crawlers (*)</option>
+        <option value="Googlebot">Googlebot</option>
+        <option value="Bingbot">Bingbot</option>
+        <option value="Slurp">Yahoo Slurp</option>
+        <option value="DuckDuckBot">DuckDuckBot</option>
+        <option value="Yandex">Yandex</option>
+        <option value="Baiduspider">Baiduspider</option>
+    </select>
+
+    <label for="allowMode">Main Rule</label>
+    <select id="allowMode">
+        <option value="allow" selected>Allow Site Crawling</option>
+        <option value="disallow">Block Site Crawling</option>
+    </select>
+
+    <label for="allowPath">Allow Path (optional)</label>
+    <input type="text" id="allowPath" placeholder="/public/">
+
+    <label for="disallowPaths">Disallow Paths (one per line)</label>
+    <textarea id="disallowPaths" rows="5" placeholder="/admin&#10;/private&#10;/tmp"></textarea>
+
+    <label for="crawlDelay">Crawl Delay (optional)</label>
+    <input type="text" id="crawlDelay" placeholder="10">
+
+    <label for="sitemapUrl">Sitemap URL (optional)</label>
+    <input type="text" id="sitemapUrl" placeholder="https://example.com/sitemap.xml">
+
+    <label for="customBot">Extra Bot Rule (optional)</label>
+    <input type="text" id="customBot" placeholder="Googlebot-Image">
+
+    <label for="customBotMode">Extra Bot Access Rule</label>
+    <select id="customBotMode">
+        <option value="none" selected>No Extra Bot Rule</option>
+        <option value="allow">Allow</option>
+        <option value="disallow">Disallow</option>
+    </select>
+
+    <label for="customBotPath">Extra Bot Path (optional)</label>
+    <input type="text" id="customBotPath" placeholder="/images/">
+
+    <div class="button-group">
+        <button type="button" onclick="generateRobots()">
+            Generate robots.txt
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Robots.txt Generator</h2>
+
+    <p>
+        The <strong>Robots.txt Generator</strong> helps you create a valid robots.txt file for your website.
+        A robots.txt file tells search engine crawlers which areas of your site they are allowed or not allowed to crawl.
+        It is commonly used to manage crawler access, reduce unnecessary crawling, and point search engines to your sitemap.
+    </p>
+
+    <p>
+        To use the tool, select a <strong>user-agent</strong>, choose whether that bot should mainly be allowed or blocked,
+        and then add any optional paths you want to allow or disallow. You can also add a sitemap URL, a crawl-delay value,
+        and even a separate rule for another bot if needed.
+    </p>
+
+    <p>
+        Once your settings are ready, click <strong>Generate robots.txt</strong>. The tool will create a ready-to-use robots.txt file
+        and show a summary of what is included. You can then copy the result and upload it to your website root directory.
+    </p>
+
+    <h3>Why Use This Tool?</h3>
+    <ul>
+        <li><strong>Control Crawlers:</strong> Tell search bots which sections of your site to access.</li>
+        <li><strong>SEO Friendly:</strong> Add sitemap lines and useful crawler rules.</li>
+        <li><strong>Fast Setup:</strong> Generate robots.txt without writing syntax manually.</li>
+        <li><strong>Flexible Rules:</strong> Add allow, disallow, crawl-delay, and extra bot rules.</li>
+        <li><strong>Beginner Friendly:</strong> Easy form-based setup for common robots.txt use cases.</li>
+        <li><strong>Free Tool:</strong> Unlimited browser-based use with no signup required.</li>
+    </ul>
+
+    <h3>Where Should robots.txt Be Placed?</h3>
+    <p>
+        Your robots.txt file should be uploaded to the root of your website so it can be reached at a URL like
+        <strong>https://example.com/robots.txt</strong>. Search engines usually look there first when checking crawler instructions.
+    </p>
+
+    <p class="formula-box">
+        Example location: https://yourdomain.com/robots.txt
+    </p>
+
+    <h3>Important Note</h3>
+    <p>
+        Robots.txt helps guide crawlers, but it is not a security feature. Sensitive pages should still be protected properly.
+        Also, blocking crawling does not always guarantee a page will never appear in search results.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: Where do I place robots.txt?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Upload the file to the root directory of your site so it is available at a URL like <strong>example.com/robots.txt</strong>.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I block pages with robots.txt?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can disallow crawlers from certain paths, such as <strong>/admin</strong> or <strong>/private</strong>. However, robots.txt is not meant for securing private content.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: What is a sitemap line?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            A sitemap line tells search engines where your XML sitemap is located, which can help them discover your pages more efficiently.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: What does crawl-delay mean?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Crawl-delay asks some bots to wait a specified amount of time between requests. Not every search engine uses it, but some crawlers do.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this robots.txt generator is completely free to use.
+        </div>
+    </div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools |
+<a href="../privacy.html">Privacy Policy</a> |
+<a href="../about.html">About Us</a> |
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function normalizePath(path) {
+    const trimmed = path.trim();
+    if (!trimmed) return "";
+    if (/^https?:\/\//i.test(trimmed)) return trimmed;
+    return trimmed.startsWith("/") ? trimmed : "/" + trimmed;
+}
+
+function generateRobots() {
+    const mainBot = document.getElementById("mainBot").value;
+    const allowMode = document.getElementById("allowMode").value;
+    const allowPath = normalizePath(document.getElementById("allowPath").value);
+    const disallowPathsRaw = document.getElementById("disallowPaths").value;
+    const crawlDelay = document.getElementById("crawlDelay").value.trim();
+    const sitemapUrl = document.getElementById("sitemapUrl").value.trim();
+    const customBot = document.getElementById("customBot").value.trim();
+    const customBotMode = document.getElementById("customBotMode").value;
+    const customBotPath = normalizePath(document.getElementById("customBotPath").value);
+    const result = document.getElementById("result");
+
+    const disallowPaths = disallowPathsRaw
+        .split("\n")
+        .map(path => normalizePath(path))
+        .filter(Boolean);
+
+    const lines = [];
+    lines.push(`User-agent: ${mainBot}`);
+
+    if (allowMode === "allow") {
+        lines.push(`Allow: /`);
+    } else {
+        lines.push(`Disallow: /`);
+    }
+
+    if (allowPath && allowMode === "allow") {
+        lines.push(`Allow: ${allowPath}`);
+    }
+
+    disallowPaths.forEach(path => {
+        lines.push(`Disallow: ${path}`);
+    });
+
+    if (crawlDelay) {
+        lines.push(`Crawl-delay: ${crawlDelay}`);
+    }
+
+    if (customBot && customBotMode !== "none") {
+        lines.push("");
+        lines.push(`User-agent: ${customBot}`);
+        if (customBotMode === "allow") {
+            lines.push(`Allow: ${customBotPath || "/"}`);
+        } else {
+            lines.push(`Disallow: ${customBotPath || "/"}`);
+        }
+    }
+
+    if (sitemapUrl) {
+        lines.push("");
+        lines.push(`Sitemap: ${sitemapUrl}`);
+    }
+
+    const output = lines.join("\n");
+    const totalDisallowRules = disallowPaths.length + (allowMode === "disallow" ? 1 : 0) + (customBot && customBotMode === "disallow" ? 1 : 0);
+    const totalAllowRules = (allowMode === "allow" ? 1 : 0) + (allowPath && allowMode === "allow" ? 1 : 0) + (customBot && customBotMode === "allow" ? 1 : 0);
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Main Bot<br><span>${mainBot}</span></div>
+                <div class="stat-box">Allow Rules<br><span>${totalAllowRules}</span></div>
+                <div class="stat-box">Disallow Rules<br><span>${totalDisallowRules}</span></div>
+                <div class="stat-box">Sitemap<br><span>${sitemapUrl ? "Yes" : "No"}</span></div>
+                <div class="stat-box">Crawl Delay<br><span>${crawlDelay ? crawlDelay : "No"}</span></div>
+                <div class="stat-box">Extra Bot Rule<br><span>${customBot && customBotMode !== "none" ? "Yes" : "No"}</span></div>
+            </div>
+
+            <hr>
+
+            <div><strong>Generated robots.txt</strong></div>
+            <textarea id="robotsOutput" class="code-output result-textarea" rows="14" readonly></textarea>
+
+            <div class="button-group">
+                <button type="button" class="action-btn copy-btn" onclick="copyRobotsOutput()">
+                    Copy robots.txt
+                </button>
+            </div>
+        </div>
+    `;
+
+    document.getElementById("robotsOutput").value = output;
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function clearFields() {
+    document.getElementById("mainBot").value = "*";
+    document.getElementById("allowMode").value = "allow";
+    document.getElementById("allowPath").value = "";
+    document.getElementById("disallowPaths").value = "";
+    document.getElementById("crawlDelay").value = "";
+    document.getElementById("sitemapUrl").value = "";
+    document.getElementById("customBot").value = "";
+    document.getElementById("customBotMode").value = "none";
+    document.getElementById("customBotPath").value = "";
+    document.getElementById("result").innerHTML = "";
+}
+
+function loadSample() {
+    document.getElementById("mainBot").value = "*";
+    document.getElementById("allowMode").value = "allow";
+    document.getElementById("allowPath").value = "/public/";
+    document.getElementById("disallowPaths").value = "/admin\n/private\n/tmp";
+    document.getElementById("crawlDelay").value = "10";
+    document.getElementById("sitemapUrl").value = "https://supertools1.site/sitemap.xml";
+    document.getElementById("customBot").value = "Googlebot-Image";
+    document.getElementById("customBotMode").value = "allow";
+    document.getElementById("customBotPath").value = "/images/";
+    generateRobots();
+}
+
+function copyRobotsOutput() {
+    const output = document.getElementById("robotsOutput");
+    if (!output || !output.value.trim()) {
+        alert("No robots.txt content to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(output.value)
+        .then(() => alert("robots.txt copied to clipboard!"))
+        .catch(() => alert("Failed to copy robots.txt."));
+}
+
+function copyResult() {
+    copyRobotsOutput();
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Meta Tag Generator", url: "metataggenerator.html", icon: "🏷️", category: "seo" },
+    { name: "Open Graph Generator", url: "opengraphgenerator.html", icon: "🔗", category: "seo" },
+    { name: "Robots.txt Generator", url: "robotstxtgenerator.html", icon: "🤖", category: "seo" },
+    { name: "Sitemap Generator", url: "sitemapgenerator.html", icon: "🗺️", category: "seo" },
+    { name: "URL Slug Generator", url: "urlsluggenerator.html", icon: "✍️", category: "seo" },
+    { name: "Schema Generator", url: "schemagenerator.html", icon: "📄", category: "seo" },
+    { name: "Keyword Density Checker", url: "keyworddensitychecker.html", icon: "📊", category: "seo" },
+    { name: "Hreflang Generator", url: "hreflanggenerator.html", icon: "🌍", category: "seo" },
+    { name: "HTML TO Text", url: "htmltotext.html", icon: "🧾", category: "seo" },
+    { name: "TEXT TO HTML", url: "texttohtml.html", icon: "💻", category: "seo" },
+    { name: "Word Frequency", url: "wordfrequency.html", icon: "🔤", category: "seo" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const relatedToolsContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedToolsContainer) {
+    relatedToolsContainer.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

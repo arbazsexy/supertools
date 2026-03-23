@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Color Code Converter Online - HEX, RGB & HSL Converter Free</title>
+    <meta name="description" content="Free online Color Code Converter to convert HEX, RGB, and HSL instantly. Includes live color preview, color picker, CSS variable output, Tailwind color example, and copy buttons.">
+    <meta name="keywords" content="color code converter, hex to rgb, rgb to hex, hsl converter, hex rgb hsl converter, color picker, css color converter">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/colorcodeconverter.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Color Code Converter Online - SuperTools">
+    <meta property="og:description" content="Convert HEX, RGB, and HSL color codes instantly with live preview and copy buttons.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/colorcodeconverter.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Color Code Converter Online - SuperTools">
+    <meta name="twitter:description" content="Convert HEX, RGB, and HSL color codes instantly with live preview and color picker.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Color Code Converter",
+      "alternateName": "HEX RGB HSL Converter",
+      "url": "https://supertools1.site/colorcodeconverter.html",
+      "description": "Free online Color Code Converter to convert HEX, RGB, and HSL colors instantly with live preview and copy options.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "HEX to RGB conversion",
+        "RGB to HEX conversion",
+        "HEX to HSL conversion",
+        "HSL to HEX conversion",
+        "Live color preview",
+        "Color picker support",
+        "Copy individual values",
+        "Copy all color formats",
+        "CSS variable output",
+        "Tailwind example output"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What formats does this color converter support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool supports HEX, RGB, and HSL color formats. You can enter one format and instantly get the converted values."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use the color picker?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the built-in color picker lets you visually choose a color and automatically updates the HEX, RGB, and HSL values."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I copy CSS-ready values?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool provides copy buttons for HEX, RGB, HSL, CSS variable format, and a Tailwind utility example."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this color converter free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool is completely free to use and works directly in your browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool store my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, all conversion happens inside your browser and no color data is uploaded or stored."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .color-preview-box {
+            width: 100%;
+            height: 140px;
+            border-radius: 16px;
+            margin: 18px 0;
+            border: 2px solid #edf2f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-align: center;
+            padding: 15px;
+            transition: all var(--transition);
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            background: #f8faff;
+            border: 1px solid #eef2ff;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            text-align: left;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        .result-row strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--primary);
+        }
+
+        .result-text {
+            flex: 1;
+        }
+
+        .mini-copy-btn {
+            width: auto;
+            margin: 0;
+            padding: 10px 16px;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .picker-wrap {
+            margin-top: 8px;
+            margin-bottom: 18px;
+        }
+
+        .picker-wrap input[type="color"] {
+            width: 100%;
+            height: 56px;
+            border-radius: 14px;
+            border: 2px solid #edf2f7;
+            background: #fff;
+            padding: 6px;
+            cursor: pointer;
+        }
+
+        .status-line {
+            margin-top: 10px;
+            margin-bottom: 14px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .result-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .mini-copy-btn {
+                width: 100%;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .color-preview-box {
+                border-color: #334155;
+            }
+
+            .result-row {
+                background: #17212f;
+                border-color: #334155;
+                color: #e2e8f0;
+            }
+
+            .picker-wrap input[type="color"] {
+                background: #1e293b;
+                border-color: #334155;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Color Code Converter</h1>
+    <p>Convert HEX, RGB, and HSL color codes instantly with live preview, color picker, and copy buttons.</p>
+
+    <label for="hexInput">HEX Color</label>
+    <input type="text" id="hexInput" placeholder="#ff5733">
+
+    <label for="rgbInput">RGB Color</label>
+    <input type="text" id="rgbInput" placeholder="rgb(255, 87, 51) or 255, 87, 51">
+
+    <label for="hslInput">HSL Color</label>
+    <input type="text" id="hslInput" placeholder="hsl(11, 100%, 60%) or 11, 100%, 60%">
+
+    <div class="picker-wrap">
+        <label for="colorPicker">Pick Color</label>
+        <input type="color" id="colorPicker" value="#ff5733">
+    </div>
+
+    <div id="preview" class="color-preview-box">Live Color Preview</div>
+
+    <div class="button-group">
+        <button type="button" onclick="convertFromHex()">
+            <i class="fas fa-palette"></i> Convert HEX
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="convertFromRgb()">
+            <i class="fas fa-sliders"></i> Convert RGB
+        </button>
+
+        <button type="button" class="action-btn" onclick="convertFromHsl()">
+            <i class="fas fa-circle-half-stroke"></i> Convert HSL
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyAllResults()">
+            <i class="fas fa-copy"></i> Copy All
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearAllFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Color Code Converter</h2>
+
+    <p>
+        The <strong>Color Code Converter</strong> helps you instantly convert colors between <strong>HEX</strong>, <strong>RGB</strong>,
+        and <strong>HSL</strong> formats. It is useful for web developers, designers, students, and anyone working with color values in
+        HTML, CSS, design systems, branding, or UI development.
+    </p>
+
+    <p>
+        You can type a HEX code like <strong>#ff5733</strong>, enter an RGB value such as <strong>rgb(255, 87, 51)</strong>, or use an HSL
+        value like <strong>hsl(11, 100%, 60%)</strong>. The tool will instantly calculate the matching values and show a live preview of the color.
+    </p>
+
+    <p>
+        It also includes a built-in color picker, CSS variable output, and a Tailwind-style example, making it easy to copy and use the color in projects.
+    </p>
+
+    <h3>Features of This Tool</h3>
+    <ul>
+        <li>Convert HEX to RGB and HSL</li>
+        <li>Convert RGB to HEX and HSL</li>
+        <li>Convert HSL to HEX and RGB</li>
+        <li>Live color preview box</li>
+        <li>Built-in color picker</li>
+        <li>Copy buttons for each output</li>
+        <li>Copy all formats at once</li>
+        <li>CSS variable and Tailwind-ready output</li>
+        <li>Free and browser-based</li>
+    </ul>
+
+    <h3>What Are HEX, RGB, and HSL Colors?</h3>
+    <p>
+        <strong>HEX</strong> is a six-digit or three-digit code commonly used in CSS and web design, such as <strong>#ff5733</strong>.
+        <strong>RGB</strong> stands for Red, Green, and Blue, and represents colors using numbers from 0 to 255.
+        <strong>HSL</strong> stands for Hue, Saturation, and Lightness, and is often easier to adjust when designing color themes.
+    </p>
+
+    <h3>Why Use a Color Converter?</h3>
+    <p>
+        Different tools and workflows use different color formats. Designers may prefer HSL for adjustments, while developers often use HEX
+        and RGB in code. This converter saves time by instantly translating one format into the others.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What formats does this color converter support?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This tool supports <strong>HEX</strong>, <strong>RGB</strong>, and <strong>HSL</strong> color formats. You can enter any one of them and instantly get the converted values.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I use the color picker to choose a color?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. The built-in color picker lets you visually select a color and automatically updates the HEX, RGB, and HSL outputs.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I copy CSS-ready values?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This tool gives you copy buttons for HEX, RGB, HSL, CSS variable format, and a Tailwind utility example.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: What happens if I enter an invalid color?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            The tool will show an error message and wait for a valid HEX, RGB, or HSL value before converting.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this color converter free and safe?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. It is completely free and runs in your browser, so your input is not uploaded or stored on a server.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = btn.classList.contains("active");
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            const otherContent = otherBtn.nextElementSibling;
+            if (otherContent) {
+                otherContent.style.maxHeight = null;
+                otherContent.classList.remove("open");
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.classList.add("open");
+            requestAnimationFrame(() => {
+                content.style.maxHeight = content.scrollHeight + 30 + "px";
+            });
+        }
+    });
+});
+
+const hexInput = document.getElementById("hexInput");
+const rgbInput = document.getElementById("rgbInput");
+const hslInput = document.getElementById("hslInput");
+const colorPicker = document.getElementById("colorPicker");
+const preview = document.getElementById("preview");
+const result = document.getElementById("result");
+
+function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+}
+
+function normalizeHex(hex) {
+    let value = hex.trim().replace("#", "");
+
+    if (/^[0-9a-fA-F]{3}$/.test(value)) {
+        value = value.split("").map(ch => ch + ch).join("");
+    }
+
+    if (!/^[0-9a-fA-F]{6}$/.test(value)) return null;
+
+    return "#" + value.toLowerCase();
+}
+
+function hexToRgb(hex) {
+    const normalized = normalizeHex(hex);
+    if (!normalized) return null;
+
+    const clean = normalized.slice(1);
+    const bigint = parseInt(clean, 16);
+
+    return {
+        r: (bigint >> 16) & 255,
+        g: (bigint >> 8) & 255,
+        b: bigint & 255
+    };
+}
+
+function rgbToHex(r, g, b) {
+    const values = [r, g, b].map(v => clamp(Math.round(Number(v)), 0, 255));
+    return "#" + values.map(v => v.toString(16).padStart(2, "0")).join("");
+}
+
+function rgbToHsl(r, g, b) {
+    r /= 255;
+    g /= 255;
+    b /= 255;
+
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+    let h, s;
+    const l = (max + min) / 2;
+
+    if (max === min) {
+        h = 0;
+        s = 0;
+    } else {
+        const d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+
+        switch (max) {
+            case r:
+                h = ((g - b) / d + (g < b ? 6 : 0));
+                break;
+            case g:
+                h = ((b - r) / d + 2);
+                break;
+            default:
+                h = ((r - g) / d + 4);
+                break;
+        }
+
+        h /= 6;
+    }
+
+    return {
+        h: Math.round(h * 360),
+        s: Math.round(s * 100),
+        l: Math.round(l * 100)
+    };
+}
+
+function hslToRgb(h, s, l) {
+    h = ((Number(h) % 360) + 360) % 360;
+    s = clamp(Number(s), 0, 100) / 100;
+    l = clamp(Number(l), 0, 100) / 100;
+
+    if (s === 0) {
+        const gray = Math.round(l * 255);
+        return { r: gray, g: gray, b: gray };
+    }
+
+    const hueToRgb = (p, q, t) => {
+        if (t < 0) t += 1;
+        if (t > 1) t -= 1;
+        if (t < 1/6) return p + (q - p) * 6 * t;
+        if (t < 1/2) return q;
+        if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+        return p;
+    };
+
+    const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+    const p = 2 * l - q;
+    const hk = h / 360;
+
+    return {
+        r: Math.round(hueToRgb(p, q, hk + 1/3) * 255),
+        g: Math.round(hueToRgb(p, q, hk) * 255),
+        b: Math.round(hueToRgb(p, q, hk - 1/3) * 255)
+    };
+}
+
+function parseRgb(input) {
+    const parts = input.match(/-?\d+(\.\d+)?/g);
+    if (!parts || parts.length < 3) return null;
+
+    const [r, g, b] = parts.map(Number);
+    if ([r, g, b].some(v => Number.isNaN(v))) return null;
+
+    return {
+        r: clamp(r, 0, 255),
+        g: clamp(g, 0, 255),
+        b: clamp(b, 0, 255)
+    };
+}
+
+function parseHsl(input) {
+    const parts = input.match(/-?\d+(\.\d+)?/g);
+    if (!parts || parts.length < 3) return null;
+
+    const [h, s, l] = parts.map(Number);
+    if ([h, s, l].some(v => Number.isNaN(v))) return null;
+
+    return {
+        h,
+        s: clamp(s, 0, 100),
+        l: clamp(l, 0, 100)
+    };
+}
+
+function getContrastTextColor(r, g, b) {
+    const brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+    return brightness >= 128 ? "#111111" : "#ffffff";
+}
+
+function renderResult(hex, rgb, hsl, note = "") {
+    const rgbText = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+    const hslText = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`;
+    const cssVar = `--color: ${hex};`;
+    const tailwind = `bg-[${hex}]`;
+
+    preview.style.background = hex;
+    preview.style.color = getContrastTextColor(rgb.r, rgb.g, rgb.b);
+    preview.textContent = hex.toUpperCase();
+
+    hexInput.value = hex;
+    rgbInput.value = rgbText;
+    hslInput.value = hslText;
+    colorPicker.value = hex;
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            ${note ? `<div class="status-line">${note}</div>` : ""}
+
+            <div class="result-row">
+                <div class="result-text"><strong>HEX</strong>${hex.toUpperCase()}</div>
+                <button class="action-btn copy-btn mini-copy-btn" onclick="copyText('${hex.toUpperCase()}')">Copy</button>
+            </div>
+
+            <div class="result-row">
+                <div class="result-text"><strong>RGB</strong>${rgbText}</div>
+                <button class="action-btn copy-btn mini-copy-btn" onclick="copyText('${rgbText}')">Copy</button>
+            </div>
+
+            <div class="result-row">
+                <div class="result-text"><strong>HSL</strong>${hslText}</div>
+                <button class="action-btn copy-btn mini-copy-btn" onclick="copyText('${hslText}')">Copy</button>
+            </div>
+
+            <div class="result-row">
+                <div class="result-text"><strong>CSS Variable</strong>${cssVar}</div>
+                <button class="action-btn copy-btn mini-copy-btn" onclick="copyText('${cssVar}')">Copy</button>
+            </div>
+
+            <div class="result-row">
+                <div class="result-text"><strong>Tailwind Example</strong>${tailwind}</div>
+                <button class="action-btn copy-btn mini-copy-btn" onclick="copyText('${tailwind}')">Copy</button>
+            </div>
+        </div>
+    `;
+}
+
+function showError(message) {
+    preview.style.background = "#f1f5f9";
+    preview.style.color = "#111111";
+    preview.textContent = "Live Color Preview";
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="status-line" style="color:#d63031;">${message}</div>
+        </div>
+    `;
+}
+
+function convertFromHex() {
+    const hex = normalizeHex(hexInput.value);
+
+    if (!hex) {
+        showError("Please enter a valid HEX color like #ff5733 or #f53.");
+        return;
+    }
+
+    const rgb = hexToRgb(hex);
+    const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+    renderResult(hex, rgb, hsl, "Converted from HEX successfully.");
+}
+
+function convertFromRgb() {
+    const rgb = parseRgb(rgbInput.value);
+
+    if (!rgb) {
+        showError("Please enter a valid RGB color like rgb(255, 87, 51) or 255, 87, 51.");
+        return;
+    }
+
+    const hex = rgbToHex(rgb.r, rgb.g, rgb.b);
+    const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+    renderResult(hex, rgb, hsl, "Converted from RGB successfully.");
+}
+
+function convertFromHsl() {
+    const hsl = parseHsl(hslInput.value);
+
+    if (!hsl) {
+        showError("Please enter a valid HSL color like hsl(11, 100%, 60%) or 11, 100, 60.");
+        return;
+    }
+
+    const rgb = hslToRgb(hsl.h, hsl.s, hsl.l);
+    const hex = rgbToHex(rgb.r, rgb.g, rgb.b);
+    renderResult(hex, rgb, hsl, "Converted from HSL successfully.");
+}
+
+function loadSample() {
+    hexInput.value = "#4facfe";
+    convertFromHex();
+}
+
+function copyText(text) {
+    navigator.clipboard.writeText(text)
+        .then(() => alert("Copied!"))
+        .catch(() => alert("Failed to copy."));
+}
+
+function copyAllResults() {
+    const resultText = result.innerText.trim();
+
+    if (!resultText) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(resultText)
+        .then(() => alert("All results copied!"))
+        .catch(() => alert("Failed to copy."));
+}
+
+function clearAllFields() {
+    hexInput.value = "";
+    rgbInput.value = "";
+    hslInput.value = "";
+    colorPicker.value = "#ff5733";
+    result.innerHTML = "";
+    preview.style.background = "#f1f5f9";
+    preview.style.color = "#111111";
+    preview.textContent = "Live Color Preview";
+    hexInput.focus();
+}
+
+colorPicker.addEventListener("input", () => {
+    hexInput.value = colorPicker.value;
+    convertFromHex();
+});
+
+hexInput.addEventListener("keydown", e => {
+    if (e.key === "Enter") convertFromHex();
+});
+
+rgbInput.addEventListener("keydown", e => {
+    if (e.key === "Enter") convertFromRgb();
+});
+
+hslInput.addEventListener("keydown", e => {
+    if (e.key === "Enter") convertFromHsl();
+});
+
+const tools = [
+    { name: "JSON Formatter", url: "json-formatter.html", icon: "🧩", category: "developer" },
+    { name: "Colourcode Converter", url: "colourcodeconverter.html", icon: "🎨", category: "developer" },
+    { name: "CSS Minifier", url: "css-minifier.html", icon: "🧵", category: "developer" },
+    { name: "CSV to Json", url: "csv-to-json.html", icon: "📊", category: "developer" },
+    { name: "Htaccess Generator", url: "htaccessgenerator.html", icon: "⚙️", category: "developer" },
+    { name: "Javascript Minifier", url: "javascript-minifier.html", icon: "⚡", category: "developer" },
+    { name: "Json to CSV", url: "json-to-csv.html", icon: "🔁", category: "developer" },
+    { name: "Regex Tester", url: "regextester.html", icon: "🔍", category: "developer" },
+    { name: "Timestamp Converter", url: "timestampconverter.html", icon: "⏱️", category: "developer" },
+    { name: "Base64 Encoder Decoder", url: "base64-encoder-decoder.html", icon: "🔐", category: "developer" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+
+loadSample();
+</script>
+
+</body>
+</html>

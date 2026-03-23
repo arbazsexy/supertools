@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Base64 Encoder & Decoder Online Free - Encode or Decode Base64 Instantly</title>
+    <meta name="description" content="Free online Base64 Encoder and Decoder tool. Encode plain text to Base64 or decode Base64 back to readable text instantly. Fast, private, accurate, and easy to use with SuperTools.">
+    <meta name="keywords" content="base64 encoder, base64 decoder, encode base64 online, decode base64 online, text to base64, base64 to text, base64 converter">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/base64-encoder-decoder.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Base64 Encoder & Decoder Online Free - SuperTools">
+    <meta property="og:description" content="Encode plain text to Base64 or decode Base64 back to readable text instantly with this free online tool.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/base64-encoder-decoder.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Base64 Encoder & Decoder Online Free - SuperTools">
+    <meta name="twitter:description" content="Free online Base64 Encoder and Decoder tool for instant text encoding and decoding.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Base64 Encoder Decoder",
+      "alternateName": "Base64 Converter",
+      "url": "https://supertools1.site/base64-encoder-decoder.html",
+      "description": "Free online Base64 Encoder and Decoder tool to encode plain text into Base64 or decode Base64 back into readable text instantly.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Encode text to Base64",
+        "Decode Base64 to text",
+        "Supports UTF-8 text",
+        "Copy result instantly",
+        "Download output as text file",
+        "Swap input and output",
+        "Works in browser",
+        "Free and private tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Base64 encoding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Base64 encoding is a method of converting text or binary data into ASCII characters so it can be safely transmitted in text-based systems such as emails, APIs, and web pages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What can I do with this Base64 tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can encode plain text into Base64 format and decode Base64 back into readable text instantly using this online tool."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool support special characters and Unicode text?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool supports UTF-8 text, including many special characters, symbols, and non-English languages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this Base64 encoder and decoder free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the tool is completely free to use and works directly in your browser without registration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all encoding and decoding happen directly in your browser, so your data is not sent to a server for processing."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Base64 Encoder / Decoder</h1>
+    <p>Encode plain text into Base64 or decode Base64 back into readable text instantly.</p>
+
+    <label for="text">Enter Text or Base64</label>
+    <textarea id="text" rows="6" aria-label="Enter text or Base64" placeholder="Type or paste text or Base64 here..."></textarea>
+
+    <div class="button-group">
+        <button type="button" onclick="encodeBase64()">
+            <i class="fas fa-lock"></i> Encode
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="decodeBase64()">
+            <i class="fas fa-unlock"></i> Decode
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+
+        <button type="button" class="action-btn" onclick="swapText()">
+            <i class="fas fa-right-left"></i> Swap
+        </button>
+
+        <button type="button" class="action-btn" onclick="downloadResult()">
+            <i class="fas fa-download"></i> Download
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearText()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>Free Online Base64 Encoder and Decoder</h2>
+
+    <p>
+        The <strong>Base64 Encoder / Decoder</strong> is a free online developer tool that helps you quickly convert plain text into
+        Base64 format or decode Base64 back into readable text. It is useful for developers, students, testers, and anyone working with
+        encoded data in web applications, APIs, email systems, or data transfer processes.
+    </p>
+
+    <p>
+        This tool runs entirely in your browser, so your data stays on your device. Nothing is uploaded to a server for processing,
+        making it a fast and privacy-friendly solution for quick Base64 conversions.
+    </p>
+
+    <h3>How to Use the Base64 Tool</h3>
+    <p>
+        Enter plain text if you want to encode it into Base64, or paste Base64 text if you want to decode it back into readable format.
+        Then click <strong>Encode</strong> or <strong>Decode</strong> to instantly see the output.
+    </p>
+
+    <ul>
+        <li><strong>Encode:</strong> Converts plain text into Base64 format</li>
+        <li><strong>Decode:</strong> Converts Base64 back into readable text</li>
+        <li><strong>Copy:</strong> Copies the result instantly</li>
+        <li><strong>Swap:</strong> Moves the output back into the input box</li>
+        <li><strong>Download:</strong> Saves the result as a text file</li>
+        <li><strong>Clear:</strong> Resets the tool quickly</li>
+    </ul>
+
+    <h3>What Is Base64 Encoding?</h3>
+    <p>
+        Base64 is a way of converting data into a text-safe format using a limited set of ASCII characters. It is commonly used
+        when data needs to be transferred through systems that are designed to handle text only.
+    </p>
+
+    <p>
+        In web development, Base64 is often used for API data, tokens, email attachments, and embedded resources such as images or files.
+        It does not encrypt data, but it helps represent data in a format that is easier to transmit and store in text-based environments.
+    </p>
+
+    <h3>Common Uses of Base64</h3>
+    <ul>
+        <li>Encoding text for APIs and web requests</li>
+        <li>Embedding small images in HTML or CSS</li>
+        <li>Email attachment handling</li>
+        <li>Representing binary data in text format</li>
+        <li>Testing encoded input and output during development</li>
+    </ul>
+
+    <h3>Why Use This Tool?</h3>
+    <ul>
+        <li>Fast and instant conversion</li>
+        <li>Supports UTF-8 text and many special characters</li>
+        <li>Runs fully in the browser</li>
+        <li>Easy copy, swap, and download options</li>
+        <li>Free to use on desktop and mobile</li>
+        <li>No registration required</li>
+    </ul>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is Base64 encoding?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            <strong>Base64 encoding</strong> is a method used to convert text or binary data into a limited set of text characters.
+            It is commonly used in web development, APIs, email systems, and other text-based environments where raw binary data may not work properly.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Is Base64 the same as encryption?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. <strong>Base64 is not encryption</strong>. It is only an encoding method used to represent data in a text-safe format.
+            Anyone can decode Base64 easily, so it should not be used to protect sensitive information.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I encode special characters or Unicode text?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This tool supports <strong>UTF-8 text</strong>, which means it can handle many special characters, symbols, and non-English text properly.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Why does decoding fail sometimes?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Decoding may fail if the input is not valid Base64, has missing characters, or includes extra invalid symbols.
+            Make sure you paste the complete encoded string before decoding.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this Base64 tool free and safe?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This tool is completely free and works directly in your browser, so your text is processed locally instead of being sent to a server.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+
+const inputBox = document.getElementById("text");
+const resultBox = document.getElementById("result");
+
+function escapeHtml(text) {
+    return text
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+}
+
+function encodeUTF8(str) {
+    return btoa(unescape(encodeURIComponent(str)));
+}
+
+function decodeUTF8(str) {
+    return decodeURIComponent(escape(atob(str)));
+}
+
+function renderResult(title, output, note = "", isError = false) {
+    const safeOutput = escapeHtml(output);
+    const safeNote = escapeHtml(note);
+
+    resultBox.innerHTML = `
+        <div class="average-result result-pop">
+            <div style="margin-bottom:12px; font-weight:700; color:${isError ? '#d63031' : 'inherit'};">
+                ${title}
+            </div>
+            <textarea id="outputText" rows="6" readonly>${safeOutput}</textarea>
+            ${safeNote ? `<div style="margin-top:10px; color:${isError ? '#d63031' : 'inherit'};">${safeNote}</div>` : ""}
+        </div>
+    `;
+}
+
+function encodeBase64() {
+    const text = inputBox.value;
+
+    if (!text.trim()) {
+        renderResult("Error", "", "Please enter text to encode.", true);
+        return;
+    }
+
+    try {
+        const encoded = encodeUTF8(text);
+        renderResult("Encoded Output", encoded, "Text encoded successfully.");
+    } catch (error) {
+        renderResult("Error", "", "Unable to encode this text.", true);
+    }
+}
+
+function decodeBase64() {
+    const text = inputBox.value.trim();
+
+    if (!text) {
+        renderResult("Error", "", "Please enter Base64 text to decode.", true);
+        return;
+    }
+
+    try {
+        const cleaned = text.replace(/\s+/g, "");
+        const decoded = decodeUTF8(cleaned);
+        renderResult("Decoded Output", decoded, "Base64 decoded successfully.");
+    } catch (error) {
+        renderResult("Error", "", "Invalid Base64 input.", true);
+    }
+}
+
+function loadSample() {
+    inputBox.value = "Hello SuperTools!";
+    resultBox.innerHTML = "";
+    inputBox.focus();
+}
+
+function copyResult() {
+    const output = document.getElementById("outputText");
+
+    if (!output || !output.value.trim()) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(output.value)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+
+function swapText() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No output available to swap.");
+        return;
+    }
+
+    inputBox.value = output.value;
+    resultBox.innerHTML = "";
+    inputBox.focus();
+}
+
+function downloadResult() {
+    const output = document.getElementById("outputText");
+
+    if (!output || !output.value.trim()) {
+        alert("No result to download.");
+        return;
+    }
+
+    const blob = new Blob([output.value], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "base64-output.txt";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+function clearText() {
+    inputBox.value = "";
+    resultBox.innerHTML = "";
+    inputBox.focus();
+}
+
+const tools = [
+    { name: "JSON Formatter", url: "json-formatter.html", icon: "🧩", category: "developer" },
+    { name: "Colourcode Converter", url: "colourcodeconverter.html", icon: "🎨", category: "developer" },
+    { name: "CSS Minifier", url: "css-minifier.html", icon: "🧵", category: "developer" },
+    { name: "CSV to Json", url: "csv-to-json.html", icon: "📊", category: "developer" },
+    { name: "Htaccess Generator", url: "htaccessgenerator.html", icon: "⚙️", category: "developer" },
+    { name: "Javascript Minifier", url: "javascript-minifier.html", icon: "⚡", category: "developer" },
+    { name: "Json to CSV", url: "json-to-csv.html", icon: "🔁", category: "developer" },
+    { name: "Regex Tester", url: "regextester.html", icon: "🔍", category: "developer" },
+    { name: "Timestamp Converter", url: "timestampconverter.html", icon: "⏱️", category: "developer" },    
+    { name: "Base64 Encoder Decoder", url: "base64-encoder-decoder.html", icon: "🔐", category: "developer" }
+];
+
+// detect current page
+const currentPage = window.location.pathname.split("/").pop();
+
+// filter related tools
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

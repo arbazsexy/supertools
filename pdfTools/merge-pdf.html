@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Merge PDF Online Free - Combine PDF Files Instantly | SuperTools</title>
+    <meta name="description" content="Merge PDF files online for free. Upload, drag, reorder, preview, and combine multiple PDF files into one document instantly with SuperTools.">
+    <meta name="keywords" content="merge pdf, combine pdf, join pdf files, pdf merger online, merge pdf free, reorder pdf files">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/merge-pdf.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Merge PDF Online Free - SuperTools">
+    <meta property="og:description" content="Combine multiple PDF files into one document instantly with this free online PDF merger.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/merge-pdf.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Merge PDF Online Free - SuperTools">
+    <meta name="twitter:description" content="Combine multiple PDF files into one document instantly with this free online PDF merger.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Merge PDF",
+      "alternateName": "PDF Merger",
+      "url": "https://supertools1.site/merge-pdf.html",
+      "description": "Free online tool to merge multiple PDF files into one document. Upload, reorder, preview, and combine PDFs instantly in your browser.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Merge multiple PDF files",
+        "Reorder PDFs before merging",
+        "Preview first page thumbnails",
+        "Drag and drop upload",
+        "Drag to reorder files",
+        "Download merged PDF",
+        "Runs locally in browser",
+        "Free and privacy friendly"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I merge PDF files online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Upload two or more PDF files, reorder them as needed, and click the Merge PDFs button. After processing, download the combined PDF file instantly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I reorder PDF files before merging?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can drag and reorder the PDF files before merging them. You can also move files up or down manually."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this Merge PDF tool free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this Merge PDF tool is completely free to use online."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my PDF files uploaded to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, the PDF merge process runs directly in your browser, which helps keep your files private."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many PDF files can I merge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can merge multiple PDF files at once, depending on your browser and device memory."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Merge PDF</h1>
+    <p>Upload PDF files, reorder them, preview them, and combine them into one single document instantly.</p>
+
+    <label for="pdfUpload">Select PDF files</label>
+    <div id="dropArea" class="drop-area" tabindex="0" aria-label="Drop PDF files here or click to upload">
+        <p><strong>Drop PDF files here</strong></p>
+        <p>or click to upload</p>
+        <input type="file" id="pdfUpload" multiple accept="application/pdf" style="display:none;">
+    </div>
+
+    <label for="outputFileName">Output file name</label>
+    <input type="text" id="outputFileName" value="merged-pdf" placeholder="e.g. merged-pdf" aria-label="Enter output file name">
+
+    <div class="button-group">
+        <button type="button" onclick="mergePDF()">
+            Merge PDFs
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFiles()">
+            Clear
+        </button>
+    </div>
+
+    <div id="result"></div>
+
+    <div id="progressContainer" style="margin-top:20px;display:none;">
+        <div id="progressBar">
+            <div id="progressFill" style="width:0%;background:#4CAF50;color:white;text-align:center;padding:6px 0;">0%</div>
+        </div>
+    </div>
+
+    <div id="fileSummary"></div>
+    <div id="fileList"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Merge PDF Files</h2>
+
+    <p>
+        The <strong>Merge PDF</strong> tool helps you combine multiple PDF files into one document in just a few clicks.
+        It is useful when you want to join reports, assignments, invoices, forms, notes, or scanned documents into a single PDF file.
+    </p>
+
+    <p>
+        To use this tool, upload two or more PDF files using the upload box above. You can drag and drop files or click to select them.
+        After uploading, you can reorder the files by dragging them or by using the move buttons. You will also see a small preview of the first page of each PDF.
+    </p>
+
+    <p>
+        Once the files are in the correct order, click the <strong>Merge PDFs</strong> button. The tool will combine them directly in your browser
+        and generate a downloadable merged PDF file. This means your files stay on your device for better privacy and fast performance.
+    </p>
+
+    <h3>Why Use This Merge PDF Tool?</h3>
+    <ul>
+        <li><strong>Combine Multiple PDFs:</strong> Merge several PDF files into one document.</li>
+        <li><strong>Easy Reordering:</strong> Drag files into the correct order before merging.</li>
+        <li><strong>Preview Support:</strong> See the first page thumbnail of each PDF.</li>
+        <li><strong>Quick Processing:</strong> Merge files directly in your browser.</li>
+        <li><strong>Privacy Friendly:</strong> Files are processed locally on your device.</li>
+        <li><strong>Beginner Friendly:</strong> Simple layout and easy controls.</li>
+        <li><strong>Free to Use:</strong> No login and no subscription required.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>students</strong>, <strong>teachers</strong>, <strong>office workers</strong>,
+        <strong>freelancers</strong>, <strong>business users</strong>, and anyone who wants to combine PDF files quickly before sharing or storing them.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: How do I merge PDF files online?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Upload two or more PDF files, reorder them if needed, and click <strong>Merge PDFs</strong>.
+            After processing, download the final combined PDF file instantly.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I reorder PDF files before merging?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can drag and reorder the uploaded PDF files before merging. You can also use the move up and move down buttons.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Is this Merge PDF tool free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this Merge PDF tool is completely free to use online.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Are my files uploaded anywhere?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. The PDF merge process runs locally in your browser, so your files stay on your device during processing.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: How many PDF files can I merge?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            You can merge multiple PDF files at once. The exact limit depends on your device memory and browser performance.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+
+let filesArray = [];
+let dragIndex = null;
+
+function formatBytes(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB";
+    return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+}
+
+function safeFileName(name) {
+    return name.replace(/\.pdf$/i, "").replace(/[^a-zA-Z0-9._-]/g, "-");
+}
+
+function updateSummary() {
+    const fileSummary = document.getElementById("fileSummary");
+
+    if (!filesArray.length) {
+        fileSummary.innerHTML = "";
+        return;
+    }
+
+    const totalSize = filesArray.reduce((sum, file) => sum + file.size, 0);
+
+    fileSummary.innerHTML = `
+        <div class="average-result" style="margin-top:20px;">
+            <div class="stats">
+                <div class="stat-box">Files<br>${filesArray.length}</div>
+                <div class="stat-box">Total Size<br>${formatBytes(totalSize)}</div>
+            </div>
+        </div>
+    `;
+}
+
+function clearFiles() {
+    filesArray = [];
+    document.getElementById("pdfUpload").value = "";
+    document.getElementById("progressContainer").style.display = "none";
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("fileList").innerHTML = "";
+    document.getElementById("fileSummary").innerHTML = "";
+    document.getElementById("outputFileName").value = "merged-pdf";
+}
+
+function handleFiles(files) {
+    const result = document.getElementById("result");
+
+    for (const file of files) {
+        if (file.type === "application/pdf") {
+            const exists = filesArray.some(existing => existing.name === file.name && existing.size === file.size && existing.lastModified === file.lastModified);
+            if (!exists) {
+                filesArray.push(file);
+            }
+        }
+    }
+
+    if (!filesArray.length) {
+        result.innerHTML = "<div class='result-box'>Please upload valid PDF files.</div>";
+    } else {
+        result.innerHTML = "";
+    }
+
+    renderFiles();
+}
+
+async function renderFiles() {
+    const list = document.getElementById("fileList");
+    list.innerHTML = "";
+
+    updateSummary();
+
+    for (let i = 0; i < filesArray.length; i++) {
+        const file = filesArray[i];
+
+        const card = document.createElement("div");
+        card.className = "modern-card";
+        card.style.width = "180px";
+        card.style.padding = "15px";
+        card.draggable = true;
+        card.dataset.index = i;
+
+        card.addEventListener("dragstart", dragStart);
+        card.addEventListener("dragover", dragOver);
+        card.addEventListener("drop", dropFile);
+
+        const canvas = document.createElement("canvas");
+        canvas.width = 140;
+        canvas.style.width = "100%";
+        canvas.style.borderRadius = "10px";
+        canvas.style.background = "#fff";
+
+        const name = document.createElement("p");
+        name.style.fontSize = "12px";
+        name.style.marginTop = "10px";
+        name.style.wordBreak = "break-word";
+        name.textContent = file.name;
+
+        const size = document.createElement("p");
+        size.style.fontSize = "12px";
+        size.style.marginBottom = "10px";
+        size.textContent = formatBytes(file.size);
+
+        const upBtn = document.createElement("button");
+        upBtn.type = "button";
+        upBtn.className = "action-btn secondary-btn";
+        upBtn.textContent = "Move Up";
+        upBtn.onclick = () => moveFileUp(i);
+
+        const downBtn = document.createElement("button");
+        downBtn.type = "button";
+        downBtn.className = "action-btn sample-btn";
+        downBtn.textContent = "Move Down";
+        downBtn.onclick = () => moveFileDown(i);
+
+        const removeBtn = document.createElement("button");
+        removeBtn.type = "button";
+        removeBtn.className = "action-btn clear-btn";
+        removeBtn.textContent = "Remove";
+        removeBtn.onclick = () => removeFile(i);
+
+        card.appendChild(canvas);
+        card.appendChild(name);
+        card.appendChild(size);
+        card.appendChild(upBtn);
+        card.appendChild(downBtn);
+        card.appendChild(removeBtn);
+
+        list.appendChild(card);
+
+        previewPDF(file, canvas);
+    }
+}
+
+function moveFileUp(index) {
+    if (index <= 0) return;
+    [filesArray[index - 1], filesArray[index]] = [filesArray[index], filesArray[index - 1]];
+    renderFiles();
+}
+
+function moveFileDown(index) {
+    if (index >= filesArray.length - 1) return;
+    [filesArray[index + 1], filesArray[index]] = [filesArray[index], filesArray[index + 1]];
+    renderFiles();
+}
+
+function removeFile(index) {
+    filesArray.splice(index, 1);
+    renderFiles();
+}
+
+async function previewPDF(file, canvas) {
+    try {
+        const pdfData = await file.arrayBuffer();
+        const pdf = await pdfjsLib.getDocument({ data: pdfData }).promise;
+        const page = await pdf.getPage(1);
+        const viewport = page.getViewport({ scale: 0.35 });
+        const context = canvas.getContext("2d");
+
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+
+        await page.render({
+            canvasContext: context,
+            viewport: viewport
+        }).promise;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+function dragStart() {
+    dragIndex = Number(this.dataset.index);
+}
+
+function dragOver(e) {
+    e.preventDefault();
+}
+
+function dropFile() {
+    const dropIndex = Number(this.dataset.index);
+
+    if (dragIndex === null || dragIndex === dropIndex) return;
+
+    [filesArray[dragIndex], filesArray[dropIndex]] = [filesArray[dropIndex], filesArray[dragIndex]];
+    dragIndex = null;
+    renderFiles();
+}
+
+async function mergePDF() {
+    const result = document.getElementById("result");
+    const progressContainer = document.getElementById("progressContainer");
+    const progressFill = document.getElementById("progressFill");
+    const outputFileName = document.getElementById("outputFileName").value.trim();
+
+    result.innerHTML = "";
+
+    if (filesArray.length < 2) {
+        result.innerHTML = "<div class='result-box'>Please upload at least two PDF files.</div>";
+        return;
+    }
+
+    progressContainer.style.display = "block";
+    progressFill.style.width = "0%";
+    progressFill.textContent = "0%";
+
+    try {
+        const mergedPdf = await PDFLib.PDFDocument.create();
+
+        for (let i = 0; i < filesArray.length; i++) {
+            const fileBytes = await filesArray[i].arrayBuffer();
+            const pdf = await PDFLib.PDFDocument.load(fileBytes);
+            const pages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
+
+            pages.forEach(page => mergedPdf.addPage(page));
+
+            const percent = Math.round(((i + 1) / filesArray.length) * 100);
+            progressFill.style.width = percent + "%";
+            progressFill.textContent = percent + "%";
+        }
+
+        const mergedBytes = await mergedPdf.save();
+        const blob = new Blob([mergedBytes], { type: "application/pdf" });
+        const url = URL.createObjectURL(blob);
+
+        result.innerHTML = `
+            <div class="result-box">
+                <p><strong>PDFs merged successfully.</strong></p>
+                <p>Total files merged: ${filesArray.length}</p>
+                <p>Final file size: ${formatBytes(blob.size)}</p>
+                <a href="${url}" download="${safeFileName(outputFileName || "merged-pdf")}.pdf">
+                    <button type="button">Download Merged PDF</button>
+                </a>
+            </div>
+        `;
+    } catch (error) {
+        console.error(error);
+        result.innerHTML = "<div class='result-box'>Could not merge these PDF files. Please try valid PDF documents.</div>";
+    }
+}
+
+const dropArea = document.getElementById("dropArea");
+const fileInput = document.getElementById("pdfUpload");
+
+dropArea.addEventListener("click", () => fileInput.click());
+dropArea.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        fileInput.click();
+    }
+});
+
+dropArea.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropArea.classList.add("dragover");
+});
+
+dropArea.addEventListener("dragleave", () => {
+    dropArea.classList.remove("dragover");
+});
+
+dropArea.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropArea.classList.remove("dragover");
+    handleFiles(e.dataTransfer.files);
+});
+
+fileInput.addEventListener("change", () => {
+    handleFiles(fileInput.files);
+});
+</script>
+
+<script>
+const tools = [
+    { name: "Add Watermark to PDF", url: "add-watermark-pdf.html", icon: "🖋️", category: "pdf" },
+    { name: "Merge PDF", url: "merge-pdf.html", icon: "📎", category: "pdf" },
+    { name: "Split PDF", url: "split-pdf.html", icon: "✂️", category: "pdf" },
+    { name: "Rotate PDF", url: "rotate-pdf.html", icon: "🔄", category: "pdf" },
+    { name: "Compress PDF", url: "compress-pdf.html", icon: "🗜️", category: "pdf" },
+    { name: "Unlock PDF", url: "unlock-pdf.html", icon: "🔓", category: "pdf" },
+];
+
+// detect current page
+const currentPage = window.location.pathname.split("/").pop();
+
+// filter related tools
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Advanced Salary Calculator Online - Monthly, Yearly, Tax, PF & HRA | SuperTools</title>
+    <meta name="description" content="Free online salary calculator to calculate monthly salary, yearly salary, in-hand salary, tax, PF, HRA, and salary breakdown instantly. Perfect for employees, job offers, and salary planning.">
+    <meta name="keywords" content="salary calculator, in hand salary calculator, salary breakup calculator, monthly salary calculator, yearly salary calculator, hra calculator, pf calculator">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/salarycalculator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Advanced Salary Calculator Online - SuperTools">
+    <meta property="og:description" content="Calculate salary, tax, PF, HRA, in-hand income, and salary breakdown instantly.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/salarycalculator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Advanced Salary Calculator Online - SuperTools">
+    <meta name="twitter:description" content="Calculate salary, tax, PF, HRA, and in-hand income instantly.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Salary Calculator",
+      "alternateName": "Advanced Salary Calculator",
+      "url": "https://supertools1.site/salarycalculator.html",
+      "description": "Free online salary calculator to calculate monthly salary, yearly salary, tax, PF, HRA, salary breakup, and net in-hand income instantly.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Calculate monthly salary",
+        "Calculate yearly salary",
+        "Calculate hourly wage salary conversion",
+        "Estimate tax deductions",
+        "Use India tax slab calculation",
+        "Calculate PF deduction",
+        "Calculate HRA amount",
+        "View salary breakup",
+        "See net monthly salary",
+        "See net yearly salary",
+        "Free and browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does this salary calculator work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This salary calculator converts your salary into monthly or yearly values and shows an estimated salary breakup including tax, PF, HRA, and net in-hand income."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I calculate salary from hourly pay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can enter hourly pay and weekly working hours to estimate monthly and yearly salary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it support India tax calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can enable the India tax slab option to estimate yearly tax based on the selected salary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in the salary breakup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The calculator shows basic salary, HRA, PF, other components, tax amount, net monthly salary, and net yearly salary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this salary calculator free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this salary calculator is completely free and works directly in your browser."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Advanced Salary Calculator</h1>
+    <p>Calculate monthly salary, yearly salary, tax, PF, HRA, and net in-hand income instantly.</p>
+
+    <div class="salary-grid">
+        <div class="salary-card">
+            <h3>Salary Details</h3>
+            <div class="input-row">
+                <input type="number" id="salary" placeholder="Enter salary">
+                <select id="type" aria-label="Salary type">
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                    <option value="hourly">Hourly</option>
+                </select>
+            </div>
+
+            <div class="input-row">
+                <select id="currency" aria-label="Currency">
+                    <option value="₹">₹ INR</option>
+                    <option value="$">$ USD</option>
+                    <option value="€">€ EUR</option>
+                </select>
+                <input type="number" id="hours" placeholder="Hours/week (for hourly)">
+            </div>
+
+            <div class="input-row">
+                <input type="number" id="tax" placeholder="Custom tax % (optional)">
+                <input type="number" id="pfRate" placeholder="PF % (default 12)">
+            </div>
+
+            <div class="input-row">
+                <input type="number" id="hraRate" placeholder="HRA % (default 20)">
+                <input type="number" id="basicRate" placeholder="Basic % (default 50)">
+            </div>
+
+            <div class="checkbox-row">
+                <label><input type="checkbox" id="indiaTax"> Use India Tax Slabs</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-group">
+        <button type="button" onclick="calculateSalary()">
+            <i class="fas fa-calculator"></i> Calculate
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Salary Calculator</h2>
+
+    <p>
+        The <strong>Salary Calculator</strong> helps you estimate your <strong>monthly salary</strong>,
+        <strong>yearly salary</strong>, <strong>in-hand salary</strong>, and common deductions like
+        <strong>tax</strong>, <strong>PF</strong>, and <strong>HRA</strong>. It is useful for employees,
+        job seekers, and anyone comparing salary offers.
+    </p>
+
+    <p>
+        To use this calculator, enter your salary amount and choose whether it is
+        <strong>monthly</strong>, <strong>yearly</strong>, or <strong>hourly</strong>. If you select hourly,
+        you can enter working hours per week to estimate the total salary. You can also enter a custom tax percentage
+        or enable the <strong>India Tax Slab</strong> option for an estimated slab-based tax calculation.
+    </p>
+
+    <p>
+        The calculator then shows a clear salary breakdown including <strong>basic salary</strong>,
+        <strong>HRA</strong>, <strong>PF</strong>, <strong>other salary components</strong>,
+        <strong>net monthly salary</strong>, and <strong>net yearly salary</strong>.
+    </p>
+
+    <h3>What Does This Salary Calculator Show?</h3>
+    <ul>
+        <li><strong>Monthly Salary:</strong> Estimated monthly pay.</li>
+        <li><strong>Yearly Salary:</strong> Total annual income.</li>
+        <li><strong>Tax Amount:</strong> Estimated tax deduction.</li>
+        <li><strong>Basic Salary:</strong> Salary base component.</li>
+        <li><strong>HRA:</strong> House Rent Allowance estimate.</li>
+        <li><strong>PF:</strong> Provident Fund deduction estimate.</li>
+        <li><strong>Other Components:</strong> Remaining salary portion.</li>
+        <li><strong>Net Salary:</strong> In-hand income after tax.</li>
+    </ul>
+
+    <h3>Why Use This Salary Calculator?</h3>
+    <ul>
+        <li><strong>Fast Estimates:</strong> Instantly calculate take-home salary.</li>
+        <li><strong>Helpful for Job Offers:</strong> Compare salary structures quickly.</li>
+        <li><strong>Supports Multiple Input Types:</strong> Monthly, yearly, and hourly salary.</li>
+        <li><strong>Tax Estimation:</strong> Use either custom tax or India tax slabs.</li>
+        <li><strong>Useful Breakdown:</strong> Shows PF, HRA, basic, and other components.</li>
+        <li><strong>Free to Use:</strong> No signup required.</li>
+    </ul>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: How does this salary calculator work?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This calculator converts your salary into monthly and yearly values and estimates deductions such as
+            tax, PF, and HRA. It also shows your approximate in-hand salary after tax.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I calculate salary from hourly pay?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. Select <strong>Hourly</strong> as the salary type, enter your hourly rate, and provide the number of hours
+            worked per week. The calculator will estimate monthly and yearly salary values.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Does it support India tax calculation?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. Enable the <strong>Use India Tax Slabs</strong> option to estimate tax using simple Indian tax slab logic.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: What is included in the salary breakup?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            The breakup includes <strong>basic salary</strong>, <strong>HRA</strong>, <strong>PF</strong>,
+            <strong>other salary components</strong>, <strong>tax amount</strong>, <strong>net monthly salary</strong>,
+            and <strong>net yearly salary</strong>.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this salary calculator free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this salary calculator is completely free and works directly in your browser.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function formatNumber(num) {
+    return new Intl.NumberFormat('en-IN', {
+        maximumFractionDigits: 2,
+        minimumFractionDigits: 0
+    }).format(num);
+}
+
+function indiaTaxCalc(income) {
+    let tax = 0;
+
+    if (income > 250000) {
+        if (income <= 500000) {
+            tax += (income - 250000) * 0.05;
+        } else if (income <= 1000000) {
+            tax += 250000 * 0.05;
+            tax += (income - 500000) * 0.20;
+        } else {
+            tax += 250000 * 0.05;
+            tax += 500000 * 0.20;
+            tax += (income - 1000000) * 0.30;
+        }
+    }
+
+    return tax;
+}
+
+function calculateSalary() {
+    const salary = parseFloat(document.getElementById("salary").value);
+    const type = document.getElementById("type").value;
+    const currency = document.getElementById("currency").value;
+    const hours = parseFloat(document.getElementById("hours").value) || 40;
+    const taxInput = parseFloat(document.getElementById("tax").value) || 0;
+    const pfRate = parseFloat(document.getElementById("pfRate").value) || 12;
+    const hraRate = parseFloat(document.getElementById("hraRate").value) || 20;
+    const basicRate = parseFloat(document.getElementById("basicRate").value) || 50;
+    const useIndia = document.getElementById("indiaTax").checked;
+    const result = document.getElementById("result");
+
+    if (isNaN(salary) || salary <= 0) {
+        result.innerHTML = "<div class='average-result' style='color:#d63031;'>Please enter a valid salary amount.</div>";
+        return;
+    }
+
+    let monthly = 0;
+    let yearly = 0;
+
+    if (type === "monthly") {
+        monthly = salary;
+        yearly = salary * 12;
+    } else if (type === "yearly") {
+        yearly = salary;
+        monthly = salary / 12;
+    } else {
+        const weekly = salary * hours;
+        yearly = weekly * 52;
+        monthly = yearly / 12;
+    }
+
+    const basic = monthly * (basicRate / 100);
+    const hra = monthly * (hraRate / 100);
+    const pf = monthly * (pfRate / 100);
+    const other = monthly - basic - hra - pf;
+
+    let taxAmount = 0;
+    if (useIndia) {
+        taxAmount = indiaTaxCalc(yearly);
+    } else {
+        taxAmount = yearly * (taxInput / 100);
+    }
+
+    const netYearly = yearly - taxAmount;
+    const netMonthly = netYearly / 12;
+    const inHandPercent = (netYearly / yearly) * 100;
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Monthly Salary<br>${currency}${formatNumber(monthly)}</div>
+                <div class="stat-box">Yearly Salary<br>${currency}${formatNumber(yearly)}</div>
+                <div class="stat-box">Net Monthly<br>${currency}${formatNumber(netMonthly)}</div>
+                <div class="stat-box">Net Yearly<br>${currency}${formatNumber(netYearly)}</div>
+                <div class="stat-box">Tax Amount<br>${currency}${formatNumber(taxAmount)}</div>
+                <div class="stat-box">In-Hand %<br>${formatNumber(inHandPercent)}%</div>
+            </div>
+
+            <hr>
+
+            <div class="stats">
+                <div class="stat-box">Basic<br>${currency}${formatNumber(basic)}</div>
+                <div class="stat-box">HRA<br>${currency}${formatNumber(hra)}</div>
+                <div class="stat-box">PF<br>${currency}${formatNumber(pf)}</div>
+                <div class="stat-box">Other<br>${currency}${formatNumber(other)}</div>
+            </div>
+
+            <hr>
+
+            <div>
+                <strong>Salary Type:</strong> ${type.charAt(0).toUpperCase() + type.slice(1)}<br>
+                <strong>Tax Method:</strong> ${useIndia ? "India Tax Slabs" : `Custom Tax (${taxInput}%)`}<br>
+                <strong>Formula:</strong> Net Salary = Total Salary - Tax
+            </div>
+        </div>
+    `;
+}
+
+function clearAll() {
+    document.getElementById("salary").value = "";
+    document.getElementById("type").value = "monthly";
+    document.getElementById("currency").value = "₹";
+    document.getElementById("hours").value = "";
+    document.getElementById("tax").value = "";
+    document.getElementById("pfRate").value = "";
+    document.getElementById("hraRate").value = "";
+    document.getElementById("basicRate").value = "";
+    document.getElementById("indiaTax").checked = false;
+    document.getElementById("result").innerHTML = "";
+}
+
+function loadSample() {
+    document.getElementById("salary").value = "50000";
+    document.getElementById("type").value = "monthly";
+    document.getElementById("currency").value = "₹";
+    document.getElementById("hours").value = "40";
+    document.getElementById("tax").value = "10";
+    document.getElementById("pfRate").value = "12";
+    document.getElementById("hraRate").value = "20";
+    document.getElementById("basicRate").value = "50";
+    document.getElementById("indiaTax").checked = false;
+    calculateSalary();
+}
+
+function copyResult() {
+    const resultText = document.getElementById("result").innerText.trim();
+
+    if (!resultText) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(resultText)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

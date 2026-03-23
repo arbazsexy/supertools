@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sitemap Generator Online - Create XML Sitemap Instantly</title>
+    <meta name="description" content="Free online sitemap generator to create XML sitemaps for your website. Add URLs, change frequency, priority, and last modified dates instantly with SuperTools.">
+    <meta name="keywords" content="sitemap generator, xml sitemap generator, sitemap.xml creator, seo sitemap tool, url sitemap builder">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/sitemapgenerator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sitemap Generator - SuperTools">
+    <meta property="og:description" content="Generate XML sitemap files instantly for better SEO and search engine indexing.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/sitemapgenerator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sitemap Generator - SuperTools">
+    <meta name="twitter:description" content="Generate XML sitemap files instantly for better SEO and search engine indexing.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Sitemap Generator",
+      "alternateName": "XML Sitemap Generator",
+      "url": "https://supertools1.site/sitemapgenerator.html",
+      "description": "Free online sitemap generator to create XML sitemaps for your website. Add URLs, change frequency, priority, and last modified dates instantly.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Generate XML sitemap",
+        "Add multiple URLs",
+        "Add change frequency",
+        "Add priority values",
+        "Add last modified dates",
+        "Remove duplicate URLs",
+        "Sort URLs automatically",
+        "Copy sitemap instantly",
+        "Free browser-based SEO tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do I upload sitemap.xml?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Upload your sitemap file to the root directory of your website so it can be accessed at a URL like https://example.com/sitemap.xml."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a sitemap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A sitemap can help search engines discover and crawl your pages more efficiently, especially on larger websites or websites with many pages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is changefreq in a sitemap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Changefreq is a hint that suggests how often a page may change, such as daily, weekly, or monthly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does priority mean in a sitemap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Priority is a value between 0.0 and 1.0 that suggests how important a page is compared to other pages on the same site."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this sitemap generator free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this sitemap generator is completely free to use."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Sitemap Generator</h1>
+    <p>Create XML sitemap files for your website. Add URLs, frequency, priority, and optional last modified dates instantly.</p>
+
+    <label for="baseUrl">Base URL (optional)</label>
+    <input type="text" id="baseUrl" placeholder="https://example.com">
+
+    <label for="urls">Enter URLs or paths (one per line)</label>
+    <textarea id="urls" rows="8" aria-label="Enter URLs for sitemap generation" placeholder="https://example.com&#10;https://example.com/about&#10;/contact&#10;/blog/post-1"></textarea>
+
+    <label for="freq">Change Frequency</label>
+    <select id="freq">
+        <option value="always">Always</option>
+        <option value="hourly">Hourly</option>
+        <option value="daily">Daily</option>
+        <option value="weekly" selected>Weekly</option>
+        <option value="monthly">Monthly</option>
+        <option value="yearly">Yearly</option>
+        <option value="never">Never</option>
+    </select>
+
+    <label for="priority">Priority (0.0 - 1.0)</label>
+    <input type="number" id="priority" step="0.1" min="0" max="1" value="0.5">
+
+    <label>
+        <input type="checkbox" id="includeLastMod" checked>
+        Include last modified date
+    </label>
+
+    <label for="lastMod">Last Modified Date</label>
+    <input type="date" id="lastMod">
+
+    <label>
+        <input type="checkbox" id="removeDuplicates" checked>
+        Remove duplicate URLs automatically
+    </label>
+
+    <label>
+        <input type="checkbox" id="sortUrls">
+        Sort URLs alphabetically
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="generateSitemap()">
+            <i class="fas fa-sitemap"></i> Generate Sitemap
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Sitemap Generator</h2>
+
+    <p>
+        The <strong>Sitemap Generator</strong> helps you create a valid <strong>XML sitemap</strong> for your website. A sitemap tells search engines which URLs exist on your site and can help them crawl and discover your pages more efficiently.
+    </p>
+
+    <p>
+        To use this tool, enter your page URLs or paths one per line. You can also add a <strong>base URL</strong> so relative paths like <strong>/about</strong> or <strong>/contact</strong> automatically become full URLs. Then choose a <strong>change frequency</strong>, set a <strong>priority</strong>, and optionally include a <strong>last modified date</strong>.
+    </p>
+
+    <p>
+        Once everything is ready, click <strong>Generate Sitemap</strong>. The tool will create the full XML sitemap code for you, remove duplicate URLs if selected, and optionally sort the URLs alphabetically. You can then copy the generated code and save it as <strong>sitemap.xml</strong>.
+    </p>
+
+    <h3>Why Use This Sitemap Generator?</h3>
+    <ul>
+        <li><strong>Improve Crawling:</strong> Help search engines discover important pages faster.</li>
+        <li><strong>Simple XML Output:</strong> Generate ready-to-use sitemap.xml code instantly.</li>
+        <li><strong>Flexible Input:</strong> Use full URLs or relative paths with a base domain.</li>
+        <li><strong>Cleaner Results:</strong> Remove duplicates and sort URLs automatically.</li>
+        <li><strong>SEO Friendly:</strong> Add change frequency, priority, and last modified hints.</li>
+        <li><strong>Free Tool:</strong> Unlimited use without signup.</li>
+    </ul>
+
+    <h3>What is an XML Sitemap?</h3>
+    <p>
+        An XML sitemap is a structured file that lists important URLs on your website. It helps search engines understand your site structure and may improve how efficiently your pages are crawled and indexed.
+    </p>
+
+    <p class="formula-box">
+        Common sitemap location: https://yourdomain.com/sitemap.xml
+    </p>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>bloggers</strong>, <strong>developers</strong>, <strong>SEO users</strong>, <strong>website owners</strong>, <strong>marketers</strong>, and anyone who wants to create XML sitemap files without writing XML manually.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: Where do I upload sitemap.xml?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Upload your sitemap file to the root directory of your website so it is available at a URL like <strong>https://example.com/sitemap.xml</strong>.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Do I need a sitemap?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            A sitemap is very useful because it can help search engines discover and crawl your pages more efficiently, especially on larger sites.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: What is changefreq?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Changefreq is a hint that suggests how often a page may change, such as daily, weekly, or monthly. It is only a suggestion, not a rule.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: What does priority mean?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Priority is a value between 0.0 and 1.0 that suggests how important a page is compared to other pages on the same site.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this sitemap generator is completely free to use.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function escapeXml(str) {
+    return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&apos;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+}
+
+function normalizeUrl(url, baseUrl) {
+    const trimmed = url.trim();
+    if (!trimmed) return "";
+
+    if (/^https?:\/\//i.test(trimmed)) {
+        return trimmed;
+    }
+
+    if (baseUrl) {
+        const cleanBase = baseUrl.replace(/\/+$/, "");
+        const cleanPath = trimmed.startsWith("/") ? trimmed : "/" + trimmed;
+        return cleanBase + cleanPath;
+    }
+
+    return trimmed;
+}
+
+function generateSitemap() {
+    const baseUrl = document.getElementById("baseUrl").value.trim();
+    const rawUrls = document.getElementById("urls").value.trim();
+    const freq = document.getElementById("freq").value;
+    const priority = document.getElementById("priority").value;
+    const includeLastMod = document.getElementById("includeLastMod").checked;
+    const lastMod = document.getElementById("lastMod").value;
+    const removeDuplicates = document.getElementById("removeDuplicates").checked;
+    const sortUrls = document.getElementById("sortUrls").checked;
+    const result = document.getElementById("result");
+
+    if (!rawUrls) {
+        result.innerHTML = `<div class="average-result result-pop"><strong>Please enter at least one URL or path first.</strong></div>`;
+        return;
+    }
+
+    let urls = rawUrls
+        .split("\n")
+        .map(url => normalizeUrl(url, baseUrl))
+        .map(url => url.trim())
+        .filter(Boolean);
+
+    if (removeDuplicates) {
+        urls = [...new Set(urls)];
+    }
+
+    if (sortUrls) {
+        urls.sort((a, b) => a.localeCompare(b));
+    }
+
+    const validUrls = urls.filter(url => /^https?:\/\//i.test(url));
+    const invalidUrls = urls.filter(url => !/^https?:\/\//i.test(url));
+
+    if (validUrls.length === 0) {
+        result.innerHTML = `<div class="average-result result-pop"><strong>No valid full URLs were found. Add full URLs or use a base URL for relative paths.</strong></div>`;
+        return;
+    }
+
+    let output = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+    output += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+
+    validUrls.forEach(url => {
+        output += `  <url>\n`;
+        output += `    <loc>${escapeXml(url)}</loc>\n`;
+        if (includeLastMod && lastMod) {
+            output += `    <lastmod>${escapeXml(lastMod)}</lastmod>\n`;
+        }
+        output += `    <changefreq>${escapeXml(freq)}</changefreq>\n`;
+        output += `    <priority>${escapeXml(priority)}</priority>\n`;
+        output += `  </url>\n`;
+    });
+
+    output += `</urlset>`;
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            ${invalidUrls.length ? `<div style="color:#d63031; margin-bottom:10px;"><strong>Ignored invalid entries:</strong> ${invalidUrls.join(", ")}</div>` : ""}
+
+            <div class="stats">
+                <div class="stat-box">Valid URLs<br>${validUrls.length}</div>
+                <div class="stat-box">Invalid URLs<br>${invalidUrls.length}</div>
+                <div class="stat-box">Frequency<br>${freq}</div>
+                <div class="stat-box">Priority<br>${priority}</div>
+                <div class="stat-box">Last Modified<br>${includeLastMod && lastMod ? lastMod : "No"}</div>
+                <div class="stat-box">Duplicates Removed<br>${removeDuplicates ? "Yes" : "No"}</div>
+            </div>
+
+            <hr>
+
+            <div><strong>Generated XML Sitemap</strong></div>
+            <textarea id="sitemapOutput" class="code-output result-textarea" rows="18" readonly></textarea>
+
+            <div class="button-group">
+                <button type="button" class="action-btn copy-btn" onclick="copySitemapOutput()">
+                    <i class="fas fa-copy"></i> Copy Sitemap
+                </button>
+            </div>
+        </div>
+    `;
+
+    document.getElementById("sitemapOutput").value = output;
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function clearFields() {
+    document.getElementById("baseUrl").value = "";
+    document.getElementById("urls").value = "";
+    document.getElementById("freq").value = "weekly";
+    document.getElementById("priority").value = "0.5";
+    document.getElementById("includeLastMod").checked = true;
+    document.getElementById("lastMod").value = "";
+    document.getElementById("removeDuplicates").checked = true;
+    document.getElementById("sortUrls").checked = false;
+    document.getElementById("result").innerHTML = "";
+}
+
+function loadSample() {
+    const today = new Date().toISOString().split("T")[0];
+    document.getElementById("baseUrl").value = "https://example.com";
+    document.getElementById("urls").value = `/\n/about\n/contact\n/blog\n/blog/post-1\nhttps://example.com/pricing`;
+    document.getElementById("freq").value = "weekly";
+    document.getElementById("priority").value = "0.8";
+    document.getElementById("includeLastMod").checked = true;
+    document.getElementById("lastMod").value = today;
+    document.getElementById("removeDuplicates").checked = true;
+    document.getElementById("sortUrls").checked = true;
+    generateSitemap();
+}
+
+function copySitemapOutput() {
+    const output = document.getElementById("sitemapOutput");
+    if (!output || !output.value.trim()) {
+        alert("No sitemap to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(output.value)
+        .then(() => alert("Sitemap copied to clipboard!"))
+        .catch(() => alert("Failed to copy sitemap."));
+}
+
+function copyResult() {
+    copySitemapOutput();
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Meta Tag Generator", url: "metataggenerator.html", icon: "🏷️", category: "seo" },
+    { name: "Open Graph Generator", url: "opengraphgenerator.html", icon: "🔗", category: "seo" },
+    { name: "Robots.txt Generator", url: "robotstxtgenerator.html", icon: "🤖", category: "seo" },
+    { name: "Sitemap Generator", url: "sitemapgenerator.html", icon: "🗺️", category: "seo" },
+    { name: "URL Slug Generator", url: "urlsluggenerator.html", icon: "✍️", category: "seo" },
+    { name: "Schema Generator", url: "schemagenerator.html", icon: "📄", category: "seo" },
+    { name: "Keyword Density Checker", url: "keyworddensitychecker.html", icon: "📊", category: "seo" },
+    { name: "Hreflang Generator", url: "hreflanggenerator.html", icon: "🌍", category: "seo" },
+    { name: "HTML TO Text", url: "htmltotext.html", icon: "🧾", category: "seo" },
+    { name: "TEXT TO HTML", url: "texttohtml.html", icon: "💻", category: "seo" },
+    { name: "Word Frequency", url: "wordfrequency.html", icon: "🔤", category: "seo" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const relatedToolsContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedToolsContainer) {
+    relatedToolsContainer.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Loan EMI Calculator Online - Calculate EMI, Interest & Total Payment</title>
+    <meta name="description" content="Free online Loan EMI Calculator to calculate monthly EMI, total interest, and total repayment instantly. Perfect for home loans, car loans, personal loans, and education loans.">
+    <meta name="keywords" content="loan emi calculator, emi calculator, home loan emi calculator, car loan calculator, personal loan emi">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/loan-emi-calculator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Loan EMI Calculator Online - SuperTools">
+    <meta property="og:description" content="Calculate monthly EMI, total interest, and total repayment instantly with this free online EMI calculator.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/loan-emi-calculator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Loan EMI Calculator Online - SuperTools">
+    <meta name="twitter:description" content="Calculate monthly EMI, total interest, and total repayment instantly with this free online EMI calculator.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Loan EMI Calculator",
+      "alternateName": "EMI Calculator",
+      "url": "https://supertools1.site/loan-emi-calculator.html",
+      "description": "Free online loan EMI calculator to calculate monthly EMI, total interest, total repayment amount, and loan tenure instantly for home, car, personal, and education loans.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Calculate monthly EMI online",
+        "Show total interest payable",
+        "Show total repayment amount",
+        "Supports loan tenure in years or months",
+        "Supports multiple currencies",
+        "Useful for home loans, car loans, personal loans, and education loans",
+        "Free and browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is EMI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EMI stands for Equated Monthly Installment. It is the fixed amount a borrower pays every month to repay a loan over a chosen period. Each EMI includes both principal repayment and interest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is EMI calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EMI is calculated using the loan amount, monthly interest rate, and total number of monthly installments. The formula ensures that the borrower pays a fixed monthly amount throughout the loan tenure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this EMI calculator for home, car, and personal loans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this loan EMI calculator can be used for different loan types including home loans, car loans, personal loans, and education loans, as long as you know the loan amount, interest rate, and tenure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does EMI include interest and principal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, each EMI includes both principal and interest. In the early months, a larger part of the EMI usually goes toward interest, while later installments repay more of the principal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this loan EMI calculator free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this loan EMI calculator is completely free to use and works instantly in your browser without registration."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Loan EMI Calculator</h1>
+    <p>Calculate your monthly loan EMI, interest payable, and total repayment amount instantly.</p>
+
+    <label for="loanAmount">Loan Amount</label>
+    <input type="number" id="loanAmount" placeholder="e.g. 500000" min="0" step="0.01">
+
+    <label for="interestRate">Annual Interest Rate (%)</label>
+    <input type="number" id="interestRate" placeholder="e.g. 8.5" min="0" step="0.01">
+
+    <label for="loanTenure">Loan Tenure</label>
+    <input type="number" id="loanTenure" placeholder="e.g. 5" min="1" step="0.01">
+
+    <label for="tenureType">Tenure Type</label>
+    <select id="tenureType">
+        <option value="years">Years</option>
+        <option value="months">Months</option>
+    </select>
+
+    <label for="currency">Currency</label>
+    <select id="currency">
+        <option value="₹">₹ INR</option>
+        <option value="$">$ USD</option>
+        <option value="€">€ EUR</option>
+        <option value="£">£ GBP</option>
+    </select>
+
+    <div class="button-group">
+        <button type="button" onclick="calculateEMI()">
+            Calculate EMI
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            Copy
+        </button>
+        <button type="button" class="action-btn download-btn" onclick="downloadPDF()">📄 Download PDF</button>
+
+        <button type="button" class="action-btn share-btn" onclick="generateLink()">🔗 Share</button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="info-section">
+<h2>⚖️ Compare Two Loans</h2>
+
+<input type="number" id="loan2" placeholder="Loan Amount">
+<input type="number" id="rate2" placeholder="Interest %">
+<input type="number" id="tenure2" placeholder="Years">
+
+<button onclick="compareLoans()">Compare</button>
+
+<div id="compareResult"></div>
+</section>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Loan EMI Calculator</h2>
+
+    <p>
+        The <strong>Loan EMI Calculator</strong> helps you quickly calculate the monthly installment you need to pay for a loan. EMI stands for <strong>Equated Monthly Installment</strong> and represents the fixed amount paid every month until the loan is fully repaid.
+    </p>
+
+    <p>
+        This calculator is useful when planning different types of loans such as <strong>home loans</strong>, <strong>car loans</strong>, <strong>personal loans</strong>, and <strong>education loans</strong>. By entering the loan amount, annual interest rate, and loan tenure, you can instantly see your monthly EMI, total interest payable, and total repayment amount.
+    </p>
+
+    <p>
+        To use the tool, enter the total loan amount, the annual interest rate, and the loan tenure. You can choose whether the tenure is in years or months. Once you click the <strong>Calculate EMI</strong> button, the tool will immediately show the results in a simple and clear format.
+    </p>
+
+    <h3>What Is EMI?</h3>
+    <p>
+        EMI, or <strong>Equated Monthly Installment</strong>, is the fixed monthly payment made by a borrower to a lender. Each EMI includes two parts: a portion of the <strong>principal amount</strong> and a portion of the <strong>interest charged</strong> by the lender.
+    </p>
+
+    <p class="formula-box">
+        EMI = [P x R x (1 + R)^N] ÷ [(1 + R)^N - 1]
+    </p>
+
+    <p>
+        In this formula, <strong>P</strong> is the loan amount, <strong>R</strong> is the monthly interest rate, and <strong>N</strong> is the total number of monthly installments. Using an EMI calculator helps borrowers understand their monthly financial commitment before taking a loan.
+    </p>
+
+    <h3>Why Use This EMI Calculator?</h3>
+    <ul>
+        <li><strong>Instant EMI Calculation:</strong> Know your monthly payment in seconds.</li>
+        <li><strong>Total Interest Breakdown:</strong> See how much interest you will pay over the full loan period.</li>
+        <li><strong>Total Repayment Amount:</strong> Understand the complete amount you will repay.</li>
+        <li><strong>Flexible Tenure Input:</strong> Enter loan tenure in years or months.</li>
+        <li><strong>Useful for Many Loan Types:</strong> Works for home, car, personal, and education loans.</li>
+        <li><strong>Free and Easy to Use:</strong> No registration required and works on desktop and mobile.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This loan EMI calculator is useful for borrowers, students, families, financial planners, and anyone who wants to estimate loan payments before applying for financing. It can help you compare loan options, budget your monthly expenses, and make more informed financial decisions.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is EMI?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            EMI stands for <strong>Equated Monthly Installment</strong>. It is the fixed amount a borrower pays every month to repay a loan over a selected period. Each EMI includes both principal repayment and interest.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: How is EMI calculated?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            EMI is calculated using the loan amount, monthly interest rate, and total number of monthly installments. The formula is designed to give a fixed monthly repayment amount over the full loan tenure.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I use this EMI calculator for home, car, and personal loans?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this loan EMI calculator can be used for many types of loans including home loans, car loans, personal loans, and education loans. You only need the loan amount, interest rate, and tenure to calculate the EMI.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Does EMI include interest and principal?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, every EMI payment includes both the principal and the interest. In most loans, the earlier payments contain a higher interest portion, while later payments repay more of the principal.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this loan EMI calculator free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this EMI calculator is completely free to use and gives instant results directly in your browser without any signup or download.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function showResult(html) {
+    const resultBox = document.getElementById("result");
+    resultBox.innerHTML = html;
+
+    setTimeout(() => {
+        const yOffset = -100;
+        const y = resultBox.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+    }, 50);
+}
+
+function formatMoney(value, currency) {
+    return currency + Number(value).toFixed(2);
+}
+
+function calculateEMI() {
+    const P = parseFloat(document.getElementById("loanAmount").value);
+    const annualRate = parseFloat(document.getElementById("interestRate").value);
+    const tenure = parseFloat(document.getElementById("loanTenure").value);
+    const tenureType = document.getElementById("tenureType").value;
+    const currency = document.getElementById("currency").value;
+
+    if (isNaN(P) || isNaN(annualRate) || isNaN(tenure) || P <= 0 || annualRate < 0 || tenure <= 0) {
+        showResult("<div class='average-result result-pop'>Please enter valid loan amount, interest rate, and tenure values.</div>");
+        return;
+    }
+
+    const n = tenureType === "years" ? tenure * 12 : tenure;
+    const r = (annualRate / 12) / 100;
+
+    let emi = 0;
+
+    if (r === 0) {
+        emi = P / n;
+    } else {
+        emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    }
+
+    const totalPayment = emi * n;
+    const totalInterest = totalPayment - P;
+
+showResult(`
+<div class="average-result result-pop">
+
+    <div class="stats">
+        <div class="stat-box">Monthly EMI<br>${formatMoney(emi, currency)}</div>
+        <div class="stat-box">Loan Amount<br>${formatMoney(P, currency)}</div>
+        <div class="stat-box">Total Interest<br>${formatMoney(totalInterest, currency)}</div>
+        <div class="stat-box">Total Payment<br>${formatMoney(totalPayment, currency)}</div>
+        <div class="stat-box">Months<br>${n}</div>
+    </div>
+
+    <canvas id="emiChart" style="margin-top:20px;"></canvas>
+    <h3>📊 Principal vs Interest</h3>
+    <canvas id="pieChart" style="margin-top:20px;"></canvas>
+
+    <h3 style="margin-top:25px;">📊 Amortization Schedule</h3>
+    <div style="overflow:auto; max-height:300px;">
+        <table style="width:100%; border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>EMI</th>
+                    <th>Principal</th>
+                    <th>Interest</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody id="scheduleBody"></tbody>
+        </table>
+    </div>
+
+</div>
+`);
+let balance = P;
+let tbody = document.getElementById("scheduleBody");
+tbody.innerHTML = "";
+
+let principalData = [];
+let interestData = [];
+
+for (let i = 1; i <= n; i++) {
+
+    let interest = balance * r;
+    let principal = emi - interest;
+    balance -= principal;
+
+    if (balance < 0) balance = 0;
+
+    principalData.push(principal);
+    interestData.push(interest);
+
+    if (i <= 50) { // limit rows for performance
+        tbody.innerHTML += `
+        <tr>
+            <td>${i}</td>
+            <td>${formatMoney(emi, currency)}</td>
+            <td>${formatMoney(principal, currency)}</td>
+            <td>${formatMoney(interest, currency)}</td>
+            <td>${formatMoney(balance, currency)}</td>
+        </tr>`;
+    }
+}
+const ctx = document.getElementById("emiChart");
+
+new Chart(ctx, {
+    type: "line",
+    data: {
+        labels: Array.from({length: n}, (_, i) => i + 1),
+        datasets: [
+            {
+                label: "Principal",
+                data: principalData
+            },
+            {
+                label: "Interest",
+                data: interestData
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { position: "top" }
+        }
+    }
+});
+new Chart(document.getElementById("pieChart"), {
+    type: "pie",
+    data: {
+        labels: ["Principal", "Interest"],
+        datasets: [{
+            data: [P, totalInterest]
+        }]
+    },
+    options: {
+        responsive: true
+    }
+});
+}
+
+function clearFields() {
+    document.getElementById("loanAmount").value = "";
+    document.getElementById("interestRate").value = "";
+    document.getElementById("loanTenure").value = "";
+    document.getElementById("tenureType").value = "years";
+    document.getElementById("currency").value = "₹";
+    document.getElementById("result").innerHTML = "";
+}
+
+function loadSample() {
+    document.getElementById("loanAmount").value = "500000";
+    document.getElementById("interestRate").value = "8.5";
+    document.getElementById("loanTenure").value = "5";
+    document.getElementById("tenureType").value = "years";
+    document.getElementById("currency").value = "₹";
+    calculateEMI();
+}
+
+function copyResult() {
+    const resultText = document.getElementById("result").innerText.trim();
+
+    if (!resultText) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(resultText)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+function formatMoney(value, currency) {
+    return currency + Number(value).toLocaleString(undefined, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+}
+function downloadPDF(){
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    const text = document.getElementById("result").innerText;
+
+    doc.text("Loan EMI Report", 10, 10);
+    doc.text(text, 10, 20);
+
+    doc.save("emi-report.pdf");
+}
+
+function generateLink(){
+    const P = document.getElementById("loanAmount").value;
+    const R = document.getElementById("interestRate").value;
+    const T = document.getElementById("loanTenure").value;
+
+    const url = `${window.location.origin}${window.location.pathname}?p=${P}&r=${R}&t=${T}`;
+
+    navigator.clipboard.writeText(url);
+    alert("Link copied!");
+}
+
+window.onload = function(){
+    const params = new URLSearchParams(window.location.search);
+
+    if(params.get("p")){
+        document.getElementById("loanAmount").value = params.get("p");
+        document.getElementById("interestRate").value = params.get("r");
+        document.getElementById("loanTenure").value = params.get("t");
+
+        calculateEMI();
+    }
+}
+function calculateEMIValue(P, annualRate, years){
+    let r = (annualRate/12)/100;
+    let n = years*12;
+
+    if(r === 0) return P/n;
+
+    return (P*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+}
+
+function compareLoans(){
+
+    let P1 = parseFloat(document.getElementById("loanAmount").value);
+    let R1 = parseFloat(document.getElementById("interestRate").value);
+    let T1 = parseFloat(document.getElementById("loanTenure").value);
+
+    let P2 = parseFloat(document.getElementById("loan2").value);
+    let R2 = parseFloat(document.getElementById("rate2").value);
+    let T2 = parseFloat(document.getElementById("tenure2").value);
+
+    if(!P2 || !R2 || !T2){
+        document.getElementById("compareResult").innerHTML = "Enter second loan values";
+        return;
+    }
+
+    let emi1 = calculateEMIValue(P1,R1,T1);
+    let emi2 = calculateEMIValue(P2,R2,T2);
+
+    document.getElementById("compareResult").innerHTML = `
+    <div class="average-result">
+        <div class="stats">
+            <div class="stat-box">Loan 1 EMI<br>${emi1.toFixed(2)}</div>
+            <div class="stat-box">Loan 2 EMI<br>${emi2.toFixed(2)}</div>
+        </div>
+    </div>`;
+}
+</script>
+
+</body>
+</html>

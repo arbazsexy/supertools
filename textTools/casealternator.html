@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Case Alternator Online - Convert Text to Alternating Case | SuperTools</title>
+    <meta name="description" content="Convert text into alternating case instantly. Choose alternating lowercase-first, uppercase-first, random case, copy output, download text, and more with SuperTools.">
+    <meta name="keywords" content="case alternator, alternating case converter, random case text, text case tool, uppercase lowercase alternator">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/casealternator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Case Alternator Online - SuperTools">
+    <meta property="og:description" content="Convert text into alternating uppercase and lowercase letters instantly with multiple case modes.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/casealternator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Case Alternator Online - SuperTools">
+    <meta name="twitter:description" content="Convert text into alternating uppercase and lowercase letters instantly with multiple case modes.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Case Alternator",
+      "alternateName": "Alternating Case Converter",
+      "url": "https://supertools1.site/casealternator.html",
+      "description": "Free online Case Alternator tool to convert text into alternating uppercase and lowercase styles, including lowercase-first, uppercase-first, and random case.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Alternating case conversion",
+        "Lowercase-first mode",
+        "Uppercase-first mode",
+        "Random case mode",
+        "Ignore spaces and punctuation option",
+        "Copy output",
+        "Swap input and output",
+        "Download output as text file",
+        "Free and browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does alternating case work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alternating case changes letters one by one between lowercase and uppercase. For example, hello can become hElLo or HeLlO depending on the selected mode."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool change spaces and punctuation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spaces and punctuation stay the same. You can also choose whether they should be ignored while alternating the letter pattern."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What modes are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool includes lowercase-first alternating case, uppercase-first alternating case, and random case mode."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I copy or download the result?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can copy the converted text instantly or download it as a TXT file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this Case Alternator tool free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this Case Alternator tool is completely free to use online."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Case Alternator</h1>
+    <p>Convert your text into alternating uppercase and lowercase styles instantly.</p>
+
+    <label for="inputText">Enter your text</label>
+    <textarea id="inputText" rows="8" aria-label="Enter text for case alternator" placeholder="hello world"></textarea>
+
+    <label for="caseMode">Choose mode</label>
+    <select id="caseMode" aria-label="Choose alternating case mode">
+        <option value="lower-first">Alternating Case (start lowercase)</option>
+        <option value="upper-first">Alternating Case (start uppercase)</option>
+        <option value="random">Random Case</option>
+    </select>
+
+    <label>
+        <input type="checkbox" id="ignoreNonLetters" checked>
+        Ignore spaces and punctuation while alternating
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="alternateCase()">
+            <i class="fas fa-font"></i> Convert Case
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="swapTexts()">
+            <i class="fas fa-right-left"></i> Swap
+        </button>
+
+        <button type="button" class="action-btn whatsapp-btn" onclick="downloadResult()">
+            <i class="fas fa-download"></i> Download
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Case Alternator</h2>
+
+    <p>
+        The <strong>Case Alternator</strong> tool lets you convert text into alternating uppercase and lowercase patterns.
+        It is useful for creating stylized text, meme text, playful captions, creative formatting, and eye-catching writing styles.
+    </p>
+
+    <p>
+        To use this tool, type or paste your text into the input box, choose a conversion mode, and click the
+        <strong>Convert Case</strong> button. You can alternate starting with lowercase, alternate starting with uppercase,
+        or generate a random uppercase and lowercase pattern.
+    </p>
+
+    <p>
+        You can also choose whether spaces and punctuation should affect the alternating sequence. After conversion,
+        you can copy the result, swap it back into the input, or download it as a text file.
+    </p>
+
+    <h3>What is Alternating Case?</h3>
+    <p>
+        Alternating case is a text style where letters switch one by one between lowercase and uppercase.
+        For example, the word <strong>hello</strong> can become <strong>hElLo</strong> or <strong>HeLlO</strong>.
+        It is commonly used for fun text formatting and social media style text.
+    </p>
+
+    <p class="formula-box">
+        hello world → hElLo WoRlD
+    </p>
+
+    <h3>Why Use This Case Alternator Tool?</h3>
+    <ul>
+        <li><strong>Creative Text Styling:</strong> Make text look fun and attention-grabbing.</li>
+        <li><strong>Multiple Modes:</strong> Choose lowercase-first, uppercase-first, or random case.</li>
+        <li><strong>Flexible Alternation:</strong> Decide whether spaces and punctuation affect the pattern.</li>
+        <li><strong>Quick Copy and Download:</strong> Copy or save the converted output instantly.</li>
+        <li><strong>Fast and Private:</strong> Everything runs in your browser with no sign-up required.</li>
+        <li><strong>Free to Use:</strong> No payment or installation needed.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is helpful for <strong>students</strong>, <strong>content creators</strong>, <strong>social media users</strong>,
+        <strong>writers</strong>, and anyone who wants to style text in a different way. It is great for playful formatting,
+        funny captions, and creative text experiments.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: How does alternating case work?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Alternating case changes letters one by one between lowercase and uppercase. For example, <strong>hello</strong>
+            can become <strong>hElLo</strong> or <strong>HeLlO</strong> depending on the selected mode.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Does it affect spaces and punctuation?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Spaces and punctuation stay unchanged. You can also choose whether they should be ignored while alternating
+            the text pattern.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: What modes are available?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This tool includes lowercase-first alternating case, uppercase-first alternating case, and random case mode.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I copy or download the result?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. After conversion, you can copy the result instantly, swap it into the input box, or download it as a TXT file.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This Case Alternator tool is completely free to use online.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+const inputText = document.getElementById("inputText");
+const caseMode = document.getElementById("caseMode");
+const ignoreNonLetters = document.getElementById("ignoreNonLetters");
+const resultBox = document.getElementById("result");
+
+function convertAlternating(text, mode, ignoreExtras) {
+    let result = "";
+    let toggle = mode === "upper-first";
+
+    for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        const isLetter = /[a-z]/i.test(char);
+
+        if (mode === "random") {
+            if (isLetter) {
+                result += Math.random() < 0.5 ? char.toLowerCase() : char.toUpperCase();
+            } else {
+                result += char;
+            }
+            continue;
+        }
+
+        if (ignoreExtras) {
+            if (isLetter) {
+                result += toggle ? char.toUpperCase() : char.toLowerCase();
+                toggle = !toggle;
+            } else {
+                result += char;
+            }
+        } else {
+            if (isLetter) {
+                result += toggle ? char.toUpperCase() : char.toLowerCase();
+            } else {
+                result += char;
+            }
+            toggle = !toggle;
+        }
+    }
+
+    return result;
+}
+
+function getStats(text) {
+    const chars = text.length;
+    const letters = (text.match(/[a-z]/gi) || []).length;
+    const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+    const lines = text === "" ? 0 : text.split("\n").length;
+    return { chars, letters, words, lines };
+}
+
+function alternateCase() {
+    const text = inputText.value;
+
+    if (!text.trim()) {
+        resultBox.innerHTML = `
+            <div class="average-result result-pop">
+                <strong>Please enter some text.</strong>
+            </div>
+        `;
+        resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+    }
+
+    const converted = convertAlternating(text, caseMode.value, ignoreNonLetters.checked);
+    const stats = getStats(converted);
+
+    resultBox.innerHTML = `
+        <div class="modern-card result-pop">
+            <h3>Converted Text</h3>
+            <textarea id="outputText" class="code-output result-textarea" rows="10" readonly>${escapeHtml(converted)}</textarea>
+
+            <div class="stats">
+                <div class="stat-box">Characters<br>${stats.chars}</div>
+                <div class="stat-box">Letters<br>${stats.letters}</div>
+                <div class="stat-box">Words<br>${stats.words}</div>
+                <div class="stat-box">Lines<br>${stats.lines}</div>
+            </div>
+
+            <div class="generator-meta">
+                Mode: ${getModeLabel(caseMode.value)} | Ignore spaces/punctuation: ${ignoreNonLetters.checked ? "Yes" : "No"}
+            </div>
+        </div>
+    `;
+
+    resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function getModeLabel(mode) {
+    if (mode === "lower-first") return "Alternating (start lowercase)";
+    if (mode === "upper-first") return "Alternating (start uppercase)";
+    return "Random case";
+}
+
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function clearFields() {
+    inputText.value = "";
+    caseMode.value = "lower-first";
+    ignoreNonLetters.checked = true;
+    resultBox.innerHTML = "";
+    inputText.focus();
+}
+
+function loadSample() {
+    inputText.value = "hello world! this is a case alternator example.";
+    caseMode.value = "lower-first";
+    ignoreNonLetters.checked = true;
+    alternateCase();
+}
+
+async function copyResult() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No result to copy.");
+        return;
+    }
+
+    try {
+        await navigator.clipboard.writeText(output.value);
+        alert("Result copied to clipboard!");
+    } catch (error) {
+        output.select();
+        document.execCommand("copy");
+        alert("Result copied to clipboard!");
+    }
+}
+
+function swapTexts() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No result to swap.");
+        return;
+    }
+
+    inputText.value = output.value;
+    alternateCase();
+}
+
+function downloadResult() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No result to download.");
+        return;
+    }
+
+    const blob = new Blob([output.value], { type: "text/plain;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "case-alternator-output.txt";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+}
+
+inputText.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && e.key === "Enter") {
+        alternateCase();
+    }
+});
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
+<script>
+const tools = [
+    { name: "Remove Duplicate Lines", url: "removeduplicatelines.html", icon: "🧹", category: "text" },
+    { name: "Text Sorter", url: "textsorter.html", icon: "🔤", category: "text" },
+    { name: "Remove Line Breaks", url: "removelinebreaks.html", icon: "↩️", category: "text" },
+    { name: "Character Remover", url: "characterremover.html", icon: "✂️", category: "text" },
+    { name: "Add Line Numbers", url: "addlinenumbers.html", icon: "🔢", category: "text" },
+    { name: "Text to ASCII", url: "texttoascii.html", icon: "💻", category: "text" },
+    { name: "Case Alternator", url: "casealternator.html", icon: "🔠", category: "text" },
+    { name: "Text to Slug", url: "texttoslug.html", icon: "🔗", category: "text" },
+    { name: "Loremipsum Generator", url: "loremipsumgenerator.html", icon: "📝", category: "text" },
+    { name: "Random Text Generator", url: "randomtextgenerator.html", icon: "🎲", category: "text" },
+    { name: "Text Converter", url: "textconverter.html", icon: "🔄", category: "text" },
+    { name: "Text Reverser", url: "textreverser.html", icon: "↔️", category: "text" },
+    { name: "Text Repeater", url: "textrepeater.html", icon: "🔁", category: "text" },
+    { name: "Word Counter", url: "wordcounter.html", icon: "📏", category: "text" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

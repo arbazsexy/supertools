@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Time Calculator Online - Add, Subtract, Difference, Stopwatch & Timer | SuperTools</title>
+<meta name="description" content="Free online time calculator to add time, subtract time, calculate date and time difference, use a stopwatch, and start a countdown timer. Fast, accurate, and easy to use.">
+<meta name="keywords" content="time calculator, add time calculator, subtract time calculator, time difference calculator, stopwatch online, countdown timer online">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/timecalculator.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="Time Calculator Online - SuperTools">
+<meta property="og:description" content="Add time, subtract time, calculate time difference, and use stopwatch or timer instantly.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/timecalculator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Time Calculator Online - SuperTools">
+<meta name="twitter:description" content="Free online time calculator with stopwatch, timer, time difference, and add/subtract time tools.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Time Calculator",
+  "alternateName": "Online Time Calculator",
+  "url": "https://supertools1.site/timecalculator.html",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web",
+  "description": "Free online time calculator to add and subtract time, calculate time differences, and use a stopwatch and countdown timer.",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "featureList": [
+    "Add time",
+    "Subtract time",
+    "Calculate date and time difference",
+    "Built-in stopwatch",
+    "Built-in countdown timer",
+    "Free browser-based tool"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I add and subtract time with this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this time calculator can add and subtract time values quickly and accurately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate the difference between two date and time values?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can enter two date and time values and this tool will calculate the exact difference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this tool include a stopwatch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this time calculator includes a built-in stopwatch for tracking elapsed time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this tool include a countdown timer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it includes a countdown timer where you can enter minutes and start timing instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this time calculator free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this time calculator is completely free and works directly in your browser."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Time Calculator</h1>
+    <p>Calculate time, find differences, track with a stopwatch, and run a countdown timer easily.</p>
+
+    <div class="button-group">
+        <button type="button" onclick="calculateTime(); calculateDiff();">
+            <i class="fas fa-calculator"></i> Calculate
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+
+    <div class="time-grid">
+        <div class="time-card">
+            <h3>⏱️ Add / Subtract Time</h3>
+            <div class="input-row">
+                <input type="time" id="time1" aria-label="First time">
+                <select id="operation" aria-label="Operation">
+                    <option value="add">Add</option>
+                    <option value="subtract">Subtract</option>
+                </select>
+            </div>
+            <div class="input-row single">
+                <input type="time" id="time2" aria-label="Second time">
+            </div>
+            <div id="timeCalcResult" class="result-box">Enter two time values to calculate.</div>
+        </div>
+
+        <div class="time-card">
+            <h3>📅 Date & Time Difference</h3>
+            <div class="input-row">
+                <input type="datetime-local" id="startDate" aria-label="Start date and time">
+                <input type="datetime-local" id="endDate" aria-label="End date and time">
+            </div>
+            <div id="diffResult" class="result-box">Enter start and end date-time values to calculate the difference.</div>
+        </div>
+
+        <div class="time-card">
+            <h3>⏱️ Stopwatch</h3>
+            <div id="stopwatchDisplay" class="time-display">00:00:00</div>
+            <div class="button-group small-buttons">
+                <button type="button" onclick="startStopwatch()">▶ Start</button>
+                <button type="button" class="action-btn secondary-btn" onclick="stopStopwatch()">⏸ Stop</button>
+                <button type="button" class="action-btn clear-btn" onclick="resetStopwatch()">🔄 Reset</button>
+            </div>
+        </div>
+
+        <div class="time-card">
+            <h3>⏳ Countdown Timer</h3>
+            <div class="input-row">
+                <input type="number" id="timerMinutes" placeholder="Minutes" min="0" aria-label="Timer minutes">
+                <input type="number" id="timerSeconds" placeholder="Seconds" min="0" max="59" aria-label="Timer seconds">
+            </div>
+            <div id="timerDisplay" class="time-display">00:00</div>
+            <div class="button-group small-buttons">
+                <button type="button" onclick="startTimer()">Start Timer</button>
+                <button type="button" class="action-btn secondary-btn" onclick="stopTimer()">Stop Timer</button>
+                <button type="button" class="action-btn clear-btn" onclick="resetTimer()">Reset Timer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Time Calculator</h2>
+
+    <p>
+        The <strong>Time Calculator</strong> is an all-in-one online tool that helps you
+        <strong>add time</strong>, <strong>subtract time</strong>, calculate the
+        <strong>difference between two date and time values</strong>, and use built-in
+        <strong>stopwatch</strong> and <strong>countdown timer</strong> features.
+    </p>
+
+    <p>
+        To add or subtract time, enter two time values and select the operation.
+        To calculate the difference between two date and time values, use the date-time inputs.
+        The stopwatch helps track elapsed time, while the countdown timer helps you monitor time remaining.
+    </p>
+
+    <p>
+        This tool is useful for <strong>students</strong>, <strong>professionals</strong>,
+        <strong>work schedules</strong>, <strong>travel planning</strong>, <strong>fitness routines</strong>,
+        <strong>study sessions</strong>, and everyday time calculations.
+    </p>
+
+    <h3>What Can This Tool Do?</h3>
+    <ul>
+        <li><strong>Add Time:</strong> Add hours and minutes quickly.</li>
+        <li><strong>Subtract Time:</strong> Subtract one time from another.</li>
+        <li><strong>Time Difference:</strong> Find the exact difference between two dates and times.</li>
+        <li><strong>Stopwatch:</strong> Track elapsed time live.</li>
+        <li><strong>Countdown Timer:</strong> Set minutes and seconds and start a live timer.</li>
+    </ul>
+
+    <h3>Why Use This Time Calculator?</h3>
+    <ul>
+        <li><strong>All-in-One:</strong> Multiple time tools in one place.</li>
+        <li><strong>Instant Results:</strong> Fast and accurate calculation.</li>
+        <li><strong>Simple Interface:</strong> Easy to use on mobile and desktop.</li>
+        <li><strong>Private:</strong> Runs directly in your browser.</li>
+        <li><strong>Free to Use:</strong> No signup or download required.</li>
+    </ul>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: Can I add and subtract time with this tool?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tool can quickly <strong>add</strong> and <strong>subtract</strong> time values using hours and minutes.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I calculate the difference between two date and time values?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can enter a <strong>start date and time</strong> and an <strong>end date and time</strong> to get the exact difference.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Does it include a stopwatch?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this time calculator includes a built-in <strong>stopwatch</strong> for tracking elapsed time.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Does it include a countdown timer?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, it includes a <strong>countdown timer</strong> where you can enter minutes and seconds and start timing instantly.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this time calculator free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this time calculator is <strong>100% free</strong> and works directly in your browser.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+const result = document.getElementById("result");
+const timeCalcResult = document.getElementById("timeCalcResult");
+const diffResult = document.getElementById("diffResult");
+const time1 = document.getElementById("time1");
+const time2 = document.getElementById("time2");
+const operation = document.getElementById("operation");
+const startDate = document.getElementById("startDate");
+const endDate = document.getElementById("endDate");
+const stopwatchDisplay = document.getElementById("stopwatchDisplay");
+const timerDisplay = document.getElementById("timerDisplay");
+
+let swSeconds = 0;
+let swInterval = null;
+
+let timerInterval = null;
+let timerRemaining = 0;
+
+function showMainResult(message) {
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            ${message}
+        </div>
+    `;
+}
+
+function calculateTime() {
+    const t1 = time1.value;
+    const t2 = time2.value;
+    const op = operation.value;
+
+    if (!t1 || !t2) {
+        timeCalcResult.innerHTML = "Enter both time values to calculate.";
+        return;
+    }
+
+    const [h1, m1] = t1.split(":").map(Number);
+    const [h2, m2] = t2.split(":").map(Number);
+
+    const total1 = h1 * 60 + m1;
+    const total2 = h2 * 60 + m2;
+
+    let res = op === "add" ? total1 + total2 : total1 - total2;
+    const negative = res < 0;
+    res = Math.abs(res);
+
+    const h = Math.floor(res / 60);
+    const m = res % 60;
+
+    const message = `${negative ? "-" : ""}${h}h ${m}m`;
+    timeCalcResult.innerHTML = `<strong>Result:</strong> ${message}`;
+    showMainResult(`⏱️ <strong>Time Calculation:</strong> ${message}`);
+}
+
+function calculateDiff() {
+    if (!startDate.value || !endDate.value) {
+        diffResult.innerHTML = "Enter both date-time values to calculate the difference.";
+        return;
+    }
+
+    const s = new Date(startDate.value);
+    const e = new Date(endDate.value);
+    const diff = e - s;
+
+    if (diff < 0) {
+        diffResult.innerHTML = "❌ End date-time must be after start date-time.";
+        showMainResult("❌ End date-time must be after start date-time.");
+        return;
+    }
+
+    const totalMinutes = Math.floor(diff / 60000);
+    const days = Math.floor(totalMinutes / 1440);
+    const hours = Math.floor((totalMinutes % 1440) / 60);
+    const minutes = totalMinutes % 60;
+
+    const message = `${days}d ${hours}h ${minutes}m`;
+    diffResult.innerHTML = `<strong>Difference:</strong> ${message}`;
+    showMainResult(`📅 <strong>Date-Time Difference:</strong> ${message}`);
+}
+
+function formatStopwatch(sec) {
+    const h = Math.floor(sec / 3600);
+    const m = Math.floor((sec % 3600) / 60);
+    const s = sec % 60;
+
+    return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+}
+
+function startStopwatch() {
+    if (swInterval !== null) return;
+
+    swInterval = setInterval(() => {
+        swSeconds++;
+        stopwatchDisplay.innerText = formatStopwatch(swSeconds);
+    }, 1000);
+}
+
+function stopStopwatch() {
+    clearInterval(swInterval);
+    swInterval = null;
+}
+
+function resetStopwatch() {
+    clearInterval(swInterval);
+    swInterval = null;
+    swSeconds = 0;
+    stopwatchDisplay.innerText = "00:00:00";
+}
+
+function formatTimer(sec) {
+    const m = Math.floor(sec / 60);
+    const s = sec % 60;
+    return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+}
+
+function startTimer() {
+    const minutes = parseInt(document.getElementById("timerMinutes").value, 10) || 0;
+    const seconds = parseInt(document.getElementById("timerSeconds").value, 10) || 0;
+
+    timerRemaining = (minutes * 60) + seconds;
+
+    if (timerRemaining <= 0) {
+        timerDisplay.innerText = "00:00";
+        return;
+    }
+
+    clearInterval(timerInterval);
+    timerDisplay.innerText = formatTimer(timerRemaining);
+
+    timerInterval = setInterval(() => {
+        timerRemaining--;
+        timerDisplay.innerText = formatTimer(timerRemaining);
+
+        if (timerRemaining <= 0) {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            timerDisplay.innerText = "00:00";
+            alert("Time up!");
+        }
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+}
+
+function resetTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    document.getElementById("timerMinutes").value = "";
+    document.getElementById("timerSeconds").value = "";
+    timerRemaining = 0;
+    timerDisplay.innerText = "00:00";
+}
+
+function clearAll() {
+    time1.value = "";
+    time2.value = "";
+    operation.value = "add";
+    startDate.value = "";
+    endDate.value = "";
+    timeCalcResult.innerHTML = "Enter two time values to calculate.";
+    diffResult.innerHTML = "Enter start and end date-time values to calculate the difference.";
+    result.innerHTML = "";
+    resetStopwatch();
+    resetTimer();
+}
+
+function loadSample() {
+    time1.value = "02:30";
+    time2.value = "01:45";
+    operation.value = "add";
+    startDate.value = "2026-03-20T10:00";
+    endDate.value = "2026-03-22T14:30";
+    document.getElementById("timerMinutes").value = "2";
+    document.getElementById("timerSeconds").value = "30";
+    calculateTime();
+    calculateDiff();
+}
+
+function copyResult() {
+    const text = result.innerText.trim();
+
+    if (!text) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(text)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+
+time1.addEventListener("input", calculateTime);
+time2.addEventListener("input", calculateTime);
+operation.addEventListener("change", calculateTime);
+startDate.addEventListener("input", calculateDiff);
+endDate.addEventListener("input", calculateDiff);
+</script>
+
+<script>
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const relatedContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedContainer) {
+    relatedContainer.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

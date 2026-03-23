@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Scientific Calculator Online - Advanced Math, Trigonometry, Logs & More | SuperTools</title>
+<meta name="description" content="Free online scientific calculator with trigonometry, logarithms, natural log, square root, powers, factorial, percentages, inverse trig, constants, brackets, and keyboard support. Fast, accurate, and easy to use on desktop and mobile.">
+<meta name="keywords" content="scientific calculator, online scientific calculator, trigonometry calculator, sin cos tan calculator, log calculator, factorial calculator, advanced math calculator">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/scientificcalculator.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="Scientific Calculator Online - SuperTools">
+<meta property="og:description" content="Use this free online scientific calculator for trigonometry, logs, powers, roots, factorials, percentages, and more.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/scientificcalculator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Scientific Calculator Online - SuperTools">
+<meta name="twitter:description" content="Free online scientific calculator with trig functions, logs, powers, roots, and more.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Scientific Calculator",
+  "alternateName": "Online Scientific Calculator",
+  "url": "https://supertools1.site/scientificcalculator.html",
+  "description": "Free online scientific calculator for trigonometry, logarithms, inverse trig, powers, roots, factorial, percentage calculations, constants, and advanced math expressions.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Basic arithmetic operations",
+    "Trigonometric functions",
+    "Inverse trigonometric functions",
+    "Logarithm and natural log",
+    "Square root calculations",
+    "Power calculations",
+    "Factorial support",
+    "Percentage calculations",
+    "Bracket support",
+    "Constants like pi and e",
+    "Keyboard input support",
+    "Free browser-based calculator"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What functions does this scientific calculator support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This calculator supports basic arithmetic, trigonometric functions, inverse trigonometric functions, logarithms, natural log, square root, powers, factorial, percentage calculations, constants like pi and e, and bracketed expressions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this scientific calculator use degrees for sin, cos, and tan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this calculator uses degree values for trigonometric functions like sin, cos, and tan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use my keyboard with this calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this calculator supports keyboard input for numbers, operators, backspace, percent, factorial, exponent, and Enter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate factorials and percentages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can calculate factorials like 5! and percentages like 25% with this calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this scientific calculator free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this scientific calculator is completely free and works directly in your browser."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Scientific Calculator</h1>
+    <p>Perform advanced math calculations with trigonometry, inverse trig, logs, roots, factorials, percentages, brackets, constants, and more.</p>
+
+    <div class="button-group">
+        <button type="button" onclick="calculate()">
+            <i class="fas fa-calculator"></i> Calculate
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearDisplay()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div class="scientific-calculator real-calc">
+        <div class="calc-topbar">
+            <div class="calc-brand">SuperTools Scientific</div>
+            <div class="calc-mode">DEG</div>
+        </div>
+
+        <input type="text" id="display" class="calculator-display" placeholder="Enter expression" aria-label="Scientific calculator input">
+
+        <div class="mini-actions">
+            <button type="button" class="action-btn secondary-btn" onclick="insert('ANS')"><i class="fas fa-reply"></i> ANS</button>
+            <button type="button" class="action-btn secondary-btn" onclick="backspace()"><i class="fas fa-delete-left"></i> Backspace</button>
+            <button type="button" class="action-btn clear-btn" onclick="clearDisplay()"><i class="fas fa-trash"></i> Clear</button>
+            <button type="button" class="action-btn copy-btn" onclick="copyResult()"><i class="fas fa-copy"></i> Copy</button>
+        </div>
+
+        <div class="calculator-grid scientific-grid">
+            <button type="button" onclick="insert('sin(')">sin</button>
+            <button type="button" onclick="insert('cos(')">cos</button>
+            <button type="button" onclick="insert('tan(')">tan</button>
+            <button type="button" onclick="insert('asin(')">asin</button>
+            <button type="button" onclick="insert('acos(')">acos</button>
+            <button type="button" onclick="insert('atan(')">atan</button>
+
+            <button type="button" onclick="insert('log(')">log</button>
+            <button type="button" onclick="insert('ln(')">ln</button>
+            <button type="button" onclick="insert('sqrt(')">√</button>
+            <button type="button" onclick="insert('abs(')">abs</button>
+            <button type="button" onclick="insert('PI')">π</button>
+            <button type="button" onclick="insert('E')">e</button>
+
+            <button type="button" onclick="insert('(')">(</button>
+            <button type="button" onclick="insert(')')">)</button>
+            <button type="button" onclick="insert('%')">%</button>
+            <button type="button" onclick="insert('^')">xʸ</button>
+            <button type="button" onclick="insertSquare()">x²</button>
+            <button type="button" onclick="insert('!')">n!</button>
+
+            <button type="button" onclick="insert('7')">7</button>
+            <button type="button" onclick="insert('8')">8</button>
+            <button type="button" onclick="insert('9')">9</button>
+            <button type="button" onclick="insert('/')">÷</button>
+            <button type="button" onclick="insert('*')">×</button>
+            <button type="button" onclick="insert('-')">−</button>
+
+            <button type="button" onclick="insert('4')">4</button>
+            <button type="button" onclick="insert('5')">5</button>
+            <button type="button" onclick="insert('6')">6</button>
+            <button type="button" onclick="insert('+')">+</button>
+            <button type="button" onclick="insert('.')">.</button>
+            <button type="button" class="equals-btn" onclick="calculate()">=</button>
+
+            <button type="button" onclick="insert('1')">1</button>
+            <button type="button" onclick="insert('2')">2</button>
+            <button type="button" onclick="insert('3')">3</button>
+            <button type="button" onclick="insert('0')">0</button>
+        </div>
+
+        <div id="calcResult" class="result-box">Enter an expression and click Calculate.</div>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Scientific Calculator</h2>
+
+    <p>
+        The <strong>Scientific Calculator</strong> is a powerful online calculator designed for students, teachers,
+        engineers, and anyone who needs more than simple addition and subtraction. It can handle
+        <strong>trigonometric functions</strong>, <strong>inverse trigonometric functions</strong>,
+        <strong>logarithms</strong>, <strong>natural logarithms</strong>, <strong>square roots</strong>,
+        <strong>powers</strong>, <strong>factorials</strong>, <strong>percentages</strong>, and complex expressions with brackets.
+    </p>
+
+    <p>
+        To use the calculator, type your expression into the display or press the calculator buttons.
+        Then click <strong>Calculate</strong> or press <strong>Enter</strong> on your keyboard.
+        The calculator automatically handles many common math patterns, including
+        <strong>implicit multiplication</strong> such as <strong>2sin(30)</strong> or <strong>2(5+3)</strong>.
+        You can also reuse the previous result using the <strong>ANS</strong> button.
+    </p>
+
+    <p>
+        This scientific calculator uses <strong>degrees</strong> for trigonometric functions like
+        <strong>sin</strong>, <strong>cos</strong>, and <strong>tan</strong>, which makes it especially useful
+        for school and college calculations. It also supports inverse trigonometric functions such as
+        <strong>asin</strong>, <strong>acos</strong>, and <strong>atan</strong>.
+    </p>
+
+    <h3>Supported Functions and Features</h3>
+    <ul>
+        <li><strong>Basic Operations:</strong> Addition, subtraction, multiplication, and division.</li>
+        <li><strong>Trigonometry:</strong> sin, cos, tan, asin, acos, atan.</li>
+        <li><strong>Logs:</strong> log and ln.</li>
+        <li><strong>Advanced Math:</strong> square root, powers, square, absolute value, factorial, and percentages.</li>
+        <li><strong>Constants:</strong> π and e.</li>
+        <li><strong>Keyboard Support:</strong> Use your keyboard for fast input and quick calculations.</li>
+        <li><strong>Bracket Support:</strong> Solve complex expressions with parentheses.</li>
+        <li><strong>Answer Reuse:</strong> Insert the previous answer using ANS.</li>
+        <li><strong>Instant Results:</strong> Get answers immediately in your browser.</li>
+    </ul>
+
+    <h3>Example Expressions You Can Try</h3>
+    <ul>
+        <li><strong>sin(30)</strong></li>
+        <li><strong>cos(60)+tan(45)</strong></li>
+        <li><strong>sqrt(144)+5^2</strong></li>
+        <li><strong>log(1000)</strong></li>
+        <li><strong>5!+25%</strong></li>
+        <li><strong>2(10+5)</strong></li>
+        <li><strong>asin(0.5)</strong></li>
+    </ul>
+
+    <h3>Why Use This Calculator?</h3>
+    <p>
+        This tool is useful for solving homework problems, checking exam answers, doing engineering calculations,
+        handling business percentages, and performing advanced math without downloading any app.
+        It is fast, free, mobile-friendly, and works directly in your browser.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What functions does this scientific calculator support?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This calculator supports <strong>basic arithmetic</strong>, <strong>trigonometric functions</strong>,
+            <strong>inverse trigonometric functions</strong>, <strong>logarithms</strong>, <strong>natural log</strong>,
+            <strong>square root</strong>, <strong>powers</strong>, <strong>factorial</strong>,
+            <strong>percentages</strong>, and constants like <strong>π</strong> and <strong>e</strong>.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Does it use degrees or radians?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This scientific calculator uses <strong>degrees</strong> for trigonometric calculations like
+            <strong>sin</strong>, <strong>cos</strong>, and <strong>tan</strong>.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I calculate factorials and percentages?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. You can calculate values like <strong>5!</strong> for factorial and <strong>25%</strong> for percentages.
+            The calculator also supports combining them with larger expressions.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I use my keyboard with this calculator?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can use your keyboard to type numbers and operators, use <strong>Backspace</strong> to delete,
+            and press <strong>Enter</strong> to calculate the result.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this scientific calculator free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this calculator is <strong>100% free</strong> and works directly in your browser.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+const display = document.getElementById("display");
+const calcResult = document.getElementById("calcResult");
+const result = document.getElementById("result");
+let lastAnswer = "";
+
+function insert(val) {
+    display.value += val;
+}
+
+function insertSquare() {
+    display.value += "^2";
+}
+
+function clearDisplay() {
+    display.value = "";
+    calcResult.innerHTML = "Enter an expression and click Calculate.";
+    result.innerHTML = "";
+}
+
+function backspace() {
+    display.value = display.value.slice(0, -1);
+}
+
+function factorial(n) {
+    if (n < 0 || !Number.isInteger(n)) {
+        throw new Error("Factorial only works for non-negative integers");
+    }
+    if (n > 170) {
+        throw new Error("Number too large");
+    }
+
+    let res = 1;
+    for (let i = 2; i <= n; i++) {
+        res *= i;
+    }
+    return res;
+}
+
+function sind(x) {
+    return Math.sin(x * Math.PI / 180);
+}
+
+function cosd(x) {
+    return Math.cos(x * Math.PI / 180);
+}
+
+function tand(x) {
+    return Math.tan(x * Math.PI / 180);
+}
+
+function asind(x) {
+    return Math.asin(x) * 180 / Math.PI;
+}
+
+function acosd(x) {
+    return Math.acos(x) * 180 / Math.PI;
+}
+
+function atand(x) {
+    return Math.atan(x) * 180 / Math.PI;
+}
+
+function log10(x) {
+    return Math.log10(x);
+}
+
+function ln(x) {
+    return Math.log(x);
+}
+
+function fixExpression(expr) {
+    const open = (expr.match(/\(/g) || []).length;
+    const close = (expr.match(/\)/g) || []).length;
+
+    if (open > close) {
+        expr += ")".repeat(open - close);
+    }
+
+    return expr;
+}
+
+function addImplicitMultiplication(expr) {
+    expr = expr.replace(/(\d)([A-Za-z(])/g, "$1*$2");
+    expr = expr.replace(/(\))(\d|[A-Za-z(])/g, "$1*$2");
+    expr = expr.replace(/(PI|E|ANS)(\d|[A-Za-z(])/g, "$1*$2");
+    return expr;
+}
+
+function transformFactorial(expr) {
+    while (/(\d+(\.\d+)?|\([^()]*\))!/.test(expr)) {
+        expr = expr.replace(/(\d+(\.\d+)?|\([^()]*\))!/g, "factorial($1)");
+    }
+    return expr;
+}
+
+function transformPercent(expr) {
+    expr = expr.replace(/(\d+(\.\d+)?)%/g, "($1/100)");
+    expr = expr.replace(/(\([^()]*\))%/g, "($1/100)");
+    return expr;
+}
+
+function formatExpression(expr) {
+    expr = expr.replace(/\s+/g, "");
+    expr = fixExpression(expr);
+    expr = addImplicitMultiplication(expr);
+
+    expr = expr.replace(/ANS/g, lastAnswer || "0");
+    expr = expr.replace(/PI/g, "Math.PI");
+    expr = expr.replace(/\bE\b/g, "Math.E");
+
+    expr = expr.replace(/asin\(/g, "asind(");
+    expr = expr.replace(/acos\(/g, "acosd(");
+    expr = expr.replace(/atan\(/g, "atand(");
+
+    expr = expr.replace(/sin\(/g, "sind(");
+    expr = expr.replace(/cos\(/g, "cosd(");
+    expr = expr.replace(/tan\(/g, "tand(");
+
+    expr = expr.replace(/log\(/g, "log10(");
+    expr = expr.replace(/ln\(/g, "ln(");
+    expr = expr.replace(/sqrt\(/g, "Math.sqrt(");
+    expr = expr.replace(/abs\(/g, "Math.abs(");
+
+    expr = transformPercent(expr);
+    expr = transformFactorial(expr);
+
+    expr = expr.replace(/\^/g, "**");
+
+    return expr;
+}
+
+function safeEvaluate(expr) {
+    return Function(
+        "factorial",
+        "sind",
+        "cosd",
+        "tand",
+        "asind",
+        "acosd",
+        "atand",
+        "log10",
+        "ln",
+        '"use strict"; return (' + expr + ');'
+    )(factorial, sind, cosd, tand, asind, acosd, atand, log10, ln);
+}
+
+function formatAnswer(value) {
+    if (!isFinite(value)) return "Invalid";
+
+    const rounded = Math.round(value * 1000000000000) / 1000000000000;
+    return Number.isInteger(rounded) ? rounded.toString() : rounded.toString();
+}
+
+function calculate() {
+    let expr = display.value.trim();
+
+    if (!expr) {
+        calcResult.innerHTML = "Please enter an expression.";
+        result.innerHTML = "";
+        return;
+    }
+
+    try {
+        const jsExpr = formatExpression(expr);
+        const resultValue = safeEvaluate(jsExpr);
+
+        if (!isFinite(resultValue)) {
+            throw new Error("Invalid result");
+        }
+
+        const formattedResult = formatAnswer(resultValue);
+        lastAnswer = formattedResult;
+
+        calcResult.innerHTML = `<strong>Result:</strong> ${formattedResult}`;
+
+        result.innerHTML = `
+            <div class="average-result result-pop">
+                <div class="stats">
+                    <div class="stat-box">Expression<br>${expr}</div>
+                    <div class="stat-box">Result<br>${formattedResult}</div>
+                </div>
+                <hr>
+                <div><strong>Computed Successfully</strong></div>
+            </div>
+        `;
+    } catch (error) {
+        calcResult.innerHTML = "❌ Invalid Expression";
+        result.innerHTML = `
+            <div class="average-result result-pop" style="color:#d63031;">
+                ❌ Invalid Expression
+            </div>
+        `;
+    }
+}
+
+function loadSample() {
+    display.value = "2sin(30)+sqrt(16)+5!+25%";
+    calculate();
+}
+
+function copyResult() {
+    const text = result.innerText.trim() || calcResult.innerText.trim();
+
+    if (!text) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(text)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+
+document.addEventListener("keydown", (e) => {
+    if (document.activeElement === display) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            calculate();
+        }
+        return;
+    }
+
+    if ((e.key >= "0" && e.key <= "9") || "+-*/().".includes(e.key)) {
+        insert(e.key);
+    } else if (e.key === "Enter") {
+        calculate();
+    } else if (e.key === "Backspace") {
+        backspace();
+    } else if (e.key === "^") {
+        insert("^");
+    } else if (e.key === "%") {
+        insert("%");
+    } else if (e.key === "!") {
+        insert("!");
+    }
+});
+</script>
+
+<script>
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const relatedContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedContainer) {
+    relatedContainer.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

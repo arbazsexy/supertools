@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>GST Calculator Online - Add or Remove GST with CGST, SGST & IGST | SuperTools</title>
+<meta name="description" content="Free online GST calculator to add or remove GST instantly. Calculate GST amount, final price, base price, and full CGST, SGST, or IGST breakdown accurately.">
+<meta name="keywords" content="gst calculator, cgst sgst calculator, igst calculator, add gst, remove gst, gst tax calculator india">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/gstcalculator.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="GST Calculator Online - SuperTools">
+<meta property="og:description" content="Add or remove GST instantly with complete CGST, SGST, and IGST breakdown.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/gstcalculator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GST Calculator Online - SuperTools">
+<meta name="twitter:description" content="Add or remove GST instantly with complete CGST, SGST, and IGST breakdown.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "GST Calculator",
+  "alternateName": "GST Tax Calculator",
+  "url": "https://supertools1.site/gstcalculator.html",
+  "description": "Free online GST calculator to add or remove GST and calculate GST amount, base amount, final price, and CGST, SGST, or IGST breakdown instantly.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Add GST to an amount",
+    "Remove GST from a GST-inclusive amount",
+    "Calculate GST amount instantly",
+    "Show base amount and final amount",
+    "Split GST into CGST and SGST",
+    "Calculate IGST for inter-state transactions",
+    "Supports common GST rates and custom GST rate",
+    "Free browser-based GST calculator"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is GST?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GST stands for Goods and Services Tax. It is an indirect tax applied to the sale of goods and services and is commonly used in India as a unified tax system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between CGST, SGST, and IGST?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CGST and SGST are used for intra-state transactions and the tax amount is split equally between the central and state governments. IGST is used for inter-state transactions and the full tax amount is charged as a single integrated tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I add GST to a price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To add GST, multiply the base amount by the GST rate and divide by 100 to get the GST amount. Then add that tax amount to the base amount to get the final price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I remove GST from a GST-inclusive amount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To remove GST, divide the GST-inclusive amount by 1 plus the GST rate divided by 100. This gives the base amount before tax. The difference between the inclusive price and the base amount is the GST amount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a custom GST rate in this calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this GST calculator supports custom GST rates. If your required tax percentage is not listed in the preset options, you can enter your own GST percentage manually."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>GST Calculator</h1>
+    <p>Calculate GST instantly by adding or removing tax with complete CGST, SGST, and IGST breakdown.</p>
+
+    <label for="amount">Amount</label>
+    <input type="number" id="amount" placeholder="e.g. 1000" min="0" step="0.01">
+
+    <label for="mode">GST Mode</label>
+    <select id="mode">
+        <option value="add">Add GST</option>
+        <option value="remove">Remove GST</option>
+    </select>
+
+    <label for="gst">GST Rate</label>
+    <select id="gst">
+        <option value="3">3%</option>
+        <option value="5">5%</option>
+        <option value="12">12%</option>
+        <option value="18">18%</option>
+        <option value="28">28%</option>
+        <option value="custom">Custom</option>
+    </select>
+
+    <label for="customGST" id="customGSTLabel" style="display:none;">Custom GST Rate (%)</label>
+    <input type="number" id="customGST" placeholder="e.g. 15" min="0" step="0.01" style="display:none;">
+
+    <label for="type">Tax Type</label>
+    <select id="type">
+        <option value="cgst">CGST + SGST</option>
+        <option value="igst">IGST</option>
+    </select>
+
+    <label for="currency">Currency</label>
+    <select id="currency">
+        <option value="₹">₹ INR</option>
+        <option value="$">$ USD</option>
+        <option value="€">€ EUR</option>
+        <option value="£">£ GBP</option>
+    </select>
+
+    <div class="button-group">
+        <button type="button" onclick="calculateGST()">
+            🧾 Calculate
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+            ❌ Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            🧪 Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            📋 Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the GST Calculator</h2>
+
+    <p>
+        The <strong>GST Calculator</strong> helps you calculate Goods and Services Tax quickly and accurately. You can use it either to <strong>add GST</strong> to a base amount or to <strong>remove GST</strong> from a tax-inclusive amount. This makes it useful for billing, invoicing, price verification, and tax calculations.
+    </p>
+
+    <p>
+        To use the calculator, enter the amount, choose whether you want to add or remove GST, select a GST rate, and pick the tax type. You can use common preset GST rates such as 5%, 12%, 18%, and 28%, or enter a custom GST rate if needed.
+    </p>
+
+    <p>
+        Once you click the <strong>Calculate</strong> button, the tool will instantly show the <strong>base amount</strong>, <strong>GST amount</strong>, <strong>final amount</strong>, and the tax breakdown into <strong>CGST and SGST</strong> or <strong>IGST</strong>, depending on the type of transaction you selected.
+    </p>
+
+    <h3>What is GST?</h3>
+    <p>
+        GST stands for <strong>Goods and Services Tax</strong>. It is an indirect tax charged on the sale of goods and services. In India, GST replaced multiple indirect taxes and created a more unified tax structure.
+    </p>
+
+    <h3>What Can This GST Calculator Do?</h3>
+    <ul>
+        <li><strong>Add GST:</strong> Calculate the final amount after tax is added to the base amount.</li>
+        <li><strong>Remove GST:</strong> Find the original amount before GST from a tax-inclusive price.</li>
+        <li><strong>Break Down Tax:</strong> Split the tax into CGST and SGST or show full IGST.</li>
+        <li><strong>Use Custom Rates:</strong> Enter any GST rate manually if needed.</li>
+        <li><strong>Support Different Currencies:</strong> View results using your preferred currency symbol.</li>
+    </ul>
+
+    <h3>Why Use This Tool?</h3>
+    <ul>
+        <li><strong>Fast and Accurate:</strong> Get GST calculations instantly.</li>
+        <li><strong>Full Tax Breakdown:</strong> See base value, GST, final price, and tax split clearly.</li>
+        <li><strong>Useful for Business:</strong> Helps with invoices, bills, and tax estimates.</li>
+        <li><strong>Easy to Use:</strong> Works on both mobile and desktop devices.</li>
+        <li><strong>Free and Private:</strong> No signup required and calculations happen in your browser.</li>
+    </ul>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is GST?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            GST stands for <strong>Goods and Services Tax</strong>. It is an indirect tax applied to the sale of goods and services and is commonly used in India as a unified tax system.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: What is the difference between CGST, SGST, and IGST?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            <strong>CGST</strong> and <strong>SGST</strong> are used for intra-state transactions, and the total GST is split equally between the central and state governments. <strong>IGST</strong> is used for inter-state transactions, where the full tax is charged as one combined tax.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: How do I add GST to a price?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            To add GST, calculate the GST amount by multiplying the base amount by the GST rate and dividing by 100. Then add that GST amount to the original base amount to get the final price.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: How do I remove GST from a GST-inclusive amount?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            To remove GST, divide the GST-inclusive amount by <strong>1 + (GST rate ÷ 100)</strong>. This gives the base amount before tax. The difference between the inclusive amount and the base amount is the GST portion.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Can I use a custom GST rate in this calculator?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this GST calculator supports custom GST rates. If your required GST percentage is not listed in the preset options, you can choose <strong>Custom</strong> and enter your own rate manually.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+document.getElementById("gst").addEventListener("change", function () {
+    const isCustom = this.value === "custom";
+    document.getElementById("customGST").style.display = isCustom ? "block" : "none";
+    document.getElementById("customGSTLabel").style.display = isCustom ? "block" : "none";
+});
+
+function showResult(html) {
+    const r = document.getElementById("result");
+    r.innerHTML = html;
+
+    setTimeout(() => {
+        const yOffset = -100;
+        const y = r.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+    }, 50);
+}
+
+function formatMoney(value, currency) {
+    return currency + Number(value).toFixed(2);
+}
+
+function calculateGST() {
+    const amount = parseFloat(document.getElementById("amount").value);
+    const mode = document.getElementById("mode").value;
+    const gstVal = document.getElementById("gst").value;
+    const custom = parseFloat(document.getElementById("customGST").value);
+    const type = document.getElementById("type").value;
+    const currency = document.getElementById("currency").value;
+
+    const rate = gstVal === "custom" ? custom : parseFloat(gstVal);
+
+    if (isNaN(amount) || amount < 0 || isNaN(rate) || rate < 0) {
+        showResult("<div class='average-result result-pop'>Please enter a valid amount and GST rate.</div>");
+        return;
+    }
+
+    let gstAmount = 0;
+    let finalAmount = 0;
+    let baseAmount = 0;
+
+    if (mode === "add") {
+        baseAmount = amount;
+        gstAmount = (amount * rate) / 100;
+        finalAmount = amount + gstAmount;
+    } else {
+        finalAmount = amount;
+        baseAmount = amount / (1 + rate / 100);
+        gstAmount = amount - baseAmount;
+    }
+
+    const cgst = type === "cgst" ? gstAmount / 2 : 0;
+    const sgst = type === "cgst" ? gstAmount / 2 : 0;
+    const igst = type === "igst" ? gstAmount : 0;
+
+    showResult(`
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Base Amount<br>${formatMoney(baseAmount, currency)}</div>
+                <div class="stat-box">GST Amount<br>${formatMoney(gstAmount, currency)}</div>
+                <div class="stat-box">Final Amount<br>${formatMoney(finalAmount, currency)}</div>
+                <div class="stat-box">GST Rate<br>${rate}%</div>
+                <div class="stat-box">CGST<br>${formatMoney(cgst, currency)}</div>
+                <div class="stat-box">SGST<br>${formatMoney(sgst, currency)}</div>
+                <div class="stat-box">IGST<br>${formatMoney(igst, currency)}</div>
+            </div>
+            <hr>
+            <div><strong>Mode:</strong> ${mode === "add" ? "Add GST" : "Remove GST"} | <strong>Type:</strong> ${type === "cgst" ? "CGST + SGST" : "IGST"}</div>
+        </div>
+    `);
+}
+
+function clearAll() {
+    document.getElementById("amount").value = "";
+    document.getElementById("gst").value = "5";
+    document.getElementById("customGST").value = "";
+    document.getElementById("customGST").style.display = "none";
+    document.getElementById("customGSTLabel").style.display = "none";
+    document.getElementById("mode").value = "add";
+    document.getElementById("type").value = "cgst";
+    document.getElementById("currency").value = "₹";
+    document.getElementById("result").innerHTML = "";
+}
+
+function loadSample() {
+    document.getElementById("amount").value = "1000";
+    document.getElementById("mode").value = "add";
+    document.getElementById("gst").value = "18";
+    document.getElementById("type").value = "cgst";
+    document.getElementById("currency").value = "₹";
+    document.getElementById("customGST").style.display = "none";
+    document.getElementById("customGSTLabel").style.display = "none";
+    calculateGST();
+}
+
+function copyResult() {
+    const text = document.getElementById("result").innerText.trim();
+    if (!text) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(text)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

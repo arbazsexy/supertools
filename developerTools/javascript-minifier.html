@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>JavaScript Minifier Online Free - Minify and Compress JS Instantly</title>
+
+<meta name="description" content="Free online JavaScript Minifier tool to minify and compress JS code instantly. Remove comments, spaces, and unnecessary characters to reduce file size and improve website performance.">
+<meta name="keywords" content="javascript minifier, js minifier, minify javascript online, compress js, javascript compressor, js optimizer">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/javascript-minifier.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="JavaScript Minifier Online Free - SuperTools">
+<meta property="og:description" content="Minify and compress JavaScript code instantly with this free JS minifier tool.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/javascript-minifier.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="JavaScript Minifier Online Free - SuperTools">
+<meta name="twitter:description" content="Compress JavaScript code online instantly with this free browser-based JS minifier.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"JavaScript Minifier",
+  "alternateName":"JS Minifier",
+  "url":"https://supertools1.site/javascript-minifier.html",
+  "applicationCategory":"DeveloperApplication",
+  "operatingSystem":"Web",
+  "description":"Free online JavaScript minifier tool to compress JS code by removing comments, spaces, and unnecessary characters instantly.",
+  "browserRequirements":"Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers":{
+    "@type":"Offer",
+    "price":"0",
+    "priceCurrency":"USD"
+  },
+  "author":{
+    "@type":"Organization",
+    "name":"SuperTools",
+    "url":"https://supertools1.site"
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"SuperTools",
+    "url":"https://supertools1.site",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://supertools1.site/logo.png"
+    }
+  },
+  "featureList":[
+    "Minify JavaScript instantly",
+    "Remove JavaScript comments",
+    "Compress extra spaces and line breaks",
+    "Show original and minified size",
+    "Show percentage reduction",
+    "Copy minified JavaScript",
+    "Download minified JavaScript",
+    "Browser-based and free"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"What does a JavaScript minifier do?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A JavaScript minifier removes unnecessary spaces, comments, tabs, and line breaks from JS code to reduce file size while keeping the code functional."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Will minifying JavaScript break my code?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"A basic JavaScript minifier should only remove unnecessary formatting, but some advanced JavaScript patterns can be sensitive. It is always a good idea to test minified output before using it in production."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Does this tool upload my JavaScript code?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No. This JavaScript minifier works directly in your browser, so your code is not uploaded or stored on a server."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I copy and download the minified JavaScript?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. This tool lets you copy the minified JavaScript instantly and also download it as a .js file."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Is this JavaScript minifier free?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes, this online JavaScript minifier is completely free to use."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>JavaScript Minifier</h1>
+<p>Minify and compress JavaScript code instantly to reduce file size and improve website performance.</p>
+
+<label for="jsInput">Enter JavaScript Code</label>
+<textarea id="jsInput" rows="10" placeholder="Paste your JavaScript code here..."></textarea>
+
+<div class="button-group">
+    <button type="button" onclick="minifyJS()">
+        <i class="fas fa-bolt"></i> Minify JavaScript
+    </button>
+
+    <button type="button" class="action-btn sample-btn" onclick="loadSampleJS()">
+        <i class="fas fa-flask"></i> Sample
+    </button>
+
+    <button type="button" class="action-btn copy-btn" onclick="copyJS()">
+        <i class="fas fa-copy"></i> Copy
+    </button>
+
+    <button type="button" class="action-btn" onclick="downloadJS()">
+        <i class="fas fa-download"></i> Download
+    </button>
+
+    <button type="button" class="action-btn clear-btn" onclick="clearJS()">
+        <i class="fas fa-trash"></i> Clear
+    </button>
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+
+<h2>Free Online JavaScript Minifier</h2>
+
+<p>
+The <strong>JavaScript Minifier</strong> is a free online tool that helps you compress JavaScript code by removing unnecessary comments, extra spaces, tabs, and line breaks.
+This makes the code smaller and can help improve website loading speed, especially when JavaScript is used in production websites, web apps, widgets, and front-end projects.
+</p>
+
+<p>
+Smaller JavaScript files usually mean less data for the browser to download. While the difference may look small in short scripts, it becomes more useful for larger files or when combined with optimized HTML and CSS.
+That is why many developers minify front-end code before deployment.
+</p>
+
+<p>
+This tool works directly in your browser, so your JavaScript stays private and is not uploaded to any server.
+You can paste your code, minify it instantly, review the output size comparison, and then copy or download the result for your project.
+</p>
+
+<h3>How to Use the JavaScript Minifier</h3>
+
+<ul>
+<li>Paste your JavaScript code into the input box.</li>
+<li>Click <strong>Minify JavaScript</strong> to compress it instantly.</li>
+<li>Review the original size, minified size, and percentage reduction.</li>
+<li>Copy the minified code or download it as a JavaScript file.</li>
+</ul>
+
+<h3>Features of This Tool</h3>
+
+<ul>
+<li>Instant JavaScript compression</li>
+<li>Removes many common JavaScript comments</li>
+<li>Compresses extra spaces and line breaks</li>
+<li>Shows original and minified file sizes</li>
+<li>Shows percentage reduction</li>
+<li>Copy and download options</li>
+<li>Runs fully in the browser</li>
+<li>Free to use on desktop and mobile</li>
+</ul>
+
+<h3>Why Minify JavaScript?</h3>
+
+<p>
+Minifying JavaScript removes characters that are helpful for human readability but unnecessary for browsers.
+By reducing file size, you make script delivery more efficient, which can help performance and reduce bandwidth usage.
+</p>
+
+<p>
+Developers often minify JavaScript together with HTML and CSS so the final website loads faster and uses fewer resources.
+It is one of the most common front-end optimization steps before production deployment.
+</p>
+
+</section>
+
+<section class="info-section">
+
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+What does a JavaScript minifier do?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+A <strong>JavaScript minifier</strong> removes unnecessary spaces, comments, tabs, and line breaks from JS code while keeping the code functional.
+This reduces file size and helps make scripts more efficient for production use.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Will minifying JavaScript break my code?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+A basic JavaScript minifier should only remove unnecessary formatting, but some advanced JavaScript patterns can be sensitive.
+It is always smart to test minified output before using it in production.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Does this JavaScript minifier store my code?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+No. This tool works directly in your browser, so your JavaScript code is processed locally and is not uploaded or stored on a server.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Can I download the minified JavaScript?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+Yes. After minifying your JavaScript, you can download the result as a <strong>.js</strong> file using the download button.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Why should I minify JavaScript for production?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+Minifying JavaScript helps reduce file size, improve script delivery, and make front-end assets more optimized.
+It is commonly used together with HTML and CSS minification before deployment.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Is this JavaScript minifier free?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+Yes. The tool is completely free to use with no registration required.
+</div>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="../privacy.html">Privacy Policy</a> | 
+<a href="../about.html">About Us</a> | 
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = btn.classList.contains("active");
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            const otherContent = otherBtn.nextElementSibling;
+            if (otherContent) {
+                otherContent.style.maxHeight = null;
+                otherContent.classList.remove("open");
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.classList.add("open");
+            requestAnimationFrame(() => {
+                content.style.maxHeight = content.scrollHeight + 30 + "px";
+            });
+        }
+    });
+});
+
+const jsInput = document.getElementById("jsInput");
+const result = document.getElementById("result");
+
+function formatBytes(bytes) {
+    return `${bytes.toLocaleString()} bytes`;
+}
+
+function safeReduction(original, minified) {
+    if (original <= 0) return "0.00";
+    return (((original - minified) / original) * 100).toFixed(2);
+}
+
+function minifyJsString(input) {
+    let output = input;
+
+    output = output.replace(/\/\*[\s\S]*?\*\//g, "");
+    output = output.replace(/^\s*\/\/.*$/gm, "");
+    output = output.replace(/\n/g, " ");
+    output = output.replace(/\s{2,}/g, " ");
+    output = output.replace(/\s*([=+\-*/%{}();,:<>[\]])\s*/g, "$1");
+    output = output.trim();
+
+    return output;
+}
+
+function scrollToResult() {
+    requestAnimationFrame(() => {
+        result.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+}
+
+function escapeHtml(text) {
+    return text
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;");
+}
+
+function renderResult(minified, originalSize, minifiedSize, reduction) {
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Original Size<br><span>${formatBytes(originalSize)}</span></div>
+                <div class="stat-box">Minified Size<br><span>${formatBytes(minifiedSize)}</span></div>
+                <div class="stat-box">Reduction<br><span>${reduction}%</span></div>
+                <div class="stat-box">Characters Saved<br><span>${(originalSize - minifiedSize).toLocaleString()}</span></div>
+            </div>
+
+            <hr>
+
+            <div><strong>JavaScript minified successfully.</strong> Your code was compressed by removing comments, extra spaces, and unnecessary formatting.</div>
+
+            <label for="outputJS"><strong>Minified JavaScript</strong></label>
+            <textarea id="outputJS" rows="10" readonly>${escapeHtml(minified)}</textarea>
+        </div>
+    `;
+
+    const outputEl = document.getElementById("outputJS");
+    if (outputEl) outputEl.value = minified;
+
+    scrollToResult();
+}
+
+function showError(message) {
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div>${message}</div>
+        </div>
+    `;
+    scrollToResult();
+}
+
+function minifyJS() {
+    const input = jsInput.value;
+
+    if (!input.trim()) {
+        showError("Please enter JavaScript code.");
+        return;
+    }
+
+    const originalSize = new Blob([input]).size;
+    const minified = minifyJsString(input);
+    const minifiedSize = new Blob([minified]).size;
+    const reduction = safeReduction(originalSize, minifiedSize);
+
+    renderResult(minified, originalSize, minifiedSize, reduction);
+}
+
+function copyJS() {
+    const output = document.getElementById("outputJS");
+
+    if (!output || !output.value.trim()) {
+        alert("Nothing to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(output.value)
+        .then(() => alert("Minified JavaScript copied!"))
+        .catch(() => alert("Failed to copy."));
+}
+
+function downloadJS() {
+    const output = document.getElementById("outputJS");
+
+    if (!output || !output.value.trim()) {
+        alert("No minified JavaScript to download.");
+        return;
+    }
+
+    const blob = new Blob([output.value], { type: "text/javascript;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "minified.js";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+function clearJS() {
+    jsInput.value = "";
+    result.innerHTML = "";
+    jsInput.focus();
+}
+
+function loadSampleJS() {
+    jsInput.value = 'function greet(name) {\n' +
+        '    // Say hello\n' +
+        '    const message = "Hello, " + name;\n' +
+        '    console.log(message);\n' +
+        '}\n\n' +
+        'greet("SuperTools");';
+    result.innerHTML = "";
+}
+
+const tools = [
+    { name: "JSON Formatter", url: "json-formatter.html", icon: "🧩", category: "developer" },
+    { name: "Colourcode Converter", url: "colourcodeconverter.html", icon: "🎨", category: "developer" },
+    { name: "CSS Minifier", url: "css-minifier.html", icon: "🧵", category: "developer" },
+    { name: "CSV to Json", url: "csv-to-json.html", icon: "📊", category: "developer" },
+    { name: "Htaccess Generator", url: "htaccessgenerator.html", icon: "⚙️", category: "developer" },
+    { name: "Javascript Minifier", url: "javascript-minifier.html", icon: "⚡", category: "developer" },
+    { name: "Json to CSV", url: "json-to-csv.html", icon: "🔁", category: "developer" },
+    { name: "Regex Tester", url: "regextester.html", icon: "🔍", category: "developer" },
+    { name: "Timestamp Converter", url: "timestampconverter.html", icon: "⏱️", category: "developer" },
+    { name: "Base64 Encoder Decoder", url: "base64-encoder-decoder.html", icon: "🔐", category: "developer" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const relatedContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedContainer) {
+    relatedContainer.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+
+</html>

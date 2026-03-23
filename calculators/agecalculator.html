@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Age Calculator Online Free - Calculate Age from Date of Birth | SuperTools</title>
+    <meta name="description" content="Free online age calculator to calculate exact age from date of birth in years, months, days, seconds, total days lived, and birthday countdown instantly. Fast, accurate, and private.">
+    <meta name="keywords" content="age calculator, exact age calculator, date of birth calculator, age from date of birth, online age calculator, birthday countdown">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/agecalculator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <meta property="og:title" content="Free Age Calculator Online - Instant & Accurate | SuperTools">
+    <meta property="og:description" content="Calculate your exact age from date of birth in years, months, days, and seconds. Includes birthday countdown and life stats.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/agecalculator.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Age Calculator Online - SuperTools">
+    <meta name="twitter:description" content="Calculate exact age, total days lived, live seconds, and next birthday countdown instantly.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <meta name="theme-color" content="#4facfe">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Age Calculator",
+      "alternateName": "Exact Age Calculator",
+      "url": "https://supertools1.site/agecalculator.html",
+      "description": "Free online age calculator to find exact age in years, months, days, seconds, total days lived, and birthday countdown instantly.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Calculate exact age in years, months, and days",
+        "Show live age in seconds",
+        "Show total days lived",
+        "Show next birthday countdown",
+        "Show birthday progress percentage",
+        "Show life progress percentage",
+        "Calculate age on a specific date",
+        "Free browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How accurate is this age calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This age calculator is highly accurate and considers leap years, varying month lengths, and exact calendar differences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I calculate age on a specific date?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can enter a specific target date to calculate your age on that exact day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool store my personal information?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, all calculations happen directly in your browser and your data is not stored."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I see my age in seconds and total days?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this age calculator shows your age in seconds, total days lived, and other useful life statistics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this age calculator free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this age calculator is completely free and works directly in your browser."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+     crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Age Calculator</h1>
+    <p>Find out exactly how old you are in years, months, days, seconds, and more.</p>
+
+    <label for="birthdate">Select your birth date</label>
+    <input type="date" id="birthdate">
+
+    <label for="targetdate">Calculate age on a specific date (optional)</label>
+    <input type="date" id="targetdate">
+
+    <div class="button-group">
+        <button type="button" onclick="calculateAge()">
+            <i class="fas fa-calculator"></i> Calculate Age
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+
+        <button type="button" class="action-btn whatsapp-btn" onclick="shareWhatsApp()">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>Free Age Calculator Online - Calculate Age from Date of Birth Instantly</h2>
+
+    <p>
+        Our <strong>Age Calculator Online</strong> helps you calculate your exact age from your
+        <strong>date of birth</strong> in just seconds. Whether you need your age for official forms,
+        school admissions, job eligibility, or personal use, this tool gives you
+        <strong>accurate and instant results</strong> without manual effort.
+    </p>
+
+    <p>
+        Unlike basic calculators, this advanced tool provides a complete breakdown of your age in
+        <strong>years, months, and days</strong>, along with extra insights like
+        <strong>total days lived</strong>, <strong>live age in seconds</strong>, and your
+        <strong>next birthday countdown</strong>. It is designed to be fast, simple, and reliable
+        across mobile, tablet, and desktop devices.
+    </p>
+
+    <h3>Key Features of Our Age Calculator</h3>
+    <ul>
+        <li><strong>Precise Age Calculation:</strong> Includes leap years and exact calendar differences.</li>
+        <li><strong>Detailed Breakdown:</strong> View age in years, months, days, and seconds.</li>
+        <li><strong>Birthday Countdown:</strong> Know how many days are left until your next birthday.</li>
+        <li><strong>Life Insights:</strong> Track total days lived and life progress percentage.</li>
+        <li><strong>Specific Date Support:</strong> Calculate age on any selected date.</li>
+        <li><strong>Fast & Private:</strong> No data is stored, everything runs in your browser.</li>
+    </ul>
+
+    <h3>Why Use an Online Age Calculator?</h3>
+    <p>
+        Calculating age manually can be confusing because months have different lengths and leap years
+        affect the result. This <strong>free age calculator</strong> removes guesswork and gives you
+        exact results instantly. It is especially useful for documentation, eligibility checks, school
+        forms, and situations where precise age matters.
+    </p>
+
+    <p>
+        It also provides a richer experience by showing live age in seconds, total days lived, next
+        birthday information, and progress through your current age year.
+    </p>
+
+    <h3>How to Use the Age Calculator</h3>
+    <ol>
+        <li>Enter your <strong>date of birth</strong>.</li>
+        <li>Select a <strong>specific date</strong> if needed.</li>
+        <li>Click <strong>Calculate Age</strong>.</li>
+        <li>View your exact age and additional insights instantly.</li>
+    </ol>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            <span class="faq-icon">🕒</span> How accurate is this age calculator?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This age calculator is highly accurate. It considers leap years, varying month lengths,
+            and exact calendar differences to give precise results in years, months, and days.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            <span class="faq-icon">📅</span> Can I calculate age on a specific date?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. You can enter a target date to calculate your age on that exact day, whether it is
+            in the past or the future.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            <span class="faq-icon">🔒</span> Does this tool store my personal information?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. All calculations happen directly in your browser. Your birth date and results are not
+            stored or sent anywhere.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            <span class="faq-icon">⏱️</span> Can I see my age in seconds, minutes, or total days?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This calculator shows your live age in seconds, total days lived, and other useful
+            life statistics.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            <span class="faq-icon">📱</span> Is this tool mobile-friendly?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. The calculator works smoothly on smartphones, tablets, laptops, and desktop computers.
+        </div>
+    </div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools |
+<a href="../privacy.html">Privacy Policy</a> |
+<a href="../about.html">About Us</a> |
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+const birthInput = document.getElementById("birthdate");
+const targetInput = document.getElementById("targetdate");
+const result = document.getElementById("result");
+
+let liveInterval = null;
+
+const today = new Date().toISOString().split("T")[0];
+birthInput.max = today;
+
+function getAgeParts(startDate, endDate) {
+    let years = endDate.getFullYear() - startDate.getFullYear();
+    let months = endDate.getMonth() - startDate.getMonth();
+    let days = endDate.getDate() - startDate.getDate();
+
+    if (days < 0) {
+        months--;
+        const prevMonth = new Date(endDate.getFullYear(), endDate.getMonth(), 0);
+        days += prevMonth.getDate();
+    }
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    return { years, months, days };
+}
+
+function formatNumber(num) {
+    return Number(num).toLocaleString("en-IN");
+}
+
+function calculateAge() {
+    const birthValue = birthInput.value;
+    const targetValue = targetInput.value;
+
+    if (!birthValue) {
+        result.innerHTML = `<div class="average-result">Please select your birth date.</div>`;
+        return;
+    }
+
+    const birth = new Date(birthValue + "T00:00:00");
+    const target = targetValue ? new Date(targetValue + "T00:00:00") : new Date();
+
+    if (birth > new Date()) {
+        result.innerHTML = `<div class="average-result">Invalid birth date.</div>`;
+        return;
+    }
+
+    if (target < birth) {
+        result.innerHTML = `<div class="average-result">Target date cannot be before birth date.</div>`;
+        return;
+    }
+
+    clearInterval(liveInterval);
+
+    const initialNow = targetValue ? new Date(targetValue + "T00:00:00") : new Date();
+    const age = getAgeParts(birth, initialNow);
+
+    const initialDiffMs = initialNow - birth;
+    const totalDays = Math.floor(initialDiffMs / (1000 * 60 * 60 * 24));
+
+    let nextBirthday = new Date(initialNow.getFullYear(), birth.getMonth(), birth.getDate());
+    if (nextBirthday < new Date(initialNow.getFullYear(), initialNow.getMonth(), initialNow.getDate())) {
+        nextBirthday.setFullYear(initialNow.getFullYear() + 1);
+    }
+
+    const startOfNow = new Date(initialNow.getFullYear(), initialNow.getMonth(), initialNow.getDate());
+    const startOfNextBirthday = new Date(nextBirthday.getFullYear(), nextBirthday.getMonth(), nextBirthday.getDate());
+    const daysToBirthday = Math.round((startOfNextBirthday - startOfNow) / (1000 * 60 * 60 * 24));
+
+    const lastBirthday = new Date(nextBirthday.getFullYear() - 1, birth.getMonth(), birth.getDate());
+    const birthdayProgress = Math.max(0, Math.min(100, ((initialNow - lastBirthday) / (nextBirthday - lastBirthday)) * 100));
+
+    const avgLifeDays = 80 * 365;
+    const lifeProgress = Math.max(0, Math.min(100, (totalDays / avgLifeDays) * 100));
+
+    result.innerHTML = `
+        <div class="average-result">
+            <div class="stats">
+                <div class="stat-box">Years<br><span id="ageYears">${age.years}</span></div>
+                <div class="stat-box">Months<br><span id="ageMonths">${age.months}</span></div>
+                <div class="stat-box">Days<br><span id="ageDays">${age.days}</span></div>
+                <div class="stat-box">Total Days<br><span id="totalDays">${formatNumber(totalDays)}</span></div>
+                <div class="stat-box">Total Hours<br><span id="totalHours">0</span></div>
+                <div class="stat-box">Total Minutes<br><span id="totalMinutes">0</span></div>
+                <div class="stat-box">Seconds Alive<br><span id="totalSeconds">0</span></div>
+                <div class="stat-box">Next Birthday<br><span id="nextBirthdayDays">${daysToBirthday}</span> days</div>
+            </div>
+
+            <hr>
+
+            <div>
+                🎉 <strong>Exact Age:</strong>
+                <span id="exactAgeText">${age.years} years, ${age.months} months, and ${age.days} days</span>
+            </div>
+
+            <div class="result-note">
+                <strong>Birthday Progress:</strong> <span id="birthdayProgressText">${birthdayProgress.toFixed(1)}%</span>
+            </div>
+            <div class="progress-track">
+                <div id="birthdayProgressBar" class="progress-fill" style="width:${birthdayProgress.toFixed(1)}%;">${birthdayProgress.toFixed(1)}%</div>
+            </div>
+
+            <div class="result-note">
+                <strong>Life Progress (avg 80 years):</strong> <span id="lifeProgressText">${lifeProgress.toFixed(1)}%</span>
+            </div>
+            <div class="progress-track">
+                <div id="lifeProgressBar" class="progress-fill secondary-fill" style="width:${lifeProgress.toFixed(1)}%;">${lifeProgress.toFixed(1)}%</div>
+            </div>
+        </div>
+    `;
+
+    function updateLiveOnly() {
+        const now = new Date();
+        const diffMs = now - birth;
+
+        const totalSeconds = Math.floor(diffMs / 1000);
+        const totalMinutes = Math.floor(diffMs / (1000 * 60));
+        const totalHours = Math.floor(diffMs / (1000 * 60 * 60));
+
+        document.getElementById("totalHours").textContent = formatNumber(totalHours);
+        document.getElementById("totalMinutes").textContent = formatNumber(totalMinutes);
+        document.getElementById("totalSeconds").textContent = formatNumber(totalSeconds);
+    }
+
+    if (targetValue) {
+        const fixedDiffMs = target - birth;
+        document.getElementById("totalHours").textContent = formatNumber(Math.floor(fixedDiffMs / (1000 * 60 * 60)));
+        document.getElementById("totalMinutes").textContent = formatNumber(Math.floor(fixedDiffMs / (1000 * 60)));
+        document.getElementById("totalSeconds").textContent = formatNumber(Math.floor(fixedDiffMs / 1000));
+    } else {
+        updateLiveOnly();
+        liveInterval = setInterval(updateLiveOnly, 1000);
+    }
+}
+
+function clearFields() {
+    clearInterval(liveInterval);
+    birthInput.value = "";
+    targetInput.value = "";
+    result.innerHTML = "";
+}
+
+function loadSample() {
+    birthInput.value = "2005-08-15";
+    targetInput.value = "";
+    calculateAge();
+}
+
+function copyResult() {
+    const text = result.innerText.trim();
+
+    if (!text) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(text)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+
+function shareWhatsApp() {
+    const text = result.innerText.trim();
+
+    if (!text) {
+        alert("Calculate age first!");
+        return;
+    }
+
+    const url = "https://wa.me/?text=" + encodeURIComponent(
+        text + "\n\nTry this tool 👉 https://supertools1.site/agecalculator.html"
+    );
+    window.open(url, "_blank");
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const relatedContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedContainer) {
+    relatedContainer.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

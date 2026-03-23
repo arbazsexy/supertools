@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>JSON Formatter Online Free - Beautify, Validate & Minify JSON Instantly</title>
+
+<meta name="description" content="Free online JSON Formatter tool to format, beautify, validate, and minify JSON instantly. Perfect for developers working with APIs, JSON files, and structured data.">
+<meta name="keywords" content="json formatter, json beautifier, json validator, minify json, format json online, json pretty print, json tool">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/json-formatter.html">
+
+<link rel="icon" href="logo.png" type="image/png">
+
+<meta property="og:title" content="JSON Formatter - SuperTools">
+<meta property="og:description" content="Format, beautify, validate, and minify JSON instantly using this free online JSON formatter.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/json-formatter.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="JSON Formatter - SuperTools">
+<meta name="twitter:description" content="Beautify, validate, and minify JSON instantly with this free online JSON tool.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"JSON Formatter",
+"alternateName":"JSON Beautifier and Validator",
+"url":"https://supertools1.site/json-formatter.html",
+"applicationCategory":"DeveloperApplication",
+"operatingSystem":"Web",
+"description":"Free online JSON Formatter to beautify, validate, and minify JSON data instantly.",
+"browserRequirements":"Requires JavaScript and a modern web browser.",
+"isAccessibleForFree": true,
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+"author":{"@type":"Organization","name":"SuperTools","url":"https://supertools1.site"},
+"publisher":{
+  "@type":"Organization",
+  "name":"SuperTools",
+  "url":"https://supertools1.site",
+  "logo":{
+    "@type":"ImageObject",
+    "url":"https://supertools1.site/logo.png"
+  }
+},
+"featureList":[
+  "Format JSON instantly",
+  "Beautify JSON",
+  "Validate JSON",
+  "Minify JSON",
+  "Copy JSON output",
+  "Download JSON file",
+  "Show JSON stats",
+  "Browser-based and free"
+]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+  {
+    "@type":"Question",
+    "name":"What does a JSON formatter do?",
+    "acceptedAnswer":{
+      "@type":"Answer",
+      "text":"A JSON formatter makes JSON data easier to read by adding indentation, line breaks, and proper spacing. It can also help validate whether the JSON is correctly structured."
+    }
+  },
+  {
+    "@type":"Question",
+    "name":"Can this tool validate JSON?",
+    "acceptedAnswer":{
+      "@type":"Answer",
+      "text":"Yes. This tool checks whether your JSON is valid and shows an error message if the structure is incorrect."
+    }
+  },
+  {
+    "@type":"Question",
+    "name":"Can I minify JSON with this tool?",
+    "acceptedAnswer":{
+      "@type":"Answer",
+      "text":"Yes. You can compress JSON into a compact single-line format using the Minify JSON option."
+    }
+  },
+  {
+    "@type":"Question",
+    "name":"Does this tool upload my JSON data?",
+    "acceptedAnswer":{
+      "@type":"Answer",
+      "text":"No. Everything runs inside your browser, so your JSON data is not uploaded or stored on a server."
+    }
+  },
+  {
+    "@type":"Question",
+    "name":"Is this JSON formatter free?",
+    "acceptedAnswer":{
+      "@type":"Answer",
+      "text":"Yes. This JSON formatter is completely free to use."
+    }
+  }
+]
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>JSON Formatter</h1>
+<p>Format, beautify, validate, and minify JSON data instantly.</p>
+
+<label for="jsonInput">Enter JSON</label>
+<textarea id="jsonInput" rows="10" placeholder='Paste JSON here...'></textarea>
+
+<div class="button-group">
+    <button type="button" onclick="formatJSON()">
+        <i class="fas fa-align-left"></i> Format JSON
+    </button>
+
+    <button type="button" class="action-btn secondary-btn" onclick="minifyJSON()">
+        <i class="fas fa-compress-alt"></i> Minify JSON
+    </button>
+
+    <button type="button" class="action-btn" onclick="validateJSON()">
+        <i class="fas fa-circle-check"></i> Validate
+    </button>
+
+    <button type="button" class="action-btn sample-btn" onclick="loadSampleJSON()">
+        <i class="fas fa-flask"></i> Sample
+    </button>
+
+    <button type="button" class="action-btn copy-btn" onclick="copyJSON()">
+        <i class="fas fa-copy"></i> Copy
+    </button>
+
+    <button type="button" class="action-btn" onclick="downloadJSON()">
+        <i class="fas fa-download"></i> Download
+    </button>
+
+    <button type="button" class="action-btn clear-btn" onclick="clearJSON()">
+        <i class="fas fa-trash"></i> Clear
+    </button>
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+
+<h2>Free Online JSON Formatter</h2>
+
+<p>
+The <strong>JSON Formatter</strong> is a free online tool that helps you format, beautify, validate, and minify JSON data instantly.
+JSON, which stands for <strong>JavaScript Object Notation</strong>, is one of the most widely used formats for APIs, web applications, config files, and data exchange between systems.
+</p>
+
+<p>
+When JSON is minified or returned in a compressed form, it becomes difficult to read and debug. This tool transforms messy JSON into a clean and structured format that is easier to understand.
+It also checks whether your JSON is valid and lets you convert it back into a compact minified version whenever needed.
+</p>
+
+<p>
+Everything works directly in your browser, so your JSON data stays private. You can paste your content, format it, validate it, copy the result, or download it as a file in just a few clicks.
+</p>
+
+<h3>How to Use the JSON Formatter</h3>
+
+<ul>
+<li>Paste your JSON data into the input box.</li>
+<li>Click <strong>Format JSON</strong> to beautify it with proper indentation.</li>
+<li>Click <strong>Minify JSON</strong> to compress it into a smaller one-line format.</li>
+<li>Use <strong>Validate</strong> to check if the JSON structure is correct.</li>
+<li>Copy or download the output after processing.</li>
+</ul>
+
+<h3>Features of This Tool</h3>
+
+<ul>
+<li>Instant JSON formatting and beautifying</li>
+<li>JSON validation with error detection</li>
+<li>Minify JSON into compact format</li>
+<li>Copy and download options</li>
+<li>Shows useful JSON stats</li>
+<li>Runs directly in the browser</li>
+<li>Free and easy to use</li>
+<li>Works well for API responses, config files, and datasets</li>
+</ul>
+
+<h3>What Is JSON?</h3>
+
+<p>
+JSON is a lightweight format used to store and exchange structured data. It is easy for both humans and machines to read, which is why it is heavily used in APIs, JavaScript applications, mobile apps, and backend systems.
+</p>
+
+<p>
+Since raw JSON can be large or compressed into one line, formatting tools like this help developers read, debug, and work with data much more efficiently.
+</p>
+
+<h3>Common Uses of JSON Formatting</h3>
+
+<ul>
+<li>Debugging API responses</li>
+<li>Cleaning up minified JSON data</li>
+<li>Preparing JSON for documentation</li>
+<li>Checking JSON validity before use</li>
+<li>Improving readability for development and testing</li>
+</ul>
+
+</section>
+
+<section class="info-section">
+
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+What does a JSON formatter do?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+A <strong>JSON formatter</strong> makes JSON data easier to read by adding line breaks, indentation, and structured spacing.
+This helps developers understand large or minified JSON more easily during debugging and development.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Can this tool validate JSON?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+Yes. This tool checks whether your JSON is valid. If the structure is incorrect, it shows an error message so you know the data needs fixing before use.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Can I minify JSON using this tool?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+Yes. The <strong>Minify JSON</strong> option removes unnecessary spaces and line breaks to create a compact JSON string that is useful for saving space or transferring data efficiently.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Does this tool upload or store my JSON data?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+No. Everything is processed locally in your browser, so your JSON is not uploaded or stored on a server.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Can I copy and download the result?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+Yes. After formatting or minifying your JSON, you can copy the output instantly or download it as a <strong>.json</strong> file.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Is this JSON formatter free?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+Yes. This JSON formatter is completely free to use with no registration required.
+</div>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="about.html">About Us</a> | 
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+        const content = btn.nextElementSibling;
+        const isOpen = btn.classList.contains("active");
+
+        accButtons.forEach(function(otherBtn) {
+            otherBtn.classList.remove("active");
+            const otherContent = otherBtn.nextElementSibling;
+            if (otherContent) {
+                otherContent.style.maxHeight = null;
+                otherContent.classList.remove("open");
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.classList.add("open");
+            requestAnimationFrame(function() {
+                content.style.maxHeight = (content.scrollHeight + 30) + "px";
+            });
+        }
+    });
+});
+
+const jsonInput = document.getElementById("jsonInput");
+const result = document.getElementById("result");
+
+function scrollToResult() {
+    requestAnimationFrame(function() {
+        result.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+}
+
+function formatBytes(bytes) {
+    return bytes.toLocaleString() + " bytes";
+}
+
+function getJsonType(data) {
+    if (Array.isArray(data)) return "Array";
+    if (data === null) return "Null";
+    return typeof data === "object" ? "Object" : typeof data;
+}
+
+function getItemCount(data) {
+    if (Array.isArray(data)) return data.length;
+    if (data && typeof data === "object") return Object.keys(data).length;
+    return 1;
+}
+
+function renderOutput(outputText, parsedData, modeLabel) {
+    const originalSize = new Blob([jsonInput.value]).size;
+    const outputSize = new Blob([outputText]).size;
+    const type = getJsonType(parsedData);
+    const count = getItemCount(parsedData);
+
+    result.innerHTML =
+        '<div class="average-result result-pop">' +
+            '<div class="stats">' +
+                '<div class="stat-box">Mode<br><span>' + modeLabel + '</span></div>' +
+                '<div class="stat-box">JSON Type<br><span>' + type + '</span></div>' +
+                '<div class="stat-box">Keys / Items<br><span>' + count + '</span></div>' +
+                '<div class="stat-box">Input Size<br><span>' + formatBytes(originalSize) + '</span></div>' +
+                '<div class="stat-box">Output Size<br><span>' + formatBytes(outputSize) + '</span></div>' +
+            '</div>' +
+            '<hr>' +
+            '<div><strong>JSON processed successfully.</strong> Your data is valid and ready to use.</div>' +
+            '<label for="outputJSON"><strong>Output JSON</strong></label>' +
+            '<textarea id="outputJSON" rows="12" readonly></textarea>' +
+        '</div>';
+
+    const outputJSON = document.getElementById("outputJSON");
+    if (outputJSON) {
+        outputJSON.value = outputText;
+    }
+
+    scrollToResult();
+}
+
+function showError(message) {
+    result.innerHTML =
+        '<div class="average-result result-pop">' +
+            '<div><strong>Error:</strong> ' + message + '</div>' +
+        '</div>';
+
+    scrollToResult();
+}
+
+function formatJSON() {
+    const input = jsonInput.value;
+
+    if (!input.trim()) {
+        showError("Please enter JSON data.");
+        return;
+    }
+
+    try {
+        const parsed = JSON.parse(input);
+        const formatted = JSON.stringify(parsed, null, 4);
+        renderOutput(formatted, parsed, "Formatted");
+    } catch (error) {
+        showError("Invalid JSON format.");
+    }
+}
+
+function minifyJSON() {
+    const input = jsonInput.value;
+
+    if (!input.trim()) {
+        showError("Please enter JSON data.");
+        return;
+    }
+
+    try {
+        const parsed = JSON.parse(input);
+        const minified = JSON.stringify(parsed);
+        renderOutput(minified, parsed, "Minified");
+    } catch (error) {
+        showError("Invalid JSON format.");
+    }
+}
+
+function validateJSON() {
+    const input = jsonInput.value;
+
+    if (!input.trim()) {
+        showError("Please enter JSON data.");
+        return;
+    }
+
+    try {
+        const parsed = JSON.parse(input);
+        const validated = JSON.stringify(parsed, null, 4);
+        renderOutput(validated, parsed, "Validated");
+    } catch (error) {
+        showError("Invalid JSON format.");
+    }
+}
+
+function copyJSON() {
+    const output = document.getElementById("outputJSON");
+
+    if (!output || !output.value.trim()) {
+        alert("Nothing to copy!");
+        return;
+    }
+
+    navigator.clipboard.writeText(output.value)
+        .then(function() {
+            alert("Copied!");
+        })
+        .catch(function() {
+            alert("Failed to copy.");
+        });
+}
+
+function downloadJSON() {
+    const output = document.getElementById("outputJSON");
+
+    if (!output || !output.value.trim()) {
+        alert("No JSON output to download.");
+        return;
+    }
+
+    const blob = new Blob([output.value], { type: "application/json;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+
+    a.href = url;
+    a.download = "formatted.json";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+function clearJSON() {
+    jsonInput.value = "";
+    result.innerHTML = "";
+    jsonInput.focus();
+}
+
+function loadSampleJSON() {
+    jsonInput.value = '{\n' +
+        '    "name": "SuperTools",\n' +
+        '    "type": "Developer Tool",\n' +
+        '    "features": ["Format JSON", "Minify JSON", "Validate JSON"],\n' +
+        '    "active": true,\n' +
+        '    "version": 1\n' +
+        '}';
+    result.innerHTML = "";
+}
+
+const tools = [
+    { name: "JSON Formatter", url: "json-formatter.html", icon: "🧩", category: "developer" },
+    { name: "Colourcode Converter", url: "colourcodeconverter.html", icon: "🎨", category: "developer" },
+    { name: "CSS Minifier", url: "css-minifier.html", icon: "🧵", category: "developer" },
+    { name: "CSV to Json", url: "csv-to-json.html", icon: "📊", category: "developer" },
+    { name: "Htaccess Generator", url: "htaccessgenerator.html", icon: "⚙️", category: "developer" },
+    { name: "Javascript Minifier", url: "javascript-minifier.html", icon: "⚡", category: "developer" },
+    { name: "Json to CSV", url: "json-to-csv.html", icon: "🔁", category: "developer" },
+    { name: "Regex Tester", url: "regextester.html", icon: "🔍", category: "developer" },
+    { name: "Timestamp Converter", url: "timestampconverter.html", icon: "⏱️", category: "developer" },
+    { name: "Base64 Encoder Decoder", url: "base64-encoder-decoder.html", icon: "🔐", category: "developer" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(function(tool) {
+        return tool.url !== currentPage;
+    })
+    .sort(function() {
+        return 0.5 - Math.random();
+    })
+    .slice(0, 4);
+
+const relatedContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedContainer) {
+    relatedContainer.innerHTML = related.map(function(tool) {
+        return '<a href="' + tool.url + '" class="tool-card">' +
+            '<div class="tool-icon">' + tool.icon + '</div>' +
+            '<h3>' + tool.name + '</h3>' +
+        '</a>';
+    }).join("");
+}
+</script>
+
+</body>
+</html>

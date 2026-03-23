@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Date Difference Calculator Online - Working Days & Countdown | SuperTools</title>
+<meta name="description" content="Free online date difference calculator to find days between dates, working days, weeks, hours, countdown, and custom holiday exclusions instantly.">
+<meta name="keywords" content="date difference calculator, working days calculator, date countdown, days between dates, business days calculator">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/datedifference.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="Date Difference Calculator - SuperTools">
+<meta property="og:description" content="Calculate working days, countdown, and date differences instantly.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/datedifference.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Date Difference Calculator - SuperTools">
+<meta name="twitter:description" content="Calculate working days, countdown, and date differences instantly.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Date Difference Calculator",
+  "alternateName": "Working Days and Countdown Calculator",
+  "url": "https://supertools1.site/datedifference.html",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "description": "Free online date difference calculator to calculate days between dates, working days, countdowns, and date duration with optional holiday exclusions.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Date difference calculation",
+    "Working days calculator",
+    "Exclude weekends",
+    "Custom holiday support",
+    "Countdown to end date",
+    "Days, weeks, months, and hours breakdown"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this date difference calculator accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this calculator uses real calendar dates to calculate the difference between two selected dates. It can also exclude weekends and custom holidays when calculating working days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I exclude weekends from the calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can enable the exclude weekends option to calculate only working days between the selected dates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add custom holidays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can enter custom holiday dates in YYYY-MM-DD format separated by commas. These dates will be excluded from the working day count."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this tool show a countdown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the calculator can show how many days are left until the selected end date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this date calculator free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this date calculator is completely free to use and works directly in your browser."
+      }
+    }
+  ]
+}
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Date Difference Calculator</h1>
+    <p>Calculate date difference, working days, countdown, and custom holiday exclusions instantly.</p>
+
+    <label for="start">Start Date</label>
+    <input type="date" id="start">
+
+    <label for="end">End Date</label>
+    <input type="date" id="end">
+
+    <label for="holidays">Custom Holidays (YYYY-MM-DD, comma separated)</label>
+    <input type="text" id="holidays" placeholder="e.g. 2026-01-01, 2026-08-15">
+
+    <label style="display:flex; align-items:center; gap:10px; justify-content:center; margin-bottom:20px;">
+        <input type="checkbox" id="weekend" style="width:auto; margin:0;">
+        Exclude Weekends
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="calculateDates()">
+            <i class="fas fa-calendar-days"></i> Calculate
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="swapDates()">
+            <i class="fas fa-right-left"></i> Swap
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="setToday()">
+            <i class="fas fa-calendar-check"></i> Today
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Date Difference Calculator</h2>
+    <p>
+        This <strong>Date Difference Calculator</strong> helps you quickly find the difference between two dates in days, weeks, months, and hours. It also includes a working days calculator, countdown feature, and custom holiday support.
+    </p>
+
+    <p>
+        Select a start date and an end date, then choose whether to exclude weekends. You can also add custom holidays in <strong>YYYY-MM-DD</strong> format separated by commas. Once you click <strong>Calculate</strong>, the tool will show a detailed breakdown instantly.
+    </p>
+
+    <h3>What Can This Tool Calculate?</h3>
+    <ul>
+        <li><strong>Total Days:</strong> The number of calendar days between the two dates.</li>
+        <li><strong>Weeks:</strong> Full and approximate week difference.</li>
+        <li><strong>Months:</strong> Approximate month difference.</li>
+        <li><strong>Hours:</strong> Total hours between the dates.</li>
+        <li><strong>Working Days:</strong> Business days with optional weekend and holiday exclusions.</li>
+        <li><strong>Countdown:</strong> Number of days remaining until the selected end date.</li>
+    </ul>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Is this date difference calculator accurate?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, it calculates the difference using real calendar dates. It can also exclude weekends and custom holidays for working day calculations.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Can I exclude weekends?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, enable the checkbox to exclude Saturdays and Sundays from the working day count.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Can I add custom holidays?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, enter holiday dates in YYYY-MM-DD format separated by commas. These dates will be excluded from the working day count.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Does it show a countdown?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, the calculator shows how many days are left until the end date from today.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Is this tool free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tool is completely free and works directly in your browser.
+        </div>
+    </div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="../privacy.html">Privacy Policy</a> | 
+<a href="../about.html">About Us</a> | 
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function showResult(html) {
+    const resultBox = document.getElementById("result");
+    resultBox.innerHTML = html;
+
+    setTimeout(() => {
+        const yOffset = -100;
+        const y = resultBox.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+    }, 50);
+}
+
+function normalizeDate(date) {
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+}
+
+function parseHolidayList() {
+    return document.getElementById("holidays").value
+        .split(",")
+        .map(item => item.trim())
+        .filter(Boolean);
+}
+
+function workingDays(start, end, excludeWeekends, holidays) {
+    let count = 0;
+    const d = new Date(start);
+
+    while (d <= end) {
+        const day = d.getDay();
+        const str = d.toISOString().split("T")[0];
+        const isWeekend = day === 0 || day === 6;
+
+        if ((!excludeWeekends || !isWeekend) && !holidays.includes(str)) {
+            count++;
+        }
+
+        d.setDate(d.getDate() + 1);
+    }
+
+    return count;
+}
+
+function calculateDates() {
+    const s = document.getElementById("start").value;
+    const e = document.getElementById("end").value;
+
+    if (!s || !e) {
+        showResult("<div class='average-result result-pop'>Please select both start and end dates.</div>");
+        return;
+    }
+
+    const start = normalizeDate(new Date(s));
+    const end = normalizeDate(new Date(e));
+
+    if (end < start) {
+        showResult("<div class='average-result result-pop'>End date cannot be earlier than start date.</div>");
+        return;
+    }
+
+    const diffMs = end - start;
+    const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    const weeks = (days / 7).toFixed(2);
+    const months = (days / 30.44).toFixed(2);
+    const hours = days * 24;
+
+    const excludeWeekends = document.getElementById("weekend").checked;
+    const holidays = parseHolidayList();
+    const work = workingDays(start, end, excludeWeekends, holidays);
+
+    const today = normalizeDate(new Date());
+    const daysLeft = Math.floor((end - today) / (1000 * 60 * 60 * 24));
+
+    showResult(`
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Days<br>${days}</div>
+                <div class="stat-box">Weeks<br>${weeks}</div>
+                <div class="stat-box">Months<br>${months}</div>
+                <div class="stat-box">Hours<br>${hours}</div>
+                <div class="stat-box">Working Days<br>${work}</div>
+                <div class="stat-box">Days Left<br>${daysLeft}</div>
+            </div>
+        </div>
+    `);
+}
+
+function swapDates() {
+    const start = document.getElementById("start");
+    const end = document.getElementById("end");
+    [start.value, end.value] = [end.value, start.value];
+}
+
+function setToday() {
+    const today = new Date().toISOString().split("T")[0];
+    document.getElementById("end").value = today;
+}
+
+function clearAll() {
+    document.getElementById("start").value = "";
+    document.getElementById("end").value = "";
+    document.getElementById("holidays").value = "";
+    document.getElementById("weekend").checked = false;
+    document.getElementById("result").innerHTML = "";
+}
+
+function copyResult() {
+    const resultText = document.getElementById("result").innerText.trim();
+
+    if (!resultText) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(resultText)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "📊", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "📈", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "⚖️", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "🎂", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "💰", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "🏷️", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "🎓", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "💵", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "💻", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "📅", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "🧾", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "💼", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "🧮", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "⏱️", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "🍽️", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "🔄", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

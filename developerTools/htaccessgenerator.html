@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>.htaccess Generator Online Free - Create Apache Redirect & Security Rules</title>
+<meta name="description" content="Free online .htaccess Generator to create Apache rules for HTTPS redirects, www or non-www redirection, hotlink protection, and security headers instantly. Easy, fast, and browser-based.">
+<meta name="keywords" content=".htaccess generator, apache htaccess generator, htaccess redirect generator, force https htaccess, www redirect htaccess, security headers htaccess">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/htaccessgenerator.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content=".htaccess Generator - SuperTools">
+<meta property="og:description" content="Generate Apache .htaccess rules for redirects, HTTPS, hotlink protection, and security headers instantly.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/htaccessgenerator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content=".htaccess Generator - SuperTools">
+<meta name="twitter:description" content="Create Apache .htaccess rules instantly with this free online generator.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": ".htaccess Generator",
+ "alternateName": "Apache .htaccess Generator",
+ "url": "https://supertools1.site/htaccessgenerator.html",
+ "applicationCategory": "DeveloperApplication",
+ "operatingSystem": "Web",
+ "description": "Generate Apache .htaccess rules for HTTPS redirects, www redirection, hotlink protection, and security headers instantly.",
+ "browserRequirements": "Requires JavaScript and a modern web browser.",
+ "isAccessibleForFree": true,
+ "offers": {
+   "@type": "Offer",
+   "price": "0",
+   "priceCurrency": "USD"
+ },
+ "author": {
+   "@type": "Organization",
+   "name": "SuperTools",
+   "url": "https://supertools1.site"
+ },
+ "publisher": {
+   "@type": "Organization",
+   "name": "SuperTools",
+   "url": "https://supertools1.site",
+   "logo": {
+     "@type": "ImageObject",
+     "url": "https://supertools1.site/logo.png"
+   }
+ },
+ "featureList": [
+   "Force HTTPS rules",
+   "Force www redirect",
+   "Remove www redirect",
+   "Hotlink protection rules",
+   "Security headers rules",
+   "Copy generated .htaccess code",
+   "Download .htaccess file",
+   "Browser-based and free"
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+   {
+     "@type": "Question",
+     "name": "What is an .htaccess file?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "An .htaccess file is a configuration file used by Apache web servers. It helps control redirects, rewrite rules, access settings, caching, and security-related behavior for a website or specific directory."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "Where should I upload the .htaccess file?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "In most cases, the .htaccess file should be placed in the root folder of your website, often called public_html, htdocs, or the main web directory on your hosting account."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "Can this tool force HTTPS?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. This generator can create rules that automatically redirect visitors from HTTP to HTTPS so your site always loads over a secure connection."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "Should I enable both force www and remove www?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "No. You should normally use only one of them. Force www redirects visitors to the www version, while remove www redirects them to the non-www version."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "Can .htaccess help with SEO?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. Proper redirects can help avoid duplicate content issues, keep URLs consistent, and ensure users and search engines reach the preferred version of your website."
+     }
+   }
+ ]
+}
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>.htaccess Generator</h1>
+<p>Generate Apache .htaccess rules for redirects, HTTPS, www handling, hotlink protection, and security headers instantly.</p>
+
+<label>
+    <input type="checkbox" id="forceHttps">
+    Force HTTPS
+</label>
+
+<label>
+    <input type="checkbox" id="forceWww">
+    Force www
+</label>
+
+<label>
+    <input type="checkbox" id="removeWww">
+    Remove www
+</label>
+
+<label>
+    <input type="checkbox" id="blockHotlink">
+    Block Image Hotlinking
+</label>
+
+<label>
+    <input type="checkbox" id="securityHeaders">
+    Add Security Headers
+</label>
+
+<div class="button-group">
+    <button type="button" onclick="generateHtaccess()">
+        <i class="fas fa-gears"></i> Generate .htaccess
+    </button>
+
+    <button type="button" class="action-btn copy-btn" onclick="copyCode()">
+        <i class="fas fa-copy"></i> Copy Code
+    </button>
+
+    <button type="button" class="action-btn" onclick="downloadCode()">
+        <i class="fas fa-download"></i> Download
+    </button>
+
+    <button type="button" class="action-btn sample-btn" onclick="loadRecommended()">
+        <i class="fas fa-flask"></i> Recommended
+    </button>
+
+    <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+        <i class="fas fa-trash"></i> Clear
+    </button>
+</div>
+
+<div id="result"></div>
+
+<label for="output">Generated .htaccess Code</label>
+<textarea id="output" rows="12" readonly placeholder=".htaccess code will appear here..."></textarea>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+
+<h2>How to Use the .htaccess Generator</h2>
+
+<p>
+The <strong>.htaccess Generator</strong> helps you create useful Apache server rules without manually writing server syntax.
+It is useful for website owners, developers, bloggers, and beginners who want to manage redirects, improve security, and control how their website behaves on an Apache server.
+</p>
+
+<p>
+With this tool, you can generate rules for <strong>forcing HTTPS</strong>, choosing either the <strong>www</strong> or <strong>non-www</strong> version of your domain, blocking image hotlinking, and adding basic security headers.
+After selecting the options you want, click the generate button to create ready-to-use .htaccess code instantly.
+</p>
+
+<p>
+This can save time and reduce mistakes when setting up redirects or basic protections on your hosting account.
+Instead of writing Apache rules manually, you can use this generator to create the code and then copy or download it for your site.
+</p>
+
+<h3>What Can You Generate?</h3>
+<ul>
+<li><strong>Force HTTPS:</strong> Redirect visitors from HTTP to HTTPS for secure browsing</li>
+<li><strong>Force www:</strong> Redirect your domain to the www version</li>
+<li><strong>Remove www:</strong> Redirect your domain to the non-www version</li>
+<li><strong>Block hotlinking:</strong> Prevent other websites from directly using your image files</li>
+<li><strong>Security headers:</strong> Add common headers that improve browser-side protection</li>
+</ul>
+
+<h3>Why Use an .htaccess File?</h3>
+<p>
+The <strong>.htaccess</strong> file is a configuration file used by Apache web servers. It allows you to control redirects, URL rewrites, caching, access rules, and some security behavior for your website or specific folders.
+</p>
+
+<p>
+It is especially useful when you want quick control over your site without changing the main server configuration.
+Many shared hosting providers support .htaccess, making it a popular way to manage website behavior.
+</p>
+
+<h3>Important Tip</h3>
+<p>
+Do not enable both <strong>Force www</strong> and <strong>Remove www</strong> at the same time. They do opposite things and may create conflicting redirects.
+Pick the one that matches the preferred version of your website.
+</p>
+
+</section>
+
+<section class="info-section">
+
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+What is an .htaccess file?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+The <strong>.htaccess</strong> file is a configuration file used by Apache web servers. It can control redirects, URL rewriting, caching rules, authentication, and some security settings for a website or folder.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Where do I upload the .htaccess file?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+In most cases, you should upload the <strong>.htaccess</strong> file to the root directory of your website, which is often called <strong>public_html</strong>, <strong>htdocs</strong>, or a similar main web folder in your hosting account.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Can .htaccess improve SEO?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+Yes. Proper redirects can help search engines see one preferred version of your site, which reduces duplicate content issues and keeps URL structure more consistent.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Should I use force www and remove www together?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+No. You should normally choose only one. <strong>Force www</strong> redirects visitors to the www version of your site, while <strong>Remove www</strong> redirects them to the non-www version.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Do I need Apache for this to work?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+Yes. The <strong>.htaccess</strong> file is for Apache-based servers. It will not work the same way on all server types such as Nginx unless those rules are manually translated.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+What does hotlink protection do?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+Hotlink protection helps stop other websites from directly linking to your images. This can reduce bandwidth waste and prevent your media from being reused without permission.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">
+Is this tool free and private?
+<span class="arrow">&#9660;</span>
+</button>
+<div class="accordion-content">
+Yes. This tool is free to use and runs in your browser, so you can generate the code instantly without sending your settings to a server for processing.
+</div>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools |
+<a href="../privacy.html">Privacy Policy</a> |
+<a href="../about.html">About Us</a> |
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+// HTACCESS GENERATOR
+
+const output = document.getElementById("output");
+const result = document.getElementById("result");
+
+function scrollToResult() {
+    requestAnimationFrame(() => {
+        const target = result.innerHTML.trim() ? result : output;
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+}
+
+function generateHtaccess() {
+    const forceHttps = document.getElementById("forceHttps").checked;
+    const forceWww = document.getElementById("forceWww").checked;
+    const removeWww = document.getElementById("removeWww").checked;
+    const blockHotlink = document.getElementById("blockHotlink").checked;
+    const securityHeaders = document.getElementById("securityHeaders").checked;
+
+    let code = "";
+    let selectedRules = 0;
+
+    if (forceHttps) {
+        code += `RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+`;
+        selectedRules++;
+    }
+
+    if (forceWww) {
+        code += `RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+`;
+        selectedRules++;
+    }
+
+    if (removeWww) {
+        code += `RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\\.(.*)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+`;
+        selectedRules++;
+    }
+
+    if (blockHotlink) {
+        code += `RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://(www\\.)?yourdomain.com/ [NC]
+RewriteRule \\.(jpg|jpeg|png|gif|webp)$ - [F,L]
+
+`;
+        selectedRules++;
+    }
+
+    if (securityHeaders) {
+        code += `<IfModule mod_headers.c>
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+`;
+        selectedRules++;
+    }
+
+    if (forceWww && removeWww) {
+        result.innerHTML = `
+            <div class="average-result result-pop">
+                <div><strong>Warning:</strong> Do not enable both <strong>Force www</strong> and <strong>Remove www</strong> together. Choose only one redirect style.</div>
+            </div>
+        `;
+        output.value = "";
+        scrollToResult();
+        return;
+    }
+
+    if (!code.trim()) {
+        result.innerHTML = `
+            <div class="average-result result-pop">
+                <div>Please select at least one option to generate .htaccess code.</div>
+            </div>
+        `;
+        output.value = "";
+        scrollToResult();
+        return;
+    }
+
+    output.value = code.trim();
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Rules Selected<br><span>${selectedRules}</span></div>
+                <div class="stat-box">Output Size<br><span>${new Blob([output.value]).size} bytes</span></div>
+                <div class="stat-box">Ready to Copy<br><span>Yes</span></div>
+            </div>
+            <hr>
+            <div><strong>.htaccess code generated successfully.</strong> Review the rules carefully before uploading the file to your Apache server.</div>
+        </div>
+    `;
+
+    scrollToResult();
+}
+
+function copyCode() {
+    if (!output.value.trim()) {
+        alert("No code to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(output.value)
+        .then(() => alert("Code copied!"))
+        .catch(() => alert("Failed to copy code."));
+}
+
+function downloadCode() {
+    if (!output.value.trim()) {
+        alert("No code to download.");
+        return;
+    }
+
+    const blob = new Blob([output.value], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+
+    a.href = url;
+    a.download = ".htaccess";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+function loadRecommended() {
+    document.getElementById("forceHttps").checked = true;
+    document.getElementById("forceWww").checked = false;
+    document.getElementById("removeWww").checked = true;
+    document.getElementById("blockHotlink").checked = true;
+    document.getElementById("securityHeaders").checked = true;
+    generateHtaccess();
+}
+
+function clearAll() {
+    document.getElementById("forceHttps").checked = false;
+    document.getElementById("forceWww").checked = false;
+    document.getElementById("removeWww").checked = false;
+    document.getElementById("blockHotlink").checked = false;
+    document.getElementById("securityHeaders").checked = false;
+    output.value = "";
+    result.innerHTML = "";
+}
+
+// ACCORDION
+
+const accButtons = document.querySelectorAll(".accordion-btn");
+
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = btn.classList.contains("active");
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            const otherContent = otherBtn.nextElementSibling;
+            if (otherContent) {
+                otherContent.style.maxHeight = null;
+                otherContent.classList.remove("open");
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.classList.add("open");
+            requestAnimationFrame(() => {
+                content.style.maxHeight = content.scrollHeight + 30 + "px";
+            });
+        }
+    });
+});
+
+const tools = [
+    { name: "JSON Formatter", url: "json-formatter.html", icon: "🧩", category: "developer" },
+    { name: "Colourcode Converter", url: "colourcodeconverter.html", icon: "🎨", category: "developer" },
+    { name: "CSS Minifier", url: "css-minifier.html", icon: "🧵", category: "developer" },
+    { name: "CSV to Json", url: "csv-to-json.html", icon: "📊", category: "developer" },
+    { name: "Htaccess Generator", url: "htaccessgenerator.html", icon: "⚙️", category: "developer" },
+    { name: "Javascript Minifier", url: "javascript-minifier.html", icon: "⚡", category: "developer" },
+    { name: "Json to CSV", url: "json-to-csv.html", icon: "🔁", category: "developer" },
+    { name: "Regex Tester", url: "regextester.html", icon: "🔍", category: "developer" },
+    { name: "Timestamp Converter", url: "timestampconverter.html", icon: "⏱️", category: "developer" },
+    { name: "Base64 Encoder Decoder", url: "base64-encoder-decoder.html", icon: "🔐", category: "developer" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const relatedContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedContainer) {
+    relatedContainer.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

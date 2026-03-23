@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Remove Duplicate Lines Online - Free Text Tool | SuperTools</title>
+<meta name="description" content="Remove duplicate lines from text instantly. Clean repeated lines, ignore case, trim spaces, ignore empty lines, sort output, and copy results with this free tool by SuperTools.">
+<meta name="keywords" content="remove duplicate lines, duplicate lines remover, text duplicate remover, remove repeated lines, clean text lines, unique lines tool">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/removeduplicatelines.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Remove Duplicate Lines - SuperTools">
+<meta property="og:description" content="Remove duplicate lines from text instantly with useful cleanup options.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/removeduplicatelines.html">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Remove Duplicate Lines - SuperTools">
+<meta name="twitter:description" content="Remove duplicate lines from text instantly with useful cleanup options.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Remove Duplicate Lines",
+  "alternateName": "Duplicate Line Remover",
+  "url": "https://supertools1.site/removeduplicatelines.html",
+  "description": "Free online Remove Duplicate Lines tool to clean repeated lines from text instantly with options for case sensitivity, trimming, sorting, and ignoring empty lines.",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Remove duplicate lines from text",
+    "Case-sensitive comparison",
+    "Keep original order",
+    "Trim lines before comparing",
+    "Ignore empty lines",
+    "Sort output alphabetically",
+    "Copy cleaned result",
+    "Download cleaned result",
+    "Free and browser-based tool"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does Remove Duplicate Lines work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool compares each line of text and keeps only one copy of repeated lines. It can also ignore case, trim spaces, ignore empty lines, and preserve the original order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I keep the original line order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can keep the original order of the first unique lines by enabling the keep original order option."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can spaces at the start or end of a line be ignored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, enable the trim lines before comparing option to ignore extra spaces at the beginning and end of lines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I copy or download the cleaned result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can copy the cleaned result instantly or download it as a TXT file."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this Remove Duplicate Lines tool free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this Remove Duplicate Lines tool is completely free to use online."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+<h1>Remove Duplicate Lines</h1>
+<p>Paste your text below to remove repeated lines instantly and clean your content fast.</p>
+
+<label for="inputText">Input text</label>
+<textarea id="inputText" rows="10" aria-label="Paste text with duplicate lines" placeholder="Paste your text here..."></textarea>
+
+<label>
+    <input type="checkbox" id="caseSensitive">
+    Case-sensitive comparison
+</label>
+
+<label>
+    <input type="checkbox" id="keepOrder" checked>
+    Keep original order
+</label>
+
+<label>
+    <input type="checkbox" id="trimLines" checked>
+    Trim lines before comparing
+</label>
+
+<label>
+    <input type="checkbox" id="ignoreEmptyLines">
+    Ignore empty lines
+</label>
+
+<label>
+    <input type="checkbox" id="sortOutput">
+    Sort output A–Z
+</label>
+
+<div class="button-group">
+    <button type="button" onclick="removeDuplicates()">
+        <i class="fas fa-broom"></i> Remove Duplicates
+    </button>
+
+    <button type="button" class="action-btn clear-btn" onclick="clearText()">
+        <i class="fas fa-trash"></i> Clear
+    </button>
+
+    <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+        <i class="fas fa-flask"></i> Sample
+    </button>
+
+    <button type="button" class="action-btn copy-btn" onclick="copyOutput()">
+        <i class="fas fa-copy"></i> Copy
+    </button>
+
+    <button type="button" class="action-btn secondary-btn" onclick="downloadOutput()">
+        <i class="fas fa-download"></i> Download
+    </button>
+</div>
+
+<div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+<h2>How to Use the Remove Duplicate Lines Tool</h2>
+
+<p>
+The <strong>Remove Duplicate Lines</strong> tool helps you clean text by removing repeated lines instantly. It is useful for
+lists, copied data, logs, keyword sets, notes, code output, and any text where duplicate lines need to be removed quickly.
+</p>
+
+<p>
+To use the tool, paste your text into the input box and choose your cleanup options. You can make the comparison
+<strong>case-sensitive</strong>, preserve the <strong>original order</strong>, trim extra spaces before comparing,
+ignore empty lines, or sort the cleaned result alphabetically.
+</p>
+
+<p>
+After clicking <strong>Remove Duplicates</strong>, the tool instantly shows a cleaned output box along with useful stats such as
+original lines, unique lines, and how many duplicates were removed. You can then copy or download the result.
+</p>
+
+<h3>What Does Remove Duplicate Lines Mean?</h3>
+<p>
+This means the tool checks every line of your text and keeps only one copy of each repeated line. For example, if the same
+line appears multiple times, only the first unique version remains in the final output.
+</p>
+
+<p class="formula-box">
+apple<br>
+banana<br>
+apple<br>
+orange<br><br>
+becomes<br><br>
+apple<br>
+banana<br>
+orange
+</p>
+
+<h3>Why Use This Tool?</h3>
+<ul>
+    <li><strong>Clean Repeated Text:</strong> Remove duplicate lines instantly.</li>
+    <li><strong>Useful Options:</strong> Control case sensitivity, trimming, sorting, and empty lines.</li>
+    <li><strong>Keep Order if Needed:</strong> Preserve the original flow of your unique lines.</li>
+    <li><strong>Fast Results:</strong> Great for long lists and repeated datasets.</li>
+    <li><strong>Easy Reuse:</strong> Copy or download the cleaned text quickly.</li>
+    <li><strong>Private and Free:</strong> Everything works in your browser.</li>
+</ul>
+
+<h3>Who Can Use This Tool?</h3>
+<p>
+This tool is useful for <strong>students</strong>, <strong>writers</strong>, <strong>SEO users</strong>, <strong>developers</strong>,
+<strong>data entry users</strong>, and anyone working with line-based text. It is especially helpful for cleaning keyword lists,
+tag collections, copied logs, email lists, and raw datasets.
+</p>
+</section>
+
+<section class="info-section">
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q1: How does Remove Duplicate Lines work?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        This tool compares each line of text and keeps only one copy of repeated lines. It can also ignore case, trim spaces,
+        ignore empty lines, and preserve the original order.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q2: Can I keep the original line order?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes. Enable the <strong>Keep original order</strong> option to preserve the first unique appearance of each line.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q3: Can spaces at the start or end of a line be ignored?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes. Enable <strong>Trim lines before comparing</strong> to ignore extra spaces at the beginning and end of lines.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q4: Can I copy or download the result?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes. You can copy the cleaned result instantly or download it as a TXT file.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q5: Is this tool free to use?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes. This Remove Duplicate Lines tool is completely free to use online.
+    </div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools |
+<a href="../privacy.html">Privacy Policy</a> |
+<a href="../about.html">About Us</a> |
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+const inputText = document.getElementById("inputText");
+const caseSensitiveCheckbox = document.getElementById("caseSensitive");
+const keepOrderCheckbox = document.getElementById("keepOrder");
+const trimLinesCheckbox = document.getElementById("trimLines");
+const ignoreEmptyLinesCheckbox = document.getElementById("ignoreEmptyLines");
+const sortOutputCheckbox = document.getElementById("sortOutput");
+const resultBox = document.getElementById("result");
+
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function normalizeLine(line, caseSensitive, trimLines) {
+    let value = trimLines ? line.trim() : line;
+    return caseSensitive ? value : value.toLowerCase();
+}
+
+function removeDuplicates() {
+    const text = inputText.value.replace(/\r\n/g, "\n");
+    const caseSensitive = caseSensitiveCheckbox.checked;
+    const keepOrder = keepOrderCheckbox.checked;
+    const trimLines = trimLinesCheckbox.checked;
+    const ignoreEmptyLines = ignoreEmptyLinesCheckbox.checked;
+    const sortOutput = sortOutputCheckbox.checked;
+
+    if (!text.trim()) {
+        resultBox.innerHTML = `
+            <div class="average-result result-pop">
+                <strong>Please enter some text.</strong>
+            </div>
+        `;
+        resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+    }
+
+    const originalLines = text.split("\n");
+    const seen = new Set();
+    let uniqueLines = [];
+
+    for (const line of originalLines) {
+        const comparisonBase = trimLines ? line.trim() : line;
+
+        if (ignoreEmptyLines && comparisonBase === "") {
+            continue;
+        }
+
+        const key = normalizeLine(line, caseSensitive, trimLines);
+
+        if (!seen.has(key)) {
+            seen.add(key);
+            uniqueLines.push(trimLines ? line.trim() : line);
+        }
+    }
+
+    if (!keepOrder || sortOutput) {
+        uniqueLines.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: caseSensitive ? "variant" : "base" }));
+    }
+
+    const outputText = uniqueLines.join("\n");
+    const removedCount = originalLines.length - uniqueLines.length;
+    const wordCount = outputText.trim() ? outputText.trim().split(/\s+/).length : 0;
+    const charCount = outputText.length;
+
+    resultBox.innerHTML = `
+        <div class="modern-card result-pop">
+            <h3>Cleaned Text</h3>
+            <textarea id="outputText" class="code-output result-textarea" rows="12" readonly>${escapeHtml(outputText)}</textarea>
+
+            <div class="stats">
+                <div class="stat-box">Original Lines<br>${originalLines.length}</div>
+                <div class="stat-box">Unique Lines<br>${uniqueLines.length}</div>
+                <div class="stat-box">Removed<br>${removedCount < 0 ? 0 : removedCount}</div>
+                <div class="stat-box">Words<br>${wordCount}</div>
+                <div class="stat-box">Characters<br>${charCount}</div>
+            </div>
+
+            <div class="generator-meta">
+                Case-sensitive: ${caseSensitive ? "Yes" : "No"} |
+                Keep order: ${keepOrder ? "Yes" : "No"} |
+                Trim lines: ${trimLines ? "Yes" : "No"} |
+                Ignore empty lines: ${ignoreEmptyLines ? "Yes" : "No"} |
+                Sort output: ${sortOutput ? "Yes" : "No"}
+            </div>
+        </div>
+    `;
+
+    resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+async function copyOutput() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No output to copy.");
+        return;
+    }
+
+    try {
+        await navigator.clipboard.writeText(output.value);
+        alert("Output copied to clipboard!");
+    } catch (error) {
+        output.select();
+        document.execCommand("copy");
+        alert("Output copied to clipboard!");
+    }
+}
+
+function clearText() {
+    inputText.value = "";
+    caseSensitiveCheckbox.checked = false;
+    keepOrderCheckbox.checked = true;
+    trimLinesCheckbox.checked = true;
+    ignoreEmptyLinesCheckbox.checked = false;
+    sortOutputCheckbox.checked = false;
+    resultBox.innerHTML = "";
+    inputText.focus();
+}
+
+function loadSample() {
+    inputText.value = `apple
+banana
+apple
+orange
+banana
+Apple
+orange`;
+    caseSensitiveCheckbox.checked = false;
+    keepOrderCheckbox.checked = true;
+    trimLinesCheckbox.checked = true;
+    ignoreEmptyLinesCheckbox.checked = false;
+    sortOutputCheckbox.checked = false;
+    removeDuplicates();
+}
+
+function downloadOutput() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No output to download.");
+        return;
+    }
+
+    const blob = new Blob([output.value], { type: "text/plain;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "unique-lines.txt";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+}
+
+inputText.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && e.key === "Enter") {
+        removeDuplicates();
+    }
+});
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
+<script>
+const tools = [
+    { name: "Remove Duplicate Lines", url: "removeduplicatelines.html", icon: "🧹", category: "text" },
+    { name: "Text Sorter", url: "textsorter.html", icon: "🔤", category: "text" },
+    { name: "Remove Line Breaks", url: "removelinebreaks.html", icon: "↩️", category: "text" },
+    { name: "Character Remover", url: "characterremover.html", icon: "✂️", category: "text" },
+    { name: "Add Line Numbers", url: "addlinenumbers.html", icon: "🔢", category: "text" },
+    { name: "Text to ASCII", url: "texttoascii.html", icon: "💻", category: "text" },
+    { name: "Case Alternator", url: "casealternator.html", icon: "🔠", category: "text" },
+    { name: "Text to Slug", url: "texttoslug.html", icon: "🔗", category: "text" },
+    { name: "Loremipsum Generator", url: "loremipsumgenerator.html", icon: "📝", category: "text" },
+    { name: "Random Text Generator", url: "randomtextgenerator.html", icon: "🎲", category: "text" },
+    { name: "Text Converter", url: "textconverter.html", icon: "🔄", category: "text" },
+    { name: "Text Reverser", url: "textreverser.html", icon: "↔️", category: "text" },
+    { name: "Text Repeater", url: "textrepeater.html", icon: "🔁", category: "text" },
+    { name: "Word Counter", url: "wordcounter.html", icon: "📏", category: "text" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

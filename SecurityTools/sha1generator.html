@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>SHA1 Hash Generator Online - Create SHA1 Hash from Text | SuperTools</title>
+<meta name="description" content="Free online SHA1 hash generator to create SHA1 hashes instantly from text. Generate 40-character SHA1 checksums, compare values, and copy results securely in your browser.">
+<meta name="keywords" content="sha1 generator, sha1 hash generator, create sha1 hash, sha1 checksum, online sha1 tool, sha1 encoder">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/sha1generator.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="SHA1 Generator - SuperTools">
+<meta property="og:description" content="Generate SHA1 hashes instantly online from text with compare and copy features.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/sha1generator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SHA1 Generator - SuperTools">
+<meta name="twitter:description" content="Generate SHA1 hashes instantly online from text with compare and copy features.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "SHA1 Generator",
+ "url": "https://supertools1.site/sha1generator.html",
+ "applicationCategory": "SecurityApplication",
+ "operatingSystem": "Any",
+ "description": "Generate SHA1 hashes instantly from text, compare SHA1 values, and copy results in your browser.",
+ "browserRequirements": "Requires JavaScript and a modern web browser.",
+ "isAccessibleForFree": true,
+ "offers": {
+   "@type": "Offer",
+   "price": "0",
+   "priceCurrency": "USD"
+ },
+ "author": {
+   "@type": "Organization",
+   "name": "SuperTools",
+   "url": "https://supertools1.site"
+ },
+ "publisher": {
+   "@type": "Organization",
+   "name": "SuperTools",
+   "url": "https://supertools1.site",
+   "logo": {
+     "@type": "ImageObject",
+     "url": "https://supertools1.site/logo.png"
+   }
+ },
+ "featureList": [
+   "Generate SHA1 hash from text",
+   "Live SHA1 hashing",
+   "Copy SHA1 hash",
+   "Compare SHA1 values",
+   "Show input length",
+   "Show hash length",
+   "Browser-based hashing"
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+   {
+     "@type": "Question",
+     "name": "What is SHA1?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "SHA1 is a cryptographic hash function that produces a 160-bit hash value, usually shown as a 40-character hexadecimal string."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "Is SHA1 secure?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "SHA1 is considered outdated for high-security uses. Modern systems usually prefer SHA256 or stronger algorithms."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "Does this tool store my text?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "No. Hashing happens in your browser for local use."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "Can I compare a SHA1 hash with this tool?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. You can generate a SHA1 hash from text and compare it with another SHA1 value in the compare field."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "What does SHA1 output look like?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "A SHA1 hash is usually displayed as a 40-character hexadecimal string."
+     }
+   }
+ ]
+}
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>SHA1 Generator</h1>
+<p>Generate SHA1 hashes instantly from text, compare values, and copy results in a clean browser-based tool.</p>
+
+<label for="inputText">Enter Text</label>
+<textarea id="inputText" rows="6" placeholder="Enter text here..." oninput="generateHash()"></textarea>
+
+<label for="compareHash">Compare With SHA1 Hash (optional)</label>
+<input type="text" id="compareHash" placeholder="Paste a SHA1 hash here..." oninput="generateHash()">
+
+<div class="button-group">
+    <button type="button" onclick="generateHash()">
+        Generate SHA1 Hash
+    </button>
+    <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+        Clear
+    </button>
+    <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+        Sample
+    </button>
+    <button type="button" class="action-btn copy-btn" onclick="copyCurrentHash()">
+        Copy Hash
+    </button>
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+
+<h2>How to Use the SHA1 Generator</h2>
+
+<p>
+The <strong>SHA1 Generator</strong> helps you create a SHA1 hash from any text input instantly. SHA1 is a hashing algorithm
+that converts text into a fixed-length output, usually shown as a <strong>40-character hexadecimal string</strong>.
+This can be useful for checksums, text fingerprinting, data comparison, and legacy system workflows.
+</p>
+
+<p>
+To use the tool, enter your text into the input box. The SHA1 hash will be generated automatically as you type.
+You can also paste another SHA1 value into the compare field to check whether it matches the newly generated hash.
+</p>
+
+<p>
+This tool works directly in your browser, so the hashing is performed locally for quick use and convenience.
+It is useful for developers, students, and anyone working with legacy hashing workflows or data verification tasks.
+</p>
+
+<h3>Common Uses of SHA1</h3>
+
+<ul>
+<li><strong>Checksums:</strong> Create a fixed hash from text data.</li>
+<li><strong>Legacy systems:</strong> Work with older systems that still use SHA1.</li>
+<li><strong>Data comparison:</strong> Compare whether two text inputs produce the same hash.</li>
+<li><strong>Basic integrity checks:</strong> Use hashes to detect whether text has changed.</li>
+</ul>
+
+<h3>Important Security Note</h3>
+
+<p>
+SHA1 is now considered <strong>outdated for high-security applications</strong>. It should not be used for new password storage
+or modern cryptographic security requirements. For stronger security, modern systems usually use <strong>SHA256</strong>,
+<strong>SHA512</strong>, or dedicated password hashing algorithms such as bcrypt or Argon2.
+</p>
+
+</section>
+
+<section class="info-section">
+
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">What is SHA1? <span class="arrow">&#9660;</span></button>
+<div class="accordion-content">
+SHA1 is a cryptographic hash function that produces a <strong>160-bit hash value</strong>, usually displayed as a
+<strong>40-character hexadecimal string</strong>.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">Is SHA1 secure? <span class="arrow">&#9660;</span></button>
+<div class="accordion-content">
+SHA1 is considered outdated for high-security uses. Modern systems usually prefer stronger algorithms such as
+<strong>SHA256</strong> or <strong>SHA512</strong>.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">Does this tool store my text? <span class="arrow">&#9660;</span></button>
+<div class="accordion-content">
+No. All hashing happens in your browser for local use.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">Can I compare a SHA1 hash with this tool? <span class="arrow">&#9660;</span></button>
+<div class="accordion-content">
+Yes. Paste a SHA1 value into the compare field and the tool will tell you whether it matches the generated hash.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">What does SHA1 output look like? <span class="arrow">&#9660;</span></button>
+<div class="accordion-content">
+A SHA1 hash is normally shown as a <strong>40-character hexadecimal string</strong> made of numbers and letters.
+</div>
+</div>
+
+<div class="accordion-item faq-card">
+<button class="accordion-btn" type="button">Can I use SHA1 for passwords? <span class="arrow">&#9660;</span></button>
+<div class="accordion-content">
+It is not recommended for modern password storage. Dedicated password hashing algorithms like <strong>bcrypt</strong> or
+<strong>Argon2</strong> are much better choices.
+</div>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools |
+<a href="../privacy.html">Privacy Policy</a> |
+<a href="../about.html">About Us</a> |
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+<script>
+
+// Accordion
+
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+let currentHash = "";
+
+function generateHash() {
+    const text = document.getElementById("inputText").value;
+    const compareHash = document.getElementById("compareHash").value.trim().toLowerCase();
+    const result = document.getElementById("result");
+
+    if (!text) {
+        currentHash = "";
+        result.innerHTML = "";
+        return;
+    }
+
+    const hash = CryptoJS.SHA1(text).toString();
+    currentHash = hash;
+
+    let compareStatus = "Not Provided";
+    if (compareHash) {
+        if (/^[a-f0-9]{40}$/i.test(compareHash)) {
+            compareStatus = compareHash === hash.toLowerCase() ? "Matched" : "Not Matched";
+        } else {
+            compareStatus = "Invalid SHA1";
+        }
+    }
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Input Length<br><span>${text.length}</span></div>
+                <div class="stat-box">Hash Length<br><span>${hash.length}</span></div>
+                <div class="stat-box">Algorithm<br><span>SHA1</span></div>
+                <div class="stat-box">Compare<br><span>${compareStatus}</span></div>
+            </div>
+
+            <hr>
+
+            <div><strong>Generated SHA1 Hash:</strong></div>
+            <div class="modern-card" style="max-width:100%; text-align:left;">
+                <p class="binary-output">${hash}</p>
+                <button type="button" class="action-btn copy-btn" onclick="copyCurrentHash()">Copy Hash</button>
+            </div>
+
+            <div class="comparison-note">
+                SHA1 produces a 40-character hexadecimal hash. For modern security-sensitive uses, stronger algorithms are usually preferred.
+            </div>
+        </div>
+    `;
+
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function copyCurrentHash() {
+    if (!currentHash) {
+        alert("Generate a SHA1 hash first.");
+        return;
+    }
+
+    navigator.clipboard.writeText(currentHash)
+        .then(() => alert("SHA1 hash copied!"))
+        .catch(() => alert("Failed to copy SHA1 hash."));
+}
+
+function clearAll() {
+    document.getElementById("inputText").value = "";
+    document.getElementById("compareHash").value = "";
+    document.getElementById("result").innerHTML = "";
+    currentHash = "";
+}
+
+function loadSample() {
+    document.getElementById("inputText").value = "Hello SuperTools";
+    document.getElementById("compareHash").value = "";
+    generateHash();
+}
+
+</script>
+
+<script>
+const tools = [
+    { name: "Password Strength Checker", url: "passwordstrengthchecker.html", icon: "🛡️", category: "security" },
+    { name: "Hash Identifier", url: "hashidentifier.html", icon: "🔢", category: "security" },
+    { name: "JWT Tool", url: "jwttool.html", icon: "🪪", category: "security" },
+    { name: "API Key Generator", url: "apikeygenerator.html", icon: "🔑", category: "security" },
+    { name: "Bcrypt Generator", url: "bcryptgenerator.html", icon: "🔐", category: "security" },
+    { name: "Encryption Tool", url: "encryptiontool.html", icon: "🧩", category: "security" },
+    { name: "Password List Generator", url: "passwordlistgenerator.html", icon: "📜", category: "security" },
+    { name: "Random Token Generator", url: "randomtokengenerator.html", icon: "🎲", category: "security" },
+    { name: "SHA1 Generator", url: "sha1generator.html", icon: "#️⃣", category: "security" },
+    { name: "SHA256 Generator", url: "sha256-generator.html", icon: "🔒", category: "security" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

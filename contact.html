@@ -1,205 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact SuperTools - Support, Feedback, and Suggestions</title>
+    <meta name="description" content="Contact SuperTools for feedback, support, bug reports, or tool suggestions. Reach us through the contact form or by email.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/contact.html">
+    <link rel="icon" href="logo.png" type="image/png">
+    <style>
+        :root {
+            --bg: #eef5fb;
+            --surface: #ffffff;
+            --surface-soft: #f7fbff;
+            --text: #17324d;
+            --muted: #59718a;
+            --border: #d9e7f3;
+            --primary: #2f8cff;
+            --primary-2: #18d7e5;
+            --shadow: 0 18px 40px rgba(18, 52, 86, 0.12);
+            --radius: 20px;
+        }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        * {
+            box-sizing: border-box;
+        }
 
-<title>Contact Us - SuperTools</title>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(47, 140, 255, 0.18), transparent 34%),
+                radial-gradient(circle at top right, rgba(24, 215, 229, 0.18), transparent 30%),
+                var(--bg);
+            line-height: 1.65;
+        }
 
-<meta name="description" content="Contact SuperTools for questions, feedback, suggestions, or bug reports. We are happy to hear from you.">
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
 
-<style>
+        a:hover {
+            text-decoration: underline;
+        }
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f4f6fb;
-color:#333;
-}
+        nav {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 22px 20px 0;
+        }
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
-background:white;
-box-shadow:0 3px 10px rgba(0,0,0,0.08);
-}
+        .nav-shell {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 22px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-2));
+            color: #fff;
+            box-shadow: var(--shadow);
+        }
 
-nav a{
-text-decoration:none;
-color:#333;
-font-weight:bold;
-}
+        .nav-shell a {
+            color: #fff;
+            font-weight: 700;
+        }
 
-header{
-background:#333;
-color:white;
-text-align:center;
-padding:40px 20px;
-}
+        .brand {
+            margin: 0;
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
 
-.container{
-max-width:750px;
-margin:40px auto;
-background:white;
-padding:40px;
-border-radius:14px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
+        main {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 24px 20px 56px;
+        }
 
-form{
-display:flex;
-flex-direction:column;
-gap:15px;
-margin-top:20px;
-}
+        .hero,
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
 
-input, textarea{
-padding:12px;
-border:1px solid #ccc;
-border-radius:8px;
-font-size:16px;
-}
+        .hero {
+            padding: 34px;
+            margin-bottom: 24px;
+        }
 
-textarea{
-min-height:120px;
-resize:vertical;
-}
+        .layout {
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr;
+            gap: 20px;
+        }
 
-button{
-padding:12px;
-background:#333;
-color:white;
-border:none;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-}
+        .panel {
+            padding: 28px;
+        }
 
-button:hover{
-background:#555;
-}
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: var(--surface-soft);
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
 
-.email-box{
-margin-top:30px;
-background:#f4f6fb;
-padding:15px;
-border-radius:8px;
-}
+        h1, h2, h3 {
+            margin-top: 0;
+            line-height: 1.2;
+        }
 
-footer{
-text-align:center;
-padding:20px;
-background:#111;
-color:white;
-margin-top:40px;
-}
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            margin-bottom: 14px;
+        }
 
-/* Success popup */
+        p, li, label {
+            color: var(--muted);
+        }
 
-.popup{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-display:none;
-align-items:center;
-justify-content:center;
-}
+        form {
+            display: grid;
+            gap: 14px;
+            margin-top: 18px;
+        }
 
-.popup-box{
-background:white;
-padding:30px;
-border-radius:10px;
-text-align:center;
-max-width:400px;
-}
+        input,
+        textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            font: inherit;
+            color: var(--text);
+            background: #fff;
+        }
 
-.popup button{
-margin-top:15px;
-}
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
 
-</style>
+        button {
+            border: 0;
+            border-radius: 14px;
+            padding: 14px 18px;
+            font: inherit;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary), var(--primary-2));
+            cursor: pointer;
+        }
 
+        button:hover {
+            filter: brightness(0.98);
+        }
+
+        .info-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .info-box {
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--surface-soft);
+        }
+
+        .note {
+            font-size: 0.95rem;
+        }
+
+        .popup {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(9, 24, 39, 0.55);
+        }
+
+        .popup-box {
+            width: min(100%, 420px);
+            padding: 28px;
+            border-radius: 18px;
+            background: var(--surface);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        footer {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 20px 28px;
+        }
+
+        .footer-shell {
+            text-align: center;
+            padding: 22px;
+            border-radius: 18px;
+            background: #13293f;
+            color: #eaf5ff;
+        }
+
+        .footer-shell a {
+            color: #8fdfff;
+            font-weight: 700;
+        }
+
+        @media (max-width: 860px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hero,
+            .panel {
+                padding: 24px;
+            }
+
+            .brand {
+                font-size: 1.45rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <nav>
+        <div class="nav-shell">
+            <h2 class="brand">&#9889; SuperTools</h2>
+            <a href="index.html">Home</a>
+        </div>
+    </nav>
 
-<nav>
-<h2>⚡ SuperTools</h2>
-<a href="index.html">Home</a>
-</nav>
+    <main>
+        <section class="hero">
+            <span class="eyebrow">Contact SuperTools</span>
+            <h1>Questions, ideas, bugs, or feedback.</h1>
+            <p>
+                If you found an issue, want to suggest a new tool, or just want to get in touch, send a message below. We use your feedback to improve the site and expand the tool collection.
+            </p>
+        </section>
 
-<header>
-<h1>Contact Us</h1>
-<p>If you have questions, suggestions, or bug reports feel free to contact us.</p>
-</header>
+        <div class="layout">
+            <section class="panel">
+                <h2>Send a message</h2>
+                <p class="note">Use the form below for support requests, bug reports, feature suggestions, or general feedback.</p>
 
-<div class="container">
+                <form id="contactForm" action="https://formsubmit.co/supertools167@gmail.com" method="POST">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="message" placeholder="Tell us how we can help..." required></textarea>
 
-<h2>Send Us a Message</h2>
+                    <input type="hidden" name="_subject" value="New message from SuperTools">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
 
-<form id="contactForm" action="https://formsubmit.co/supertools167@gmail.com" method="POST">
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
 
-<input type="text" name="name" placeholder="Your Name" required>
+            <aside class="panel">
+                <h2>Other ways to reach us</h2>
+                <div class="info-list">
+                    <div class="info-box">
+                        <h3>Email</h3>
+                        <p><a href="mailto:supertools167@gmail.com">supertools167@gmail.com</a></p>
+                    </div>
 
-<input type="email" name="email" placeholder="Your Email" required>
+                    <div class="info-box">
+                        <h3>Best reasons to contact us</h3>
+                        <p>Bug reports, tool requests, SEO suggestions, broken pages, or feedback on usability.</p>
+                    </div>
 
-<textarea name="message" placeholder="Write your message here..." required></textarea>
+                    <div class="info-box">
+                        <h3>Helpful details to include</h3>
+                        <p>The tool name, the page URL, what you expected, and what actually happened.</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
 
-<!-- FormSubmit settings -->
+    <div class="popup" id="successPopup">
+        <div class="popup-box">
+            <h2>Message Sent</h2>
+            <p>Thanks for reaching out. Your message has been submitted.</p>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+    </div>
 
-<input type="hidden" name="_subject" value="New message from SuperTools">
-<input type="hidden" name="_captcha" value="false">
+    <footer>
+        <div class="footer-shell">
+            <p>&copy; 2026 SuperTools |
+                <a href="about.html">About</a> |
+                <a href="privacy.html">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
 
-<!-- Honeypot spam protection -->
-<input type="text" name="_honey" style="display:none">
+    <script>
+        const form = document.getElementById("contactForm");
+        const popup = document.getElementById("successPopup");
 
-<button type="submit">Send Message</button>
+        form.addEventListener("submit", function() {
+            setTimeout(function() {
+                popup.style.display = "flex";
+            }, 500);
+        });
 
-</form>
-
-<div class="email-box">
-<h3>Email</h3>
-<p>You can also contact us directly at:</p>
-<p><strong>supertools167@gmail.com</strong></p>
-</div>
-
-</div>
-
-<!-- Success Popup -->
-
-<div class="popup" id="successPopup">
-<div class="popup-box">
-<h2>Message Sent!</h2>
-<p>Thank you for contacting SuperTools. We will reply soon.</p>
-<button onclick="closePopup()">OK</button>
-</div>
-</div>
-
-<footer>
-<p>© 2026 SuperTools</p>
-</footer>
-
-<script>
-
-const form = document.getElementById("contactForm");
-
-form.addEventListener("submit", function(){
-setTimeout(()=>{
-document.getElementById("successPopup").style.display="flex";
-},500);
-});
-
-function closePopup(){
-document.getElementById("successPopup").style.display="none";
-}
-
-</script>
-
+        function closePopup() {
+            popup.style.display = "none";
+        }
+    </script>
 </body>
 </html>

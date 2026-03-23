@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HTML to Text Converter Online - Remove HTML Tags & Extract Plain Text</title>
+    <meta name="description" content="Free online HTML to text converter. Remove HTML tags, decode entities, preserve line breaks, extract plain text, and copy clean output instantly with SuperTools.">
+    <meta name="keywords" content="html to text converter, remove html tags, extract plain text, html cleaner, strip html tags, html to plain text">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/htmltotext.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="HTML to Text Converter Online - SuperTools">
+    <meta property="og:description" content="Convert HTML code into clean plain text instantly by removing tags and extracting readable content.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/htmltotext.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HTML to Text Converter Online - SuperTools">
+    <meta name="twitter:description" content="Convert HTML code into clean plain text instantly by removing tags and extracting readable content.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "HTML to Text Converter",
+      "alternateName": "HTML Tag Remover",
+      "url": "https://supertools1.site/htmltotext.html",
+      "description": "Free online HTML to text converter that removes HTML tags, extracts readable plain text, decodes entities, and preserves useful line breaks instantly.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Remove HTML tags",
+        "Convert HTML to plain text",
+        "Preserve readable line breaks",
+        "Decode HTML entities",
+        "Strip scripts and styles",
+        "Copy text output instantly",
+        "Download plain text file",
+        "Free browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does the HTML to Text Converter do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool removes HTML tags and extracts readable plain text from HTML code. It helps convert markup into simple text for editing, copying, or analysis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it remove script and style content?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the converter removes script, style, noscript, iframe, object, svg, canvas, template, and similar non-content elements before extracting text."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can it preserve line breaks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can keep readable line breaks so the output stays easier to read after conversion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I download the converted text?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, after converting your HTML, you can download the extracted plain text as a TXT file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this tool free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this HTML to text converter is completely free to use."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>HTML to Text Converter</h1>
+    <p>Paste HTML code below to remove tags, strip scripts and styles, decode entities, and extract clean plain text instantly.</p>
+
+    <label for="htmlInput">Enter HTML Code</label>
+    <textarea id="htmlInput" rows="10" aria-label="Enter HTML code to convert into plain text" placeholder="Paste HTML code here..."></textarea>
+
+    <label>
+        <input type="checkbox" id="preserveLines" checked>
+        Preserve readable line breaks
+    </label>
+
+    <label>
+        <input type="checkbox" id="collapseSpaces" checked>
+        Collapse extra spaces
+    </label>
+
+    <label>
+        <input type="checkbox" id="removeBlankLines" checked>
+        Remove extra blank lines
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="convertToText()">
+            <i class="fas fa-file-alt"></i> Convert to Text
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+             <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the HTML to Text Converter</h2>
+
+    <p>
+        The <strong>HTML to Text Converter</strong> helps you turn HTML markup into clean, readable plain text.
+        It is useful when you want to remove tags from webpage content, clean email HTML, or extract readable text from code.
+    </p>
+
+    <p>
+        To use the tool, paste your HTML into the input box and choose the options you want.
+        You can preserve readable line breaks, collapse extra spaces, and remove extra blank lines.
+        After that, click <strong>Convert to Text</strong>.
+    </p>
+
+    <p>
+        The tool removes HTML tags, strips scripts and styles, decodes entities, and gives you clean text output.
+        You can then copy the result or download it as a TXT file.
+    </p>
+
+    <h3>What Does HTML to Text Conversion Mean?</h3>
+    <p>
+        HTML to text conversion means removing markup such as <strong>&lt;p&gt;</strong>, <strong>&lt;div&gt;</strong>,
+        <strong>&lt;strong&gt;</strong>, and similar tags so that only the readable text remains.
+    </p>
+
+    <p class="formula-box">
+        Example: &lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt; → This is bold text.
+    </p>
+
+    <h3>Why Use This Tool?</h3>
+    <ul>
+        <li><strong>Clean Output:</strong> Remove HTML tags and extract readable text.</li>
+        <li><strong>Better Readability:</strong> Preserve useful spacing and line breaks.</li>
+        <li><strong>Script and Style Removal:</strong> Ignore non-visible code content.</li>
+        <li><strong>Easy to Use:</strong> Paste, convert, copy, or download instantly.</li>
+        <li><strong>Free Tool:</strong> Unlimited browser-based use with no signup.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>bloggers</strong>, <strong>students</strong>, <strong>developers</strong>,
+        <strong>SEO users</strong>, <strong>content editors</strong>, and anyone who needs clean text from HTML code.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What does this tool do?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            It removes HTML tags and extracts readable plain text from HTML code.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Does it remove script and style code?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, it removes script, style, noscript, iframe, object, svg, canvas, template, and similar non-content elements before extracting text.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can it preserve line breaks?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can keep readable line breaks so the final text remains easier to read.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I download the result?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, after converting your HTML, you can download the extracted output as a TXT file.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this HTML to text converter is completely free to use.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script src="htmltotext.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Split PDF Online Free - Extract PDF Pages Instantly | SuperTools</title>
+    <meta name="description" content="Free online Split PDF tool to extract pages, split by range, split every N pages, or save each page as a separate PDF instantly. Fast, private, and browser-based with SuperTools.">
+    <meta name="keywords" content="split pdf, extract pdf pages, pdf splitter, split pdf online, split pdf by pages, extract pages from pdf">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/split-pdf.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Split PDF Online Free - SuperTools">
+    <meta property="og:description" content="Split PDF pages online instantly, extract page ranges, or save each page separately with SuperTools.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/split-pdf.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Split PDF Online Free - SuperTools">
+    <meta name="twitter:description" content="Split PDF pages online instantly, extract page ranges, or save each page separately with SuperTools.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Split PDF",
+      "alternateName": "PDF Splitter",
+      "url": "https://supertools1.site/split-pdf.html",
+      "description": "Free online Split PDF tool to extract pages, split by ranges, split every N pages, or save each page separately directly in your browser.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Split PDF by custom page range",
+        "Extract selected PDF pages",
+        "Split every N pages",
+        "Save each page as separate PDF",
+        "Download split PDFs individually",
+        "Download all split PDFs as ZIP",
+        "Runs locally in browser",
+        "Free and secure"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I split a PDF online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Upload your PDF, choose a split mode, enter page ranges or page count if needed, and click Split PDF. Then download the output PDF files instantly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I extract specific pages from a PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can enter custom page selections like 1,3,5-8 to extract only those pages into a new PDF."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I split each page into a separate PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool includes a mode to save every page of your PDF as a separate PDF file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my PDF files uploaded to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, the PDF split process runs directly in your browser, which helps keep your files private."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this Split PDF tool free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this Split PDF tool is completely free to use online."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Split PDF</h1>
+    <p>Upload a PDF file and extract pages, split by ranges, split every few pages, or save each page as a separate PDF instantly.</p>
+
+    <label for="pdfUpload">Select PDF</label>
+    <input type="file" id="pdfUpload" accept="application/pdf" onchange="showPdfInfo()">
+
+    <label for="splitMode">Choose split mode</label>
+    <select id="splitMode" aria-label="Choose split mode" onchange="toggleSplitMode()">
+        <option value="custom">Extract Custom Pages</option>
+        <option value="range">Extract Single Range</option>
+        <option value="every">Split Every N Pages</option>
+        <option value="each">Split Each Page Separately</option>
+    </select>
+
+    <label for="pagesInput">Enter pages</label>
+    <input type="text" id="pagesInput" placeholder="e.g. 1,3,5-8" aria-label="Enter page numbers">
+
+    <label for="rangeStart">Range start page</label>
+    <input type="number" id="rangeStart" min="1" placeholder="e.g. 1" aria-label="Enter range start page">
+
+    <label for="rangeEnd">Range end page</label>
+    <input type="number" id="rangeEnd" min="1" placeholder="e.g. 5" aria-label="Enter range end page">
+
+    <label for="everyCount">Split every N pages</label>
+    <input type="number" id="everyCount" min="1" placeholder="e.g. 2" aria-label="Enter number of pages per split">
+
+    <div class="button-group">
+        <button type="button" onclick="splitPDF()">
+            <i class="fas fa-cut"></i> Split PDF
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+    </div>
+
+    <div id="loading" style="display:none; margin-top:15px;">Processing PDF...</div>
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Split PDF Tool</h2>
+
+    <p>
+        The <strong>Split PDF</strong> tool helps you break one PDF file into smaller PDF documents in a few clicks.
+        It is useful when you want to extract specific pages, save only one chapter, split a long PDF into smaller sections,
+        or create separate files for each page.
+    </p>
+
+    <p>
+        To use this tool, upload your PDF file first. Then choose a split mode. You can extract
+        <strong>custom pages</strong> like 1,3,5-8, extract a <strong>single page range</strong>,
+        split the PDF <strong>every N pages</strong>, or save <strong>each page as a separate PDF</strong>.
+    </p>
+
+    <p>
+        Once you choose your settings, click the <strong>Split PDF</strong> button. The tool will process your file directly in your browser
+        and generate one or more downloadable PDF files. You can download each split file separately or download all split files together as a ZIP file.
+    </p>
+
+    <h3>Why Use This Split PDF Tool?</h3>
+    <ul>
+        <li><strong>Flexible Splitting:</strong> Extract custom pages, ranges, or split at fixed intervals.</li>
+        <li><strong>Each Page Mode:</strong> Save every page as a separate PDF file.</li>
+        <li><strong>Quick Downloads:</strong> Download individual files or all files as a ZIP.</li>
+        <li><strong>Privacy Friendly:</strong> Processing runs locally in your browser.</li>
+        <li><strong>Beginner Friendly:</strong> Simple controls and easy results.</li>
+        <li><strong>Free to Use:</strong> No login and no subscription required.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>students</strong>, <strong>teachers</strong>, <strong>office workers</strong>,
+        <strong>freelancers</strong>, <strong>business users</strong>, and anyone who needs to extract or separate PDF pages quickly.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: How do I split a PDF online?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Upload your PDF, choose a split mode, enter the page selection if needed, and click <strong>Split PDF</strong>.
+            Then download the created PDF files instantly.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I extract specific pages from a PDF?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can extract custom pages like 1,3,5-8 and save them into a new PDF document.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I split each page into a separate PDF?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, choose the <strong>Split Each Page Separately</strong> option to save every page as its own PDF file.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Are my files uploaded anywhere?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. The PDF split process runs directly in your browser, so your file remains on your device during processing.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this PDF splitter free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, the SuperTools Split PDF tool is completely free to use online.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function toggleSplitMode() {
+    const mode = document.getElementById("splitMode").value;
+
+    document.getElementById("pagesInput").disabled = mode !== "custom";
+    document.getElementById("rangeStart").disabled = mode !== "range";
+    document.getElementById("rangeEnd").disabled = mode !== "range";
+    document.getElementById("everyCount").disabled = mode !== "every";
+
+    if (mode !== "custom") {
+        document.getElementById("pagesInput").value = "";
+    }
+
+    if (mode !== "range") {
+        document.getElementById("rangeStart").value = "";
+        document.getElementById("rangeEnd").value = "";
+    }
+
+    if (mode !== "every") {
+        document.getElementById("everyCount").value = "";
+    }
+}
+
+function loadSample() {
+    document.getElementById("splitMode").value = "custom";
+    document.getElementById("pagesInput").value = "1,3,5-8";
+    document.getElementById("rangeStart").value = "";
+    document.getElementById("rangeEnd").value = "";
+    document.getElementById("everyCount").value = "";
+    toggleSplitMode();
+}
+
+function clearFields() {
+    document.getElementById("pdfUpload").value = "";
+    document.getElementById("splitMode").value = "custom";
+    document.getElementById("pagesInput").value = "";
+    document.getElementById("rangeStart").value = "";
+    document.getElementById("rangeEnd").value = "";
+    document.getElementById("everyCount").value = "";
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("result").innerHTML = "";
+    toggleSplitMode();
+}
+
+function safeFileName(name) {
+    return name.replace(/\.pdf$/i, "").replace(/[^a-zA-Z0-9._-]/g, "-");
+}
+
+function formatBytes(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB";
+    return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+}
+
+async function showPdfInfo() {
+    const fileInput = document.getElementById("pdfUpload");
+    const result = document.getElementById("result");
+
+    if (!fileInput.files.length) return;
+
+    try {
+        const file = fileInput.files[0];
+        const arrayBuffer = await file.arrayBuffer();
+        const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
+        const totalPages = pdfDoc.getPageCount();
+
+        result.innerHTML = `
+            <div class="average-result">
+                <div class="stats">
+                    <div class="stat-box">Pages<br>${totalPages}</div>
+                    <div class="stat-box">File Size<br>${formatBytes(file.size)}</div>
+                </div>
+            </div>
+        `;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+function parseCustomPages(input, totalPages) {
+    const selectedPages = [];
+    const seen = new Set();
+    const cleaned = input.replace(/\s+/g, "");
+
+    if (!cleaned) {
+        return [];
+    }
+
+    const parts = cleaned.split(",");
+
+    for (let i = 0; i < parts.length; i++) {
+        const part = parts[i];
+
+        if (!part) continue;
+
+        if (part.includes("-")) {
+            const rangeParts = part.split("-");
+            const start = parseInt(rangeParts[0], 10);
+            const end = parseInt(rangeParts[1], 10);
+
+            if (isNaN(start) || isNaN(end) || start < 1 || end < 1 || start > totalPages || end > totalPages || start > end) {
+                return null;
+            }
+
+            for (let page = start; page <= end; page++) {
+                if (!seen.has(page)) {
+                    selectedPages.push(page);
+                    seen.add(page);
+                }
+            }
+        } else {
+            const pageNum = parseInt(part, 10);
+
+            if (isNaN(pageNum) || pageNum < 1 || pageNum > totalPages) {
+                return null;
+            }
+
+            if (!seen.has(pageNum)) {
+                selectedPages.push(pageNum);
+                seen.add(pageNum);
+            }
+        }
+    }
+
+    return selectedPages;
+}
+
+async function createPdfFromPages(sourcePdf, pageNumbers) {
+    const newPdf = await PDFLib.PDFDocument.create();
+    const copiedPages = await newPdf.copyPages(sourcePdf, pageNumbers.map(page => page - 1));
+    copiedPages.forEach(page => newPdf.addPage(page));
+    return await newPdf.save();
+}
+
+async function splitPDF() {
+    const fileInput = document.getElementById("pdfUpload");
+    const splitMode = document.getElementById("splitMode").value;
+    const pagesInput = document.getElementById("pagesInput").value.trim();
+    const rangeStart = parseInt(document.getElementById("rangeStart").value, 10);
+    const rangeEnd = parseInt(document.getElementById("rangeEnd").value, 10);
+    const everyCount = parseInt(document.getElementById("everyCount").value, 10);
+
+    const loading = document.getElementById("loading");
+    const result = document.getElementById("result");
+
+    result.innerHTML = "";
+
+    if (!fileInput.files.length) {
+        result.innerHTML = "<div class='result-box'>Please upload a PDF first.</div>";
+        return;
+    }
+
+    const file = fileInput.files[0];
+
+    loading.style.display = "block";
+
+    try {
+        const arrayBuffer = await file.arrayBuffer();
+        const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
+        const totalPages = pdfDoc.getPageCount();
+        const zip = new JSZip();
+        const splitFiles = [];
+
+        if (splitMode === "custom") {
+            if (!pagesInput) {
+                loading.style.display = "none";
+                result.innerHTML = "<div class='result-box'>Please enter page numbers like 1,3,5-8.</div>";
+                return;
+            }
+
+            const pageNumbers = parseCustomPages(pagesInput, totalPages);
+
+            if (!pageNumbers || !pageNumbers.length) {
+                loading.style.display = "none";
+                result.innerHTML = "<div class='result-box'>Please enter a valid page selection.</div>";
+                return;
+            }
+
+            const pdfBytes = await createPdfFromPages(pdfDoc, pageNumbers);
+            const fileName = safeFileName(file.name) + "-pages-" + pageNumbers.join("-") + ".pdf";
+            splitFiles.push({ name: fileName, bytes: pdfBytes, pageCount: pageNumbers.length });
+        }
+
+        if (splitMode === "range") {
+            if (isNaN(rangeStart) || isNaN(rangeEnd) || rangeStart < 1 || rangeEnd < 1 || rangeStart > totalPages || rangeEnd > totalPages || rangeStart > rangeEnd) {
+                loading.style.display = "none";
+                result.innerHTML = "<div class='result-box'>Please enter a valid range within the PDF page count.</div>";
+                return;
+            }
+
+            const pageNumbers = [];
+            for (let i = rangeStart; i <= rangeEnd; i++) {
+                pageNumbers.push(i);
+            }
+
+            const pdfBytes = await createPdfFromPages(pdfDoc, pageNumbers);
+            const fileName = safeFileName(file.name) + "-pages-" + rangeStart + "-" + rangeEnd + ".pdf";
+            splitFiles.push({ name: fileName, bytes: pdfBytes, pageCount: pageNumbers.length });
+        }
+
+        if (splitMode === "every") {
+            if (isNaN(everyCount) || everyCount < 1) {
+                loading.style.display = "none";
+                result.innerHTML = "<div class='result-box'>Please enter a valid number of pages for each split.</div>";
+                return;
+            }
+
+            let part = 1;
+
+            for (let start = 1; start <= totalPages; start += everyCount) {
+                const end = Math.min(start + everyCount - 1, totalPages);
+                const pageNumbers = [];
+
+                for (let i = start; i <= end; i++) {
+                    pageNumbers.push(i);
+                }
+
+                const pdfBytes = await createPdfFromPages(pdfDoc, pageNumbers);
+                const fileName = safeFileName(file.name) + "-part-" + part + ".pdf";
+                splitFiles.push({ name: fileName, bytes: pdfBytes, pageCount: pageNumbers.length });
+                part++;
+            }
+        }
+
+        if (splitMode === "each") {
+            for (let i = 1; i <= totalPages; i++) {
+                const pdfBytes = await createPdfFromPages(pdfDoc, [i]);
+                const fileName = safeFileName(file.name) + "-page-" + i + ".pdf";
+                splitFiles.push({ name: fileName, bytes: pdfBytes, pageCount: 1 });
+            }
+        }
+
+        let outputHtml = `
+            <div class="average-result">
+                <div class="stats">
+                    <div class="stat-box">Original Pages<br>${totalPages}</div>
+                    <div class="stat-box">Output Files<br>${splitFiles.length}</div>
+                    <div class="stat-box">Original Size<br>${formatBytes(file.size)}</div>
+                </div>
+            </div>
+        `;
+
+        for (let i = 0; i < splitFiles.length; i++) {
+            const splitFile = splitFiles[i];
+            const blob = new Blob([splitFile.bytes], { type: "application/pdf" });
+            const url = URL.createObjectURL(blob);
+
+            zip.file(splitFile.name, splitFile.bytes);
+
+            outputHtml += `
+                <div class="result-box" style="margin-top:15px; text-align:left;">
+                    <p><strong>${splitFile.name}</strong></p>
+                    <p>Pages: ${splitFile.pageCount}</p>
+                    <p>File Size: ${formatBytes(blob.size)}</p>
+                    <a href="${url}" download="${splitFile.name}">
+                        <button type="button"><i class="fas fa-download"></i> Download PDF</button>
+                    </a>
+                </div>
+            `;
+        }
+
+        if (splitFiles.length > 1) {
+            const zipBlob = await zip.generateAsync({ type: "blob" });
+            const zipUrl = URL.createObjectURL(zipBlob);
+
+            outputHtml = `
+                <div class="result-box" style="margin-bottom:15px;">
+                    <p><strong>All split files are ready.</strong></p>
+                    <a href="${zipUrl}" download="${safeFileName(file.name)}-split-files.zip">
+                        <button type="button"><i class="fas fa-file-archive"></i> Download All as ZIP</button>
+                    </a>
+                </div>
+            ` + outputHtml;
+        }
+
+        result.innerHTML = outputHtml;
+    } catch (error) {
+        console.error(error);
+        result.innerHTML = "<div class='result-box'>Could not process this PDF file. Please try another valid PDF.</div>";
+    }
+
+    loading.style.display = "none";
+}
+
+toggleSplitMode();
+</script>
+
+<script>
+const tools = [
+    { name: "Add Watermark to PDF", url: "add-watermark-pdf.html", icon: "🖋️", category: "pdf" },
+    { name: "Merge PDF", url: "merge-pdf.html", icon: "📎", category: "pdf" },
+    { name: "Split PDF", url: "split-pdf.html", icon: "✂️", category: "pdf" },
+    { name: "Rotate PDF", url: "rotate-pdf.html", icon: "🔄", category: "pdf" },
+    { name: "Compress PDF", url: "compress-pdf.html", icon: "🗜️", category: "pdf" },
+    { name: "Unlock PDF", url: "unlock-pdf.html", icon: "🔓", category: "pdf" },
+];
+
+
+// detect current page
+const currentPage = window.location.pathname.split("/").pop();
+
+// filter related tools
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Compress PDF Online Free - Reduce PDF File Size | SuperTools</title>
+    <meta name="description" content="Compress PDF files online for free. Reduce PDF file size instantly, optimize PDFs in your browser, and download compressed files one by one or as a ZIP with SuperTools.">
+    <meta name="keywords" content="compress pdf, pdf compressor, reduce pdf size, pdf size reducer, optimize pdf online, compress pdf free">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/compress-pdf.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Compress PDF Online Free - SuperTools">
+    <meta property="og:description" content="Reduce PDF file size instantly and download optimized PDF files online for free.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/compress-pdf.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Compress PDF Online Free - SuperTools">
+    <meta name="twitter:description" content="Reduce PDF file size instantly and download optimized PDF files online for free.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Compress PDF",
+      "alternateName": "PDF Compressor",
+      "url": "https://supertools1.site/compress-pdf.html",
+      "description": "Free online PDF compressor to reduce PDF file size and optimize PDF documents directly in your browser.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Compress multiple PDF files",
+        "Reduce PDF size online",
+        "Choose compression level",
+        "Remove metadata",
+        "Download each PDF separately",
+        "Download all compressed PDFs as ZIP",
+        "Runs locally in browser",
+        "Free and privacy friendly"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I compress a PDF online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Upload one or more PDF files, choose the compression level, and click Compress PDFs. After processing, download each compressed PDF or download all files as a ZIP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this PDF compressor free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this PDF compressor is completely free to use online."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I compress multiple PDF files at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool supports multiple PDF files, so you can compress several PDFs in one go."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my PDF files uploaded to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, the processing runs in your browser, which helps keep your PDF files private."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does some PDF compression reduce size only a little?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some PDFs are already optimized, and browser-based compression may only reduce structure overhead. Scanned or image-heavy PDFs may need stronger image recompression tools for larger size reduction."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Compress PDF</h1>
+    <p>Upload one or multiple PDF files to reduce file size and download optimized PDFs instantly.</p>
+
+    <label for="pdfUpload">Select PDF files</label>
+    <input type="file" id="pdfUpload" multiple accept="application/pdf">
+
+    <label for="compressionLevel">Choose compression level</label>
+    <select id="compressionLevel" aria-label="Choose compression level">
+        <option value="light">Light Compression</option>
+        <option value="balanced" selected>Balanced Compression</option>
+        <option value="strong">Strong Compression</option>
+    </select>
+
+    <label>
+        <input type="checkbox" id="removeMetadata">
+        Remove PDF metadata where possible
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="compressPDF()">
+            Compress PDFs
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            Clear
+        </button>
+    </div>
+
+    <div id="loading" style="display:none; margin-top:15px;">Compressing PDFs...</div>
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the PDF Compressor</h2>
+
+    <p>
+        The <strong>Compress PDF</strong> tool helps you reduce the size of PDF files directly in your browser.
+        It is useful when you need smaller PDF files for sharing, uploading, email attachments, or saving storage space.
+    </p>
+
+    <p>
+        To use this tool, upload one or more PDF files, choose a compression level, and optionally remove metadata.
+        Then click the <strong>Compress PDFs</strong> button. After processing, you can download each compressed file separately
+        or download all compressed PDFs together in a ZIP file.
+    </p>
+
+    <p>
+        This tool works locally in your browser for better privacy. It is best for optimizing PDF structure and cleaning some extra overhead.
+        Some PDFs, especially scanned or image-heavy files, may only shrink a little because strong image recompression is limited in browser-only PDF workflows.
+    </p>
+
+    <h3>Why Use This PDF Compressor?</h3>
+    <ul>
+        <li><strong>Multiple File Support:</strong> Compress several PDF files at once.</li>
+        <li><strong>Compression Options:</strong> Choose light, balanced, or strong optimization.</li>
+        <li><strong>Metadata Cleanup:</strong> Remove some PDF information where possible.</li>
+        <li><strong>Quick Downloads:</strong> Download each file separately or all files in one ZIP.</li>
+        <li><strong>Privacy Friendly:</strong> Processing runs in your browser.</li>
+        <li><strong>Free to Use:</strong> No sign-up and no subscription required.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>students</strong>, <strong>teachers</strong>, <strong>office workers</strong>,
+        <strong>freelancers</strong>, <strong>business users</strong>, and anyone who wants smaller PDF files for easier sharing or uploading.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: How do I compress a PDF online?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Upload one or more PDF files, choose the compression level, and click <strong>Compress PDFs</strong>.
+            After processing, download each compressed PDF or download all files together as a ZIP.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Is this PDF compressor free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this PDF compressor is completely free to use online.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I compress multiple PDFs at once?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can upload and compress multiple PDF files in one go.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Are my files uploaded anywhere?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. The PDF processing runs locally in your browser, which helps keep your files private.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Why did my PDF not shrink much?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Some PDFs are already optimized. Also, scanned and image-heavy PDFs may need stronger image recompression than a browser-based tool can provide,
+            so the size reduction may sometimes be small.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function formatBytes(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB";
+    return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+}
+
+function safeFileName(name) {
+    return name.replace(/\.pdf$/i, "").replace(/[^a-zA-Z0-9._-]/g, "-");
+}
+
+function getCompressionOptions(level) {
+    if (level === "light") {
+        return {
+            useObjectStreams: true,
+            addDefaultPage: false,
+            objectsPerTick: 100
+        };
+    }
+
+    if (level === "strong") {
+        return {
+            useObjectStreams: true,
+            addDefaultPage: false,
+            objectsPerTick: 20
+        };
+    }
+
+    return {
+        useObjectStreams: true,
+        addDefaultPage: false,
+        objectsPerTick: 50
+    };
+}
+
+function clearFields() {
+    document.getElementById("pdfUpload").value = "";
+    document.getElementById("compressionLevel").value = "balanced";
+    document.getElementById("removeMetadata").checked = false;
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("result").innerHTML = "";
+}
+
+async function compressPDF() {
+    const files = document.getElementById("pdfUpload").files;
+    const compressionLevel = document.getElementById("compressionLevel").value;
+    const removeMetadata = document.getElementById("removeMetadata").checked;
+
+    const loading = document.getElementById("loading");
+    const result = document.getElementById("result");
+
+    if (!files.length) {
+        result.innerHTML = "<div class='result-box'>Please upload PDF files first.</div>";
+        return;
+    }
+
+    loading.style.display = "block";
+    result.innerHTML = "";
+
+    const zip = new JSZip();
+    let totalOriginal = 0;
+    let totalCompressed = 0;
+    const downloadItems = [];
+
+    for (const file of files) {
+        try {
+            const arrayBuffer = await file.arrayBuffer();
+            const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
+
+            if (removeMetadata) {
+                try {
+                    pdfDoc.setTitle("");
+                    pdfDoc.setAuthor("");
+                    pdfDoc.setSubject("");
+                    pdfDoc.setKeywords([]);
+                    pdfDoc.setProducer("");
+                    pdfDoc.setCreator("");
+                } catch (metaError) {
+                    console.log(metaError);
+                }
+            }
+
+            const newPdf = await PDFLib.PDFDocument.create();
+            const pages = await newPdf.copyPages(pdfDoc, pdfDoc.getPageIndices());
+
+            pages.forEach(page => newPdf.addPage(page));
+
+            if (removeMetadata) {
+                try {
+                    newPdf.setTitle("");
+                    newPdf.setAuthor("");
+                    newPdf.setSubject("");
+                    newPdf.setKeywords([]);
+                    newPdf.setProducer("");
+                    newPdf.setCreator("");
+                } catch (metaError) {
+                    console.log(metaError);
+                }
+            }
+
+            const pdfBytes = await newPdf.save(getCompressionOptions(compressionLevel));
+            const blob = new Blob([pdfBytes], { type: "application/pdf" });
+            const url = URL.createObjectURL(blob);
+
+            const originalSize = file.size;
+            const compressedSize = blob.size;
+            const savedBytes = originalSize - compressedSize;
+            const savedPercent = originalSize > 0 ? ((savedBytes / originalSize) * 100) : 0;
+
+            totalOriginal += originalSize;
+            totalCompressed += compressedSize;
+
+            const newFileName = safeFileName(file.name) + "-compressed.pdf";
+            zip.file(newFileName, blob);
+
+            downloadItems.push(`
+                <div class="result-box" style="margin-top:15px; text-align:left;">
+                    <p><strong>${file.name}</strong></p>
+                    <p>Original Size: ${formatBytes(originalSize)}</p>
+                    <p>Compressed Size: ${formatBytes(compressedSize)}</p>
+                    <p>Saved: ${savedBytes > 0 ? formatBytes(savedBytes) : "0 B"} ${savedPercent > 0 ? `(${savedPercent.toFixed(2)}%)` : "(0%)"}</p>
+                    <a href="${url}" download="${newFileName}">
+                        <button type="button">Download Compressed PDF</button>
+                    </a>
+                </div>
+            `);
+        } catch (error) {
+            console.error(error);
+            downloadItems.push(`
+                <div class="result-box" style="margin-top:15px; text-align:left;">
+                    <p><strong>${file.name}</strong></p>
+                    <p>Could not process this PDF file. Please try another valid PDF.</p>
+                </div>
+            `);
+        }
+    }
+
+    const totalSaved = totalOriginal - totalCompressed;
+    const totalSavedPercent = totalOriginal > 0 ? ((totalSaved / totalOriginal) * 100) : 0;
+
+    let zipButton = "";
+    try {
+        const zipBlob = await zip.generateAsync({ type: "blob" });
+        const zipUrl = URL.createObjectURL(zipBlob);
+        zipButton = `
+            <div class="result-box" style="margin-top:15px;">
+                <p><strong>All files ready</strong></p>
+                <a href="${zipUrl}" download="compressed-pdfs.zip">
+                    <button type="button">Download All as ZIP</button>
+                </a>
+            </div>
+        `;
+    } catch (zipError) {
+        console.error(zipError);
+    }
+
+    result.innerHTML = `
+        <div class="average-result">
+            <div class="stats">
+                <div class="stat-box">Files<br>${files.length}</div>
+                <div class="stat-box">Original Total<br>${formatBytes(totalOriginal)}</div>
+                <div class="stat-box">Compressed Total<br>${formatBytes(totalCompressed)}</div>
+                <div class="stat-box">Saved<br>${totalSaved > 0 ? formatBytes(totalSaved) : "0 B"}</div>
+                <div class="stat-box">Reduction<br>${totalSavedPercent > 0 ? totalSavedPercent.toFixed(2) + "%" : "0%"}</div>
+            </div>
+
+            <hr>
+
+            <div><strong>Note:</strong> PDF size reduction depends on the file. Some PDFs may only shrink slightly, especially if they are already optimized.</div>
+        </div>
+        ${zipButton}
+        ${downloadItems.join("")}
+    `;
+
+    loading.style.display = "none";
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Add Watermark to PDF", url: "add-watermark-pdf.html", icon: "🖋️", category: "pdf" },
+    { name: "Merge PDF", url: "merge-pdf.html", icon: "📎", category: "pdf" },
+    { name: "Split PDF", url: "split-pdf.html", icon: "✂️", category: "pdf" },
+    { name: "Rotate PDF", url: "rotate-pdf.html", icon: "🔄", category: "pdf" },
+    { name: "Compress PDF", url: "compress-pdf.html", icon: "🗜️", category: "pdf" },
+    { name: "Unlock PDF", url: "unlock-pdf.html", icon: "🔓", category: "pdf" },
+];
+
+// detect current page
+const currentPage = window.location.pathname.split("/").pop();
+
+// filter related tools
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

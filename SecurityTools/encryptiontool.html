@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Encryption & Decryption Tool Online - AES, Base64, Caesar, ROT13 | SuperTools</title>
+    <meta name="description" content="Free online encryption and decryption tool to encrypt or decode text using AES, Base64, Caesar Cipher, ROT13, and URL encoding instantly with SuperTools.">
+    <meta name="keywords" content="encryption tool, decryption tool, AES encryption, Base64 encode decode, caesar cipher, ROT13 tool, URL encode decode">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/encryptiontool.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Encryption & Decryption Tool Online - SuperTools">
+    <meta property="og:description" content="Encrypt and decrypt text using AES, Base64, Caesar Cipher, ROT13, and URL encoding instantly.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/encryptiontool.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Encryption & Decryption Tool Online - SuperTools">
+    <meta name="twitter:description" content="Encrypt and decrypt text using AES, Base64, Caesar Cipher, ROT13, and URL encoding instantly.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Encryption & Decryption Tool",
+      "alternateName": "Encryption Tool",
+      "url": "https://supertools1.site/encryptiontool.html",
+      "description": "Free online encryption and decryption tool to work with AES, Base64, Caesar Cipher, ROT13, and URL encoding.",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "AES encryption and decryption",
+        "Base64 encode and decode",
+        "Caesar cipher encode and decode",
+        "ROT13 encode and decode",
+        "URL encode and decode",
+        "Copy output",
+        "Swap input and output",
+        "Works in browser"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What methods does this encryption tool support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool supports AES encryption and decryption, Base64 encode and decode, Caesar Cipher, ROT13, and URL encoding and decoding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a secret key for every method?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A secret key is only needed for AES encryption and decryption. Base64, Caesar, ROT13, and URL encoding do not require a secret key."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Base64 real encryption?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Base64 is an encoding format, not encryption. It is useful for data conversion, but it does not protect information like encryption does."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Caesar Cipher secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Caesar Cipher is a very simple substitution method and is not secure for protecting sensitive information. It is mostly used for learning or puzzles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool upload my text anywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The processing runs directly in your browser, which helps keep your text local on your device."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Encryption & Decryption Tool</h1>
+    <p>Encrypt, decrypt, encode, or decode text instantly using AES, Base64, Caesar Cipher, ROT13, and URL encoding.</p>
+
+    <label for="method">Method</label>
+    <select id="method" aria-label="Choose encryption method">
+        <option value="aes">AES Encryption</option>
+        <option value="base64">Base64 Encode / Decode</option>
+        <option value="caesar">Caesar Cipher</option>
+        <option value="rot13">ROT13</option>
+        <option value="url">URL Encode / Decode</option>
+    </select>
+
+    <div id="keyContainer">
+        <label for="secretKey">Secret Key (AES only)</label>
+        <input type="text" id="secretKey" placeholder="Enter secret key">
+    </div>
+
+    <div id="shiftContainer" style="display:none;">
+        <label for="shiftValue">Shift Value (Caesar only)</label>
+        <input type="number" id="shiftValue" value="3" min="1" max="25">
+    </div>
+
+    <label for="inputText">Text</label>
+    <textarea id="inputText" rows="7" aria-label="Input text" placeholder="Enter text here..."></textarea>
+
+    <div class="button-group">
+        <button type="button" onclick="encryptText()">
+            <i class="fas fa-lock"></i> Encrypt / Encode
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="decryptText()">
+            <i class="fas fa-unlock"></i> Decrypt / Decode
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy Result
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="swapText()">
+            <i class="fas fa-right-left"></i> Swap
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearText()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Encryption Tool</h2>
+
+    <p>
+        The <strong>Encryption & Decryption Tool</strong> helps you quickly transform text using several common methods.
+        You can use it for <strong>AES encryption</strong>, <strong>Base64 encoding</strong>, <strong>Caesar Cipher</strong>,
+        <strong>ROT13</strong>, and <strong>URL encoding</strong> directly in your browser.
+    </p>
+
+    <p>
+        To use the tool, first choose a method from the dropdown. If you select <strong>AES</strong>, enter a secret key.
+        For <strong>Caesar Cipher</strong>, you can choose the shift value. Then enter your text and click either
+        <strong>Encrypt / Encode</strong> or <strong>Decrypt / Decode</strong>.
+    </p>
+
+    <p>
+        This tool is useful for developers, students, and quick browser-based tasks. It can help with readable data conversions,
+        testing encoded values, simple text transformation, and learning how common encoding and cipher methods work.
+    </p>
+
+    <h3>Supported Methods</h3>
+    <ul>
+        <li><strong>AES:</strong> Real symmetric encryption using a secret key.</li>
+        <li><strong>Base64:</strong> Text encoding, useful for data transport but not for secrecy.</li>
+        <li><strong>Caesar Cipher:</strong> A simple letter shift cipher, mainly for learning and basic puzzles.</li>
+        <li><strong>ROT13:</strong> A fixed Caesar-style shift of 13 letters.</li>
+        <li><strong>URL Encoding:</strong> Converts special characters into URL-safe format.</li>
+    </ul>
+
+    <h3>Important Note</h3>
+    <p>
+        <strong>Base64</strong>, <strong>ROT13</strong>, and <strong>Caesar Cipher</strong> are not secure ways to protect sensitive data.
+        They are useful for formatting, learning, or simple transformations. For real protection, use strong encryption like AES
+        and proper backend security practices.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            What methods does this tool support?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This tool supports <strong>AES encryption</strong>, <strong>Base64 encode/decode</strong>,
+            <strong>Caesar Cipher</strong>, <strong>ROT13</strong>, and <strong>URL encode/decode</strong>.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Do I need a secret key for every method?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. A secret key is required only for <strong>AES</strong>. The other methods do not need a key.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Is Base64 real encryption?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. <strong>Base64</strong> is an encoding system, not encryption. It changes data format, but it does not securely protect information.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Is Caesar Cipher secure?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. Caesar Cipher is very simple and easy to reverse. It is useful for education, puzzles, and demonstrations, not for real security.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Does this tool send my text to a server?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. The processing runs directly in your browser, which helps keep your text local on your device.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+const methodSelect = document.getElementById("method");
+const keyContainer = document.getElementById("keyContainer");
+const shiftContainer = document.getElementById("shiftContainer");
+
+function updateMethodUI() {
+    const method = methodSelect.value;
+    keyContainer.style.display = method === "aes" ? "block" : "none";
+    shiftContainer.style.display = method === "caesar" ? "block" : "none";
+}
+
+methodSelect.addEventListener("change", updateMethodUI);
+updateMethodUI();
+
+function escapeHtml(text) {
+    return String(text)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+}
+
+function caesarShift(text, shift) {
+    return text.replace(/[a-zA-Z]/g, char => {
+        const base = char <= "Z" ? 65 : 97;
+        return String.fromCharCode((char.charCodeAt(0) - base + shift + 26) % 26 + base);
+    });
+}
+
+function showResult(title, output, method) {
+    const result = document.getElementById("result");
+    const outputText = String(output);
+    const inputLength = document.getElementById("inputText").value.length;
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Method<br><span>${escapeHtml(method.toUpperCase())}</span></div>
+                <div class="stat-box">Input Length<br><span>${inputLength}</span></div>
+                <div class="stat-box">Output Length<br><span>${outputText.length}</span></div>
+            </div>
+
+            <hr>
+
+            <div><strong>${escapeHtml(title)}:</strong></div>
+            <div class="modern-card">
+                <p class="binary-output">${escapeHtml(outputText)}</p>
+                <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+                    <i class="fas fa-copy"></i> Copy Result
+                </button>
+            </div>
+        </div>
+    `;
+
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function encryptText() {
+    const method = document.getElementById("method").value;
+    const text = document.getElementById("inputText").value;
+    const key = document.getElementById("secretKey").value;
+    const shift = parseInt(document.getElementById("shiftValue").value, 10) || 3;
+
+    if (!text) {
+        document.getElementById("result").innerHTML = `<div class="average-result">Please enter text first.</div>`;
+        return;
+    }
+
+    try {
+        let output = "";
+
+        if (method === "aes") {
+            if (!key) {
+                document.getElementById("result").innerHTML = `<div class="average-result">Please enter a secret key for AES encryption.</div>`;
+                return;
+            }
+            output = CryptoJS.AES.encrypt(text, key).toString();
+        } else if (method === "base64") {
+            output = btoa(unescape(encodeURIComponent(text)));
+        } else if (method === "caesar") {
+            output = caesarShift(text, shift);
+        } else if (method === "rot13") {
+            output = caesarShift(text, 13);
+        } else if (method === "url") {
+            output = encodeURIComponent(text);
+        }
+
+        showResult("Result", output, method);
+    } catch (error) {
+        document.getElementById("result").innerHTML = `<div class="average-result">Unable to process the text. Please check your input and try again.</div>`;
+    }
+}
+
+function decryptText() {
+    const method = document.getElementById("method").value;
+    const text = document.getElementById("inputText").value;
+    const key = document.getElementById("secretKey").value;
+    const shift = parseInt(document.getElementById("shiftValue").value, 10) || 3;
+
+    if (!text) {
+        document.getElementById("result").innerHTML = `<div class="average-result">Please enter text first.</div>`;
+        return;
+    }
+
+    try {
+        let output = "";
+
+        if (method === "aes") {
+            if (!key) {
+                document.getElementById("result").innerHTML = `<div class="average-result">Please enter a secret key for AES decryption.</div>`;
+                return;
+            }
+            const bytes = CryptoJS.AES.decrypt(text, key);
+            output = bytes.toString(CryptoJS.enc.Utf8);
+            if (!output) {
+                document.getElementById("result").innerHTML = `<div class="average-result">Unable to decrypt. Please check that the AES key and encrypted text are correct.</div>`;
+                return;
+            }
+        } else if (method === "base64") {
+            output = decodeURIComponent(escape(atob(text)));
+        } else if (method === "caesar") {
+            output = caesarShift(text, -shift);
+        } else if (method === "rot13") {
+            output = caesarShift(text, 13);
+        } else if (method === "url") {
+            output = decodeURIComponent(text);
+        }
+
+        showResult("Result", output, method);
+    } catch (error) {
+        document.getElementById("result").innerHTML = `<div class="average-result">Unable to decode or decrypt the text. Please check the input and try again.</div>`;
+    }
+}
+
+function copyResult() {
+    const resultText = document.querySelector("#result .binary-output");
+
+    if (!resultText) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(resultText.innerText)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+
+function clearText() {
+    document.getElementById("inputText").value = "";
+    document.getElementById("secretKey").value = "";
+    document.getElementById("shiftValue").value = "3";
+    document.getElementById("result").innerHTML = "";
+}
+
+function swapText() {
+    const output = document.querySelector("#result .binary-output");
+
+    if (!output) {
+        alert("No result available to swap.");
+        return;
+    }
+
+    document.getElementById("inputText").value = output.innerText;
+    document.getElementById("result").innerHTML = "";
+}
+
+function loadSample() {
+    const method = document.getElementById("method").value;
+
+    if (method === "aes") {
+        document.getElementById("secretKey").value = "mySecret123";
+        document.getElementById("inputText").value = "Hello SuperTools";
+    } else if (method === "base64") {
+        document.getElementById("inputText").value = "Hello SuperTools";
+    } else if (method === "caesar") {
+        document.getElementById("shiftValue").value = "3";
+        document.getElementById("inputText").value = "HELLO WORLD";
+    } else if (method === "rot13") {
+        document.getElementById("inputText").value = "Hello SuperTools";
+    } else if (method === "url") {
+        document.getElementById("inputText").value = "Hello World! name=SuperTools & mode=test";
+    }
+
+    document.getElementById("result").innerHTML = "";
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Password Strength Checker", url: "passwordstrengthchecker.html", icon: "🛡️", category: "security" },
+    { name: "Hash Identifier", url: "hashidentifier.html", icon: "🔢", category: "security" },
+    { name: "JWT Tool", url: "jwttool.html", icon: "🪪", category: "security" },
+    { name: "API Key Generator", url: "apikeygenerator.html", icon: "🔑", category: "security" },
+    { name: "Bcrypt Generator", url: "bcryptgenerator.html", icon: "🔐", category: "security" },
+    { name: "Encryption Tool", url: "encryptiontool.html", icon: "🧩", category: "security" },
+    { name: "Password List Generator", url: "passwordlistgenerator.html", icon: "📜", category: "security" },
+    { name: "Random Token Generator", url: "randomtokengenerator.html", icon: "🎲", category: "security" },
+    { name: "SHA1 Generator", url: "sha1generator.html", icon: "#️⃣", category: "security" },
+    { name: "SHA256 Generator", url: "sha256-generator.html", icon: "🔒", category: "security" }
+];
+
+// detect current page
+const currentPage = window.location.pathname.split("/").pop();
+
+// filter related tools
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

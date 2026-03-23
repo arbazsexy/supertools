@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>URL Slug Generator Online - Convert Text to SEO Friendly Slug</title>
+    <meta name="description" content="Free online URL slug generator to convert text into clean SEO-friendly slugs instantly. Create readable URLs, remove special characters, choose separators, and copy slugs easily with SuperTools.">
+    <meta name="keywords" content="url slug generator, seo slug generator, text to slug, slug creator, seo friendly url, clean url generator">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/urlsluggenerator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="URL Slug Generator - SuperTools">
+    <meta property="og:description" content="Generate SEO-friendly URL slugs instantly from titles and text.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/urlsluggenerator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="URL Slug Generator - SuperTools">
+    <meta name="twitter:description" content="Generate SEO-friendly URL slugs instantly from titles and text.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "URL Slug Generator",
+      "alternateName": "SEO Slug Generator",
+      "url": "https://supertools1.site/urlsluggenerator.html",
+      "description": "Convert text into clean SEO-friendly URL slugs with customizable separators, lowercase formatting, stop word removal, and length control.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Convert text to slug",
+        "Generate SEO friendly URLs",
+        "Choose slug separator",
+        "Remove special characters",
+        "Optional stop word removal",
+        "Optional slug length limit",
+        "Copy slug instantly",
+        "Free browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a URL slug?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A URL slug is the readable part of a URL that identifies a page, usually placed after the main domain name."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are slugs important?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Clean slugs make URLs easier to read, easier to share, and better organized for users and search engines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I remove stop words?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool can remove common stop words like the, and, of, and to so your slug becomes shorter and cleaner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I choose a separator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can generate slugs using hyphens, underscores, or no separator depending on your preferred URL style."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this tool free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this URL slug generator is completely free to use."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>URL Slug Generator</h1>
+    <p>Convert text into SEO-friendly URL slugs instantly. Clean up titles, remove special characters, and generate readable slugs for pages and posts.</p>
+
+    <label for="textInput">Enter Text</label>
+    <textarea id="textInput" rows="6" placeholder="Enter your title or text here"></textarea>
+
+    <label for="separator">Separator</label>
+    <select id="separator">
+        <option value="-" selected>Hyphen (-)</option>
+        <option value="_">Underscore (_)</option>
+        <option value="">No Separator</option>
+    </select>
+
+    <label>
+        <input type="checkbox" id="lowercase" checked>
+        Convert to lowercase
+    </label>
+
+    <label>
+        <input type="checkbox" id="removeStopWords">
+        Remove common stop words
+    </label>
+
+    <label>
+        <input type="checkbox" id="trimLength">
+        Limit slug length
+    </label>
+
+    <label for="maxLength">Maximum Length</label>
+    <input type="number" id="maxLength" min="10" max="200" value="60">
+
+    <div class="button-group">
+        <button type="button" onclick="generateSlug()">
+            <i class="fas fa-link"></i> Generate Slug
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the URL Slug Generator</h2>
+
+    <p>
+        The <strong>URL Slug Generator</strong> helps you convert plain text into clean, readable, and SEO-friendly slugs for blog posts, landing pages, products, and other web pages.
+        A good slug makes your URL easier to understand for both users and search engines.
+    </p>
+
+    <p>
+        To use this tool, enter your title or text into the input box. Then choose a separator such as a hyphen or underscore.
+        You can also choose to make the slug lowercase, remove common stop words, and limit the final slug length.
+        Once everything is ready, click <strong>Generate Slug</strong>.
+    </p>
+
+    <p>
+        The tool removes special characters, cleans extra spaces, and creates a formatted slug instantly.
+        You can then copy the result and use it in your website URLs, blog permalinks, or product page links.
+    </p>
+
+    <h3>What is a URL Slug?</h3>
+    <p>
+        A URL slug is the readable part of a URL that usually comes after the domain name.
+        For example, in <strong>example.com/url-slug-generator</strong>, the slug is <strong>url-slug-generator</strong>.
+    </p>
+
+    <p class="formula-box">
+        Example: My First Blog Post! → my-first-blog-post
+    </p>
+
+    <h3>Why Use This URL Slug Generator?</h3>
+    <ul>
+        <li><strong>SEO Friendly:</strong> Create cleaner and more readable URLs.</li>
+        <li><strong>Readable Links:</strong> Make URLs easier for users to understand.</li>
+        <li><strong>Custom Formatting:</strong> Choose separators and slug length options.</li>
+        <li><strong>Cleaner Output:</strong> Remove special characters and repeated spaces automatically.</li>
+        <li><strong>Optional Stop Word Removal:</strong> Make slugs shorter and more focused.</li>
+        <li><strong>Fast and Free:</strong> Generate slugs instantly with no signup required.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>bloggers</strong>, <strong>developers</strong>, <strong>SEO users</strong>, <strong>marketers</strong>,
+        <strong>store owners</strong>, and anyone who wants clean and organized URL slugs for webpages.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is a URL slug?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            A URL slug is the readable part of a URL that identifies a page, usually placed after the main domain name.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Why are slugs important?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Clean slugs make URLs easier to read, easier to share, and better organized for users and search engines.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I remove stop words?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tool can remove common stop words like the, and, of, and to so your slug becomes shorter and cleaner.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I choose a separator?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can generate slugs using hyphens, underscores, or no separator depending on your preferred URL style.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this URL slug generator is completely free to use.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+const stopWords = new Set([
+    "a","an","and","are","as","at","be","but","by","for","from","has","have","in","is","it","of","on","or","that","the","to","was","were","with"
+]);
+
+function slugify(text, separator, makeLowercase, removeCommonWords, limitLength, maxLength) {
+    let working = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    if (makeLowercase) {
+        working = working.toLowerCase();
+    }
+
+    working = working
+        .replace(/['’"]/g, "")
+        .replace(/[^a-zA-Z0-9\s-_]/g, " ")
+        .replace(/[_-]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+
+    let words = working.split(" ").filter(Boolean);
+
+    if (removeCommonWords) {
+        words = words.filter(word => !stopWords.has(word.toLowerCase()));
+    }
+
+    let slug = words.join(separator);
+
+    if (limitLength && maxLength > 0) {
+        slug = slug.slice(0, maxLength);
+        if (separator) {
+            const escapedSeparator = separator.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+            slug = slug.replace(new RegExp(`${escapedSeparator}+$`), "");
+        }
+    }
+
+    return slug;
+}
+
+function generateSlug() {
+    const text = document.getElementById("textInput").value;
+    const separator = document.getElementById("separator").value;
+    const lowercase = document.getElementById("lowercase").checked;
+    const removeCommonWords = document.getElementById("removeStopWords").checked;
+    const limitLength = document.getElementById("trimLength").checked;
+    const maxLength = parseInt(document.getElementById("maxLength").value, 10) || 60;
+    const result = document.getElementById("result");
+
+    if (!text.trim()) {
+        result.innerHTML = `<div class="average-result result-pop"><strong>Please enter some text first.</strong></div>`;
+        return;
+    }
+
+    const slug = slugify(text, separator, lowercase, removeCommonWords, limitLength, maxLength);
+    const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Input Length<br>${text.length}</div>
+                <div class="stat-box">Input Words<br>${wordCount}</div>
+                <div class="stat-box">Slug Length<br>${slug.length}</div>
+                <div class="stat-box">Separator<br>${separator || "none"}</div>
+            </div>
+
+            <hr>
+
+            <div><strong>Generated Slug</strong></div>
+            <textarea id="slugOutput" class="code-output result-textarea" rows="4" readonly></textarea>
+
+            <div class="button-group">
+                <button type="button" class="action-btn copy-btn" onclick="copySlugOutput()">
+                    <i class="fas fa-copy"></i> Copy Slug
+                </button>
+            </div>
+        </div>
+    `;
+
+    document.getElementById("slugOutput").value = slug;
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function clearFields() {
+    document.getElementById("textInput").value = "";
+    document.getElementById("separator").value = "-";
+    document.getElementById("lowercase").checked = true;
+    document.getElementById("removeStopWords").checked = false;
+    document.getElementById("trimLength").checked = false;
+    document.getElementById("maxLength").value = "60";
+    document.getElementById("result").innerHTML = "";
+}
+
+function loadSample() {
+    document.getElementById("textInput").value = "How to Create an SEO Friendly URL Slug for Your Blog Post";
+    document.getElementById("separator").value = "-";
+    document.getElementById("lowercase").checked = true;
+    document.getElementById("removeStopWords").checked = true;
+    document.getElementById("trimLength").checked = false;
+    document.getElementById("maxLength").value = "60";
+    generateSlug();
+}
+
+function copySlugOutput() {
+    const output = document.getElementById("slugOutput");
+    if (!output || !output.value.trim()) {
+        alert("No slug to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(output.value)
+        .then(() => alert("Slug copied to clipboard!"))
+        .catch(() => alert("Failed to copy slug."));
+}
+
+function copyResult() {
+    copySlugOutput();
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Meta Tag Generator", url: "metataggenerator.html", icon: "🏷️", category: "seo" },
+    { name: "Open Graph Generator", url: "opengraphgenerator.html", icon: "🔗", category: "seo" },
+    { name: "Robots.txt Generator", url: "robotstxtgenerator.html", icon: "🤖", category: "seo" },
+    { name: "Sitemap Generator", url: "sitemapgenerator.html", icon: "🗺️", category: "seo" },
+    { name: "URL Slug Generator", url: "urlsluggenerator.html", icon: "✍️", category: "seo" },
+    { name: "Schema Generator", url: "schemagenerator.html", icon: "📄", category: "seo" },
+    { name: "Keyword Density Checker", url: "keyworddensitychecker.html", icon: "📊", category: "seo" },
+    { name: "Hreflang Generator", url: "hreflanggenerator.html", icon: "🌍", category: "seo" },
+    { name: "HTML TO Text", url: "htmltotext.html", icon: "🧾", category: "seo" },
+    { name: "TEXT TO HTML", url: "texttohtml.html", icon: "💻", category: "seo" },
+    { name: "Word Frequency", url: "wordfrequency.html", icon: "🔤", category: "seo" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const relatedToolsContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedToolsContainer) {
+    relatedToolsContainer.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Text to ASCII Converter Online - Get ASCII Codes Instantly | SuperTools</title>
+    <meta name="description" content="Convert text into ASCII codes instantly. Output decimal, hexadecimal, or binary values with this free Text to ASCII Converter by SuperTools.">
+    <meta name="keywords" content="text to ascii, ascii converter, ascii code generator, text to hex, text to binary, character code converter">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/texttoascii.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Text to ASCII Converter - SuperTools">
+    <meta property="og:description" content="Convert text into ASCII codes instantly in decimal, hex, or binary format.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/texttoascii.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Text to ASCII Converter - SuperTools">
+    <meta name="twitter:description" content="Convert text into ASCII codes instantly in decimal, hex, or binary format.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+     crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Text to ASCII Converter",
+      "alternateName": "Character Code Converter",
+      "url": "https://supertools1.site/texttoascii.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "description": "Convert text into ASCII and character codes instantly in decimal, hexadecimal, or binary format.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Convert text to decimal ASCII codes",
+        "Convert text to hexadecimal codes",
+        "Convert text to binary codes",
+        "Choose output separator",
+        "Show character code table",
+        "Copy output",
+        "Download output",
+        "Free and browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is ASCII?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ASCII is a character encoding standard that assigns numeric values to letters, numbers, punctuation marks, spaces, and control characters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are spaces included in the conversion?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, spaces are included. A normal space character has the decimal ASCII value 32."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I view output in hex or binary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool can show character codes in decimal, hexadecimal, or binary format."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I copy or download the result?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can copy the converted output instantly or download it as a TXT file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this tool free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this Text to ASCII Converter is completely free to use online."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Text to ASCII Converter</h1>
+    <p>Convert your text into ASCII and character codes instantly in decimal, hexadecimal, or binary format.</p>
+    
+    <label for="inputText">Enter your text</label>
+    <textarea id="inputText" rows="6" aria-label="Enter text to convert to ASCII" placeholder="Type your text here..."></textarea>
+
+    <label for="outputFormat">Choose output format</label>
+    <select id="outputFormat" aria-label="Choose output format">
+        <option value="decimal">Decimal</option>
+        <option value="hex">Hexadecimal</option>
+        <option value="binary">Binary</option>
+    </select>
+
+    <label for="separatorType">Choose separator</label>
+    <select id="separatorType" aria-label="Choose separator type">
+        <option value="space">Space</option>
+        <option value="comma">Comma + Space</option>
+        <option value="line">New Line</option>
+        <option value="custom">Custom Separator</option>
+    </select>
+
+    <label for="customSeparator">Custom separator</label>
+    <input type="text" id="customSeparator" placeholder="Enter custom separator" disabled>
+
+    <label>
+        <input type="checkbox" id="showTable" checked>
+        Show character table
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="convertToASCII()">
+            <i class="fas fa-terminal"></i> Convert to ASCII
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="downloadResult()">
+            <i class="fas fa-download"></i> Download
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Text to ASCII Converter</h2>
+    <p>
+        The <strong>Text to ASCII Converter</strong> helps you convert text characters into their numeric code values instantly.
+        It is useful for programming, debugging, learning character encoding, and understanding how text is stored internally.
+    </p>
+
+    <p>
+        To use the tool, type or paste your text into the input box, choose the output format, and select how the values should
+        be separated. You can display the result in <strong>decimal</strong>, <strong>hexadecimal</strong>, or <strong>binary</strong>.
+    </p>
+
+    <p>
+        After clicking <strong>Convert to ASCII</strong>, the tool generates the output instantly and can also show a character-by-character
+        table for easier learning and debugging.
+    </p>
+
+    <h3>What is ASCII?</h3>
+    <p>
+        ASCII stands for American Standard Code for Information Interchange. It is a standard that assigns numeric values
+        to letters, digits, punctuation marks, spaces, and control characters. For example, the character <strong>A</strong>
+        has the decimal ASCII value <strong>65</strong>.
+    </p>
+
+    <p class="formula-box">
+        A B → 65 32 66
+    </p>
+
+    <h3>Why Use This Tool?</h3>
+    <ul>
+        <li><strong>Useful for Developers:</strong> Quickly inspect character codes.</li>
+        <li><strong>Educational:</strong> Great for learning ASCII, hex, and binary values.</li>
+        <li><strong>Multiple Output Formats:</strong> View decimal, hexadecimal, or binary values.</li>
+        <li><strong>Flexible Separators:</strong> Output results with spaces, commas, lines, or custom separators.</li>
+        <li><strong>Character Table:</strong> See each character and its code clearly.</li>
+        <li><strong>Fast and Free:</strong> Instant results directly in your browser.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>students</strong>, <strong>programmers</strong>, <strong>developers</strong>,
+        <strong>teachers</strong>, and anyone learning character encoding or text processing.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is ASCII?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            ASCII is a character encoding standard that assigns numeric values to letters, numbers, punctuation marks, spaces, and control characters.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Are spaces included?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. Spaces are also converted, and a normal space character has the decimal value 32.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I view output in hex or binary?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This tool can output character codes in decimal, hexadecimal, or binary format.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I copy or download the result?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. You can copy the converted result instantly or download it as a TXT file.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This Text to ASCII Converter is completely free to use online.
+        </div>
+    </div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="../privacy.html">Privacy Policy</a> | 
+<a href="../about.html">About Us</a> | 
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+const inputText = document.getElementById("inputText");
+const outputFormat = document.getElementById("outputFormat");
+const separatorType = document.getElementById("separatorType");
+const customSeparator = document.getElementById("customSeparator");
+const showTable = document.getElementById("showTable");
+const resultBox = document.getElementById("result");
+
+separatorType.addEventListener("change", function () {
+    customSeparator.disabled = this.value !== "custom";
+});
+
+function getSeparator() {
+    switch (separatorType.value) {
+        case "comma":
+            return ", ";
+        case "line":
+            return "\n";
+        case "custom":
+            return customSeparator.value;
+        case "space":
+        default:
+            return " ";
+    }
+}
+
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function formatCode(code) {
+    if (outputFormat.value === "hex") {
+        return "0x" + code.toString(16).toUpperCase();
+    }
+    if (outputFormat.value === "binary") {
+        return code.toString(2).padStart(8, "0");
+    }
+    return String(code);
+}
+
+function formatCharLabel(char) {
+    if (char === " ") return "[space]";
+    if (char === "\n") return "[newline]";
+    if (char === "\t") return "[tab]";
+    return char;
+}
+
+function convertToASCII() {
+    const text = inputText.value;
+
+    if (!text) {
+        resultBox.innerHTML = `
+            <div class="average-result result-pop">
+                <strong>Please enter some text.</strong>
+            </div>
+        `;
+        return;
+    }
+
+    const chars = Array.from(text);
+    const codes = chars.map(char => formatCode(char.charCodeAt(0)));
+    const output = codes.join(getSeparator());
+
+    let tableHtml = "";
+    if (showTable.checked) {
+        tableHtml = `
+            <div class="data-table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Character</th>
+                            <th>Decimal</th>
+                            <th>Hex</th>
+                            <th>Binary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${chars.map((char, index) => `
+                            <tr>
+                                <td>${index + 1}</td>
+                                <td>${escapeHtml(formatCharLabel(char))}</td>
+                                <td>${char.charCodeAt(0)}</td>
+                                <td>0x${char.charCodeAt(0).toString(16).toUpperCase()}</td>
+                                <td>${char.charCodeAt(0).toString(2).padStart(8, "0")}</td>
+                            </tr>
+                        `).join("")}
+                    </tbody>
+                </table>
+            </div>
+        `;
+    }
+
+    resultBox.innerHTML = `
+        <div class="modern-card result-pop">
+            <h3>ASCII Output</h3>
+            <textarea id="outputText" class="code-output result-textarea" rows="8" readonly>${escapeHtml(output)}</textarea>
+
+            <div class="stats">
+                <div class="stat-box">Characters<br>${chars.length}</div>
+                <div class="stat-box">Output Format<br>${outputFormat.options[outputFormat.selectedIndex].text}</div>
+                <div class="stat-box">Separator<br>${separatorType.options[separatorType.selectedIndex].text}</div>
+                <div class="stat-box">Table<br>${showTable.checked ? "Yes" : "No"}</div>
+            </div>
+
+            <div class="generator-meta">
+                Each character is converted using its character code value. Standard ASCII covers values 0 to 127.
+            </div>
+
+            ${tableHtml}
+        </div>
+    `;
+
+    resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+async function copyResult() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No result to copy.");
+        return;
+    }
+
+    try {
+        await navigator.clipboard.writeText(output.value);
+        alert("Result copied to clipboard!");
+    } catch (error) {
+        output.select();
+        document.execCommand("copy");
+        alert("Result copied to clipboard!");
+    }
+}
+
+function clearFields() {
+    inputText.value = "";
+    outputFormat.value = "decimal";
+    separatorType.value = "space";
+    customSeparator.value = "";
+    customSeparator.disabled = true;
+    showTable.checked = true;
+    resultBox.innerHTML = "";
+    inputText.focus();
+}
+
+function loadSample() {
+    inputText.value = "A B";
+    outputFormat.value = "decimal";
+    separatorType.value = "space";
+    customSeparator.value = "";
+    customSeparator.disabled = true;
+    showTable.checked = true;
+    convertToASCII();
+}
+
+function downloadResult() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No result to download.");
+        return;
+    }
+
+    const blob = new Blob([output.value], { type: "text/plain;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "ascii-output.txt";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+}
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
+<script>
+const tools = [
+    { name: "Remove Duplicate Lines", url: "removeduplicatelines.html", icon: "🧹", category: "text" },
+    { name: "Text Sorter", url: "textsorter.html", icon: "🔤", category: "text" },
+    { name: "Remove Line Breaks", url: "removelinebreaks.html", icon: "↩️", category: "text" },
+    { name: "Character Remover", url: "characterremover.html", icon: "✂️", category: "text" },
+    { name: "Add Line Numbers", url: "addlinenumbers.html", icon: "🔢", category: "text" },
+    { name: "Text to ASCII", url: "texttoascii.html", icon: "💻", category: "text" },
+    { name: "Case Alternator", url: "casealternator.html", icon: "🔠", category: "text" },
+    { name: "Text to Slug", url: "texttoslug.html", icon: "🔗", category: "text" },
+    { name: "Loremipsum Generator", url: "loremipsumgenerator.html", icon: "📝", category: "text" },
+    { name: "Random Text Generator", url: "randomtextgenerator.html", icon: "🎲", category: "text" },
+    { name: "Text Converter", url: "textconverter.html", icon: "🔄", category: "text" },
+    { name: "Text Reverser", url: "textreverser.html", icon: "↔️", category: "text" },
+    { name: "Text Repeater", url: "textrepeater.html", icon: "🔁", category: "text" },
+    { name: "Word Counter", url: "wordcounter.html", icon: "📏", category: "text" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

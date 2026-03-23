@@ -1,9 +1,3 @@
 User-agent: *
 Allow: /
-
-# Help Google find your sitemap instantly
 Sitemap: https://supertools1.site/sitemap.xml
-
-# Block folders that don't have content (optional but professional)
-Disallow: /css/
-Disallow: /js/

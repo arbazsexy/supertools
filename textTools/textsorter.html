@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Text Sorter Online - Sort Lines Alphabetically or Numerically | SuperTools</title>
+    <meta name="description" content="Sort text lines alphabetically or numerically instantly. Use A-Z, Z-A, numeric sorting, remove duplicates, trim spaces, and clean text easily with this free Text Sorter by SuperTools.">
+    <meta name="keywords" content="text sorter, sort lines online, alphabetical sorter, numeric sorter, sort text lines, remove duplicate lines, text sorting tool">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/textsorter.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Text Sorter Tool - SuperTools">
+    <meta property="og:description" content="Sort text lines alphabetically or numerically with useful cleanup options.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/textsorter.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Text Sorter Tool - SuperTools">
+    <meta name="twitter:description" content="Sort text lines alphabetically or numerically with useful cleanup options.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+    crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Text Sorter",
+      "alternateName": "Line Sorter",
+      "url": "https://supertools1.site/textsorter.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "description": "Sort text lines alphabetically or numerically with advanced options including duplicate removal, trimming spaces, and ignoring empty lines.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Sort text lines alphabetically",
+        "Sort text lines numerically",
+        "Sort A to Z or Z to A",
+        "Case-sensitive sorting",
+        "Remove duplicate lines",
+        "Trim spaces before sorting",
+        "Ignore empty lines",
+        "Copy sorted output",
+        "Download sorted output",
+        "Free and browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What can this Text Sorter do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool can sort text lines alphabetically or numerically. It also supports A to Z and Z to A sorting, duplicate removal, trimming spaces, and ignoring empty lines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I sort numbers correctly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, enable numeric sort to sort numbers by their numeric value instead of standard alphabetical order."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I remove duplicates while sorting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can enable duplicate removal to keep only one copy of repeated lines before the final sorted result is shown."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I copy or download the sorted result?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can copy the sorted output instantly or download it as a TXT file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this Text Sorter free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this Text Sorter is completely free to use online."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Text Sorter</h1>
+    <p>Sort your text lines instantly with alphabetical, reverse, and numeric sorting options.</p>
+
+    <label for="inputText">Input text</label>
+    <textarea id="inputText" rows="10" aria-label="Enter text lines to sort" placeholder="Enter text here, one line per item..."></textarea>
+
+    <label for="sortOrder">Sort order</label>
+    <select id="sortOrder" aria-label="Choose sort order">
+        <option value="asc">A → Z</option>
+        <option value="desc">Z → A</option>
+    </select>
+
+    <label>
+        <input type="checkbox" id="caseSensitive">
+        Case-sensitive sorting
+    </label>
+
+    <label>
+        <input type="checkbox" id="numericSort">
+        Numeric sort
+    </label>
+
+    <label>
+        <input type="checkbox" id="removeDuplicates">
+        Remove duplicate lines
+    </label>
+
+    <label>
+        <input type="checkbox" id="trimSpaces" checked>
+        Trim spaces before sorting
+    </label>
+
+    <label>
+        <input type="checkbox" id="ignoreEmptyLines" checked>
+        Ignore empty lines
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="sortText()">
+            <i class="fas fa-sort-alpha-down"></i> Sort Text
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearText()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyOutput()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="downloadOutput()">
+            <i class="fas fa-download"></i> Download
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Text Sorter</h2>
+
+    <p>
+        The <strong>Text Sorter</strong> helps you arrange text lines in a clear order instantly. It is useful for sorting names,
+        keyword lists, tags, numbers, copied records, raw datasets, and other line-based content.
+    </p>
+
+    <p>
+        To use it, paste your text into the input box with one item per line. Then choose the sort order and enable any extra options
+        you need, such as case-sensitive sorting, numeric sorting, duplicate removal, trimming spaces, or ignoring empty lines.
+        Click <strong>Sort Text</strong> to generate the cleaned and sorted output.
+    </p>
+
+    <p>
+        This tool is especially helpful for students, writers, SEO users, developers, and anyone working with line-based text.
+        It saves time and makes large text lists easier to organize.
+    </p>
+
+    <h3>What Does a Text Sorter Do?</h3>
+    <p>
+        A text sorter reorders text lines based on alphabetical or numeric rules. For example, it can sort words from A to Z,
+        reverse them from Z to A, or sort numbers by their actual numeric value.
+    </p>
+
+    <p class="formula-box">
+        banana<br>
+        apple<br>
+        orange<br><br>
+        becomes<br><br>
+        apple<br>
+        banana<br>
+        orange
+    </p>
+
+    <h3>Why Use This Text Sorter Tool?</h3>
+    <ul>
+        <li><strong>Alphabetical Sorting:</strong> Sort lines from A to Z or Z to A.</li>
+        <li><strong>Numeric Sorting:</strong> Sort number-based lines correctly.</li>
+        <li><strong>Duplicate Removal:</strong> Clean repeated lines while sorting.</li>
+        <li><strong>Flexible Cleanup:</strong> Trim spaces and ignore empty lines.</li>
+        <li><strong>Fast Output:</strong> Organize text instantly.</li>
+        <li><strong>Easy Reuse:</strong> Copy or download the sorted result.</li>
+        <li><strong>Private and Free:</strong> Everything runs in your browser.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is great for <strong>students</strong>, <strong>writers</strong>, <strong>SEO users</strong>,
+        <strong>developers</strong>, <strong>researchers</strong>, and <strong>data entry users</strong>.
+        It is useful for sorting lists, cleaning copied text, arranging keywords, and organizing structured content.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What can this Text Sorter do?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This tool can sort text lines alphabetically or numerically. It also supports A to Z and Z to A sorting,
+            duplicate removal, trimming spaces, and ignoring empty lines.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I sort numbers correctly?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. Enable <strong>Numeric sort</strong> to sort numbers by their numeric value instead of normal alphabetical order.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I remove duplicates while sorting?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. Enable <strong>Remove duplicate lines</strong> to keep only one copy of repeated lines before sorting.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I copy or download the sorted result?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. You can copy the sorted output instantly or download it as a TXT file.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This Text Sorter is completely free to use online.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+const inputText = document.getElementById("inputText");
+const caseSensitive = document.getElementById("caseSensitive");
+const numericSort = document.getElementById("numericSort");
+const removeDuplicates = document.getElementById("removeDuplicates");
+const trimSpaces = document.getElementById("trimSpaces");
+const ignoreEmptyLines = document.getElementById("ignoreEmptyLines");
+const sortOrder = document.getElementById("sortOrder");
+const resultBox = document.getElementById("result");
+
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function sortText() {
+    const rawText = inputText.value.replace(/\r\n/g, "\n");
+
+    if (!rawText.trim()) {
+        resultBox.innerHTML = `
+            <div class="average-result result-pop">
+                <strong>Please enter some text.</strong>
+            </div>
+        `;
+        return;
+    }
+
+    let lines = rawText.split("\n");
+    const originalCount = lines.length;
+
+    if (trimSpaces.checked) {
+        lines = lines.map(line => line.trim());
+    }
+
+    if (ignoreEmptyLines.checked) {
+        lines = lines.filter(line => line !== "");
+    }
+
+    if (removeDuplicates.checked) {
+        const seen = new Set();
+        lines = lines.filter(line => {
+            const key = caseSensitive.checked ? line : line.toLowerCase();
+            if (seen.has(key)) return false;
+            seen.add(key);
+            return true;
+        });
+    }
+
+    lines.sort((a, b) => {
+        if (numericSort.checked) {
+            const numA = parseFloat(a);
+            const numB = parseFloat(b);
+
+            const aIsNum = !isNaN(numA);
+            const bIsNum = !isNaN(numB);
+
+            if (aIsNum && bIsNum) {
+                return numA - numB;
+            }
+
+            const compA = caseSensitive.checked ? a : a.toLowerCase();
+            const compB = caseSensitive.checked ? b : b.toLowerCase();
+            return compA.localeCompare(compB, undefined, { numeric: true });
+        }
+
+        const compA = caseSensitive.checked ? a : a.toLowerCase();
+        const compB = caseSensitive.checked ? b : b.toLowerCase();
+        return compA.localeCompare(compB);
+    });
+
+    if (sortOrder.value === "desc") {
+        lines.reverse();
+    }
+
+    const output = lines.join("\n");
+    const removedCount = Math.max(0, originalCount - lines.length);
+    const wordCount = output.trim() ? output.trim().split(/\s+/).filter(Boolean).length : 0;
+
+    resultBox.innerHTML = `
+        <div class="modern-card result-pop">
+            <h3>Sorted Text</h3>
+            <textarea id="outputText" class="code-output result-textarea" rows="12" readonly>${escapeHtml(output)}</textarea>
+
+            <div class="stats">
+                <div class="stat-box">Original Lines<br>${originalCount}</div>
+                <div class="stat-box">Final Lines<br>${lines.length}</div>
+                <div class="stat-box">Removed<br>${removedCount}</div>
+                <div class="stat-box">Words<br>${wordCount}</div>
+                <div class="stat-box">Characters<br>${output.length}</div>
+            </div>
+
+            <div class="generator-meta">
+                Order: ${sortOrder.value === "asc" ? "A → Z" : "Z → A"} |
+                Case-sensitive: ${caseSensitive.checked ? "Yes" : "No"} |
+                Numeric sort: ${numericSort.checked ? "Yes" : "No"} |
+                Remove duplicates: ${removeDuplicates.checked ? "Yes" : "No"} |
+                Trim spaces: ${trimSpaces.checked ? "Yes" : "No"} |
+                Ignore empty lines: ${ignoreEmptyLines.checked ? "Yes" : "No"}
+            </div>
+        </div>
+    `;
+
+    resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+async function copyOutput() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No sorted text to copy.");
+        return;
+    }
+
+    try {
+        await navigator.clipboard.writeText(output.value);
+        alert("Copied!");
+    } catch (error) {
+        output.select();
+        document.execCommand("copy");
+        alert("Copied!");
+    }
+}
+
+function clearText() {
+    inputText.value = "";
+    caseSensitive.checked = false;
+    numericSort.checked = false;
+    removeDuplicates.checked = false;
+    trimSpaces.checked = true;
+    ignoreEmptyLines.checked = true;
+    sortOrder.value = "asc";
+    resultBox.innerHTML = "";
+    inputText.focus();
+}
+
+function loadSample() {
+    inputText.value = `banana
+apple
+orange
+Apple
+10
+2
+banana
+
+ grape `;
+    caseSensitive.checked = false;
+    numericSort.checked = false;
+    removeDuplicates.checked = true;
+    trimSpaces.checked = true;
+    ignoreEmptyLines.checked = true;
+    sortOrder.value = "asc";
+    sortText();
+}
+
+function downloadOutput() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No sorted text to download.");
+        return;
+    }
+
+    const blob = new Blob([output.value], { type: "text/plain;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "sorted-text.txt";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+}
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
+<script>
+const tools = [
+    { name: "Remove Duplicate Lines", url: "removeduplicatelines.html", icon: "🧹", category: "text" },
+    { name: "Text Sorter", url: "textsorter.html", icon: "🔤", category: "text" },
+    { name: "Remove Line Breaks", url: "removelinebreaks.html", icon: "↩️", category: "text" },
+    { name: "Character Remover", url: "characterremover.html", icon: "✂️", category: "text" },
+    { name: "Add Line Numbers", url: "addlinenumbers.html", icon: "🔢", category: "text" },
+    { name: "Text to ASCII", url: "texttoascii.html", icon: "💻", category: "text" },
+    { name: "Case Alternator", url: "casealternator.html", icon: "🔠", category: "text" },
+    { name: "Text to Slug", url: "texttoslug.html", icon: "🔗", category: "text" },
+    { name: "Loremipsum Generator", url: "loremipsumgenerator.html", icon: "📝", category: "text" },
+    { name: "Random Text Generator", url: "randomtextgenerator.html", icon: "🎲", category: "text" },
+    { name: "Text Converter", url: "textconverter.html", icon: "🔄", category: "text" },
+    { name: "Text Reverser", url: "textreverser.html", icon: "↔️", category: "text" },
+    { name: "Text Repeater", url: "textrepeater.html", icon: "🔁", category: "text" },
+    { name: "Word Counter", url: "wordcounter.html", icon: "📏", category: "text" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

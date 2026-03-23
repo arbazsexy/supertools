@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Add Line Numbers Online - Number Each Line Instantly | SuperTools</title>
+    <meta name="description" content="Add line numbers to text instantly online. Number each line for code, notes, lists, scripts, and formatted text with this free Add Line Numbers tool by SuperTools.">
+    <meta name="keywords" content="add line numbers, line number generator, number each line, add numbering to text, text line numbering, code line numbers">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/addlinenumbers.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Add Line Numbers Online - SuperTools">
+    <meta property="og:description" content="Add numbers to each line of your text instantly for code, lists, notes, and more.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/addlinenumbers.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Add Line Numbers Online - SuperTools">
+    <meta name="twitter:description" content="Add numbers to each line of your text instantly for code, lists, notes, and more.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Add Line Numbers",
+      "alternateName": "Line Number Generator",
+      "url": "https://supertools1.site/addlinenumbers.html",
+      "description": "Free online Add Line Numbers tool to number each line of text instantly for code, notes, scripts, and lists.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Add line numbers to text",
+        "Choose custom starting number",
+        "Use different numbering styles",
+        "Number empty lines",
+        "Use leading zeros",
+        "Copy numbered text instantly",
+        "Free and browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does this tool number empty lines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if the option to number empty lines is enabled, blank lines will also be counted and numbered."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I copy the numbered output?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can copy the numbered result instantly using the copy button."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I start numbering from a custom number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can choose any positive starting number such as 1, 10, or 100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add leading zeros to line numbers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can enable leading zeros to format numbers like 01, 02, 03, and so on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this Add Line Numbers tool free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this Add Line Numbers tool is completely free to use online."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Add Line Numbers</h1>
+    <p>Add numbering to each line of your text instantly for code, notes, scripts, and lists.</p>
+
+    <label for="inputText">Enter your text</label>
+    <textarea id="inputText" rows="8" aria-label="Enter text to add line numbers" placeholder="Line one&#10;Line two&#10;Line three"></textarea>
+
+    <label for="startNumber">Start numbering from</label>
+    <input type="number" id="startNumber" min="1" step="1" value="1" placeholder="Enter starting number">
+
+    <label for="numberStyle">Choose numbering style</label>
+    <select id="numberStyle" aria-label="Choose numbering style">
+        <option value="dot">1. Line text</option>
+        <option value="paren">1) Line text</option>
+        <option value="dash">1 - Line text</option>
+        <option value="colon">1: Line text</option>
+    </select>
+
+    <label>
+        <input type="checkbox" id="leadingZeros">
+        Use leading zeros
+    </label>
+
+    <label>
+        <input type="checkbox" id="numberEmptyLines" checked>
+        Number empty lines too
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="addLineNumbers()">
+            <i class="fas fa-list-ol"></i> Add Line Numbers
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Add Line Numbers Tool</h2>
+
+    <p>
+        The <strong>Add Line Numbers</strong> tool helps you automatically place numbers before each line of text. It is useful for
+        formatting code, reviewing drafts, organizing notes, preparing scripts, and making long text easier to reference.
+    </p>
+
+    <p>
+        To use this tool, paste or type your text into the input box. Then choose your preferred numbering style, set the starting number,
+        and decide whether empty lines should also be numbered. Once you click the <strong>Add Line Numbers</strong> button,
+        the tool instantly generates a numbered version of your text in a clean output box.
+    </p>
+
+    <p>
+        This tool is especially helpful for developers, students, teachers, editors, and anyone who wants cleaner structured text.
+        Since it works directly in your browser, it is fast, simple, and private.
+    </p>
+
+    <h3>What Does Add Line Numbers Mean?</h3>
+    <p>
+        Adding line numbers means placing a number before each line in a block of text. This makes it easier to reference
+        specific lines when reviewing code, editing documents, or discussing written content.
+    </p>
+
+    <p class="formula-box">
+        Example: Line A → 1. Line A
+    </p>
+
+    <p>
+        If your text has multiple lines, each line gets its own number in sequence based on the format you choose.
+    </p>
+
+    <h3>Why Use This Add Line Numbers Tool?</h3>
+    <ul>
+        <li><strong>Better Readability:</strong> Makes long text easier to reference line by line.</li>
+        <li><strong>Useful for Code:</strong> Great for debugging, reviewing, and sharing code snippets.</li>
+        <li><strong>Flexible Formatting:</strong> Choose different numbering styles and custom starting numbers.</li>
+        <li><strong>Preserves Structure:</strong> Can number empty lines too when needed.</li>
+        <li><strong>Quick Copy Output:</strong> Copy the numbered text instantly.</li>
+        <li><strong>Privacy Friendly:</strong> Everything works in your browser.</li>
+        <li><strong>Free to Use:</strong> No sign-up or download required.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is ideal for <strong>developers</strong>, <strong>writers</strong>, <strong>students</strong>, <strong>teachers</strong>,
+        <strong>editors</strong>, and <strong>researchers</strong>. Whether you are formatting code, preparing notes,
+        or reviewing structured content, adding line numbers makes text easier to understand and discuss.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: Does this tool number empty lines?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. If the <strong>Number empty lines too</strong> option is enabled, blank lines will also be counted and numbered.
+            This helps preserve the original line structure of your text.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I copy the numbered output?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. After generating the numbered text, click the <strong>Copy</strong> button to copy the result instantly.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I start numbering from a different number?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. You can start numbering from any positive number such as 1, 10, 50, or 100.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I use leading zeros like 01, 02, 03?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. Enable the <strong>Use leading zeros</strong> option to format line numbers with zero padding.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This Add Line Numbers tool is completely free to use online.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+const inputText = document.getElementById("inputText");
+const startNumberInput = document.getElementById("startNumber");
+const numberStyleSelect = document.getElementById("numberStyle");
+const leadingZerosCheckbox = document.getElementById("leadingZeros");
+const numberEmptyLinesCheckbox = document.getElementById("numberEmptyLines");
+const resultBox = document.getElementById("result");
+
+function getSeparator(style) {
+    switch (style) {
+        case "paren":
+            return ")";
+        case "dash":
+            return " -";
+        case "colon":
+            return ":";
+        default:
+            return ".";
+    }
+}
+
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function addLineNumbers() {
+    const text = inputText.value.replace(/\r\n/g, "\n");
+    const startNumber = Math.max(1, parseInt(startNumberInput.value, 10) || 1);
+    const style = numberStyleSelect.value;
+    const useLeadingZeros = leadingZerosCheckbox.checked;
+    const numberEmptyLines = numberEmptyLinesCheckbox.checked;
+
+    if (!text.trim()) {
+        resultBox.innerHTML = `
+            <div class="average-result result-pop">
+                <strong>Please enter some text.</strong>
+            </div>
+        `;
+        return;
+    }
+
+    const lines = text.split("\n");
+    const numberableLineCount = numberEmptyLines
+        ? lines.length
+        : lines.filter(line => line.trim() !== "").length;
+
+    const numberWidth = String(startNumber + Math.max(numberableLineCount - 1, 0)).length;
+    let currentNumber = startNumber;
+
+    const numberedLines = lines.map(line => {
+        const shouldNumber = numberEmptyLines || line.trim() !== "";
+
+        if (!shouldNumber) {
+            return line;
+        }
+
+        let lineNumber = String(currentNumber);
+        if (useLeadingZeros) {
+            lineNumber = lineNumber.padStart(numberWidth, "0");
+        }
+
+        currentNumber++;
+
+        const separator = getSeparator(style);
+        return `${lineNumber}${separator} ${line}`;
+    });
+
+    const outputText = numberedLines.join("\n");
+
+    resultBox.innerHTML = `
+        <div class="modern-card result-pop">
+            <h3>Numbered Text</h3>
+            <textarea id="outputText" class="code-output result-textarea" rows="12" readonly>${escapeHtml(outputText)}</textarea>
+            <div class="generator-meta">
+                Total lines: ${lines.length} | Numbered lines: ${numberedLines.filter((line, index) => numberEmptyLines || lines[index].trim() !== "").length}
+            </div>
+        </div>
+    `;
+
+    resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function clearFields() {
+    inputText.value = "";
+    startNumberInput.value = "1";
+    numberStyleSelect.value = "dot";
+    leadingZerosCheckbox.checked = false;
+    numberEmptyLinesCheckbox.checked = true;
+    resultBox.innerHTML = "";
+    inputText.focus();
+}
+
+function loadSample() {
+    inputText.value = `Line one
+Line two
+
+Line four`;
+    startNumberInput.value = "1";
+    numberStyleSelect.value = "dot";
+    leadingZerosCheckbox.checked = false;
+    numberEmptyLinesCheckbox.checked = true;
+    addLineNumbers();
+}
+
+async function copyResult() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("No result to copy.");
+        return;
+    }
+
+    try {
+        await navigator.clipboard.writeText(output.value);
+        alert("Result copied to clipboard!");
+    } catch (error) {
+        output.select();
+        document.execCommand("copy");
+        alert("Result copied to clipboard!");
+    }
+}
+
+inputText.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && e.key === "Enter") {
+        addLineNumbers();
+    }
+});
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
+<script>
+const tools = [
+    { name: "Remove Duplicate Lines", url: "removeduplicatelines.html", icon: "🧹", category: "text" },
+    { name: "Text Sorter", url: "textsorter.html", icon: "🔤", category: "text" },
+    { name: "Remove Line Breaks", url: "removelinebreaks.html", icon: "↩️", category: "text" },
+    { name: "Character Remover", url: "characterremover.html", icon: "✂️", category: "text" },
+    { name: "Add Line Numbers", url: "addlinenumbers.html", icon: "🔢", category: "text" },
+    { name: "Text to ASCII", url: "texttoascii.html", icon: "💻", category: "text" },
+    { name: "Case Alternator", url: "casealternator.html", icon: "🔠", category: "text" },
+    { name: "Text to Slug", url: "texttoslug.html", icon: "🔗", category: "text" },
+    { name: "Loremipsum Generator", url: "loremipsumgenerator.html", icon: "📝", category: "text" },
+    { name: "Random Text Generator", url: "randomtextgenerator.html", icon: "🎲", category: "text" },
+    { name: "Text Converter", url: "textconverter.html", icon: "🔄", category: "text" },
+    { name: "Text Reverser", url: "textreverser.html", icon: "↔️", category: "text" },
+    { name: "Text Repeater", url: "textrepeater.html", icon: "🔁", category: "text" },
+    { name: "Word Counter", url: "wordcounter.html", icon: "📏", category: "text" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

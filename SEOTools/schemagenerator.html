@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Schema Generator Online - JSON-LD Schema Generator for SEO</title>
+    <meta name="description" content="Free online schema generator to create JSON-LD structured data for SEO. Generate Website, Article, Organization, FAQ, Product, and Local Business schema markup instantly with SuperTools.">
+    <meta name="keywords" content="schema generator, json-ld generator, structured data generator, seo schema markup, article schema, faq schema, organization schema, product schema">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/schemagenerator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Schema Generator - SuperTools">
+    <meta property="og:description" content="Generate JSON-LD schema markup instantly for SEO and rich results.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/schemagenerator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Schema Generator - SuperTools">
+    <meta name="twitter:description" content="Generate JSON-LD schema markup instantly for SEO and rich results.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Schema Generator",
+      "alternateName": "JSON-LD Schema Generator",
+      "url": "https://supertools1.site/schemagenerator.html",
+      "description": "Free online schema generator to create JSON-LD structured data for SEO. Generate Website, Article, Organization, FAQ, Product, and Local Business schema markup instantly.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Generate Website schema",
+        "Generate Article schema",
+        "Generate Organization schema",
+        "Generate FAQPage schema",
+        "Generate Product schema",
+        "Generate LocalBusiness schema",
+        "Generate JSON-LD markup instantly",
+        "Copy schema output easily",
+        "Free browser-based SEO tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is schema markup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Schema markup is structured data that helps search engines understand your content better and may improve eligibility for rich results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where do I add JSON-LD schema?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can place JSON-LD schema inside a script tag with type application/ld+json in the head or body of your HTML page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which schema types does this tool support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool supports Website, Article, Organization, FAQ Page, Product, and Local Business schema types."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can schema markup improve SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Schema markup can help search engines understand your content more clearly and may improve eligibility for rich results, but it does not guarantee rankings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this schema generator free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this schema generator is completely free to use."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Schema Generator</h1>
+    <p>Create JSON-LD structured data for SEO. Generate schema markup for websites, articles, organizations, FAQ pages, products, and local businesses instantly.</p>
+
+    <label for="schemaType">Schema Type</label>
+    <select id="schemaType" onchange="updateSchemaFields()">
+        <option value="WebSite">Website</option>
+        <option value="Article">Article</option>
+        <option value="Organization">Organization</option>
+        <option value="FAQPage">FAQ Page</option>
+        <option value="Product">Product</option>
+        <option value="LocalBusiness">Local Business</option>
+    </select>
+
+    <label for="mainTitle">Title / Name</label>
+    <input type="text" id="mainTitle" placeholder="Enter title or name">
+
+    <label for="mainDescription">Description</label>
+    <textarea id="mainDescription" rows="4" placeholder="Enter description"></textarea>
+
+    <label for="mainUrl">URL</label>
+    <input type="text" id="mainUrl" placeholder="https://example.com">
+
+    <div id="dynamicFields"></div>
+
+    <div class="button-group">
+        <button type="button" onclick="generateSchema()">
+            <i class="fas fa-code"></i> Generate Schema
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearFields()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Schema Generator</h2>
+
+    <p>
+        The <strong>Schema Generator</strong> helps you create JSON-LD structured data markup for your website.
+        Structured data gives search engines more context about your pages and can help improve eligibility for rich results such as enhanced listings, FAQs, product details, and other search features.
+    </p>
+
+    <p>
+        To use this tool, first choose a <strong>schema type</strong> such as Website, Article, Organization, FAQ Page, Product, or Local Business.
+        Then fill in the basic details like title, description, and URL. Depending on the selected schema type, the tool will also show extra fields for additional properties.
+    </p>
+
+    <p>
+        Once your information is ready, click <strong>Generate Schema</strong>. The tool will create valid JSON-LD markup inside a script block
+        that you can copy and paste into your HTML. This makes it easier to add structured data without manually writing the code yourself.
+    </p>
+
+    <h3>What is JSON-LD Schema?</h3>
+    <p>
+        JSON-LD is a structured data format recommended for schema markup because it is easy to read, easy to maintain, and simple to place inside a webpage.
+        It helps search engines better understand the meaning of your page content.
+    </p>
+
+    <p class="formula-box">
+        Add the generated code inside a &lt;script type="application/ld+json"&gt; tag on your page.
+    </p>
+
+    <h3>Why Use This Schema Generator?</h3>
+    <ul>
+        <li><strong>SEO Friendly:</strong> Help search engines understand your content more clearly.</li>
+        <li><strong>Multiple Schema Types:</strong> Generate Website, Article, Organization, FAQ, Product, and Local Business schema.</li>
+        <li><strong>Rich Result Ready:</strong> Create structured data for enhanced search features.</li>
+        <li><strong>Easy Copy:</strong> Get ready-to-use JSON-LD code instantly.</li>
+        <li><strong>No Coding Stress:</strong> Fill in fields instead of manually writing structured data.</li>
+        <li><strong>Free Tool:</strong> Use it anytime without signup.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>bloggers</strong>, <strong>developers</strong>, <strong>SEO users</strong>,
+        <strong>marketers</strong>, <strong>business owners</strong>, and anyone who wants to add structured data markup to their pages quickly and correctly.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is schema markup?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Schema markup is structured data that helps search engines understand your content better and may improve eligibility for rich results.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Where do I add it?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            You can add the generated JSON-LD inside a <strong>&lt;script type="application/ld+json"&gt;</strong> tag in the head or body of your HTML page.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Which schema types can I generate?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This tool supports Website, Article, Organization, FAQ Page, Product, and Local Business schema types.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Does schema markup guarantee rankings?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No, schema markup does not guarantee rankings, but it can help search engines understand your content and may improve eligibility for rich results.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this schema generator is completely free to use.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function updateSchemaFields() {
+    const type = document.getElementById("schemaType").value;
+    const dynamicFields = document.getElementById("dynamicFields");
+    let html = "";
+
+    if (type === "WebSite") {
+        html = `
+            <label for="websiteSearchUrl">Search URL (optional)</label>
+            <input type="text" id="websiteSearchUrl" placeholder="https://example.com/search?q={search_term_string}">
+        `;
+    } else if (type === "Article") {
+        html = `
+            <label for="articleAuthor">Author Name</label>
+            <input type="text" id="articleAuthor" placeholder="Author name">
+
+            <label for="articleImage">Image URL</label>
+            <input type="text" id="articleImage" placeholder="https://example.com/image.jpg">
+
+            <label for="articleDatePublished">Date Published</label>
+            <input type="text" id="articleDatePublished" placeholder="2026-03-22">
+
+            <label for="articleDateModified">Date Modified</label>
+            <input type="text" id="articleDateModified" placeholder="2026-03-22">
+        `;
+    } else if (type === "Organization") {
+        html = `
+            <label for="orgLogo">Logo URL</label>
+            <input type="text" id="orgLogo" placeholder="https://example.com/logo.png">
+
+            <label for="orgSameAs">Social Profile URLs (comma separated)</label>
+            <input type="text" id="orgSameAs" placeholder="https://facebook.com/brand, https://x.com/brand">
+        `;
+    } else if (type === "FAQPage") {
+        html = `
+            <label for="faqQ1">Question 1</label>
+            <input type="text" id="faqQ1" placeholder="Enter question 1">
+
+            <label for="faqA1">Answer 1</label>
+            <textarea id="faqA1" rows="3" placeholder="Enter answer 1"></textarea>
+
+            <label for="faqQ2">Question 2</label>
+            <input type="text" id="faqQ2" placeholder="Enter question 2">
+
+            <label for="faqA2">Answer 2</label>
+            <textarea id="faqA2" rows="3" placeholder="Enter answer 2"></textarea>
+
+            <label for="faqQ3">Question 3 (optional)</label>
+            <input type="text" id="faqQ3" placeholder="Enter question 3">
+
+            <label for="faqA3">Answer 3 (optional)</label>
+            <textarea id="faqA3" rows="3" placeholder="Enter answer 3"></textarea>
+        `;
+    } else if (type === "Product") {
+        html = `
+            <label for="productImage">Image URL</label>
+            <input type="text" id="productImage" placeholder="https://example.com/product.jpg">
+
+            <label for="productBrand">Brand</label>
+            <input type="text" id="productBrand" placeholder="Brand name">
+
+            <label for="productPrice">Price</label>
+            <input type="text" id="productPrice" placeholder="99.99">
+
+            <label for="productCurrency">Currency</label>
+            <input type="text" id="productCurrency" placeholder="USD">
+
+            <label for="productAvailability">Availability</label>
+            <select id="productAvailability">
+                <option value="https://schema.org/InStock">InStock</option>
+                <option value="https://schema.org/OutOfStock">OutOfStock</option>
+                <option value="https://schema.org/PreOrder">PreOrder</option>
+            </select>
+        `;
+    } else if (type === "LocalBusiness") {
+        html = `
+            <label for="businessImage">Image URL</label>
+            <input type="text" id="businessImage" placeholder="https://example.com/business.jpg">
+
+            <label for="businessPhone">Phone</label>
+            <input type="text" id="businessPhone" placeholder="+1 123 456 7890">
+
+            <label for="businessAddress">Address</label>
+            <input type="text" id="businessAddress" placeholder="123 Main Street, City, Country">
+
+            <label for="businessPriceRange">Price Range</label>
+            <input type="text" id="businessPriceRange" placeholder="$$">
+        `;
+    }
+
+    dynamicFields.innerHTML = html;
+}
+
+function generateSchema() {
+    const type = document.getElementById("schemaType").value;
+    const title = document.getElementById("mainTitle").value.trim();
+    const desc = document.getElementById("mainDescription").value.trim();
+    const url = document.getElementById("mainUrl").value.trim();
+    const result = document.getElementById("result");
+
+    if (!title && !desc && !url) {
+        result.innerHTML = `<div class="average-result result-pop"><strong>Please fill in at least the main fields first.</strong></div>`;
+        return;
+    }
+
+    let schema = {
+        "@context": "https://schema.org",
+        "@type": type
+    };
+
+    if (type === "WebSite") {
+        schema.name = title;
+        if (desc) schema.description = desc;
+        if (url) schema.url = url;
+
+        const searchUrl = document.getElementById("websiteSearchUrl")?.value.trim();
+        if (searchUrl) {
+            schema.potentialAction = {
+                "@type": "SearchAction",
+                "target": searchUrl,
+                "query-input": "required name=search_term_string"
+            };
+        }
+    } else if (type === "Article") {
+        schema.headline = title;
+        if (desc) schema.description = desc;
+        if (url) schema.url = url;
+
+        const author = document.getElementById("articleAuthor")?.value.trim();
+        const image = document.getElementById("articleImage")?.value.trim();
+        const datePublished = document.getElementById("articleDatePublished")?.value.trim();
+        const dateModified = document.getElementById("articleDateModified")?.value.trim();
+
+        if (author) {
+            schema.author = {
+                "@type": "Person",
+                "name": author
+            };
+        }
+        if (image) schema.image = image;
+        if (datePublished) schema.datePublished = datePublished;
+        if (dateModified) schema.dateModified = dateModified;
+    } else if (type === "Organization") {
+        schema.name = title;
+        if (desc) schema.description = desc;
+        if (url) schema.url = url;
+
+        const logo = document.getElementById("orgLogo")?.value.trim();
+        const sameAs = document.getElementById("orgSameAs")?.value.trim();
+
+        if (logo) schema.logo = logo;
+        if (sameAs) {
+            schema.sameAs = sameAs.split(",").map(item => item.trim()).filter(Boolean);
+        }
+    } else if (type === "FAQPage") {
+        const faqItems = [];
+        const entries = [
+            [document.getElementById("faqQ1")?.value.trim(), document.getElementById("faqA1")?.value.trim()],
+            [document.getElementById("faqQ2")?.value.trim(), document.getElementById("faqA2")?.value.trim()],
+            [document.getElementById("faqQ3")?.value.trim(), document.getElementById("faqA3")?.value.trim()]
+        ];
+
+        entries.forEach(([q, a]) => {
+            if (q && a) {
+                faqItems.push({
+                    "@type": "Question",
+                    "name": q,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": a
+                    }
+                });
+            }
+        });
+
+        schema.mainEntity = faqItems;
+    } else if (type === "Product") {
+        schema.name = title;
+        if (desc) schema.description = desc;
+        if (url) schema.url = url;
+
+        const image = document.getElementById("productImage")?.value.trim();
+        const brand = document.getElementById("productBrand")?.value.trim();
+        const price = document.getElementById("productPrice")?.value.trim();
+        const currency = document.getElementById("productCurrency")?.value.trim();
+        const availability = document.getElementById("productAvailability")?.value;
+
+        if (image) schema.image = image;
+        if (brand) {
+            schema.brand = {
+                "@type": "Brand",
+                "name": brand
+            };
+        }
+        if (price || currency || availability) {
+            schema.offers = {
+                "@type": "Offer"
+            };
+            if (price) schema.offers.price = price;
+            if (currency) schema.offers.priceCurrency = currency;
+            if (availability) schema.offers.availability = availability;
+            if (url) schema.offers.url = url;
+        }
+    } else if (type === "LocalBusiness") {
+        schema.name = title;
+        if (desc) schema.description = desc;
+        if (url) schema.url = url;
+
+        const image = document.getElementById("businessImage")?.value.trim();
+        const phone = document.getElementById("businessPhone")?.value.trim();
+        const address = document.getElementById("businessAddress")?.value.trim();
+        const priceRange = document.getElementById("businessPriceRange")?.value.trim();
+
+        if (image) schema.image = image;
+        if (phone) schema.telephone = phone;
+        if (priceRange) schema.priceRange = priceRange;
+        if (address) {
+            schema.address = {
+                "@type": "PostalAddress",
+                "streetAddress": address
+            };
+        }
+    }
+
+    const output = `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n<\/script>`;
+    const propertyCount = Object.keys(schema).length;
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Schema Type<br>${type}</div>
+                <div class="stat-box">Properties<br>${propertyCount}</div>
+                <div class="stat-box">Has URL<br>${url ? "Yes" : "No"}</div>
+                <div class="stat-box">Has Description<br>${desc ? "Yes" : "No"}</div>
+            </div>
+
+            <hr>
+
+            <div><strong>Generated JSON-LD Schema</strong></div>
+            <textarea id="schemaOutput" class="code-output result-textarea" rows="18" readonly></textarea>
+
+            <div class="button-group">
+                <button type="button" class="action-btn copy-btn" onclick="copySchemaOutput()">
+                    <i class="fas fa-copy"></i> Copy Schema
+                </button>
+            </div>
+        </div>
+    `;
+
+    document.getElementById("schemaOutput").value = output;
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function clearFields() {
+    document.getElementById("schemaType").value = "WebSite";
+    document.getElementById("mainTitle").value = "";
+    document.getElementById("mainDescription").value = "";
+    document.getElementById("mainUrl").value = "";
+    document.getElementById("result").innerHTML = "";
+    updateSchemaFields();
+}
+
+function loadSample() {
+    document.getElementById("schemaType").value = "Article";
+    updateSchemaFields();
+
+    document.getElementById("mainTitle").value = "How to Create SEO-Friendly Content";
+    document.getElementById("mainDescription").value = "Learn how to create SEO-friendly content that helps users and search engines understand your pages better.";
+    document.getElementById("mainUrl").value = "https://supertools1.site/blog/seo-friendly-content";
+    document.getElementById("articleAuthor").value = "SuperTools";
+    document.getElementById("articleImage").value = "https://supertools1.site/logo.png";
+    document.getElementById("articleDatePublished").value = "2026-03-22";
+    document.getElementById("articleDateModified").value = "2026-03-22";
+
+    generateSchema();
+}
+
+function copySchemaOutput() {
+    const output = document.getElementById("schemaOutput");
+    if (!output || !output.value.trim()) {
+        alert("No schema to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(output.value)
+        .then(() => alert("Schema copied to clipboard!"))
+        .catch(() => alert("Failed to copy schema."));
+}
+
+function copyResult() {
+    copySchemaOutput();
+}
+
+updateSchemaFields();
+</script>
+
+<script>
+const tools = [
+    { name: "Meta Tag Generator", url: "metataggenerator.html", icon: "🏷️", category: "seo" },
+    { name: "Open Graph Generator", url: "opengraphgenerator.html", icon: "🔗", category: "seo" },
+    { name: "Robots.txt Generator", url: "robotstxtgenerator.html", icon: "🤖", category: "seo" },
+    { name: "Sitemap Generator", url: "sitemapgenerator.html", icon: "🗺️", category: "seo" },
+    { name: "URL Slug Generator", url: "urlsluggenerator.html", icon: "✍️", category: "seo" },
+    { name: "Schema Generator", url: "schemagenerator.html", icon: "📄", category: "seo" },
+    { name: "Keyword Density Checker", url: "keyworddensitychecker.html", icon: "📊", category: "seo" },
+    { name: "Hreflang Generator", url: "hreflanggenerator.html", icon: "🌍", category: "seo" },
+    { name: "HTML TO Text", url: "htmltotext.html", icon: "🧾", category: "seo" },
+    { name: "TEXT TO HTML", url: "texttohtml.html", icon: "💻", category: "seo" },
+    { name: "Word Frequency", url: "wordfrequency.html", icon: "🔤", category: "seo" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const relatedToolsContainer = document.getElementById("relatedToolsContainer");
+
+if (relatedToolsContainer) {
+    relatedToolsContainer.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

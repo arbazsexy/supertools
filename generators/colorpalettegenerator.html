@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Color Palette Generator Online Free - Create Palettes, Gradients & Extract Colors</title>
+
+<meta name="description" content="Free online Color Palette Generator to create random color palettes, extract colors from images, check WCAG contrast, build gradients, and export CSS or JSON instantly with SuperTools.">
+
+<meta name="keywords" content="color palette generator, color palette maker, gradient generator, color extractor, hex color generator, WCAG contrast checker, palette generator online">
+
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://supertools1.site/colorpalettegenerator.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="Color Palette Generator Online Free - SuperTools">
+<meta property="og:description" content="Generate random color palettes, gradients, extract colors from images, and check contrast instantly.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/colorpalettegenerator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Color Palette Generator Online Free - SuperTools">
+<meta name="twitter:description" content="Create color palettes instantly for web design, branding, UI design, and creative projects.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<link rel="stylesheet" href="../style.css">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Improved SEO Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Color Palette Generator",
+  "url": "https://supertools1.site/colorpalettegenerator.html",
+  "description": "Free online color palette generator that allows users to generate random palettes, extract colors from images, check WCAG contrast accessibility, create gradients, and export palettes as CSS or JSON.",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Generate random color palettes",
+    "Lock colors while generating",
+    "Copy HEX and RGB values",
+    "Export palette as JSON",
+    "Export palette as CSS variables",
+    "Create gradient preview",
+    "Extract colors from images",
+    "Check WCAG contrast accessibility",
+    "Save palette history in browser",
+    "Free and browser-based tool"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a color palette generator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A color palette generator is an online tool that creates matching color combinations for design, branding, websites, apps, and creative projects. It helps users discover and export color schemes quickly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I extract colors from an image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this color palette generator can extract colors from an uploaded image and turn them into a palette instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I copy HEX and RGB values?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can copy HEX and RGB values for each generated color with one click."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this tool include a contrast checker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the tool includes a WCAG contrast checker that helps you test accessibility between two selected colors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this color palette generator free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this color palette generator is completely free to use and works directly in your browser."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Color Palette Generator</h1>
+    <p>Generate color palettes, gradients, extract colors from images, and check contrast instantly.</p>
+
+    <div class="button-group">
+        <button type="button" onclick="generatePalette()">
+            <i class="fas fa-palette"></i> Generate Palette
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearPaletteTool()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSamplePalette()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyAllHex()">
+            <i class="fas fa-copy"></i> Copy All
+        </button>
+    </div>
+
+    <div id="result"></div>
+
+    <label for="imageUpload">Extract colors from image</label>
+    <input type="file" id="imageUpload" accept="image/*" aria-label="Upload image to extract colors">
+
+    <label for="color1">Contrast checker - first color</label>
+    <input type="color" id="color1" value="#000000" aria-label="Select first color">
+
+    <label for="color2">Contrast checker - second color</label>
+    <input type="color" id="color2" value="#ffffff" aria-label="Select second color">
+
+    <div class="button-group">
+        <button type="button" onclick="checkContrast()">
+            <i class="fas fa-circle-half-stroke"></i> Check Contrast
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="exportPaletteJSON()">
+            <i class="fas fa-file-code"></i> Export JSON
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="exportPaletteCSS()">
+            <i class="fas fa-code"></i> Export CSS
+        </button>
+    </div>
+
+    <div id="contrastResult"></div>
+
+    <label for="cssOutput">Palette export output</label>
+    <textarea id="cssOutput" rows="7" aria-label="Palette export output" placeholder="Generated CSS or JSON will appear here..."></textarea>
+
+    <div id="historyResult"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Color Palette Generator</h2>
+
+    <p>
+        The <strong>Color Palette Generator</strong> is a free online design tool that helps you create matching color schemes for websites,
+        apps, branding, social media graphics, presentations, and creative projects. You can generate random palettes instantly, lock your
+        favorite colors, copy HEX and RGB values, create gradients, extract colors from images, and even test accessibility contrast.
+    </p>
+
+    <p>
+        To begin, click the <strong>Generate Palette</strong> button. The tool will create a fresh set of five colors. If you like a color and want
+        to keep it while changing the others, use the <strong>Lock</strong> button on that color card. You can copy each color in HEX or RGB format,
+        or copy the entire palette at once.
+    </p>
+
+    <p>
+        You can also upload an image to extract a quick color palette from it. This is useful for finding colors from logos, photos, illustrations,
+        mood boards, or inspiration images. The tool also includes a <strong>contrast checker</strong> to test two colors and see whether the contrast
+        is good enough for readability and accessibility.
+    </p>
+
+    <h3>Why Use This Color Palette Generator?</h3>
+    <ul>
+        <li><strong>Random Palette Generator:</strong> Create fresh color combinations instantly.</li>
+        <li><strong>Lock Favorite Colors:</strong> Keep selected colors while generating new ones.</li>
+        <li><strong>Copy HEX and RGB:</strong> Quickly copy color codes for design and development.</li>
+        <li><strong>Gradient Preview:</strong> Instantly turn your palette into a visual gradient.</li>
+        <li><strong>Image Color Extraction:</strong> Upload an image and pull colors from it.</li>
+        <li><strong>WCAG Contrast Checker:</strong> Test accessibility between foreground and background colors.</li>
+        <li><strong>Export Options:</strong> Export your palette as JSON or CSS variables.</li>
+        <li><strong>Saved History:</strong> View recently generated palettes saved in your browser.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>web designers</strong>, <strong>UI designers</strong>, <strong>graphic designers</strong>,
+        <strong>developers</strong>, <strong>students</strong>, <strong>brand creators</strong>, and anyone working with color.
+        It is especially helpful for building consistent design systems, choosing website colors, branding projects, and checking visual accessibility.
+    </p>
+
+    <h3>Example Uses</h3>
+    <p class="formula-box">Brand palette creation • Website UI color selection • Social media design • Gradient ideas • Accessibility checks</p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is a color palette generator?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            A <strong>color palette generator</strong> is an online tool that creates matching color combinations for websites, apps, branding,
+            and creative work. It helps you discover visually balanced colors more quickly than choosing each color manually.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I extract colors from an image?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can upload an image and this tool will extract a palette from it. This is useful for creating palettes inspired by photos,
+            logos, artwork, screenshots, and mood boards.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: What formats can I export?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            You can export your generated palette as <strong>JSON</strong> or as <strong>CSS variables</strong>. This makes it easy to use the
+            colors in web projects, design systems, or development workflows.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: What does the contrast checker do?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            The contrast checker measures the visual contrast between two colors and shows the ratio. It also helps indicate whether the color
+            pair is better suited for normal text, large text, or if it may fail common accessibility guidelines.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this color palette generator free and safe to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tool is <strong>completely free</strong> and works directly in your browser. Your palette generation, exports, and image
+            processing happen on your device while using the tool.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+let colors = [];
+let locked = [false, false, false, false, false];
+
+function randomColor() {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function hexToRGB(hex) {
+    const r = parseInt(hex.substring(1, 3), 16);
+    const g = parseInt(hex.substring(3, 5), 16);
+    const b = parseInt(hex.substring(5, 7), 16);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+function copyText(text, successMessage = "Copied!") {
+    navigator.clipboard.writeText(text)
+        .then(() => alert(successMessage))
+        .catch(() => alert("Failed to copy."));
+}
+
+function getTextColor(hex) {
+    const r = parseInt(hex.substring(1, 3), 16);
+    const g = parseInt(hex.substring(3, 5), 16);
+    const b = parseInt(hex.substring(5, 7), 16);
+    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+    return brightness > 155 ? "#111" : "#fff";
+}
+
+function toggleLock(index) {
+    locked[index] = !locked[index];
+    renderPalette();
+}
+
+function generatePalette() {
+    for (let i = 0; i < 5; i++) {
+        if (!locked[i]) {
+            colors[i] = randomColor();
+        }
+    }
+    saveHistory();
+    renderPalette();
+}
+
+function renderPalette() {
+    const result = document.getElementById("result");
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="status-message"><strong>Generated Palette:</strong></div>
+
+            <div class="palette-grid">
+                ${colors.map((color, index) => `
+                    <div class="palette-card ${locked[index] ? "palette-locked" : ""}" style="background:${color}; color:${getTextColor(color)};">
+                        <div class="palette-swatch-info">
+                            <strong>Color ${index + 1}</strong>
+                            <div>${color}</div>
+                            <div>${hexToRGB(color)}</div>
+                        </div>
+                        <div class="palette-card-actions">
+                            <button type="button" class="action-btn copy-btn" onclick="copyText('${color}', 'HEX copied!')">HEX</button>
+                            <button type="button" class="action-btn secondary-btn" onclick="copyText('${hexToRGB(color)}', 'RGB copied!')">RGB</button>
+                            <button type="button" class="action-btn sample-btn" onclick="toggleLock(${index})">${locked[index] ? "Unlock" : "Lock"}</button>
+                        </div>
+                    </div>
+                `).join("")}
+            </div>
+
+            <div class="chart-card">
+                <h3>Gradient Preview</h3>
+                <div id="gradientPreview" class="gradient-preview-box"></div>
+                <div class="result-note">Tip: Press the spacebar to generate a new palette while keeping locked colors.</div>
+            </div>
+        </div>
+    `;
+
+    document.getElementById("gradientPreview").style.background = `linear-gradient(90deg, ${colors.join(", ")})`;
+    renderHistory();
+}
+
+function exportPaletteJSON() {
+    if (!colors.length) {
+        alert("Generate a palette first.");
+        return;
+    }
+
+    const jsonText = JSON.stringify(colors, null, 2);
+    document.getElementById("cssOutput").value = jsonText;
+
+    const blob = new Blob([jsonText], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "palette.json";
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+function exportPaletteCSS() {
+    if (!colors.length) {
+        alert("Generate a palette first.");
+        return;
+    }
+
+    let css = ":root {\n";
+    colors.forEach((color, index) => {
+        css += `  --color-${index + 1}: ${color};\n`;
+    });
+    css += "}";
+    document.getElementById("cssOutput").value = css;
+    copyText(css, "CSS palette copied!");
+}
+
+function copyAllHex() {
+    if (!colors.length) {
+        alert("Generate a palette first.");
+        return;
+    }
+    copyText(colors.join("\n"), "All HEX colors copied!");
+}
+
+document.addEventListener("keydown", function(e) {
+    if (e.code === "Space" && document.activeElement.tagName !== "TEXTAREA" && document.activeElement.tagName !== "INPUT" && document.activeElement.tagName !== "SELECT") {
+        e.preventDefault();
+        generatePalette();
+    }
+});
+
+document.getElementById("imageUpload").addEventListener("change", function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const img = new Image();
+    img.src = URL.createObjectURL(file);
+
+    img.onload = function() {
+        const canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0);
+
+        const data = ctx.getImageData(0, 0, img.width, img.height).data;
+        colors = [];
+        locked = [false, false, false, false, false];
+
+        for (let i = 0; i < 5; i++) {
+            const pixelIndex = Math.floor(Math.random() * (data.length / 4)) * 4;
+            const r = data[pixelIndex];
+            const g = data[pixelIndex + 1];
+            const b = data[pixelIndex + 2];
+            const hex = "#" + [r, g, b].map(v => v.toString(16).padStart(2, "0")).join("").toUpperCase();
+            colors.push(hex);
+        }
+
+        saveHistory();
+        renderPalette();
+        URL.revokeObjectURL(img.src);
+    };
+});
+
+function luminance(r, g, b) {
+    const a = [r, g, b].map(v => {
+        v /= 255;
+        return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
+}
+
+function checkContrast() {
+    const c1 = document.getElementById("color1").value;
+    const c2 = document.getElementById("color2").value;
+
+    const rgb1 = hexToRGB(c1).match(/\d+/g).map(Number);
+    const rgb2 = hexToRGB(c2).match(/\d+/g).map(Number);
+
+    const L1 = luminance(...rgb1);
+    const L2 = luminance(...rgb2);
+
+    const ratio = (Math.max(L1, L2) + 0.05) / (Math.min(L1, L2) + 0.05);
+
+    let verdict = "Fails normal text";
+    if (ratio >= 7) {
+        verdict = "Passes AAA for normal text";
+    } else if (ratio >= 4.5) {
+        verdict = "Passes AA for normal text";
+    } else if (ratio >= 3) {
+        verdict = "Passes AA for large text only";
+    }
+
+    document.getElementById("contrastResult").innerHTML = `
+        <div class="average-result result-pop">
+            <div><strong>Contrast Ratio:</strong> ${ratio.toFixed(2)}:1</div>
+            <div class="comparison-note"><strong>Accessibility Result:</strong> ${verdict}</div>
+        </div>
+    `;
+}
+
+function saveHistory() {
+    if (!colors.length) return;
+    let history = JSON.parse(localStorage.getItem("paletteHistory") || "[]");
+    history.unshift([...colors]);
+    history = history.slice(0, 5);
+    localStorage.setItem("paletteHistory", JSON.stringify(history));
+}
+
+function renderHistory() {
+    const history = JSON.parse(localStorage.getItem("paletteHistory") || "[]");
+    const historyResult = document.getElementById("historyResult");
+
+    if (!history.length) {
+        historyResult.innerHTML = "";
+        return;
+    }
+
+    historyResult.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="status-message"><strong>Palette History:</strong></div>
+            <div class="palette-history-list">
+                ${history.map((palette, index) => `
+                    <div class="history-row">
+                        <div class="history-swatches">
+                            ${palette.map(color => `<span class="history-swatch" style="background:${color};" title="${color}"></span>`).join("")}
+                        </div>
+                        <button type="button" class="action-btn copy-btn" onclick='loadHistoryPalette(${index})'>
+                            <i class="fas fa-rotate-left"></i> Load
+                        </button>
+                    </div>
+                `).join("")}
+            </div>
+        </div>
+    `;
+}
+
+function loadHistoryPalette(index) {
+    const history = JSON.parse(localStorage.getItem("paletteHistory") || "[]");
+    if (!history[index]) return;
+    colors = [...history[index]];
+    locked = [false, false, false, false, false];
+    renderPalette();
+}
+
+function clearPaletteTool() {
+    colors = [];
+    locked = [false, false, false, false, false];
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("contrastResult").innerHTML = "";
+    document.getElementById("cssOutput").value = "";
+    document.getElementById("imageUpload").value = "";
+}
+
+function loadSamplePalette() {
+    colors = ["#4FACFE", "#00F2FE", "#FF758C", "#7B61FF", "#FFD166"];
+    locked = [false, false, false, false, false];
+    saveHistory();
+    renderPalette();
+}
+
+const tools = [
+    { name: "Username Generator", url: "usernamegenerator.html", icon: "🧑", category: "generator" },
+    { name: "Business Name Generator", url: "businessnamegenerator.html", icon: "🏢", category: "generator" },
+    { name: "Domain Name Generator", url: "domainnamegenerator.html", icon: "🌐", category: "generator" },
+    { name: "Hashtag Generator", url: "hashtaggenerator.html", icon: "#️⃣", category: "generator" },
+    { name: "Random Quote Generator", url: "randomquotegenerator.html", icon: "💬", category: "generator" },
+    { name: "Bio Generator", url: "biogenerator.html", icon: "📝", category: "generator" },
+    { name: "Color Palette Generator", url: "colorpalettegenerator.html", icon: "🎨", category: "generator" },
+    { name: "Fake Address Generator", url: "fakeaddressgenerator.html", icon: "🏠", category: "generator" },
+    { name: "MD5 Generator", url: "md5-generator.html", icon: "🔐", category: "generator" },
+    { name: "QR Code Generator", url: "qr.html", icon: "📱", category: "generator" },
+    { name: "Random Emoji Generator", url: "randomemojigenerator.html", icon: "😀", category: "generator" },
+    { name: "Random Name Generator", url: "randomnamegenerator.html", icon: "🎲", category: "generator" },
+    { name: "Random Number Generator", url: "randomnumber.html", icon: "🔢", category: "generator" },
+    { name: "UUID Generator", url: "uuidgenerator.html", icon: "🆔", category: "generator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+
+loadSamplePalette();
+renderHistory();
+</script>
+
+</body>
+</html>

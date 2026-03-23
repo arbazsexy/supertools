@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hreflang Generator Online - Create Hreflang Tags for International SEO</title>
+    <meta name="description" content="Free online hreflang generator to create alternate language tags for multilingual and multi-region SEO. Generate HTML and XML hreflang tags instantly with SuperTools.">
+    <meta name="keywords" content="hreflang generator, hreflang tags, international seo, multilingual seo, alternate language tags, x-default generator">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/hreflanggenerator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hreflang Generator Online - SuperTools">
+    <meta property="og:description" content="Generate hreflang tags for multilingual and international SEO instantly.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/hreflanggenerator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hreflang Generator Online - SuperTools">
+    <meta name="twitter:description" content="Generate hreflang tags for multilingual and international SEO instantly.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Hreflang Generator",
+      "alternateName": "Hreflang Tag Generator",
+      "url": "https://supertools1.site/hreflanggenerator.html",
+      "description": "Free online hreflang generator to create alternate language tags for multilingual and multi-region SEO. Generate HTML and XML hreflang tags instantly.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Generate hreflang HTML tags",
+        "Generate hreflang XML sitemap tags",
+        "Supports x-default",
+        "Supports language and region codes",
+        "Copy code instantly",
+        "Add multiple alternate URLs",
+        "Browser-based free tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is hreflang?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hreflang is an HTML attribute used to tell search engines which language or regional version of a page should be shown to users. It helps multilingual and multi-region websites serve the correct version in search results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where do I place hreflang tags?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can place hreflang tags inside the head section of your HTML, include them in XML sitemaps, or send them through HTTP headers for non-HTML files."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is x-default in hreflang?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The x-default hreflang value tells search engines which page should be shown when no specific language or regional version matches the user. It is commonly used for language selector pages or default international pages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use language and country codes together?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can use combinations like en-us, en-gb, fr-fr, or es-mx to target both language and region. Language should come first, followed by the country or region code."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this hreflang generator free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this hreflang generator is completely free to use and works directly in your browser."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Hreflang Generator</h1>
+    <p>Create hreflang tags for multilingual and international SEO. Add language versions of a page and generate clean alternate tags instantly.</p>
+
+    <label for="langCode">Language / Region Code</label>
+    <input type="text" id="langCode" placeholder="e.g. en, en-us, en-gb, fr, x-default">
+
+    <label for="pageUrl">Page URL</label>
+    <input type="text" id="pageUrl" placeholder="https://example.com/page">
+
+    <div class="button-group">
+        <button type="button" onclick="addEntry()">
+            <i class="fas fa-plus"></i> Add Language
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearInputsOnly()">
+            <i class="fas fa-eraser"></i> Clear Inputs
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+    </div>
+
+    <div id="entryStatus" class="generator-meta"></div>
+
+    <div id="entryList" class="subject-list"></div>
+
+    <div class="button-group">
+        <button type="button" onclick="generateHreflang()">
+            <i class="fas fa-code"></i> Generate Hreflang Tags
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearAllEntries()">
+            <i class="fas fa-trash"></i> Clear All
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy Output
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Hreflang Generator</h2>
+
+    <p>
+        The <strong>Hreflang Generator</strong> helps you create correct <strong>hreflang alternate tags</strong> for multilingual and multi-region websites.
+        These tags tell search engines which page version should appear for users in different languages or countries.
+        This is especially useful for international SEO, regional targeting, and multilingual content management.
+    </p>
+
+    <p>
+        To use this tool, enter a <strong>language code</strong> or <strong>language-region code</strong> such as
+        <strong>en</strong>, <strong>en-us</strong>, <strong>en-gb</strong>, <strong>fr</strong>, or <strong>x-default</strong>.
+        Then enter the full URL for that version of the page and click <strong>Add Language</strong>.
+        Repeat the process for all alternate versions of the same page.
+    </p>
+
+    <p>
+        Once you have added all versions, click <strong>Generate Hreflang Tags</strong>. The tool will generate both
+        <strong>HTML hreflang link tags</strong> and an <strong>XML sitemap hreflang version</strong> so you can use the format that fits your SEO workflow best.
+        You can then copy the generated code and place it in your page <strong>&lt;head&gt;</strong> or sitemap.
+    </p>
+
+    <h3>What is Hreflang?</h3>
+    <p>
+        Hreflang is an attribute used by search engines to understand language and regional variations of the same content.
+        For example, a page for users in the United States might use <strong>en-us</strong>, while a page for users in the United Kingdom might use <strong>en-gb</strong>.
+        This helps search engines serve the most relevant version to the right audience.
+    </p>
+
+    <p class="formula-box">
+        Example: &lt;link rel="alternate" hreflang="en-us" href="https://example.com/us/" /&gt;
+    </p>
+
+    <h3>Why Use This Hreflang Generator?</h3>
+    <ul>
+        <li><strong>International SEO Ready:</strong> Improve targeting for different countries and languages.</li>
+        <li><strong>Supports x-default:</strong> Add a fallback version for unmatched users.</li>
+        <li><strong>Faster Setup:</strong> Generate tags instantly without writing them manually.</li>
+        <li><strong>HTML + XML Output:</strong> Use hreflang tags in page head sections or sitemaps.</li>
+        <li><strong>Cleaner SEO Signals:</strong> Help search engines understand alternate page relationships.</li>
+        <li><strong>Free and Browser-Based:</strong> No signup or installation needed.</li>
+    </ul>
+
+    <h3>Best Practices for Hreflang</h3>
+    <p>
+        Make sure each page version references all other alternate versions, including itself. Use valid language and region codes,
+        keep page content equivalent across versions, and use absolute URLs. If you have a global fallback page,
+        add <strong>x-default</strong> to help search engines when no exact match is available.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is hreflang?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            <p>
+                <strong>Hreflang</strong> is an HTML attribute used to tell search engines which language or regional version of a page should be shown to users.
+                It is commonly used for multilingual and international websites.
+            </p>
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Where do I place hreflang tags?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            <p>
+                You can place hreflang tags inside the <strong>&lt;head&gt;</strong> section of your HTML pages.
+                They can also be included in XML sitemaps or HTTP headers for certain file types.
+            </p>
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: What does x-default mean?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            <p>
+                <strong>x-default</strong> is used as a fallback page for users who do not match a specific language or region target.
+                It is helpful for default global pages or language selector pages.
+            </p>
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I use both language and region codes?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            <p>
+                Yes. You can use values like <strong>en-us</strong>, <strong>en-gb</strong>, <strong>fr-fr</strong>, or <strong>es-mx</strong>.
+                The format should be language first, then region.
+            </p>
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free and safe to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            <p>
+                Yes, this hreflang generator is completely free and works in your browser. No signup is required and no code is uploaded for generation.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+                otherBtn.nextElementSibling.classList.remove("open");
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.classList.add("open");
+        }
+    });
+});
+
+let hreflangEntries = [];
+
+function escapeHtml(str) {
+    return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function normalizeLangCode(code) {
+    return code.trim().toLowerCase();
+}
+
+function isValidLangCode(code) {
+    if (code === "x-default") return true;
+    return /^[a-z]{2,3}(-[a-z]{2})?$/.test(code);
+}
+
+function isValidUrl(url) {
+    try {
+        const parsed = new URL(url);
+        return parsed.protocol === "http:" || parsed.protocol === "https:";
+    } catch {
+        return false;
+    }
+}
+
+function setStatus(message, type = "") {
+    const status = document.getElementById("entryStatus");
+    status.textContent = message;
+    status.className = "generator-meta";
+    if (type === "error") {
+        status.style.color = "#d63031";
+    } else if (type === "success") {
+        status.style.color = "#16a34a";
+    } else {
+        status.style.color = "";
+    }
+}
+
+function renderEntries() {
+    const container = document.getElementById("entryList");
+
+    if (hreflangEntries.length === 0) {
+        container.innerHTML = "";
+        return;
+    }
+
+    container.innerHTML = hreflangEntries.map((entry, index) => `
+        <div class="modern-card">
+            <p><strong>Code:</strong> ${escapeHtml(entry.lang)}</p>
+            <p><strong>URL:</strong> ${escapeHtml(entry.url)}</p>
+            <div class="button-group">
+                <button type="button" class="action-btn sample-btn" onclick="editEntry(${index})">
+                    <i class="fas fa-pen"></i> Edit
+                </button>
+                <button type="button" class="action-btn clear-btn" onclick="removeEntry(${index})">
+                    <i class="fas fa-trash"></i> Remove
+                </button>
+            </div>
+        </div>
+    `).join("");
+}
+
+function addEntry() {
+    const langInput = document.getElementById("langCode");
+    const urlInput = document.getElementById("pageUrl");
+
+    const lang = normalizeLangCode(langInput.value);
+    const url = urlInput.value.trim();
+
+    if (!lang || !url) {
+        setStatus("Please enter both a language code and a valid page URL.", "error");
+        return;
+    }
+
+    if (!isValidLangCode(lang)) {
+        setStatus("Invalid language code. Use formats like en, en-us, fr, de, or x-default.", "error");
+        return;
+    }
+
+    if (!isValidUrl(url)) {
+        setStatus("Please enter a valid full URL starting with http:// or https://", "error");
+        return;
+    }
+
+    const duplicateIndex = hreflangEntries.findIndex(item => item.lang === lang);
+    if (duplicateIndex !== -1) {
+        hreflangEntries[duplicateIndex] = { lang, url };
+        setStatus(`Updated existing entry for ${lang}.`, "success");
+    } else {
+        hreflangEntries.push({ lang, url });
+        setStatus(`Added entry for ${lang}.`, "success");
+    }
+
+    langInput.value = "";
+    urlInput.value = "";
+    renderEntries();
+}
+
+function removeEntry(index) {
+    hreflangEntries.splice(index, 1);
+    renderEntries();
+    setStatus("Entry removed.", "success");
+    document.getElementById("result").innerHTML = "";
+}
+
+function editEntry(index) {
+    const entry = hreflangEntries[index];
+    document.getElementById("langCode").value = entry.lang;
+    document.getElementById("pageUrl").value = entry.url;
+    hreflangEntries.splice(index, 1);
+    renderEntries();
+    setStatus(`Editing ${entry.lang}. Update the values and click Add Language again.`, "success");
+    document.getElementById("langCode").focus();
+}
+
+function clearInputsOnly() {
+    document.getElementById("langCode").value = "";
+    document.getElementById("pageUrl").value = "";
+    setStatus("Inputs cleared.");
+}
+
+function clearAllEntries() {
+    hreflangEntries = [];
+    document.getElementById("langCode").value = "";
+    document.getElementById("pageUrl").value = "";
+    document.getElementById("entryList").innerHTML = "";
+    document.getElementById("result").innerHTML = "";
+    setStatus("All entries cleared.");
+}
+
+function loadSample() {
+    hreflangEntries = [
+        { lang: "en", url: "https://example.com/" },
+        { lang: "en-us", url: "https://example.com/us/" },
+        { lang: "en-gb", url: "https://example.com/uk/" },
+        { lang: "fr", url: "https://example.com/fr/" },
+        { lang: "x-default", url: "https://example.com/" }
+    ];
+    renderEntries();
+    generateHreflang();
+    setStatus("Sample entries loaded.", "success");
+}
+
+function generateHreflang() {
+    const result = document.getElementById("result");
+
+    if (hreflangEntries.length === 0) {
+        result.innerHTML = `<div class="average-result result-pop"><strong>Please add at least one language entry first.</strong></div>`;
+        return;
+    }
+
+    const sortedEntries = [...hreflangEntries].sort((a, b) => {
+        if (a.lang === "x-default") return 1;
+        if (b.lang === "x-default") return -1;
+        return a.lang.localeCompare(b.lang);
+    });
+
+    const htmlTags = sortedEntries.map(entry =>
+        `<link rel="alternate" hreflang="${entry.lang}" href="${entry.url}" />`
+    ).join("\n");
+
+    const firstUrl = sortedEntries[0].url;
+
+    const xmlTags = [
+        `<url>`,
+        `  <loc>${firstUrl}</loc>`,
+        ...sortedEntries.map(entry => `  <xhtml:link rel="alternate" hreflang="${entry.lang}" href="${entry.url}" />`),
+        `</url>`
+    ].join("\n");
+
+    const summaryCards = `
+        <div class="stats">
+            <div class="stat-box">Total Entries<br><span>${sortedEntries.length}</span></div>
+            <div class="stat-box">Has x-default<br><span>${sortedEntries.some(e => e.lang === "x-default") ? "Yes" : "No"}</span></div>
+            <div class="stat-box">Unique Codes<br><span>${new Set(sortedEntries.map(e => e.lang)).size}</span></div>
+        </div>
+    `;
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div><strong>Generated successfully.</strong> Copy the HTML version for your page head or use the XML version in your sitemap.</div>
+            ${summaryCards}
+
+            <hr>
+
+            <div><strong>HTML Hreflang Tags</strong></div>
+            <textarea id="htmlOutput" class="code-output" rows="10" readonly>${htmlTags}</textarea>
+
+            <div class="button-group">
+                <button type="button" class="action-btn copy-btn" onclick="copyTextById('htmlOutput')">
+                    <i class="fas fa-copy"></i> Copy HTML Tags
+                </button>
+            </div>
+
+            <hr>
+
+            <div><strong>XML Sitemap Version</strong></div>
+            <textarea id="xmlOutput" class="code-output" rows="10" readonly>${xmlTags}</textarea>
+
+            <div class="button-group">
+                <button type="button" class="action-btn copy-btn" onclick="copyTextById('xmlOutput')">
+                    <i class="fas fa-copy"></i> Copy XML Version
+                </button>
+            </div>
+
+            <hr>
+
+            <div><strong>Tip:</strong> Every alternate page should reference all other alternate versions, including itself.</div>
+        </div>
+    `;
+
+    const outputArea = document.getElementById("result");
+    outputArea.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function copyTextById(id) {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    navigator.clipboard.writeText(element.value)
+        .then(() => setStatus("Copied to clipboard.", "success"))
+        .catch(() => setStatus("Failed to copy output.", "error"));
+}
+
+function copyResult() {
+    const htmlOutput = document.getElementById("htmlOutput");
+    const xmlOutput = document.getElementById("xmlOutput");
+
+    if (!htmlOutput && !xmlOutput) {
+        alert("No generated output to copy.");
+        return;
+    }
+
+    const fullText = [
+        "HTML Hreflang Tags:",
+        htmlOutput ? htmlOutput.value : "",
+        "",
+        "XML Sitemap Version:",
+        xmlOutput ? xmlOutput.value : ""
+    ].join("\n");
+
+    navigator.clipboard.writeText(fullText)
+        .then(() => alert("Output copied to clipboard!"))
+        .catch(() => alert("Failed to copy output."));
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Meta Tag Generator", url: "metataggenerator.html", icon: "🏷️", category: "seo" },
+    { name: "Open Graph Generator", url: "opengraphgenerator.html", icon: "🔗", category: "seo" },
+    { name: "Robots.txt Generator", url: "robotstxtgenerator.html", icon: "🤖", category: "seo" },
+    { name: "Sitemap Generator", url: "sitemapgenerator.html", icon: "🗺️", category: "seo" },
+    { name: "URL Slug Generator", url: "urlsluggenerator.html", icon: "✍️", category: "seo" },
+    { name: "Schema Generator", url: "schemagenerator.html", icon: "📄", category: "seo" },
+    { name: "Keyword Density Checker", url: "keyworddensitychecker.html", icon: "📊", category: "seo" },
+    { name: "Hreflang Generator", url: "hreflanggenerator.html", icon: "🌍", category: "seo" },
+    { name: "HTML TO Text", url: "htmltotext.html", icon: "🧾", category: "seo" },
+    { name: "TEXT TO HTML", url: "texttohtml.html", icon: "💻", category: "seo" },
+    { name: "Word Frequency", url: "wordfrequency.html", icon: "🔤", category: "seo" }
+];
+// detect current page
+const currentPage = window.location.pathname.split("/").pop();
+
+// filter related tools
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

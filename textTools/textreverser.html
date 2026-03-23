@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Text Reverser Online - Reverse Text Instantly | SuperTools</title>
+    <meta name="description" content="Free online Text Reverser tool. Reverse full text, reverse words, or reverse line order instantly. Copy, download, and manipulate text easily with SuperTools.">
+    <meta name="keywords" content="text reverser, reverse text online, reverse words, reverse lines, reverse string, text manipulation tool">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/textreverser.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Text Reverser Tool - SuperTools">
+    <meta property="og:description" content="Reverse text instantly with our free online Text Reverser.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/textreverser.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Text Reverser Tool - SuperTools">
+    <meta name="twitter:description" content="Reverse text instantly with our free online Text Reverser.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+    crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebApplication",
+      "name":"Text Reverser",
+      "alternateName":"Reverse Text Tool",
+      "url":"https://supertools1.site/textreverser.html",
+      "applicationCategory":"UtilityApplication",
+      "operatingSystem":"Any",
+      "browserRequirements":"Requires JavaScript and a modern web browser.",
+      "description":"Reverse full text, reverse words, or reverse line order instantly using this free online Text Reverser tool.",
+      "isAccessibleForFree": true,
+      "offers":{
+        "@type":"Offer",
+        "price":"0",
+        "priceCurrency":"USD"
+      },
+      "creator":{
+        "@type":"Organization",
+        "name":"SuperTools",
+        "url":"https://supertools1.site"
+      },
+      "publisher":{
+        "@type":"Organization",
+        "name":"SuperTools",
+        "url":"https://supertools1.site",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://supertools1.site/logo.png"
+        }
+      },
+      "image":"https://supertools1.site/logo.png",
+      "featureList":[
+        "Reverse all characters in text",
+        "Reverse word order",
+        "Reverse line order",
+        "Preserve line structure",
+        "Copy reversed text",
+        "Download reversed text",
+        "Free and browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"What can this Text Reverser do?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"This tool can reverse all characters in your text, reverse the order of words, or reverse the order of lines."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Can I preserve line structure while reversing text?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Yes, you can enable the preserve line structure option to reverse each line separately instead of reversing everything as a single block."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Can I copy or download the reversed result?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Yes, you can copy the reversed result instantly or download it as a TXT file."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Is the text processed in my browser?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Yes, all processing happens locally in your browser, so your text is not uploaded for reversal."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Is this Text Reverser free to use?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Yes, this Text Reverser is completely free to use online."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Text Reverser</h1>
+    <p>Reverse full text, reverse words, or reverse line order instantly with our free online tool.</p>
+
+    <label for="text">Enter your text</label>
+    <textarea id="text" rows="6" aria-label="Enter text to reverse" placeholder="Type your text here..."></textarea>
+
+    <label for="reverseMode">Choose reverse mode</label>
+    <select id="reverseMode" aria-label="Choose reverse mode">
+        <option value="characters">Reverse all characters</option>
+        <option value="words">Reverse word order</option>
+        <option value="lines">Reverse line order</option>
+    </select>
+
+    <label>
+        <input type="checkbox" id="preserveLines" checked>
+        Preserve line structure when reversing characters or words
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="reverseText()">
+            <i class="fas fa-arrows-rotate"></i> Reverse Text
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearText()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyText()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="downloadText()">
+            <i class="fas fa-download"></i> Download
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Text Reverser</h2>
+
+    <p>
+        The <strong>Text Reverser</strong> tool lets you reverse text instantly in different ways. You can reverse all characters,
+        reverse the order of words, or reverse the order of lines depending on what you need.
+    </p>
+
+    <p>
+        To use the tool, type or paste your text into the input box, choose a reverse mode, and click the
+        <strong>Reverse Text</strong> button. The reversed output appears instantly in a clean output box below.
+    </p>
+
+    <p>
+        You can also enable the <strong>Preserve line structure</strong> option. This is useful when you want each line to stay
+        on its own line while reversing its contents, instead of treating the whole input as one single block of text.
+    </p>
+
+    <h3>What Does a Text Reverser Do?</h3>
+    <p>
+        A text reverser changes the order of text based on the selected mode. In character mode, the last character becomes
+        the first and the first becomes the last. In word mode, the word order is reversed. In line mode, the line order is reversed.
+    </p>
+
+    <p class="formula-box">
+        Hello World → dlroW olleH
+    </p>
+
+    <h3>Why Use This Text Reverser Tool?</h3>
+    <ul>
+        <li><strong>Multiple Reverse Modes:</strong> Reverse characters, words, or lines.</li>
+        <li><strong>Preserve Structure:</strong> Keep line breaks while reversing text.</li>
+        <li><strong>Instant Results:</strong> Reverse text in seconds.</li>
+        <li><strong>Easy Copy and Download:</strong> Save or reuse the output quickly.</li>
+        <li><strong>Private and Secure:</strong> Everything runs in your browser.</li>
+        <li><strong>Free to Use:</strong> No sign-up or installation required.</li>
+    </ul>
+
+    <h3>Common Uses for a Text Reverser</h3>
+    <p>
+        People use text reversers for fun messages, puzzles, coding tests, string manipulation experiments, hidden text,
+        word games, and formatting checks. It is also useful for developers who want to test how text changes when reversed.
+    </p>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>students</strong>, <strong>writers</strong>, <strong>developers</strong>,
+        <strong>puzzle lovers</strong>, and anyone who wants to manipulate text quickly online.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What can this Text Reverser do?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This tool can reverse all characters in your text, reverse the order of words, or reverse the order of lines.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I preserve line structure while reversing text?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. Enable the <strong>Preserve line structure</strong> option to reverse each line separately instead of reversing everything as one block.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I copy or download the reversed result?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. You can copy the reversed result instantly or download it as a TXT file.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Is the text uploaded anywhere?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No. All processing happens locally in your browser, so your text stays private.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this tool free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes. This Text Reverser is completely free to use online.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+const textInput = document.getElementById("text");
+const reverseModeInput = document.getElementById("reverseMode");
+const preserveLinesInput = document.getElementById("preserveLines");
+const resultBox = document.getElementById("result");
+
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function reverseString(str) {
+    return Array.from(str).reverse().join("");
+}
+
+function countWords(text) {
+    return text.trim() ? text.trim().split(/\s+/).filter(Boolean).length : 0;
+}
+
+function getModeLabel(mode) {
+    if (mode === "characters") return "Characters";
+    if (mode === "words") return "Words";
+    return "Lines";
+}
+
+function reverseText() {
+    const text = textInput.value;
+    const mode = reverseModeInput.value;
+    const preserveLines = preserveLinesInput.checked;
+
+    if (!text.trim()) {
+        resultBox.innerHTML = `
+            <div class="average-result result-pop">
+                <strong>Please enter some text.</strong>
+            </div>
+        `;
+        return;
+    }
+
+    let reversed = "";
+
+    if (mode === "characters") {
+        if (preserveLines) {
+            reversed = text
+                .split("\n")
+                .map(line => reverseString(line))
+                .join("\n");
+        } else {
+            reversed = reverseString(text);
+        }
+    } else if (mode === "words") {
+        if (preserveLines) {
+            reversed = text
+                .split("\n")
+                .map(line => line.trim() ? line.split(/\s+/).reverse().join(" ") : "")
+                .join("\n");
+        } else {
+            reversed = text.trim() ? text.split(/\s+/).reverse().join(" ") : "";
+        }
+    } else {
+        reversed = text.split("\n").reverse().join("\n");
+    }
+
+    const lineCount = reversed === "" ? 0 : reversed.split("\n").length;
+
+    resultBox.innerHTML = `
+        <div class="modern-card result-pop">
+            <h3>Reversed Text</h3>
+            <textarea id="outputText" class="code-output result-textarea" rows="12" readonly>${escapeHtml(reversed)}</textarea>
+
+            <div class="stats">
+                <div class="stat-box">Words<br>${countWords(reversed)}</div>
+                <div class="stat-box">Characters<br>${reversed.length}</div>
+                <div class="stat-box">Lines<br>${lineCount}</div>
+                <div class="stat-box">Mode<br>${getModeLabel(mode)}</div>
+            </div>
+
+            <div class="generator-meta">
+                Preserve lines: ${preserveLines ? "Yes" : "No"}
+            </div>
+        </div>
+    `;
+
+    resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+async function copyText() {
+    const copy = document.getElementById("outputText");
+
+    if (!copy) {
+        alert("Nothing to copy yet!");
+        return;
+    }
+
+    try {
+        await navigator.clipboard.writeText(copy.value);
+        alert("Copied!");
+    } catch (error) {
+        copy.select();
+        document.execCommand("copy");
+        alert("Copied!");
+    }
+}
+
+function clearText() {
+    textInput.value = "";
+    reverseModeInput.value = "characters";
+    preserveLinesInput.checked = true;
+    resultBox.innerHTML = "";
+    textInput.focus();
+}
+
+function loadSample() {
+    textInput.value = `Hello world
+SuperTools text reverser`;
+    reverseModeInput.value = "characters";
+    preserveLinesInput.checked = true;
+    reverseText();
+}
+
+function downloadText() {
+    const output = document.getElementById("outputText");
+
+    if (!output) {
+        alert("Nothing to download yet!");
+        return;
+    }
+
+    const blob = new Blob([output.value], { type: "text/plain;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "reversed-text.txt";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+}
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
+<script>
+const tools = [
+    { name: "Remove Duplicate Lines", url: "removeduplicatelines.html", icon: "🧹", category: "text" },
+    { name: "Text Sorter", url: "textsorter.html", icon: "🔤", category: "text" },
+    { name: "Remove Line Breaks", url: "removelinebreaks.html", icon: "↩️", category: "text" },
+    { name: "Character Remover", url: "characterremover.html", icon: "✂️", category: "text" },
+    { name: "Add Line Numbers", url: "addlinenumbers.html", icon: "🔢", category: "text" },
+    { name: "Text to ASCII", url: "texttoascii.html", icon: "💻", category: "text" },
+    { name: "Case Alternator", url: "casealternator.html", icon: "🔠", category: "text" },
+    { name: "Text to Slug", url: "texttoslug.html", icon: "🔗", category: "text" },
+    { name: "Loremipsum Generator", url: "loremipsumgenerator.html", icon: "📝", category: "text" },
+    { name: "Random Text Generator", url: "randomtextgenerator.html", icon: "🎲", category: "text" },
+    { name: "Text Converter", url: "textconverter.html", icon: "🔄", category: "text" },
+    { name: "Text Reverser", url: "textreverser.html", icon: "↔️", category: "text" },
+    { name: "Text Repeater", url: "textrepeater.html", icon: "🔁", category: "text" },
+    { name: "Word Counter", url: "wordcounter.html", icon: "📏", category: "text" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>
