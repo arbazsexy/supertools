@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>GPA Calculator Online - Calculate Grade Point Average Easily | SuperTools</title>
+<meta name="description" content="Free online GPA calculator to calculate your grade point average instantly. Add multiple subjects, grades, and credits to get accurate GPA results for school, college, and university.">
+<meta name="keywords" content="gpa calculator, grade point average calculator, cgpa calculator, college gpa calculator, student grade calculator">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/calculators/gpacalculator.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="GPA Calculator Online - SuperTools">
+<meta property="og:description" content="Calculate your GPA instantly with multiple subjects, grades, and credits using this free online GPA calculator.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/calculators/gpacalculator.html">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GPA Calculator Online - SuperTools">
+<meta name="twitter:description" content="Calculate your GPA instantly with multiple subjects, grades, and credits using this free online GPA calculator.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "GPA Calculator",
+  "alternateName": "Grade Point Average Calculator",
+  "url": "https://supertools1.site/calculators/gpacalculator.html",
+  "description": "Free online GPA calculator to calculate grade point average using multiple subjects, grades, and credits for students in school, college, and university.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/calculators/gpacalculator.html"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Calculate GPA online",
+    "Supports multiple subjects",
+    "Credit-based GPA calculation",
+    "Grade point average calculation",
+    "Add unlimited subjects",
+    "Fast browser-based calculation",
+    "School and college friendly",
+    "Free and private tool"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GPA, or Grade Point Average, is a numerical value that represents a student's overall academic performance based on grades earned in subjects and the credits assigned to those subjects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is GPA calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GPA is calculated by multiplying the grade points of each subject by its credits, adding all those values together, and dividing the result by the total number of credits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add multiple subjects in this GPA calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this GPA calculator allows you to add multiple subjects and enter different grades and credits for each one so you can calculate your GPA more accurately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this GPA calculator accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this GPA calculator uses the standard grade-point-average method based on grade points and credits, making it suitable for common academic GPA calculations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this GPA calculator free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this GPA calculator is completely free to use and works directly in your browser without requiring any signup."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<nav>
+    <h2>&#9889; SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>GPA Calculator</h1>
+    <p>Calculate your GPA instantly by adding subjects, grades, and credits.</p>
+
+    <div id="result"></div>
+
+    <div id="subjects" class="subject-list"></div>
+
+    <div class="button-group">
+        <button type="button" onclick="addSubject()">
+            <i class="fas fa-plus"></i> Add Subject
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="calculateGPA()">
+            <i class="fas fa-chart-column"></i> Calculate GPA
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+</div>
+
+<section class="related-tools">
+    <h2>&#128279; Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the GPA Calculator</h2>
+
+    <p>
+        The <strong>GPA Calculator</strong> helps students calculate their <strong>Grade Point Average</strong> quickly and accurately. Whether you are in school, college, or university, this tool allows you to enter multiple subjects, assign grades, and add credits to get an accurate GPA result instantly.
+    </p>
+
+    <p>
+        GPA is one of the most common ways to measure academic performance. It gives you a single number that reflects how well you have performed across all your courses. Instead of calculating grade points manually, this calculator automates the process and saves time.
+    </p>
+
+    <p>
+        To use the tool, add your subjects one by one, select the grade earned in each subject, and enter the number of credits for that subject. Once you click the <strong>Calculate GPA</strong> button, the tool will instantly calculate your GPA using the standard credit-weighted method.
+    </p>
+
+    <h3>What is GPA?</h3>
+    <p>
+        GPA stands for <strong>Grade Point Average</strong>. It is a numerical value used by educational institutions to summarize a student's academic performance. Different grades are assigned different grade points, and those points are combined using course credits to produce the final GPA.
+    </p>
+
+    <p class="formula-box">
+        GPA = Total Grade Points ÷ Total Credits
+    </p>
+
+    <p>
+        For example, if you receive higher grades in subjects with more credits, your GPA will increase more than in subjects with fewer credits. This is why credits are an important part of GPA calculation.
+    </p>
+
+    <h3>Why Use This GPA Calculator?</h3>
+    <ul>
+        <li><strong>Accurate Calculation:</strong> Uses grade points and credits to calculate GPA properly.</li>
+        <li><strong>Supports Multiple Subjects:</strong> Add as many subjects as needed.</li>
+        <li><strong>Student Friendly:</strong> Useful for school, college, and university students.</li>
+        <li><strong>Quick Results:</strong> Get your GPA instantly without manual calculation.</li>
+        <li><strong>Simple Interface:</strong> Easy to use on both mobile and desktop devices.</li>
+        <li><strong>Private and Free:</strong> No signup required and all calculations run in your browser.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This GPA calculator is useful for students, teachers, and academic planners who want a quick estimate of grade performance. It can help you track your semester progress, compare results across subjects, and understand where your academic standing currently is.
+    </p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is GPA?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            GPA, or <strong>Grade Point Average</strong>, is a number that represents your academic performance based on the grades you earn and the credits assigned to each subject. It is commonly used by schools and colleges to measure overall student performance.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: How is GPA calculated?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            GPA is calculated by multiplying the grade points of each subject by its credits, adding those values together, and dividing by the total number of credits. This gives a weighted average of your grades.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I add unlimited subjects?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this GPA calculator allows you to add as many subjects as you need. This makes it useful for full semesters, yearly GPA calculations, or any academic record where multiple courses are involved.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Is this GPA calculator accurate?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this calculator follows the standard GPA formula based on grade points and credits. As long as you enter the correct grades and credits, it will provide an accurate GPA result.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this GPA calculator free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this GPA calculator is completely free to use. You can access it anytime in your browser without registration or downloading anything.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+function showResult(html) {
+    const r = document.getElementById("result");
+    r.innerHTML = html;
+
+    setTimeout(() => {
+        const yOffset = -100;
+        const y = r.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+    }, 50);
+}
+
+function addSubject(subjectName = "", gradeValue = "4", creditsValue = "") {
+    const div = document.createElement("div");
+    div.className = "subject";
+
+    div.innerHTML = `
+        <input type="text" placeholder="Subject" value="${subjectName}">
+        <select>
+            <option value="4" ${gradeValue === "4" ? "selected" : ""}>A</option>
+            <option value="3" ${gradeValue === "3" ? "selected" : ""}>B</option>
+            <option value="2" ${gradeValue === "2" ? "selected" : ""}>C</option>
+            <option value="1" ${gradeValue === "1" ? "selected" : ""}>D</option>
+            <option value="0" ${gradeValue === "0" ? "selected" : ""}>F</option>
+        </select>
+        <input type="number" placeholder="Credits" min="1" step="0.5" value="${creditsValue}">
+        <button type="button" class="action-btn clear-btn" onclick="this.parentElement.remove()">❌</button>
+    `;
+
+    document.getElementById("subjects").appendChild(div);
+}
+
+function calculateGPA() {
+    const subjects = document.querySelectorAll(".subject");
+    let totalPoints = 0;
+    let totalCredits = 0;
+    let validSubjects = 0;
+
+    subjects.forEach(sub => {
+        const subjectName = sub.children[0].value.trim();
+        const grade = parseFloat(sub.children[1].value);
+        const credit = parseFloat(sub.children[2].value);
+
+        if (subjectName !== "" && !isNaN(credit) && credit > 0) {
+            totalPoints += grade * credit;
+            totalCredits += credit;
+            validSubjects++;
+        }
+    });
+
+    if (totalCredits === 0 || validSubjects === 0) {
+        showResult("<div class='average-result result-pop'>Please enter at least one valid subject with grade and credits.</div>");
+        return;
+    }
+
+    const gpa = (totalPoints / totalCredits).toFixed(2);
+
+    showResult(`
+        <div class="average-result result-pop">
+            <div class="stats">
+                <div class="stat-box">Subjects<br>${validSubjects}</div>
+                <div class="stat-box">Total Credits<br>${totalCredits}</div>
+                <div class="stat-box">Total Points<br>${totalPoints.toFixed(2)}</div>
+                <div class="stat-box">GPA<br>${gpa}</div>
+            </div>
+            <hr>
+            <div><strong>Formula:</strong> GPA = Total Grade Points ÷ Total Credits = ${totalPoints.toFixed(2)} ÷ ${totalCredits} = ${gpa}</div>
+        </div>
+    `);
+}
+
+function clearAll() {
+    document.getElementById("subjects").innerHTML = "";
+    document.getElementById("result").innerHTML = "";
+    addSubject();
+}
+
+function loadSample() {
+    document.getElementById("subjects").innerHTML = "";
+    addSubject("Mathematics", "4", "3");
+    addSubject("Physics", "3", "4");
+    addSubject("English", "4", "2");
+    calculateGPA();
+}
+
+function copyResult() {
+    const text = document.getElementById("result").innerText.trim();
+    if (!text) {
+        alert("No result to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(text)
+        .then(() => alert("Result copied to clipboard!"))
+        .catch(() => alert("Failed to copy result."));
+}
+
+const tools = [
+    { name: "Average Calculator", url: "averagecalculator.html", icon: "&#128202;", category: "calculator" },
+    { name: "Percentage Calculator", url: "percentagecalculator.html", icon: "&#128200;", category: "calculator" },
+    { name: "BMI Calculator", url: "bmicalculator.html", icon: "&#9878;&#65039;", category: "calculator" },
+    { name: "Age Calculator", url: "agecalculator.html", icon: "&#127874;", category: "calculator" },
+    { name: "Loan Calculator", url: "loan-emi-calculator.html", icon: "&#128176;", category: "calculator" },
+    { name: "Discount Calculator", url: "discount-calculator.html", icon: "&#127991;&#65039;", category: "calculator" },
+    { name: "GPA Calculator", url: "gpacalculator.html", icon: "&#127891;", category: "calculator" },
+    { name: "Interest Calculator", url: "compoundinterest.html", icon: "&#128181;", category: "calculator" },
+    { name: "Binary Calculator", url: "binarycalculator.html", icon: "&#128187;", category: "calculator" },
+    { name: "Date Difference", url: "datedifference.html", icon: "&#128197;", category: "calculator" },
+    { name: "GST Calculator", url: "gstcalculator.html", icon: "&#129534;", category: "calculator" },
+    { name: "Salary Calculator", url: "salarycalculator.html", icon: "&#128188;", category: "calculator" },
+    { name: "Scientific Calculator", url: "scientificcalculator.html", icon: "&#129518;", category: "calculator" },
+    { name: "Time Calculator", url: "timecalculator.html", icon: "&#9201;&#65039;", category: "calculator" },
+    { name: "TIP Calculator", url: "tipcalculator.html", icon: "&#127869;&#65039;", category: "calculator" },
+    { name: "Unit Converter", url: "unitconverter.html", icon: "&#128260;", category: "calculator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+
+addSubject();
+</script>
+
+</body>
+</html>
+
+

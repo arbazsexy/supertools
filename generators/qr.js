@@ -527,20 +527,20 @@ function loadSampleQR() {
 }
 
 const tools = [
-    { name: "Username Generator", url: "usernamegenerator.html", icon: "User", category: "generator" },
-    { name: "Business Name Generator", url: "businessnamegenerator.html", icon: "Biz", category: "generator" },
-    { name: "Domain Name Generator", url: "domainnamegenerator.html", icon: "Web", category: "generator" },
-    { name: "Hashtag Generator", url: "hashtaggenerator.html", icon: "#", category: "generator" },
-    { name: "Random Quote Generator", url: "randomquotegenerator.html", icon: "Quote", category: "generator" },
-    { name: "Bio Generator", url: "biogenerator.html", icon: "Bio", category: "generator" },
-    { name: "Color Palette Generator", url: "colorpalettegenerator.html", icon: "Color", category: "generator" },
-    { name: "Fake Address Generator", url: "fakeaddressgenerator.html", icon: "Addr", category: "generator" },
-    { name: "MD5 Generator", url: "md5-generator.html", icon: "MD5", category: "generator" },
-    { name: "QR Code Generator", url: "qr.html", icon: "QR", category: "generator" },
-    { name: "Random Emoji Generator", url: "randomemojigenerator.html", icon: "Emoji", category: "generator" },
-    { name: "Random Name Generator", url: "randomnamegenerator.html", icon: "Name", category: "generator" },
-    { name: "Random Number Generator", url: "randomnumber.html", icon: "123", category: "generator" },
-    { name: "UUID Generator", url: "uuidgenerator.html", icon: "ID", category: "generator" }
+    { name: "Username Generator", url: "usernamegenerator.html", icon: "&#128100;", category: "generator" },
+    { name: "Business Name Generator", url: "businessnamegenerator.html", icon: "&#128188;", category: "generator" },
+    { name: "Domain Name Generator", url: "domainnamegenerator.html", icon: "&#127760;", category: "generator" },
+    { name: "Hashtag Generator", url: "hashtaggenerator.html", icon: "&#35;&#65039;", category: "generator" },
+    { name: "Random Quote Generator", url: "randomquotegenerator.html", icon: "&#128172;", category: "generator" },
+    { name: "Bio Generator", url: "biogenerator.html", icon: "&#128221;", category: "generator" },
+    { name: "Color Palette Generator", url: "colorpalettegenerator.html", icon: "&#127912;", category: "generator" },
+    { name: "Fake Address Generator", url: "fakeaddressgenerator.html", icon: "&#127968;", category: "generator" },
+    { name: "MD5 Generator", url: "md5-generator.html", icon: "&#128274;", category: "generator" },
+    { name: "QR Code Generator", url: "qr.html", icon: "&#128241;", category: "generator" },
+    { name: "Random Emoji Generator", url: "randomemojigenerator.html", icon: "&#128512;", category: "generator" },
+    { name: "Random Name Generator", url: "randomnamegenerator.html", icon: "&#127922;", category: "generator" },
+    { name: "Random Number Generator", url: "randomnumber.html", icon: "&#128290;", category: "generator" },
+    { name: "UUID Generator", url: "uuidgenerator.html", icon: "&#127380;", category: "generator" }
 ];
 
 const currentPage = window.location.pathname.split("/").pop();
@@ -562,3 +562,4 @@ if (container) {
 }
 
 updateQrFields();
+
