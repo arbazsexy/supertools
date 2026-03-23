@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Image Resizer Online Free - Resize JPG, PNG & WebP Images | SuperTools</title>
+<meta name="description" content="Free online image resizer to resize JPG, PNG, and WebP images instantly. Change width and height, keep aspect ratio, preview resized images, and download the result with SuperTools.">
+<meta name="keywords" content="image resizer, resize image online, resize jpg, resize png, image size changer, photo resizer, resize webp, online image resizer">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/tools/image-resizer.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Image Resizer Online Free - SuperTools">
+<meta property="og:description" content="Resize images instantly by changing width and height with this free online image resizer.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/tools/image-resizer.html">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image Resizer Online Free - SuperTools">
+<meta name="twitter:description" content="Resize JPG, PNG, and WebP images instantly with preview and download options.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Adsense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Image Resizer",
+  "alternateName":"Online Image Resizer",
+  "url":"https://supertools1.site/tools/image-resizer.html",
+  "applicationCategory":"MultimediaApplication",
+  "operatingSystem":"Any",
+  "browserRequirements":"Requires JavaScript and a modern web browser.",
+  "description":"Resize images instantly online by adjusting width and height.",
+  "isAccessibleForFree": true,
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "author":{"@type":"Organization","name":"SuperTools","url":"https://supertools1.site"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image":"https://supertools1.site/logo.png",
+  "featureList": [
+    "Resize JPG images",
+    "Resize PNG images",
+    "Resize WebP images",
+    "Change width and height",
+    "Keep aspect ratio option",
+    "Preview resized image",
+    "Download resized image",
+    "Browser-based image processing",
+    "Free online tool"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this image resizer free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this image resizer is completely free to use online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my images uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, all resizing happens directly in your browser, so your files stay on your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I keep the original aspect ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can enable the keep aspect ratio option to resize the image proportionally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which image formats are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool supports common image formats such as JPG, PNG, and WebP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I download the resized image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, after resizing the image you can download it instantly to your device."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+    <h1>Image Resizer</h1>
+    <p>Resize images instantly by changing width and height, keeping aspect ratio if needed, and downloading the result.</p>
+
+    <div id="dropArea" class="drop-area">
+        <p><i class="fas fa-cloud-arrow-up"></i> Drag & drop an image here</p>
+        <p>or click to choose an image</p>
+    </div>
+
+    <label for="upload">Select Image</label>
+    <input type="file" id="upload" accept="image/*" aria-label="Upload image for resizing">
+
+    <label for="width">Width (px)</label>
+    <input type="number" id="width" placeholder="Enter width" min="1">
+
+    <label for="height">Height (px)</label>
+    <input type="number" id="height" placeholder="Enter height" min="1">
+
+    <label style="display:flex;align-items:center;gap:8px;margin-top:10px;">
+        <input type="checkbox" id="lockAspect" checked>
+        Keep aspect ratio
+    </label>
+
+    <div class="button-group">
+        <button type="button" onclick="resizeImage()">
+            <i class="fas fa-expand"></i> Resize
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSampleMessage()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+    </div>
+
+    <div id="imageInfo"></div>
+    <div id="preview"></div>
+    <canvas id="canvas"></canvas>
+
+    <div class="button-group">
+        <button type="button" onclick="downloadImage()">
+            <i class="fas fa-download"></i> Download Resized Image
+        </button>
+    </div>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+
+    <h2>How to Use the Image Resizer</h2>
+
+    <p>
+        The <strong>Image Resizer</strong> is a simple online tool that lets you change the width and height of an image directly in your browser.
+        It is useful when you need images with exact dimensions for websites, social media posts, blog images, forms, portfolios, or project work.
+    </p>
+
+    <p>
+        To use the tool, upload your image or drag and drop it into the upload area. Once the image is loaded, enter the new width and height in
+        pixels. If you want to resize the image proportionally, keep the <strong>aspect ratio</strong> option enabled. Then click the
+        <strong>Resize</strong> button to generate the new image instantly.
+    </p>
+
+    <p>
+        After resizing, you can preview the result and download the resized image immediately. Since the processing happens directly in your browser,
+        your files are not uploaded to a server, which helps keep them private.
+    </p>
+
+    <h3>Why Use This Image Resizer?</h3>
+    <ul>
+        <li><strong>Fast Resizing:</strong> Change image dimensions instantly.</li>
+        <li><strong>Keep Aspect Ratio:</strong> Resize proportionally without distortion.</li>
+        <li><strong>Preview Results:</strong> See original and resized image details before downloading.</li>
+        <li><strong>Supports Common Formats:</strong> Works with JPG, PNG, and WebP images.</li>
+        <li><strong>Private:</strong> Processing stays in your browser.</li>
+        <li><strong>Free to Use:</strong> No signup or installation required.</li>
+    </ul>
+
+    <h3>Common Uses</h3>
+    <p>
+        Image resizing is useful for creating website banners, profile pictures, blog thumbnails, form uploads, email attachments, online shop
+        images, and social media graphics. Smaller or properly sized images also help improve page loading speed and layout consistency.
+    </p>
+
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: Is this image resizer free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this image resizer is completely free to use online.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Are my images uploaded to a server?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No, the resizing happens directly in your browser, so your files stay on your device.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I keep the original aspect ratio?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can enable the keep aspect ratio option to automatically resize the image proportionally.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Which image formats are supported?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This tool supports common image formats including JPG, PNG, and WebP.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Can I download the resized image?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, once the image is resized you can download it instantly to your device.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools | 
+        <a href="../privacy.html">Privacy Policy</a> | 
+        <a href="../about.html">About Us</a> | 
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+let uploadedImage = new Image();
+let uploadedFile = null;
+let originalWidth = 0;
+let originalHeight = 0;
+
+const upload = document.getElementById("upload");
+const dropArea = document.getElementById("dropArea");
+const widthInput = document.getElementById("width");
+const heightInput = document.getElementById("height");
+const lockAspect = document.getElementById("lockAspect");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const preview = document.getElementById("preview");
+const imageInfo = document.getElementById("imageInfo");
+
+dropArea.addEventListener("click", () => upload.click());
+
+dropArea.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropArea.classList.add("dragover");
+});
+
+dropArea.addEventListener("dragleave", () => {
+    dropArea.classList.remove("dragover");
+});
+
+dropArea.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropArea.classList.remove("dragover");
+
+    const files = Array.from(e.dataTransfer.files).filter(file => file.type.startsWith("image/"));
+
+    if (!files.length) {
+        alert("Please drop a valid image file.");
+        return;
+    }
+
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(files[0]);
+    upload.files = dataTransfer.files;
+    loadImageFile(files[0]);
+});
+
+upload.addEventListener("change", function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        loadImageFile(file);
+    }
+});
+
+function loadImageFile(file) {
+    uploadedFile = file;
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        uploadedImage = new Image();
+        uploadedImage.onload = function() {
+            originalWidth = uploadedImage.width;
+            originalHeight = uploadedImage.height;
+
+            widthInput.value = originalWidth;
+            heightInput.value = originalHeight;
+
+            preview.innerHTML = `
+                <div class="average-result" style="margin-top:20px;">
+                    <div><strong>Original Preview</strong></div>
+                    <div style="margin-top:10px;">
+                        <img src="${e.target.result}" alt="${file.name}" style="max-width:100%;border-radius:10px;">
+                    </div>
+                </div>
+            `;
+
+            imageInfo.innerHTML = `
+                <div class="average-result" style="margin-top:20px;">
+                    <div><strong>Original Image Details</strong></div>
+                    <hr>
+                    <p><strong>File Name:</strong> ${file.name}</p>
+                    <p><strong>File Size:</strong> ${formatFileSize(file.size)}</p>
+                    <p><strong>Original Dimensions:</strong> ${originalWidth} × ${originalHeight}px</p>
+                    <p><strong>File Type:</strong> ${file.type || "Unknown"}</p>
+                </div>
+            `;
+        };
+
+        uploadedImage.src = e.target.result;
+    };
+
+    reader.readAsDataURL(file);
+}
+
+widthInput.addEventListener("input", () => {
+    if (lockAspect.checked && originalWidth && originalHeight) {
+        const newWidth = parseInt(widthInput.value, 10);
+        if (newWidth > 0) {
+            heightInput.value = Math.round((newWidth / originalWidth) * originalHeight);
+        }
+    }
+});
+
+heightInput.addEventListener("input", () => {
+    if (lockAspect.checked && originalWidth && originalHeight) {
+        const newHeight = parseInt(heightInput.value, 10);
+        if (newHeight > 0) {
+            widthInput.value = Math.round((newHeight / originalHeight) * originalWidth);
+        }
+    }
+});
+
+function formatFileSize(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB";
+    return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+}
+
+function resizeImage() {
+    if (!uploadedImage.src) {
+        imageInfo.innerHTML = "<div style='color:red;'>Please upload an image first.</div>";
+        return;
+    }
+
+    const width = parseInt(widthInput.value, 10);
+    const height = parseInt(heightInput.value, 10);
+
+    if (!width || !height || width <= 0 || height <= 0) {
+        imageInfo.innerHTML = "<div style='color:red;'>Please enter valid width and height.</div>";
+        return;
+    }
+
+    canvas.width = width;
+    canvas.height = height;
+    ctx.clearRect(0, 0, width, height);
+    ctx.drawImage(uploadedImage, 0, 0, width, height);
+
+    const resizedDataUrl = canvas.toDataURL(uploadedFile && uploadedFile.type === "image/png" ? "image/png" : "image/jpeg", 0.95);
+
+    preview.innerHTML = `
+        <div class="average-result" style="margin-top:20px;">
+            <div><strong>Resized Preview</strong></div>
+            <div style="margin-top:10px;">
+                <img src="${resizedDataUrl}" alt="Resized preview" style="max-width:100%;border-radius:10px;">
+            </div>
+        </div>
+    `;
+
+    imageInfo.innerHTML = `
+        <div class="average-result" style="margin-top:20px;">
+            <div><strong>Image Details</strong></div>
+            <hr>
+            <p><strong>File Name:</strong> ${uploadedFile ? uploadedFile.name : "Uploaded Image"}</p>
+            <p><strong>Original Dimensions:</strong> ${originalWidth} × ${originalHeight}px</p>
+            <p><strong>Resized Dimensions:</strong> ${width} × ${height}px</p>
+            <p><strong>Aspect Ratio Lock:</strong> ${lockAspect.checked ? "Enabled" : "Disabled"}</p>
+        </div>
+    `;
+
+    preview.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function downloadImage() {
+    if (!canvas.width || !canvas.height) {
+        alert("Please resize the image first.");
+        return;
+    }
+
+    const link = document.createElement("a");
+    const isPng = uploadedFile && uploadedFile.type === "image/png";
+    link.download = isPng ? "resized-image.png" : "resized-image.jpg";
+    link.href = canvas.toDataURL(isPng ? "image/png" : "image/jpeg", 0.95);
+    link.click();
+}
+
+function clearAll() {
+    upload.value = "";
+    widthInput.value = "";
+    heightInput.value = "";
+    lockAspect.checked = true;
+    canvas.width = 0;
+    canvas.height = 0;
+    preview.innerHTML = "";
+    imageInfo.innerHTML = "";
+    uploadedImage = new Image();
+    uploadedFile = null;
+    originalWidth = 0;
+    originalHeight = 0;
+}
+
+function loadSampleMessage() {
+    preview.innerHTML = `
+        <div class="average-result" style="margin-top:20px;">
+            <div><strong>How it works:</strong> Upload an image, set width and height, keep aspect ratio if needed, then click Resize.</div>
+        </div>
+    `;
+    imageInfo.innerHTML = "";
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Image Compressor", url: "image-compressor.html", icon: "🗜️", category: "image" },
+    { name: "Image Resizer", url: "image-resizer.html", icon: "📏", category: "image" },
+    { name: "JPG to PNG Converter", url: "jpg-to-png.html", icon: "🔄", category: "image" },
+    { name: "PNG to JPG Converter", url: "pngtojpg.html", icon: "🔁", category: "image" },
+    { name: "Bulk Image Blur", url: "bulk-image-blur.html", icon: "🌫️", category: "image" },
+    { name: "GIF Maker", url: "gif-maker.html", icon: "🎞️", category: "image" },
+    { name: "Image Metadata Viewer", url: "image-metadata-viewer.html", icon: "🧾", category: "image" },
+    { name: "Image Rotator", url: "image-rotator.html", icon: "🔄", category: "image" },
+    { name: "Image to WebP", url: "image-to-webp.html", icon: "🖼️", category: "image" },
+    { name: "Image Upscaler", url: "image-upscaler.html", icon: "🔍", category: "image" },
+    { name: "Image to Base64", url: "imagetobase64.html", icon: "🔢", category: "image" },
+    { name: "WebP to PNG", url: "webp-to-png.html", icon: "🔄", category: "image" },
+    { name: "YouTube Thumbnail Downloader", url: "youtube-thumbnail-downloader.html", icon: "📺", category: "image" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

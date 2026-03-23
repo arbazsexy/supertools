@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>PNG to JPG Converter Online Free - Convert PNG Images Instantly | SuperTools</title>
+<meta name="description" content="Free online PNG to JPG converter. Convert PNG images to JPG format instantly in your browser. Fast, secure, and easy to use with SuperTools.">
+<meta name="keywords" content="png to jpg converter, png to jpeg converter, convert png to jpg, image converter, online image converter, free png to jpg">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/pngtojpg.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="PNG to JPG Converter - SuperTools">
+<meta property="og:description" content="Convert PNG images to JPG instantly with our free online converter.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/pngtojpg.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PNG to JPG Converter - SuperTools">
+<meta name="twitter:description" content="Convert PNG images to JPG instantly with our free online converter.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PNG to JPG Converter",
+  "alternateName": "PNG to JPEG Converter",
+  "url": "https://supertools1.site/pngtojpg.html",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "description": "Convert PNG images to JPG format instantly with this free online PNG to JPG converter.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Convert PNG to JPG",
+    "Convert PNG to JPEG",
+    "Preview converted image",
+    "Download JPG instantly",
+    "Browser-based image conversion",
+    "Free online tool"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Is this PNG to JPG converter free to use?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes, this PNG to JPG converter is completely free to use online."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Are my images uploaded to a server?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No, the conversion happens directly in your browser, so your image stays on your device."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What input format is supported?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"This tool accepts PNG image files."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I download the JPG after conversion?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes, once the image is converted you can download the JPG file instantly."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What happens to PNG transparency when converting to JPG?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"JPG does not support transparency, so transparent areas in the PNG will usually become white in the converted JPG."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>PNG to JPG Converter</h1>
+
+<p>Convert PNG images to JPG instantly using our free online converter.</p>
+
+<label for="imageInput">Select PNG Image</label>
+<input type="file" id="imageInput" accept=".png,image/png" aria-label="Upload PNG image">
+
+<div class="button-group">
+    <button type="button" onclick="convertImage()">
+        Convert to JPG
+    </button>
+
+    <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+        Clear
+    </button>
+
+    <button type="button" class="action-btn sample-btn" onclick="loadSampleMessage()">
+        Sample
+    </button>
+</div>
+
+<div id="imageInfo"></div>
+<div id="preview"></div>
+
+<canvas id="canvas"></canvas>
+
+<div class="button-group">
+    <button type="button" onclick="downloadJPG()">
+        Download JPG
+    </button>
+</div>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+
+<h2>How to Convert PNG to JPG</h2>
+
+<p>
+The <strong>PNG to JPG Converter</strong> helps you change PNG images into JPG format directly in your browser. This is useful when you want smaller file sizes for websites, blogs, forms, email attachments, or general image sharing.
+</p>
+
+<p>
+To use the tool, upload a PNG image from your device and click the <strong>Convert to JPG</strong> button. The tool will instantly process the file and generate a JPG version that you can preview and download immediately.
+</p>
+
+<p>
+Since everything happens inside your browser, your image is not uploaded to a server. This helps keep your files private and makes the conversion quick and simple.
+</p>
+
+<h3>Why Use This PNG to JPG Converter?</h3>
+<ul>
+    <li><strong>Fast Conversion:</strong> Convert PNG images to JPG in seconds.</li>
+    <li><strong>Browser-Based:</strong> No software installation required.</li>
+    <li><strong>Private:</strong> Your image stays on your device.</li>
+    <li><strong>Easy Preview:</strong> See the converted result before downloading.</li>
+    <li><strong>Free to Use:</strong> No signup or payment required.</li>
+</ul>
+
+<h3>Important Note</h3>
+<p>
+JPG does not support transparency. If your PNG image has transparent areas, those parts will usually become white in the converted JPG image.
+</p>
+
+</section>
+
+<section class="info-section">
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q1: Is this PNG to JPG converter free to use?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes, this PNG to JPG converter is completely free to use online.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q2: Are my images uploaded to a server?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        No, the conversion happens directly in your browser, so your image stays on your device.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q3: What input format is supported?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        This tool accepts PNG image files.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q4: Can I download the JPG after conversion?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes, once the image is converted you can download the JPG file instantly.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q5: What happens to PNG transparency when converting to JPG?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        JPG does not support transparency, so transparent areas in the PNG will usually become white in the converted JPG.
+    </div>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="../privacy.html">Privacy Policy</a> | 
+<a href="../about.html">About Us</a> | 
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+let uploadedImage = new Image();
+let uploadedFile = null;
+let convertedReady = false;
+
+const imageInput = document.getElementById("imageInput");
+const preview = document.getElementById("preview");
+const imageInfo = document.getElementById("imageInfo");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+function formatFileSize(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB";
+    return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+}
+
+imageInput.addEventListener("change", function(event) {
+    const file = event.target.files[0];
+
+    convertedReady = false;
+    preview.innerHTML = "";
+    imageInfo.innerHTML = "";
+
+    if (!file) return;
+
+    if (!(file.type === "image/png" || /\.png$/i.test(file.name))) {
+        imageInfo.innerHTML = "<div style='color:red;'>Please select a valid PNG image.</div>";
+        imageInput.value = "";
+        return;
+    }
+
+    uploadedFile = file;
+
+    const reader = new FileReader();
+
+    reader.onload = function(event) {
+        uploadedImage = new Image();
+
+        uploadedImage.onload = function() {
+            imageInfo.innerHTML = `
+                <div class="average-result">
+                    <div><strong>Original Image Details</strong></div>
+                    <hr>
+                    <p><strong>File Name:</strong> ${file.name}</p>
+                    <p><strong>File Size:</strong> ${formatFileSize(file.size)}</p>
+                    <p><strong>File Type:</strong> ${file.type || "image/png"}</p>
+                    <p><strong>Dimensions:</strong> ${uploadedImage.width} × ${uploadedImage.height}px</p>
+                </div>
+            `;
+
+            preview.innerHTML = `
+                <div class="average-result" style="margin-top:20px;">
+                    <div><strong>Original Preview</strong></div>
+                    <div style="margin-top:10px;">
+                        <img src="${event.target.result}" alt="Original PNG preview" style="max-width:100%;border-radius:10px;">
+                    </div>
+                </div>
+            `;
+        };
+
+        uploadedImage.src = event.target.result;
+    };
+
+    reader.readAsDataURL(file);
+});
+
+function convertImage() {
+    if (!uploadedImage.src) {
+        imageInfo.innerHTML = "<div style='color:red;'>Please upload a PNG image first.</div>";
+        return;
+    }
+
+    canvas.width = uploadedImage.width;
+    canvas.height = uploadedImage.height;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(uploadedImage, 0, 0);
+
+    const jpgDataUrl = canvas.toDataURL("image/jpeg", 0.9);
+    convertedReady = true;
+
+    preview.innerHTML = `
+        <div class="average-result" style="margin-top:20px;">
+            <div><strong>Converted JPG Preview</strong></div>
+            <div style="margin-top:10px;">
+                <img src="${jpgDataUrl}" alt="Converted JPG preview" style="max-width:100%;border-radius:10px;">
+            </div>
+        </div>
+    `;
+
+    imageInfo.innerHTML = `
+        <div class="average-result">
+            <div><strong>Conversion Details</strong></div>
+            <hr>
+            <p><strong>Original File:</strong> ${uploadedFile ? uploadedFile.name : "Uploaded image"}</p>
+            <p><strong>Original Size:</strong> ${uploadedFile ? formatFileSize(uploadedFile.size) : "N/A"}</p>
+            <p><strong>Original Dimensions:</strong> ${uploadedImage.width} × ${uploadedImage.height}px</p>
+            <p><strong>Output Format:</strong> JPG</p>
+            <p><strong>Transparency:</strong> Transparent areas become white in JPG.</p>
+        </div>
+    `;
+
+    preview.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function downloadJPG() {
+    if (!convertedReady || !canvas.width || !canvas.height) {
+        alert("Please convert the image first.");
+        return;
+    }
+
+    const link = document.createElement("a");
+    const baseName = uploadedFile ? uploadedFile.name.replace(/\.[^/.]+$/, "") : "converted-image";
+    link.download = `${baseName}.jpg`;
+    link.href = canvas.toDataURL("image/jpeg", 0.9);
+    link.click();
+}
+
+function clearAll() {
+    imageInput.value = "";
+    uploadedImage = new Image();
+    uploadedFile = null;
+    convertedReady = false;
+    preview.innerHTML = "";
+    imageInfo.innerHTML = "";
+    canvas.width = 0;
+    canvas.height = 0;
+}
+
+function loadSampleMessage() {
+    imageInfo.innerHTML = `
+        <div class="average-result">
+            <div><strong>How it works:</strong> Upload a PNG image, click Convert to JPG, then download the JPG file instantly.</div>
+        </div>
+    `;
+    preview.innerHTML = "";
+}
+
+</script>
+
+<script>
+const tools = [
+    { name: "Image Compressor", url: "image-compressor.html", icon: "🗜️", category: "image" },
+    { name: "Image Resizer", url: "image-resizer.html", icon: "📏", category: "image" },
+    { name: "JPG to PNG Converter", url: "jpg-to-png.html", icon: "🔄", category: "image" },
+    { name: "PNG to JPG Converter", url: "pngtojpg.html", icon: "🔁", category: "image" },
+    { name: "Bulk Image Blur", url: "bulk-image-blur.html", icon: "🌫️", category: "image" },
+    { name: "GIF Maker", url: "gif-maker.html", icon: "🎞️", category: "image" },
+    { name: "Image Metadata Viewer", url: "image-metadata-viewer.html", icon: "🧾", category: "image" },
+    { name: "Image Rotator", url: "image-rotator.html", icon: "🔄", category: "image" },
+    { name: "Image to WebP", url: "image-to-webp.html", icon: "🖼️", category: "image" },
+    { name: "Image Upscaler", url: "image-upscaler.html", icon: "🔍", category: "image" },
+    { name: "Image to Base64", url: "imagetobase64.html", icon: "🔢", category: "image" },
+    { name: "WebP to PNG", url: "webp-to-png.html", icon: "🔄", category: "image" },
+    { name: "YouTube Thumbnail Downloader", url: "youtube-thumbnail-downloader.html", icon: "📺", category: "image" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Image Rotator Online Free - Rotate JPG, PNG & WebP Images | SuperTools</title>
+<meta name="description" content="Free online image rotator to rotate JPG, PNG, and WebP images instantly. Upload an image, rotate left or right, preview the result, and download the rotated image with SuperTools.">
+<meta name="keywords" content="image rotator, rotate image online, rotate jpg, rotate png, rotate webp, photo rotator, turn image online">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/tools/image-rotator.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="Image Rotator Online Free - SuperTools">
+<meta property="og:description" content="Rotate images online instantly with the free SuperTools Image Rotator.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/tools/image-rotator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image Rotator Online Free - SuperTools">
+<meta name="twitter:description" content="Rotate JPG, PNG, and WebP images instantly and download the result.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Image Rotator",
+  "alternateName": "Online Image Rotator",
+  "url": "https://supertools1.site/tools/image-rotator.html",
+  "description": "Free online image rotator to rotate JPG, PNG, and WebP images instantly.",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Rotate image left",
+    "Rotate image right",
+    "Preview rotated image",
+    "Download rotated image",
+    "Supports JPG PNG and WebP",
+    "Browser-based processing",
+    "Free online tool"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this image rotator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this image rotator is completely free to use online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my images uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, all image rotation happens directly in your browser, so your files stay on your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What image formats are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool supports common image formats including JPG, PNG, and WebP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I rotate an image multiple times?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can rotate the image left or right as many times as you want before downloading it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I download the rotated image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, once the image is rotated you can download it instantly to your device."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+    <h1>Image Rotator</h1>
+    <p>Upload an image, rotate it left or right instantly, preview the result, and download the rotated image.</p>
+
+    <div id="dropArea" class="drop-area">
+        <p><i class="fas fa-cloud-arrow-up"></i> Drag & drop an image here</p>
+        <p>or click to choose an image</p>
+    </div>
+
+    <label for="upload">Upload Image</label>
+    <input type="file" id="upload" accept="image/*" aria-label="Upload image for rotation">
+
+    <div class="button-group">
+        <button type="button" onclick="rotateLeft()">
+            <i class="fas fa-rotate-left"></i> Rotate Left
+        </button>
+
+        <button type="button" onclick="rotateRight()">
+            <i class="fas fa-rotate-right"></i> Rotate Right
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSampleMessage()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+    </div>
+
+    <div id="imageInfo"></div>
+
+    <canvas id="canvas"></canvas>
+
+    <div class="button-group">
+        <a id="downloadBtn" style="display:none;">
+            <button type="button">
+                <i class="fas fa-download"></i> Download Rotated Image
+            </button>
+        </a>
+    </div>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+
+    <h2>How to Rotate an Image</h2>
+
+    <p>
+        The <strong>Image Rotator</strong> lets you turn an image left or right directly in your browser. It is useful when a photo appears sideways,
+        upside down, or simply needs a better orientation for websites, documents, social posts, presentations, or personal use.
+    </p>
+
+    <p>
+        To use the tool, upload your image or drag and drop it into the upload area. Once loaded, click <strong>Rotate Left</strong> or
+        <strong>Rotate Right</strong> to turn the image by 90 degrees at a time. You can keep rotating until the preview looks exactly how you want.
+    </p>
+
+    <p>
+        After rotating the image, you can download the final version instantly. The whole process happens in your browser, so your image is not
+        uploaded to a server, which helps keep your files private.
+    </p>
+
+    <h3>Why Use This Image Rotator?</h3>
+    <ul>
+        <li><strong>Instant Rotation:</strong> Rotate images in seconds.</li>
+        <li><strong>Easy Controls:</strong> Turn images left or right with one click.</li>
+        <li><strong>Preview Before Download:</strong> See the result first.</li>
+        <li><strong>Supports Common Formats:</strong> Works with JPG, PNG, and WebP.</li>
+        <li><strong>Private Processing:</strong> Files stay on your device.</li>
+        <li><strong>Free to Use:</strong> No signup or installation required.</li>
+    </ul>
+
+    <h3>Common Uses</h3>
+    <p>
+        Image rotation is useful for fixing sideways phone photos, adjusting product images, preparing visuals for websites, aligning scanned
+        pictures, and making photos fit better in posts, documents, or profile layouts.
+    </p>
+
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: Is this image rotator free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this image rotator is completely free to use online.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Are my images uploaded to a server?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No, all image rotation happens directly in your browser, so your files stay on your device.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: What image formats are supported?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            You can rotate common image formats such as JPG, PNG, and WebP.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I rotate an image multiple times?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can rotate the image as many times as needed before downloading it.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Can I download the rotated image?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, after rotating the image you can download the final result instantly.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+let img = new Image();
+let uploadedFile = null;
+let rotation = 0;
+
+const upload = document.getElementById("upload");
+const dropArea = document.getElementById("dropArea");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const imageInfo = document.getElementById("imageInfo");
+const downloadBtn = document.getElementById("downloadBtn");
+
+dropArea.addEventListener("click", () => upload.click());
+
+dropArea.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropArea.classList.add("dragover");
+});
+
+dropArea.addEventListener("dragleave", () => {
+    dropArea.classList.remove("dragover");
+});
+
+dropArea.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropArea.classList.remove("dragover");
+
+    const files = Array.from(e.dataTransfer.files).filter(file => file.type.startsWith("image/"));
+
+    if (!files.length) {
+        alert("Please drop a valid image file.");
+        return;
+    }
+
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(files[0]);
+    upload.files = dataTransfer.files;
+    loadImage(files[0]);
+});
+
+upload.addEventListener("change", function(e) {
+    const file = e.target.files[0];
+    if (file) {
+        loadImage(file);
+    }
+});
+
+function formatFileSize(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB";
+    return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+}
+
+function loadImage(file) {
+    uploadedFile = file;
+    rotation = 0;
+
+    const reader = new FileReader();
+    reader.onload = function(event) {
+        img = new Image();
+        img.onload = function() {
+            drawImage();
+            imageInfo.innerHTML = `
+                <div class="average-result" style="margin-top:20px;">
+                    <div><strong>Image Details</strong></div>
+                    <hr>
+                    <p><strong>File Name:</strong> ${file.name}</p>
+                    <p><strong>File Size:</strong> ${formatFileSize(file.size)}</p>
+                    <p><strong>Dimensions:</strong> ${img.width} × ${img.height}px</p>
+                    <p><strong>Current Rotation:</strong> ${((rotation % 360) + 360) % 360}°</p>
+                </div>
+            `;
+        };
+        img.src = event.target.result;
+    };
+    reader.readAsDataURL(file);
+}
+
+function drawImage() {
+    if (!img.src) return;
+
+    const normalizedRotation = ((rotation % 360) + 360) % 360;
+    const radians = normalizedRotation * Math.PI / 180;
+
+    if (normalizedRotation === 90 || normalizedRotation === 270) {
+        canvas.width = img.height;
+        canvas.height = img.width;
+    } else {
+        canvas.width = img.width;
+        canvas.height = img.height;
+    }
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.save();
+    ctx.translate(canvas.width / 2, canvas.height / 2);
+    ctx.rotate(radians);
+    ctx.drawImage(img, -img.width / 2, -img.height / 2);
+    ctx.restore();
+
+    imageInfo.innerHTML = `
+        <div class="average-result" style="margin-top:20px;">
+            <div><strong>Image Details</strong></div>
+            <hr>
+            <p><strong>File Name:</strong> ${uploadedFile ? uploadedFile.name : "Uploaded Image"}</p>
+            <p><strong>File Size:</strong> ${uploadedFile ? formatFileSize(uploadedFile.size) : "N/A"}</p>
+            <p><strong>Original Dimensions:</strong> ${img.width} × ${img.height}px</p>
+            <p><strong>Current Rotation:</strong> ${normalizedRotation}°</p>
+        </div>
+    `;
+
+    updateDownload();
+    canvas.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function rotateLeft() {
+    if (!img.src) {
+        imageInfo.innerHTML = "<div style='color:red;'>Please upload an image first.</div>";
+        return;
+    }
+    rotation -= 90;
+    drawImage();
+}
+
+function rotateRight() {
+    if (!img.src) {
+        imageInfo.innerHTML = "<div style='color:red;'>Please upload an image first.</div>";
+        return;
+    }
+    rotation += 90;
+    drawImage();
+}
+
+function updateDownload() {
+    const isPng = uploadedFile && uploadedFile.type === "image/png";
+    downloadBtn.href = canvas.toDataURL(isPng ? "image/png" : "image/jpeg", 0.95);
+    downloadBtn.download = isPng ? "rotated-image.png" : "rotated-image.jpg";
+    downloadBtn.style.display = "inline-block";
+}
+
+function clearAll() {
+    upload.value = "";
+    img = new Image();
+    uploadedFile = null;
+    rotation = 0;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    canvas.width = 0;
+    canvas.height = 0;
+    imageInfo.innerHTML = "";
+    downloadBtn.style.display = "none";
+    downloadBtn.removeAttribute("href");
+}
+
+function loadSampleMessage() {
+    imageInfo.innerHTML = `
+        <div class="average-result" style="margin-top:20px;">
+            <div><strong>How it works:</strong> Upload an image, then use Rotate Left or Rotate Right to change its orientation and download the result.</div>
+        </div>
+    `;
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Image Compressor", url: "image-compressor.html", icon: "🗜️", category: "image" },
+    { name: "Image Resizer", url: "image-resizer.html", icon: "📏", category: "image" },
+    { name: "JPG to PNG Converter", url: "jpg-to-png.html", icon: "🔄", category: "image" },
+    { name: "PNG to JPG Converter", url: "pngtojpg.html", icon: "🔁", category: "image" },
+    { name: "Bulk Image Blur", url: "bulk-image-blur.html", icon: "🌫️", category: "image" },
+    { name: "GIF Maker", url: "gif-maker.html", icon: "🎞️", category: "image" },
+    { name: "Image Metadata Viewer", url: "image-metadata-viewer.html", icon: "🧾", category: "image" },
+    { name: "Image Rotator", url: "image-rotator.html", icon: "🔄", category: "image" },
+    { name: "Image to WebP", url: "image-to-webp.html", icon: "🖼️", category: "image" },
+    { name: "Image Upscaler", url: "image-upscaler.html", icon: "🔍", category: "image" },
+    { name: "Image to Base64", url: "imagetobase64.html", icon: "🔢", category: "image" },
+    { name: "WebP to PNG", url: "webp-to-png.html", icon: "🔄", category: "image" },
+    { name: "YouTube Thumbnail Downloader", url: "youtube-thumbnail-downloader.html", icon: "📺", category: "image" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

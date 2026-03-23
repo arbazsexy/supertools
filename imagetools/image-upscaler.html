@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Image Upscaler Online Free - Upscale JPG, PNG & WebP Images | SuperTools</title>
+<meta name="description" content="Free online image upscaler to enlarge JPG, PNG, and WebP images instantly. Increase image size by 2x, 3x, or 4x, preview the result, and download the upscaled image with SuperTools.">
+<meta name="keywords" content="image upscaler, upscale image online, enlarge image, increase image resolution, photo upscaler, jpg upscaler, png upscaler, webp upscaler">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/tools/image-upscaler.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="Image Upscaler Online Free - SuperTools">
+<meta property="og:description" content="Increase image size and resolution online instantly with the free SuperTools Image Upscaler.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/tools/image-upscaler.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image Upscaler Online Free - SuperTools">
+<meta name="twitter:description" content="Upscale JPG, PNG, and WebP images by 2x, 3x, or 4x with instant preview and download.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Adsense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Image Upscaler",
+  "alternateName": "Online Image Upscaler",
+  "url": "https://supertools1.site/tools/image-upscaler.html",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "description": "Upscale images online by increasing their resolution and dimensions.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Upscale images by 2x",
+    "Upscale images by 3x",
+    "Upscale images by 4x",
+    "Preview upscaled image",
+    "Download upscaled image",
+    "Supports JPG PNG and WebP",
+    "Browser-based image processing",
+    "Free online tool"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this image upscaler free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this image upscaler is completely free to use online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the image leave my device?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, all image processing happens directly in your browser, so your file stays on your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What image formats are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool supports common image formats such as JPG, PNG, and WebP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I upscale an image by 2x, 3x, or 4x?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this tool lets you enlarge images by 2x, 3x, or 4x."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I download the upscaled image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, once the image is upscaled you can download it instantly to your device."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+    <h1>Image Upscaler</h1>
+
+    <p>Upload an image and enlarge it by 2x, 3x, or 4x instantly with preview and download.</p>
+
+    <div id="dropArea" class="drop-area">
+        <p><i class="fas fa-cloud-arrow-up"></i> Drag & drop an image here</p>
+        <p>or click to choose an image</p>
+    </div>
+
+    <label for="upload">Upload Image</label>
+    <input type="file" id="upload" accept="image/*" aria-label="Upload image for upscaling">
+
+    <label for="scale">Select Upscale Factor</label>
+    <select id="scale" aria-label="Select upscale factor">
+        <option value="2">2x</option>
+        <option value="3">3x</option>
+        <option value="4">4x</option>
+    </select>
+
+    <div class="button-group">
+        <button type="button" onclick="upscaleImage()">
+            <i class="fas fa-up-right-and-down-left-from-center"></i> Upscale
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSampleMessage()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+    </div>
+
+    <div id="imageInfo"></div>
+
+    <canvas id="canvas"></canvas>
+
+    <div class="button-group">
+        <a id="downloadBtn" style="display:none;">
+            <button type="button">
+                <i class="fas fa-download"></i> Download Upscaled Image
+            </button>
+        </a>
+    </div>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+
+    <h2>How to Upscale an Image</h2>
+
+    <p>
+        The <strong>Image Upscaler</strong> helps you enlarge an image by increasing its dimensions directly in your browser. This is useful when you need a bigger version of a photo for presentations, printing, websites, thumbnails, design drafts, or social media content.
+    </p>
+
+    <p>
+        To use the tool, upload your image or drag and drop it into the upload area. Then select an upscale factor such as <strong>2x</strong>, <strong>3x</strong>, or <strong>4x</strong>. Click the <strong>Upscale</strong> button, and the tool will generate a larger version of your image instantly.
+    </p>
+
+    <p>
+        After processing, you can preview the upscaled image and download it right away. Since the entire process works inside your browser, your file does not get uploaded to a remote server, which helps keep your images private.
+    </p>
+
+    <h3>Why Use This Image Upscaler?</h3>
+    <ul>
+        <li><strong>Quick Enlargement:</strong> Increase image size in seconds.</li>
+        <li><strong>Simple Controls:</strong> Choose 2x, 3x, or 4x scaling easily.</li>
+        <li><strong>Preview Results:</strong> See the enlarged image before downloading.</li>
+        <li><strong>Supports Common Formats:</strong> Works with JPG, PNG, and WebP.</li>
+        <li><strong>Private Processing:</strong> Your image stays on your device.</li>
+        <li><strong>Free to Use:</strong> No signup or software installation required.</li>
+    </ul>
+
+    <h3>Important Note</h3>
+    <p>
+        This tool enlarges image dimensions using browser-based scaling. It is useful for making an image larger, but it does not recreate lost details like advanced AI restoration tools. It is best for quick resizing and basic upscaling needs.
+    </p>
+
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: Is this image upscaler free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this image upscaler is completely free to use online.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Does the image leave my device?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No, all image processing happens directly in your browser, so your file stays on your device.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: What formats are supported?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            You can upload common image formats such as JPG, PNG, and WebP.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I upscale by 2x, 3x, or 4x?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tool lets you enlarge the image by 2x, 3x, or 4x.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Can I download the upscaled image?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, once the image is enlarged you can download it instantly.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+let currentImage = new Image();
+let uploadedFile = null;
+
+const upload = document.getElementById("upload");
+const dropArea = document.getElementById("dropArea");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const imageInfo = document.getElementById("imageInfo");
+const downloadBtn = document.getElementById("downloadBtn");
+
+// DRAG + DROP FIXED VERSION
+dropArea.addEventListener("click", () => upload.click());
+
+["dragenter", "dragover"].forEach(eventName => {
+    dropArea.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropArea.classList.add("dragover");
+    });
+});
+
+["dragleave", "drop"].forEach(eventName => {
+    dropArea.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropArea.classList.remove("dragover");
+    });
+});
+
+dropArea.addEventListener("drop", (e) => {
+    const file = e.dataTransfer.files[0];
+
+    if (!file || !file.type.startsWith("image/")) {
+        alert("Please drop a valid image file.");
+        return;
+    }
+
+    loadImage(file);
+});
+
+upload.addEventListener("change", function(e) {
+    const file = e.target.files[0];
+    if (file) {
+        loadImage(file);
+    }
+});
+
+function formatFileSize(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB";
+    return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+}
+
+function loadImage(file) {
+    uploadedFile = file;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        currentImage = new Image();
+        currentImage.onload = function() {
+            imageInfo.innerHTML = `
+                <div class="average-result" style="margin-top:20px;">
+                    <div><strong>Original Image Details</strong></div>
+                    <hr>
+                    <p><strong>File Name:</strong> ${file.name}</p>
+                    <p><strong>File Size:</strong> ${formatFileSize(file.size)}</p>
+                    <p><strong>Original Dimensions:</strong> ${currentImage.width} × ${currentImage.height}px</p>
+                    <p><strong>Selected Upscale:</strong> ${document.getElementById("scale").value}x</p>
+                </div>
+            `;
+
+            canvas.width = currentImage.width;
+            canvas.height = currentImage.height;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(currentImage, 0, 0);
+            downloadBtn.style.display = "none";
+        };
+        currentImage.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+}
+
+function upscaleImage() {
+    if (!currentImage.src) {
+        imageInfo.innerHTML = "<div style='color:red;'>Please upload an image first.</div>";
+        return;
+    }
+
+    const scale = parseInt(document.getElementById("scale").value, 10);
+    const newWidth = currentImage.width * scale;
+    const newHeight = currentImage.height * scale;
+
+    canvas.width = newWidth;
+    canvas.height = newHeight;
+
+    ctx.clearRect(0, 0, newWidth, newHeight);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = "high";
+    ctx.drawImage(currentImage, 0, 0, newWidth, newHeight);
+
+    imageInfo.innerHTML = `
+        <div class="average-result" style="margin-top:20px;">
+            <div><strong>Upscaled Image Details</strong></div>
+            <hr>
+            <p><strong>File Name:</strong> ${uploadedFile ? uploadedFile.name : "Uploaded Image"}</p>
+            <p><strong>Original Dimensions:</strong> ${currentImage.width} × ${currentImage.height}px</p>
+            <p><strong>Upscaled Dimensions:</strong> ${newWidth} × ${newHeight}px</p>
+            <p><strong>Upscale Factor:</strong> ${scale}x</p>
+        </div>
+    `;
+
+    const isPng = uploadedFile && uploadedFile.type === "image/png";
+    downloadBtn.href = canvas.toDataURL(isPng ? "image/png" : "image/jpeg", 0.95);
+    downloadBtn.download = isPng ? "upscaled-image.png" : "upscaled-image.jpg";
+    downloadBtn.style.display = "inline-block";
+
+    canvas.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function clearAll() {
+    upload.value = "";
+    uploadedFile = null;
+    currentImage = new Image();
+    imageInfo.innerHTML = "";
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    canvas.width = 0;
+    canvas.height = 0;
+    downloadBtn.style.display = "none";
+    downloadBtn.removeAttribute("href");
+}
+
+function loadSampleMessage() {
+    imageInfo.innerHTML = `
+        <div class="average-result" style="margin-top:20px;">
+            <div><strong>How it works:</strong> Upload an image, choose 2x, 3x, or 4x, then click Upscale to generate a larger version.</div>
+        </div>
+    `;
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Image Compressor", url: "image-compressor.html", icon: "🗜️", category: "image" },
+    { name: "Image Resizer", url: "image-resizer.html", icon: "📏", category: "image" },
+    { name: "JPG to PNG Converter", url: "jpg-to-png.html", icon: "🔄", category: "image" },
+    { name: "PNG to JPG Converter", url: "pngtojpg.html", icon: "🔁", category: "image" },
+    { name: "Bulk Image Blur", url: "bulk-image-blur.html", icon: "🌫️", category: "image" },
+    { name: "GIF Maker", url: "gif-maker.html", icon: "🎞️", category: "image" },
+    { name: "Image Metadata Viewer", url: "image-metadata-viewer.html", icon: "🧾", category: "image" },
+    { name: "Image Rotator", url: "image-rotator.html", icon: "🔄", category: "image" },
+    { name: "Image to WebP", url: "image-to-webp.html", icon: "🖼️", category: "image" },
+    { name: "Image Upscaler", url: "image-upscaler.html", icon: "🔍", category: "image" },
+    { name: "Image to Base64", url: "imagetobase64.html", icon: "🔢", category: "image" },
+    { name: "WebP to PNG", url: "webp-to-png.html", icon: "🔄", category: "image" },
+    { name: "YouTube Thumbnail Downloader", url: "youtube-thumbnail-downloader.html", icon: "📺", category: "image" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>UUID Generator Online Free - Generate UUID v4 Instantly</title>
+    <meta name="description" content="Free online UUID generator to create UUID v4 identifiers instantly. Generate multiple UUIDs, choose output formats, copy results, and download UUIDs for development, APIs, databases, and apps with SuperTools.">
+    <meta name="keywords" content="uuid generator, uuid v4 generator, guid generator, random uuid generator, uuid online, developer uuid tool">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/uuidgenerator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="UUID Generator Online Free - SuperTools">
+    <meta property="og:description" content="Generate UUID v4 identifiers instantly with multiple output format options.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/uuidgenerator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="UUID Generator Online Free - SuperTools">
+    <meta name="twitter:description" content="Generate UUID v4 instantly, copy results, and download them in one click.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "UUID Generator",
+      "alternateName": "UUID v4 Generator",
+      "url": "https://supertools1.site/uuidgenerator.html",
+      "description": "Free online UUID generator to create UUID v4 identifiers instantly with multiple output formats for developers, APIs, databases, and apps.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Generate UUID v4 online",
+        "Generate multiple UUIDs",
+        "Lowercase and uppercase UUID output",
+        "UUID without hyphens",
+        "UUID with braces",
+        "UUID URN format",
+        "One per line output",
+        "Comma separated output",
+        "JSON array output",
+        "Copy generated UUIDs",
+        "Download UUIDs as text",
+        "Free and browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a UUID?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A UUID, or Universally Unique Identifier, is a 128-bit identifier used in software and databases to uniquely identify records, objects, sessions, and resources."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is UUID v4?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "UUID version 4 is a randomly generated UUID format. It is widely used in modern software because it is easy to generate and has an extremely low chance of duplication."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I generate multiple UUIDs at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool lets you generate multiple UUIDs instantly by choosing how many identifiers you need."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I copy or download generated UUIDs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can copy all generated UUIDs or download them as a text file in one click."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this UUID generator free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this UUID generator is completely free to use and works directly in your browser."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>UUID Generator</h1>
+    <p>Generate random UUID v4 identifiers instantly.</p>
+
+    <label for="count">Number of UUIDs</label>
+    <input type="number" id="count" value="1" min="1" max="1000" aria-label="Enter number of UUIDs">
+
+    <label for="format">UUID format</label>
+    <select id="format" aria-label="Select UUID format">
+        <option value="lower">Lowercase</option>
+        <option value="upper">Uppercase</option>
+        <option value="nohyphen">No Hyphens</option>
+        <option value="braces">With Braces</option>
+        <option value="urn">URN Format</option>
+    </select>
+
+    <label for="outputStyle">Output style</label>
+    <select id="outputStyle" aria-label="Select UUID output style">
+        <option value="lines">One Per Line</option>
+        <option value="comma">Comma Separated</option>
+        <option value="json">JSON Array</option>
+    </select>
+
+    <div class="button-group">
+        <button type="button" onclick="generateUUIDs()">
+            <i class="fas fa-fingerprint"></i> Generate UUIDs
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearUUIDs()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyUUIDs()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+
+        <button type="button" class="action-btn secondary-btn" onclick="downloadUUIDs()">
+            <i class="fas fa-download"></i> Download
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the UUID Generator</h2>
+
+    <p>
+        The <strong>UUID Generator</strong> is a free online developer tool that creates random <strong>UUID v4 identifiers</strong> instantly.
+        UUID stands for <strong>Universally Unique Identifier</strong>, and it is commonly used in databases, APIs, authentication systems,
+        distributed applications, and software development projects where unique IDs are required.
+    </p>
+
+    <p>
+        To use the tool, choose how many UUIDs you want to generate, then select the UUID format you need. You can output standard lowercase UUIDs,
+        uppercase UUIDs, UUIDs without hyphens, UUIDs with braces, or URN-formatted UUIDs. You can also choose how the results should be displayed,
+        such as one per line, comma separated, or as a JSON array.
+    </p>
+
+    <p>
+        After clicking the <strong>Generate UUIDs</strong> button, the results appear instantly. You can then copy them in one click or download them
+        as a text file. This makes the tool useful for developers who need quick unique identifiers for testing, seeding databases, mock APIs, objects,
+        sessions, tokens, and application records.
+    </p>
+
+    <h3>Why Use This UUID Generator?</h3>
+    <ul>
+        <li><strong>UUID v4 Generation:</strong> Generate random UUID version 4 identifiers instantly.</li>
+        <li><strong>Multiple UUIDs:</strong> Create one UUID or hundreds at once.</li>
+        <li><strong>Format Options:</strong> Choose lowercase, uppercase, no hyphens, braces, or URN format.</li>
+        <li><strong>Output Styles:</strong> Get results one per line, comma separated, or as a JSON array.</li>
+        <li><strong>Copy and Download:</strong> Copy generated UUIDs or download them in a text file.</li>
+        <li><strong>Fast and Lightweight:</strong> Runs directly in your browser with no signup.</li>
+        <li><strong>Useful for Developers:</strong> Great for databases, APIs, apps, and testing.</li>
+        <li><strong>Completely Free:</strong> No login, no subscription, and easy to use.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>developers</strong>, <strong>students</strong>, <strong>testers</strong>, <strong>backend engineers</strong>,
+        <strong>API developers</strong>, and anyone working with unique identifiers. It is especially helpful for database rows, app objects, session IDs,
+        tokens, seeded test data, and distributed systems where unique references are important.
+    </p>
+
+    <h3>Example UUID</h3>
+    <p class="formula-box">550e8400-e29b-41d4-a716-446655440000</p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is a UUID?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            A <strong>UUID</strong>, or <strong>Universally Unique Identifier</strong>, is a 128-bit value used in software systems to uniquely identify
+            objects, database records, sessions, and resources.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: What is UUID v4?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            <strong>UUID version 4</strong> is a randomly generated UUID format. It is popular in modern software because it is easy to generate
+            and has an extremely low chance of duplication.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I generate multiple UUIDs at once?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tool lets you generate multiple UUIDs instantly by choosing how many identifiers you want.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I copy or download generated UUIDs?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can copy all generated UUIDs or download them as a text file in one click.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this UUID generator free and safe to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tool is <strong>completely free</strong> and runs directly in your browser. No signup is required.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+let generatedUUIDs = [];
+let generatedOutput = "";
+
+function fallbackUUIDv4() {
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+        const r = Math.random() * 16 | 0;
+        const v = c === "x" ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
+
+function createUUIDv4() {
+    if (window.crypto && typeof window.crypto.randomUUID === "function") {
+        return window.crypto.randomUUID();
+    }
+    return fallbackUUIDv4();
+}
+
+function formatUUID(uuid, format) {
+    if (format === "upper") {
+        return uuid.toUpperCase();
+    }
+    if (format === "nohyphen") {
+        return uuid.replace(/-/g, "");
+    }
+    if (format === "braces") {
+        return `{${uuid}}`;
+    }
+    if (format === "urn") {
+        return `urn:uuid:${uuid}`;
+    }
+    return uuid.toLowerCase();
+}
+
+function buildOutput(items, outputStyle) {
+    if (outputStyle === "comma") {
+        return items.join(", ");
+    }
+    if (outputStyle === "json") {
+        return JSON.stringify(items, null, 2);
+    }
+    return items.join("\n");
+}
+
+function generateUUIDs() {
+    const count = parseInt(document.getElementById("count").value, 10);
+    const format = document.getElementById("format").value;
+    const outputStyle = document.getElementById("outputStyle").value;
+    const result = document.getElementById("result");
+
+    if (!count || count < 1 || count > 1000) {
+        result.innerHTML = `<div class="average-result result-pop"><div style="color:red;"><strong>Please enter a valid number between 1 and 1000.</strong></div></div>`;
+        return;
+    }
+
+    generatedUUIDs = [];
+    for (let i = 0; i < count; i++) {
+        generatedUUIDs.push(formatUUID(createUUIDv4(), format));
+    }
+
+    generatedOutput = buildOutput(generatedUUIDs, outputStyle);
+
+    const rows = Math.min(Math.max(generatedUUIDs.length + 1, 5), 14);
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="status-message"><strong>Generated ${generatedUUIDs.length} UUID${generatedUUIDs.length > 1 ? "s" : ""}:</strong></div>
+
+            <div class="stats">
+                <div class="stat-box">UUID Version<br>v4</div>
+                <div class="stat-box">Total<br>${generatedUUIDs.length}</div>
+                <div class="stat-box">Format<br>${document.getElementById("format").options[document.getElementById("format").selectedIndex].text}</div>
+            </div>
+
+            <hr>
+
+            <textarea class="result-textarea" rows="${rows}" readonly>${generatedOutput}</textarea>
+        </div>
+    `;
+
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function copyUUIDs() {
+    if (!generatedOutput) {
+        alert("Generate UUIDs first!");
+        return;
+    }
+
+    navigator.clipboard.writeText(generatedOutput)
+        .then(() => alert("UUIDs copied to clipboard!"))
+        .catch(() => alert("Failed to copy UUIDs."));
+}
+
+function downloadUUIDs() {
+    if (!generatedOutput) {
+        alert("Generate UUIDs first!");
+        return;
+    }
+
+    const blob = new Blob([generatedOutput], { type: "text/plain;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "supertools-uuids.txt";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+}
+
+function clearUUIDs() {
+    document.getElementById("count").value = "1";
+    document.getElementById("format").value = "lower";
+    document.getElementById("outputStyle").value = "lines";
+    document.getElementById("result").innerHTML = "";
+    generatedUUIDs = [];
+    generatedOutput = "";
+}
+
+function loadSample() {
+    document.getElementById("count").value = "5";
+    document.getElementById("format").value = "upper";
+    document.getElementById("outputStyle").value = "lines";
+    generateUUIDs();
+}
+
+const tools = [
+    { name: "Username Generator", url: "usernamegenerator.html", icon: "🧑", category: "generator" },
+    { name: "Business Name Generator", url: "businessnamegenerator.html", icon: "🏢", category: "generator" },
+    { name: "Domain Name Generator", url: "domainnamegenerator.html", icon: "🌐", category: "generator" },
+    { name: "Hashtag Generator", url: "hashtaggenerator.html", icon: "#️⃣", category: "generator" },
+    { name: "Random Quote Generator", url: "randomquotegenerator.html", icon: "💬", category: "generator" },
+    { name: "Bio Generator", url: "biogenerator.html", icon: "📝", category: "generator" },
+    { name: "Color Palette Generator", url: "colorpalettegenerator.html", icon: "🎨", category: "generator" },
+    { name: "Fake Address Generator", url: "fakeaddressgenerator.html", icon: "🏠", category: "generator" },
+    { name: "MD5 Generator", url: "md5-generator.html", icon: "🔐", category: "generator" },
+    { name: "QR Code Generator", url: "qr.html", icon: "📱", category: "generator" },
+    { name: "Random Emoji Generator", url: "randomemojigenerator.html", icon: "😀", category: "generator" },
+    { name: "Random Name Generator", url: "randomnamegenerator.html", icon: "🎲", category: "generator" },
+    { name: "Random Number Generator", url: "randomnumber.html", icon: "🔢", category: "generator" },
+    { name: "UUID Generator", url: "uuidgenerator.html", icon: "🆔", category: "generator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

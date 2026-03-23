@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>WebP to PNG Converter Online Free - Convert WebP Images Instantly | SuperTools</title>
+<meta name="description" content="Free online WebP to PNG converter. Convert WebP images to PNG format instantly in your browser. Fast, secure, and easy to use with SuperTools.">
+<meta name="keywords" content="webp to png converter, convert webp to png, webp image converter, online image converter, free webp to png">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/tools/webp-to-png.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="WebP to PNG Converter - SuperTools">
+<meta property="og:description" content="Convert WebP images to PNG instantly using SuperTools.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/tools/webp-to-png.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WebP to PNG Converter - SuperTools">
+<meta name="twitter:description" content="Convert WebP images to PNG instantly using SuperTools.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "WebP to PNG Converter",
+  "alternateName": "WebP Image Converter",
+  "url": "https://supertools1.site/tools/webp-to-png.html",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "description": "Convert WebP images to PNG format instantly.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Convert WebP to PNG",
+    "Preview converted image",
+    "Download PNG instantly",
+    "Browser-based image conversion",
+    "Free online tool"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Why convert WebP to PNG?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"PNG format is widely supported by many applications and tools that may not fully support WebP images."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Is this converter free?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes, this WebP to PNG converter is completely free to use online."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Are images uploaded to a server?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No, all conversions happen locally inside your browser, so your files stay on your device."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What input format is supported?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"This tool accepts WebP image files."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I download the PNG after conversion?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes, once the image is converted you can download the PNG file instantly."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Adsense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>WebP to PNG Converter</h1>
+
+<p>Convert WebP images to PNG format instantly using our free online converter.</p>
+
+<label for="upload">Select WebP Image</label>
+<input type="file" id="upload" accept=".webp,image/webp" aria-label="Upload WebP image">
+
+<div class="button-group">
+    <button type="button" onclick="convertImage()">
+        Convert to PNG
+    </button>
+
+    <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+        Clear
+    </button>
+
+    <button type="button" class="action-btn sample-btn" onclick="loadSampleMessage()">
+        Sample
+    </button>
+</div>
+
+<div id="imageInfo"></div>
+<div id="result"></div>
+
+<canvas id="canvas"></canvas>
+
+<div class="button-group">
+    <button type="button" onclick="downloadPNG()">
+        Download PNG
+    </button>
+</div>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+
+<h2>How to Convert WebP to PNG</h2>
+
+<p>
+The <strong>WebP to PNG Converter</strong> helps you change WebP images into PNG format directly in your browser. This is useful when you need a PNG version for design tools, editing software, documents, presentations, or apps that do not fully support WebP.
+</p>
+
+<p>
+To use the tool, upload a WebP image from your device and click the <strong>Convert to PNG</strong> button. The tool will instantly process the file and generate a PNG version that you can preview and download immediately.
+</p>
+
+<p>
+Since everything happens inside your browser, your image is not uploaded to a remote server. This helps keep your files private and makes the conversion quick and simple.
+</p>
+
+<h3>Why Use This WebP to PNG Converter?</h3>
+<ul>
+    <li><strong>Fast Conversion:</strong> Convert WebP images to PNG in seconds.</li>
+    <li><strong>Browser-Based:</strong> No software installation required.</li>
+    <li><strong>Private:</strong> Your image stays on your device.</li>
+    <li><strong>Easy Preview:</strong> See the converted result before downloading.</li>
+    <li><strong>Free to Use:</strong> No signup or payment required.</li>
+</ul>
+
+<h3>Why Convert WebP to PNG?</h3>
+<p>
+WebP is efficient for web use, but PNG is more universally supported in many image editors, office tools, and older applications. Converting WebP to PNG can make your image easier to open, edit, and reuse across different platforms.
+</p>
+
+</section>
+
+<section class="info-section">
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q1: Why convert WebP to PNG?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        PNG format is widely supported by many applications and tools that may not fully support WebP images.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q2: Is this converter free?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes, this WebP to PNG converter is completely free to use online.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q3: Are images uploaded to a server?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        No, all conversions happen locally inside your browser, so your files stay on your device.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q4: What input format is supported?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        This tool accepts WebP image files.
+    </div>
+</div>
+
+<div class="accordion-item faq-card">
+    <button class="accordion-btn" type="button">
+        Q5: Can I download the PNG after conversion?
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="accordion-content">
+        Yes, once the image is converted you can download the PNG file instantly.
+    </div>
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 SuperTools |
+<a href="../privacy.html">Privacy Policy</a> |
+<a href="../about.html">About Us</a> |
+<a href="../contact.html">Contact</a>
+</p>
+
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+let uploadedImage = new Image();
+let uploadedFile = null;
+let convertedReady = false;
+
+const upload = document.getElementById("upload");
+const result = document.getElementById("result");
+const imageInfo = document.getElementById("imageInfo");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+function formatFileSize(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB";
+    return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+}
+
+upload.addEventListener("change", function(e) {
+    const file = e.target.files[0];
+
+    convertedReady = false;
+    result.innerHTML = "";
+    imageInfo.innerHTML = "";
+
+    if (!file) return;
+
+    if (!(file.type === "image/webp" || /\.webp$/i.test(file.name))) {
+        imageInfo.innerHTML = "<div style='color:red;'>Please upload a valid WebP image.</div>";
+        upload.value = "";
+        return;
+    }
+
+    uploadedFile = file;
+
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        uploadedImage = new Image();
+
+        uploadedImage.onload = function() {
+            imageInfo.innerHTML = `
+                <div class="average-result">
+                    <div><strong>Original Image Details</strong></div>
+                    <hr>
+                    <p><strong>File Name:</strong> ${file.name}</p>
+                    <p><strong>File Size:</strong> ${formatFileSize(file.size)}</p>
+                    <p><strong>File Type:</strong> ${file.type || "image/webp"}</p>
+                    <p><strong>Dimensions:</strong> ${uploadedImage.width} × ${uploadedImage.height}px</p>
+                </div>
+            `;
+
+            result.innerHTML = `
+                <div class="average-result" style="margin-top:20px;">
+                    <div><strong>Original Preview</strong></div>
+                    <div style="margin-top:10px;">
+                        <img src="${e.target.result}" alt="Original WebP preview" style="max-width:100%;border-radius:10px;">
+                    </div>
+                </div>
+            `;
+        };
+
+        uploadedImage.src = e.target.result;
+    };
+
+    reader.readAsDataURL(file);
+});
+
+function convertImage() {
+    if (!uploadedImage.src) {
+        imageInfo.innerHTML = "<div style='color:red;'>Please upload a WebP image first.</div>";
+        return;
+    }
+
+    canvas.width = uploadedImage.width;
+    canvas.height = uploadedImage.height;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(uploadedImage, 0, 0);
+
+    const pngDataUrl = canvas.toDataURL("image/png");
+    convertedReady = true;
+
+    result.innerHTML = `
+        <div class="average-result" style="margin-top:20px;">
+            <div><strong>Converted PNG Preview</strong></div>
+            <div style="margin-top:10px;">
+                <img src="${pngDataUrl}" alt="Converted PNG preview" style="max-width:100%;border-radius:10px;">
+            </div>
+        </div>
+    `;
+
+    imageInfo.innerHTML = `
+        <div class="average-result">
+            <div><strong>Conversion Details</strong></div>
+            <hr>
+            <p><strong>Original File:</strong> ${uploadedFile ? uploadedFile.name : "Uploaded image"}</p>
+            <p><strong>Original Size:</strong> ${uploadedFile ? formatFileSize(uploadedFile.size) : "N/A"}</p>
+            <p><strong>Original Dimensions:</strong> ${uploadedImage.width} × ${uploadedImage.height}px</p>
+            <p><strong>Output Format:</strong> PNG</p>
+        </div>
+    `;
+
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function downloadPNG() {
+    if (!convertedReady || !canvas.width || !canvas.height) {
+        alert("Please convert the image first.");
+        return;
+    }
+
+    const link = document.createElement("a");
+    const baseName = uploadedFile ? uploadedFile.name.replace(/\.[^/.]+$/, "") : "converted-image";
+    link.download = `${baseName}.png`;
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+}
+
+function clearAll() {
+    upload.value = "";
+    uploadedImage = new Image();
+    uploadedFile = null;
+    convertedReady = false;
+    result.innerHTML = "";
+    imageInfo.innerHTML = "";
+    canvas.width = 0;
+    canvas.height = 0;
+}
+
+function loadSampleMessage() {
+    imageInfo.innerHTML = `
+        <div class="average-result">
+            <div><strong>How it works:</strong> Upload a WebP image, click Convert to PNG, then download the PNG file instantly.</div>
+        </div>
+    `;
+    result.innerHTML = "";
+}
+
+</script>
+
+<script>
+const tools = [
+    { name: "Image Compressor", url: "image-compressor.html", icon: "🗜️", category: "image" },
+    { name: "Image Resizer", url: "image-resizer.html", icon: "📏", category: "image" },
+    { name: "JPG to PNG Converter", url: "jpg-to-png.html", icon: "🔄", category: "image" },
+    { name: "PNG to JPG Converter", url: "pngtojpg.html", icon: "🔁", category: "image" },
+    { name: "Bulk Image Blur", url: "bulk-image-blur.html", icon: "🌫️", category: "image" },
+    { name: "GIF Maker", url: "gif-maker.html", icon: "🎞️", category: "image" },
+    { name: "Image Metadata Viewer", url: "image-metadata-viewer.html", icon: "🧾", category: "image" },
+    { name: "Image Rotator", url: "image-rotator.html", icon: "🔄", category: "image" },
+    { name: "Image to WebP", url: "image-to-webp.html", icon: "🖼️", category: "image" },
+    { name: "Image Upscaler", url: "image-upscaler.html", icon: "🔍", category: "image" },
+    { name: "Image to Base64", url: "imagetobase64.html", icon: "🔢", category: "image" },
+    { name: "WebP to PNG", url: "webp-to-png.html", icon: "🔄", category: "image" },
+    { name: "YouTube Thumbnail Downloader", url: "youtube-thumbnail-downloader.html", icon: "📺", category: "image" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>
+

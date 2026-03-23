@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Image Metadata Viewer Online Free - View EXIF & Image Details | SuperTools</title>
+<meta name="description" content="Free online image metadata viewer to inspect EXIF data, camera information, file details, resolution, ISO, exposure, and more. Upload an image and view metadata instantly with SuperTools.">
+<meta name="keywords" content="image metadata viewer, exif viewer, photo metadata viewer, view image metadata, image exif data, camera metadata viewer, online metadata viewer">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/tools/image-metadata-viewer.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Image Metadata Viewer Online Free - SuperTools">
+<meta property="og:description" content="View image EXIF metadata, camera details, resolution, and file information instantly online.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/tools/image-metadata-viewer.html">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image Metadata Viewer Online Free - SuperTools">
+<meta name="twitter:description" content="Inspect EXIF image metadata and file details instantly with the free SuperTools Image Metadata Viewer.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Adsense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Image Metadata Viewer",
+  "alternateName": "EXIF Metadata Viewer",
+  "url": "https://supertools1.site/tools/image-metadata-viewer.html",
+  "description": "Free online tool to view image metadata and EXIF data including camera settings, resolution, and file details.",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "View EXIF image metadata",
+    "Show file name and file size",
+    "Show image resolution",
+    "Display camera details",
+    "Show ISO and exposure settings",
+    "Copy metadata to clipboard",
+    "Download image without metadata",
+    "Browser-based processing",
+    "Free online tool"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is image metadata?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Image metadata is hidden information stored inside an image file, such as file details, camera model, date taken, ISO, exposure, and resolution."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this image metadata viewer free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this image metadata viewer is completely free to use online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my images uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, all metadata reading happens directly in your browser, so your image stays on your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What metadata can this tool show?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool can show file information, image resolution, camera make and model, ISO, exposure, focal length, and other EXIF tags when available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I remove metadata from an image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this tool includes an option to download a fresh copy of the image without metadata."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+
+<!-- EXIF Library -->
+<script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+    <h1>Image Metadata Viewer</h1>
+
+    <p>Upload an image to view its EXIF metadata, camera information, resolution, file details, and more.</p>
+
+    <div id="dropArea" class="drop-area">
+        <p><i class="fas fa-cloud-arrow-up"></i> Drag & drop an image here</p>
+        <p>or click to choose an image</p>
+    </div>
+
+    <label for="upload">Select Image</label>
+    <input type="file" id="upload" accept="image/*" aria-label="Upload image to view metadata">
+
+    <div class="button-group">
+        <button type="button" onclick="triggerImageRead()">
+            <i class="fas fa-image"></i> View Metadata
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSampleMessage()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyMetadata()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="preview"></div>
+    <div id="metadata"></div>
+
+    <div class="button-group">
+        <button type="button" onclick="removeMetadata()">
+            <i class="fas fa-download"></i> Download Without Metadata
+        </button>
+    </div>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Image Metadata Viewer</h2>
+
+    <p>
+        The <strong>Image Metadata Viewer</strong> helps you inspect hidden information stored inside image files. This information is often called
+        <strong>metadata</strong> or <strong>EXIF data</strong>. It can include details such as the file name, file size, resolution, camera brand,
+        camera model, ISO value, shutter speed, focal length, date taken, and other technical information.
+    </p>
+
+    <p>
+        To use this tool, simply upload an image from your device or drag and drop it into the upload area. The tool will read the available metadata
+        directly in your browser and show the results instantly. If the image contains EXIF information, it will appear below along with basic file
+        details such as the image size and resolution.
+    </p>
+
+    <p>
+        This tool is useful for photographers, designers, students, content creators, and anyone who wants to inspect image properties quickly.
+        You can also copy the metadata to your clipboard or download a clean version of the image without embedded metadata.
+    </p>
+
+    <h3>What Can This Tool Show?</h3>
+    <ul>
+        <li><strong>File Name:</strong> See the original image file name.</li>
+        <li><strong>File Size:</strong> Check the image file size in KB.</li>
+        <li><strong>Resolution:</strong> View the image width and height.</li>
+        <li><strong>Camera Details:</strong> See camera make and model if available.</li>
+        <li><strong>Photo Settings:</strong> View ISO, exposure time, focal length, flash, and more.</li>
+        <li><strong>Date Information:</strong> Inspect when the image was captured if EXIF includes it.</li>
+    </ul>
+
+    <h3>Why Use This Image Metadata Viewer?</h3>
+    <ul>
+        <li><strong>Instant Results:</strong> View metadata in seconds.</li>
+        <li><strong>Browser-Based:</strong> No software installation needed.</li>
+        <li><strong>Private:</strong> Your image stays on your device during processing.</li>
+        <li><strong>Easy Copying:</strong> Copy metadata with one click.</li>
+        <li><strong>Metadata Removal:</strong> Download a fresh copy without EXIF data.</li>
+        <li><strong>Free to Use:</strong> No signup or payment required.</li>
+    </ul>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is image metadata?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Image metadata is hidden information stored inside an image file. It may include file details, resolution, camera model, date taken,
+            ISO, exposure settings, and other technical information.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Is this image metadata viewer free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tool is completely free to use online.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Are my images uploaded to a server?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No, all metadata reading happens directly in your browser, so your image stays on your device.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: What metadata can this tool show?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This tool can show file information, resolution, camera make and model, ISO, exposure, focal length, and other EXIF tags if they are available in the image.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Can I remove metadata from an image?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can download a new copy of the image without embedded metadata using the download without metadata button.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+let metadataText = "";
+let currentImage = null;
+let currentFile = null;
+
+const upload = document.getElementById("upload");
+const dropArea = document.getElementById("dropArea");
+const preview = document.getElementById("preview");
+const metadata = document.getElementById("metadata");
+
+dropArea.addEventListener("click", () => upload.click());
+
+dropArea.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropArea.classList.add("dragover");
+});
+
+dropArea.addEventListener("dragleave", () => {
+    dropArea.classList.remove("dragover");
+});
+
+dropArea.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropArea.classList.remove("dragover");
+
+    const files = Array.from(e.dataTransfer.files).filter(file => file.type.startsWith("image/"));
+
+    if (!files.length) {
+        alert("Please drop a valid image file.");
+        return;
+    }
+
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(files[0]);
+    upload.files = dataTransfer.files;
+
+    triggerImageRead();
+});
+
+upload.addEventListener("change", () => {
+    if (upload.files.length) {
+        triggerImageRead();
+    }
+});
+
+function formatFileSize(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB";
+    return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+}
+
+function formatDate(dateValue) {
+    if (!dateValue) return "N/A";
+    const date = new Date(dateValue);
+    if (isNaN(date.getTime())) return String(dateValue);
+    return date.toLocaleString();
+}
+
+function triggerImageRead() {
+    const file = upload.files[0];
+    if (!file) {
+        metadata.innerHTML = "<div style='color:red;'>Please select an image first.</div>";
+        preview.innerHTML = "";
+        return;
+    }
+
+    currentFile = file;
+    preview.innerHTML = "";
+    metadata.innerHTML = "";
+    metadataText = "";
+
+    const reader = new FileReader();
+
+    reader.onload = function(event) {
+        const img = new Image();
+        img.src = event.target.result;
+        img.alt = file.name;
+
+        img.onload = function() {
+            currentImage = img;
+
+            preview.innerHTML = `
+                <div class="average-result" style="margin-top:20px;">
+                    <div style="margin-bottom:10px;"><strong>Preview</strong></div>
+                    <img src="${event.target.result}" alt="${file.name}" style="max-width:100%;border-radius:10px;">
+                </div>
+            `;
+
+            let html = `<div class="average-result" style="margin-top:20px;">`;
+            html += `<div><strong>Image Details</strong></div><hr>`;
+            html += `<p><strong>File Name:</strong> ${file.name}</p>`;
+            html += `<p><strong>File Size:</strong> ${formatFileSize(file.size)}</p>`;
+            html += `<p><strong>File Type:</strong> ${file.type || "Unknown"}</p>`;
+            html += `<p><strong>Resolution:</strong> ${img.width} × ${img.height}</p>`;
+            html += `<p><strong>Last Modified:</strong> ${formatDate(file.lastModified)}</p>`;
+
+            metadataText += `File Name: ${file.name}\n`;
+            metadataText += `File Size: ${formatFileSize(file.size)}\n`;
+            metadataText += `File Type: ${file.type || "Unknown"}\n`;
+            metadataText += `Resolution: ${img.width} x ${img.height}\n`;
+            metadataText += `Last Modified: ${formatDate(file.lastModified)}\n`;
+
+            EXIF.getData(img, function() {
+                const allMetaData = EXIF.getAllTags(this);
+                const keys = Object.keys(allMetaData);
+
+                if (keys.length) {
+                    html += `<hr><div><strong>EXIF Metadata</strong></div>`;
+
+                    keys.sort().forEach(key => {
+                        let value = allMetaData[key];
+
+                        if (typeof value === "object" && value !== null) {
+                            try {
+                                value = JSON.stringify(value);
+                            } catch {
+                                value = String(value);
+                            }
+                        }
+
+                        html += `<p><strong>${key}:</strong> ${value}</p>`;
+                        metadataText += `${key}: ${value}\n`;
+                    });
+                } else {
+                    html += `<hr><p><strong>EXIF Metadata:</strong> No EXIF metadata found in this image.</p>`;
+                    metadataText += `EXIF Metadata: No EXIF metadata found in this image.\n`;
+                }
+
+                html += `</div>`;
+                metadata.innerHTML = html;
+                metadata.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+        };
+    };
+
+    reader.readAsDataURL(file);
+}
+
+function copyMetadata() {
+    if (!metadataText.trim()) {
+        alert("No metadata to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(metadataText)
+        .then(() => alert("Metadata copied to clipboard!"))
+        .catch(() => alert("Failed to copy metadata."));
+}
+
+function removeMetadata() {
+    if (!currentImage) {
+        alert("Please upload an image first.");
+        return;
+    }
+
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = currentImage.naturalWidth || currentImage.width;
+    canvas.height = currentImage.naturalHeight || currentImage.height;
+
+    ctx.drawImage(currentImage, 0, 0);
+
+    const outputType = currentFile && currentFile.type === "image/png" ? "image/png" : "image/jpeg";
+    const extension = outputType === "image/png" ? "png" : "jpg";
+
+    const url = canvas.toDataURL(outputType, 1);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `clean-image.${extension}`;
+    a.click();
+}
+function clearAll() {
+    upload.value = "";
+    preview.innerHTML = "";
+    metadata.innerHTML = "";
+    metadataText = "";
+    currentImage = null;
+    currentFile = null;
+    dropArea.classList.remove("dragover");
+}
+
+function loadSampleMessage() {
+    preview.innerHTML = "";
+    metadataText = "";
+    currentImage = null;
+    currentFile = null;
+
+    metadata.innerHTML = `
+        <div class="average-result" style="margin-top:20px;">
+            <div><strong>How it works:</strong> Upload an image or drag and drop it, then click View Metadata to inspect EXIF and file details.</div>
+        </div>
+    `;
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Image Compressor", url: "image-compressor.html", icon: "🗜️", category: "image" },
+    { name: "Image Resizer", url: "image-resizer.html", icon: "📏", category: "image" },
+    { name: "JPG to PNG Converter", url: "jpg-to-png.html", icon: "🔄", category: "image" },
+    { name: "PNG to JPG Converter", url: "pngtojpg.html", icon: "🔁", category: "image" },
+    { name: "Bulk Image Blur", url: "bulk-image-blur.html", icon: "🌫️", category: "image" },
+    { name: "GIF Maker", url: "gif-maker.html", icon: "🎞️", category: "image" },
+    { name: "Image Metadata Viewer", url: "image-metadata-viewer.html", icon: "🧾", category: "image" },
+    { name: "Image Rotator", url: "image-rotator.html", icon: "🔄", category: "image" },
+    { name: "Image to WebP", url: "image-to-webp.html", icon: "🖼️", category: "image" },
+    { name: "Image Upscaler", url: "image-upscaler.html", icon: "🔍", category: "image" },
+    { name: "Image to Base64", url: "imagetobase64.html", icon: "🔢", category: "image" },
+    { name: "WebP to PNG", url: "webp-to-png.html", icon: "🔄", category: "image" },
+    { name: "YouTube Thumbnail Downloader", url: "youtube-thumbnail-downloader.html", icon: "📺", category: "image" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

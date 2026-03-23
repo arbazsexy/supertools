@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Image to WebP Converter Online Free - Convert JPG, PNG & More | SuperTools</title>
+<meta name="description" content="Free online image to WebP converter to turn JPG, PNG, and other image files into modern WebP format instantly. Reduce image size, preview the result, compare file sizes, and download converted WebP images with SuperTools.">
+<meta name="keywords" content="image to webp converter, convert image to webp, jpg to webp, png to webp, webp converter online, image converter, webp image tool">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/tools/image-to-webp.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="Image to WebP Converter Online Free - SuperTools">
+<meta property="og:description" content="Convert JPG, PNG, and other images to WebP instantly with preview, size comparison, and download options.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/tools/image-to-webp.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image to WebP Converter Online Free - SuperTools">
+<meta name="twitter:description" content="Convert images to WebP format instantly and compare original vs WebP file size.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Adsense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Image to WebP Converter",
+  "alternateName": "Online WebP Converter",
+  "url": "https://supertools1.site/tools/image-to-webp.html",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "description": "Convert images to WebP format online with adjustable quality and instant download.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Convert JPG to WebP",
+    "Convert PNG to WebP",
+    "Adjust WebP quality",
+    "Compare original and converted size",
+    "Preview converted image",
+    "Download WebP image",
+    "Browser-based processing",
+    "Free online tool"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is WebP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WebP is a modern image format developed by Google that often provides better compression than JPG and PNG while maintaining good image quality."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this tool free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this image to WebP converter is completely free to use online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my images uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, all image conversion happens directly in your browser, so your files stay on your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I adjust the quality of the WebP output?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can choose different quality levels to balance image quality and file size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I download the converted WebP image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, once the image is converted you can download the WebP file instantly."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+    <h1>Image to WebP Converter</h1>
+
+    <p>Convert JPG, PNG, and other image formats into modern WebP format instantly with quality control and size comparison.</p>
+
+    <div id="dropArea" class="drop-area">
+        <p><i class="fas fa-cloud-arrow-up"></i> Drag & drop an image here</p>
+        <p>or click to choose an image</p>
+    </div>
+
+    <label for="upload">Select Image</label>
+    <input type="file" id="upload" accept="image/*" aria-label="Upload image to convert to WebP">
+
+    <label for="quality">Quality</label>
+    <select id="quality" aria-label="Select WebP quality">
+        <option value="0.9">High Quality</option>
+        <option value="0.7" selected>Medium</option>
+        <option value="0.5">Small Size</option>
+    </select>
+
+    <div class="button-group">
+        <button type="button" onclick="convertImage()">
+            <i class="fas fa-image"></i> Convert to WebP
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSampleMessage()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+    </div>
+
+    <div id="result"></div>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+
+    <h2>How to Convert Image to WebP</h2>
+
+    <p>
+        The <strong>Image to WebP Converter</strong> helps you convert common image formats such as JPG and PNG into the modern
+        <strong>WebP</strong> format directly in your browser. WebP is often used to reduce file size while keeping image quality visually strong,
+        which makes it useful for websites, blogs, online stores, and faster-loading pages.
+    </p>
+
+    <p>
+        To use this tool, upload an image from your device or drag and drop it into the upload area. Then choose the output quality level based on
+        whether you want better image quality or a smaller file size. Click the <strong>Convert to WebP</strong> button, and the tool will create
+        a WebP version of your image instantly.
+    </p>
+
+    <p>
+        Once the conversion is complete, you can preview the converted image, compare the original file size with the new WebP size, and download
+        the final WebP file. Since the processing happens inside your browser, your files stay on your device during conversion.
+    </p>
+
+    <h3>Why Use WebP?</h3>
+    <ul>
+        <li><strong>Smaller File Size:</strong> WebP often reduces image size compared to older formats.</li>
+        <li><strong>Better Website Speed:</strong> Smaller images can load faster on websites.</li>
+        <li><strong>Good Quality:</strong> WebP can keep images looking sharp while saving space.</li>
+        <li><strong>Modern Format:</strong> Supported by most modern browsers and platforms.</li>
+    </ul>
+
+    <h3>Why Use This Image to WebP Converter?</h3>
+    <ul>
+        <li><strong>Fast Conversion:</strong> Convert images in seconds.</li>
+        <li><strong>Quality Control:</strong> Choose a balance between quality and file size.</li>
+        <li><strong>Preview Results:</strong> See the converted image before downloading.</li>
+        <li><strong>File Size Comparison:</strong> Check original vs converted size easily.</li>
+        <li><strong>Private Processing:</strong> Files stay on your device.</li>
+        <li><strong>Free to Use:</strong> No signup or installation required.</li>
+    </ul>
+
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is WebP?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            WebP is a modern image format developed by Google that often provides better compression than JPG and PNG while keeping good visual quality.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Is this tool free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this image to WebP converter is completely free to use online.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Are my images uploaded to a server?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No, all conversion happens directly in your browser, so your image files stay on your device.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I adjust the quality of the WebP output?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can choose different quality levels to balance image quality and file size based on your needs.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Can I download the converted WebP image?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, after conversion you can download the WebP file instantly.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+const upload = document.getElementById("upload");
+const dropArea = document.getElementById("dropArea");
+const result = document.getElementById("result");
+
+dropArea.addEventListener("click", () => upload.click());
+
+dropArea.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropArea.classList.add("dragover");
+});
+
+dropArea.addEventListener("dragleave", () => {
+    dropArea.classList.remove("dragover");
+});
+
+dropArea.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropArea.classList.remove("dragover");
+
+    const files = Array.from(e.dataTransfer.files).filter(file => file.type.startsWith("image/"));
+
+    if (!files.length) {
+        alert("Please drop a valid image file.");
+        return;
+    }
+
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(files[0]);
+    upload.files = dataTransfer.files;
+    result.innerHTML = "";
+});
+
+function formatKB(bytes) {
+    return (bytes / 1024).toFixed(1);
+}
+
+function convertImage() {
+    const file = upload.files[0];
+    const quality = parseFloat(document.getElementById("quality").value);
+
+    if (!file) {
+        result.innerHTML = "<div style='color:red;'>Please upload an image first.</div>";
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        const img = new Image();
+        img.src = e.target.result;
+
+        img.onload = function() {
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
+
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            ctx.drawImage(img, 0, 0);
+
+            canvas.toBlob(function(blob) {
+                if (!blob) {
+                    result.innerHTML = "<div style='color:red;'>Conversion failed. Please try another image.</div>";
+                    return;
+                }
+
+                const url = URL.createObjectURL(blob);
+
+                const originalSize = file.size;
+                const newSize = blob.size;
+                const saved = originalSize - newSize;
+                const savedPercent = originalSize > 0 ? ((saved / originalSize) * 100).toFixed(1) : 0;
+
+                result.innerHTML = `
+                    <div class="average-result" style="margin-top:25px;">
+                        <div><strong>${file.name}</strong></div>
+                        <hr>
+                        <p><strong>Original Size:</strong> ${formatKB(originalSize)} KB</p>
+                        <p><strong>WebP Size:</strong> ${formatKB(newSize)} KB</p>
+                        <p><strong>Size Change:</strong> ${savedPercent}%</p>
+                        <p><strong>Dimensions:</strong> ${img.width} × ${img.height}px</p>
+
+                        <div class="stats" style="margin-top:15px;">
+                            <div class="stat-box">
+                                <strong>Original</strong><br>
+                                <img src="${e.target.result}" alt="Original image preview" style="width:100%;max-width:220px;border-radius:10px;margin-top:10px;">
+                            </div>
+                            <div class="stat-box">
+                                <strong>WebP</strong><br>
+                                <img src="${url}" alt="Converted WebP preview" style="width:100%;max-width:220px;border-radius:10px;margin-top:10px;">
+                            </div>
+                        </div>
+
+                        <div style="margin-top:15px;">
+                            <a href="${url}" download="converted.webp">
+                                <button type="button">Download WebP</button>
+                            </a>
+                        </div>
+                    </div>
+                `;
+
+                result.scrollIntoView({ behavior: "smooth", block: "start" });
+
+            }, "image/webp", quality);
+        };
+    };
+
+    reader.readAsDataURL(file);
+}
+
+function clearAll() {
+    upload.value = "";
+    result.innerHTML = "";
+}
+
+function loadSampleMessage() {
+    result.innerHTML = `
+        <div class="average-result" style="margin-top:20px;">
+            <div><strong>How it works:</strong> Upload an image, choose a quality level, and click Convert to WebP to generate a smaller, modern image format.</div>
+        </div>
+    `;
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Image Compressor", url: "image-compressor.html", icon: "🗜️", category: "image" },
+    { name: "Image Resizer", url: "image-resizer.html", icon: "📏", category: "image" },
+    { name: "JPG to PNG Converter", url: "jpg-to-png.html", icon: "🔄", category: "image" },
+    { name: "PNG to JPG Converter", url: "pngtojpg.html", icon: "🔁", category: "image" },
+    { name: "Bulk Image Blur", url: "bulk-image-blur.html", icon: "🌫️", category: "image" },
+    { name: "GIF Maker", url: "gif-maker.html", icon: "🎞️", category: "image" },
+    { name: "Image Metadata Viewer", url: "image-metadata-viewer.html", icon: "🧾", category: "image" },
+    { name: "Image Rotator", url: "image-rotator.html", icon: "🔄", category: "image" },
+    { name: "Image to WebP", url: "image-to-webp.html", icon: "🖼️", category: "image" },
+    { name: "Image Upscaler", url: "image-upscaler.html", icon: "🔍", category: "image" },
+    { name: "Image to Base64", url: "imagetobase64.html", icon: "🔢", category: "image" },
+    { name: "WebP to PNG", url: "webp-to-png.html", icon: "🔄", category: "image" },
+    { name: "YouTube Thumbnail Downloader", url: "youtube-thumbnail-downloader.html", icon: "📺", category: "image" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

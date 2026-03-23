@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>GIF Maker Online Free - Create Animated GIFs from Images | SuperTools</title>
+<meta name="description" content="Free online GIF maker to create animated GIFs from multiple images. Upload JPG, PNG, or WebP files, reorder frames, control speed, resize GIF output, and download instantly with SuperTools.">
+<meta name="keywords" content="gif maker, animated gif maker, create gif online, image to gif, gif creator, free gif maker, online gif maker">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/tools/gif-maker.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="GIF Maker Online Free - SuperTools">
+<meta property="og:description" content="Create animated GIFs online from multiple images with frame control, speed settings, and instant download.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/tools/gif-maker.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GIF Maker Online Free - SuperTools">
+<meta name="twitter:description" content="Upload images, reorder frames, control speed, and create animated GIFs instantly online.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+    crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "GIF Maker",
+  "alternateName": "Animated GIF Maker",
+  "url": "https://supertools1.site/tools/gif-maker.html",
+  "description": "Free online GIF maker to create animated GIFs from multiple images with frame reordering and speed control.",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Upload multiple images",
+    "Drag and drop upload",
+    "Reorder GIF frames",
+    "Delete frames",
+    "Adjust animation speed",
+    "FPS slider",
+    "Optional GIF resize",
+    "Preview generated GIF",
+    "Download animated GIF",
+    "Supports JPG PNG and WebP"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this GIF maker free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this GIF maker is completely free to use online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do my images get uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, image processing happens directly in your browser, so your files stay on your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What image formats are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This GIF maker supports common image formats such as JPG, PNG, and WebP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I control the animation speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can set the delay between frames or use the FPS slider to control how fast or slow the GIF animation plays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I reorder or delete frames before creating the GIF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can drag to reorder frames, move them left or right, and remove any frame before generating the final GIF."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js"></script>
+
+</head>
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+    <h1>GIF Maker</h1>
+    <p>Upload images, reorder frames, control speed, resize output, and create animated GIFs instantly.</p>
+
+    <div id="dropArea" class="drop-area">
+        <p><i class="fas fa-cloud-arrow-up"></i> Drag & drop images here</p>
+        <p>or</p>
+        <button type="button" id="chooseImagesBtn">Choose Images</button>
+    </div>
+
+    <label for="images">Select images</label>
+    <input type="file" id="images" multiple accept="image/*" aria-label="Upload images for GIF creation">
+
+    <label for="speed">Frame delay (ms)</label>
+    <input type="number" id="speed" value="500" min="20" step="10" aria-label="Animation speed in milliseconds">
+
+    <label for="fps">FPS (auto-updates delay)</label>
+    <input type="range" id="fps" min="1" max="30" value="2" aria-label="Frames per second">
+    <p id="fpsValue">Current FPS: 2</p>
+
+    <label for="resizePreset">Auto Resize</label>
+    <select id="resizePreset" aria-label="Auto resize preset">
+        <option value="">Keep original size</option>
+        <option value="320">320 px wide</option>
+        <option value="480">480 px wide</option>
+        <option value="640">640 px wide</option>
+        <option value="800">800 px wide</option>
+    </select>
+
+    <label for="resize">Custom GIF width (optional)</label>
+    <input type="number" id="resize" placeholder="e.g. 500" min="1" aria-label="Optional GIF width">
+
+    <label for="maxFrames">Max frames to render</label>
+    <input type="number" id="maxFrames" value="50" min="1" max="200" aria-label="Maximum frames to render">
+
+    <div class="button-group">
+        <button type="button" onclick="createGIF()">
+            <i class="fas fa-film"></i> Create GIF
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSampleMessage()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+    </div>
+
+    <div id="settingsInfo"></div>
+
+    <h3>Frame Timeline</h3>
+    <div id="timeline"></div>
+
+    <div id="progressText"></div>
+    <div id="progressBar"><div></div></div>
+
+    <div id="preview"></div>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the GIF Maker</h2>
+
+    <p>
+        The <strong>GIF Maker</strong> lets you create animated GIFs from multiple images directly in your browser. You can upload image files,
+        reorder the frames, control the animation speed, optionally resize the output, and generate a downloadable GIF in just a few clicks.
+    </p>
+
+    <p>
+        Upload your images in the order you want them to appear. You can drag and rearrange the frames in the timeline, use the left and right
+        controls for quick movement, or delete any frame you do not want. Then adjust the delay or FPS, choose an output width if needed, and
+        click <strong>Create GIF</strong>.
+    </p>
+
+    <p>
+        Once your settings are ready, the tool processes the frames and generates a preview of the final animated GIF. You can then download it
+        instantly to your device. Since everything works in the browser, your images are not uploaded for processing.
+    </p>
+
+    <h3>Why Use This GIF Maker?</h3>
+    <ul>
+        <li><strong>Easy GIF Creation:</strong> Turn multiple images into a single animated GIF quickly.</li>
+        <li><strong>Frame Controls:</strong> Drag, move, or delete frames easily.</li>
+        <li><strong>Speed Control:</strong> Set frame delay or FPS.</li>
+        <li><strong>Auto Resize:</strong> Reduce output width for smaller file size.</li>
+        <li><strong>Free and Browser-Based:</strong> No signup or software installation required.</li>
+        <li><strong>Private Processing:</strong> Files stay on your device while the GIF is created.</li>
+    </ul>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: Is this GIF maker free to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this GIF maker is completely free to use online.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Do my images get uploaded to a server?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No, image processing happens directly in your browser, so your files stay on your device.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: What image formats are supported?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This GIF maker supports common image formats such as JPG, PNG, and WebP.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I control the animation speed?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can set the delay between frames or use the FPS slider.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Can I reorder or delete frames before creating the GIF?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can drag to reorder frames, move them left or right, and delete any frame before generating the final GIF.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+// GIF Maker Logic
+let dragSrc = null;
+
+const imagesInput = document.getElementById("images");
+const timeline = document.getElementById("timeline");
+const preview = document.getElementById("preview");
+const progressText = document.getElementById("progressText");
+const progressBar = document.querySelector("#progressBar div");
+const dropArea = document.getElementById("dropArea");
+const chooseImagesBtn = document.getElementById("chooseImagesBtn");
+const fpsInput = document.getElementById("fps");
+const fpsValue = document.getElementById("fpsValue");
+const speedInput = document.getElementById("speed");
+const resizePreset = document.getElementById("resizePreset");
+const resizeInput = document.getElementById("resize");
+const maxFramesInput = document.getElementById("maxFrames");
+const settingsInfo = document.getElementById("settingsInfo");
+
+fpsInput.addEventListener("input", () => {
+    const fps = parseInt(fpsInput.value, 10);
+    fpsValue.textContent = `Current FPS: ${fps}`;
+    speedInput.value = Math.round(1000 / fps);
+});
+
+speedInput.addEventListener("input", () => {
+    const delay = parseInt(speedInput.value, 10);
+    if (delay > 0) {
+        const fps = Math.max(1, Math.min(30, Math.round(1000 / delay)));
+        fpsInput.value = fps;
+        fpsValue.textContent = `Current FPS: ${fps}`;
+    }
+});
+
+resizePreset.addEventListener("change", () => {
+    resizeInput.value = resizePreset.value;
+});
+
+imagesInput.addEventListener("change", function () {
+    handleFiles(Array.from(this.files));
+});
+
+dropArea.addEventListener("click", () => {
+    imagesInput.click();
+});
+
+chooseImagesBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    imagesInput.click();
+});
+
+["dragenter", "dragover"].forEach(eventName => {
+    dropArea.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropArea.classList.add("dragover");
+    });
+});
+
+["dragleave", "drop"].forEach(eventName => {
+    dropArea.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropArea.classList.remove("dragover");
+    });
+});
+
+dropArea.addEventListener("drop", (e) => {
+    const files = Array.from(e.dataTransfer.files).filter(file => file.type.startsWith("image/"));
+
+    if (!files.length) {
+        alert("Please drop valid image files.");
+        return;
+    }
+
+    handleFiles(files);
+});
+
+function createFrameCard(src, name) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "gif-frame";
+    wrapper.draggable = true;
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = name || "GIF frame";
+
+    const controls = document.createElement("div");
+    controls.className = "gif-frame-controls";
+
+    const leftBtn = document.createElement("button");
+    leftBtn.type = "button";
+    leftBtn.textContent = "←";
+    leftBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const prev = wrapper.previousElementSibling;
+        if (prev) timeline.insertBefore(wrapper, prev);
+    });
+
+    const rightBtn = document.createElement("button");
+    rightBtn.type = "button";
+    rightBtn.textContent = "→";
+    rightBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const next = wrapper.nextElementSibling;
+        if (next) timeline.insertBefore(next, wrapper);
+    });
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.type = "button";
+    deleteBtn.textContent = "✕";
+    deleteBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        wrapper.remove();
+        updateSettingsInfo();
+    });
+
+    controls.appendChild(leftBtn);
+    controls.appendChild(rightBtn);
+    controls.appendChild(deleteBtn);
+
+    wrapper.appendChild(img);
+    wrapper.appendChild(controls);
+
+    wrapper.addEventListener("dragstart", dragStart);
+    wrapper.addEventListener("dragover", dragOver);
+    wrapper.addEventListener("drop", dropFrame);
+
+    return wrapper;
+}
+
+function handleFiles(files) {
+    timeline.innerHTML = "";
+    preview.innerHTML = "";
+    progressText.innerHTML = "";
+    progressBar.style.width = "0%";
+    settingsInfo.innerHTML = "";
+
+    if (!files.length) return;
+
+    files.forEach((file) => {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const frame = createFrameCard(e.target.result, file.name);
+            timeline.appendChild(frame);
+            updateSettingsInfo();
+        };
+
+        reader.readAsDataURL(file);
+    });
+}
+
+function dragStart() {
+    dragSrc = this;
+}
+
+function dragOver(e) {
+    e.preventDefault();
+}
+
+function dropFrame(e) {
+    e.preventDefault();
+
+    if (dragSrc !== this) {
+        const children = Array.from(timeline.children);
+        const srcIndex = children.indexOf(dragSrc);
+        const targetIndex = children.indexOf(this);
+
+        if (srcIndex < targetIndex) {
+            timeline.insertBefore(dragSrc, this.nextSibling);
+        } else {
+            timeline.insertBefore(dragSrc, this);
+        }
+        updateSettingsInfo();
+    }
+}
+
+function updateSettingsInfo() {
+    const frameCount = timeline.children.length;
+    const delay = parseInt(speedInput.value, 10) || 500;
+    const width = resizeInput.value || "original";
+    const maxFrames = parseInt(maxFramesInput.value, 10) || 50;
+
+    settingsInfo.innerHTML = `
+        <div class="average-result">
+            <div><strong>Current Settings</strong></div>
+            <hr>
+            <p><strong>Frames Loaded:</strong> ${frameCount}</p>
+            <p><strong>Frame Delay:</strong> ${delay} ms</p>
+            <p><strong>Output Width:</strong> ${width}</p>
+            <p><strong>Max Frames Allowed:</strong> ${maxFrames}</p>
+        </div>
+    `;
+}
+
+async function createGIF() {
+    const speed = parseInt(speedInput.value, 10) || 500;
+    const resize = parseInt(resizeInput.value, 10) || 0;
+    const maxFrames = parseInt(maxFramesInput.value, 10) || 50;
+    const frameElements = Array.from(document.querySelectorAll("#timeline .gif-frame img"));
+
+    if (frameElements.length === 0) {
+        preview.innerHTML = "<div style='color:red;'>Please upload images first.</div>";
+        return;
+    }
+
+    if (frameElements.length > maxFrames) {
+        preview.innerHTML = `<div style='color:red;'>You have ${frameElements.length} frames loaded, but max allowed is ${maxFrames}. Remove some frames or increase the limit.</div>`;
+        return;
+    }
+
+    preview.innerHTML = "";
+    progressText.innerHTML = "<div style='margin-top:15px;'>Creating GIF...</div>";
+    progressBar.style.width = "0%";
+
+    try {
+        const gif = new GIF({
+            workers: 2,
+            quality: 10,
+            workerScript: "gif.worker.js"
+        });
+
+        gif.on("progress", function (p) {
+            progressBar.style.width = (p * 100) + "%";
+            progressText.innerHTML = `<div style="margin-top:15px;">Creating GIF... ${Math.round(p * 100)}%</div>`;
+        });
+
+        gif.on("finished", function (blob) {
+            const url = URL.createObjectURL(blob);
+            preview.innerHTML = `
+                <div class="average-result">
+                    <div style="margin-bottom:15px;">
+                        <img src="${url}" alt="Generated GIF preview" style="max-width:100%;border-radius:10px;">
+                    </div>
+                    <div>
+                        <a href="${url}" download="animation.gif">
+                            <button type="button">Download GIF</button>
+                        </a>
+                    </div>
+                </div>
+            `;
+            progressText.innerHTML = `<div style='margin-top:15px;'>GIF created successfully. Frames: ${frameElements.length}</div>`;
+            progressBar.style.width = "100%";
+            preview.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+
+        const loadedFrames = await Promise.all(
+            frameElements.map((frameEl) => {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.onload = () => resolve(img);
+                    img.onerror = () => reject(new Error("One of the images could not be loaded."));
+                    img.src = frameEl.src;
+                });
+            })
+        );
+
+        loadedFrames.forEach((img) => {
+            let width = img.width;
+            let height = img.height;
+
+            if (resize > 0) {
+                height = Math.round((img.height / img.width) * resize);
+                width = resize;
+            }
+
+            const tempCanvas = document.createElement("canvas");
+            tempCanvas.width = width;
+            tempCanvas.height = height;
+
+            const tempCtx = tempCanvas.getContext("2d");
+            tempCtx.drawImage(img, 0, 0, width, height);
+
+            gif.addFrame(tempCanvas, { delay: speed, copy: true });
+        });
+
+        gif.render();
+    } catch (error) {
+        console.error(error);
+        progressText.innerHTML = "<div style='color:red;margin-top:15px;'>Failed to create GIF. Make sure gif.worker.js is in the same folder and try smaller images.</div>";
+        progressBar.style.width = "0%";
+    }
+}
+
+function clearAll() {
+    imagesInput.value = "";
+    speedInput.value = "500";
+    fpsInput.value = "2";
+    fpsValue.textContent = "Current FPS: 2";
+    resizePreset.value = "";
+    resizeInput.value = "";
+    maxFramesInput.value = "50";
+    timeline.innerHTML = "";
+    preview.innerHTML = "";
+    progressText.innerHTML = "";
+    progressBar.style.width = "0%";
+    settingsInfo.innerHTML = "";
+    dropArea.classList.remove("dragover");
+}
+
+function loadSampleMessage() {
+    preview.innerHTML = `
+        <div class="average-result">
+            <div><strong>How it works:</strong> Upload multiple images, drag to reorder, move frames left or right, delete any frame, set delay or FPS, choose width, and click Create GIF.</div>
+        </div>
+    `;
+    progressText.innerHTML = "";
+    progressBar.style.width = "0%";
+    updateSettingsInfo();
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Image Compressor", url: "image-compressor.html", icon: "🗜️", category: "image" },
+    { name: "Image Resizer", url: "image-resizer.html", icon: "📏", category: "image" },
+    { name: "JPG to PNG Converter", url: "jpg-to-png.html", icon: "🔄", category: "image" },
+    { name: "PNG to JPG Converter", url: "pngtojpg.html", icon: "🔁", category: "image" },
+    { name: "Bulk Image Blur", url: "bulk-image-blur.html", icon: "🌫️", category: "image" },
+    { name: "GIF Maker", url: "gif-maker.html", icon: "🎞️", category: "image" },
+    { name: "Image Metadata Viewer", url: "image-metadata-viewer.html", icon: "🧾", category: "image" },
+    { name: "Image Rotator", url: "image-rotator.html", icon: "🔄", category: "image" },
+    { name: "Image to WebP", url: "image-to-webp.html", icon: "🖼️", category: "image" },
+    { name: "Image Upscaler", url: "image-upscaler.html", icon: "🔍", category: "image" },
+    { name: "Image to Base64", url: "imagetobase64.html", icon: "🔢", category: "image" },
+    { name: "WebP to PNG", url: "webp-to-png.html", icon: "🔄", category: "image" },
+    { name: "YouTube Thumbnail Downloader", url: "youtube-thumbnail-downloader.html", icon: "📺", category: "image" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

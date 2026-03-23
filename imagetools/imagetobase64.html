@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Image to Base64 Converter Online Free - Encode Images Instantly | SuperTools</title>
+<meta name="description" content="Free online Image to Base64 converter. Encode JPG, PNG, GIF, WebP, and other images into Base64 instantly. Fast, secure, and works directly in your browser with SuperTools.">
+<meta name="keywords" content="image to base64, base64 image converter, convert image to base64, jpg to base64, png to base64, gif to base64, webp to base64">
+<meta name="author" content="SuperTools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://supertools1.site/imagetobase64.html">
+
+<link rel="icon" href="../logo.png" type="image/png">
+
+<meta property="og:title" content="Image to Base64 Converter - SuperTools">
+<meta property="og:description" content="Convert images to Base64 instantly with our free online tool.">
+<meta property="og:image" content="https://supertools1.site/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://supertools1.site/imagetobase64.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image to Base64 Converter - SuperTools">
+<meta name="twitter:description" content="Convert JPG, PNG, GIF, and WebP images to Base64 instantly online.">
+<meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FD5FXM51M8');
+</script>
+
+<!-- Adsense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-6642225356143233"
+crossorigin="anonymous"></script>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Image to Base64 Converter",
+  "alternateName": "Base64 Image Encoder",
+  "url": "https://supertools1.site/imagetobase64.html",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "description": "Convert images into Base64 encoding instantly using this free online tool.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SuperTools",
+    "url": "https://supertools1.site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://supertools1.site/logo.png"
+    }
+  },
+  "image": "https://supertools1.site/logo.png",
+  "featureList": [
+    "Convert image to Base64",
+    "Supports JPG PNG GIF and WebP",
+    "Preview uploaded image",
+    "Copy Base64 output",
+    "Browser-based conversion",
+    "Free online tool"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Base64 image encoding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Base64 image encoding converts image binary data into a text string that can be embedded directly into HTML, CSS, JavaScript, JSON, or API payloads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this image to Base64 converter free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this image to Base64 converter is completely free to use online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my images uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, the conversion happens directly in your browser, so your image stays on your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which image formats are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool supports common image formats such as JPG, PNG, GIF, WebP, and most other browser-readable image types."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I copy the Base64 output?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the tool includes a copy button so you can copy the full Base64 string instantly."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<nav>
+<h2>⚡ SuperTools</h2>
+<a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+
+<h1>Image to Base64 Converter</h1>
+
+<p>Convert JPG, PNG, GIF, WebP, and other images into Base64 encoding instantly.</p>
+
+<label for="imageInput">Select Image</label>
+<input type="file" id="imageInput" accept="image/*" aria-label="Upload image to convert to Base64">
+
+<div class="button-group">
+    <button type="button" onclick="convertBase64()">
+        <i class="fas fa-code"></i> Convert to Base64
+    </button>
+
+    <button type="button" class="action-btn clear-btn" onclick="clearAll()">
+        <i class="fas fa-trash"></i> Clear
+    </button>
+
+    <button type="button" class="action-btn sample-btn" onclick="loadSampleMessage()">
+        <i class="fas fa-flask"></i> Sample
+    </button>
+
+    <button type="button" class="action-btn copy-btn" onclick="copyBase64()">
+        <i class="fas fa-copy"></i> Copy
+    </button>
+</div>
+
+<div id="fileInfo"></div>
+<div id="preview"></div>
+
+<label for="base64Output">Base64 Output</label>
+<textarea id="base64Output" rows="10" aria-label="Base64 output" placeholder="Base64 output will appear here..."></textarea>
+
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+
+<h2>How to Use the Image to Base64 Converter</h2>
+
+<p>
+The <strong>Image to Base64 Converter</strong> lets you convert image files into Base64 text directly in your browser. Base64 encoding turns image
+data into a long text string that can be used inside HTML, CSS, JavaScript, JSON, email templates, or API requests.
+</p>
+
+<p>
+To use the tool, upload an image from your device and click the <strong>Convert to Base64</strong> button. The tool will instantly generate the
+Base64 encoded result and display it in the output box. You can then copy the code and use it in your project right away.
+</p>
+
+<p>
+This tool supports common image formats such as JPG, PNG, GIF, and WebP. Since the conversion happens locally inside your browser, your image is
+not uploaded to a remote server, which helps keep your files private.
+</p>
+
+<h3>Why Use Base64 Encoding?</h3>
+<ul>
+    <li><strong>Embed Images in Code:</strong> Use images directly in HTML, CSS, JavaScript, or JSON.</li>
+    <li><strong>Useful for APIs:</strong> Send image data as text in requests or responses.</li>
+    <li><strong>Fast and Simple:</strong> Convert images instantly without installing software.</li>
+    <li><strong>Private:</strong> Your file stays on your device during conversion.</li>
+    <li><strong>Free to Use:</strong> No signup or download required.</li>
+</ul>
+
+<h3>Common Uses</h3>
+<p>
+Developers often use Base64 for small icons, inline images, email templates, CSS data URLs, testing payloads, and embedding image content directly
+into source code. It is especially useful when binary files need to be represented as text.
+</p>
+
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is Base64 image encoding?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Base64 image encoding converts image binary data into a text string that can be embedded directly into HTML, CSS, JavaScript, JSON, or API payloads.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Is this image to Base64 converter free?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this image to Base64 converter is completely free to use online.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Are my images uploaded to a server?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            No, the conversion happens directly in your browser, so your image stays on your device.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Which image formats are supported?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            This tool supports common image formats such as JPG, PNG, GIF, WebP, and most browser-readable image types.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Can I copy the Base64 output?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, the tool includes a copy button so you can copy the full Base64 string instantly.
+        </div>
+    </div>
+</section>
+
+<footer>
+<p>© 2026 SuperTools | 
+<a href="../privacy.html">Privacy Policy</a> | 
+<a href="../about.html">About Us</a> | 
+<a href="../contact.html">Contact</a>
+</p>
+</footer>
+
+<script>
+
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+const imageInput = document.getElementById("imageInput");
+const preview = document.getElementById("preview");
+const fileInfo = document.getElementById("fileInfo");
+const base64Output = document.getElementById("base64Output");
+
+function formatFileSize(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB";
+    return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+}
+
+function convertBase64() {
+    const file = imageInput.files[0];
+
+    if (!file) {
+        fileInfo.innerHTML = "<div style='color:red;'>Please select an image first.</div>";
+        preview.innerHTML = "";
+        base64Output.value = "";
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        const base64 = e.target.result;
+        const img = new Image();
+
+        img.onload = function() {
+            fileInfo.innerHTML = `
+                <div class="average-result">
+                    <div><strong>Image Details</strong></div>
+                    <hr>
+                    <p><strong>File Name:</strong> ${file.name}</p>
+                    <p><strong>File Size:</strong> ${formatFileSize(file.size)}</p>
+                    <p><strong>File Type:</strong> ${file.type || "Unknown"}</p>
+                    <p><strong>Dimensions:</strong> ${img.width} × ${img.height}px</p>
+                    <p><strong>Base64 Length:</strong> ${base64.length.toLocaleString()} characters</p>
+                </div>
+            `;
+
+            preview.innerHTML = `
+                <div class="average-result" style="margin-top:20px;">
+                    <div><strong>Preview</strong></div>
+                    <div style="margin-top:10px;">
+                        <img src="${base64}" alt="Image preview" style="max-width:100%;border-radius:10px;">
+                    </div>
+                </div>
+            `;
+
+            base64Output.value = base64;
+            base64Output.scrollIntoView({ behavior: "smooth", block: "start" });
+        };
+
+        img.src = base64;
+    };
+
+    reader.readAsDataURL(file);
+}
+
+function copyBase64() {
+    const text = base64Output.value.trim();
+
+    if (!text) {
+        alert("No Base64 output to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(text)
+        .then(() => alert("Base64 copied to clipboard!"))
+        .catch(() => alert("Failed to copy Base64."));
+}
+
+function clearAll() {
+    imageInput.value = "";
+    preview.innerHTML = "";
+    fileInfo.innerHTML = "";
+    base64Output.value = "";
+}
+
+function loadSampleMessage() {
+    fileInfo.innerHTML = `
+        <div class="average-result">
+            <div><strong>How it works:</strong> Upload an image and click Convert to Base64 to generate a text-encoded version instantly.</div>
+        </div>
+    `;
+    preview.innerHTML = "";
+    base64Output.value = "";
+}
+</script>
+
+<script>
+const tools = [
+    { name: "Image Compressor", url: "image-compressor.html", icon: "🗜️", category: "image" },
+    { name: "Image Resizer", url: "image-resizer.html", icon: "📏", category: "image" },
+    { name: "JPG to PNG Converter", url: "jpg-to-png.html", icon: "🔄", category: "image" },
+    { name: "PNG to JPG Converter", url: "pngtojpg.html", icon: "🔁", category: "image" },
+    { name: "Bulk Image Blur", url: "bulk-image-blur.html", icon: "🌫️", category: "image" },
+    { name: "GIF Maker", url: "gif-maker.html", icon: "🎞️", category: "image" },
+    { name: "Image Metadata Viewer", url: "image-metadata-viewer.html", icon: "🧾", category: "image" },
+    { name: "Image Rotator", url: "image-rotator.html", icon: "🔄", category: "image" },
+    { name: "Image to WebP", url: "image-to-webp.html", icon: "🖼️", category: "image" },
+    { name: "Image Upscaler", url: "image-upscaler.html", icon: "🔍", category: "image" },
+    { name: "Image to Base64", url: "imagetobase64.html", icon: "🔢", category: "image" },
+    { name: "WebP to PNG", url: "webp-to-png.html", icon: "🔄", category: "image" },
+    { name: "YouTube Thumbnail Downloader", url: "youtube-thumbnail-downloader.html", icon: "📺", category: "image" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>

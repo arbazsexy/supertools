@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Random Quote Generator Online Free - Generate Inspirational Quotes Instantly</title>
+    <meta name="description" content="Free online random quote generator to generate inspirational, motivational, success, life, and positive quotes instantly. Copy random quotes in one click with SuperTools.">
+    <meta name="keywords" content="random quote generator, inspirational quote generator, motivational quotes, success quotes, life quotes, quote generator online">
+    <meta name="author" content="SuperTools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://supertools1.site/randomquotegenerator.html">
+
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Random Quote Generator Online Free - SuperTools">
+    <meta property="og:description" content="Generate inspirational, motivational, and life quotes instantly.">
+    <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supertools1.site/randomquotegenerator.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Random Quote Generator Online Free - SuperTools">
+    <meta name="twitter:description" content="Generate random quotes instantly and copy them in one click.">
+    <meta name="twitter:image" content="https://supertools1.site/logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FD5FXM51M8');
+    </script>
+
+    <!-- AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
+        crossorigin="anonymous"></script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Random Quote Generator",
+      "alternateName": "Quote Generator",
+      "url": "https://supertools1.site/randomquotegenerator.html",
+      "description": "Free online random quote generator to create inspirational, motivational, life, success, and positive quotes instantly.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SuperTools",
+        "url": "https://supertools1.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
+      },
+      "image": "https://supertools1.site/logo.png",
+      "featureList": [
+        "Generate random quotes online",
+        "Generate inspirational quotes",
+        "Generate motivational quotes",
+        "Generate success quotes",
+        "Generate life quotes",
+        "Copy generated quotes",
+        "Free and browser-based tool"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a random quote generator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A random quote generator is an online tool that shows a random quote instantly for inspiration, motivation, captions, and sharing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I generate unlimited quotes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can generate as many quotes as you want by clicking the generate button again."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I choose quote categories?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool lets you choose quote categories such as motivational, life, success, positive, and all quotes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I copy the generated quote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can copy the generated quote in one click and paste it anywhere you want."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this random quote generator free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this random quote generator is completely free to use and works directly in your browser."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>⚡ SuperTools</h2>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h1>Random Quote Generator</h1>
+    <p>Get random inspirational quotes instantly.</p>
+
+    <label for="quoteCategory">Select quote category</label>
+    <select id="quoteCategory" aria-label="Select quote category">
+        <option value="all">All Quotes</option>
+        <option value="motivational">Motivational</option>
+        <option value="success">Success</option>
+        <option value="life">Life</option>
+        <option value="positive">Positive</option>
+    </select>
+
+    <div class="button-group">
+        <button type="button" onclick="generateQuote()">
+            <i class="fas fa-quote-left"></i> Generate Quote
+        </button>
+
+        <button type="button" class="action-btn clear-btn" onclick="clearQuote()">
+            <i class="fas fa-trash"></i> Clear
+        </button>
+
+        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
+            <i class="fas fa-flask"></i> Sample
+        </button>
+
+        <button type="button" class="action-btn copy-btn" onclick="copyQuote()">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<section class="related-tools">
+    <h2>🔗 Related Tools</h2>
+    <div id="relatedToolsContainer" class="tools-grid"></div>
+</section>
+
+<section class="info-section">
+    <h2>How to Use the Random Quote Generator</h2>
+
+    <p>
+        The <strong>Random Quote Generator</strong> is a free online tool that gives you random quotes instantly for inspiration,
+        motivation, captions, sharing, and daily positivity. Instead of searching manually for quote ideas, you can generate
+        a fresh quote in one click.
+    </p>
+
+    <p>
+        To use the tool, first choose a <strong>quote category</strong> such as motivational, success, life, positive, or all quotes.
+        Then click the <strong>Generate Quote</strong> button. The tool will instantly display a random quote along with its author.
+    </p>
+
+    <p>
+        You can use the <strong>Copy</strong> button to copy the generated quote and paste it into captions, status updates,
+        presentations, notes, messages, or social media posts. This makes the tool useful for everyday inspiration as well as content creation.
+    </p>
+
+    <h3>Why Use This Random Quote Generator?</h3>
+    <ul>
+        <li><strong>Instant Inspiration:</strong> Generate random quotes in one click.</li>
+        <li><strong>Category Selection:</strong> Choose motivational, success, life, positive, or all quotes.</li>
+        <li><strong>Author Display:</strong> See the quote along with the author name.</li>
+        <li><strong>Easy Copying:</strong> Copy the generated quote instantly.</li>
+        <li><strong>Useful for Content:</strong> Great for captions, bios, messages, and posts.</li>
+        <li><strong>Simple and Fast:</strong> No signup and no delay.</li>
+        <li><strong>Browser Based:</strong> Works directly in your browser.</li>
+        <li><strong>Completely Free:</strong> Unlimited quote generation.</li>
+    </ul>
+
+    <h3>Who Can Use This Tool?</h3>
+    <p>
+        This tool is useful for <strong>students</strong>, <strong>writers</strong>, <strong>content creators</strong>,
+        <strong>teachers</strong>, <strong>social media users</strong>, and anyone who enjoys motivational or thoughtful quotes.
+        It works well for speeches, status updates, journal prompts, and creative ideas.
+    </p>
+
+    <h3>Example Quote</h3>
+    <p class="formula-box">“Success is not final, failure is not fatal: it is the courage to continue that counts.” — Winston Churchill</p>
+</section>
+
+<section class="info-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q1: What is a random quote generator?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            A <strong>random quote generator</strong> is an online tool that shows a random quote instantly for inspiration,
+            motivation, sharing, and creative use.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q2: Can I generate unlimited quotes?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can generate as many quotes as you want by clicking the generate button again.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q3: Can I choose quote categories?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can choose categories like <strong>motivational, success, life, positive, or all quotes</strong>.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q4: Can I copy the generated quote?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, you can copy the generated quote in one click and paste it into your message, caption, or post.
+        </div>
+    </div>
+
+    <div class="accordion-item faq-card">
+        <button class="accordion-btn" type="button">
+            Q5: Is this random quote generator free and safe to use?
+            <span class="arrow">&#9660;</span>
+        </button>
+        <div class="accordion-content">
+            Yes, this tool is <strong>completely free</strong> and works directly in your browser.
+            No signup is required.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SuperTools |
+        <a href="../privacy.html">Privacy Policy</a> |
+        <a href="../about.html">About Us</a> |
+        <a href="../contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+// Accordion
+const accButtons = document.querySelectorAll(".accordion-btn");
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+
+        accButtons.forEach(otherBtn => {
+            otherBtn.classList.remove("active");
+            if (otherBtn.nextElementSibling) {
+                otherBtn.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        if (!isOpen) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+const quotes = {
+    all: [
+        { text: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
+        { text: "Dream big and dare to fail.", author: "Norman Vaughan" },
+        { text: "Push yourself, because no one else is going to do it for you.", author: "Unknown" },
+        { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+        { text: "Your only limit is your mind.", author: "Unknown" },
+        { text: "Stay hungry, stay foolish.", author: "Steve Jobs" },
+        { text: "Do what you can, with what you have, where you are.", author: "Theodore Roosevelt" },
+        { text: "Happiness depends upon ourselves.", author: "Aristotle" },
+        { text: "Turn your wounds into wisdom.", author: "Oprah Winfrey" },
+        { text: "Action is the foundational key to all success.", author: "Pablo Picasso" }
+    ],
+    motivational: [
+        { text: "Push yourself, because no one else is going to do it for you.", author: "Unknown" },
+        { text: "Great things never come from comfort zones.", author: "Unknown" },
+        { text: "Do something today that your future self will thank you for.", author: "Unknown" },
+        { text: "Don’t watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
+        { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" }
+    ],
+    success: [
+        { text: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
+        { text: "Action is the foundational key to all success.", author: "Pablo Picasso" },
+        { text: "Success usually comes to those who are too busy to be looking for it.", author: "Henry David Thoreau" },
+        { text: "Hard work beats talent when talent doesn’t work hard.", author: "Tim Notke" },
+        { text: "Success is the sum of small efforts, repeated day in and day out.", author: "Robert Collier" }
+    ],
+    life: [
+        { text: "Life is really simple, but we insist on making it complicated.", author: "Confucius" },
+        { text: "In the middle of every difficulty lies opportunity.", author: "Albert Einstein" },
+        { text: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
+        { text: "Happiness depends upon ourselves.", author: "Aristotle" },
+        { text: "Do what you can, with what you have, where you are.", author: "Theodore Roosevelt" }
+    ],
+    positive: [
+        { text: "Keep your face always toward the sunshine—and shadows will fall behind you.", author: "Walt Whitman" },
+        { text: "Turn your wounds into wisdom.", author: "Oprah Winfrey" },
+        { text: "Choose to be optimistic, it feels better.", author: "Dalai Lama" },
+        { text: "Wherever you go, go with all your heart.", author: "Confucius" },
+        { text: "Every day may not be good, but there is something good in every day.", author: "Unknown" }
+    ]
+};
+
+let lastQuote = "";
+
+function randomItem(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function generateQuote() {
+    const category = document.getElementById("quoteCategory").value;
+    const result = document.getElementById("result");
+    const selectedPool = quotes[category] || quotes.all;
+    const quote = randomItem(selectedPool);
+
+    lastQuote = `“${quote.text}” — ${quote.author}`;
+
+    result.innerHTML = `
+        <div class="average-result result-pop">
+            <div class="status-message"><strong>Generated Quote:</strong></div>
+            <div class="comparison-note"><strong>“${quote.text}”</strong></div>
+            <div><strong>Author:</strong> ${quote.author}</div>
+            <hr>
+            <div><strong>Category:</strong> ${document.getElementById("quoteCategory").options[document.getElementById("quoteCategory").selectedIndex].text}</div>
+        </div>
+    `;
+
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function copyQuote() {
+    if (!lastQuote) {
+        alert("Nothing to copy yet!");
+        return;
+    }
+
+    navigator.clipboard.writeText(lastQuote)
+        .then(() => alert("Quote copied to clipboard!"))
+        .catch(() => alert("Failed to copy quote."));
+}
+
+function clearQuote() {
+    document.getElementById("quoteCategory").value = "all";
+    document.getElementById("result").innerHTML = "";
+    lastQuote = "";
+}
+
+function loadSample() {
+    document.getElementById("quoteCategory").value = "motivational";
+    generateQuote();
+}
+
+const tools = [
+    { name: "Username Generator", url: "usernamegenerator.html", icon: "🧑", category: "generator" },
+    { name: "Business Name Generator", url: "businessnamegenerator.html", icon: "🏢", category: "generator" },
+    { name: "Domain Name Generator", url: "domainnamegenerator.html", icon: "🌐", category: "generator" },
+    { name: "Hashtag Generator", url: "hashtaggenerator.html", icon: "#️⃣", category: "generator" },
+    { name: "Random Quote Generator", url: "randomquotegenerator.html", icon: "💬", category: "generator" },
+    { name: "Bio Generator", url: "biogenerator.html", icon: "📝", category: "generator" },
+    { name: "Color Palette Generator", url: "colorpalettegenerator.html", icon: "🎨", category: "generator" },
+    { name: "Fake Address Generator", url: "fakeaddressgenerator.html", icon: "🏠", category: "generator" },
+    { name: "MD5 Generator", url: "md5-generator.html", icon: "🔐", category: "generator" },
+    { name: "QR Code Generator", url: "qr.html", icon: "📱", category: "generator" },
+    { name: "Random Emoji Generator", url: "randomemojigenerator.html", icon: "😀", category: "generator" },
+    { name: "Random Name Generator", url: "randomnamegenerator.html", icon: "🎲", category: "generator" },
+    { name: "Random Number Generator", url: "randomnumber.html", icon: "🔢", category: "generator" },
+    { name: "UUID Generator", url: "uuidgenerator.html", icon: "🆔", category: "generator" }
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const related = tools
+    .filter(tool => tool.url !== currentPage)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+const container = document.getElementById("relatedToolsContainer");
+
+if (container) {
+    container.innerHTML = related.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+            <div class="tool-icon">${tool.icon}</div>
+            <h3>${tool.name}</h3>
+        </a>
+    `).join("");
+}
+</script>
+
+</body>
+</html>
