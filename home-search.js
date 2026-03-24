@@ -23,11 +23,15 @@ const synonymGroups = [
 
 const categoriesGrid = document.getElementById("categoriesGrid");
 const featuredGrid = document.getElementById("featuredGrid");
-const toolsGrid = document.getElementById("toolsGrid");
+const searchToolsGrid = document.getElementById("searchToolsGrid");
+const browseToolsGrid = document.getElementById("browseToolsGrid");
 const searchInput = document.getElementById("searchInput");
 const filterChips = document.getElementById("filterChips");
 const resultsCount = document.getElementById("resultsCount");
-const emptyState = document.getElementById("emptyState");
+const searchEmptyState = document.getElementById("searchEmptyState");
+const browseEmptyState = document.getElementById("browseEmptyState");
+const resultsShell = document.getElementById("resultsShell");
+let hasAutoFocusedResults = false;
 
 function normalize(text) {
     return String(text || "")
@@ -70,7 +74,9 @@ function createToolCard(tool) {
 }
 
 function renderDirectory() {
-    toolsGrid.innerHTML = allTools.map(createToolCard).join("");
+    const markup = allTools.map(createToolCard).join("");
+    if (searchToolsGrid) searchToolsGrid.innerHTML = markup;
+    if (browseToolsGrid) browseToolsGrid.innerHTML = markup;
 }
 
 categoriesGrid.innerHTML = Object.entries(categoryMeta).map(([key, meta]) => `
@@ -115,14 +121,18 @@ function matchesSmartQuery(searchText, query) {
 function updateDirectory() {
     const activeFilter = filterChips.querySelector('.chip.is-active').dataset.filter;
     const query = searchInput.value.trim();
-    const cards = [...toolsGrid.querySelectorAll('.tool-card')];
+    const searchCards = searchToolsGrid ? [...searchToolsGrid.querySelectorAll('.tool-card')] : [];
+    const browseCards = browseToolsGrid ? [...browseToolsGrid.querySelectorAll('.tool-card')] : [];
     let visible = 0;
 
-    cards.forEach((card) => {
+    searchCards.forEach((card, index) => {
         const matchesFilter = activeFilter === 'all' || card.dataset.category === activeFilter;
         const matchesQuery = matchesSmartQuery(card.dataset.search, query);
         const show = matchesFilter && matchesQuery;
         card.classList.toggle('is-hidden', !show);
+        if (browseCards[index]) {
+            browseCards[index].classList.toggle('is-hidden', !show);
+        }
         if (show) visible += 1;
     });
 
@@ -130,7 +140,29 @@ function updateDirectory() {
         ? allTools.length
         : allTools.filter((tool) => tool.category === activeFilter).length;
     resultsCount.textContent = `Showing ${visible} of ${scopedTotal} tools`;
-    emptyState.style.display = visible ? 'none' : 'block';
+    if (searchEmptyState) searchEmptyState.style.display = visible ? 'none' : 'block';
+    if (browseEmptyState) browseEmptyState.style.display = 'none';
+
+    const searchActive = Boolean(query) || activeFilter !== 'all';
+    document.body.classList.toggle('search-active', searchActive);
+    if (resultsShell) {
+        resultsShell.style.display = searchActive ? 'block' : 'none';
+    }
+}
+
+function scrollResultsIntoView() {
+    const directorySection = document.getElementById('directory');
+    if (!directorySection) return;
+
+    const topbar = document.querySelector('.topbar');
+    const navOffset = topbar ? topbar.getBoundingClientRect().height : 0;
+    const extraGap = 12;
+    const targetTop = directorySection.getBoundingClientRect().top + window.scrollY - navOffset - extraGap;
+
+    window.scrollTo({
+        top: Math.max(0, targetTop),
+        behavior: 'smooth'
+    });
 }
 
 filterChips.addEventListener('click', (event) => {
@@ -139,7 +171,23 @@ filterChips.addEventListener('click', (event) => {
     filterChips.querySelectorAll('.chip').forEach((item) => item.classList.remove('is-active'));
     chip.classList.add('is-active');
     updateDirectory();
+    scrollResultsIntoView();
 });
 
-searchInput.addEventListener('input', updateDirectory);
+searchInput.addEventListener('input', () => {
+    updateDirectory();
+    if (searchInput.value.trim()) {
+        if (!hasAutoFocusedResults) {
+            scrollResultsIntoView();
+            hasAutoFocusedResults = true;
+        }
+    } else {
+        hasAutoFocusedResults = false;
+    }
+});
+
+searchInput.addEventListener('focus', () => {
+    hasAutoFocusedResults = false;
+});
+
 updateDirectory();
