@@ -1,4 +1,4 @@
-Ôªø<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -67,9 +67,9 @@ crossorigin="anonymous"></script>
     "name": "SuperTools",
     "url": "https://supertools1.site",
     "logo": {
-      "@type": "ImageObject",
-      "url": "https://supertools1.site/calculators/gpacalculator.html"
-    }
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
   },
   "image": "https://supertools1.site/logo.png",
   "featureList": [
@@ -204,7 +204,7 @@ crossorigin="anonymous"></script>
     </p>
 
     <p class="formula-box">
-        GPA = Total Grade Points √∑ Total Credits
+        GPA = Total Grade Points ˜ Total Credits
     </p>
 
     <p>
@@ -335,7 +335,7 @@ function addSubject(subjectName = "", gradeValue = "4", creditsValue = "") {
             <option value="0" ${gradeValue === "0" ? "selected" : ""}>F</option>
         </select>
         <input type="number" placeholder="Credits" min="1" step="0.5" value="${creditsValue}">
-        <button type="button" class="action-btn clear-btn" onclick="this.parentElement.remove()">‚ùå</button>
+        <button type="button" class="action-btn clear-btn" onclick="this.parentElement.remove()">?</button>
     `;
 
     document.getElementById("subjects").appendChild(div);
@@ -375,7 +375,7 @@ function calculateGPA() {
                 <div class="stat-box">GPA<br>${gpa}</div>
             </div>
             <hr>
-            <div><strong>Formula:</strong> GPA = Total Grade Points √∑ Total Credits = ${totalPoints.toFixed(2)} √∑ ${totalCredits} = ${gpa}</div>
+            <div><strong>Formula:</strong> GPA = Total Grade Points ˜ Total Credits = ${totalPoints.toFixed(2)} ˜ ${totalCredits} = ${gpa}</div>
         </div>
     `);
 }

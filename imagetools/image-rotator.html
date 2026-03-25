@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -64,9 +64,9 @@ crossorigin="anonymous"></script>
     "name": "SuperTools",
     "url": "https://supertools1.site",
     "logo": {
-      "@type": "ImageObject",
-      "url": "https://supertools1.site/imagetools/image-rotator.html"
-    }
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
   },
   "image": "https://supertools1.site/logo.png",
   "featureList": [
@@ -381,7 +381,7 @@ function loadImage(file) {
                     <hr>
                     <p><strong>File Name:</strong> ${file.name}</p>
                     <p><strong>File Size:</strong> ${formatFileSize(file.size)}</p>
-                    <p><strong>Dimensions:</strong> ${img.width} Ã— ${img.height}px</p>
+                    <p><strong>Dimensions:</strong> ${img.width} × ${img.height}px</p>
                     <p><strong>Current Rotation:</strong> ${((rotation % 360) + 360) % 360}&deg;</p>
                 </div>
             `;
@@ -418,7 +418,7 @@ function drawImage() {
             <hr>
             <p><strong>File Name:</strong> ${uploadedFile ? uploadedFile.name : "Uploaded Image"}</p>
             <p><strong>File Size:</strong> ${uploadedFile ? formatFileSize(uploadedFile.size) : "N/A"}</p>
-            <p><strong>Original Dimensions:</strong> ${img.width} Ã— ${img.height}px</p>
+            <p><strong>Original Dimensions:</strong> ${img.width} × ${img.height}px</p>
             <p><strong>Current Rotation:</strong> ${normalizedRotation}&deg;</p>
         </div>
     `;

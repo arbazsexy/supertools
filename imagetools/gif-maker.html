@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -64,9 +64,9 @@ gtag('config', 'G-FD5FXM51M8');
     "name": "SuperTools",
     "url": "https://supertools1.site",
     "logo": {
-      "@type": "ImageObject",
-      "url": "https://supertools1.site/imagetools/gif-maker.html"
-    }
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
   },
   "image": "https://supertools1.site/logo.png",
   "featureList": [
@@ -417,7 +417,7 @@ function createFrameCard(src, name) {
 
     const leftBtn = document.createElement("button");
     leftBtn.type = "button";
-    leftBtn.textContent = "←";
+    leftBtn.textContent = "?";
     leftBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         const prev = wrapper.previousElementSibling;
@@ -426,7 +426,7 @@ function createFrameCard(src, name) {
 
     const rightBtn = document.createElement("button");
     rightBtn.type = "button";
-    rightBtn.textContent = "→";
+    rightBtn.textContent = "?";
     rightBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         const next = wrapper.nextElementSibling;
@@ -435,7 +435,7 @@ function createFrameCard(src, name) {
 
     const deleteBtn = document.createElement("button");
     deleteBtn.type = "button";
-    deleteBtn.textContent = "✕";
+    deleteBtn.textContent = "?";
     deleteBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         wrapper.remove();

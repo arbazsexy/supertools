@@ -1,4 +1,4 @@
-Ôªø<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -69,7 +69,7 @@
         "url": "https://supertools1.site",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://supertools1.site/generators/randomquotegenerator.html"
+          "url": "https://supertools1.site/logo.png"
         }
       },
       "image": "https://supertools1.site/logo.png",
@@ -224,7 +224,7 @@
     </p>
 
     <h3>Example Quote</h3>
-    <p class="formula-box">‚ÄúSuccess is not final, failure is not fatal: it is the courage to continue that counts.‚Äù ‚Äî Winston Churchill</p>
+    <p class="formula-box">ìSuccess is not final, failure is not fatal: it is the courage to continue that counts.î ó Winston Churchill</p>
 </section>
 
 <section class="info-section">
@@ -330,14 +330,14 @@ const quotes = {
         { text: "Push yourself, because no one else is going to do it for you.", author: "Unknown" },
         { text: "Great things never come from comfort zones.", author: "Unknown" },
         { text: "Do something today that your future self will thank you for.", author: "Unknown" },
-        { text: "Don‚Äôt watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
+        { text: "Donít watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
         { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" }
     ],
     success: [
         { text: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
         { text: "Action is the foundational key to all success.", author: "Pablo Picasso" },
         { text: "Success usually comes to those who are too busy to be looking for it.", author: "Henry David Thoreau" },
-        { text: "Hard work beats talent when talent doesn‚Äôt work hard.", author: "Tim Notke" },
+        { text: "Hard work beats talent when talent doesnít work hard.", author: "Tim Notke" },
         { text: "Success is the sum of small efforts, repeated day in and day out.", author: "Robert Collier" }
     ],
     life: [
@@ -348,7 +348,7 @@ const quotes = {
         { text: "Do what you can, with what you have, where you are.", author: "Theodore Roosevelt" }
     ],
     positive: [
-        { text: "Keep your face always toward the sunshine‚Äîand shadows will fall behind you.", author: "Walt Whitman" },
+        { text: "Keep your face always toward the sunshineóand shadows will fall behind you.", author: "Walt Whitman" },
         { text: "Turn your wounds into wisdom.", author: "Oprah Winfrey" },
         { text: "Choose to be optimistic, it feels better.", author: "Dalai Lama" },
         { text: "Wherever you go, go with all your heart.", author: "Confucius" },
@@ -368,12 +368,12 @@ function generateQuote() {
     const selectedPool = quotes[category] || quotes.all;
     const quote = randomItem(selectedPool);
 
-    lastQuote = `‚Äú${quote.text}‚Äù ‚Äî ${quote.author}`;
+    lastQuote = `ì${quote.text}î ó ${quote.author}`;
 
     result.innerHTML = `
         <div class="average-result result-pop">
             <div class="status-message"><strong>Generated Quote:</strong></div>
-            <div class="comparison-note"><strong>‚Äú${quote.text}‚Äù</strong></div>
+            <div class="comparison-note"><strong>ì${quote.text}î</strong></div>
             <div><strong>Author:</strong> ${quote.author}</div>
             <hr>
             <div><strong>Category:</strong> ${document.getElementById("quoteCategory").options[document.getElementById("quoteCategory").selectedIndex].text}</div>

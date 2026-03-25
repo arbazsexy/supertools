@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -62,9 +62,9 @@ gtag('config', 'G-FD5FXM51M8');
     "name": "SuperTools",
     "url": "https://supertools1.site",
     "logo": {
-      "@type": "ImageObject",
-      "url": "https://supertools1.site/imagetools/webp-to-png.html"
-    }
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
   },
   "image": "https://supertools1.site/logo.png",
   "featureList": [
@@ -349,7 +349,7 @@ upload.addEventListener("change", function(e) {
                     <p><strong>File Name:</strong> ${file.name}</p>
                     <p><strong>File Size:</strong> ${formatFileSize(file.size)}</p>
                     <p><strong>File Type:</strong> ${file.type || "image/webp"}</p>
-                    <p><strong>Dimensions:</strong> ${uploadedImage.width} Ã— ${uploadedImage.height}px</p>
+                    <p><strong>Dimensions:</strong> ${uploadedImage.width} × ${uploadedImage.height}px</p>
                 </div>
             `;
 
@@ -399,7 +399,7 @@ function convertImage() {
             <hr>
             <p><strong>Original File:</strong> ${uploadedFile ? uploadedFile.name : "Uploaded image"}</p>
             <p><strong>Original Size:</strong> ${uploadedFile ? formatFileSize(uploadedFile.size) : "N/A"}</p>
-            <p><strong>Original Dimensions:</strong> ${uploadedImage.width} Ã— ${uploadedImage.height}px</p>
+            <p><strong>Original Dimensions:</strong> ${uploadedImage.width} × ${uploadedImage.height}px</p>
             <p><strong>Output Format:</strong> PNG</p>
         </div>
     `;

@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -60,9 +60,9 @@ crossorigin="anonymous"></script>
     "name": "SuperTools",
     "url": "https://supertools1.site",
     "logo": {
-      "@type": "ImageObject",
-      "url": "https://supertools1.site/imagetools/image-resizer.html"
-    }
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
   },
   "image":"https://supertools1.site/logo.png",
   "featureList": [
@@ -397,7 +397,7 @@ function loadImageFile(file) {
                     <hr>
                     <p><strong>File Name:</strong> ${file.name}</p>
                     <p><strong>File Size:</strong> ${formatFileSize(file.size)}</p>
-                    <p><strong>Original Dimensions:</strong> ${originalWidth} Ã— ${originalHeight}px</p>
+                    <p><strong>Original Dimensions:</strong> ${originalWidth} × ${originalHeight}px</p>
                     <p><strong>File Type:</strong> ${file.type || "Unknown"}</p>
                 </div>
             `;
@@ -468,8 +468,8 @@ function resizeImage() {
             <div><strong>Image Details</strong></div>
             <hr>
             <p><strong>File Name:</strong> ${uploadedFile ? uploadedFile.name : "Uploaded Image"}</p>
-            <p><strong>Original Dimensions:</strong> ${originalWidth} Ã— ${originalHeight}px</p>
-            <p><strong>Resized Dimensions:</strong> ${width} Ã— ${height}px</p>
+            <p><strong>Original Dimensions:</strong> ${originalWidth} × ${originalHeight}px</p>
+            <p><strong>Resized Dimensions:</strong> ${width} × ${height}px</p>
             <p><strong>Aspect Ratio Lock:</strong> ${lockAspect.checked ? "Enabled" : "Disabled"}</p>
         </div>
     `;

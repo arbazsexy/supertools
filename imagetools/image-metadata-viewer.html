@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -68,9 +68,9 @@ crossorigin="anonymous"></script>
     "name": "SuperTools",
     "url": "https://supertools1.site",
     "logo": {
-      "@type": "ImageObject",
-      "url": "https://supertools1.site/imagetools/image-metadata-viewer.html"
-    }
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
   },
   "image": "https://supertools1.site/logo.png",
   "featureList": [
@@ -419,7 +419,7 @@ function triggerImageRead() {
             html += `<p><strong>File Name:</strong> ${file.name}</p>`;
             html += `<p><strong>File Size:</strong> ${formatFileSize(file.size)}</p>`;
             html += `<p><strong>File Type:</strong> ${file.type || "Unknown"}</p>`;
-            html += `<p><strong>Resolution:</strong> ${img.width} × ${img.height}</p>`;
+            html += `<p><strong>Resolution:</strong> ${img.width} � ${img.height}</p>`;
             html += `<p><strong>Last Modified:</strong> ${formatDate(file.lastModified)}</p>`;
 
             metadataText += `File Name: ${file.name}\n`;

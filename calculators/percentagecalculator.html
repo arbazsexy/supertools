@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -69,7 +69,7 @@
         "url": "https://supertools1.site",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://supertools1.site/calculators/percentagecalculator.html"
+          "url": "https://supertools1.site/logo.png"
         }
       },
       "image": "https://supertools1.site/logo.png",
@@ -258,19 +258,19 @@
     <h3>Common Percentage Formulas</h3>
 
     <p class="formula-box">
-        Percentage of a Number = (Percentage Ã· 100) Ã— Number
+        Percentage of a Number = (Percentage ÷ 100) × Number
     </p>
 
     <p class="formula-box">
-        Percentage Increase = ((New Value - Old Value) Ã· Old Value) Ã— 100
+        Percentage Increase = ((New Value - Old Value) ÷ Old Value) × 100
     </p>
 
     <p class="formula-box">
-        Percentage Decrease = ((Starting Value - Ending Value) Ã· Starting Value) Ã— 100
+        Percentage Decrease = ((Starting Value - Ending Value) ÷ Starting Value) × 100
     </p>
 
     <p class="formula-box">
-        What Percent = (Part Ã· Whole) Ã— 100
+        What Percent = (Part ÷ Whole) × 100
     </p>
 
     <h3>Why Use This Percentage Calculator?</h3>
@@ -305,7 +305,7 @@
             <br><br>
             For example, 20% of 50 is:
             <br>
-            <strong>(20 Ã· 100) Ã— 50 = 10</strong>
+            <strong>(20 ÷ 100) × 50 = 10</strong>
         </div>
     </div>
 
@@ -322,7 +322,7 @@
             <br>
             Old value = 100, New value = 125
             <br>
-            Increase = ((125 - 100) Ã· 100) Ã— 100 = <strong>25%</strong>
+            Increase = ((125 - 100) ÷ 100) × 100 = <strong>25%</strong>
         </div>
     </div>
 
@@ -339,7 +339,7 @@
             <br>
             Starting value = 80, Ending value = 60
             <br>
-            Decrease = ((80 - 60) Ã· 80) Ã— 100 = <strong>25%</strong>
+            Decrease = ((80 - 60) ÷ 80) × 100 = <strong>25%</strong>
         </div>
     </div>
 
@@ -428,7 +428,7 @@ function calculateAllResults() {
     if (!isNaN(p1) && !isNaN(n1)) {
         const result = (p1 / 100) * n1;
         setResult("result1", `<strong>${formatNumber(p1)}%</strong> of <strong>${formatNumber(n1)}</strong> = <strong>${formatNumber(result)}</strong>`);
-        summary.push(`â€¢ ${formatNumber(p1)}% of ${formatNumber(n1)} = ${formatNumber(result)}`);
+        summary.push(`• ${formatNumber(p1)}% of ${formatNumber(n1)} = ${formatNumber(result)}`);
     } else {
         setResult("result1", "Enter both values to calculate this section.");
     }
@@ -439,7 +439,7 @@ function calculateAllResults() {
         } else {
             const result = (n2b / n2a) * 100;
             setResult("result2", `<strong>${formatNumber(n2b)}</strong> is <strong>${formatNumber(result)}%</strong> of <strong>${formatNumber(n2a)}</strong>`);
-            summary.push(`â€¢ ${formatNumber(n2b)} is ${formatNumber(result)}% of ${formatNumber(n2a)}`);
+            summary.push(`• ${formatNumber(n2b)} is ${formatNumber(result)}% of ${formatNumber(n2a)}`);
         }
     } else {
         setResult("result2", "Enter both values to calculate this section.");
@@ -451,7 +451,7 @@ function calculateAllResults() {
         } else {
             const increase = ((newValue - oldValue) / oldValue) * 100;
             setResult("result3", `Increase from <strong>${formatNumber(oldValue)}</strong> to <strong>${formatNumber(newValue)}</strong> = <strong>${formatNumber(increase)}%</strong>`);
-            summary.push(`â€¢ Increase: ${formatNumber(increase)}%`);
+            summary.push(`• Increase: ${formatNumber(increase)}%`);
         }
     } else {
         setResult("result3", "Enter both values to calculate this section.");
@@ -463,7 +463,7 @@ function calculateAllResults() {
         } else {
             const decrease = ((startValue - endValue) / startValue) * 100;
             setResult("result4", `Decrease from <strong>${formatNumber(startValue)}</strong> to <strong>${formatNumber(endValue)}</strong> = <strong>${formatNumber(decrease)}%</strong>`);
-            summary.push(`â€¢ Decrease: ${formatNumber(decrease)}%`);
+            summary.push(`• Decrease: ${formatNumber(decrease)}%`);
         }
     } else {
         setResult("result4", "Enter both values to calculate this section.");
@@ -473,7 +473,7 @@ function calculateAllResults() {
         const amountAdded = (percentAdd / 100) * baseAdd;
         const finalValue = baseAdd + amountAdded;
         setResult("result5", `<strong>${formatNumber(percentAdd)}%</strong> added to <strong>${formatNumber(baseAdd)}</strong> = <strong>${formatNumber(finalValue)}</strong>`);
-        summary.push(`â€¢ ${formatNumber(baseAdd)} + ${formatNumber(percentAdd)}% = ${formatNumber(finalValue)}`);
+        summary.push(`• ${formatNumber(baseAdd)} + ${formatNumber(percentAdd)}% = ${formatNumber(finalValue)}`);
     } else {
         setResult("result5", "Enter both values to calculate this section.");
     }
@@ -482,7 +482,7 @@ function calculateAllResults() {
         const amountSubtracted = (percentSubtract / 100) * baseSubtract;
         const finalValue = baseSubtract - amountSubtracted;
         setResult("result6", `<strong>${formatNumber(percentSubtract)}%</strong> subtracted from <strong>${formatNumber(baseSubtract)}</strong> = <strong>${formatNumber(finalValue)}</strong>`);
-        summary.push(`â€¢ ${formatNumber(baseSubtract)} - ${formatNumber(percentSubtract)}% = ${formatNumber(finalValue)}`);
+        summary.push(`• ${formatNumber(baseSubtract)} - ${formatNumber(percentSubtract)}% = ${formatNumber(finalValue)}`);
     } else {
         setResult("result6", "Enter both values to calculate this section.");
     }

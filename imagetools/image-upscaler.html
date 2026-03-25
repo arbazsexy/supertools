@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -66,9 +66,9 @@ crossorigin="anonymous"></script>
     "name": "SuperTools",
     "url": "https://supertools1.site",
     "logo": {
-      "@type": "ImageObject",
-      "url": "https://supertools1.site/imagetools/image-upscaler.html"
-    }
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
   },
   "image": "https://supertools1.site/logo.png",
   "featureList": [
@@ -384,7 +384,7 @@ function loadImage(file) {
                     <hr>
                     <p><strong>File Name:</strong> ${file.name}</p>
                     <p><strong>File Size:</strong> ${formatFileSize(file.size)}</p>
-                    <p><strong>Original Dimensions:</strong> ${currentImage.width} Ã— ${currentImage.height}px</p>
+                    <p><strong>Original Dimensions:</strong> ${currentImage.width} × ${currentImage.height}px</p>
                     <p><strong>Selected Upscale:</strong> ${document.getElementById("scale").value}x</p>
                 </div>
             `;
@@ -423,8 +423,8 @@ function upscaleImage() {
             <div><strong>Upscaled Image Details</strong></div>
             <hr>
             <p><strong>File Name:</strong> ${uploadedFile ? uploadedFile.name : "Uploaded Image"}</p>
-            <p><strong>Original Dimensions:</strong> ${currentImage.width} Ã— ${currentImage.height}px</p>
-            <p><strong>Upscaled Dimensions:</strong> ${newWidth} Ã— ${newHeight}px</p>
+            <p><strong>Original Dimensions:</strong> ${currentImage.width} × ${currentImage.height}px</p>
+            <p><strong>Upscaled Dimensions:</strong> ${newWidth} × ${newHeight}px</p>
             <p><strong>Upscale Factor:</strong> ${scale}x</p>
         </div>
     `;

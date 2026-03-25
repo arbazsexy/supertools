@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -65,9 +65,9 @@ crossorigin="anonymous"></script>
     "name": "SuperTools",
     "url": "https://supertools1.site",
     "logo": {
-      "@type": "ImageObject",
-      "url": "https://supertools1.site/calculators/gstcalculator.html"
-    }
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
   },
   "image": "https://supertools1.site/logo.png",
   "featureList": [
@@ -177,27 +177,27 @@ crossorigin="anonymous"></script>
 
     <label for="currency">Currency</label>
     <select id="currency">
-        <option value="₹">₹ INR</option>
+        <option value="?">? INR</option>
         <option value="$">$ USD</option>
-        <option value="€">€ EUR</option>
-        <option value="£">£ GBP</option>
+        <option value="�">� EUR</option>
+        <option value="�">� GBP</option>
     </select>
 
     <div class="button-group">
         <button type="button" onclick="calculateGST()">
-            🧾 Calculate
+            ?? Calculate
         </button>
 
         <button type="button" class="action-btn clear-btn" onclick="clearAll()">
-            ❌ Clear
+            ? Clear
         </button>
 
         <button type="button" class="action-btn sample-btn" onclick="loadSample()">
-            🧪 Sample
+            ?? Sample
         </button>
 
         <button type="button" class="action-btn copy-btn" onclick="copyResult()">
-            📋 Copy
+            ?? Copy
         </button>
     </div>
 
@@ -287,7 +287,7 @@ crossorigin="anonymous"></script>
             <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
-            To remove GST, divide the GST-inclusive amount by <strong>1 + (GST rate ÷ 100)</strong>. This gives the base amount before tax. The difference between the inclusive amount and the base amount is the GST portion.
+            To remove GST, divide the GST-inclusive amount by <strong>1 + (GST rate � 100)</strong>. This gives the base amount before tax. The difference between the inclusive amount and the base amount is the GST portion.
         </div>
     </div>
 
@@ -410,7 +410,7 @@ function clearAll() {
     document.getElementById("customGSTLabel").style.display = "none";
     document.getElementById("mode").value = "add";
     document.getElementById("type").value = "cgst";
-    document.getElementById("currency").value = "₹";
+    document.getElementById("currency").value = "?";
     document.getElementById("result").innerHTML = "";
 }
 
@@ -419,7 +419,7 @@ function loadSample() {
     document.getElementById("mode").value = "add";
     document.getElementById("gst").value = "18";
     document.getElementById("type").value = "cgst";
-    document.getElementById("currency").value = "₹";
+    document.getElementById("currency").value = "?";
     document.getElementById("customGST").style.display = "none";
     document.getElementById("customGSTLabel").style.display = "none";
     calculateGST();

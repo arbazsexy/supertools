@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -63,9 +63,9 @@ crossorigin="anonymous"></script>
     "name": "SuperTools",
     "url": "https://supertools1.site",
     "logo": {
-      "@type": "ImageObject",
-      "url": "https://supertools1.site/calculators/scientificcalculator.html"
-    }
+          "@type": "ImageObject",
+          "url": "https://supertools1.site/logo.png"
+        }
   },
   "image": "https://supertools1.site/logo.png",
   "featureList": [
@@ -201,15 +201,15 @@ crossorigin="anonymous"></script>
             <button type="button" onclick="insert(')')">)</button>
             <button type="button" onclick="insert('%')">%</button>
             <button type="button" onclick="insert('^')">x^y</button>
-            <button type="button" onclick="insertSquare()">x²</button>
+            <button type="button" onclick="insertSquare()">x�</button>
             <button type="button" onclick="insert('!')">n!</button>
 
             <button type="button" onclick="insert('7')">7</button>
             <button type="button" onclick="insert('8')">8</button>
             <button type="button" onclick="insert('9')">9</button>
-            <button type="button" onclick="insert('/')">÷</button>
-            <button type="button" onclick="insert('*')">×</button>
-            <button type="button" onclick="insert('-')">−</button>
+            <button type="button" onclick="insert('/')">�</button>
+            <button type="button" onclick="insert('*')">�</button>
+            <button type="button" onclick="insert('-')">-</button>
 
             <button type="button" onclick="insert('4')">4</button>
             <button type="button" onclick="insert('5')">5</button>
@@ -568,10 +568,10 @@ function calculate() {
             </div>
         `;
     } catch (error) {
-        calcResult.innerHTML = "❌ Invalid Expression";
+        calcResult.innerHTML = "? Invalid Expression";
         result.innerHTML = `
             <div class="average-result result-pop" style="color:#d63031;">
-                ❌ Invalid Expression
+                ? Invalid Expression
             </div>
         `;
     }

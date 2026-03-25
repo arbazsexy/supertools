@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -69,7 +69,7 @@
         "url": "https://supertools1.site",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://supertools1.site/calculators/salarycalculator.html"
+          "url": "https://supertools1.site/logo.png"
         }
       },
       "image": "https://supertools1.site/logo.png",
@@ -168,9 +168,9 @@
 
             <div class="input-row">
                 <select id="currency" aria-label="Currency">
-                    <option value="₹">₹ INR</option>
+                    <option value="?">? INR</option>
                     <option value="$">$ USD</option>
-                    <option value="€">€ EUR</option>
+                    <option value="�">� EUR</option>
                 </select>
                 <input type="number" id="hours" placeholder="Hours/week (for hourly)">
             </div>
@@ -458,7 +458,7 @@ function calculateSalary() {
 function clearAll() {
     document.getElementById("salary").value = "";
     document.getElementById("type").value = "monthly";
-    document.getElementById("currency").value = "₹";
+    document.getElementById("currency").value = "?";
     document.getElementById("hours").value = "";
     document.getElementById("tax").value = "";
     document.getElementById("pfRate").value = "";
@@ -471,7 +471,7 @@ function clearAll() {
 function loadSample() {
     document.getElementById("salary").value = "50000";
     document.getElementById("type").value = "monthly";
-    document.getElementById("currency").value = "₹";
+    document.getElementById("currency").value = "?";
     document.getElementById("hours").value = "40";
     document.getElementById("tax").value = "10";
     document.getElementById("pfRate").value = "12";
