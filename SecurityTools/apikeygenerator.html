@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -68,7 +68,7 @@
         "url": "https://supertools1.site",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://supertools1.site/SecurityTools/apikeygenerator.html"
+          "url": "https://supertools1.site/logo.png"
         }
       },
       "image": "https://supertools1.site/logo.png",
@@ -254,7 +254,7 @@
     </p>
 
     <p>
-        This tool uses the browserâ€™s <strong>cryptographically secure random generator</strong>, which means the keys are
+        This tool uses the browser’s <strong>cryptographically secure random generator</strong>, which means the keys are
         produced locally on your device instead of being generated with weak random logic. That makes it a practical option
         for generating tokens, secret-like identifiers, testing keys, and temporary credentials.
     </p>
@@ -296,7 +296,7 @@
             <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
-            Yes. This tool uses the browserâ€™s <strong>cryptographically secure random generator</strong> to create keys.
+            Yes. This tool uses the browser’s <strong>cryptographically secure random generator</strong> to create keys.
             That is much better than simple random functions for generating secure identifiers and tokens.
         </div>
     </div>
@@ -579,7 +579,7 @@ function generateKeys() {
                 ${keyList.map((item, index) => `
                     <div class="modern-card">
                         <p class="binary-output"><strong>Key ${index + 1}:</strong><br>${escapeHtml(item.key)}</p>
-                        <p class="generator-meta">Strength: ${escapeHtml(item.strength)} â€¢ Estimated Entropy: ${item.entropy} bits</p>
+                        <p class="generator-meta">Strength: ${escapeHtml(item.strength)} • Estimated Entropy: ${item.entropy} bits</p>
                         <button type="button" class="action-btn copy-btn" data-key="${escapeHtml(item.key)}">
                             <i class="fas fa-copy"></i> Copy This Key
                         </button>
