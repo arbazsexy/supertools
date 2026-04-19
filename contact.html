@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact SuperTools - Support, Feedback, and Suggestions</title>
-    <meta name="description" content="Contact SuperTools for feedback, support, bug reports, or tool suggestions. Reach us through the contact form or by email.">
+    <title>Contact SuperTools - Support, Feedback, Suggestions and Bug Reports</title>
+    <meta name="description" content="Contact SuperTools for support, bug reports, tool suggestions, feedback, or content corrections. Use the contact form or email us directly.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://supertools1.site/contact.html">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
-        <link rel="apple-touch-icon" href="favicon-192x192.png">
-    <meta property="og:title" content="Contact SuperTools - Support, Feedback, and Suggestions">
-    <meta property="og:description" content="Contact SuperTools for feedback, support, bug reports, or tool suggestions. Reach us through the contact form or by email.">
+    <link rel="apple-touch-icon" href="favicon-192x192.png">
+    <meta property="og:title" content="Contact SuperTools - Support, Feedback, Suggestions and Bug Reports">
+    <meta property="og:description" content="Contact SuperTools for support, bug reports, tool suggestions, feedback, or content corrections. Use the contact form or email us directly.">
     <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:image:alt" content="Contact SuperTools">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://supertools1.site/contact.html">
     <meta property="og:site_name" content="SuperTools">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact SuperTools - Support, Feedback, and Suggestions">
-    <meta name="twitter:description" content="Contact SuperTools for feedback, support, bug reports, or tool suggestions. Reach us through the contact form or by email.">
+    <meta name="twitter:title" content="Contact SuperTools - Support, Feedback, Suggestions and Bug Reports">
+    <meta name="twitter:description" content="Contact SuperTools for support, bug reports, tool suggestions, feedback, or content corrections. Use the contact form or email us directly.">
     <meta name="twitter:image" content="https://supertools1.site/logo.png">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ContactPage",
-      "name": "Contact SuperTools - Support, Feedback, and Suggestions",
+      "name": "Contact SuperTools - Support, Feedback, Suggestions and Bug Reports",
       "url": "https://supertools1.site/contact.html",
-      "description": "Contact SuperTools for feedback, support, bug reports, or tool suggestions. Reach us through the contact form or by email.",
+      "description": "Contact SuperTools for support, bug reports, tool suggestions, feedback, or content corrections. Use the contact form or email us directly.",
       "publisher": {
         "@type": "Organization",
         "name": "SuperTools",
@@ -37,23 +38,23 @@
         }
       }
     }
-    </script><style>
+    </script>
+    <style>
         :root {
             --bg: #eef5fb;
-            --surface: #ffffff;
+            --surface: rgba(255, 255, 255, 0.96);
             --surface-soft: #f7fbff;
             --text: #17324d;
             --muted: #59718a;
             --border: #d9e7f3;
             --primary: #2f8cff;
-            --primary-2: #18d7e5;
-            --shadow: 0 18px 40px rgba(18, 52, 86, 0.12);
-            --radius: 20px;
+            --accent: #18d7e5;
+            --shadow: 0 20px 44px rgba(18, 52, 86, 0.12);
+            --radius: 22px;
+            --max: 1140px;
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -62,7 +63,7 @@
             background:
                 radial-gradient(circle at top left, rgba(47, 140, 255, 0.18), transparent 34%),
                 radial-gradient(circle at top right, rgba(24, 215, 229, 0.18), transparent 30%),
-                var(--bg);
+                linear-gradient(180deg, #eef5fb 0%, #f8fbfe 52%, #edf4fb 100%);
             line-height: 1.65;
         }
 
@@ -71,60 +72,75 @@
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
+        a:hover { text-decoration: underline; }
+
+        .shell {
+            width: min(var(--max), calc(100% - 32px));
+            margin: 0 auto;
         }
 
-        nav {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 22px 20px 0;
-        }
+        .topbar { padding-top: 14px; }
 
         .nav-shell {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 16px;
             padding: 18px 22px;
-            border-radius: 22px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-2));
+            border-radius: 24px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             color: #fff;
             box-shadow: var(--shadow);
         }
 
-        .nav-shell a {
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             color: #fff;
             font-weight: 700;
         }
 
-        .brand {
-            margin: 0;
-            font-size: 1.75rem;
-            font-weight: 700;
+        .brand-mark {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.18);
         }
 
-        main {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 24px 20px 56px;
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
         }
+
+        .nav-links a {
+            color: #fff;
+            font-weight: 700;
+            padding: 10px 14px;
+            border-radius: 999px;
+        }
+
+        main { padding: 24px 0 56px; }
 
         .hero,
         .panel {
             background: var(--surface);
-            border: 1px solid var(--border);
+            border: 1px solid rgba(255, 255, 255, 0.78);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
         }
 
         .hero {
-            padding: 34px;
+            padding: 36px;
             margin-bottom: 24px;
         }
 
         .layout {
             display: grid;
-            grid-template-columns: 1.4fr 0.8fr;
+            grid-template-columns: 1.3fr 0.9fr;
             gap: 20px;
         }
 
@@ -133,19 +149,21 @@
         }
 
         .eyebrow {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             margin-bottom: 12px;
-            padding: 6px 12px;
+            padding: 7px 13px;
             border-radius: 999px;
             background: var(--surface-soft);
             color: var(--primary);
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             font-weight: 700;
         }
 
         h1, h2, h3 {
             margin-top: 0;
-            line-height: 1.2;
+            line-height: 1.15;
         }
 
         h1 {
@@ -157,10 +175,35 @@
             color: var(--muted);
         }
 
+        .hero-grid,
+        .contact-points {
+            display: grid;
+            gap: 16px;
+        }
+
+        .hero-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-top: 22px;
+        }
+
+        .hero-card,
+        .info-box {
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: var(--surface-soft);
+        }
+
         form {
             display: grid;
             gap: 14px;
             margin-top: 18px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
         }
 
         input,
@@ -175,7 +218,7 @@
         }
 
         textarea {
-            min-height: 150px;
+            min-height: 170px;
             resize: vertical;
         }
 
@@ -186,29 +229,13 @@
             font: inherit;
             font-weight: 700;
             color: #fff;
-            background: linear-gradient(135deg, var(--primary), var(--primary-2));
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             cursor: pointer;
         }
 
-        button:hover {
-            filter: brightness(0.98);
-        }
+        button:hover { filter: brightness(0.98); }
 
-        .info-list {
-            display: grid;
-            gap: 14px;
-        }
-
-        .info-box {
-            padding: 18px;
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            background: var(--surface-soft);
-        }
-
-        .note {
-            font-size: 0.95rem;
-        }
+        .contact-points { margin-top: 16px; }
 
         .popup {
             position: fixed;
@@ -221,7 +248,7 @@
         }
 
         .popup-box {
-            width: min(100%, 420px);
+            width: min(100%, 430px);
             padding: 28px;
             border-radius: 18px;
             background: var(--surface);
@@ -229,18 +256,14 @@
             box-shadow: var(--shadow);
         }
 
-        footer {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 0 20px 28px;
-        }
+        footer { padding-bottom: 28px; }
 
         .footer-shell {
-            text-align: center;
-            padding: 22px;
-            border-radius: 18px;
+            padding: 24px;
+            border-radius: 20px;
             background: #13293f;
             color: #eaf5ff;
+            text-align: center;
         }
 
         .footer-shell a {
@@ -248,8 +271,10 @@
             font-weight: 700;
         }
 
-        @media (max-width: 860px) {
-            .layout {
+        @media (max-width: 920px) {
+            .layout,
+            .hero-grid,
+            .form-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -258,43 +283,70 @@
                 padding: 24px;
             }
 
-            .brand {
-                font-size: 1.45rem;
+            .nav-shell {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-shell">
-            <h2 class="brand">&#9889; SuperTools</h2>
-            <a href="index.html">Home</a>
+    <div class="topbar">
+        <div class="shell">
+            <nav class="nav-shell">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">&#9889;</span>
+                    <span>SuperTools</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                </div>
+            </nav>
         </div>
-    </nav>
+    </div>
 
-    <main>
+    <main class="shell">
         <section class="hero">
             <span class="eyebrow">Contact SuperTools</span>
-            <h1>Questions, ideas, bugs, or feedback.</h1>
+            <h1>Questions, ideas, bug reports, or feedback.</h1>
             <p>
-                If you found an issue, want to suggest a new tool, or just want to get in touch, send a message below. We use your feedback to improve the site and expand the tool collection.
+                If something is broken, confusing, missing, or worth improving, this is the best place to reach out. We use feedback to improve tool quality, clean up pages, fix issues faster, and decide what to build next.
             </p>
+
+            <div class="hero-grid">
+                <div class="hero-card">
+                    <h3>Bug reports</h3>
+                    <p>Tell us which tool or page broke, what you expected, and what happened instead.</p>
+                </div>
+                <div class="hero-card">
+                    <h3>Tool ideas</h3>
+                    <p>Suggest new tools, categories, workflow improvements, or content gaps you want us to cover.</p>
+                </div>
+                <div class="hero-card">
+                    <h3>General feedback</h3>
+                    <p>Share UX feedback, SEO issues, wording fixes, mobile problems, or anything else that would make the site better.</p>
+                </div>
+            </div>
         </section>
 
         <div class="layout">
             <section class="panel">
                 <h2>Send a message</h2>
-                <p class="note">Use the form below for support requests, bug reports, feature suggestions, or general feedback.</p>
+                <p>Use the form below for support requests, bug reports, feature suggestions, tool ideas, or general feedback.</p>
 
                 <form id="contactForm" action="https://formsubmit.co/supertools167@gmail.com" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Your email" required>
-                    <textarea name="message" placeholder="Tell us how we can help..." required></textarea>
+                    <div class="form-grid">
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="What is this about?">
+                    <textarea name="message" placeholder="Tell us how we can help. If you're reporting a bug, include the tool name, page URL, what you expected, and what happened." required></textarea>
 
                     <input type="hidden" name="_subject" value="New message from SuperTools">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
-                    <input type="text" name="_honey" style="display:none">
+                    <input type="text" name="_honey" hidden>
 
                     <button type="submit">Send Message</button>
                 </form>
@@ -302,7 +354,7 @@
 
             <aside class="panel">
                 <h2>Other ways to reach us</h2>
-                <div class="info-list">
+                <div class="contact-points">
                     <div class="info-box">
                         <h3>Email</h3>
                         <p><a href="mailto:supertools167@gmail.com">supertools167@gmail.com</a></p>
@@ -310,12 +362,17 @@
 
                     <div class="info-box">
                         <h3>Best reasons to contact us</h3>
-                        <p>Bug reports, tool requests, SEO suggestions, broken pages, or feedback on usability.</p>
+                        <p>Broken tools, incorrect results, mobile layout issues, content corrections, privacy questions, new tool suggestions, or general feedback.</p>
                     </div>
 
                     <div class="info-box">
                         <h3>Helpful details to include</h3>
-                        <p>The tool name, the page URL, what you expected, and what actually happened.</p>
+                        <p>The tool name, the page URL, your device or browser, what you expected, and what actually happened. Those details make it much easier to review the issue properly.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Before you send a bug report</h3>
+                        <p>If possible, refresh the page once and try again. If the issue stays, send the steps so we can reproduce it more reliably.</p>
                     </div>
                 </div>
             </aside>
@@ -331,11 +388,10 @@
     </div>
 
     <footer>
-        <div class="footer-shell">
-            <p>&copy; 2026 SuperTools |
-                <a href="about.html">About</a> |
-                <a href="privacy.html">Privacy Policy</a>
-            </p>
+        <div class="shell">
+            <div class="footer-shell">
+                <p>&copy; 2026 SuperTools | <a href="about.html">About</a> | <a href="privacy.html">Privacy Policy</a></p>
+            </div>
         </div>
     </footer>
 
@@ -355,4 +411,3 @@
     </script>
 </body>
 </html>
-

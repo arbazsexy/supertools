@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Privacy Policy - SuperTools</title>
-    <meta name="description" content="Read the SuperTools privacy policy to learn how analytics, ads, cookies, and browser-based processing are handled across our free online tools.">
+    <meta name="description" content="Read the SuperTools privacy policy to understand how browser-based processing, analytics, advertising, contact submissions, and third-party services are handled across the site.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://supertools1.site/privacy.html">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
-        <link rel="apple-touch-icon" href="favicon-192x192.png">
+    <link rel="apple-touch-icon" href="favicon-192x192.png">
     <meta property="og:title" content="Privacy Policy - SuperTools">
-    <meta property="og:description" content="Read the SuperTools privacy policy to learn how analytics, ads, cookies, and browser-based processing are handled across our free online tools.">
+    <meta property="og:description" content="Read the SuperTools privacy policy to understand how browser-based processing, analytics, advertising, contact submissions, and third-party services are handled across the site.">
     <meta property="og:image" content="https://supertools1.site/logo.png">
+    <meta property="og:image:alt" content="SuperTools privacy policy">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://supertools1.site/privacy.html">
     <meta property="og:site_name" content="SuperTools">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Privacy Policy - SuperTools">
-    <meta name="twitter:description" content="Read the SuperTools privacy policy to learn how analytics, ads, cookies, and browser-based processing are handled across our free online tools.">
+    <meta name="twitter:description" content="Read the SuperTools privacy policy to understand how browser-based processing, analytics, advertising, contact submissions, and third-party services are handled across the site.">
     <meta name="twitter:image" content="https://supertools1.site/logo.png">
     <script type="application/ld+json">
     {
@@ -26,7 +27,7 @@
       "@type": "WebPage",
       "name": "Privacy Policy - SuperTools",
       "url": "https://supertools1.site/privacy.html",
-      "description": "Read the SuperTools privacy policy to learn how analytics, ads, cookies, and browser-based processing are handled across our free online tools.",
+      "description": "Read the SuperTools privacy policy to understand how browser-based processing, analytics, advertising, contact submissions, and third-party services are handled across the site.",
       "publisher": {
         "@type": "Organization",
         "name": "SuperTools",
@@ -37,22 +38,23 @@
         }
       }
     }
-    </script><style>
+    </script>
+    <style>
         :root {
             --bg: #f2f7fb;
-            --surface: #ffffff;
+            --surface: rgba(255, 255, 255, 0.97);
+            --surface-soft: #f7fbff;
             --text: #19344c;
             --muted: #5b7288;
             --border: #d7e4ef;
             --primary: #2f8cff;
-            --primary-2: #18d7e5;
-            --shadow: 0 18px 40px rgba(20, 48, 79, 0.12);
-            --radius: 20px;
+            --accent: #18d7e5;
+            --shadow: 0 20px 44px rgba(20, 48, 79, 0.12);
+            --radius: 22px;
+            --max: 1040px;
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -61,7 +63,7 @@
             background:
                 radial-gradient(circle at top left, rgba(47, 140, 255, 0.14), transparent 32%),
                 radial-gradient(circle at top right, rgba(24, 215, 229, 0.16), transparent 28%),
-                var(--bg);
+                linear-gradient(180deg, #f2f7fb 0%, #f9fbfe 56%, #eef4fa 100%);
             line-height: 1.68;
         }
 
@@ -70,48 +72,63 @@
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
+        a:hover { text-decoration: underline; }
+
+        .shell {
+            width: min(var(--max), calc(100% - 32px));
+            margin: 0 auto;
         }
 
-        nav {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 22px 20px 0;
-        }
+        .topbar { padding-top: 14px; }
 
         .nav-shell {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 16px;
             padding: 18px 22px;
-            border-radius: 22px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-2));
+            border-radius: 24px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             color: #fff;
             box-shadow: var(--shadow);
         }
 
-        .nav-shell a {
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             color: #fff;
             font-weight: 700;
         }
 
-        .brand {
-            margin: 0;
-            font-size: 1.75rem;
-            font-weight: 700;
+        .brand-mark {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.18);
         }
 
-        main {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 24px 20px 56px;
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
         }
+
+        .nav-links a {
+            color: #fff;
+            font-weight: 700;
+            padding: 10px 14px;
+            border-radius: 999px;
+        }
+
+        main { padding: 24px 0 56px; }
 
         .hero,
         .policy-card {
             background: var(--surface);
-            border: 1px solid var(--border);
+            border: 1px solid rgba(255, 255, 255, 0.76);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
         }
@@ -121,37 +138,57 @@
             margin-bottom: 22px;
         }
 
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            padding: 7px 13px;
+            border-radius: 999px;
+            background: var(--surface-soft);
+            color: var(--primary);
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+            line-height: 1.15;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            margin-bottom: 12px;
+        }
+
+        p, li { color: var(--muted); }
+
+        .hero-meta {
+            margin-top: 14px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 22px;
+        }
+
+        .summary-card {
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: var(--surface-soft);
+        }
+
         .policy-card {
             padding: 30px;
         }
 
-        .eyebrow {
-            display: inline-block;
-            margin-bottom: 12px;
-            padding: 6px 12px;
-            border-radius: 999px;
-            background: #eef8ff;
-            color: var(--primary);
-            font-size: 0.9rem;
-            font-weight: 700;
-        }
-
-        h1, h2 {
-            margin-top: 0;
-            line-height: 1.2;
-        }
-
-        h1 {
-            font-size: clamp(2rem, 5vw, 3.1rem);
-            margin-bottom: 12px;
-        }
-
-        p, li {
-            color: var(--muted);
-        }
-
         .policy-card section {
-            padding: 18px 0;
+            padding: 20px 0;
             border-bottom: 1px solid var(--border);
         }
 
@@ -165,18 +202,14 @@
             padding-left: 20px;
         }
 
-        footer {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 0 20px 28px;
-        }
+        footer { padding-bottom: 28px; }
 
         .footer-shell {
-            text-align: center;
-            padding: 22px;
-            border-radius: 18px;
+            padding: 24px;
+            border-radius: 20px;
             background: #13293f;
             color: #eaf5ff;
+            text-align: center;
         }
 
         .footer-shell a {
@@ -184,110 +217,149 @@
             font-weight: 700;
         }
 
-        @media (max-width: 820px) {
+        @media (max-width: 860px) {
+            .summary-grid { grid-template-columns: 1fr; }
+
             .hero,
             .policy-card {
                 padding: 24px;
             }
 
-            .brand {
-                font-size: 1.45rem;
+            .nav-shell {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-shell">
-            <h2 class="brand">&#9889; SuperTools</h2>
-            <a href="index.html">Home</a>
+    <div class="topbar">
+        <div class="shell">
+            <nav class="nav-shell">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">&#9889;</span>
+                    <span>SuperTools</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
         </div>
-    </nav>
+    </div>
 
-    <main>
+    <main class="shell">
         <section class="hero">
             <span class="eyebrow">Privacy Policy</span>
             <h1>Your privacy matters.</h1>
             <p>
-                This page explains how SuperTools handles information when you use our website and tools. We aim to keep things straightforward and practical.
+                This page explains how SuperTools handles information when you browse the site, use tools, submit a message, or interact with analytics and advertising services. We aim to keep this policy readable and practical rather than overly technical.
             </p>
-            <p><strong>Last updated:</strong> March 23, 2026</p>
+            <p class="hero-meta">Last updated: April 19, 2026</p>
+
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>Browser-based where possible</h3>
+                    <p>Many tools are designed so inputs and outputs can be handled directly in your browser.</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Analytics and ads</h3>
+                    <p>We may use analytics and advertising services to understand traffic and help support the site.</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Contact requests</h3>
+                    <p>If you contact us, we may use the information you provide to respond to your message.</p>
+                </div>
+            </div>
         </section>
 
         <div class="policy-card">
             <section>
                 <h2>1. Information we may collect</h2>
                 <p>
-                    We may collect limited technical and usage information such as browser type, device type, pages visited, and general interaction data. This helps us understand how the site performs and how people use the tools.
+                    We may collect limited technical and usage information such as browser type, device type, general page activity, referring pages, and tool interactions. This helps us understand site performance, improve usability, and identify which parts of the site are most helpful.
                 </p>
             </section>
 
             <section>
                 <h2>2. Browser-based processing</h2>
                 <p>
-                    Many SuperTools pages process your input directly in your browser. For those tools, your text, files, or generated output may not be uploaded to our servers as part of the core tool action.
+                    Many SuperTools pages are designed for browser-based processing. For those tools, your text, files, or generated output may be handled locally in your browser as part of the core tool workflow rather than being uploaded to our servers for the primary action.
+                </p>
+                <p>
+                    That said, individual tools can differ, so the exact behavior may depend on the page, the libraries used, and the feature itself.
                 </p>
             </section>
 
             <section>
                 <h2>3. Analytics</h2>
                 <p>
-                    SuperTools may use analytics services such as Google Analytics to understand traffic, improve performance, and identify which tools are most useful. These services may collect anonymous or pseudonymous usage data according to their own policies.
+                    We may use analytics services such as Google Analytics to understand traffic, measure engagement, monitor site quality, and improve the tool experience. These services may collect anonymous or pseudonymous usage information in line with their own policies.
                 </p>
             </section>
 
             <section>
                 <h2>4. Advertising and cookies</h2>
                 <p>
-                    We may use advertising services such as Google AdSense. These services can use cookies or similar technologies to measure performance and show relevant ads. Your browser settings may allow you to block or limit cookies if you prefer.
+                    SuperTools may use advertising services such as Google AdSense. These services can use cookies or similar technologies to measure performance, understand ad interactions, and show more relevant advertising.
                 </p>
+                <ul>
+                    <li>You may be able to limit or block cookies through your browser settings.</li>
+                    <li>Blocking some cookies can affect parts of how websites or ads behave.</li>
+                    <li>Third-party ad providers may have their own privacy practices and controls.</li>
+                </ul>
             </section>
 
             <section>
                 <h2>5. Contact submissions</h2>
                 <p>
-                    If you contact us through the website, the information you provide, such as your name, email address, and message, may be used to respond to your request, support issue, or feedback.
+                    If you contact us through the site, the information you provide, such as your name, email address, and message, may be used to respond to your support request, feedback, suggestion, or bug report.
                 </p>
             </section>
 
             <section>
                 <h2>6. Third-party links and services</h2>
                 <p>
-                    Some pages may link to or rely on third-party services, libraries, forms, analytics, or advertising providers. Those services may have their own privacy practices, and we encourage you to review their policies where relevant.
+                    Some pages may link to or rely on third-party services, libraries, form handlers, analytics services, advertising providers, or external tools. Those services may operate under their own privacy policies, and we encourage you to review them where relevant.
                 </p>
             </section>
 
             <section>
-                <h2>7. Children’s privacy</h2>
+                <h2>7. Data retention and security</h2>
                 <p>
-                    SuperTools is not intended to knowingly collect personal information from children under 13. If you believe personal information has been submitted in error, please contact us and we will review the request.
+                    We aim to limit unnecessary data handling and keep the site simple, but no website or online service can promise perfect security. If you send us information through a contact form or email, we will handle it with reasonable care in the context of operating and improving the site.
                 </p>
             </section>
 
             <section>
-                <h2>8. Policy updates</h2>
+                <h2>8. Children’s privacy</h2>
                 <p>
-                    We may update this privacy policy from time to time as the site grows, tools change, or services are added or removed. Updates will be reflected on this page.
+                    SuperTools is not intended to knowingly collect personal information from children under 13. If you believe information has been submitted in error, please contact us and we will review the request.
                 </p>
             </section>
 
             <section>
-                <h2>9. Contact</h2>
+                <h2>9. Policy updates</h2>
                 <p>
-                    If you have questions about this policy, please use the <a href="contact.html">Contact page</a>.
+                    We may update this privacy policy from time to time as the site grows, tools change, or services are added or removed. When we make updates, the revised version will be reflected on this page.
+                </p>
+            </section>
+
+            <section>
+                <h2>10. Contact</h2>
+                <p>
+                    If you have questions about this policy, please visit the <a href="contact.html">Contact page</a> and send us a message.
                 </p>
             </section>
         </div>
     </main>
 
     <footer>
-        <div class="footer-shell">
-            <p>&copy; 2026 SuperTools |
-                <a href="about.html">About</a> |
-                <a href="contact.html">Contact</a>
-            </p>
+        <div class="shell">
+            <div class="footer-shell">
+                <p>&copy; 2026 SuperTools | <a href="about.html">About</a> | <a href="contact.html">Contact</a></p>
+            </div>
         </div>
     </footer>
 </body>
 </html>
-

@@ -1,3 +1,13 @@
+# SuperTools robots.txt
+# Updated: 2026-04-19
+
 User-agent: *
 Allow: /
+
+# Static assets and category hubs remain crawlable.
+Allow: /favicon-32x32.png
+Allow: /favicon-192x192.png
+Allow: /logo.png
+
+# XML sitemap location
 Sitemap: https://supertools1.site/sitemap.xml
