@@ -6,25 +6,35 @@
 
     <title>JWT Decoder & Encoder Online - Decode, Encode and Verify JWT Tokens | SuperTools</title>
     <meta name="description" content="Free online JWT decoder and encoder tool to decode, inspect, encode, and verify JSON Web Tokens. View header, payload, signature, expiration, issued time, and HS256 verification instantly.">
-    <meta name="keywords" content="jwt decoder, jwt encoder, jwt verifier, json web token decoder, jwt tool, decode jwt, verify jwt hs256, jwt expiration checker">
-    <meta name="author" content="SuperTools">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="SuperTools">
+    <meta name="apple-mobile-web-app-title" content="SuperTools">
     <link rel="canonical" href="https://supertools1.site/SecurityTools/jwttool.html">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
     <link rel="apple-touch-icon" href="../favicon-192x192.png">
-    <!-- Open Graph -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
     <meta property="og:title" content="JWT Decoder & Encoder Online - SuperTools">
     <meta property="og:description" content="Decode, inspect, encode, and verify JWT tokens instantly with expiration and signature analysis.">
     <meta property="og:image" content="https://supertools1.site/logo.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://supertools1.site/SecurityTools/jwttool.html">
+    <meta property="og:image:alt" content="SuperTools JWT decoder and encoder preview">
+    <meta property="og:site_name" content="SuperTools">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="JWT Decoder & Encoder Online - SuperTools">
     <meta name="twitter:description" content="Decode, inspect, encode, and verify JWT tokens instantly with expiration and signature analysis.">
     <meta name="twitter:image" content="https://supertools1.site/logo.png">
+    <meta name="twitter:image:alt" content="SuperTools JWT decoder and encoder preview">
+    <meta name="twitter:site" content="@supertools">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
@@ -40,11 +50,36 @@
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
         crossorigin="anonymous"></script>
 
-    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://supertools1.site/"},
+        {"@type": "ListItem", "position": 2, "name": "Security Tools", "item": "https://supertools1.site/security-tools.html"},
+        {"@type": "ListItem", "position": 3, "name": "JWT Tool", "item": "https://supertools1.site/SecurityTools/jwttool.html"}
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "JWT Decoder and Encoder Online",
+      "url": "https://supertools1.site/SecurityTools/jwttool.html",
+      "description": "Decode, inspect, encode, and verify JSON Web Tokens with header, payload, signature, expiration, issued-at, not-before, and HS256 signature checks.",
+      "isPartOf": {"@type": "WebSite", "name": "SuperTools", "url": "https://supertools1.site/"},
+      "about": ["JWT decoder", "JWT encoder", "JWT verifier", "JSON Web Token", "HS256"],
+      "mainEntity": {"@id": "https://supertools1.site/SecurityTools/jwttool.html#jwt-tool"}
+    }
+    </script>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
+      "@id": "https://supertools1.site/SecurityTools/jwttool.html#jwt-tool",
       "name": "JWT Decoder & Encoder",
       "alternateName": "JWT Tool",
       "url": "https://supertools1.site/SecurityTools/jwttool.html",
@@ -83,187 +118,56 @@
         "Live expiry countdown",
         "Copy token and payload",
         "Browser-based JWT inspection"
-      ]
+      ],
+      "potentialAction": {"@type": "UseAction", "target": "https://supertools1.site/SecurityTools/jwttool.html#jwt-tool"}
     }
     </script>
 
     <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What does this JWT tool do?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This JWT tool can decode, inspect, encode, and verify JSON Web Tokens. It shows the header, payload, signature, and token timing information like expiration and issued-at values."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can this tool verify JWT signatures?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. This tool can verify HS256 JWT signatures when you provide the correct secret key."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can this tool decode JWT tokens without the secret key?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. JWT header and payload sections can usually be decoded without a secret key because they are Base64URL encoded, not encrypted."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can this tool decrypt encrypted JWTs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. This tool is for standard JWT inspection and HS256 verification. Encrypted JWT formats such as JWE require different handling."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does this tool upload my token anywhere?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. The tool works in your browser, which helps keep your token data local on your device."
-          }
-        }
-      ]
-    }
-    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a JWT?","acceptedAnswer":{"@type":"Answer","text":"A JWT , or JSON Web Token, is a compact token format used to transfer claims between systems. It usually contains a header, payload, and signature separated by dots."}},{"@type":"Question","name":"Can this tool decode a JWT without the secret key?","acceptedAnswer":{"@type":"Answer","text":"Yes. The header and payload of a standard JWT can usually be decoded without the secret key because they are Base64URL encoded. The secret key is only needed for signature generation and verification in HS256."}},{"@type":"Question","name":"Can this tool verify the JWT signature?","acceptedAnswer":{"@type":"Answer","text":"Yes. This tool can verify HS256 signatures when you provide the correct secret key. The verification result will show whether the signature matches or not."}},{"@type":"Question","name":"What does exp mean in JWT?","acceptedAnswer":{"@type":"Answer","text":"The exp claim means expiration time. It tells you when the token should no longer be accepted. This tool converts it into a readable date and also shows whether the token is still valid or expired."}},{"@type":"Question","name":"What do iat and nbf mean?","acceptedAnswer":{"@type":"Answer","text":"iat means issued at, which tells you when the token was created. nbf means not before, which tells you the earliest time the token should be accepted."}},{"@type":"Question","name":"Can this tool decrypt encrypted JWTs?","acceptedAnswer":{"@type":"Answer","text":"No. This tool is for standard JWT inspection and HS256 verification. Encrypted token formats such as JWE require different handling."}},{"@type":"Question","name":"Is it safe to put secrets inside a JWT payload?","acceptedAnswer":{"@type":"Answer","text":"No. JWT payloads are usually readable by anyone who has the token. Sensitive secrets should not be stored directly in the payload."}},{"@type":"Question","name":"Does this tool upload my token to a server?","acceptedAnswer":{"@type":"Answer","text":"No. The tool works in your browser, which helps keep the token data local on your device."}}]}</script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
+<body class="avg-page-shell">
 
 <nav>
     <h2>&#9889; SuperTools</h2>
     <a href="../index.html">Home</a>
 </nav>
 
-<div class="container">
+<main class="avg-main security-page-shell">
+<section class="avg-hero">
+             <div class="avg-breadcrumbs">
+            <a href="../index.html">Home</a>
+            <span>/</span>
+            <a href="../security-tools.html">Security Tools</a>
+            <span>/</span>
+            <span>JWT Tool</span>
+        </div>
+        <div class="avg-hero-grid"><div class="avg-hero-card"><span class="avg-kicker">Token Inspection Utility</span><h1>JWT Decoder, Encoder, and HS256 Verification Tool</h1><p>Decode JWT headers and payloads, inspect exp, iat, and nbf timing claims, encode HS256 tokens, and verify signatures in one private browser workspace. It is useful for debugging auth flows, API integrations, and token issues without leaving the page.</p><div class="avg-trust-pills"><span>&#128269; Decode JWT</span><span>&#9989; Verify HS256</span><span>&#9201; Check expiration</span></div></div><aside class="avg-hero-card avg-hero-side"><h2>Why this tool helps</h2><div class="avg-mini-list"><div><strong>Readable claims</strong><span>Turn compact JWT payloads into readable JSON for debugging and QA.</span></div><div><strong>Timing clarity</strong><span>See expiration, issued-at, not-before, and live countdown details quickly.</span></div><div><strong>Signature checks</strong><span>Verify HS256 tokens when you have the expected secret key.</span></div></div></aside></div></section>
 
-    <h1>JWT Decoder / Encoder</h1>
-    <p>Decode, inspect, encode, and verify JSON Web Tokens instantly with header, payload, signature, expiration, and HS256 validation.</p>
+    <div class="avg-jumpbar-wrap"><div class="avg-jumpbar"><a href="#jwt-tool">Tool</a><a href="#jwt-examples">Examples</a><a href="#jwt-related-tools">Related Tools</a><a href="#jwt-faq">FAQ</a></div></div>
 
-    <label for="jwtInput">JWT Token</label>
-    <textarea id="jwtInput" rows="5" placeholder="Paste JWT here..." aria-label="JWT token input" oninput="decodeJWT()"></textarea>
+<section id="jwt-tool" class="avg-calculator-zone avg-scroll-target"><div class="section-heading"><h2>JWT Decoder and Encoder</h2><p>Paste a token to decode it, edit payload JSON, encode HS256 tokens, or verify a token signature with a secret key.</p></div><div class="image-tool-grid"><div class="image-tool-card image-tool-stack"><div class="security-tool-intro"><h2>JWT Decoder and Encoder</h2><p>Paste a token to decode it, edit payload JSON, encode HS256 tokens, or verify a token signature with a secret key.</p></div><div><label class="image-tool-label" for="jwtInput">JWT token</label><textarea id="jwtInput" rows="5" placeholder="Paste JWT here..." aria-label="JWT token input"></textarea></div><div><label class="image-tool-label" for="secretKey">Secret key for HS256 encode or verify</label><input type="text" id="secretKey" placeholder="Enter secret key"></div><div class="image-tool-actions"><button type="button" id="decodeBtn" class="image-tool-button">Decode</button><button type="button" id="encodeBtn" class="image-tool-button secondary">Encode HS256</button><button type="button" id="verifyBtn" class="image-tool-button secondary">Verify</button><button type="button" id="sampleBtn" class="image-tool-button secondary">Sample</button><button type="button" id="copyTokenBtn" class="image-tool-button secondary">Copy Token</button><button type="button" id="clearBtn" class="image-tool-button secondary">Clear</button></div><div class="image-tool-panel image-tool-result-inline"><h3>Result</h3><p class="image-tool-help">Token status, timing claims, signature check, and security notes appear here.</p><div id="result" class="avg-result-slot"></div></div></div></div><div class="image-tool-grid"><div class="image-tool-card image-tool-stack"><label class="image-tool-label" for="headerOutput">Decoded header</label><textarea id="headerOutput" rows="6" readonly aria-label="JWT header output" placeholder="Decoded header will appear here..."></textarea><label class="image-tool-label" for="payloadInput">Payload JSON</label><textarea id="payloadInput" rows="8" aria-label="JWT payload input output" placeholder="Decoded payload JSON will appear here..."></textarea></div><div class="image-tool-card image-tool-stack"><label class="image-tool-label" for="signatureOutput">Signature</label><textarea id="signatureOutput" rows="4" readonly aria-label="JWT signature output" placeholder="JWT signature will appear here..."></textarea><div class="image-tool-actions"><button type="button" id="copyPayloadBtn" class="image-tool-button secondary">Copy Payload</button><button type="button" id="refreshDecodeBtn" class="image-tool-button secondary">Refresh Decode</button></div></div></div></section>
 
-    <label for="secretKey">Secret Key (for HS256 encode / verify)</label>
-    <input type="text" id="secretKey" placeholder="Enter secret key">
+<section class="avg-use-cases"><h2>Common Ways People Use This Tool</h2><div class="avg-use-grid"><article class="avg-use-card"><h3>API debugging</h3><p>Decode access tokens to inspect issuer, subject, audience, roles, scopes, and expiration values during development.</p></article><article class="avg-use-card"><h3>QA verification</h3><p>Check whether a test token is expired, not active yet, or signed with the expected HS256 secret.</p></article><article class="avg-use-card"><h3>Security review</h3><p>Spot risky payload data, missing timing claims, or readable sensitive information before tokens reach production.</p></article></div></section>
 
-    <div class="button-group">
-        <button type="button" onclick="decodeJWT()">
-            <i class="fas fa-search"></i> Decode
-        </button>
+<section id="jwt-examples" class="avg-examples avg-scroll-target"><h2>Worked Examples</h2><div class="avg-example-grid"><article class="avg-example-card"><h3>Example 1: Decode a login token</h3><p>Paste a JWT and review the payload JSON. Check exp to confirm when the token should stop being accepted.</p></article><article class="avg-example-card"><h3>Example 2: Verify HS256</h3><p>Paste the token, enter the expected secret key, and run Verify to compare the recalculated signature with the token signature.</p></article></div></section>
 
-        <button type="button" class="action-btn secondary-btn" onclick="encodeJWT()">
-            <i class="fas fa-key"></i> Encode
-        </button>
+<section class="info-section"><div class="avg-explain-card"><h2>How This JWT Tool Works</h2><p>The tool splits the token into header, payload, and signature, decodes the Base64URL sections, and optionally verifies HS256 signatures.</p><p>When you paste a JWT into the page, the tool separates the three token parts and decodes the readable sections so you can inspect claims such as issuer, subject, audience, roles, expiration, and custom metadata. That makes it useful for debugging authentication flows, checking API integrations, reviewing session behavior, and understanding what a token is actually carrying.</p><p>JWT header and payload sections are usually encoded, not encrypted. Anyone who holds the token can often read those claims, which is why sensitive secrets should not be placed in a standard JWT payload. Signature verification is a separate step from decoding. Decoding only shows the content, while verification checks whether the token was signed with the expected secret or key.</p><p>This browser tool supports quick HS256 testing for development and troubleshooting. Production token handling still needs strict backend validation for issuer, audience, expiration, not-before values, accepted algorithms, key rotation, revocation strategy, and safe storage rules on both the client and server side.</p></div></section>
 
-        <button type="button" class="action-btn secondary-btn" onclick="verifyJWT()">
-            <i class="fas fa-shield-halved"></i> Verify
-        </button>
+<section class="avg-examples"><h2>More Useful Security Tools</h2><div class="avg-intent-grid"><article class="avg-intent-card"><h3>Generate tokens</h3><p>Use <a href="randomtokengenerator.html">Random Token Generator</a> for creating secure random tokens for sessions.</p></article><article class="avg-intent-card"><h3>Generate API keys</h3><p>Use <a href="apikeygenerator.html">API Key Generator</a> for random keys with prefixes and export options.</p></article><article class="avg-intent-card"><h3>Hash data</h3><p>Use <a href="sha256-generator.html">SHA256 Generator</a> for creating hashes and signatures.</p></article></div></section>
 
-        <button type="button" class="action-btn clear-btn" onclick="clearAll()">
-            <i class="fas fa-trash"></i> Clear
-        </button>
+<section id="jwt-related-tools" class="related-tools avg-scroll-target"><div class="section-heading"><h2>Related Tools</h2><p>Continue with token, key, hash, and encryption utilities for security workflows.</p></div><div id="relatedToolsContainer" class="tools-grid avg-related-grid"></div></section>
 
-        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
-            <i class="fas fa-flask"></i> Sample
-        </button>
+<section class="info-section"><div class="avg-explain-card"><h2>JWT Safety Notes</h2><p>JWTs are easy to inspect, but production token handling must be strict.</p><p>Do not place secrets, passwords, private keys, or sensitive personal data directly inside a normal JWT payload unless the token is properly encrypted with a design that fits your threat model. Standard JWT payloads are often readable by anyone who has the token, so they should usually carry claims, identifiers, and authorization metadata rather than confidential secrets.</p><p>Production systems should validate issuer, audience, expiration, not-before, accepted algorithms, signing keys, clock skew, revocation strategy, and token storage rules on the backend. Safe JWT use also depends on short lifetimes where appropriate, secure cookies or other storage decisions, refresh-token design, and clear logout or revocation handling.</p><p>This page supports searches around JWT decoder, JWT verifier, inspect JWT payload, HS256 JWT check, and JSON Web Token tool. Useful next internal links for token workflows are the <a href="randomtokengenerator.html">Random Token Generator</a>, <a href="apikeygenerator.html">API Key Generator</a>, <a href="encryptiontool.html">Encryption Tool</a>, and the <a href="../security-tools.html">Security Tools Hub</a>.</p></div></section>
 
-        <button type="button" class="action-btn copy-btn" onclick="copyToken()">
-            <i class="fas fa-copy"></i> Copy Token
-        </button>
-    </div>
-
-    <div id="result"></div>
-
-    <label for="headerOutput">Header</label>
-    <textarea id="headerOutput" rows="6" readonly aria-label="JWT header output" placeholder="Decoded header will appear here..."></textarea>
-
-    <label for="payloadInput">Payload</label>
-    <textarea id="payloadInput" rows="8" aria-label="JWT payload input output" placeholder="Decoded payload JSON will appear here..."></textarea>
-
-    <label for="signatureOutput">Signature</label>
-    <textarea id="signatureOutput" rows="4" readonly aria-label="JWT signature output" placeholder="JWT signature will appear here..."></textarea>
-
-    <div class="button-group">
-        <button type="button" class="action-btn copy-btn" onclick="copyPayload()">
-            <i class="fas fa-copy"></i> Copy Payload
-        </button>
-
-        <button type="button" class="action-btn secondary-btn" onclick="swapPayloadToToken()">
-            <i class="fas fa-right-left"></i> Refresh Decode
-        </button>
-    </div>
-
-</div>
-
-<section class="related-tools">
-    <h2>&#128279; Related Tools</h2>
-    <div id="relatedToolsContainer" class="tools-grid"></div>
-</section>
-
-<section class="info-section">
-
-    <h2>How to Use the JWT Tool</h2>
-
-    <p>
-        The <strong>JWT Decoder & Encoder</strong> helps you inspect and work with <strong>JSON Web Tokens</strong> directly in your browser.
-        You can paste a token to decode its <strong>header</strong>, <strong>payload</strong>, and <strong>signature</strong>, check timing fields
-        like <strong>exp</strong>, <strong>iat</strong>, and <strong>nbf</strong>, and verify an <strong>HS256</strong> signature if you have the secret key.
-    </p>
-
-    <p>
-        To decode a token, paste it into the JWT field and the tool will automatically read the token structure. The header and payload will be
-        shown in readable JSON format, while the signature will appear separately. If the payload contains expiration or issued time claims,
-        the tool will also display a clear timing summary and a live countdown when applicable.
-    </p>
-
-    <p>
-        You can also edit the payload JSON and generate a new token using <strong>HS256</strong>. This makes the tool helpful for
-        development, debugging, QA workflows, API testing, and learning how JWT tokens are structured.
-    </p>
-
-    <h3>What This JWT Tool Can Do</h3>
-
-    <ul>
-        <li><strong>Decode JWT tokens</strong> into readable header and payload JSON</li>
-        <li><strong>Encode new JWT tokens</strong> using HS256</li>
-        <li><strong>Verify signatures</strong> with a provided secret key</li>
-        <li><strong>Show expiration status</strong> and live countdown</li>
-        <li><strong>Read iat and nbf claims</strong> in human time format</li>
-        <li><strong>Copy token and payload</strong> quickly</li>
-        <li><strong>Work in browser</strong> without sending data to a server</li>
-    </ul>
-
-    <h3>Important Note</h3>
-
-    <p>
-        JWT payloads are usually <strong>encoded</strong>, not encrypted. That means anyone with the token can often read the header and payload.
-        Never place highly sensitive secrets directly in a JWT payload. For real production systems, always follow secure token handling,
-        key management, and backend validation practices.
-    </p>
-
-</section>
-
-<section class="info-section">
-
-    <h2>Frequently Asked Questions (FAQ)</h2>
+<section id="jwt-faq" class="faq-section avg-scroll-target"><div class="section-heading"><h2>Frequently Asked Questions</h2><p>Answers about decoding JWTs, HS256 verification, expiration claims, encrypted tokens, payload safety, and privacy.</p></div><div class="faq-list">
 
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             What is a JWT?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             A <strong>JWT</strong>, or JSON Web Token, is a compact token format used to transfer claims between systems.
@@ -274,7 +178,6 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             Can this tool decode a JWT without the secret key?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             Yes. The header and payload of a standard JWT can usually be decoded without the secret key because they are Base64URL encoded.
@@ -285,7 +188,6 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             Can this tool verify the JWT signature?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             Yes. This tool can verify <strong>HS256</strong> signatures when you provide the correct secret key.
@@ -296,7 +198,6 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             What does exp mean in JWT?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             The <strong>exp</strong> claim means expiration time. It tells you when the token should no longer be accepted.
@@ -307,7 +208,6 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             What do iat and nbf mean?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             <strong>iat</strong> means issued at, which tells you when the token was created.
@@ -318,7 +218,6 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             Can this tool decrypt encrypted JWTs?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             No. This tool is for standard JWT inspection and HS256 verification. Encrypted token formats such as JWE require different handling.
@@ -328,7 +227,6 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             Is it safe to put secrets inside a JWT payload?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             No. JWT payloads are usually readable by anyone who has the token. Sensitive secrets should not be stored directly in the payload.
@@ -338,43 +236,46 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             Does this tool upload my token to a server?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             No. The tool works in your browser, which helps keep the token data local on your device.
         </div>
     </div>
 
-</section>
+</div></section>
+</main>
 
-<footer>
-    <p>&copy; 2026 SuperTools |
-        <a href="../privacy.html">Privacy Policy</a> |
-        <a href="../about.html">About Us</a> |
-        <a href="../contact.html">Contact</a>
-    </p>
-</footer>
+<footer class="premium-footer"><div class="premium-footer-grid"><div><h3>SuperTools</h3><p>Fast browser tools for passwords, keys, tokens, hashes, encryption helpers, JWT inspection, and developer security workflows.</p></div><div><h3>Company</h3><a href="../about.html">About Us</a><br><a href="../contact.html">Contact</a><br><a href="../privacy.html">Privacy Policy</a></div><div><h3>Popular Security Tools</h3><a href="password.html">Password Generator</a><br><a href="randomtokengenerator.html">Random Token Generator</a><br><a href="sha256-generator.html">SHA256 Generator</a></div><div><h3>Platform</h3><a href="../security-tools.html">Security Tools Hub</a><br><a href="../developer-tools.html">Developer Tools</a><br><a href="../index.html">Homepage</a></div></div><div class="premium-footer-bottom"><span>&copy; 2026 SuperTools. All rights reserved.</span><span>Built for practical, browser-based security utilities.</span></div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 
 <script>
 // Accordion
+document.addEventListener("DOMContentLoaded", () => {
+    const contents = document.querySelectorAll(".accordion-content");
+    contents.forEach(content => {
+        content.classList.remove("open");
+    });
+});
+
 const accButtons = document.querySelectorAll(".accordion-btn");
 accButtons.forEach(btn => {
     btn.addEventListener("click", () => {
         const content = btn.nextElementSibling;
-        const isOpen = content.style.maxHeight;
+        const isOpen = content.classList.contains("open");
 
+        // Close all accordions
         accButtons.forEach(otherBtn => {
             otherBtn.classList.remove("active");
             if (otherBtn.nextElementSibling) {
-                otherBtn.nextElementSibling.style.maxHeight = null;
+                otherBtn.nextElementSibling.classList.remove("open");
             }
         });
 
+        // Open clicked accordion
         if (!isOpen) {
             btn.classList.add("active");
-            content.style.maxHeight = content.scrollHeight + "px";
+            content.classList.add("open");
         }
     });
 });
@@ -451,6 +352,19 @@ function clearCountdown() {
     }
 }
 
+function scrollToElement(element) {
+    if (!element) return;
+    const navOffset = 110;
+    const top = element.getBoundingClientRect().top + window.pageYOffset - navOffset;
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+}
+
+function showMessage(message, type = "info") {
+    const result = document.getElementById("result");
+    result.innerHTML = `<div class="avg-result-card"><div class="avg-result-summary"><div><strong>${type === "error" ? "Check your input" : "JWT tool"}</strong><p class="avg-inline-note">${escapeHtml(message)}</p></div></div></div>`;
+    scrollToElement(result);
+}
+
 function updateCountdown(expValue) {
     const countdownElement = document.getElementById("jwtCountdown");
     if (!countdownElement) return;
@@ -478,36 +392,36 @@ function renderSummary(payloadObj, verificationText = "Not Checked", verificatio
     if (typeof payloadObj.exp === "number") {
         const expired = payloadObj.exp * 1000 <= Date.now();
         expHtml = `
-            <div class="stat-box">Expires<br><span>${escapeHtml(formatUnixTime(payloadObj.exp))}</span></div>
-            <div class="stat-box">Expiry Status<br><span>${expired ? "Expired" : "Valid"}</span></div>
-            <div class="stat-box">Countdown<br><span id="jwtCountdown">${expired ? "Expired" : ""}</span></div>
+            <div class="avg-result-stat"><strong>${escapeHtml(formatUnixTime(payloadObj.exp))}</strong><span>Expires</span></div>
+            <div class="avg-result-stat"><strong>${expired ? "Expired" : "Valid"}</strong><span>Expiry status</span></div>
+            <div class="avg-result-stat"><strong id="jwtCountdown">${expired ? "Expired" : ""}</strong><span>Countdown</span></div>
         `;
     }
 
     if (typeof payloadObj.iat === "number") {
-        iatHtml = `<div class="stat-box">Issued At<br><span>${escapeHtml(formatUnixTime(payloadObj.iat))}</span></div>`;
+        iatHtml = `<div class="avg-result-stat"><strong>${escapeHtml(formatUnixTime(payloadObj.iat))}</strong><span>Issued at</span></div>`;
     }
 
     if (typeof payloadObj.nbf === "number") {
         const active = payloadObj.nbf * 1000 <= Date.now();
         nbfHtml = `
-            <div class="stat-box">Not Before<br><span>${escapeHtml(formatUnixTime(payloadObj.nbf))}</span></div>
-            <div class="stat-box">NBF Status<br><span>${active ? "Active" : "Not Active Yet"}</span></div>
+            <div class="avg-result-stat"><strong>${escapeHtml(formatUnixTime(payloadObj.nbf))}</strong><span>Not before</span></div>
+            <div class="avg-result-stat"><strong>${active ? "Active" : "Not Active Yet"}</strong><span>NBF status</span></div>
         `;
     }
 
     result.innerHTML = `
-        <div class="average-result result-pop">
-            <div class="stats">
-                <div class="stat-box">Verification<br><span>${escapeHtml(verificationState)}</span></div>
-                <div class="stat-box">Signature Check<br><span>${escapeHtml(verificationText)}</span></div>
-                ${expHtml}
-                ${iatHtml}
-                ${nbfHtml}
+        <div class="avg-result-card result-pop">
+            <div class="avg-result-summary">
+                <div><strong>JWT decoded</strong><p class="avg-inline-note">Header and payload are readable below. Signature validation is separate from decoding.</p></div>
+                <div class="avg-result-stat-grid">
+                    <div class="avg-result-stat"><strong>${escapeHtml(verificationState)}</strong><span>Verification</span></div>
+                    <div class="avg-result-stat"><strong>${escapeHtml(verificationText)}</strong><span>Signature check</span></div>
+                    ${expHtml}
+                    ${iatHtml}
+                    ${nbfHtml}
+                </div>
             </div>
-
-            <hr>
-
             <div class="comparison-note">
                 JWT header and payload are usually encoded, not encrypted. Always validate tokens on the server in production systems.
             </div>
@@ -538,10 +452,15 @@ function decodeJWT() {
         return;
     }
 
+    if (token.length > 20000) {
+        showMessage("Please use a JWT under 20,000 characters in this browser-based tool.", "error");
+        return;
+    }
+
     const parts = token.split(".");
 
     if (parts.length < 2 || parts.length > 3) {
-        result.innerHTML = `<div class="average-result">This does not look like a valid JWT format. A JWT should usually have 3 dot-separated parts.</div>`;
+        showMessage("This does not look like a valid JWT format. A JWT should usually have 3 dot-separated parts.", "error");
         return;
     }
 
@@ -571,12 +490,12 @@ function decodeJWT() {
 
         renderSummary(payloadObj);
 
-        result.scrollIntoView({ behavior: "smooth", block: "start" });
+        scrollToElement(result);
     } catch (error) {
         headerOutput.value = "";
         payloadInput.value = "";
         signatureOutput.value = "";
-        result.innerHTML = `<div class="average-result">Unable to decode this JWT. Please check that the token is correctly formatted.</div>`;
+        showMessage("Unable to decode this JWT. Please check that the token is correctly formatted.", "error");
     }
 }
 
@@ -584,16 +503,27 @@ function encodeJWT() {
     clearCountdown();
 
     const secret = document.getElementById("secretKey").value;
+    const trimmedSecret = secret.trim();
     const payloadText = document.getElementById("payloadInput").value.trim();
     const result = document.getElementById("result");
 
     if (!payloadText) {
-        result.innerHTML = `<div class="average-result">Please enter a payload JSON first.</div>`;
+        showMessage("Please enter a payload JSON first.", "error");
         return;
     }
 
-    if (!secret) {
-        result.innerHTML = `<div class="average-result">Please enter a secret key to encode an HS256 JWT.</div>`;
+    if (!trimmedSecret) {
+        showMessage("Please enter a secret key to encode an HS256 JWT.", "error");
+        return;
+    }
+
+    if (payloadText.length > 20000) {
+        showMessage("Please keep the payload JSON under 20,000 characters in this browser-based tool.", "error");
+        return;
+    }
+
+    if (secret.length > 5000) {
+        showMessage("Please keep the secret key under 5,000 characters in this browser-based tool.", "error");
         return;
     }
 
@@ -619,9 +549,9 @@ function encodeJWT() {
         document.getElementById("signatureOutput").value = signature;
 
         renderSummary(payloadObj, "Generated with provided secret", "Generated");
-        result.scrollIntoView({ behavior: "smooth", block: "start" });
+        scrollToElement(result);
     } catch (error) {
-        result.innerHTML = `<div class="average-result">Invalid JSON payload. Please enter valid JSON before encoding.</div>`;
+        showMessage("Invalid JSON payload. Please enter valid JSON before encoding.", "error");
     }
 }
 
@@ -630,21 +560,27 @@ function verifyJWT() {
 
     const token = document.getElementById("jwtInput").value.trim();
     const secret = document.getElementById("secretKey").value;
+    const trimmedSecret = secret.trim();
     const result = document.getElementById("result");
 
     if (!token) {
-        result.innerHTML = `<div class="average-result">Please enter a JWT token first.</div>`;
+        showMessage("Please enter a JWT token first.", "error");
         return;
     }
 
-    if (!secret) {
-        result.innerHTML = `<div class="average-result">Please enter the secret key to verify the JWT signature.</div>`;
+    if (!trimmedSecret) {
+        showMessage("Please enter the secret key to verify the JWT signature.", "error");
+        return;
+    }
+
+    if (secret.length > 5000) {
+        showMessage("Please keep the secret key under 5,000 characters in this browser-based tool.", "error");
         return;
     }
 
     const parts = token.split(".");
     if (parts.length !== 3) {
-        result.innerHTML = `<div class="average-result">Signature verification requires a standard 3-part JWT.</div>`;
+        showMessage("Signature verification requires a standard 3-part JWT.", "error");
         return;
     }
 
@@ -656,7 +592,7 @@ function verifyJWT() {
 
         if (headerObj.alg !== "HS256") {
             renderSummary(payloadObj, "Only HS256 verification is supported in this tool", "Unsupported Algorithm");
-            result.scrollIntoView({ behavior: "smooth", block: "start" });
+            scrollToElement(result);
             return;
         }
 
@@ -675,9 +611,9 @@ function verifyJWT() {
             verified ? "Verified" : "Invalid"
         );
 
-        result.scrollIntoView({ behavior: "smooth", block: "start" });
+        scrollToElement(result);
     } catch (error) {
-        result.innerHTML = `<div class="average-result">Unable to verify this JWT. Please check the token format and secret key.</div>`;
+        showMessage("Unable to verify this JWT. Please check the token format and secret key.", "error");
     }
 }
 
@@ -685,26 +621,26 @@ function copyPayload() {
     const payload = document.getElementById("payloadInput").value.trim();
 
     if (!payload) {
-        alert("No payload to copy.");
+        showMessage("No payload to copy yet.", "error");
         return;
     }
 
     navigator.clipboard.writeText(payload)
-        .then(() => alert("Payload copied to clipboard!"))
-        .catch(() => alert("Failed to copy payload."));
+        .then(() => showMessage("Payload copied to clipboard."))
+        .catch(() => showMessage("Failed to copy payload. Select it manually and copy it.", "error"));
 }
 
 function copyToken() {
     const token = document.getElementById("jwtInput").value.trim();
 
     if (!token) {
-        alert("No token to copy.");
+        showMessage("No token to copy yet.", "error");
         return;
     }
 
     navigator.clipboard.writeText(token)
-        .then(() => alert("Token copied to clipboard!"))
-        .catch(() => alert("Failed to copy token."));
+        .then(() => showMessage("Token copied to clipboard."))
+        .catch(() => showMessage("Failed to copy token. Select it manually and copy it.", "error"));
 }
 
 function clearAll() {
@@ -748,36 +684,37 @@ function loadSample() {
 function swapPayloadToToken() {
     decodeJWT();
 }
+
+document.getElementById("jwtInput").addEventListener("input", decodeJWT);
+document.getElementById("decodeBtn").addEventListener("click", decodeJWT);
+document.getElementById("encodeBtn").addEventListener("click", encodeJWT);
+document.getElementById("verifyBtn").addEventListener("click", verifyJWT);
+document.getElementById("sampleBtn").addEventListener("click", loadSample);
+document.getElementById("copyTokenBtn").addEventListener("click", copyToken);
+document.getElementById("clearBtn").addEventListener("click", clearAll);
+document.getElementById("copyPayloadBtn").addEventListener("click", copyPayload);
+document.getElementById("refreshDecodeBtn").addEventListener("click", swapPayloadToToken);
 </script>
 
 <script>
-const tools = [
-    { name: "Password Strength Checker", url: "passwordstrengthchecker.html", icon: "&#128200;", category: "security" },
-    { name: "Hash Identifier", url: "hashidentifier.html", icon: "&#35;&#65039;", category: "security" },
-    { name: "JWT Tool", url: "jwttool.html", icon: "&#128179;", category: "security" },
-    { name: "API Key Generator", url: "apikeygenerator.html", icon: "&#128273;", category: "security" },
-    { name: "Bcrypt Generator", url: "bcryptgenerator.html", icon: "&#128274;", category: "security" },
-    { name: "Encryption Tool", url: "encryptiontool.html", icon: "&#128272;", category: "security" },
-    { name: "Password List Generator", url: "passwordlistgenerator.html", icon: "&#128203;", category: "security" },
-    { name: "Random Token Generator", url: "randomtokengenerator.html", icon: "&#127903;", category: "security" },
-    { name: "SHA1 Generator", url: "sha1generator.html", icon: "&#128376;&#65039;", category: "security" },
-    { name: "SHA256 Generator", url: "sha256-generator.html", icon: "&#128273;", category: "security" }
+const relatedTools = [
+    { name: "Random Token Generator", url: "randomtokengenerator.html", icon: "TOK", description: "Generate secure random tokens for sessions, reset links, and API tests.", cta: "Generate Tokens" },
+    { name: "API Key Generator", url: "apikeygenerator.html", icon: "KEY", description: "Create random API keys with prefixes, batch output, and export options.", cta: "Generate Keys" },
+    { name: "Encryption Tool", url: "encryptiontool.html", icon: "AES", description: "Encrypt, decrypt, encode, and decode text with AES and common formats.", cta: "Open Encryption Tool" },
+    { name: "SHA256 Generator", url: "sha256-generator.html", icon: "SHA", description: "Generate SHA-256 hashes for checksums, signatures, and verification.", cta: "Generate SHA-256" },
+    { name: "Hash Identifier", url: "hashidentifier.html", icon: "#", description: "Identify likely hash types from length, format, prefix, and structure.", cta: "Identify Hash" }
 ];
 
-const currentPage = window.location.pathname.split("/").pop();
-
-const related = tools
-    .filter(tool => tool.url !== currentPage)
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 4);
-
 const container = document.getElementById("relatedToolsContainer");
-
 if (container) {
-    container.innerHTML = related.map(tool => `
-        <a href="${tool.url}" class="tool-card">
-            <div class="tool-icon">${tool.icon}</div>
-            <h3>${tool.name}</h3>
+    container.innerHTML = relatedTools.slice(0, 4).map(tool => `
+        <a href="${tool.url}" class="tool-card avg-related-card">
+            <div class="avg-related-icon">${tool.icon}</div>
+            <div class="avg-related-body">
+                <h3>${tool.name}</h3>
+                <p>${tool.description}</p>
+            </div>
+            <div class="avg-related-cta">Open &#8594;</div>
         </a>
     `).join("");
 }
@@ -785,6 +722,8 @@ if (container) {
 
 </body>
 </html>
+
+
 
 
 

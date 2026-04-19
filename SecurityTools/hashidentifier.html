@@ -6,25 +6,33 @@
 
     <title>Hash Identifier Online - Detect MD5, SHA256, bcrypt, Argon2 & More | SuperTools</title>
     <meta name="description" content="Free online hash identifier tool to detect possible hash types instantly. Identify MD5, SHA1, SHA224, SHA256, SHA384, SHA512, bcrypt, Argon2, NTLM, MySQL and more with confidence levels.">
-    <meta name="keywords" content="hash identifier, detect hash type, hash checker, md5 identifier, sha1 identifier, sha256 identifier, sha512 identifier, bcrypt identifier, argon2 identifier, ntlm hash detector">
-    <meta name="author" content="SuperTools">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="SuperTools">
+    <meta name="apple-mobile-web-app-title" content="SuperTools">
     <link rel="canonical" href="https://supertools1.site/SecurityTools/hashidentifier.html">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
     <link rel="apple-touch-icon" href="../favicon-192x192.png">
-    <!-- Open Graph -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
     <meta property="og:title" content="Hash Identifier Online - SuperTools">
     <meta property="og:description" content="Identify unknown hash types instantly including MD5, SHA1, SHA256, SHA512, bcrypt, Argon2 and more.">
     <meta property="og:image" content="https://supertools1.site/logo.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://supertools1.site/SecurityTools/hashidentifier.html">
+    <meta property="og:image:alt" content="SuperTools hash identifier preview">
+    <meta property="og:site_name" content="SuperTools">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hash Identifier Online - SuperTools">
     <meta name="twitter:description" content="Detect possible hash types instantly with this professional free online hash identifier tool.">
     <meta name="twitter:image" content="https://supertools1.site/logo.png">
+    <meta name="twitter:image:alt" content="SuperTools hash identifier preview">
+    <meta name="twitter:site" content="@supertools">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD5FXM51M8"></script>
@@ -40,11 +48,36 @@
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642225356143233"
         crossorigin="anonymous"></script>
 
-    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://supertools1.site/"},
+        {"@type": "ListItem", "position": 2, "name": "Security Tools", "item": "https://supertools1.site/security-tools.html"},
+        {"@type": "ListItem", "position": 3, "name": "Hash Identifier", "item": "https://supertools1.site/SecurityTools/hashidentifier.html"}
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Hash Identifier Online",
+      "url": "https://supertools1.site/SecurityTools/hashidentifier.html",
+      "description": "Identify possible hash types by checking length, format, prefixes, and common patterns for MD5, SHA, bcrypt, Argon2, NTLM, MySQL, and more.",
+      "isPartOf": {"@type": "WebSite", "name": "SuperTools", "url": "https://supertools1.site/"},
+      "about": ["hash identifier", "detect hash type", "MD5 identifier", "SHA256 identifier", "bcrypt detector"],
+      "mainEntity": {"@id": "https://supertools1.site/SecurityTools/hashidentifier.html#hash-identifier-tool"}
+    }
+    </script>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
+      "@id": "https://supertools1.site/SecurityTools/hashidentifier.html#hash-identifier-tool",
       "name": "Hash Identifier",
       "alternateName": "Hash Type Identifier",
       "url": "https://supertools1.site/SecurityTools/hashidentifier.html",
@@ -87,164 +120,56 @@
         "Supports multiple hashes at once",
         "Shows confidence levels and format hints",
         "Browser-based analysis"
-      ]
+      ],
+      "potentialAction": {"@type": "UseAction", "target": "https://supertools1.site/SecurityTools/hashidentifier.html#hash-identifier-tool"}
     }
     </script>
 
     <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What does this hash identifier do?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool analyzes hash length, format, prefixes, and structure to suggest the most likely hash types."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can this tool detect bcrypt and Argon2 hashes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. This tool can detect bcrypt and common Argon2 hash formats using their recognizable prefixes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can this tool decrypt a hash?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. This tool only identifies likely hash types. It does not decrypt, reverse, or crack hashes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why can one value match multiple possible hash types?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Some hashing algorithms create outputs with the same length and similar formatting, so one value may match more than one possible type."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is the result always guaranteed?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Hash identification is based on common patterns and known formats, so it should be treated as a strong hint rather than an absolute guarantee."
-          }
-        }
-      ]
-    }
-    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a hash?","acceptedAnswer":{"@type":"Answer","text":"A hash is a fixed-length value generated from input data using a hashing algorithm. Hashes are commonly used for password storage, integrity checks, signatures, and data verification."}},{"@type":"Question","name":"What does this hash identifier do?","acceptedAnswer":{"@type":"Answer","text":"This tool analyzes the length , structure , prefixes , and character format of a value to suggest the most likely hash types."}},{"@type":"Question","name":"Can this tool decrypt or reverse a hash?","acceptedAnswer":{"@type":"Answer","text":"No. This tool only identifies likely hash types. It does not decrypt, crack, or reverse hashes."}},{"@type":"Question","name":"Why does one value sometimes match multiple hash types?","acceptedAnswer":{"@type":"Answer","text":"Some algorithms create outputs with the same length and similar formats. Because of that, one value may match more than one possible hash type."}},{"@type":"Question","name":"Can this tool detect bcrypt hashes?","acceptedAnswer":{"@type":"Answer","text":"Yes. Bcrypt hashes usually include prefixes such as $2a$ , $2b$ , or $2y$ , which makes them easier to recognize."}},{"@type":"Question","name":"Can this tool detect Argon2 hashes?","acceptedAnswer":{"@type":"Answer","text":"Yes. Argon2 hashes often start with prefixes such as $argon2i$ , $argon2d$ , or $argon2id$ ."}},{"@type":"Question","name":"Is MD5 secure?","acceptedAnswer":{"@type":"Answer","text":"MD5 is no longer considered secure for sensitive security use cases and should not be used for modern password storage."}},{"@type":"Question","name":"Is the result always guaranteed?","acceptedAnswer":{"@type":"Answer","text":"No. Identification is based on pattern analysis and common formats, so the result is best treated as a strong hint rather than an absolute guarantee."}},{"@type":"Question","name":"Can I identify multiple hashes at once?","acceptedAnswer":{"@type":"Answer","text":"Yes. Paste multiple hashes into the input box, one per line, and the tool will analyze each one separately."}}]}</script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
+<body class="avg-page-shell">
 
 <nav>
     <h2>&#9889; SuperTools</h2>
     <a href="../index.html">Home</a>
 </nav>
 
-<div class="container">
-    <h1>Hash Identifier</h1>
-    <p>Identify likely hash types instantly by analyzing length, format, prefixes, and common hash patterns.</p>
+<main class="avg-main security-page-shell">
+<section class="avg-hero">
+             <div class="avg-breadcrumbs">
+            <a href="../index.html">Home</a>
+            <span>/</span>
+            <a href="../security-tools.html">Security Tools</a>
+            <span>/</span>
+            <span>Hash Identifier</span>
+        </div>
+        <div class="avg-hero-grid"><div class="avg-hero-card"><span class="avg-kicker">Hash Pattern Analysis</span><h1>Hash Identifier for MD5, SHA, bcrypt, Argon2, NTLM, MySQL, and More</h1><p>Paste one hash or a batch of hashes to identify likely algorithms by length, character format, recognizable prefixes, and common security patterns. It helps you narrow the field quickly before verification, migration, or deeper security analysis.</p><div class="avg-trust-pills"><span>&#128203; Batch input</span><span>&#127919; Confidence hints</span><span>&#128274; Private in browser</span></div></div><aside class="avg-hero-card avg-hero-side"><h2>Why this tool helps</h2><div class="avg-mini-list"><div><strong>Fast triage</strong><span>Quickly narrow down possible hash types before deeper analysis.</span></div><div><strong>Migration support</strong><span>Useful when reviewing old databases, logs, exports, or legacy auth systems.</span></div><div><strong>Clear limits</strong><span>Identifies likely formats without pretending to crack or reverse hashes.</span></div></div></aside></div></section>
 
-    <label for="hashInput">Enter Hash or Multiple Hashes</label>
-    <textarea id="hashInput" rows="7" aria-label="Hash input" placeholder="Paste one or more hashes here, one per line..."></textarea>
+<div class="avg-jumpbar-wrap"><div class="avg-jumpbar"><a href="#tool">Tool</a><a href="#examples">Examples</a><a href="#related-tools">Related Tools</a><a href="#faq">FAQ</a></div></div>
 
-    <div class="button-group">
-        <button type="button" onclick="identifyHash()">
-            <i class="fas fa-search"></i> Identify Hash
-        </button>
+<section id="hash-identifier-tool" class="avg-calculator-zone avg-scroll-target"><div class="section-heading"><h2>Hash Identifier Tool</h2><p>Enter one hash per line and get possible matches, confidence levels, length details, and format hints.</p></div><div class="image-tool-grid"><div class="image-tool-card image-tool-stack"><div class="security-tool-intro"><h2>Hash Identifier Tool</h2><p>Enter one hash per line and get possible matches, confidence levels, length details, and format hints.</p></div><div><label class="image-tool-label" for="hashInput">Enter hash or multiple hashes</label><textarea id="hashInput" rows="7" aria-label="Hash input" placeholder="Paste one or more hashes here, one per line..."></textarea><p class="image-tool-help">This tool identifies likely hash formats only. It does not decrypt, crack, reverse, or recover original values.</p></div><div class="image-tool-actions"><button type="button" id="identifyBtn" class="image-tool-button">Identify Hash</button><button type="button" id="sampleBtn" class="image-tool-button secondary">Sample</button><button type="button" id="copyBtn" class="image-tool-button secondary">Copy Result</button><button type="button" id="clearBtn" class="image-tool-button secondary">Clear</button></div><div class="image-tool-panel image-tool-result-inline"><h3>Result</h3><p class="image-tool-help">Possible types, confidence levels, detected format, and analysis notes appear here.</p><div id="result" class="avg-result-slot"></div></div></div></div></section>
 
-        <button type="button" class="action-btn clear-btn" onclick="clearHash()">
-            <i class="fas fa-trash"></i> Clear
-        </button>
+<section class="avg-use-cases"><h2>Common Ways People Use This Tool</h2><div class="avg-use-grid"><article class="avg-use-card"><h3>Legacy audit</h3><p>Review old password tables, exports, or documentation to understand likely hash formats before migration.</p></article><article class="avg-use-card"><h3>Security learning</h3><p>Compare what MD5, SHA, bcrypt, Argon2, and Unix crypt-style hashes look like in practice.</p></article><article class="avg-use-card"><h3>Debugging support</h3><p>Check whether an output looks like a checksum, password hash, Base64-like value, or prefixed hash format.</p></article></div></section>
 
-        <button type="button" class="action-btn sample-btn" onclick="loadSample()">
-            <i class="fas fa-flask"></i> Sample
-        </button>
+<section id="hash-examples" class="avg-examples avg-scroll-target"><h2>Worked Examples</h2><div class="avg-example-grid"><article class="avg-example-card"><h3>Example 1: SHA-256 style output</h3><p>A 64-character hexadecimal string often matches SHA-256 with high confidence, but context still matters because length alone is not proof.</p></article><article class="avg-example-card"><h3>Example 2: bcrypt prefix</h3><p>A value beginning with $2a$, $2b$, or $2y$ is easier to classify because bcrypt hashes include a recognizable prefix and cost factor.</p></article></div></section>
 
-        <button type="button" class="action-btn copy-btn" onclick="copyResult()">
-            <i class="fas fa-copy"></i> Copy Result
-        </button>
-    </div>
+<section class="info-section"><div class="avg-explain-card"><h2>How This Hash Identifier Works</h2><p>The tool checks input structure against common hash signatures and reports likely matches.</p><p>Hash identification works by comparing the value you paste against patterns that commonly appear in real systems. The tool looks at clues such as total length, hexadecimal characters, Base64-like characters, known prefixes, separators, and algorithm-specific formatting. Prefix-based hashes like bcrypt and Argon2 are usually easier to identify than plain hexadecimal outputs because they carry more visible structure.</p><p>This makes the page useful for debugging imports, reviewing database fields, auditing older applications, and sorting out unknown values during migrations. It can help you narrow a value down to likely formats such as MD5, SHA1, SHA256, bcrypt, or other common hashes before you decide which verification or migration step should come next.</p><p>Some algorithms still overlap in length and character set, so the result is a best-match suggestion rather than mathematical proof. Use application context, source code, storage location, surrounding metadata, and authorized test verification before making security decisions or changing production authentication logic.</p></div></section>
 
-    <div id="result"></div>
-</div>
+<section class="avg-examples"><h2>More Useful Security Tools</h2><div class="avg-intent-grid"><article class="avg-intent-card"><h3>Generate SHA256</h3><p>Use <a href="sha256-generator.html">SHA256 Generator</a> for checksums and verification.</p></article><article class="avg-intent-card"><h3>Generate SHA1</h3><p>Use <a href="sha1generator.html">SHA1 Generator</a> for legacy compatibility.</p></article><article class="avg-intent-card"><h3>Generate bcrypt</h3><p>Use <a href="bcryptgenerator.html">Bcrypt Generator</a> for password hashes.</p></article></div></section>
 
-<section class="related-tools">
-    <h2>&#128279; Related Tools</h2>
-    <div id="relatedToolsContainer" class="tools-grid"></div>
-</section>
+<section id="hash-related-tools" class="related-tools avg-scroll-target"><div class="section-heading"><h2>Related Tools</h2><p>Use these nearby tools after identifying a likely hash format.</p></div><div id="relatedToolsContainer" class="tools-grid avg-related-grid"></div></section>
 
-<section class="info-section">
-    <h2>How to Use the Hash Identifier</h2>
+<section class="info-section"><div class="avg-explain-card"><h2>Hash Identification Notes</h2><p>This tool is made for narrowing possibilities, not proving origin or cracking hashes.</p><p>A plain 32-character hexadecimal value may be MD5, NTLM, or another hex-based output. A 40-character value may suggest SHA1, and a 64-character value may suggest SHA256, but length alone is not enough to prove the algorithm. Prefixes, application context, field names, export format, and where the value was found often matter just as much as the string itself.</p><p>For password-security work, do not rely on identification alone. Use approved migration scripts, test verification against known passwords only where authorized, and plan upgrades from weak legacy formats toward modern password hashing. For integrity-check workflows, identify the likely algorithm first and then confirm it with the right generator or verification process.</p><p>This section also supports searches around hash identifier, identify hash type, hash format checker, bcrypt identifier, and SHA hash lookup. After identification, move directly to the <a href="sha256-generator.html">SHA256 Generator</a>, <a href="sha1generator.html">SHA1 Generator</a>, <a href="bcryptgenerator.html">Bcrypt Generator</a>, or the full <a href="../security-tools.html">Security Tools Hub</a> for the next step.</p></div></section>
 
-    <p>
-        The <strong>Hash Identifier</strong> helps you detect the possible type of an unknown hash by checking its
-        <strong>length</strong>, <strong>character format</strong>, and <strong>recognizable prefixes</strong>.
-        It is useful for developers, security learners, backend engineers, database administrators, and analysts who
-        need a quick way to understand what kind of hash they are looking at.
-    </p>
-
-    <p>
-        To use the tool, paste a single hash or multiple hashes into the input box and click
-        <strong>Identify Hash</strong>. The tool will analyze each line separately and return the most likely hash types
-        along with confidence levels, length details, and format hints.
-    </p>
-
-    <p>
-        This tool is designed for <strong>identification only</strong>. It does not decrypt, crack, reverse,
-        or recover original values from hashes. Instead, it helps narrow down the most likely algorithms so you can
-        continue your development, migration, logging, or security analysis work more effectively.
-    </p>
-
-    <h3>What Can This Tool Detect?</h3>
-    <ul>
-        <li><strong>MD5</strong> hashes</li>
-        <li><strong>SHA1</strong> hashes</li>
-        <li><strong>SHA224, SHA256, SHA384, SHA512</strong> hashes</li>
-        <li><strong>bcrypt</strong> hashes</li>
-        <li><strong>Argon2</strong> hashes</li>
-        <li><strong>NTLM</strong> hashes</li>
-        <li><strong>MySQL</strong> hash formats</li>
-        <li><strong>Unix crypt</strong> style hashes</li>
-        <li><strong>Generic hexadecimal strings</strong></li>
-        <li><strong>Base64-like encoded values</strong></li>
-    </ul>
-
-    <h3>Why Use a Hash Identifier?</h3>
-    <ul>
-        <li><strong>Fast analysis:</strong> Instantly checks common lengths and known patterns.</li>
-        <li><strong>Developer friendly:</strong> Useful in debugging, migrations, and backend audits.</li>
-        <li><strong>Security learning:</strong> Helps learners understand how common hashes look.</li>
-        <li><strong>Multiple inputs:</strong> Analyze more than one value at once.</li>
-        <li><strong>Browser based:</strong> Runs directly in your browser for quick, local use.</li>
-    </ul>
-
-    <h3>Important Note</h3>
-    <p>
-        Some algorithms can produce outputs that look very similar. For example, several hash types can appear as
-        plain hexadecimal strings with the same length. Because of this, the result should be treated as a
-        <strong>best-match suggestion</strong> rather than a guaranteed final answer in every case.
-    </p>
-</section>
-
-<section class="info-section">
-    <h2>Frequently Asked Questions (FAQ)</h2>
+<section id="hash-faq" class="faq-section avg-scroll-target"><div class="section-heading"><h2>Frequently Asked Questions</h2><p>Answers about hash identification, confidence levels, bcrypt, Argon2, MD5, and multi-hash analysis.</p></div><div class="faq-list">
 
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             What is a hash?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             A <strong>hash</strong> is a fixed-length value generated from input data using a hashing algorithm.
@@ -255,7 +180,6 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             What does this hash identifier do?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             This tool analyzes the <strong>length</strong>, <strong>structure</strong>, <strong>prefixes</strong>,
@@ -266,7 +190,6 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             Can this tool decrypt or reverse a hash?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             No. This tool only identifies likely hash types. It does not decrypt, crack, or reverse hashes.
@@ -276,7 +199,6 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             Why does one value sometimes match multiple hash types?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             Some algorithms create outputs with the same length and similar formats. Because of that, one value may
@@ -287,7 +209,6 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             Can this tool detect bcrypt hashes?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             Yes. Bcrypt hashes usually include prefixes such as <strong>$2a$</strong>, <strong>$2b$</strong>,
@@ -298,7 +219,6 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             Can this tool detect Argon2 hashes?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             Yes. Argon2 hashes often start with prefixes such as <strong>$argon2i$</strong>,
@@ -309,7 +229,6 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             Is MD5 secure?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             <strong>MD5</strong> is no longer considered secure for sensitive security use cases and should not be used
@@ -320,7 +239,6 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             Is the result always guaranteed?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             No. Identification is based on pattern analysis and common formats, so the result is best treated as a
@@ -331,40 +249,43 @@
     <div class="accordion-item faq-card">
         <button class="accordion-btn" type="button">
             Can I identify multiple hashes at once?
-            <span class="arrow">&#9660;</span>
         </button>
         <div class="accordion-content">
             Yes. Paste multiple hashes into the input box, one per line, and the tool will analyze each one separately.
         </div>
     </div>
-</section>
+</div></section>
+</main>
 
-<footer>
-    <p>&copy; 2026 SuperTools |
-        <a href="../privacy.html">Privacy Policy</a> |
-        <a href="../about.html">About Us</a> |
-        <a href="../contact.html">Contact</a>
-    </p>
-</footer>
+<footer class="premium-footer"><div class="premium-footer-grid"><div><h3>SuperTools</h3><p>Fast browser tools for passwords, keys, tokens, hashes, encryption helpers, JWT inspection, and developer security workflows.</p></div><div><h3>Company</h3><a href="../about.html">About Us</a><br><a href="../contact.html">Contact</a><br><a href="../privacy.html">Privacy Policy</a></div><div><h3>Popular Security Tools</h3><a href="password.html">Password Generator</a><br><a href="randomtokengenerator.html">Random Token Generator</a><br><a href="sha256-generator.html">SHA256 Generator</a></div><div><h3>Platform</h3><a href="../security-tools.html">Security Tools Hub</a><br><a href="../developer-tools.html">Developer Tools</a><br><a href="../index.html">Homepage</a></div></div><div class="premium-footer-bottom"><span>&copy; 2026 SuperTools. All rights reserved.</span><span>Built for practical, browser-based security utilities.</span></div></footer>
 
 <script>
 // Accordion
+document.addEventListener("DOMContentLoaded", () => {
+    const contents = document.querySelectorAll(".accordion-content");
+    contents.forEach(content => {
+        content.classList.remove("open");
+    });
+});
+
 const accButtons = document.querySelectorAll(".accordion-btn");
 accButtons.forEach(btn => {
     btn.addEventListener("click", () => {
         const content = btn.nextElementSibling;
-        const isOpen = content.style.maxHeight;
+        const isOpen = content.classList.contains("open");
 
+        // Close all accordions
         accButtons.forEach(otherBtn => {
             otherBtn.classList.remove("active");
             if (otherBtn.nextElementSibling) {
-                otherBtn.nextElementSibling.style.maxHeight = null;
+                otherBtn.nextElementSibling.classList.remove("open");
             }
         });
 
+        // Open clicked accordion
         if (!isOpen) {
             btn.classList.add("active");
-            content.style.maxHeight = content.scrollHeight + "px";
+            content.classList.add("open");
         }
     });
 });
@@ -386,10 +307,23 @@ function getFormat(hash) {
 }
 
 function confidenceBadge(confidence) {
-    if (confidence === "Very High") return "&#128994; Very High";
-    if (confidence === "High") return "&#128993; High";
-    if (confidence === "Medium") return "&#128992; Medium";
-    return "&#128308; Low";
+    if (confidence === "Very High") return "Very High";
+    if (confidence === "High") return "High";
+    if (confidence === "Medium") return "Medium";
+    return "Low";
+}
+
+function scrollToElement(element) {
+    if (!element) return;
+    const navOffset = 110;
+    const top = element.getBoundingClientRect().top + window.pageYOffset - navOffset;
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+}
+
+function showMessage(message, type = "info") {
+    const result = document.getElementById("result");
+    result.innerHTML = `<div class="avg-result-card"><div class="avg-result-summary"><div><strong>${type === "error" ? "Check your input" : "Hash identifier"}</strong><p class="avg-inline-note">${escapeHtml(message)}</p></div></div></div>`;
+    scrollToElement(result);
 }
 
 function analyzeHash(hash) {
@@ -495,11 +429,11 @@ function identifyHash() {
     const result = document.getElementById("result");
 
     if (!input) {
-        result.innerHTML = `<div class="average-result">Please enter at least one hash value.</div>`;
+        showMessage("Please enter at least one hash value.", "error");
         return;
     }
 
-    const hashes = input.split(/\n+/).map(h => h.trim()).filter(Boolean);
+    const hashes = [...new Set(input.split(/\n+/).map(h => h.trim()).filter(Boolean))];
     let totalMatches = 0;
 
     const cards = hashes.map((hash, index) => {
@@ -508,13 +442,13 @@ function identifyHash() {
         totalMatches += matches.length;
 
         return `
-            <div class="modern-card" style="max-width:100%; text-align:left;">
+            <div class="avg-result-card">
                 <p class="binary-output"><strong>Input ${index + 1}</strong><br>${escapeHtml(hash)}</p>
 
-                <div class="stats">
-                    <div class="stat-box">Length<br><span>${hash.length}</span></div>
-                    <div class="stat-box">Format<br><span>${escapeHtml(format)}</span></div>
-                    <div class="stat-box">Matches<br><span>${matches.length}</span></div>
+                <div class="avg-result-stat-grid">
+                    <div class="avg-result-stat"><strong>${hash.length}</strong><span>Length</span></div>
+                    <div class="avg-result-stat"><strong>${escapeHtml(format)}</strong><span>Format</span></div>
+                    <div class="avg-result-stat"><strong>${matches.length}</strong><span>Matches</span></div>
                 </div>
 
                 ${createMatchTable(matches)}
@@ -523,16 +457,16 @@ function identifyHash() {
     }).join("");
 
     result.innerHTML = `
-        <div class="average-result result-pop">
-            <div class="stats">
-                <div class="stat-box">Inputs Checked<br><span>${hashes.length}</span></div>
-                <div class="stat-box">Matches Found<br><span>${totalMatches}</span></div>
-                <div class="stat-box">Multi-Hash Mode<br><span>${hashes.length > 1 ? "Yes" : "No"}</span></div>
+        <div class="avg-result-card result-pop">
+            <div class="avg-result-summary">
+                <div><strong>Hash analysis complete</strong><p class="avg-inline-note">Likely matches are based on known prefixes, lengths, and character patterns.</p></div>
+                <div class="avg-result-stat-grid">
+                    <div class="avg-result-stat"><strong>${hashes.length}</strong><span>Inputs checked</span></div>
+                    <div class="avg-result-stat"><strong>${totalMatches}</strong><span>Matches found</span></div>
+                    <div class="avg-result-stat"><strong>${hashes.length > 1 ? "Yes" : "No"}</strong><span>Batch mode</span></div>
+                </div>
             </div>
 
-            <hr>
-
-            <div><strong>Possible Hash Types:</strong></div>
             <div class="subject-list">
                 ${cards}
             </div>
@@ -543,7 +477,7 @@ function identifyHash() {
         </div>
     `;
 
-    result.scrollIntoView({ behavior: "smooth", block: "start" });
+    scrollToElement(result);
 }
 
 function clearHash() {
@@ -565,44 +499,40 @@ function copyResult() {
     const resultText = document.getElementById("result").innerText.trim();
 
     if (!resultText) {
-        alert("No result to copy.");
+        showMessage("No result to copy yet.", "error");
         return;
     }
 
     navigator.clipboard.writeText(resultText)
-        .then(() => alert("Result copied to clipboard!"))
-        .catch(() => alert("Failed to copy result."));
+        .then(() => showMessage("Result copied to clipboard."))
+        .catch(() => showMessage("Failed to copy result. Select the result manually and copy it.", "error"));
 }
+
+document.getElementById("identifyBtn").addEventListener("click", identifyHash);
+document.getElementById("sampleBtn").addEventListener("click", loadSample);
+document.getElementById("copyBtn").addEventListener("click", copyResult);
+document.getElementById("clearBtn").addEventListener("click", clearHash);
 </script>
 
 <script>
-const tools = [
-    { name: "Password Strength Checker", url: "passwordstrengthchecker.html", icon: "&#128200;", category: "security" },
-    { name: "Hash Identifier", url: "hashidentifier.html", icon: "&#35;&#65039;", category: "security" },
-    { name: "JWT Tool", url: "jwttool.html", icon: "&#128179;", category: "security" },
-    { name: "API Key Generator", url: "apikeygenerator.html", icon: "&#128273;", category: "security" },
-    { name: "Bcrypt Generator", url: "bcryptgenerator.html", icon: "&#128274;", category: "security" },
-    { name: "Encryption Tool", url: "encryptiontool.html", icon: "&#128272;", category: "security" },
-    { name: "Password List Generator", url: "passwordlistgenerator.html", icon: "&#128203;", category: "security" },
-    { name: "Random Token Generator", url: "randomtokengenerator.html", icon: "&#127903;", category: "security" },
-    { name: "SHA1 Generator", url: "sha1generator.html", icon: "&#128376;&#65039;", category: "security" },
-    { name: "SHA256 Generator", url: "sha256-generator.html", icon: "&#128273;", category: "security" }
+const relatedTools = [
+    { name: "SHA256 Generator", url: "sha256-generator.html", icon: "SHA", description: "Generate SHA-256 hashes for checksums, signatures, and verification.", cta: "Generate SHA-256" },
+    { name: "SHA1 Generator", url: "sha1generator.html", icon: "SHA1", description: "Create SHA1 hashes for legacy compatibility and learning checks.", cta: "Generate SHA1" },
+    { name: "Bcrypt Generator", url: "bcryptgenerator.html", icon: "B", description: "Generate and verify bcrypt password hashes with adjustable cost rounds.", cta: "Open Bcrypt Tool" },
+    { name: "Encryption Tool", url: "encryptiontool.html", icon: "AES", description: "Encrypt, decrypt, encode, and decode text with AES and common transformations.", cta: "Open Encryption Tool" },
+    { name: "JWT Tool", url: "jwttool.html", icon: "JWT", description: "Decode and inspect JWT headers, payloads, expiry values, and claims.", cta: "Inspect JWT" }
 ];
 
-const currentPage = window.location.pathname.split("/").pop();
-
-const related = tools
-    .filter(tool => tool.url !== currentPage)
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 4);
-
 const container = document.getElementById("relatedToolsContainer");
-
 if (container) {
-    container.innerHTML = related.map(tool => `
-        <a href="${tool.url}" class="tool-card">
-            <div class="tool-icon">${tool.icon}</div>
-            <h3>${tool.name}</h3>
+    container.innerHTML = relatedTools.slice(0, 4).map(tool => `
+        <a href="${tool.url}" class="tool-card avg-related-card">
+            <div class="avg-related-icon">${tool.icon}</div>
+            <div class="avg-related-body">
+                <h3>${tool.name}</h3>
+                <p>${tool.description}</p>
+            </div>
+            <div class="avg-related-cta">Open &#8594;</div>
         </a>
     `).join("");
 }
@@ -610,6 +540,8 @@ if (container) {
 
 </body>
 </html>
+
+
 
 
 
