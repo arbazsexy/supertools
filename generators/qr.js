@@ -23,6 +23,32 @@ let lastQrSvg = "";
 let lastQrPngData = "";
 let uploadedLogoDataUrl = "";
 
+function setQrResultState(hasResult) {
+    const shell = document.querySelector(".avg-page-shell");
+    if (!shell) return;
+    shell.classList.toggle("has-avg-result", hasResult);
+}
+
+function scrollQrResultIntoView() {
+    const result = document.getElementById("result");
+    if (!result) return;
+
+    const stickyParts = [];
+    const nav = document.querySelector("nav");
+    const jumpbar = document.querySelector(".avg-jumpbar-wrap");
+
+    if (nav) stickyParts.push(nav);
+    if (jumpbar && window.innerWidth > 820) stickyParts.push(jumpbar);
+
+    const offset = stickyParts.reduce((sum, el) => sum + el.getBoundingClientRect().height, 0) + 24;
+    const targetY = window.scrollY + result.getBoundingClientRect().top - offset;
+
+    window.scrollTo({
+        top: Math.max(targetY, 0),
+        behavior: "smooth"
+    });
+}
+
 function escapeHtml(value) {
     return value
         .replace(/&/g, "&amp;")
@@ -356,6 +382,7 @@ function generateQR() {
     const content = buildQrContent();
 
     if (!content) {
+        setQrResultState(false);
         result.innerHTML = `<div class="average-result result-pop"><div style="color:red;"><strong>Please fill in the required content to generate a QR code.</strong></div></div>`;
         return;
     }
@@ -372,7 +399,7 @@ function generateQR() {
 
     result.innerHTML = `
         <div class="average-result result-pop">
-            <div class="status-message"><strong>Your QR Code:</strong></div>
+            <div class="status-message"><strong>Your QR code is ready.</strong> Download it, print it, or copy the encoded content below.</div>
 
             <div class="qr-preview-card">
                 <div id="qrcode" class="qr-code-box"></div>
@@ -400,6 +427,7 @@ function generateQR() {
     `;
 
     document.getElementById("qrcode").innerHTML = svgString;
+    setQrResultState(true);
 
     renderQrCanvasFromSvg(svgString, function(canvas) {
         if (canvas) {
@@ -407,7 +435,7 @@ function generateQR() {
         }
     });
 
-    result.scrollIntoView({ behavior: "smooth", block: "start" });
+    scrollQrResultIntoView();
 }
 
 function downloadQRPNG() {
@@ -511,6 +539,7 @@ function clearQRTool() {
     lastQrContent = "";
     lastQrSvg = "";
     lastQrPngData = "";
+    setQrResultState(false);
     updateQrFields();
 }
 
@@ -545,20 +574,37 @@ const tools = [
 
 const currentPage = window.location.pathname.split("/").pop();
 
-const related = tools
-    .filter(tool => tool.url !== currentPage)
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 4);
+const related = [
+    tools.find(tool => tool.url === "usernamegenerator.html"),
+    tools.find(tool => tool.url === "businessnamegenerator.html"),
+    tools.find(tool => tool.url === "domainnamegenerator.html"),
+    tools.find(tool => tool.url === "uuidgenerator.html")
+].filter(Boolean);
 
 const container = document.getElementById("relatedToolsContainer");
 
 if (container) {
     container.innerHTML = related.map(tool => `
-        <a href="${tool.url}" class="tool-card">
-            <div class="tool-icon">${tool.icon}</div>
-            <h3>${tool.name}</h3>
+        <a href="${tool.url}" class="avg-related-card">
+            <div class="avg-related-icon">${tool.icon}</div>
+            <div class="avg-related-body">
+                <h3>${tool.name}</h3>
+                <p>${getRelatedToolDescription(tool.url)}</p>
+            </div>
+            <span class="avg-related-cta">Open &rarr;</span>
         </a>
     `).join("");
+}
+
+function getRelatedToolDescription(url) {
+    const descriptions = {
+        "usernamegenerator.html": "Create handles and profile names if your QR code points to social accounts or creator pages.",
+        "businessnamegenerator.html": "Generate cleaner brand names when your QR code is part of a new store, product, or launch.",
+        "domainnamegenerator.html": "Find matching domain ideas if the QR code will send people to a website or landing page.",
+        "uuidgenerator.html": "Create identifiers for products, assets, or records that sit alongside QR-based workflows."
+    };
+
+    return descriptions[url] || "Open the next useful generator for the same workflow.";
 }
 
 updateQrFields();
