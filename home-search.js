@@ -26,12 +26,84 @@ const featuredGrid = document.getElementById("featuredGrid");
 const searchToolsGrid = document.getElementById("searchToolsGrid");
 const browseToolsGrid = document.getElementById("browseToolsGrid");
 const searchInput = document.getElementById("searchInput");
+const heroSearchInput = document.getElementById("heroSearchInput");
 const filterChips = document.getElementById("filterChips");
 const resultsCount = document.getElementById("resultsCount");
 const searchEmptyState = document.getElementById("searchEmptyState");
 const browseEmptyState = document.getElementById("browseEmptyState");
 const resultsShell = document.getElementById("resultsShell");
 let hasAutoFocusedResults = false;
+
+const categoryGlyphs = {
+    calculators: "🧮",
+    developerTools: "💻",
+    generators: "✨",
+    imagetools: "🖼",
+    pdfTools: "📄",
+    SecurityTools: "🛡",
+    SEOTools: "📈",
+    textTools: "🔤"
+};
+
+const categoryTopTools = {
+    calculators: [
+        { label: "Percentage", path: "calculators/percentagecalculator.html" },
+        { label: "EMI", path: "calculators/loan-emi-calculator.html" },
+        { label: "Unit", path: "calculators/unitconverter.html" }
+    ],
+    developerTools: [
+        { label: "JSON", path: "developerTools/json-formatter.html" },
+        { label: "CSV", path: "developerTools/csv-to-json.html" },
+        { label: "Regex", path: "developerTools/regextester.html" }
+    ],
+    generators: [
+        { label: "QR", path: "generators/qr.html" },
+        { label: "UUID", path: "generators/uuidgenerator.html" },
+        { label: "Names", path: "generators/randomnamegenerator.html" }
+    ],
+    imagetools: [
+        { label: "Compress", path: "imagetools/image-compressor.html" },
+        { label: "Resize", path: "imagetools/image-resizer.html" },
+        { label: "Convert", path: "imagetools/image-to-webp.html" }
+    ],
+    pdfTools: [
+        { label: "Merge", path: "pdfTools/merge-pdf.html" },
+        { label: "Compress", path: "pdfTools/compress-pdf.html" },
+        { label: "Split", path: "pdfTools/split-pdf.html" }
+    ],
+    SecurityTools: [
+        { label: "Password", path: "SecurityTools/password.html" },
+        { label: "SHA-256", path: "SecurityTools/sha256-generator.html" },
+        { label: "Token", path: "SecurityTools/randomtokengenerator.html" }
+    ],
+    SEOTools: [
+        { label: "Meta", path: "SEOTools/metataggenerator.html" },
+        { label: "Schema", path: "SEOTools/schemagenerator.html" },
+        { label: "Sitemap", path: "SEOTools/sitemapgenerator.html" }
+    ],
+    textTools: [
+        { label: "Counter", path: "textTools/wordcounter.html" },
+        { label: "Slug", path: "textTools/texttoslug.html" },
+        { label: "Clean", path: "textTools/removeduplicatelines.html" }
+    ]
+};
+
+const toolGlyphOverrides = {
+    "generators/qr.html": "▣",
+    "SecurityTools/password.html": "🔐",
+    "SEOTools/metataggenerator.html": "🏷",
+    "imagetools/image-compressor.html": "🗜",
+    "textTools/wordcounter.html": "📝",
+    "pdfTools/merge-pdf.html": "📑"
+};
+
+function glyphForCategory(category) {
+    return categoryGlyphs[category] || "🧰";
+}
+
+function glyphForTool(tool) {
+    return toolGlyphOverrides[tool.path] || glyphForCategory(tool.category);
+}
 
 function normalize(text) {
     return String(text || "")
@@ -63,12 +135,12 @@ function createToolCard(tool) {
     return `
         <a class="tool-card" href="${tool.path}" data-category="${tool.category}" data-search="${searchText}">
             <div class="tool-top">
-                <span class="tool-icon-wrap"><i class="${tool.icon || meta.icon}"></i></span>
+                <span class="tool-icon-wrap" aria-hidden="true">${glyphForTool(tool)}</span>
                 <span class="tool-category">${meta.label}</span>
             </div>
             <h3>${tool.title}</h3>
             <p>${tool.desc}</p>
-            <span class="tool-link">Open tool <i class="fa-solid fa-arrow-right"></i></span>
+            <span class="tool-link">Open tool <span class="arrow" aria-hidden="true">&#8594;</span></span>
         </a>
     `;
 }
@@ -80,26 +152,29 @@ function renderDirectory() {
 }
 
 categoriesGrid.innerHTML = Object.entries(categoryMeta).map(([key, meta]) => `
-    <a class="category-card" href="${meta.link}">
-        <span class="category-icon"><i class="${meta.icon}"></i></span>
+    <article class="category-card" data-category="${key}">
+        <span class="category-icon" aria-hidden="true">${glyphForCategory(key)}</span>
         <h3>${meta.label}</h3>
         <p>${meta.description}</p>
+        <div class="category-shortcuts" aria-label="Top ${meta.label}">
+            ${(categoryTopTools[key] || []).map((tool) => `<a href="${tool.path}">${tool.label}</a>`).join("")}
+        </div>
         <div class="category-meta">
             <span>${meta.count} tools</span>
-            <span>Open <i class="fa-solid fa-arrow-right"></i></span>
+            <a href="${meta.link}">Open hub <span class="arrow" aria-hidden="true">&#8594;</span></a>
         </div>
-    </a>
+    </article>
 `).join("");
 
 featuredGrid.innerHTML = featuredTools.map((tool) => `
     <a class="feature-card" href="${tool.path}">
         <div class="feature-top">
-            <span class="feature-icon"><i class="${tool.icon}"></i></span>
+            <span class="feature-icon" aria-hidden="true">${glyphForTool(tool)}</span>
             <span class="feature-badge">${tool.badge}</span>
         </div>
         <h3>${tool.title}</h3>
         <p>${tool.desc}</p>
-        <span class="feature-link">Open tool <i class="fa-solid fa-arrow-right"></i></span>
+        <span class="feature-link">Open tool <span class="arrow" aria-hidden="true">&#8594;</span></span>
     </a>
 `).join("");
 
@@ -176,6 +251,9 @@ filterChips.addEventListener('click', (event) => {
 
 searchInput.addEventListener('input', () => {
     updateDirectory();
+    if (heroSearchInput && heroSearchInput.value !== searchInput.value) {
+        heroSearchInput.value = searchInput.value;
+    }
     if (searchInput.value.trim()) {
         if (!hasAutoFocusedResults) {
             scrollResultsIntoView();
@@ -189,6 +267,47 @@ searchInput.addEventListener('input', () => {
 searchInput.addEventListener('focus', () => {
     hasAutoFocusedResults = false;
 });
+
+if (heroSearchInput) {
+    heroSearchInput.addEventListener('input', () => {
+        searchInput.value = heroSearchInput.value;
+        updateDirectory();
+        hasAutoFocusedResults = true;
+    });
+
+    heroSearchInput.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter') return;
+        event.preventDefault();
+        searchInput.value = heroSearchInput.value;
+        updateDirectory();
+        scrollResultsIntoView();
+        searchInput.focus({ preventScroll: true });
+    });
+}
+
+document.querySelectorAll('.hero-search-chips [data-query]').forEach((button) => {
+    button.addEventListener('click', () => {
+        searchInput.value = button.dataset.query || "";
+        if (heroSearchInput) {
+            heroSearchInput.value = searchInput.value;
+        }
+        filterChips.querySelectorAll('.chip').forEach((item) => item.classList.remove('is-active'));
+        const allChip = filterChips.querySelector('[data-filter="all"]');
+        if (allChip) allChip.classList.add('is-active');
+        updateDirectory();
+        scrollResultsIntoView();
+        searchInput.focus({ preventScroll: true });
+    });
+});
+
+const initialSearchParams = new URLSearchParams(window.location.search);
+const initialQuery = initialSearchParams.get('q');
+if (initialQuery) {
+    searchInput.value = initialQuery;
+    if (heroSearchInput) {
+        heroSearchInput.value = initialQuery;
+    }
+}
 
 updateDirectory();
 
